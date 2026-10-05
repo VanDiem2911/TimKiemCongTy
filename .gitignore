@@ -47,3 +47,7 @@ next-env.d.ts
 
 # Local temp files
 temp/
+
+# Scratch & test scripts
+scripts/test-*.mjs
+scripts/verify-*.mjs

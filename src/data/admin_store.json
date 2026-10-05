@@ -1,0 +1,65 @@
+{
+  "privacyRequests": [
+    {
+      "id": "req-171201001",
+      "taxId": "0300588569",
+      "companyName": "CÔNG TY CỔ PHẦN SỮA VIỆT NAM",
+      "phone": "02854155555",
+      "requesterName": "Nguyễn Văn Tuấn",
+      "requesterPhone": "0988123456",
+      "requesterEmail": "tuan.nv@vinamilk.com.vn",
+      "reason": "Số hotline nội bộ nhận quá nhiều cuộc gọi rác và chào mời dịch vụ quảng cáo.",
+      "identityProof": "Giấy ủy quyền số 12/UQ-VNM",
+      "status": "rejected",
+      "createdAt": "2026-10-04 09:30:15",
+      "reviewedAt": "2026-10-05 10:11:56"
+    },
+    {
+      "id": "req-171201002",
+      "taxId": "0100681592",
+      "companyName": "TẬP ĐOÀN CÔNG NGHIỆP - NĂNG LƯỢNG QUỐC GIA VIỆT NAM (PETROVIETNAM)",
+      "phone": "02438252526",
+      "requesterName": "Trần Thị Mai",
+      "requesterPhone": "0912345678",
+      "requesterEmail": "maitt@pvn.vn",
+      "reason": "Yêu cầu bảo mật thông tin liên lạc cá nhân của người phụ trách.",
+      "identityProof": "Quyết định bổ nhiệm & CCCD",
+      "status": "rejected",
+      "createdAt": "2026-10-03 14:15:20",
+      "reviewedAt": "2026-10-05 10:11:57"
+    }
+  ],
+  "hiddenPhones": {},
+  "restoredPhones": {
+    "0300588569": "02854155555",
+    "0100109106": "02462556789",
+    "0100681592": "02438252526"
+  },
+  "contactMessages": [
+    {
+      "id": "msg-171202001",
+      "name": "Lê Hoàng Phúc",
+      "email": "phucle@gmail.com",
+      "phone": "0903999888",
+      "subject": "Báo sai thông tin địa chỉ trụ sở",
+      "message": "Doanh nghiệp của chúng tôi vừa chuyển trụ sở từ Quận 1 sang Quận 7, nhờ ban quản trị cập nhật lại giúp theo đăng ký kinh doanh mới.",
+      "status": "replied",
+      "createdAt": "2026-10-05 08:20:00"
+    },
+    {
+      "id": "msg-171202002",
+      "name": "Công ty TNHH Phần Mềm Alpha",
+      "email": "contact@alphasoft.vn",
+      "phone": "0934567890",
+      "subject": "Đề xuất hợp tác dịch vụ chữ ký số",
+      "message": "Chúng tôi muốn liên hệ đặt banner dịch vụ hóa đơn điện tử và chữ ký số trên Tìm Kiếm Công Ty.",
+      "status": "replied",
+      "createdAt": "2026-10-04 11:45:00"
+    }
+  ],
+  "settings": {
+    "siteName": "Tìm Kiếm Công Ty",
+    "adminEmail": "admin@timkiemcongty.com",
+    "autoHide": false
+  }
+}
