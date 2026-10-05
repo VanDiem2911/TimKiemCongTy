@@ -28,13 +28,13 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    let body: any = {};
+    let body: Record<string, unknown> = {};
     try {
-      body = await request.json();
+      body = (await request.json()) as Record<string, unknown>;
     } catch {
       body = {};
     }
-    const { action, username, password } = body;
+    const { action, username, password } = body as { action?: string; username?: string; password?: string };
 
     if (action === 'logout') {
       const response = NextResponse.json({ success: true, message: 'Đã đăng xuất' });

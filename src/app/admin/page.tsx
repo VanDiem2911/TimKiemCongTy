@@ -988,7 +988,11 @@ export default function AdminDashboardPage() {
                   </div>
                   <select
                     value={timeFilterType}
-                    onChange={(e) => setTimeFilterType(e.target.value as any)}
+                    onChange={(e) =>
+                      setTimeFilterType(
+                        e.target.value as 'all' | 'exact_date' | 'month' | 'year' | 'range' | 'before' | 'after'
+                      )
+                    }
                     className="w-full px-3 py-2 border border-gray-300 rounded bg-white focus:ring-1 focus:ring-amber-500 focus:outline-none font-medium text-gray-800"
                   >
                     <option value="all">-- Tất cả thời gian --</option>
