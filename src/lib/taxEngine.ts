@@ -659,19 +659,39 @@ export async function getCompleteCompanyProfile(
 
   if (masothueSlug) {
     try {
+      const directTarget = `https://masothue.com/${masothueSlug}`;
       const targetUrl = proxyBase
         ? `${proxyBase.replace(/\/+$/, '')}/${masothueSlug}`
-        : `https://masothue.com/${masothueSlug}`;
-      const ctrl = new AbortController();
-      const timer = setTimeout(() => ctrl.abort(), 2000);
-      const res = await fetch(targetUrl, {
-        headers: fetchHeaders,
-        signal: ctrl.signal,
-        ...(forceRefresh ? { cache: 'no-store' } : { next: { revalidate: 3600 } })
-      });
-      clearTimeout(timer);
+        : directTarget;
 
-      if (res.ok) {
+      let res: Response | null = null;
+      try {
+        const ctrl = new AbortController();
+        const timer = setTimeout(() => ctrl.abort(), 2500);
+        res = await fetch(targetUrl, {
+          headers: fetchHeaders,
+          signal: ctrl.signal,
+          ...(forceRefresh ? { cache: 'no-store' } : { next: { revalidate: 3600 } })
+        });
+        clearTimeout(timer);
+      } catch {
+        res = null;
+      }
+
+      const scraperKey = process.env.SCRAPER_API_KEY;
+      if ((!res || res.status !== 200) && scraperKey) {
+        try {
+          const scUrl = `http://api.scraperapi.com?api_key=${scraperKey}&url=${encodeURIComponent(directTarget)}`;
+          const scCtrl = new AbortController();
+          const scTimer = setTimeout(() => scCtrl.abort(), 12000);
+          res = await fetch(scUrl, { signal: scCtrl.signal });
+          clearTimeout(scTimer);
+        } catch (scErr) {
+          console.warn('ScraperAPI detail fallback failed:', scErr);
+        }
+      }
+
+      if (res && res.ok) {
         const html = await res.text();
         const parsed = parseMasothueHtml(html, taxId);
         if (parsed && parsed.name) {

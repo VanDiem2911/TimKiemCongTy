@@ -431,20 +431,39 @@ async function fetchLiveSearch(
 ): Promise<BusinessTaxInfo[]> {
   try {
     const proxyBase = process.env.VN_PROXY_URL || process.env.MASOTHUE_PROXY_URL;
-    const url = proxyBase
+    const directUrl = `https://masothue.com/Search/?q=${encodeURIComponent(q)}&type=${encodeURIComponent(searchType)}&force-search=0`;
+    const targetUrl = proxyBase
       ? `${proxyBase.replace(/\/+$/, '')}/Search/?q=${encodeURIComponent(q)}&type=${encodeURIComponent(searchType)}&force-search=0`
-      : `https://masothue.com/Search/?q=${encodeURIComponent(q)}&type=${encodeURIComponent(searchType)}&force-search=0`;
+      : directUrl;
 
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 5500);
+    let res: Response | null = null;
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 3500);
+      res = await fetch(targetUrl, {
+        headers: BROWSER_FETCH_HEADERS,
+        signal: controller.signal
+      });
+      clearTimeout(timeoutId);
+    } catch {
+      res = null;
+    }
 
-    const res = await fetch(url, {
-      headers: BROWSER_FETCH_HEADERS,
-      signal: controller.signal
-    });
-    clearTimeout(timeoutId);
+    // ScraperAPI fallback for cloud deployments (Vercel) to bypass Cloudflare bot challenge
+    const scraperKey = process.env.SCRAPER_API_KEY;
+    if ((!res || res.status !== 200) && scraperKey) {
+      try {
+        const scraperUrl = `http://api.scraperapi.com?api_key=${scraperKey}&url=${encodeURIComponent(directUrl)}`;
+        const scController = new AbortController();
+        const scTimeout = setTimeout(() => scController.abort(), 12000);
+        res = await fetch(scraperUrl, { signal: scController.signal });
+        clearTimeout(scTimeout);
+      } catch (scErr) {
+        console.warn('ScraperAPI search fallback failed:', scErr);
+      }
+    }
 
-    if (res.status === 200) {
+    if (res && res.status === 200) {
       const html = await res.text();
       const list: BusinessTaxInfo[] = [];
 
