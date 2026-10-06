@@ -430,7 +430,11 @@ async function fetchLiveSearch(
   cleanDigits: string
 ): Promise<BusinessTaxInfo[]> {
   try {
-    const url = `https://masothue.com/Search/?q=${encodeURIComponent(q)}&type=${encodeURIComponent(searchType)}&force-search=0`;
+    const proxyBase = process.env.VN_PROXY_URL || process.env.MASOTHUE_PROXY_URL;
+    const url = proxyBase
+      ? `${proxyBase.replace(/\/+$/, '')}/Search/?q=${encodeURIComponent(q)}&type=${encodeURIComponent(searchType)}&force-search=0`
+      : `https://masothue.com/Search/?q=${encodeURIComponent(q)}&type=${encodeURIComponent(searchType)}&force-search=0`;
+
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 5500);
 

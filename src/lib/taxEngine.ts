@@ -655,11 +655,16 @@ export async function getCompleteCompanyProfile(
   };
 
   // 2. Try fetching live from masothue.com if we have a slug or if cleanInput is a slug
+  const proxyBase = process.env.VN_PROXY_URL || process.env.MASOTHUE_PROXY_URL;
+
   if (masothueSlug) {
     try {
+      const targetUrl = proxyBase
+        ? `${proxyBase.replace(/\/+$/, '')}/${masothueSlug}`
+        : `https://masothue.com/${masothueSlug}`;
       const ctrl = new AbortController();
       const timer = setTimeout(() => ctrl.abort(), 2000);
-      const res = await fetch(`https://masothue.com/${masothueSlug}`, {
+      const res = await fetch(targetUrl, {
         headers: fetchHeaders,
         signal: ctrl.signal,
         ...(forceRefresh ? { cache: 'no-store' } : { next: { revalidate: 3600 } })
@@ -705,7 +710,10 @@ export async function getCompleteCompanyProfile(
             try {
               const liveCtrl = new AbortController();
               const liveTimer = setTimeout(() => liveCtrl.abort(), 1500);
-              const liveMasothueRes = await fetch(`https://masothue.com/${derivedSlug}`, {
+              const liveTargetUrl = proxyBase
+                ? `${proxyBase.replace(/\/+$/, '')}/${derivedSlug}`
+                : `https://masothue.com/${derivedSlug}`;
+              const liveMasothueRes = await fetch(liveTargetUrl, {
                 headers: fetchHeaders,
                 signal: liveCtrl.signal,
                 ...(forceRefresh ? { cache: 'no-store' } : { next: { revalidate: 3600 } })
