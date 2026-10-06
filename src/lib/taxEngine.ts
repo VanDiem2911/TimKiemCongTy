@@ -4,13 +4,24 @@ import { INITIAL_COMPANIES, getCompanySlug, normalizeTaxId } from '@/lib/constan
 import harvestedJson from '@/data/harvested_provinces.json';
 import { isPhoneHidden, getKnownPhone } from '@/lib/privacyStore';
 
-const HARVESTED_DATA = harvestedJson as Record<string, Array<{
+export interface HarvestedCompanyItem {
   id: string;
   name: string;
-  representative: string;
+  representative?: string;
   address: string;
-  slug: string;
-}>>;
+  slug?: string;
+  startDate?: string;
+  phone?: string;
+  status?: string;
+  managedBy?: string;
+  mainIndustry?: string;
+  mainIndustryCode?: string;
+  internationalName?: string;
+  shortName?: string;
+  taxAddress?: string;
+}
+
+const HARVESTED_DATA = harvestedJson as Record<string, HarvestedCompanyItem[]>;
 
 // Global in-memory cache for ultra-fast response
 const PROFILE_CACHE = new Map<string, { data: BusinessTaxInfo; timestamp: number }>();
@@ -427,16 +438,26 @@ export function enrichCompanyData(partial: Partial<BusinessTaxInfo>): BusinessTa
   // Representative resolution
   let representative = (partial.representative || '').trim();
   if (!representative || representative === 'Tra cứu theo yêu cầu' || representative === 'Cập nhật theo GPKD' || representative === 'Đang cập nhật') {
-    // Check if we have harvested rep for this taxId
-    for (const list of Object.values(HARVESTED_DATA)) {
-      const found = list.find(c => c.id === id);
-      if (found && found.representative) {
-        representative = found.representative;
-        break;
+    // 1. Check INITIAL_COMPANIES
+    const initMatch = INITIAL_COMPANIES.find(c => normalizeTaxId(c.id) === id || c.id === id);
+    if (initMatch && initMatch.representative) {
+      representative = initMatch.representative;
+    }
+
+    // 2. Check harvested database for this taxId
+    if (!representative) {
+      for (const list of Object.values(HARVESTED_DATA)) {
+        const found = list.find(c => normalizeTaxId(c.id) === id || c.id === id);
+        if (found && found.representative) {
+          representative = found.representative;
+          break;
+        }
       }
     }
+
+    // 3. Fallback: keep partial value or empty (never fake a person's name)
     if (!representative) {
-      representative = 'NGUYỄN VĂN AN'; // Realistic representative
+      representative = (partial.representative || '').trim();
     }
   }
 
@@ -706,14 +727,28 @@ export async function getCompleteCompanyProfile(
             }
           }
 
+          // Check if we have verified data in INITIAL_COMPANIES or HARVESTED_DATA
+          const initMatch = INITIAL_COMPANIES.find(c => normalizeTaxId(c.id) === normalizeTaxId(taxId));
+          let harvestedMatch: HarvestedCompanyItem | null = null;
+          for (const list of Object.values(HARVESTED_DATA)) {
+            const f = list.find(c => normalizeTaxId(c.id) === normalizeTaxId(taxId));
+            if (f) { harvestedMatch = f; break; }
+          }
+          const verified = initMatch || harvestedMatch;
+
           const enriched = enrichCompanyData({
             id: json.data.id || taxId,
             name: json.data.name,
-            internationalName: json.data.internationalName,
-            shortName: json.data.shortName,
-            address: json.data.address,
-            taxAddress: json.data.address,
-            status: json.data.status || 'Đang hoạt động',
+            internationalName: json.data.internationalName || verified?.internationalName,
+            shortName: json.data.shortName || verified?.shortName,
+            address: json.data.address || verified?.address,
+            taxAddress: json.data.address || verified?.taxAddress || verified?.address,
+            representative: verified?.representative,
+            startDate: verified?.startDate,
+            phone: verified?.phone,
+            mainIndustry: verified?.mainIndustry,
+            mainIndustryCode: verified?.mainIndustryCode,
+            status: json.data.status || verified?.status || 'Đang hoạt động',
             lastUpdated: forceRefresh ? formatCurrentTimeVietnam() : undefined
           });
 
@@ -745,11 +780,11 @@ export async function getCompleteCompanyProfile(
         name: item.name,
         address: item.address,
         representative: item.representative,
-        startDate: (item as any).startDate || undefined,
-        phone: (item as any).phone && (item as any).phone !== 'Bị ẩn theo yêu cầu người dùng' ? (item as any).phone : undefined,
-        status: (item as any).status || undefined,
-        managedBy: (item as any).managedBy || undefined,
-        mainIndustry: (item as any).mainIndustry || undefined,
+        startDate: item.startDate,
+        phone: item.phone && item.phone !== 'Bị ẩn theo yêu cầu người dùng' ? item.phone : undefined,
+        status: item.status,
+        managedBy: item.managedBy,
+        mainIndustry: item.mainIndustry,
         lastUpdated: forceRefresh ? formatCurrentTimeVietnam() : undefined
       });
       return finalizeProfile(enriched);

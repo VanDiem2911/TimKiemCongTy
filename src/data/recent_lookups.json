@@ -1,5 +1,25 @@
 [
   {
+    "id": "0319641544",
+    "name": "CÔNG TY TNHH GIẢI PHÁP PHẦN MỀM DUDI",
+    "representative": "NGUYỄN THỊ HẢO",
+    "address": "49/2 đường Số 14, Phường Thủ Đức, Thành phố Hồ Chí Minh, Việt Nam",
+    "status": "Đang hoạt động",
+    "province": "Thành phố Hồ Chí Minh",
+    "startDate": "2026-07-16",
+    "lastUpdated": "Vừa xong"
+  },
+  {
+    "id": "0100112437",
+    "name": "NGÂN HÀNG THƯƠNG MẠI CỔ PHẦN NGOẠI THƯƠNG VIỆT NAM",
+    "representative": "Nguyễn Thanh Tùng",
+    "address": "198 Trần Quang Khải, Phường Hoàn Kiếm, TP Hà Nội, Việt Nam",
+    "status": "Đang hoạt động",
+    "province": "TP Hà Nội",
+    "startDate": "1998-05-26",
+    "lastUpdated": "Vừa xong"
+  },
+  {
     "id": "4001342187",
     "name": "CÔNG TY TNHH MTV PHÁT TRIỂN CÔNG NGHỆ NGUYÊN CƯỜNG THỊNH",
     "representative": "NGUYỄN THỊ KIỀU OANH",
@@ -157,16 +177,6 @@
     "status": "Đang hoạt động",
     "province": "Thành phố Hồ Chí Minh",
     "startDate": "2026-10-02",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0319641544",
-    "name": "CÔNG TY TNHH GIẢI PHÁP PHẦN MỀM DUDI",
-    "representative": "NGUYỄN THỊ HẢO",
-    "address": "49/2 đường Số 14, Phường Thủ Đức, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Thành phố Hồ Chí Minh",
-    "startDate": "2026-07-16",
     "lastUpdated": "Vừa xong"
   },
   {
