@@ -1,5 +1,5 @@
 import { BusinessTaxInfo } from '@/types/tax';
-import { INDUSTRIES, PROVINCES } from './constants';
+import { INDUSTRIES, PROVINCES, INITIAL_COMPANIES } from './constants';
 import harvestedJson from '@/data/harvested_provinces.json';
 
 export interface HarvestedItem {
@@ -210,7 +210,7 @@ export function searchCompaniesAcrossProvinces(keyword: string, type: string = '
     const idClean = (item.id || '').replace(/[^0-9a-zA-Z]/g, '');
 
     if (type === 'legalName') {
-      return repNorm.includes(normQ);
+      return repNorm.includes(normQ) || (nameNorm.includes(normQ) && (nameNorm.includes('ho kinh doanh') || nameNorm.includes('doanh nghiep')));
     }
     if (type === 'companyName') {
       return nameNorm.includes(normQ);
@@ -230,7 +230,16 @@ export function searchCompaniesAcrossProvinces(keyword: string, type: string = '
 
   const results: BusinessTaxInfo[] = [];
 
-  // 1. Search in harvested data (10,000 real companies)
+  // 1. Search in INITIAL_COMPANIES first (top featured companies & representatives like LÊ BÁ ANH, MAI KIỀU LIÊN, NGUYỄN THỊ HẢO, TÀO ĐỨC THẮNG...)
+  for (const item of INITIAL_COMPANIES) {
+    if (matches(item)) {
+      if (!results.some(r => r.id === item.id)) {
+        results.push(item);
+      }
+    }
+  }
+
+  // 2. Search in harvested data (10,000+ real companies across provinces)
   for (const [slug, list] of Object.entries(HARVESTED_DATA)) {
     const prov = PROVINCES.find(p => p.slug === slug);
     const provName = prov ? prov.name : slug;
@@ -252,8 +261,8 @@ export function searchCompaniesAcrossProvinces(keyword: string, type: string = '
     }
   }
 
-  // 2. Search provinces
-  for (const prov of PROVINCES.slice(0, 15)) {
+  // 3. Search provinces
+  for (const prov of PROVINCES) {
     const res = getCompaniesByProvince(prov.slug, 1, 20);
     for (const comp of res.companies) {
       if (matches(comp)) {

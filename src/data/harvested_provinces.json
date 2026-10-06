@@ -28560,7 +28560,13 @@
       "representative": "PHAN THANH TRÍ",
       "address": "Xóm 7, thôn Kinh Tế, Xã Suối Kiết, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401294031-cong-ty-tnhh-chat-dot-phuong-hung",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-21",
+      "phone": "0795388883",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 tỉnh Lâm Đồng",
+      "mainIndustry": "Cưa, xẻ, bào gỗ và bảo quản gỗ",
+      "enrichedAt": "2026-10-06T08:16:42.733Z"
     },
     {
       "id": "6400484405",
@@ -28568,15 +28574,28 @@
       "representative": "NGUYỄN TRỌNG TUẤN",
       "address": "Thôn Nam Tiến, Xã Nâm Nung, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "6400484405-cong-ty-tnhh-mtv-cao-su-trong-tuan",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-18",
+      "phone": "0965567788",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 13 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn chuyên doanh khác chưa được phân vào đâu Chi tiết: Thu mua mủ cao su",
+      "enrichedAt": "2026-10-06T08:16:46.036Z"
     },
     {
       "id": "3401293863",
       "name": "CÔNG TY TNHH KHƯƠNG LẠC VIÊN WELLNESS & RETREAT",
-      "representative": "NGUYỄN HỮU THẠNH",
+      "representative": "NGUYỄN HỮU THẠNH Ngoài ra, NGUYỄN HỮU THẠNH còn đại diện các doanh nghiệp, đơn vị: Công ty TNHH Minh Minh Thịnh Nguyễn Hữu Thạnh",
       "address": "Thửa đất số 277, tờ bản đồ số 287, thôn Hồng Chính, Xã Hòa Thắng, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293863-cong-ty-tnhh-khuong-lac-vien-wellness-retreat",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-21",
+      "phone": "0919090444",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 8 tỉnh Lâm Đồng",
+      "mainIndustry": "Dịch vụ lưu trú ngắn ngày Chi tiết: Dịch vụ cung cấp cơ sở lưu trú là nhà khách, nhà nghỉ với trang thiết bị, tiện nghi và dịch vụ cần thiết cho khách du lịch; Dịch vụ dọn phòng hằng ngày các dịch vụ khác như: ăn uống, chỗ đỗ xe, dịch vụ giặt là…",
+      "internationalName": "KHUONG LAC VIEN WELLNESS & RETREAT COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:16:49.724Z"
     },
     {
       "id": "6400484444",
@@ -28584,7 +28603,14 @@
       "representative": "NGUYỄN VĂN HẾT",
       "address": "Thôn 11, Xã Nhân Cơ, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "6400484444-cong-ty-tnhh-thuong-mai-dich-vu-van-tai-nguyen-gia-phat",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-21",
+      "phone": "0936439234",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 11 tỉnh Lâm Đồng",
+      "mainIndustry": "Vận tải hàng hóa bằng đường bộ",
+      "internationalName": "NGUYEN GIA PHAT TRANSPORTATION SERVICES TRADING COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:16:53.289Z"
     },
     {
       "id": "0110855223-001",
@@ -28592,7 +28618,12 @@
       "representative": "CHOI BONG JO",
       "address": "58 Phan Như Thạch, Phường Xuân Hương - Đà Lạt, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "0110855223-001-cong-ty-tnhh-ccsl-vina-chi-nhanh-tai-da-lat",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-21",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Lâm Đồng",
+      "mainIndustry": "Nhà hàng và các dịch vụ ăn uống phục vụ lưu động",
+      "enrichedAt": "2026-10-06T08:16:56.749Z"
     },
     {
       "id": "5801582775",
@@ -28600,7 +28631,14 @@
       "representative": "NGUYỄN VĂN TÌNH",
       "address": "Số nhà 92, Đường Hoàng Diệu, Phường Cam Ly - Đà Lạt, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582775-cong-ty-tnhh-ky-thuat-va-dieu-hoa-khong-khi-binh-an",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-21",
+      "phone": "0334126345",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Lâm Đồng",
+      "mainIndustry": "Sửa chữa máy móc, thiết bị",
+      "internationalName": "BINH AN AIR CONDITIONER AND TECHNIQUE COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:17:00.365Z"
     },
     {
       "id": "5801582750",
@@ -28608,7 +28646,13 @@
       "representative": "NGUYỄN THỊ THANH",
       "address": "Số 496 Đường Nguyễn An Ninh, Phường Cam Ly - Đà Lạt, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582750-cong-ty-tnhh-dtpt-pccc-thanh-nguyen",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-21",
+      "phone": "0947860788",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Lâm Đồng",
+      "mainIndustry": "Sửa chữa thiết bị khác Chi tiết: Bơm, nạp bình chữa cháy",
+      "enrichedAt": "2026-10-06T08:17:06.850Z"
     },
     {
       "id": "5801582743",
@@ -28616,7 +28660,13 @@
       "representative": "NGUYỄN MẬU HIẾU",
       "address": "Thửa đất số 04, Tờ bản đồ số 62, Thôn Phúc Tiến, Xã Phúc Thọ Lâm Hà, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582743-cong-ty-tnhh-minh-khang-lam-dong",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-21",
+      "phone": "0925822922",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 tỉnh Lâm Đồng",
+      "mainIndustry": "Vận tải hàng hóa bằng đường bộ",
+      "enrichedAt": "2026-10-06T08:17:10.279Z"
     },
     {
       "id": "5801582623",
@@ -28624,7 +28674,14 @@
       "representative": "VÕ VĂN THỌ",
       "address": "Số 35 Thôn 6, Xã Hòa Ninh, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582623-cong-ty-tnhh-dang-san",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-21",
+      "phone": "0943938959",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh Lâm Đồng",
+      "mainIndustry": "Xây dựng nhà để ở",
+      "internationalName": "DANG SAN COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:17:13.869Z"
     },
     {
       "id": "5801582782",
@@ -28632,7 +28689,14 @@
       "representative": "PHẠM THỊ HỒNG",
       "address": "Số 55, đường Lương Văn Can, Phường B'Lao, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582782-cong-ty-tnhh-may-286",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-21",
+      "phone": "0962223746",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn vải, hàng may sẵn, giày dép",
+      "internationalName": "MAY 286 COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:17:17.106Z"
     },
     {
       "id": "5801582817",
@@ -28640,7 +28704,14 @@
       "representative": "NGUYỄN TUẤN KIỆT",
       "address": "Số 2 Nguyễn Công Trứ, Xã Đức Trọng, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582817-cong-ty-tnhh-moc-vien-restaurant",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-21",
+      "phone": "0814222266",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 tỉnh Lâm Đồng",
+      "mainIndustry": "Nhà hàng và các dịch vụ ăn uống phục vụ lưu động",
+      "internationalName": "MOC VIEN RESTAURANT COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:17:20.743Z"
     },
     {
       "id": "5801582768",
@@ -28648,7 +28719,14 @@
       "representative": "NGUYỄN MINH VŨ",
       "address": "138 Hà Giang, Phường B'Lao, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582768-cong-ty-cp-b-lao-cha",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-21",
+      "phone": "0369710369",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh Lâm Đồng",
+      "mainIndustry": "Sản xuất chè",
+      "internationalName": "B'LAO CHA JSC",
+      "enrichedAt": "2026-10-06T08:17:24.302Z"
     },
     {
       "id": "5801582630",
@@ -28656,15 +28734,28 @@
       "representative": "LÊ ANH NGỌC",
       "address": "Thửa đất số 122, Tờ bản đồ số 3, Thôn An Hiệp 2, Xã Hiệp Thạnh, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582630-cong-ty-tnhh-mot-thanh-vien-ngoc-anh-orchid-lam-dong",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-20",
+      "phone": "0974274668",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống Chi tiết: Bán buôn hoa và cây",
+      "internationalName": "NGOC ANH ORCHID LAM DONG ONE MEMBER COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:17:27.832Z"
     },
     {
       "id": "3401252539-002",
       "name": "CHI NHÁNH LÂM ĐỒNG - CÔNG TY TNHH DỊCH VỤ DU LỊCH CƯỜNG NGUYỄN",
-      "representative": "NGUYỄN KHẮC CƯỜNG",
+      "representative": "NGUYỄN KHẮC CƯỜNG Ngoài ra, NGUYỄN KHẮC CƯỜNG còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH DỊCH VỤ DU LỊCH CƯỜNG NGUYỄN CÔNG TY TNHH DỊCH VỤ DU LỊCH LÂM CƯỜNG CHI NHÁNH THÀNH PHỐ HỒ CHI MINH - CÔNG TY TNHH DỊCH VỤ DU LỊCH CƯỜNG NGUYỄN",
       "address": "Số 30 Nguyên Tử Lực, Phường Lâm Viên - Đà Lạt, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401252539-002-chi-nhanh-lam-dong-cong-ty-tnhh-dich-vu-du-lich-cuong-nguyen",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-14",
+      "phone": "0915603603",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Lâm Đồng",
+      "mainIndustry": "Vận tải hành khách đường bộ khác Chi tiết: Kinh doanh vận tải hành khách bằng xe ô tô theo tuyến cố định, chạy theo hợp đồng, vận tải khách du lịch bằng xe ô tô.",
+      "enrichedAt": "2026-10-06T08:17:31.120Z"
     },
     {
       "id": "3401293782",
@@ -28672,7 +28763,13 @@
       "representative": "NGUYỄN VĂN ĐÔ",
       "address": "P10, đường Tôn Đức Thắng, Phường Phú Thủy, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293782-cong-ty-tnhh-dau-tu-xay-dung-truong-dong",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-18",
+      "phone": "0941909896",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Kinh doanh bất động sản, quyền sử dụng đất thuộc chủ sở hữu, chủ sử dụng hoặc đi thuê",
+      "enrichedAt": "2026-10-06T08:17:34.450Z"
     },
     {
       "id": "3401293817",
@@ -28680,7 +28777,13 @@
       "representative": "LÂM NGỌC YẾN VI",
       "address": "277/101 Hải Thượng Lãn Ông, Phường Bình Thuận, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293817-cong-ty-tnhh-an-sinh-binh-thuan",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-18",
+      "phone": "0946424964",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Hoạt động của đại lý và môi giới bảo hiểm (Chi tiết: Hoạt động đại lý bảo hiểm theo quy định của pháp luật về kinh doanh bảo hiểm)",
+      "enrichedAt": "2026-10-06T08:17:37.962Z"
     },
     {
       "id": "6400484412",
@@ -28688,7 +28791,13 @@
       "representative": "NGUYỄN QUỐC TOẢN",
       "address": "Thôn Đắk Kual, Xã Đức An, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "6400484412-cong-ty-trach-nhiem-huu-han-mo-t-tha-nh-vien-thi-nh-khang-tay-nguyen",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-18",
+      "phone": "0359901473",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 12 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống -Mua bán hàng nông sản (cà phê, tiêu,…)",
+      "enrichedAt": "2026-10-06T08:17:41.194Z"
     },
     {
       "id": "0318111907-001",
@@ -28696,15 +28805,27 @@
       "representative": "PHAN HỮU HIỆP",
       "address": "4 Đoàn Thị Điểm, Phường Xuân Hương - Đà Lạt, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "0318111907-001-chi-nhanh-cong-ty-tnhh-dau-tu-thuong-mai-dich-vu-xuat-nhap-khau-khang-thinh",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-17",
+      "phone": "0903049798",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn đồ uống Chi tiết: Bán buôn đồ uống có cồn, bán buôn đồ uống không có cồn.",
+      "enrichedAt": "2026-10-06T08:17:44.507Z"
     },
     {
       "id": "3401293824",
       "name": "CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ VẬN TẢI TRẦN ĐÔ",
-      "representative": "TRẦN LƯƠNG MỸ ĐÔ",
+      "representative": "TRẦN LƯƠNG MỸ ĐÔ Ngoài ra, TRẦN LƯƠNG MỸ ĐÔ còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH TRẦN LƯƠNG MỸ ĐÔ",
       "address": "65A Đường số 7, Xã Hoài Đức, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293824-cong-ty-tnhh-thuong-mai-dich-vu-van-tai-tran-do",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-18",
+      "phone": "0886411377",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 tỉnh Lâm Đồng",
+      "mainIndustry": "Hoạt động dịch vụ hỗ trợ khác liên quan đến vận tải (trừ hoá lỏng khí để vận chuyển và hoạt động liên quan đến vận tải hàng không)",
+      "enrichedAt": "2026-10-06T08:17:48.166Z"
     },
     {
       "id": "3401293711",
@@ -28712,7 +28833,13 @@
       "representative": "NGUYỄN THỊ THU",
       "address": "Khu phố 3, đường Nguyễn Văn Linh, KDC Kênh Bàu, Phường Hàm Thắng, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293711-cong-ty-tnhh-cuong-phat-dat",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-18",
+      "phone": "0385569963",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Cho thuê máy móc, thiết bị và đồ dùng hữu hình khác",
+      "enrichedAt": "2026-10-06T08:17:51.637Z"
     },
     {
       "id": "5801582503",
@@ -28720,7 +28847,14 @@
       "representative": "NGUYỄN TRẦN HOÀNG TUẤN",
       "address": "Số 10, thôn Tân Hòa, Xã Đinh Văn Lâm Hà, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582503-cong-ty-tnhh-viet-tien-t-t",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-17",
+      "phone": "0865661711",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng",
+      "internationalName": "VIET TIEN T&T COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:17:55.183Z"
     },
     {
       "id": "5801582528",
@@ -28728,7 +28862,13 @@
       "representative": "HOÀNG THÁI DƯƠNG",
       "address": "Số 01 Tân Thành, Xã Đinh Văn Lâm Hà, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582528-cong-ty-co-phan-xd-tm-dich-vu-tong-hop-phat-hung",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-17",
+      "phone": "0902 644 343",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng",
+      "enrichedAt": "2026-10-06T08:17:58.458Z"
     },
     {
       "id": "5801582542",
@@ -28736,7 +28876,13 @@
       "representative": "NGUYỄN VĂN LỘC",
       "address": "Xóm 3, Thôn 1, Xã Hòa Ninh, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582542-cong-ty-tnhh-mtv-loc-bao-khanh",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-17",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh Lâm Đồng",
+      "mainIndustry": "Xây dựng công trình đường bộ Chi tiết: Xây dựng công trình giao thông",
+      "internationalName": "MTV LOC BAO KHANH COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:18:02.115Z"
     },
     {
       "id": "3401293616",
@@ -28785,7 +28931,14 @@
       "representative": "LÊ THỊ NGỌC HƯƠNG",
       "address": "50 Trần Nhân Tông, Xã Đức Trọng, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582567-cong-ty-tnhh-jiro-solutions",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-17",
+      "phone": "0916225255",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 tỉnh Lâm Đồng",
+      "mainIndustry": "Hoạt động tư vấn quản lý Chi tiết: Dịch vụ tư vấn quản lý (trừ tư vấn tài chính, kế toán và pháp luật)",
+      "internationalName": "JIRO SOLUTIONS COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:18:09.186Z"
     },
     {
       "id": "5801582535",
@@ -28793,7 +28946,13 @@
       "representative": "TẠ QUANG MINH",
       "address": "Tổ 5, Trường Thọ, Phường Xuân Trường - Đà Lạt, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582535-cong-ty-tnhh-quang-minh-coffee",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-17",
+      "phone": "0967214352",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống Chi tiết: Mua bán, thu mua cà phê, hồ tiêu, chè, điều, ca cao, lúa, gạo, cám, ngô, sắn, đậu, hạt, rau, củ, quả, nguyên liệu thức ăn chăn nuôi...",
+      "enrichedAt": "2026-10-06T08:18:12.797Z"
     },
     {
       "id": "6400484275",
@@ -28801,7 +28960,13 @@
       "representative": "MAI QUANG HÂN",
       "address": "Số15, đường Trần Hưng Đạo, Xã Cư Jút, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "6400484275-cong-ty-tnhh-htv-long-phat",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-17",
+      "phone": "0973728256",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 13 tỉnh Lâm Đồng",
+      "mainIndustry": "Xây dựng nhà để ở",
+      "enrichedAt": "2026-10-06T08:18:16.089Z"
     },
     {
       "id": "6400484282",
@@ -28809,23 +28974,42 @@
       "representative": "TRẦN NGỌC TOÀN",
       "address": "Thôn Hòa Phong, Xã Đắk Sắk, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "6400484282-cong-ty-tnhh-mot-thanh-vien-toan-khuong",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-17",
+      "phone": "0928791111",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 12 tỉnh Lâm Đồng",
+      "mainIndustry": "Xây dựng nhà để ở",
+      "enrichedAt": "2026-10-06T08:18:19.438Z"
     },
     {
       "id": "6400484268",
       "name": "CÔNG TY CỔ PHẦN NÔNG SẢN AN NGUYÊN ECO",
-      "representative": "LÊ  THỊ TRANG",
+      "representative": "LÊ THỊ TRANG",
       "address": "Thôn Quảng Tâm, Xã Tuy Đức, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "6400484268-cong-ty-co-phan-nong-san-an-nguyen-eco",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-17",
+      "phone": "0854 489 909",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 11 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn thực phẩm Chi tiết: Bán buôn cà phê, Hồ tiêu; điều, sầu riêng; maccca;",
+      "internationalName": "AN NGUYEN ECO AGRICULTURAL PRODUCTS JOINT STOCK COMPANY",
+      "enrichedAt": "2026-10-06T08:18:22.831Z"
     },
     {
       "id": "6400351370-001",
       "name": "CHI NHÁNH CÔNG TY TNHH DAP HẢI YẾN ĐẮK NÔNG",
-      "representative": "HOÀNG THỊ BƯỞI",
+      "representative": "HOÀNG THỊ BƯỞI Ngoài ra, HOÀNG THỊ BƯỞI còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH HOÀNG THỊ BƯỞI",
       "address": "Bon Me Ra, Xã Tuy Đức, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "6400351370-001-chi-nhanh-cong-ty-tnhh-dap-hai-yen-dak-nong",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-17",
+      "phone": "0988189290",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 11 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn chuyên doanh khác chưa được phân vào đâu - Mua, bán phân bón",
+      "enrichedAt": "2026-10-06T08:18:26.199Z"
     },
     {
       "id": "3401293581",
@@ -28833,15 +29017,27 @@
       "representative": "NGUYỄN THỊ KIỀU HÂN",
       "address": "39 Đường 30/4, Xã Hoài Đức, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293581-cong-ty-tnhh-bkit-robotics",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-16",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 tỉnh Lâm Đồng",
+      "mainIndustry": "Giáo dục khác chưa được phân vào đâu Đào tạo kỹ năng sống; Giảng dạy, bồi dưỡng kiến thức tích hợp Khoa học, Công nghệ, Kỹ thuật và Toán học (STEM/STEAM), lắp ráp và vận hành robot (Robotics), lập trình tư duy logic cho học sinh (không thuộc hệ thống giáo dục quốc dân). Đào tạo và giảng dạy trực tuyến (online) qua mạng internet và nền tảng công nghệ số.",
+      "internationalName": "BKIT ROBOTICS COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:18:29.617Z"
     },
     {
       "id": "0319306592-003",
       "name": "CÔNG TY TNHH THẾ GIỚI DECAL XE - CHI NHÁNH ĐÀ LẠT",
-      "representative": "PHẠM MINH THIỆN",
+      "representative": "PHẠM MINH THIỆN Ngoài ra, PHẠM MINH THIỆN còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH THẾ GIỚI DECAL XE CÔNG TY TNHH THẾ GIỚI DECAL XE CÔNG TY TNHH THẾ GIỚI DECAL XE - CHI NHÁNH BIÊN HÒA CÔNG TY TNHH THẾ GIỚI DECAL XE - CHI NHÁNH BÌNH DƯƠNG CÔNG TY TNHH THẾ GIỚI DECAL XE - CHI NHÁNH THỦ ĐỨC",
       "address": "Số 99 An Bình , Phường Xuân Hương - Đà Lạt, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "0319306592-003-cong-ty-tnhh-the-gioi-decal-xe-chi-nhanh-da-lat",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-09",
+      "phone": "0565659999",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Lâm Đồng",
+      "mainIndustry": "Sửa chữa, bảo dưỡng mô tô, xe máy Chi tiết: Sửa chữa phần cơ, phần điện, hệ thống đánh lửa tự động; Bảo dưỡng thông thường; Sửa chữa khung, càng, yếm, yên đệm mô tô, xe máy; Sửa chữa các bộ phận khác của mô tô, xe máy; Rửa xe, đánh bóng, phun và sơn; Dịch vụ đổ nước xe, dán keo xe; Sửa chữa, bơm vá săm, lốp mô tô, xe máy, lắp đặt hoặc thay thế; Xử lý chống gỉ; Thay phụ tùng và các bộ phận phụ trợ không thuộc công đoạn sản xuất. Loại trừ: Đắp và tái chế lốp mô tô, xe máy; Sửa chữa, bảo dưỡng xe đạp, xe đạp điện, xe một bánh, ván trượt, xe scooter.",
+      "enrichedAt": "2026-10-06T08:18:33.135Z"
     },
     {
       "id": "6400484187",
@@ -28849,7 +29045,13 @@
       "representative": "LÊ CÔNG CƯƠNG",
       "address": "Thôn 3, Xã Nhân Cơ, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "6400484187-cong-ty-tnhh-long-phat-cons",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-17",
+      "phone": "0973 480 037",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 11 tỉnh Lâm Đồng",
+      "mainIndustry": "Xây dựng nhà để ở",
+      "enrichedAt": "2026-10-06T08:18:36.757Z"
     },
     {
       "id": "6400484194",
@@ -28857,7 +29059,13 @@
       "representative": "TRẦN ANH CƯỜNG",
       "address": "Thôn 5, Xã Đắk Mil, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "6400484194-cong-ty-tnhh-thang-lieu",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-17",
+      "phone": "0868140524",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 12 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn thực phẩm Chi tiết: Bán buôn thịt và các sản phẩm từ thịt, thủy sản, rau quả",
+      "enrichedAt": "2026-10-06T08:18:40.419Z"
     },
     {
       "id": "5801582302",
@@ -28865,15 +29073,27 @@
       "representative": "PHẠM HỒNG HẠNH",
       "address": "166 Phạm Ngọc Thạch, Phường Cam Ly - Đà Lạt, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582302-cong-ty-tnhh-tu-van-xay-dung-cong-nghe-xanh",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-17",
+      "phone": "02633830308",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Lâm Đồng",
+      "mainIndustry": "Xây dựng nhà để ở",
+      "enrichedAt": "2026-10-06T08:18:43.773Z"
     },
     {
       "id": "5801582359",
       "name": "CÔNG TY CỔ PHẦN  ĐẦU TƯ VÀ DỊCH VỤ CẢNG HÀNG KHÔNG VIỆT NAM TẠI ĐÀ LẠT",
-      "representative": "NGUYỄN DUY HƯNG",
+      "representative": "NGUYỄN DUY HƯNG Ngoài ra, NGUYỄN DUY HƯNG còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH KINH DOANH Ô TÔ THĂNG LONG - SÀI GÒN CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ DỊCH VỤ CẢNG HÀNG KHÔNG VIỆT NAM CÔNG TY CỔ PHẦN ĐẦU TƯ PHÁT TRIỂN THƯƠNG MẠI VÀ BẤT ĐỘNG SẢN THĂNG LONG SP.ZOO Nguyễn Duy Hưng CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ DỊCH VỤ CẢNG HÀNG KHÔNG VIỆT NAM TẠI BÌNH ĐỊNH CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ DỊCH VỤ CẢNG HÀNG KHÔNG VIỆT NAM TẠI THANH HOÁ",
       "address": "số 256, Quốc lộ 20, Xã Đức Trọng, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582359-cong-ty-co-phan-dau-tu-va-dich-vu-cang-hang-khong-viet-nam-tai-da-lat",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-17",
+      "phone": "0928167398",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 tỉnh Lâm Đồng",
+      "mainIndustry": "Tổ chức giới thiệu và xúc tiến thương mại Chi tiết: Tổ chức sự kiện, hội nghị, hội thảo (không thực hiện các hiệu ứng cháy, nổ; không sử dụng chất nổ, chất cháy, hóa chất làm đạo cụ, dụng cụ thực hiện các chương trình văn nghệ, sự kiện, phim ảnh).",
+      "enrichedAt": "2026-10-06T08:18:47.351Z"
     },
     {
       "id": "5801582447",
@@ -28881,7 +29101,13 @@
       "representative": "NGUYỄN VĂN TÂN",
       "address": "65 Quốc Lộ 20, Xã Đức Trọng, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582447-cong-ty-tnhh-tm-mtv-tan-ha-ld",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-17",
+      "phone": "0852826518",
+      "status": "Chờ",
+      "managedBy": "Thuế cơ sở 3 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn tổng hợp (trừ bán buôn bình gas, khí dầu mỏ hóa lỏng LPG, dầu nhớt cặn, vàng miếng, súng, đạn loại dùng đi săn hoặc thể thao và tiền kim khí, hoạt động đấu giá)",
+      "enrichedAt": "2026-10-06T08:18:50.724Z"
     },
     {
       "id": "5801582461",
@@ -28889,7 +29115,14 @@
       "representative": "NGUYỄN THỊ DUNG",
       "address": "58/5, Đường An Bình, Phường Xuân Hương - Đà Lạt, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582461-cong-ty-tnhh-nha-suoi",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-17",
+      "phone": "0968976577",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Lâm Đồng",
+      "mainIndustry": "Dịch vụ spa và xông hơi Không bao gồm dịch vụ massage, xoa bóp, tẩm quất",
+      "internationalName": "NHA SUOI COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:18:54.341Z"
     },
     {
       "id": "5801582479",
@@ -28897,7 +29130,13 @@
       "representative": "ĐẶNG VĂN HIỀN",
       "address": "Lô 9, Chợ Thạnh Mỹ, đường Hai Tháng Tư, thôn M'lon, Xã Đơn Dương, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582479-cong-ty-tnhh-thuong-mai-dich-vu-tong-hop-chu-sa",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-17",
+      "phone": "0701928077",
+      "status": "Chờ",
+      "managedBy": "Thuế cơ sở 3 tỉnh Lâm Đồng",
+      "mainIndustry": "Kinh doanh bất động sản, quyền sử dụng đất thuộc chủ sở hữu, chủ sử dụng hoặc đi thuê",
+      "enrichedAt": "2026-10-06T08:18:57.837Z"
     },
     {
       "id": "5801582334",
@@ -28905,7 +29144,14 @@
       "representative": "LÊ CÔNG VIÊN",
       "address": "Thửa đất số 482, Tờ bản đồ số 4, Thôn 12, Xã Đạ Tẻh 2, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582334-cong-ty-tnhh-nong-san-dai-viet",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-17",
+      "phone": "0703117047",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 5 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống (không bao gồm động vật hoang dã, quý hiếm)",
+      "internationalName": "DAI VIET AGRICULTURAL PRODUCTS COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:19:01.317Z"
     },
     {
       "id": "5801582341",
@@ -28913,7 +29159,14 @@
       "representative": "LÊ QUANG HƯNG",
       "address": "Hẻm 68, đường Trần Phú, thôn 16, Xã Di Linh, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582341-cong-ty-tnhh-thuong-mai-dich-vu-va-xay-dung-ha-an-phat",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-17",
+      "phone": "0962900067",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh Lâm Đồng",
+      "mainIndustry": "Xây dựng nhà để ở Chi tiết: Xây dựng công trình dân dụng",
+      "internationalName": "HA AN PHAT TRADING SERVICE AND CONSTRUCTION COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:19:04.873Z"
     },
     {
       "id": "5801582327",
@@ -28921,15 +29174,27 @@
       "representative": "VÕ THỊ THẢO TRINH",
       "address": "Lô số 9, Chợ Quảng Lập, thôn Quảng Lợi, Xã Quảng Lập, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582327-cong-ty-tnhh-thuong-mai-dich-vu-tong-hop-bach-nguyet",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-16",
+      "phone": "0701928077",
+      "status": "Chờ",
+      "managedBy": "Thuế cơ sở 3 tỉnh Lâm Đồng",
+      "mainIndustry": "Xây dựng nhà để ở",
+      "enrichedAt": "2026-10-06T08:19:08.184Z"
     },
     {
       "id": "3401293599",
       "name": "CÔNG TY TNHH THU MUA NÔNG SẢN VINH PHÁT",
-      "representative": "ĐỖ VĂN VINH",
+      "representative": "ĐỖ VĂN VINH Ngoài ra, ĐỖ VĂN VINH còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH A. VINH",
       "address": "Tổ 2, Thôn Dân Hiệp, Xã Hàm Kiệm, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293599-cong-ty-tnhh-thu-mua-nong-san-vinh-phat",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-16",
+      "phone": "0787378379",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn thực phẩm Trừ dược phẩm",
+      "enrichedAt": "2026-10-06T08:19:11.526Z"
     },
     {
       "id": "3401293574",
@@ -28937,15 +29202,28 @@
       "representative": "VÕ NGỌC SƠN",
       "address": "Tổ dân phố Đại Nẫm, Phường Bình Thuận, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293574-cong-ty-tnhh-thuong-mai-dich-vu-va-xay-dung-phuc-khang-pt",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-16",
+      "phone": "0379727838",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Xây dựng nhà để ở",
+      "enrichedAt": "2026-10-06T08:19:15.088Z"
     },
     {
       "id": "3401293609",
       "name": "CÔNG TY TNHH NÔNG SẢN DƯƠNG DƯƠNG",
-      "representative": "HỨA VĂN DƯƠNG",
+      "representative": "HỨA VĂN DƯƠNG Ngoài ra, HỨA VĂN DƯƠNG còn đại diện các doanh nghiệp, đơn vị: Hứa Văn Dương",
       "address": "Tổ 5, Thôn Dân Hiệp, Xã Hàm Kiệm, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293609-cong-ty-tnhh-nong-san-duong-duong",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-16",
+      "phone": "0888517777",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn thực phẩm Trừ dược phẩm",
+      "internationalName": "DUONG DUONG AGRICULTURAL PRODUCTS COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:19:18.691Z"
     },
     {
       "id": "6400483521",
@@ -28953,7 +29231,14 @@
       "representative": "NGUYỄN THỊ THÙY TRANG",
       "address": "Bon Điêng Đu, Xã Quảng Tân, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "6400483521-cong-ty-tnhh-mot-thanh-vien-dich-vu-thuong-mai-huy-trang",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-08-17",
+      "phone": "0964188933",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 11 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn chuyên doanh khác chưa được phân vào đâu Chi tiết: Bán buôn cao su (Chỉ hoạt động khi có đủ điều kiện theo quy định của pháp luật)",
+      "internationalName": "HUY TRANG TRADING SERVICE ONE MEMBER COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:19:22.071Z"
     },
     {
       "id": "5801580104",
@@ -28961,15 +29246,27 @@
       "representative": "LÊ THỊ THU THỦY",
       "address": "Số 175, thôn 6, Xã Gia Hiệp, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801580104-cong-ty-tnhh-tuyen-cuong",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-08-17",
+      "phone": "0367908656",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống",
+      "enrichedAt": "2026-10-06T08:19:25.441Z"
     },
     {
       "id": "5801582292",
       "name": "CÔNG TY CỔ PHẦN BỆNH VIỆN ĐA KHOA QUỐC TẾ SIS ĐÀ LẠT",
-      "representative": "TRẦN CHÍ CƯỜNG",
+      "representative": "TRẦN CHÍ CƯỜNG Ngoài ra, TRẦN CHÍ CƯỜNG còn đại diện các doanh nghiệp, đơn vị: BỆNH VIỆN ĐA KHOA QUỐC TẾ S.I.S CẦN THƠ - CHI NHÁNH CÔNG TY CỔ PHẦN ĐẦU TƯ Y TẾ VIỆT CƯỜNG CÔNG TY CỔ PHẦN DỊCH VỤ QUỐC TẾ ĐỘT QUỴ SIS VIỆT NAM QUỸ TỪ THIỆN BỆNH NHÂN NGHÈO BỊ ĐỘT QUỴ KHU VỰC ĐỒNG BẰNG SÔNG CỬU LONG BỆNH VIỆN ĐA KHOA QUỐC TẾ S.I.S CẦN THƠ - CHI NHÁNH CÔNG TY CỔ PHẦN ĐẦU TƯ Y TẾ VIỆT CƯỜNG CÔNG TY CỔ PHẦN DỊCH VỤ QUỐC TẾ ĐỘT QUỴ SIS VIỆT NAM Trần Chí Cường",
       "address": "Lô C2 KQH Đông Tĩnh, thửa đất số 2828, tờ bản đồ số 16 (46e), Phường Lâm Viên - Đà Lạt, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582292-cong-ty-co-phan-benh-vien-da-khoa-quoc-te-sis-da-lat",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-15",
+      "phone": "0773 320 278",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Lâm Đồng",
+      "mainIndustry": "Hoạt động của các phòng khám đa khoa, chuyên khoa và nha khoa Chi tiết: Hoạt động của các phòng khám đa khoa, chuyên khoa",
+      "enrichedAt": "2026-10-06T08:19:29.088Z"
     },
     {
       "id": "3401293461",
@@ -29016,7 +29313,13 @@
       "representative": "NGUYỄN THANH HÙNG",
       "address": "152 Nguyễn Minh Châu, Tổ dân phố 5, Phường Mũi Né, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "0309391528-001-chi-nhanh-cong-ty-tnhh-mot-thanh-vien-thuong-mai-xuat-nhap-khau-an-khang",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-15",
+      "phone": "0902784989",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Vận tải hàng hóa bằng đường bộ (trừ hóa lỏng khí để vận chuyển)",
+      "enrichedAt": "2026-10-06T08:19:32.641Z"
     },
     {
       "id": "5801581115",
@@ -29024,15 +29327,28 @@
       "representative": "PHẠM QUANG DUY",
       "address": "Số nhà 160, thôn Gia Lành, Xã Gia Hiệp, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581115-cong-ty-tnhh-quang-duy-entertainment",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-08",
+      "phone": "0983575045",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh Lâm Đồng",
+      "mainIndustry": "Tổ chức giới thiệu và xúc tiến thương mại",
+      "internationalName": "QUANG DUY ENTERTAINMENT COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:19:35.860Z"
     },
     {
       "id": "3401293398",
       "name": "CÔNG TY TNHH TM DV VẬN TẢI CẨU KÉO BÌNH YÊN",
-      "representative": "NGUYỄN DUY TUÂN",
+      "representative": "NGUYỄN DUY TUÂN Ngoài ra, NGUYỄN DUY TUÂN còn đại diện các doanh nghiệp, đơn vị: Nguyễn Duy Tuân",
       "address": "Km 6, Quốc Lộ 28, Phường Hàm Thắng, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293398-cong-ty-tnhh-tm-dv-van-tai-cau-keo-binh-yen",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-15",
+      "phone": "0862979078",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Hoạt động dịch vụ hỗ trợ trực tiếp cho vận tải đường bộ",
+      "enrichedAt": "2026-10-06T08:19:39.279Z"
     },
     {
       "id": "3401293380",
@@ -29040,7 +29356,13 @@
       "representative": "TRẦN HỮU PHÚC",
       "address": "Tổ 13, Thôn Lập Đức, Xã Tân Lập, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293380-cong-ty-cp-nong-nghiep-chan-nuoi-tan-lap",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-15",
+      "phone": "0908484986",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Chăn nuôi lợn",
+      "enrichedAt": "2026-10-06T08:19:42.423Z"
     },
     {
       "id": "5801581154",
@@ -29048,7 +29370,13 @@
       "representative": "NGUYỄN THỊ HẠNH",
       "address": "Thửa đất số 111, tờ bản đồ số 162 Thôn 16, Xã Đạ Huoai, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581154-cong-ty-tnhh-mtv-dang-khoa-lam-dong",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-08",
+      "phone": "0939983789",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 5 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn thực phẩm Chi tiết: Bán buôn rau củ, hoa quả tươi, đông lạnh",
+      "enrichedAt": "2026-10-06T08:19:45.782Z"
     },
     {
       "id": "3401293373",
@@ -29056,7 +29384,13 @@
       "representative": "NGUYỄN HỮU LỘC",
       "address": "Xóm 4, Thôn 2, Xã Nghị Đức, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293373-cong-ty-tnhh-nong-san-huu-loc",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-15",
+      "phone": "0375397958",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn chuyên doanh khác chưa được phân vào đâu Chi tiết: Bán buôn cao su",
+      "enrichedAt": "2026-10-06T08:19:49.152Z"
     },
     {
       "id": "3401293366",
@@ -29064,7 +29398,13 @@
       "representative": "TẠ NGỌC CƠ",
       "address": "153 QL1A, Tổ 4, Thôn Thái Hiệp, Xã Hồng Thái, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293366-cong-ty-tnhh-thuong-mai-san-xuat-ngoc-co",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-15",
+      "phone": "0792048045",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 8 tỉnh Lâm Đồng",
+      "mainIndustry": "Hoàn thiện công trình xây dựng",
+      "enrichedAt": "2026-10-06T08:19:52.690Z"
     },
     {
       "id": "3401293359",
@@ -29072,7 +29412,13 @@
       "representative": "NGUYỄN THỊ LIÊN",
       "address": "Đường ĐT 719B, Thôn Kê Gà, Xã Tân Thành, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293359-cong-ty-tnhh-hai-san-lien-phu",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-15",
+      "phone": "0772620080",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn thực phẩm Chi tiết: Bán buôn thủy sản tươi sống, đông lạnh và chế biến như: cá, động vật thân mềm (mực, bạch tuộc…), động vật giáp xác (tôm, cua…) và các động vật không xương sống khác sống dưới nước.",
+      "enrichedAt": "2026-10-06T08:19:55.934Z"
     },
     {
       "id": "5801582091",
@@ -29080,7 +29426,14 @@
       "representative": "CHÌU NGUYÊN PHÚ LỘC",
       "address": "Số 206 - 207 Thôn Liên Đầm 8, Xã Di Linh, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582091-cong-ty-tnhh-ca-phe-zili-viet-nam",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-15",
+      "phone": "0702826868",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn thực phẩm Chi tiết: Bán buôn cà phê nhân xanh, cà phê hạt đã rang, cà phê bột và các sản phẩm cà phê; mua bán cà phê trong nước và thực hiện hoạt động xuất khẩu, nhập khẩu cà phê theo quy định pháp luật.",
+      "internationalName": "ZILI VIETNAM COFFEE COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:19:59.428Z"
     },
     {
       "id": "6400483088-001",
@@ -29088,15 +29441,27 @@
       "representative": "LƯU BẠCH HOA",
       "address": "Thôn Đắk Nang 1, Xã Tà Đùng, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "6400483088-001-chi-nhanh-cong-ty-tnhh-thuong-mai-thiet-ke-xay-dung-le-minh",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-08-28",
+      "phone": "0947318787",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 10 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng",
+      "enrichedAt": "2026-10-06T08:20:02.844Z"
     },
     {
       "id": "3401293327",
       "name": "CÔNG TY TNHH XÂY DỰNG AN GIA LG",
-      "representative": "TRẦN VĂN QUỐC",
+      "representative": "TRẦN VĂN QUỐC Ngoài ra, TRẦN VĂN QUỐC còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH HƯƠNG DI BAKERY",
       "address": "57 Hồ Xuân Hương, Tổ dân phố Tân An 3, Phường La Gi, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293327-cong-ty-tnhh-xay-dung-an-gia-lg",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-14",
+      "phone": "093 111 6068",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 tỉnh Lâm Đồng",
+      "mainIndustry": "Xây dựng nhà để ở",
+      "enrichedAt": "2026-10-06T08:20:08.332Z"
     },
     {
       "id": "3401293334",
@@ -29104,7 +29469,13 @@
       "representative": "TRẦN MINH TOẢN",
       "address": "Đường ĐT 712 Thôn Hiệp Phước, Xã Tân Thành, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293334-cong-ty-tnhh-bat-dong-san-minh-tri-group",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-14",
+      "phone": "0988814726",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Kinh doanh bất động sản, quyền sử dụng đất thuộc chủ sở hữu, chủ sử dụng hoặc đi thuê",
+      "enrichedAt": "2026-10-06T08:20:11.829Z"
     },
     {
       "id": "5801582013",
@@ -29112,7 +29483,14 @@
       "representative": "PHẠM NHẬT ANH",
       "address": "151 Hai Bà Trưng, Thôn 1, Xã Cát Tiên, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801582013-cong-ty-tnhh-tay-lam-cat",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-14",
+      "phone": "0983979967",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 5 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn nhiên liệu rắn, lỏng, khí và các sản phẩm liên quan",
+      "internationalName": "TAY LAM CAT COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:20:15.449Z"
     },
     {
       "id": "3401293197",
@@ -29120,7 +29498,13 @@
       "representative": "PHAN THỊ MINH THƯ",
       "address": "Thửa 22, TBĐ 74, Tổ 8, thôn Dân Hiệp, Xã Hàm Kiệm, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293197-cong-ty-tnhh-mtv-hoang-minh-anh-plastic",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-14",
+      "phone": "0364693468",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Sản xuất sản phẩm từ plastic Chi tiết: Sản xuất nhựa gia dụng, bao bì nhựa và túi nhựa",
+      "enrichedAt": "2026-10-06T08:20:18.898Z"
     },
     {
       "id": "3401293158",
@@ -29128,15 +29512,28 @@
       "representative": "PHẠM THỊ THU HẰNG",
       "address": "Số nhà 234, Quốc lộ 1A, Tổ dân phố Phú Hòa, Phường Hàm Thắng, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293158-cong-ty-tnhh-xay-dung-toan-nang-luc",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-14",
+      "phone": "0945 168 676",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Xây dựng nhà không để ở Chi tiết: Xây dựng công trình dân dụng và công nghiệp.",
+      "enrichedAt": "2026-10-06T08:20:22.159Z"
     },
     {
       "id": "6400484081",
       "name": "CÔNG TY TNHH MỘT THÀNH VIÊN Ô TÔ ĐỨC LẬP",
-      "representative": "NGUYỄN ANH DŨNG",
+      "representative": "NGUYỄN ANH DŨNG Ngoài ra, NGUYỄN ANH DŨNG còn đại diện các doanh nghiệp, đơn vị: Nguyễn Anh Dũng",
       "address": "Thôn Đắc Xuân, Xã Thuận An, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "6400484081-cong-ty-tnhh-mot-thanh-vien-o-to-duc-lap",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-14",
+      "phone": "0857466789",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 12 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán lẻ lương thực, thực phẩm, đồ uống, thuốc lá, thuốc lào lưu động hoặc tại chợ",
+      "internationalName": "DUC LAP AUTOMOBILE ONE MEMBER LIMITED LIABILITY COMPANY",
+      "enrichedAt": "2026-10-06T08:20:25.825Z"
     },
     {
       "id": "5801581919",
@@ -29144,7 +29541,14 @@
       "representative": "RO DA NAI DUNG",
       "address": "Số 1B Hoàng Văn Thụ, Phường Xuân Hương - Đà Lạt, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581919-cong-ty-tnhh-thuong-mai-dich-vu-khoi-nguyen-ld",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-14",
+      "phone": "0919 752 368",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Lâm Đồng",
+      "mainIndustry": "Giáo dục khác chưa được phân vào đâu Chi tiết: - Đào tạo tin học; - Đào tạo anh ngữ.",
+      "internationalName": "KHOI NGUYEN LD TRADING SERVICE COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:20:29.076Z"
     },
     {
       "id": "5801581813",
@@ -29152,7 +29556,13 @@
       "representative": "NGUYỄN NGỌC SƠN",
       "address": "Số 76, Thôn Ka Đê, Xã Quảng Lập, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581813-cong-ty-tnhh-thuong-mai-dich-vu-van-tai-hang-hoa-nam-son",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-14",
+      "phone": "0327 329 669",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống",
+      "enrichedAt": "2026-10-06T08:20:32.462Z"
     },
     {
       "id": "5801581838",
@@ -29160,7 +29570,14 @@
       "representative": "NGUYỄN THÙY TRỌNG NHÂN",
       "address": "29-31 Lý Tự Trọng, Phường 1 Bảo Lộc, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581838-cong-ty-co-phan-famora",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-14",
+      "phone": "0967155680",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh Lâm Đồng",
+      "mainIndustry": "Dịch vụ phục vụ đồ uống",
+      "internationalName": "FAMORA JOINT STOCK COMPANY",
+      "enrichedAt": "2026-10-06T08:20:36.085Z"
     },
     {
       "id": "5801581884",
@@ -29168,7 +29585,13 @@
       "representative": "VĂN THỊ PHƯƠNG TRINH",
       "address": "137 Huyền Trân Công Chúa, Phường Xuân Hương - Đà Lạt, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581884-cong-ty-tnhh-minh-tien-farm-da-lat",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-14",
+      "phone": "0896048687",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn thực phẩm",
+      "enrichedAt": "2026-10-06T08:20:39.689Z"
     },
     {
       "id": "3401293140",
@@ -29176,7 +29599,13 @@
       "representative": "TRẦN THỊ NGỌC HÀ",
       "address": "Hẻm 283 Nguyễn Đình Chiểu, Tổ Dân Phố 7, Phường Mũi Né, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293140-cong-ty-trach-nhiem-huu-han-long-van-mui-ne",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-14",
+      "phone": "0916169343",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Dịch vụ đặt chỗ và các dịch vụ hỗ trợ liên quan đến quảng bá và tổ chức tua du lịch Nhóm này gồm: - Dịch vụ hỗ trợ du khách: + Cung cấp thông tin du lịch cho du khách, + Hoạt động của hướng dẫn viên du lịch độc lập. - Hoạt động xúc tiến du lịch.",
+      "enrichedAt": "2026-10-06T08:20:43.146Z"
     },
     {
       "id": "5801581806",
@@ -29184,7 +29613,13 @@
       "representative": "PHẠM VĂN TRUNG",
       "address": "Số 42, Thôn Kon Tách Đăng, Xã Đinh Văn Lâm Hà, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581806-cong-ty-tnhh-ca-phe-hoa-trung-lam-dong",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-14",
+      "phone": "0353 520 787",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống Chi tiết: Thu mua cà phê, tiêu, cà ri…",
+      "enrichedAt": "2026-10-06T08:20:46.574Z"
     },
     {
       "id": "5801581852",
@@ -29192,7 +29627,14 @@
       "representative": "VY THỊ HOA",
       "address": "Số 14 Gio An, Phường Cam Ly - Đà Lạt, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581852-cong-ty-tnhh-mtv-minh-phuong",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-14",
+      "phone": "0876 897 668",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống Chi tiết: Bán buôn nông sản các loại",
+      "internationalName": "MINH PHUONG MTV COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:20:49.806Z"
     },
     {
       "id": "5801581845",
@@ -29200,7 +29642,13 @@
       "representative": "ĐỖ ĐỨC TRUNG",
       "address": "51 Hoàng Hoa Thám, Phường Xuân Hương - Đà Lạt, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581845-cong-ty-tnhh-infinity-retail",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-14",
+      "phone": "0367549161",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Lâm Đồng",
+      "mainIndustry": "Dịch vụ phục vụ đồ uống",
+      "enrichedAt": "2026-10-06T08:20:53.161Z"
     },
     {
       "id": "5801581877",
@@ -29208,7 +29656,14 @@
       "representative": "NGUYỄN VĂN HẢI",
       "address": "Hẻm 5 đường Ma Trang Sơn, Phường Cam Ly - Đà Lạt, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581877-cong-ty-tnhh-dalat-haven-hospitality-group",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-14",
+      "phone": "0972336379",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Lâm Đồng",
+      "mainIndustry": "Hoạt động tư vấn quản lý Chi tiết: Quản lý và vận hành khách sạn, khu nghỉ dưỡng và cơ sở lưu trú; cung cấp dịch vụ quản lý, điều hành hoạt động kinh doanh khách sạn theo hợp đồng",
+      "internationalName": "DALAT HAVEN HOSPITALITY GROUP CO., LTD",
+      "enrichedAt": "2026-10-06T08:20:56.470Z"
     },
     {
       "id": "5801581901",
@@ -29216,23 +29671,43 @@
       "representative": "NGUYỄN QUỲNH THỌ",
       "address": "Số nhà 21A , Đường Đào Duy Từ, Thôn 15, Xã Di Linh, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581901-cong-ty-tnhh-tap-doan-duong-eco",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-14",
+      "phone": "0879746999",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh Lâm Đồng",
+      "mainIndustry": "Nhà hàng và các dịch vụ ăn uống phục vụ lưu động (Trừ hoạt động kinh doanh quán rượu, bia, quầy bar, vũ trường, karaoke)",
+      "internationalName": "DUONG ECO GROUP COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:20:59.740Z"
     },
     {
       "id": "5801581891",
       "name": "CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI DỊCH VỤ XUẤT NHẬP KHẨU KHẢI NGUYÊN",
-      "representative": "VŨ QUANG MINH",
+      "representative": "VŨ QUANG MINH Ngoài ra, VŨ QUANG MINH còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH VŨ QUANG MINH",
       "address": "Số 8 đường Trương Vĩnh Ký, Xã Đức Trọng, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581891-cong-ty-tnhh-san-xuat-thuong-mai-dich-vu-xuat-nhap-khau-khai-nguyen",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-14",
+      "phone": "0925 399 595",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống (Kinh doanh động vật trong danh mục Nhà nước cho phép).",
+      "enrichedAt": "2026-10-06T08:21:05.860Z"
     },
     {
       "id": "5801581820",
       "name": "CÔNG TY CP KBP INC",
-      "representative": "PHONG TÚ HIỀN",
+      "representative": "PHONG TÚ HIỀN Ngoài ra, PHONG TÚ HIỀN còn đại diện các doanh nghiệp, đơn vị: CÔNG TY CỔ PHẦN ĐẦU TƯ XÂY DỰNG ĐỊA ỐC MỸ NHÀN CÔNG TY CỔ PHẦN NGUỒN NHÂN LỰC XUKA CHI NHÁNH CÔNG TY CỔ PHẦN ĐẦU TƯ XÂY DỰNG ĐỊA ỐC MỸ NHÀN CHI NHÁNH CÔNG TY CỔ PHẦN ĐẦU TƯ XÂY DỰNG ĐỊA ỐC MỸ NHÀN CHI NHÁNH - CÔNG TY CỔ PHẦN ĐẦU TƯ XÂY DỰNG ĐỊA ỐC MỸ NHÀN CÔNG TY CỔ PHẦN GIẢI PHÁP TÀI CHÍNH HHL CÔNG TY CỔ PHẦN B.HOUSE CÔNG TY CỔ PHẦN TYCOONS CAPITAL CÔNG TY CỔ PHẦN CỐ VẤN X CHI NHÁNH CÔNG TY CỔ PHẦN CỐ VẤN X TẠI HÀ NỘI CÔNG TY CỔ PHẦN TYCOONS FUND CÔNG TY CP XUẤT NHẬP KHẨU NÔNG SẢN ORGANIC CÔNG TY TNHH NOVITA AN BÌNH CÔNG TY CỔ PHẦN NOVITA GROUP CÔNG TY TNHH NOVITA TRUST CÔNG TY CỔ PHẦN NOVITA BLOCKCHAIN HỢP TÁC XÃ NOVITA AN BÌNH CÔNG TY CP BENNY INC CÔNG TY CP KOOMIE INC CÔNG TY CP KEG INC",
       "address": "Thửa đất số 877, Tờ bản đồ số 40, Thôn Đại Ninh, Xã Ninh Gia, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581820-cong-ty-cp-kbp-inc",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-14",
+      "phone": "0363072011",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 tỉnh Lâm Đồng",
+      "mainIndustry": "Sản xuất lò nướng, lò luyện và lò nung",
+      "internationalName": "KBP INC JOINT STOCK COMPANY",
+      "enrichedAt": "2026-10-06T08:21:09.415Z"
     },
     {
       "id": "5801581080",
@@ -29240,7 +29715,13 @@
       "representative": "TRẦN THỊ DIỆU THÚY",
       "address": "Thửa 494, tờ bản đồ 188 , Thôn 1 Lộc Quảng, Xã Bảo Lâm 1, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581080-cong-ty-tnhh-trong-nghia-thuy",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-08",
+      "phone": "0943225640",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống Chi tiết : Bán buôn nông sản.",
+      "enrichedAt": "2026-10-06T08:21:13.096Z"
     },
     {
       "id": "5801581549",
@@ -29248,7 +29729,14 @@
       "representative": "NGUYỄN XUÂN NHẬT",
       "address": "163 Đường Lạc long Quân, Xã Đức Trọng, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581549-cong-ty-tnhh-xuat-nhap-khau-bao-ve-thuc-vat-gia-nong",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-12",
+      "phone": "0987860038",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn chuyên doanh khác chưa được phân vào đâu Chi tiết : Phân bón, thuốc trừ sâu và hóa chất khác sử dụng trong nông nghiệp",
+      "internationalName": "GIA NONG PLANT PROTECTION IMPORT-EXPORT COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:21:16.451Z"
     },
     {
       "id": "5801581725",
@@ -29296,7 +29784,14 @@
       "representative": "PHẠM THÁI DUY",
       "address": "16/7 Nguyễn Siêu, Phường Lang Biang - Đà Lạt, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581595-cong-ty-tnhh-du-lich-va-van-tai-thien-minh-tri",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-10",
+      "phone": "0919408178",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Lâm Đồng",
+      "mainIndustry": "Vận tải hàng hóa bằng đường bộ",
+      "internationalName": "THIEN MINH TRI TOURISM AND TRANSPORT COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:21:19.959Z"
     },
     {
       "id": "6400483063",
@@ -29304,15 +29799,28 @@
       "representative": "NGUYỄN THỊ HẰNG",
       "address": "Thôn 12, Xã Trường Xuân, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "6400483063-cong-ty-tnhh-thuong-mai-vinh-hang",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-07-31",
+      "phone": "0566333789",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 12 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống Chi tiết: Trừ loại Nhà nước cấm, trừ hoạt động đấu giá;",
+      "internationalName": "VINH HANG TRADE COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:21:28.650Z"
     },
     {
       "id": "3401293091",
       "name": "CÔNG TY TNHH MỘT THÀNH VIÊN SOLAR PT",
-      "representative": "VŨ HOÀNG ANH",
+      "representative": "VŨ HOÀNG ANH Ngoài ra, VŨ HOÀNG ANH còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH ECO TRÍ ANH CÔNG TY TNHH MỘT THÀNH VIÊN NIBIHADU HỘ KINH DOANH ECO VHA CÔNG TY CỔ PHẦN NĂNG LƯỢNG ACH",
       "address": "Tổ 1, Xuân Phong, Phường Bình Thuận, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293091-cong-ty-tnhh-mot-thanh-vien-solar-pt",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-11",
+      "phone": "0913792179",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Truyền tải và phân phối điện Chi tiết: Sản xuất điện mặt trời; Sản xuất điện từ nguồn năng lượng tái tạo khác",
+      "enrichedAt": "2026-10-06T08:21:32.002Z"
     },
     {
       "id": "3401293084",
@@ -29320,15 +29828,28 @@
       "representative": "PHẠM QUANG HẢI",
       "address": "Tổ 1, Xuân Phong, Phường Bình Thuận, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293084-cong-ty-tnhh-mot-thanh-vien-solar-dan",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-11",
+      "phone": "0911013366",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Truyền tải và phân phối điện Chi tiết: Sản xuất điện mặt trời; Sản xuất điện từ nguồn năng lượng tái tạo khác",
+      "enrichedAt": "2026-10-06T08:21:35.411Z"
     },
     {
       "id": "3401293077",
       "name": "CÔNG TY TNHH XUẤT NHẬP KHẨU KHÁNH VƯƠNG",
-      "representative": "NGUYỄN VĂN HIỆP",
+      "representative": "NGUYỄN VĂN HIỆP Ngoài ra, NGUYỄN VĂN HIỆP còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH THANH LONG KHÁNH VƯƠNG",
       "address": "KM 20 Quốc lộ 1A, Thôn Minh Tiến, Xã Hàm Thuận Nam, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293077-cong-ty-tnhh-xuat-nhap-khau-khanh-vuong",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-11",
+      "phone": "0917282007",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống Chi tiết: Bán buôn nông, lâm sản nguyên liệu (trừ, gỗ, tre, nứa)",
+      "internationalName": "KHANH VUONG IMPORT EXPORT COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:21:38.995Z"
     },
     {
       "id": "3401293052",
@@ -29336,15 +29857,28 @@
       "representative": "NGUYỄN VĂN MẠNH",
       "address": "Km9 Nguyễn Thông, Phường Phú Thủy, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401293052-cong-ty-tnhh-doi-ba-nai",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-11",
+      "phone": "0987685586",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Dịch vụ chăm sóc và duy trì cảnh quan",
+      "internationalName": "BA NAI HILL COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:21:42.474Z"
     },
     {
       "id": "5801581588",
       "name": "CÔNG TY CỔ PHẦN DAANA",
-      "representative": "BÙI QUANG SƠN",
+      "representative": "BÙI QUANG SƠN Ngoài ra, BÙI QUANG SƠN còn đại diện các doanh nghiệp, đơn vị: Bùi Quang Sơn HỘ KINH DOANH BÙI QUANG SƠN.",
       "address": "399 đường Phan Đình Phùng, Phường Xuân Hương - Đà Lạt, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581588-cong-ty-co-phan-daana",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-11",
+      "phone": "0913737012",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Lâm Đồng",
+      "mainIndustry": "Kinh doanh bất động sản, quyền sử dụng đất thuộc chủ sở hữu, chủ sử dụng hoặc đi thuê Chi tiết: Kinh doanh bất động sản.",
+      "enrichedAt": "2026-10-06T08:21:46.069Z"
     },
     {
       "id": "5801581690",
@@ -29352,7 +29886,13 @@
       "representative": "LÊ THỊ MỸ DUNG",
       "address": "Đường số 4 Thôn Quảng Hiệp, Xã Quảng Lập, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581690-cong-ty-tnhh-nong-san-thuc-pham-le-dung",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-11",
+      "phone": "0973477167",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn thực phẩm Chi tiết: - Bán buôn rau, quả; - Bán buôn thịt và các sản phẩm từ thịt; - Bán buôn thủy sản; - Bán buôn cà phê; - Bán buôn chè; - Bán buôn đường, sữa và các sản phẩm sữa, bánh kẹo và các sản phẩm chế biến từ ngũ cốc, bột, tinh bột; - Bán buôn thực phẩm khác.",
+      "enrichedAt": "2026-10-06T08:21:49.606Z"
     },
     {
       "id": "6400484042",
@@ -29360,23 +29900,42 @@
       "representative": "CAO MINH CÔNG",
       "address": "Tổ 3, Phường Nam Gia Nghĩa, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "6400484042-cong-ty-tnhh-nang-luong-t3s",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-11",
+      "phone": "0983817070",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 10 tỉnh Lâm Đồng",
+      "mainIndustry": "Xây dựng công trình điện (Doanh nghiệp không cung cấp hàng hóa, dịch vụ thuộc độc quyền Nhà nước, không hoạt động thương mại theo NĐ 94/2017/NĐ-CP về hàng hóa, dịch vụ độc quyền Nhà nước)",
+      "internationalName": "T3S ENERGY COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:21:52.888Z"
     },
     {
       "id": "6400484010",
       "name": "CÔNG TY TNHH THƯƠNG MẠI SẢN XUẤT VĨNH PHÚ H88",
-      "representative": "NGUYỄN QUỐC HUÂN",
+      "representative": "NGUYỄN QUỐC HUÂN Ngoài ra, NGUYỄN QUỐC HUÂN còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH CẦM ĐỒ H88",
       "address": "89 Đường Phạm Văn Đồng, Phường Đông Gia Nghĩa, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "6400484010-cong-ty-tnhh-thuong-mai-san-xuat-vinh-phu-h88",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-11",
+      "phone": "0972690609",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 10 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống Chi tiết : Bán buôn cà phê,điều,tiêu ….",
+      "enrichedAt": "2026-10-06T08:21:56.185Z"
     },
     {
       "id": "0310092314-004",
       "name": "CÔNG TY CỔ PHẦN ĐẦU TƯ BỆNH VIỆN XUYÊN Á - CHI NHÁNH LÂM ĐỒNG",
-      "representative": "HUỲNH BÍCH LIÊN",
+      "representative": "HUỲNH BÍCH LIÊN Ngoài ra, HUỲNH BÍCH LIÊN còn đại diện các doanh nghiệp, đơn vị: CÔNG TY CỔ PHẦN ĐẦU TƯ BỆNH VIỆN XUYÊN Á CÔNG TY CỔ PHẦN ĐẦU TƯ BỆNH VIỆN XUYÊN Á - CHI NHÁNH VĨNH LONG CÔNG TY CỔ PHẦN ĐẦU TƯ BỆNH VIỆN XUYÊN Á - CHI NHÁNH TÂY NINH CÔNG TY CỔ PHẦN ĐẦU TƯ BỆNH VIỆN XUYÊN Á - CHI NHÁNH ĐỨC HÒA CÔNG TY TRÁCH NHIỆM HỮU HẠN MỘT THÀNH VIÊN XUYÊN Á MART Huỳnh Bích Liên",
       "address": "Tổ dân phố 1, Xã Cư Jút, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "0310092314-004-cong-ty-co-phan-dau-tu-benh-vien-xuyen-a-chi-nhanh-lam-dong",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-11",
+      "phone": "02633909888",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 13 tỉnh Lâm Đồng",
+      "mainIndustry": "Hoạt động của các bệnh viện, trạm xá bệnh viện",
+      "enrichedAt": "2026-10-06T08:22:06.839Z"
     },
     {
       "id": "6400484003",
@@ -29384,7 +29943,13 @@
       "representative": "NGÔ ĐÌNH HÙNG",
       "address": "Số nhà 39 Bon Jốk Ju, Xã Nâm Nung, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "6400484003-cong-ty-tnhh-xay-dung-giao-thong-hung-phat-tna",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-11",
+      "phone": "0985952707",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 13 tỉnh Lâm Đồng",
+      "mainIndustry": "Xây dựng công trình đường bộ",
+      "enrichedAt": "2026-10-06T08:22:10.124Z"
     },
     {
       "id": "3401292588",
@@ -29428,10 +29993,16 @@
     {
       "id": "3401292098-001",
       "name": "CHI NHÁNH KHOB KHUN KHA 01 - CÔNG TY TNHH KHOB KHUN KHA",
-      "representative": "NGUYỄN THANH THU CÚC",
+      "representative": "NGUYỄN THANH THU CÚC Ngoài ra, NGUYỄN THANH THU CÚC còn đại diện các doanh nghiệp, đơn vị: DOANH NGHIỆP TƯ NHÂN HOÀNG NGỌC TIẾN CHI NHÁNH CÔNG TY TNHH MỘT THÀNH VIÊN FRENZY'S Nguyễn Thanh Thu Cúc CÔNG TY TNHH KHOB KHUN KHA",
       "address": "92 Từ Văn Tư, Phường Phan Thiết, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401292098-001-chi-nhanh-khob-khun-kha-01-cong-ty-tnhh-khob-khun-kha",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-03",
+      "phone": "0865197868/091982398",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Nhà hàng và các dịch vụ ăn uống phục vụ lưu động",
+      "enrichedAt": "2026-10-06T08:22:13.624Z"
     },
     {
       "id": "3401292926",
@@ -29439,7 +30010,13 @@
       "representative": "NGUYỄN HẢI TÚ",
       "address": "35 - 36/B1 Khu phố Thắng Thuận, Phường Hàm Thắng, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401292926-cong-ty-tnhh-che-bien-hai-san-hai-tu",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-10",
+      "phone": "0907559988",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn thực phẩm Chi tiết: Bán buôn thủy sản Trừ dược phẩm",
+      "enrichedAt": "2026-10-06T08:22:17.355Z"
     },
     {
       "id": "3401292838",
@@ -29447,15 +30024,28 @@
       "representative": "NGUYỄN VĂN NGHĨA",
       "address": "35/3 Thôn Đông Tân, Xã Trà Tân, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401292838-cong-ty-tnhh-xay-dung-thiet-ke-cong-trinh-kien-phuc",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-10",
+      "phone": "0916732770",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 tỉnh Lâm Đồng",
+      "mainIndustry": "Hoạt động kiến trúc và tư vấn kỹ thuật có liên quan Chi tiết: Tư vấn thiết kế kiến trúc, thiết kế kỹ thuật cho các công trình xây dựng dân dụng, công nghiệp, giao thông (đường bộ, cầu, hầm); Tư vấn giám sát thi công xây dựng công trình (dân dụng, công nghiệp, giao thông, hạ tầng kỹ thuật...)",
+      "enrichedAt": "2026-10-06T08:22:21.046Z"
     },
     {
       "id": "3401292933",
       "name": "CÔNG TY TNHH KHAI THÁC KHOÁNG SẢN THUẬN PHÁT VN",
-      "representative": "NGUYỄN QUYẾT CHÍ",
+      "representative": "NGUYỄN QUYẾT CHÍ Ngoài ra, NGUYỄN QUYẾT CHÍ còn đại diện các doanh nghiệp, đơn vị: CHI NHÁNH CÔNG TY TNHH NAM THIÊN LỘC VN TẠI BÌNH DƯƠNG CÔNG TY TNHH XÂY DỰNG KHAI THÁC KHOÁNG SẢN TÂN PHÚC CÔNG TY TNHH TƯ VẤN THIẾT KẾ TM DV XD TRƯỜNG THỊNH",
       "address": "Đường 15, Thôn 6, Xã Tân Minh, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401292933-cong-ty-tnhh-khai-thac-khoang-san-thuan-phat-vn",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-10",
+      "phone": "0935658133",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế tỉnh Lâm Đồng",
+      "mainIndustry": "Khai thác đá, cát, sỏi, đất sét Chi tiết: Khai thác cao lanh; khai thác sét gạch ngói, đất làm vật liệu san lấp, cát xây dựng",
+      "internationalName": "THUAN PHAT VN MINERAL MINING COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:22:24.661Z"
     },
     {
       "id": "3401292820",
@@ -29463,7 +30053,13 @@
       "representative": "NGUYỄN THỊ HUỲNH NHI",
       "address": "248, Nguyễn Thông, Phường Phú Thủy, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401292820-cong-ty-tnhh-phu-an-khang-pt",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-10",
+      "phone": "0777039276",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn thực phẩm",
+      "enrichedAt": "2026-10-06T08:22:27.900Z"
     },
     {
       "id": "3401292877",
@@ -29471,7 +30067,13 @@
       "representative": "TRẦN THỊ ÁNH VY",
       "address": "số 24 Hùng Vương, Thôn 1, Xã Hàm Tân, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401292877-cong-ty-tnhh-tm-dv-van-tai-anh-vy",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-10",
+      "phone": "0965322567",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 tỉnh Lâm Đồng",
+      "mainIndustry": "Vận tải hành khách đường bộ trong nội thành, ngoại thành (trừ vận tải bằng xe buýt)",
+      "enrichedAt": "2026-10-06T08:22:31.442Z"
     },
     {
       "id": "5801581563",
@@ -29479,15 +30081,28 @@
       "representative": "NGUYỄN MẠNH TIẾN",
       "address": "79/9/12 Nguyễn Tri Phương, Phường 3 Bảo Lộc, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581563-cong-ty-tnhh-aha-food-delivery",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-10",
+      "phone": "0912349687",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh Lâm Đồng",
+      "mainIndustry": "Chuyển phát",
+      "internationalName": "AHA FOOD DELIVERY COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:22:34.943Z"
     },
     {
       "id": "0319423183-001",
       "name": "CÔNG TY TNHH TMDV THUẬN MINH - CHI NHÁNH LÂM ĐỒNG",
-      "representative": "LÊ MỸ HUYỀN",
+      "representative": "LÊ MỸ HUYỀN Ngoài ra, LÊ MỸ HUYỀN còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH TẠP HÓA CÔ THỦY CÔNG TY TNHH TMDV THUẬN MINH",
       "address": "Thửa đất 142, Tờ bản đồ 122, Thôn 6, Xã Đinh Trang Thượng, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "0319423183-001-cong-ty-tnhh-tmdv-thuan-minh-chi-nhanh-lam-dong",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-08",
+      "phone": "0981825349",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn nhiên liệu rắn, lỏng, khí và các sản phẩm liên quan",
+      "enrichedAt": "2026-10-06T08:22:38.329Z"
     },
     {
       "id": "5801581482",
@@ -29495,7 +30110,13 @@
       "representative": "NGUYỄN QUANG",
       "address": "Số 1/10, hẻm Cầu Đúc, Phường Xuân Hương - Đà Lạt, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581482-cong-ty-tnhh-tu-van-lam-nghiep-lam-dong-xanh",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-10",
+      "phone": "0919040239",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Lâm Đồng",
+      "mainIndustry": "Hoạt động dịch vụ lâm nghiệp",
+      "enrichedAt": "2026-10-06T08:22:41.729Z"
     },
     {
       "id": "5801581436",
@@ -29503,7 +30124,13 @@
       "representative": "ĐỖ THỊ HOÀI LINH",
       "address": "Thửa đất số 66, tờ bản đồ số 103, Thôn 15, Xã Bảo Lâm 1, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581436-cong-ty-tnhh-holi-infinity",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-10",
+      "phone": "0396999168",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh Lâm Đồng",
+      "mainIndustry": "Hoạt động hỗ trợ dịch vụ tài chính chưa được phân vào đâu Chi tiết: Tư vấn đầu tư (trừ tư vấn tài chính, kế toán, pháp luật)",
+      "enrichedAt": "2026-10-06T08:22:45.056Z"
     },
     {
       "id": "5801581475",
@@ -29511,7 +30138,13 @@
       "representative": "NGUYỄN NHÂM THÂN",
       "address": "Thửa đất số 1538, TBĐ 12, Thôn 7, Xã Đạ Huoai, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581475-cong-ty-tnhh-xnk-nong-san-bao-anh",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-10",
+      "phone": "0961 079 291",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 5 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống Chi tiết: Kinh doanh các mặt hàng nông sản",
+      "enrichedAt": "2026-10-06T08:22:48.697Z"
     },
     {
       "id": "5801581450",
@@ -29519,31 +30152,55 @@
       "representative": "NGUYỄN QUANG HUÂN",
       "address": "Số 158B/4 Nguyễn Văn Cừ, Phường B'Lao, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581450-cong-ty-tnhh-tmdv-ngoc-vy-ha",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-10",
+      "phone": "0852867486",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn đồ uống *Chi tiết: Kinh doanh bia, rượu, nước giải khát",
+      "enrichedAt": "2026-10-06T08:22:52.140Z"
     },
     {
       "id": "5801581443",
       "name": "CÔNG TY TNHH CÂY RỪNG ĐÀ LẠT",
-      "representative": "NGUYỄN HOÀNG TRIỆU VỸ",
+      "representative": "NGUYỄN HOÀNG TRIỆU VỸ Ngoài ra, NGUYỄN HOÀNG TRIỆU VỸ còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH GOLDEN BISTRO COFFEE",
       "address": "Số 69 An Bình, Phường Xuân Hương - Đà Lạt, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581443-cong-ty-tnhh-cay-rung-da-lat",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-10",
+      "phone": "0889 687 768",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Lâm Đồng",
+      "mainIndustry": "Nhà hàng và các dịch vụ ăn uống phục vụ lưu động",
+      "enrichedAt": "2026-10-06T08:22:55.589Z"
     },
     {
       "id": "5801581468",
       "name": "CÔNG TY TNHH TMDV QUÂN DUNG",
-      "representative": "NGUYỄN VĂN QUÂN",
+      "representative": "NGUYỄN VĂN QUÂN Ngoài ra, NGUYỄN VĂN QUÂN còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH HOTEL BÌNH AN CHI NHÁNH - CÔNG TY TNHH XNK PHÚC THỊNH PHÁT",
       "address": "Số 76 Trần Hưng Đạo, Phường B'Lao, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581468-cong-ty-tnhh-tmdv-quan-dung",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-10",
+      "phone": "0988312839",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống",
+      "enrichedAt": "2026-10-06T08:22:59.247Z"
     },
     {
       "id": "5801581517",
       "name": "CÔNG TY TNHH VÀNG BẠC ĐÁ QUÝ NGỌC SƠN NGỌC",
-      "representative": "NGUYỄN THỊ MỸ NGỌC",
+      "representative": "NGUYỄN THỊ MỸ NGỌC Ngoài ra, NGUYỄN THỊ MỸ NGỌC còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH NGUYỄN THỊ MỸ NGỌC",
       "address": "Thửa đất số 359, Tờ bản đồ số 25, Thôn 15, Xã Di Linh, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581517-cong-ty-tnhh-vang-bac-da-quy-ngoc-son-ngoc",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-10",
+      "phone": "0768 955 985",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế tỉnh Lâm Đồng",
+      "mainIndustry": "Sản xuất đồ kim hoàn và chi tiết liên quan Chi tiết: Làm mới, sửa chữa vàng trang sức, mỹ nghệ",
+      "enrichedAt": "2026-10-06T08:23:02.661Z"
     },
     {
       "id": "5801581556",
@@ -29551,15 +30208,28 @@
       "representative": "LƯU THỊ MỸ HẠNH",
       "address": "148 Thôn 1, Xã Đơn Dương, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581556-cong-ty-tnhh-vat-lieu-xay-dung-son-hanh",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-10",
+      "phone": "0984677491",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng Chi tiết: Xi măng, cát, đá, gạch xây dựng. Gạch lát nền, gạch ốp tường. Ngói, tấm lợp. Bê tông, cấu kiện bê tông. Vật liệu chống thấm, cách nhiệt. Vật liệu hoàn thiện công trình.",
+      "internationalName": "SON HANH CONSTRUCTION MATERIALS COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:23:06.133Z"
     },
     {
       "id": "5801581531",
       "name": "CÔNG TY TNHH DALAT COLLECTIVE COFFEE",
-      "representative": "VÕ DUY THÀNH",
+      "representative": "VÕ DUY THÀNH Ngoài ra, VÕ DUY THÀNH còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH ĐIỆN CƠ ÁNH SÁNG",
       "address": "22 Đặng Thái Thân, Phường Xuân Hương - Đà Lạt, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581531-cong-ty-tnhh-dalat-collective-coffee",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-10",
+      "phone": "0372938263",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Lâm Đồng",
+      "mainIndustry": "Hoạt động dịch vụ hỗ trợ kinh doanh khác còn lại chưa được phân vào đâu Chi tiết: xuất nhập khẩu cà phê",
+      "enrichedAt": "2026-10-06T08:23:09.884Z"
     },
     {
       "id": "3401292796",
@@ -29567,7 +30237,13 @@
       "representative": "NGUYỄN VĂN LONG",
       "address": "16B Nguyễn Văn Siêu, Phường Bình Thuận, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401292796-cong-ty-tnhh-dau-tu-tong-hop-long-phu-tai",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-09",
+      "phone": "0342908208",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng",
+      "enrichedAt": "2026-10-06T08:23:13.440Z"
     },
     {
       "id": "5801581108",
@@ -29575,7 +30251,13 @@
       "representative": "PHAN DƯƠNG DIỆU TRÂN",
       "address": "5A/D3 Mê Linh, Phường Lâm Viên - Đà Lạt, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581108-cong-ty-tnhh-duong-tran-vn",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-08",
+      "phone": "0933 196 560 - 0908",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Lâm Đồng",
+      "mainIndustry": "Vận tải hàng hóa bằng đường bộ",
+      "enrichedAt": "2026-10-06T08:23:16.701Z"
     },
     {
       "id": "3401292475",
@@ -29583,7 +30265,13 @@
       "representative": "PHAN VĂN TRƯỜNG",
       "address": "Tổ 2, Thôn An Thái, Xã Hồng Sơn, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401292475-doanh-nghiep-tu-nhan-dich-vu-xay-lap-truong-nguyen",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-04",
+      "phone": "0911319908",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán lẻ đồ ngũ kim, sơn, kính và thiết bị lắp đặt khác trong xây dựng trong các cửa hàng chuyên doanh",
+      "enrichedAt": "2026-10-06T08:23:19.999Z"
     },
     {
       "id": "6400483987",
@@ -29591,7 +30279,13 @@
       "representative": "NGUYỄN VĂN BÌNH",
       "address": "Thôn 2, Xã Đắk Mil, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "6400483987-cong-ty-tnhh-mot-thanh-vien-to-quyet",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-09",
+      "phone": "0987677688",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 12 tỉnh Lâm Đồng",
+      "mainIndustry": "Chuẩn bị mặt bằng",
+      "enrichedAt": "2026-10-06T08:23:23.928Z"
     },
     {
       "id": "5801581242",
@@ -29599,15 +30293,29 @@
       "representative": "VŨ MẠNH CƯỜNG",
       "address": "Số 236 Bia Ray, Xã Tân Hội, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581242-cong-ty-tnhh-cvab",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-09",
+      "phone": "0862978744",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 tỉnh Lâm Đồng",
+      "mainIndustry": "Phát triển trò chơi điện tử, phần mềm trò chơi điện tử và các công cụ phần mềm trò chơi điện tử (loại trừ Hoạt động của các trang web cờ bạc)",
+      "internationalName": "CVAB COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:23:27.465Z"
     },
     {
       "id": "3401292771",
       "name": "CÔNG TY TNHH GỖ VINH LOAN 86",
-      "representative": "NGUYỄN CÔNG VINH",
+      "representative": "NGUYỄN CÔNG VINH Ngoài ra, NGUYỄN CÔNG VINH còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH CHẾ BIẾN GỖ VINH LOAN CHI NHÁNH CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÁT TRIỂN DU LỊCH MẶT TRỜI Nguyễn Công Vinh",
       "address": "Số nhà 164, Đường Nguyễn Tất Thành, Tổ 1, Thôn Lương Trung, Xã Lương Sơn, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401292771-cong-ty-tnhh-go-vinh-loan-86",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-09",
+      "phone": "0933065777",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn giường, tủ, bàn ghế và đồ nội thất tương tự trong gia đình, văn phòng, cửa hàng; thảm, đệm và thiết bị chiếu sáng",
+      "internationalName": "VINH LOAN 86 WOOD COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:23:31.122Z"
     },
     {
       "id": "5801581235",
@@ -29615,7 +30323,14 @@
       "representative": "HOÀNG VĂN THẮNG",
       "address": "Số 8 Ỷ Lan, Phường 3 Bảo Lộc, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581235-cong-ty-tnhh-bao-loc-media",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-09",
+      "phone": "0359833591",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh Lâm Đồng",
+      "mainIndustry": "Quảng cáo (trừ quảng cáo thuốc lá)",
+      "internationalName": "BAO LOC MEDIA COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:23:34.339Z"
     },
     {
       "id": "5801581267",
@@ -29623,7 +30338,13 @@
       "representative": "NGUYỄN THỊ THANH LAN",
       "address": "Thửa đất số 34, Tờ bản đồ số 2, đường Năm Trịa, Thôn 2, Xã Đạ Huoai 3, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581267-cong-ty-co-phan-xnk-thien-duong-sinh-vi-lai",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-09",
+      "phone": "0379671192",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 5 tỉnh Lâm Đồng",
+      "mainIndustry": "Giáo dục thể thao và giải trí Chi tiết: Dạy dưỡng sinh, dạy ngồi thiền",
+      "enrichedAt": "2026-10-06T08:23:37.974Z"
     },
     {
       "id": "5801581210",
@@ -29631,15 +30352,28 @@
       "representative": "NGUYỄN THỊ VÂN HIỀN",
       "address": "Thửa đất số 220, Tờ bản đồ số 10, Thôn 7, Xã Đạ Tẻh 3, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581210-cong-ty-tnhh-xnk-vina-green-hill",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-09",
+      "phone": "0929663555",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 5 tỉnh Lâm Đồng",
+      "mainIndustry": "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống -Chi tiết: Thu mua, bán buôn nông sản, trái cây, rau củ và nông sản nguyên liệu.",
+      "internationalName": "XNK VINA GREEN HILL COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:23:41.586Z"
     },
     {
       "id": "5801581281",
       "name": "CÔNG TY TNHH VÀNG BẠC ĐÁ QUÝ NGỌC SƠN THÀNH",
-      "representative": "NGUYỄN TRƯỜNG THÀNH",
+      "representative": "NGUYỄN TRƯỜNG THÀNH Ngoài ra, NGUYỄN TRƯỜNG THÀNH còn đại diện các doanh nghiệp, đơn vị: Nguyễn Trường Thành",
       "address": "Thửa đất số 348, Tờ bản đồ 25, Thôn 15, Xã Di Linh, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581281-cong-ty-tnhh-vang-bac-da-quy-ngoc-son-thanh",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-09",
+      "phone": "0362 307 307",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế tỉnh Lâm Đồng",
+      "mainIndustry": "Sản xuất đồ kim hoàn và chi tiết liên quan Chi tiết: Làm mới, sửa chữa vàng trang sức, mỹ nghệ",
+      "enrichedAt": "2026-10-06T08:23:44.958Z"
     },
     {
       "id": "5801581203",
@@ -29647,7 +30381,14 @@
       "representative": "NGUYỄN ĐỨC HUY",
       "address": "9C Lữ Gia, Phường Lâm Viên - Đà Lạt, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581203-cong-ty-tnhh-cong-nghe-buoc-song-750",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-09",
+      "phone": "0374047704",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Lâm Đồng",
+      "mainIndustry": "Lập trình máy tính khác Chi tiết: Lập trình phần mềm ứng dụng, viết website",
+      "internationalName": "WAVELENGTH 750 LIMTIED COMPANY",
+      "enrichedAt": "2026-10-06T08:23:48.280Z"
     },
     {
       "id": "3401292789",
@@ -29655,15 +30396,28 @@
       "representative": "NGUYỄN QUỐC VIỆT",
       "address": "Số 126 Lâm Đình Trúc, Phường Phú Thủy, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "3401292789-cong-ty-tnhh-dich-vu-quang-cao-quoc-viet",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-09",
+      "phone": "0944414150",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 tỉnh Lâm Đồng",
+      "mainIndustry": "Quảng cáo (Không bao gồm quảng cáo thuốc lá)",
+      "internationalName": "QUOC VIET ADVERTISING SERVICES COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T08:23:51.537Z"
     },
     {
       "id": "5801581274",
       "name": "CÔNG TY TNHH VÀNG BẠC ĐÁ QUÝ NGỌC SƠN PHÚC",
-      "representative": "NGUYỄN TRƯỜNG PHÚC",
+      "representative": "NGUYỄN TRƯỜNG PHÚC Ngoài ra, NGUYỄN TRƯỜNG PHÚC còn đại diện các doanh nghiệp, đơn vị: Nguyễn Trường Phúc",
       "address": "Số 928, đường Hùng Vương, Xã Di Linh, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "5801581274-cong-ty-tnhh-vang-bac-da-quy-ngoc-son-phuc",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-09",
+      "phone": "0932883379",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế tỉnh Lâm Đồng",
+      "mainIndustry": "Sản xuất đồ kim hoàn và chi tiết liên quan Chi tiết: Làm mới, sửa chữa vàng trang sức, mỹ nghệ",
+      "enrichedAt": "2026-10-06T08:23:54.906Z"
     },
     {
       "id": "6400483962",
@@ -29671,7 +30425,13 @@
       "representative": "NGUYỄN NGỌC CẢNH",
       "address": "Bon U3, Xã Cư Jút, Tỉnh Lâm Đồng, Việt Nam",
       "slug": "6400483962-cong-ty-tnhh-dau-tu-xay-dung-khoang-san-trong-phat-lam-dong",
-      "province": "Lâm Đồng"
+      "province": "Lâm Đồng",
+      "startDate": "2026-09-09",
+      "phone": "0917984176",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 13 tỉnh Lâm Đồng",
+      "mainIndustry": "Khai thác đá, cát, sỏi, đất sét Chi tiết : - Khai thác các loại đá dùng trong xây dựng như đá hộc, đá dăm, đá cát kết, đá vôi xây dựng… -Khai thác cát, sỏi lòng sông, suối, ao hồ để làm vật liệu xây dựng. -Khai thác đất sét, đất làm gạch, gốm, đất làm nguyên liệu sản xuất vật liệu xây dựng. - Khai thác đất để san lấp mặt bằng (phổ biến gọi là \"mỏ đất san lấp\")",
+      "enrichedAt": "2026-10-06T08:23:58.585Z"
     },
     {
       "id": "6400483948",
