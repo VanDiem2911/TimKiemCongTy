@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
-import { PROVINCES, getCompanySlug } from '@/lib/constants';
+import { PROVINCES, getCompanySlug, normalizeTaxId } from '@/lib/constants';
 import { fetchLiveNationwideCompanies } from '@/lib/provinceCompanies';
 import { MapPin, ChevronRight, Hash, User, ChevronLeft, ChevronsLeft, ChevronsRight, ShieldCheck, Flame } from 'lucide-react';
 
@@ -160,51 +160,54 @@ export default async function ProvinceTaxPage({ searchParams }: PageProps) {
                     const detailSlug = getCompanySlug(comp.id, comp.name);
                     return (
                       <article key={`${comp.id}-${idx}`} className="py-4 first:pt-0">
-                        <h3 className="text-sm sm:text-base font-bold text-blue-700 hover:underline mb-1">
+                        <h3 className="text-sm sm:text-base font-bold text-slate-900 hover:text-[#e91a2c] transition-colors mb-1">
                           <Link href={`/${detailSlug}`}>
                             {comp.name}
                           </Link>
                         </h3>
 
-                        <div className="space-y-1 text-xs text-gray-600">
+                        <div className="space-y-1 text-xs text-slate-600">
                           <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-                            <span className="flex items-center space-x-1 text-gray-700">
-                              <Hash className="w-3.5 h-3.5 text-gray-400" />
+                            <span className="flex items-center space-x-1 text-slate-700">
+                              <Hash className="w-3.5 h-3.5 text-slate-400" />
                               <span>Mã số thuế:</span>
-                              <Link href={`/${detailSlug}`} className="font-mono font-bold text-amber-700 hover:underline">
-                                {comp.id}
+                              <Link
+                                href={`/${detailSlug}`}
+                                className="font-mono font-bold text-[#e91a2c] bg-[#fff0f1] px-1.5 py-0.5 rounded border border-[#fecdd3] hover:underline whitespace-nowrap inline-block"
+                              >
+                                {normalizeTaxId(comp.id)}
                               </Link>
                             </span>
 
                             {comp.representative && (
                               <span className="flex items-center space-x-1">
-                                <User className="w-3.5 h-3.5 text-gray-400" />
+                                <User className="w-3.5 h-3.5 text-slate-400" />
                                 <span>Người đại diện:</span>
-                                <span className="font-semibold text-gray-800">{comp.representative}</span>
+                                <span className="font-semibold text-slate-800">{comp.representative}</span>
                               </span>
                             )}
 
                             {comp.province && (
-                              <span className="flex items-center space-x-1 text-gray-500">
-                                <MapPin className="w-3.5 h-3.5 text-gray-400" />
-                                <span className="font-medium text-amber-800">{comp.province}</span>
+                              <span className="flex items-center space-x-1 text-slate-500">
+                                <MapPin className="w-3.5 h-3.5 text-slate-400" />
+                                <span className="font-medium text-slate-800">{comp.province}</span>
                               </span>
                             )}
                           </div>
 
-                          <div className="flex items-start space-x-1 text-gray-600">
-                            <MapPin className="w-3.5 h-3.5 text-gray-400 flex-shrink-0 mt-0.5" />
+                          <div className="flex items-start space-x-1 text-slate-600">
+                            <MapPin className="w-3.5 h-3.5 text-slate-400 flex-shrink-0 mt-0.5" />
                             <address className="not-italic">{comp.address}</address>
                           </div>
 
                           <div className="pt-1 flex items-center justify-between">
-                            <span className="inline-block text-[11px] px-2 py-0.5 rounded font-medium bg-green-50 text-green-700 border border-green-200">
+                            <span className="inline-block text-[11px] px-2 py-0.5 rounded font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
                               {comp.status || 'NNT đang hoạt động'}
                             </span>
 
                             <Link
                               href={`/${detailSlug}`}
-                              className="text-[11px] text-blue-600 hover:underline font-semibold"
+                              className="text-[11px] text-[#e91a2c] hover:underline font-semibold"
                             >
                               Xem hồ sơ chi tiết →
                             </Link>

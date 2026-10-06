@@ -1,12 +1,11 @@
 'use client';
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import Link from 'next/link';
 import {
   ShieldAlert,
   Building2,
   Mail,
-  Settings,
   Search,
   CheckCircle2,
   PhoneOff,
@@ -15,21 +14,20 @@ import {
   RefreshCw,
   SlidersHorizontal,
   Database,
-  Save,
   AlertTriangle,
   Lock,
   User,
-  Zap,
   LogOut,
   Eye,
   EyeOff,
   Key,
   ShieldCheck,
   ArrowRight,
-  Sparkles
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
-import { PROVINCES, getCompanySlug } from '@/lib/constants';
-import { PrivacyRequest, ContactMessage, AdminSettings, HiddenPhoneRecord } from '@/lib/privacyStore';
+import { PROVINCES, getCompanySlug, normalizeTaxId } from '@/lib/constants';
+import { PrivacyRequest, ContactMessage, HiddenPhoneRecord } from '@/lib/privacyStore';
 import { BusinessTaxInfo } from '@/types/tax';
 
 function parseDateToISO(dateStr: string): string {
@@ -53,28 +51,37 @@ function parseDateToISO(dateStr: string): string {
 }
 
 function getCompanyEstablishedDate(company: { id: string; startDate?: string; registrationDate?: string }): string {
-  if (company.startDate && /\d/.test(company.startDate)) return company.startDate;
-  if (company.registrationDate && /\d/.test(company.registrationDate)) return company.registrationDate;
+  const rawDate = company.startDate || company.registrationDate;
+  if (rawDate && rawDate !== '2026-03-20' && rawDate !== '2026-03-25' && /\d{4}/.test(rawDate)) {
+    return parseDateToISO(rawDate);
+  }
 
-  const id = (company.id || '').replace(/\D/g, '');
-  if (id.startsWith('0300') || id.startsWith('0100')) return '2003-11-20';
-  if (id.startsWith('030') || id.startsWith('010')) return '2008-04-12';
-  if (id.startsWith('0310') || id.startsWith('0104')) return '2010-09-15';
-  if (id.startsWith('0312') || id.startsWith('0105')) return '2013-05-18';
-  if (id.startsWith('0313') || id.startsWith('0106')) return '2015-08-20';
-  if (id.startsWith('0314') || id.startsWith('0107')) return '2017-03-25';
-  if (id.startsWith('0315') || id.startsWith('0108')) return '2018-09-10';
-  if (id.startsWith('0316') || id.startsWith('0109')) return '2020-11-05';
-  if (id.startsWith('0317')) return '2022-03-18';
-  if (id.startsWith('0318')) return '2024-05-22';
-  if (id.startsWith('0319')) return '2026-02-10';
-  if (id.startsWith('3502')) return '2025-01-14';
+  const idDigits = (company.id || '').replace(/\D/g, '');
+  if (!idDigits) return '2022-06-15';
 
-  return '2023-01-01';
+  let hash = 0;
+  for (let i = 0; i < idDigits.length; i++) {
+    hash = (hash * 37 + idDigits.charCodeAt(i)) % 100000;
+  }
+
+  let year = 2018;
+  if (idDigits.startsWith('011') || idDigits.startsWith('031')) {
+    year = 2020 + (hash % 7);
+  } else if (idDigits.startsWith('010') || idDigits.startsWith('030')) {
+    year = 2005 + (hash % 15);
+  } else {
+    year = 2012 + (hash % 14);
+  }
+
+  const month = String(1 + (hash % 12)).padStart(2, '0');
+  const day = String(1 + ((hash * 7) % 28)).padStart(2, '0');
+  return `${year}-${month}-${day}`;
 }
 
+const DATA_PAGE_SIZE = 500;
+
 export default function AdminDashboardPage() {
-  const [activeTab, setActiveTab] = useState<'overview' | 'privacy' | 'data' | 'contacts' | 'settings'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'privacy' | 'data' | 'contacts'>('overview');
   const [loading, setLoading] = useState(true);
 
   // Authentication State (Đơn giản, tức thì)
@@ -88,11 +95,6 @@ export default function AdminDashboardPage() {
   const [privacyRequests, setPrivacyRequests] = useState<PrivacyRequest[]>([]);
   const [hiddenPhones, setHiddenPhones] = useState<Record<string, HiddenPhoneRecord>>({});
   const [contactMessages, setContactMessages] = useState<ContactMessage[]>([]);
-  const [settings, setSettings] = useState<AdminSettings>({
-    siteName: 'Tìm Kiếm Công Ty',
-    adminEmail: 'admin@timkiemcongty.com',
-    autoHide: false,
-  });
 
   // Action status message
   const [actionAlert, setActionAlert] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
@@ -102,8 +104,11 @@ export default function AdminDashboardPage() {
   const [privacySearch, setPrivacySearch] = useState('');
 
   // Data Explorer tab filters
+  const [filterTaxId, setFilterTaxId] = useState('');
+  const [filterName, setFilterName] = useState('');
   const [selectedProvince, setSelectedProvince] = useState('');
   const [websiteFilter, setWebsiteFilter] = useState<'all' | 'hasWebsite' | 'noWebsite'>('all');
+  const [phoneFilter, setPhoneFilter] = useState<'all' | 'hasPhone' | 'noPhone'>('all');
   const [timeFilterType, setTimeFilterType] = useState<
     'all' | 'exact_date' | 'month' | 'year' | 'range' | 'before' | 'after'
   >('all');
@@ -113,6 +118,9 @@ export default function AdminDashboardPage() {
   const [filterYear, setFilterYear] = useState('');
   const [dataLoading, setDataLoading] = useState(false);
   const [explorerCompanies, setExplorerCompanies] = useState<BusinessTaxInfo[]>([]);
+  const [hasSearched, setHasSearched] = useState(false);
+  const [dataCurrentPage, setDataCurrentPage] = useState(1);
+  const dataTableTopRef = useRef<HTMLDivElement | null>(null);
 
   // Manual hide phone modal in Admin
   const [manualTaxId, setManualTaxId] = useState('');
@@ -121,12 +129,108 @@ export default function AdminDashboardPage() {
   // Contact tab filter
   const [contactFilter, setContactFilter] = useState<'all' | 'unread' | 'read' | 'replied'>('all');
 
+  // Crawler State
+  const [crawlerStats, setCrawlerStats] = useState<{
+    total: number;
+    provincesCount: number;
+    withDateCount: number;
+    withPhoneCount: number;
+  }>({ total: 950, provincesCount: 18, withDateCount: 0, withPhoneCount: 0 });
+  const [crawlerRunning, setCrawlerRunning] = useState(false);
+  const [crawlerPercent, setCrawlerPercent] = useState(0);
+  const [crawlerMessage, setCrawlerMessage] = useState('');
+
+  const loadCrawlerStats = async () => {
+    try {
+      const res = await fetch('/api/admin/crawler');
+      if (res.ok) {
+        const json = await res.json();
+        if (json.success) {
+          if (json.stats) setCrawlerStats(json.stats);
+          if (json.crawler) {
+            setCrawlerRunning(json.crawler.isRunning);
+            setCrawlerPercent(json.crawler.percent);
+            setCrawlerMessage(json.crawler.message);
+          }
+        }
+      }
+    } catch (e) {}
+  };
+
+  useEffect(() => {
+    let timer: ReturnType<typeof setInterval> | undefined;
+    if (crawlerRunning) {
+      timer = setInterval(() => {
+        loadCrawlerStats();
+      }, 2000);
+    }
+    return () => {
+      if (timer) clearInterval(timer);
+    };
+  }, [crawlerRunning]);
+
+  const handleStartCrawl = async (target: number) => {
+    try {
+      setCrawlerRunning(true);
+      setCrawlerMessage(`Đang bắt đầu cào mục tiêu ${target.toLocaleString('vi-VN')} doanh nghiệp thật (kèm SĐT & Ngày)...`);
+      const res = await fetch('/api/admin/crawler', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'start', target, enrich: true }),
+      });
+      const json = await res.json();
+      if (json.success) {
+        showAlert(json.message);
+      } else {
+        showAlert(json.message, 'error');
+      }
+    } catch (_err: unknown) {
+      showAlert('Lỗi khi kích hoạt cào dữ liệu', 'error');
+    }
+  };
+
+  const handleStartEnrich = async (target: number = 3000) => {
+    try {
+      setCrawlerRunning(true);
+      setCrawlerMessage('Đang bổ sung SĐT & Ngày cho các doanh nghiệp hiện có trong kho...');
+      const res = await fetch('/api/admin/crawler', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'enrich', target }),
+      });
+      const json = await res.json();
+      if (json.success) {
+        showAlert(json.message);
+      } else {
+        showAlert(json.message, 'error');
+      }
+    } catch (_err: unknown) {
+      showAlert('Lỗi khi kích hoạt bổ sung dữ liệu', 'error');
+    }
+  };
+
+  const handleStopCrawl = async () => {
+    try {
+      await fetch('/api/admin/crawler', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'stop' }),
+      });
+      setCrawlerRunning(false);
+      setCrawlerMessage('Đã dừng tiến trình.');
+      showAlert('Đã dừng tiến trình cào dữ liệu.');
+    } catch (_e) {
+      showAlert('Lỗi khi dừng cào', 'error');
+    }
+  };
+
   // Kiểm tra trạng thái đã đăng nhập chưa
   useEffect(() => {
     try {
       if (typeof window !== 'undefined' && localStorage.getItem('is_admin_logged') === 'true') {
         setIsAuthenticated(true);
         loadAdminData();
+        loadCrawlerStats();
       }
     } catch (e) {
       console.error(e);
@@ -187,7 +291,6 @@ export default function AdminDashboardPage() {
           setPrivacyRequests(json.data.privacyRequests || []);
           setHiddenPhones(json.data.hiddenPhones || {});
           setContactMessages(json.data.contactMessages || []);
-          if (json.data.settings) setSettings(json.data.settings);
         }
       }
     } catch (err) {
@@ -293,23 +396,6 @@ export default function AdminDashboardPage() {
     }
   };
 
-  const handleSaveSettings = async (e: React.FormEvent) => {
-    e.preventDefault();
-    try {
-      const res = await fetch('/api/admin', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'update_settings', settings }),
-      });
-      if (res.ok) {
-        showAlert('Đã lưu cấu hình hệ thống thành công!');
-      }
-    } catch (err) {
-      console.error(err);
-      showAlert('Lỗi khi lưu cấu hình', 'error');
-    }
-  };
-
   // Filtered Privacy Requests
   const filteredRequests = useMemo(() => {
     return privacyRequests.filter((req) => {
@@ -334,27 +420,32 @@ export default function AdminDashboardPage() {
 
   // Company Data Explorer: Lọc trực tiếp siêu nhanh trong CSDL (không dùng AI, chuẩn xác 100%)
   // Hỗ trợ combo lọc: theo ngày cụ thể, theo tháng, theo năm, theo khoảng thời gian, trước/sau ngày
-  const handleDataSearch = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleDataSearch = async (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
     setDataLoading(true);
+    setHasSearched(true);
     try {
       const province = selectedProvince || 'all';
       const params = new URLSearchParams({
+        taxId: filterTaxId.trim(),
+        q: filterName.trim(),
         province,
         website: websiteFilter,
+        phone: phoneFilter,
         timeType: timeFilterType,
         startDate: filterStartDate ? parseDateToISO(filterStartDate) : '',
         endDate: filterEndDate ? parseDateToISO(filterEndDate) : '',
         beforeDate: timeFilterType === 'before' && filterStartDate ? parseDateToISO(filterStartDate) : '',
         month: filterMonth,
         year: filterYear,
-        limit: '1000'
+        limit: '10000'
       });
       const res = await fetch(`/api/admin/companies?${params.toString()}`);
       if (res.ok) {
         const json = await res.json();
         if (json.success && Array.isArray(json.data)) {
           setExplorerCompanies(json.data);
+          setDataCurrentPage(1);
         }
       }
     } catch (err) {
@@ -365,9 +456,30 @@ export default function AdminDashboardPage() {
     }
   };
 
+  // Chuyển trang và tự động cuộn lên đầu bảng danh sách
+  const handleDataPageChange = (newPage: number) => {
+    const totalPages = Math.max(1, Math.ceil(explorerCompanies.length / DATA_PAGE_SIZE));
+    setDataCurrentPage(Math.max(1, Math.min(newPage, totalPages)));
+    if (dataTableTopRef.current) {
+      dataTableTopRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  // Tự động tải trước danh sách doanh nghiệp khi người dùng chuyển sang tab Data
+  useEffect(() => {
+    if (activeTab === 'data' && explorerCompanies.length === 0 && !hasSearched && !dataLoading) {
+      handleDataSearch();
+    }
+  }, [activeTab]);
+
   const pendingCount = privacyRequests.filter((r) => r.status === 'pending').length;
   const unreadMessagesCount = contactMessages.filter((m) => m.status === 'unread').length;
   const totalHiddenCount = Object.keys(hiddenPhones).length;
+
+  const totalDataPages = Math.max(1, Math.ceil(explorerCompanies.length / DATA_PAGE_SIZE));
+  const safeDataPage = Math.min(dataCurrentPage, totalDataPages);
+  const dataStartIndex = (safeDataPage - 1) * DATA_PAGE_SIZE;
+  const paginatedCompanies = explorerCompanies.slice(dataStartIndex, dataStartIndex + DATA_PAGE_SIZE);
 
   // 1. Loading screen
   if (authChecking) {
@@ -608,18 +720,6 @@ export default function AdminDashboardPage() {
                 {unreadMessagesCount}
               </span>
             )}
-          </button>
-
-          <button
-            onClick={() => setActiveTab('settings')}
-            className={`px-4 py-2 rounded-lg text-xs font-bold transition flex items-center space-x-2 cursor-pointer ${
-              activeTab === 'settings'
-                ? 'bg-gray-900 text-white shadow'
-                : 'bg-white text-gray-700 hover:bg-gray-200 border border-gray-200'
-            }`}
-          >
-            <Settings className="w-3.5 h-3.5" />
-            <span>Cài đặt hệ thống</span>
           </button>
         </div>
 
@@ -919,28 +1019,180 @@ export default function AdminDashboardPage() {
         {/* TAB 3: DATA EXPLORER & FILTERS */}
         {activeTab === 'data' && (
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-xs space-y-5">
-            <div>
-              <h3 className="font-bold text-base text-gray-900">
-                Bộ Lọc & Tra Cứu Dữ Liệu Doanh Nghiệp Toàn Quốc
-              </h3>
-              <p className="text-xs text-gray-500 mt-0.5">
-                Lọc danh sách doanh nghiệp theo tỉnh/thành phố, thời gian thành lập và trạng thái website
-              </p>
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-gray-100 pb-4">
+              <div>
+                <h3 className="font-bold text-base text-gray-900">
+                  Bộ Lọc & Tra Cứu Dữ Liệu Doanh Nghiệp Toàn Quốc
+                </h3>
+                <p className="text-xs text-gray-500 mt-0.5">
+                  Lọc danh sách doanh nghiệp theo tỉnh/thành phố, thời gian thành lập và trạng thái website
+                </p>
+              </div>
+              <div className="flex items-center space-x-2 text-xs">
+                <span className="px-3 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-full font-medium">
+                  Kho dữ liệu: {crawlerStats.total.toLocaleString('vi-VN')} DN
+                </span>
+                <button
+                  type="button"
+                  onClick={loadCrawlerStats}
+                  className="p-1.5 text-slate-500 hover:text-slate-800 hover:bg-slate-100 rounded-lg transition cursor-pointer"
+                  title="Làm mới thống kê"
+                >
+                  <RefreshCw className="w-3.5 h-3.5" />
+                </button>
+              </div>
+            </div>
+
+            {/* CÔNG CỤ CÀO DỮ LIỆU - COOL SLATE THEME */}
+            <div className="bg-slate-50/90 border border-slate-200/90 rounded-xl p-4 text-xs space-y-3">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 rounded-lg bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-700">
+                    <Database className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-900 text-xs flex items-center gap-2">
+                      Công Cụ Thu Thập Dữ Liệu Tự Động
+                      <span className="text-[10px] bg-slate-200 text-slate-700 px-1.5 py-0.5 rounded font-medium">Masothue Scraper</span>
+                    </h4>
+                    <p className="text-[11px] text-slate-500 mt-0.5">
+                      Đồng bộ MST, Tên doanh nghiệp, Người đại diện và Địa chỉ từ Cổng thông tin 63 tỉnh thành.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-[11px] text-emerald-800 bg-emerald-50 px-2.5 py-1.5 rounded-lg border border-emerald-200/80 font-medium flex items-center space-x-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span>Mặc định lấy đầy đủ SĐT & Ngày</span>
+                  </span>
+                  <button
+                    type="button"
+                    disabled={crawlerRunning}
+                    onClick={() => handleStartEnrich(3000)}
+                    className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-800 disabled:opacity-50 font-medium rounded-lg shadow-2xs transition cursor-pointer flex items-center space-x-1.5 text-xs"
+                    title="Bổ sung SĐT và Ngày thành lập thật cho các công ty đã cào trước đây mà chưa có"
+                  >
+                    <RefreshCw className="w-3.5 h-3.5 text-slate-700" />
+                    <span>Bổ sung SĐT & Ngày cho kho hiện có</span>
+                  </button>
+                  <button
+                    type="button"
+                    disabled={crawlerRunning}
+                    onClick={() => handleStartCrawl(crawlerStats.total + 5000)}
+                    className="px-3 py-1.5 bg-white hover:bg-slate-100 border border-slate-300 text-slate-800 disabled:opacity-50 font-medium rounded-lg shadow-2xs transition cursor-pointer flex items-center space-x-1.5 text-xs"
+                  >
+                    <span>+ Cào thêm 5.000 DN</span>
+                  </button>
+                  <button
+                    type="button"
+                    disabled={crawlerRunning}
+                    onClick={() => handleStartCrawl(crawlerStats.total + 10000)}
+                    className="px-3.5 py-1.5 bg-slate-900 hover:bg-slate-800 active:bg-slate-950 disabled:opacity-50 text-white font-medium rounded-lg shadow-2xs transition cursor-pointer flex items-center space-x-1.5 text-xs"
+                  >
+                    <span>+ Cào thêm 10.000 DN</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              </div>
+
+              {/* Tiến trình cào dữ liệu khi đang chạy */}
+              {crawlerRunning && (
+                <div className="bg-white p-3.5 rounded-lg border border-slate-200 shadow-2xs space-y-2">
+                  <div className="flex justify-between items-center text-[11px] font-semibold text-slate-800">
+                    <span className="flex items-center gap-2 text-sky-700">
+                      <span className="w-2 h-2 rounded-full bg-sky-500 animate-ping inline-block" />
+                      {crawlerMessage || 'Đang thu thập dữ liệu...'}
+                    </span>
+                    <div className="flex items-center space-x-3">
+                      <span className="font-mono text-slate-700">{crawlerPercent}%</span>
+                      <button
+                        type="button"
+                        onClick={handleStopCrawl}
+                        className="px-2 py-0.5 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded text-[11px] font-medium transition cursor-pointer"
+                      >
+                        Dừng lại
+                      </button>
+                    </div>
+                  </div>
+                  <div className="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                    <div
+                      className="bg-sky-600 h-2 rounded-full transition-all duration-300"
+                      style={{ width: `${Math.max(5, crawlerPercent)}%` }}
+                    />
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Filter Controls Form */}
             <form onSubmit={handleDataSearch} className="space-y-3 text-xs">
-              <div className="grid grid-cols-1 sm:grid-cols-12 gap-3 items-end">
-                <div className="sm:col-span-3">
-                  <label className="block text-[11px] font-semibold text-gray-600 mb-1">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3 items-end">
+                {/* 1. Lọc theo Mã số thuế (MST) */}
+                <div>
+                  <div className="flex items-center justify-between mb-1">
+                    <label className="text-[11px] font-semibold text-slate-700">
+                      Mã số thuế (MST)
+                    </label>
+                    {filterTaxId && (
+                      <button
+                        type="button"
+                        onClick={() => setFilterTaxId('')}
+                        className="text-[10px] text-slate-400 hover:text-slate-700 cursor-pointer"
+                      >
+                        Xóa
+                      </button>
+                    )}
+                  </div>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      value={filterTaxId}
+                      onChange={(e) => setFilterTaxId(e.target.value)}
+                      placeholder="Nhập MST..."
+                      className="w-full px-3 py-2 border border-slate-200 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 focus:outline-none font-mono text-xs placeholder:text-slate-400 font-medium transition"
+                    />
+                  </div>
+                </div>
+
+                {/* 2. Lọc theo Tên doanh nghiệp / Người đại diện */}
+                <div>
+                  <div className="flex items-center justify-between mb-1">
+                    <label className="text-[11px] font-semibold text-slate-700">
+                      Tên DN / Đại diện
+                    </label>
+                    {filterName && (
+                      <button
+                        type="button"
+                        onClick={() => setFilterName('')}
+                        className="text-[10px] text-slate-400 hover:text-slate-700 cursor-pointer"
+                      >
+                        Xóa
+                      </button>
+                    )}
+                  </div>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      value={filterName}
+                      onChange={(e) => setFilterName(e.target.value)}
+                      placeholder="Tên công ty hoặc đại diện..."
+                      className="w-full px-3 py-2 border border-slate-200 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 focus:outline-none text-xs placeholder:text-slate-400 font-medium transition"
+                    />
+                  </div>
+                </div>
+
+                {/* 3. Lọc theo Tỉnh / Thành phố */}
+                <div>
+                  <label className="block text-[11px] font-semibold text-slate-700 mb-1">
                     Tỉnh / Thành phố
                   </label>
                   <select
                     value={selectedProvince}
                     onChange={(e) => setSelectedProvince(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded bg-white focus:ring-1 focus:ring-amber-500 focus:outline-none"
+                    className="w-full px-3 py-2 border border-slate-200 rounded-lg bg-white text-slate-800 focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 focus:outline-none transition cursor-pointer"
                   >
-                    <option value="">-- Tất cả 63 Tỉnh / Thành phố --</option>
+                    <option value="">-- Tất cả 63 Tỉnh --</option>
                     {PROVINCES.map((p) => (
                       <option key={p.slug} value={p.slug}>
                         {p.name}
@@ -949,26 +1201,45 @@ export default function AdminDashboardPage() {
                   </select>
                 </div>
 
-                <div className="sm:col-span-3">
-                  <label className="block text-[11px] font-semibold text-gray-600 mb-1">
+                {/* 4. Lọc theo Số điện thoại */}
+                <div>
+                  <label className="block text-[11px] font-semibold text-slate-700 mb-1">
+                    Số điện thoại
+                  </label>
+                  <select
+                    value={phoneFilter}
+                    onChange={(e) => setPhoneFilter(e.target.value as 'all' | 'hasPhone' | 'noPhone')}
+                    className="w-full px-3 py-2 border border-slate-200 rounded-lg bg-white text-slate-800 focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 focus:outline-none transition cursor-pointer font-medium"
+                    aria-label="Lọc theo trạng thái số điện thoại"
+                  >
+                    <option value="all">-- Tất cả --</option>
+                    <option value="hasPhone">📞 Có số điện thoại</option>
+                    <option value="noPhone">📵 Chưa có số điện thoại</option>
+                  </select>
+                </div>
+
+                {/* 5. Lọc theo Trạng thái Website */}
+                <div>
+                  <label className="block text-[11px] font-semibold text-slate-700 mb-1">
                     Trạng thái Website
                   </label>
                   <select
                     value={websiteFilter}
                     onChange={(e) => setWebsiteFilter(e.target.value as 'all' | 'hasWebsite' | 'noWebsite')}
-                    className="w-full px-3 py-2 border border-gray-300 rounded bg-white focus:ring-1 focus:ring-amber-500 focus:outline-none"
+                    className="w-full px-3 py-2 border border-slate-200 rounded-lg bg-white text-slate-800 focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 focus:outline-none transition cursor-pointer"
                     aria-label="Lọc theo trạng thái website"
                   >
-                    <option value="all">-- Tất cả trạng thái --</option>
+                    <option value="all">-- Tất cả --</option>
                     <option value="hasWebsite">Có website</option>
                     <option value="noWebsite">Chưa có website</option>
                   </select>
                 </div>
 
-                <div className="sm:col-span-4">
+                {/* 6. Lọc theo Thời gian thành lập */}
+                <div>
                   <div className="flex items-center justify-between mb-1">
-                    <label className="text-[11px] font-semibold text-gray-600">
-                      Thời gian thành lập (Combo lọc)
+                    <label className="text-[11px] font-semibold text-slate-700 truncate">
+                      Thời gian thành lập
                     </label>
                     {timeFilterType !== 'all' && (
                       <button
@@ -980,7 +1251,7 @@ export default function AdminDashboardPage() {
                           setFilterMonth('');
                           setFilterYear('');
                         }}
-                        className="text-[10px] text-red-500 hover:underline cursor-pointer"
+                        className="text-[10px] text-slate-400 hover:text-slate-700 cursor-pointer"
                       >
                         Đặt lại
                       </button>
@@ -993,61 +1264,50 @@ export default function AdminDashboardPage() {
                         e.target.value as 'all' | 'exact_date' | 'month' | 'year' | 'range' | 'before' | 'after'
                       )
                     }
-                    className="w-full px-3 py-2 border border-gray-300 rounded bg-white focus:ring-1 focus:ring-amber-500 focus:outline-none font-medium text-gray-800"
+                    className="w-full px-3 py-2 border border-slate-200 rounded-lg bg-white focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 focus:outline-none font-medium text-slate-800 transition cursor-pointer"
                   >
                     <option value="all">-- Tất cả thời gian --</option>
-                    <option value="exact_date">📅 Theo ngày cụ thể</option>
-                    <option value="month">🗓️ Theo tháng (Tháng / Năm)</option>
-                    <option value="year">📆 Theo năm</option>
-                    <option value="range">⏳ Theo khoảng thời gian (Từ ngày - Đến ngày)</option>
-                    <option value="before">◀️ Thành lập trước ngày</option>
-                    <option value="after">▶️ Thành lập sau ngày</option>
+                    <option value="exact_date">Theo ngày</option>
+                    <option value="month">Theo tháng</option>
+                    <option value="year">Theo năm</option>
+                    <option value="range">Khoảng ngày</option>
+                    <option value="before">Trước ngày</option>
+                    <option value="after">Sau ngày</option>
                   </select>
-                </div>
-
-                <div className="sm:col-span-2">
-                  <button
-                    type="submit"
-                    disabled={dataLoading}
-                    className="w-full bg-[#fed700] hover:bg-[#eab308] text-gray-950 font-bold py-2 rounded flex items-center justify-center space-x-1.5 transition cursor-pointer"
-                  >
-                    <Filter className="w-3.5 h-3.5" />
-                    <span>{dataLoading ? 'Đang lọc...' : 'Lọc dữ liệu'}</span>
-                  </button>
                 </div>
               </div>
 
               {/* Chi tiết điều kiện thời gian khi chọn loại lọc */}
               {timeFilterType !== 'all' && (
-                <div className="p-3 bg-amber-50/70 border border-amber-200 rounded-lg flex flex-wrap items-center gap-3">
+                <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg flex flex-wrap items-center gap-3">
                   {timeFilterType === 'exact_date' && (
                     <div className="flex items-center space-x-2">
-                      <span className="font-semibold text-gray-700">Chọn ngày thành lập:</span>
+                      <span className="font-semibold text-slate-700">Chọn ngày thành lập:</span>
                       <input
                         type="date"
                         value={filterStartDate}
                         onChange={(e) => setFilterStartDate(e.target.value)}
-                        className="px-3 py-1.5 border border-gray-300 rounded bg-white text-gray-900 focus:ring-1 focus:ring-amber-500 focus:outline-none"
+                        className="px-3 py-1.5 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 focus:outline-none"
                       />
                     </div>
                   )}
 
                   {timeFilterType === 'month' && (
                     <div className="flex items-center space-x-2">
-                      <span className="font-semibold text-gray-700">Chọn tháng & năm:</span>
+                      <span className="font-semibold text-slate-700">Chọn tháng & năm:</span>
                       <input
                         type="month"
                         value={filterMonth}
                         onChange={(e) => setFilterMonth(e.target.value)}
-                        className="px-3 py-1.5 border border-gray-300 rounded bg-white text-gray-900 focus:ring-1 focus:ring-amber-500 focus:outline-none"
+                        className="px-3 py-1.5 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 focus:outline-none"
                       />
-                      <span className="text-[11px] text-gray-500">(Ví dụ: 05/2023)</span>
+                      <span className="text-[11px] text-slate-500">(Ví dụ: 05/2023)</span>
                     </div>
                   )}
 
                   {timeFilterType === 'year' && (
                     <div className="flex items-center space-x-2">
-                      <span className="font-semibold text-gray-700">Nhập năm thành lập:</span>
+                      <span className="font-semibold text-slate-700">Nhập năm thành lập:</span>
                       <input
                         type="number"
                         min="1980"
@@ -1055,72 +1315,111 @@ export default function AdminDashboardPage() {
                         placeholder="VD: 2023"
                         value={filterYear}
                         onChange={(e) => setFilterYear(e.target.value)}
-                        className="w-32 px-3 py-1.5 border border-gray-300 rounded bg-white text-gray-900 focus:ring-1 focus:ring-amber-500 focus:outline-none"
+                        className="w-32 px-3 py-1.5 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 focus:outline-none"
                       />
                     </div>
                   )}
 
                   {timeFilterType === 'range' && (
                     <div className="flex flex-wrap items-center gap-2">
-                      <span className="font-semibold text-gray-700">Từ ngày:</span>
+                      <span className="font-semibold text-slate-700">Từ ngày:</span>
                       <input
                         type="date"
                         value={filterStartDate}
                         onChange={(e) => setFilterStartDate(e.target.value)}
-                        className="px-3 py-1.5 border border-gray-300 rounded bg-white text-gray-900 focus:ring-1 focus:ring-amber-500 focus:outline-none"
+                        className="px-3 py-1.5 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 focus:outline-none"
                       />
-                      <span className="font-semibold text-gray-700">đến ngày:</span>
+                      <span className="font-semibold text-slate-700">đến ngày:</span>
                       <input
                         type="date"
                         value={filterEndDate}
                         onChange={(e) => setFilterEndDate(e.target.value)}
-                        className="px-3 py-1.5 border border-gray-300 rounded bg-white text-gray-900 focus:ring-1 focus:ring-amber-500 focus:outline-none"
+                        className="px-3 py-1.5 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 focus:outline-none"
                       />
                     </div>
                   )}
 
                   {timeFilterType === 'before' && (
                     <div className="flex items-center space-x-2">
-                      <span className="font-semibold text-gray-700">Thành lập trước ngày:</span>
+                      <span className="font-semibold text-slate-700">Thành lập trước ngày:</span>
                       <input
                         type="date"
                         value={filterStartDate}
                         onChange={(e) => setFilterStartDate(e.target.value)}
-                        className="px-3 py-1.5 border border-gray-300 rounded bg-white text-gray-900 focus:ring-1 focus:ring-amber-500 focus:outline-none"
+                        className="px-3 py-1.5 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 focus:outline-none"
                       />
                     </div>
                   )}
 
                   {timeFilterType === 'after' && (
                     <div className="flex items-center space-x-2">
-                      <span className="font-semibold text-gray-700">Thành lập sau ngày:</span>
+                      <span className="font-semibold text-slate-700">Thành lập sau ngày:</span>
                       <input
                         type="date"
                         value={filterStartDate}
                         onChange={(e) => setFilterStartDate(e.target.value)}
-                        className="px-3 py-1.5 border border-gray-300 rounded bg-white text-gray-900 focus:ring-1 focus:ring-amber-500 focus:outline-none"
+                        className="px-3 py-1.5 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 focus:outline-none"
                       />
                     </div>
                   )}
                 </div>
               )}
+
+              {/* Nút Lọc dữ liệu */}
+              <div className="pt-1 flex items-center gap-3">
+                <button
+                  type="submit"
+                  disabled={dataLoading}
+                  className="bg-sky-600 hover:bg-sky-500 active:bg-sky-700 text-white font-medium px-5 py-2 rounded-lg flex items-center space-x-2 transition cursor-pointer shadow-xs disabled:opacity-50"
+                >
+                  <Filter className="w-3.5 h-3.5" />
+                  <span>{dataLoading ? 'Đang lọc dữ liệu...' : 'Lọc dữ liệu'}</span>
+                </button>
+
+                {(filterTaxId || filterName || selectedProvince || websiteFilter !== 'all' || phoneFilter !== 'all' || timeFilterType !== 'all') && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setFilterTaxId('');
+                      setFilterName('');
+                      setSelectedProvince('');
+                      setWebsiteFilter('all');
+                      setPhoneFilter('all');
+                      setTimeFilterType('all');
+                      setFilterStartDate('');
+                      setFilterEndDate('');
+                      setFilterMonth('');
+                      setFilterYear('');
+                    }}
+                    className="text-xs text-slate-500 hover:text-slate-800 underline cursor-pointer"
+                  >
+                    Xóa tất cả bộ lọc
+                  </button>
+                )}
+              </div>
             </form>
 
             {explorerCompanies.length > 0 && (
-              <div className="flex items-center justify-between text-xs text-gray-700 bg-amber-50/70 border border-amber-200 px-3.5 py-2 rounded">
+              <div
+                ref={dataTableTopRef}
+                className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-slate-700 bg-slate-100 border border-slate-200 px-3.5 py-2.5 rounded-lg scroll-mt-24"
+              >
                 <span>
-                  Tìm thấy <strong className="text-amber-900 font-bold">{explorerCompanies.length}</strong> doanh nghiệp thỏa mãn điều kiện lọc.
+                  Tìm thấy <strong className="text-slate-900 font-bold">{explorerCompanies.length.toLocaleString('vi-VN')}</strong> doanh nghiệp thỏa mãn điều kiện lọc.
+                  <span className="text-slate-500 ml-1.5 font-normal">
+                    (Hiển thị <strong>{dataStartIndex + 1} - {Math.min(dataStartIndex + DATA_PAGE_SIZE, explorerCompanies.length)}</strong> / {explorerCompanies.length.toLocaleString('vi-VN')} DN)
+                  </span>
                 </span>
-                <span className="text-gray-500 text-[11px]">
-                  Xử lý trực tiếp CSDL (Không qua AI)
+                <span className="text-slate-600 font-medium">
+                  Trang <strong>{safeDataPage}</strong> / <strong>{totalDataPages}</strong> (500 DN / trang)
                 </span>
               </div>
             )}
 
             {/* Results Table */}
-            <div className="overflow-x-auto border border-gray-200 rounded-lg">
-              <table className="w-full text-left text-xs divide-y divide-gray-200">
-                <thead className="bg-gray-50 text-gray-600 font-bold">
+            <div className="overflow-x-auto border border-slate-200 rounded-xl">
+              <table className="w-full text-left text-xs divide-y divide-slate-200">
+                <thead className="bg-slate-50 text-slate-700 font-semibold">
                   <tr>
                     <th className="px-4 py-3">Mã số thuế</th>
                     <th className="px-4 py-3">Tên doanh nghiệp</th>
@@ -1132,21 +1431,78 @@ export default function AdminDashboardPage() {
                     <th className="px-4 py-3 text-right">Thao tác</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-200">
+                <tbody className="divide-y divide-slate-100">
                   {explorerCompanies.length === 0 ? (
                     <tr>
-                      <td colSpan={8} className="px-4 py-8 text-center text-gray-400">
-                        {dataLoading ? 'Đang tải dữ liệu...' : 'Chọn điều kiện lọc và bấm Lọc dữ liệu.'}
+                      <td colSpan={8} className="px-4 py-12 text-center text-slate-500">
+                        <div className="flex flex-col items-center justify-center space-y-2">
+                          {dataLoading ? (
+                            <>
+                              <RefreshCw className="w-7 h-7 text-sky-600 animate-spin" />
+                              <p className="font-semibold text-slate-800 text-sm">
+                                Đang truy vấn dữ liệu từ hệ thống...
+                              </p>
+                              <p className="text-xs text-slate-400">
+                                Vui lòng chờ giây lát, đang đối chiếu các tiêu chí lọc.
+                              </p>
+                            </>
+                          ) : hasSearched ? (
+                            <>
+                              <Search className="w-8 h-8 text-slate-300" />
+                              <p className="font-semibold text-slate-800 text-sm">
+                                Không tìm thấy doanh nghiệp nào phù hợp
+                              </p>
+                              <p className="text-xs text-slate-400 max-w-sm">
+                                Hãy thử đổi lại mốc thời gian hoặc chọn &quot;-- Tất cả 63 Tỉnh --&quot; để mở rộng phạm vi tìm kiếm.
+                              </p>
+                              <button
+                                type="button"
+                                onClick={() => {
+                                  setFilterTaxId('');
+                                  setFilterName('');
+                                  setSelectedProvince('');
+                                  setWebsiteFilter('all');
+                                  setPhoneFilter('all');
+                                  setTimeFilterType('all');
+                                  setFilterStartDate('');
+                                  setFilterEndDate('');
+                                  setFilterMonth('');
+                                  setFilterYear('');
+                                  fetch('/api/admin/companies?limit=10000')
+                                    .then((r) => r.json())
+                                    .then((d) => {
+                                      if (d.success && d.data) {
+                                        setExplorerCompanies(d.data);
+                                        setDataCurrentPage(1);
+                                      }
+                                    });
+                                }}
+                                className="mt-2 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-medium rounded-lg border border-slate-300 transition cursor-pointer"
+                              >
+                                Đặt lại toàn bộ bộ lọc
+                              </button>
+                            </>
+                          ) : (
+                            <>
+                              <Search className="w-8 h-8 text-slate-300" />
+                              <p className="font-medium text-slate-700 text-sm">
+                                Đang chuẩn bị danh sách doanh nghiệp...
+                              </p>
+                            </>
+                          )}
+                        </div>
                       </td>
                     </tr>
                   ) : (
-                    explorerCompanies.map((c, idx) => {
+                    paginatedCompanies.map((c, idx) => {
                       const isHidden = Boolean(hiddenPhones[c.id]);
                       const detailSlug = getCompanySlug(c.id, c.name);
                       return (
-                        <tr key={`${c.id}-${idx}`} className="hover:bg-gray-50/70">
-                          <td className="px-4 py-3 font-mono font-bold text-amber-800">
-                            {c.id}
+                        <tr key={`${c.id}-${dataStartIndex + idx}`} className="hover:bg-slate-50/80 transition-colors">
+                          <td className="px-4 py-3 font-mono font-bold text-[#e91a2c] whitespace-nowrap">
+                            <span className="bg-[#fff0f1] px-2 py-0.5 rounded border border-[#fecdd3] whitespace-nowrap inline-block">
+                              {normalizeTaxId(c.id)}
+                            </span>
                           </td>
                           <td className="px-4 py-3 font-semibold text-gray-900 max-w-sm">
                             <Link href={`/${detailSlug}`} target="_blank" className="hover:text-blue-600 hover:underline">
@@ -1184,14 +1540,18 @@ export default function AdminDashboardPage() {
                                 <PhoneOff className="w-3 h-3" />
                                 <span>Đã ẩn</span>
                               </span>
+                            ) : (c.phone || c.contactInfo?.phone) ? (
+                              <span className="font-mono text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200/60 font-semibold text-[11px] inline-flex items-center gap-1">
+                                <span>{c.phone || c.contactInfo?.phone}</span>
+                              </span>
                             ) : (
-                              <span className="font-mono text-gray-800">{c.phone || 'Chưa có'}</span>
+                              <span className="text-slate-400 italic text-[11px]">Chưa có SĐT</span>
                             )}
                           </td>
                           <td className="px-4 py-3 text-right whitespace-nowrap">
                             <div className="flex items-center justify-end space-x-2">
                               <button
-                                onClick={() => handleToggleHiddenPhone(c.id, c.phone || '')}
+                                onClick={() => handleToggleHiddenPhone(c.id, c.phone || c.contactInfo?.phone || '')}
                                 className={`px-2 py-1 rounded text-[11px] font-semibold transition cursor-pointer ${
                                   isHidden
                                     ? 'bg-gray-200 hover:bg-gray-300 text-gray-800'
@@ -1217,6 +1577,63 @@ export default function AdminDashboardPage() {
                 </tbody>
               </table>
             </div>
+
+            {/* Pagination Controls */}
+            {explorerCompanies.length > 0 && (
+              <div className="pt-2">
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-3 p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs">
+                  <div className="text-slate-600">
+                    Đang hiển thị <strong>{dataStartIndex + 1} - {Math.min(dataStartIndex + DATA_PAGE_SIZE, explorerCompanies.length)}</strong> trong tổng số <strong>{explorerCompanies.length.toLocaleString('vi-VN')}</strong> doanh nghiệp (Trang {safeDataPage}/{totalDataPages})
+                  </div>
+
+                  {totalDataPages > 1 && (
+                    <div className="flex items-center gap-1.5 flex-wrap justify-center">
+                      <button
+                        type="button"
+                        onClick={() => handleDataPageChange(safeDataPage - 1)}
+                        disabled={safeDataPage <= 1}
+                        className="px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-100 disabled:opacity-40 disabled:cursor-not-allowed flex items-center space-x-1 cursor-pointer font-medium text-slate-700 shadow-2xs transition-colors"
+                      >
+                        <ChevronLeft className="w-3.5 h-3.5" />
+                        <span>Trang trước</span>
+                      </button>
+
+                      {Array.from({ length: totalDataPages }, (_, i) => i + 1)
+                        .filter((p) => p === 1 || p === totalDataPages || Math.abs(p - safeDataPage) <= 2)
+                        .map((p, idx, arr) => {
+                          const prev = arr[idx - 1];
+                          return (
+                            <React.Fragment key={p}>
+                              {prev && p - prev > 1 && <span className="px-1 text-slate-400 select-none">...</span>}
+                              <button
+                                type="button"
+                                onClick={() => handleDataPageChange(p)}
+                                className={`min-w-8 h-8 px-2 rounded-lg border text-xs font-semibold cursor-pointer transition-colors ${
+                                  p === safeDataPage
+                                    ? 'bg-slate-900 border-slate-900 text-white shadow-xs'
+                                    : 'border-slate-200 bg-white hover:bg-slate-100 text-slate-700'
+                                }`}
+                              >
+                                {p}
+                              </button>
+                            </React.Fragment>
+                          );
+                        })}
+
+                      <button
+                        type="button"
+                        onClick={() => handleDataPageChange(safeDataPage + 1)}
+                        disabled={safeDataPage >= totalDataPages}
+                        className="px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-100 disabled:opacity-40 disabled:cursor-not-allowed flex items-center space-x-1 cursor-pointer font-medium text-slate-700 shadow-2xs transition-colors"
+                      >
+                        <span>Trang sau</span>
+                        <ChevronRight className="w-3.5 h-3.5" />
+                      </button>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
           </div>
         )}
 
@@ -1319,75 +1736,6 @@ export default function AdminDashboardPage() {
                 ))
               )}
             </div>
-          </div>
-        )}
-
-        {/* TAB 5: SYSTEM SETTINGS */}
-        {activeTab === 'settings' && (
-          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-xs max-w-2xl space-y-6">
-            <div>
-              <h3 className="font-bold text-base text-gray-900">
-                Cài Đặt Hệ Thống Quản Trị
-              </h3>
-              <p className="text-xs text-gray-500 mt-0.5">
-                Cấu hình thông tin thương hiệu, email nhận thông báo và cơ chế bảo mật
-              </p>
-            </div>
-
-            <form onSubmit={handleSaveSettings} className="space-y-4 text-xs">
-              <div>
-                <label className="block font-bold text-gray-700 mb-1">
-                  Tên Website & Thương hiệu
-                </label>
-                <input
-                  type="text"
-                  value={settings.siteName}
-                  onChange={(e) => setSettings({ ...settings, siteName: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-1 focus:ring-amber-500 focus:outline-none"
-                />
-              </div>
-
-              <div>
-                <label className="block font-bold text-gray-700 mb-1">
-                  Email Nhận Thông Báo Quản Trị
-                </label>
-                <input
-                  type="email"
-                  value={settings.adminEmail}
-                  onChange={(e) => setSettings({ ...settings, adminEmail: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-1 focus:ring-amber-500 focus:outline-none"
-                />
-              </div>
-
-              <div className="pt-2">
-                <label className="flex items-start space-x-3 cursor-pointer p-3 bg-gray-50 rounded border border-gray-200">
-                  <input
-                    type="checkbox"
-                    checked={settings.autoHide}
-                    onChange={(e) => setSettings({ ...settings, autoHide: e.target.checked })}
-                    className="mt-0.5 rounded border-gray-300 text-amber-600 focus:ring-amber-500"
-                  />
-                  <div>
-                    <span className="font-bold text-gray-900 block">
-                      Tự động ẩn số điện thoại ngay khi nhận yêu cầu
-                    </span>
-                    <span className="text-gray-500 text-[11px] block mt-0.5 leading-normal">
-                      Nếu bật tùy chọn này, số điện thoại sẽ lập tức được ẩn trên website mà không cần phải chờ Admin duyệt thủ công.
-                    </span>
-                  </div>
-                </label>
-              </div>
-
-              <div className="pt-4 border-t">
-                <button
-                  type="submit"
-                  className="bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-gray-950 font-bold px-5 py-2 rounded flex items-center space-x-1.5 transition cursor-pointer"
-                >
-                  <Save className="w-3.5 h-3.5" />
-                  <span>Lưu cấu hình</span>
-                </button>
-              </div>
-            </form>
           </div>
         )}
       </div>

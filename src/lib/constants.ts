@@ -1,7 +1,24 @@
 import { ProvinceItem, IndustryItem, BusinessTaxInfo } from '@/types/tax';
 
+export function normalizeTaxId(id: string): string {
+  if (!id) return '';
+  const trimmed = id.trim();
+  const digitsOnly = trimmed.replace(/[^0-9]/g, '');
+  if (digitsOnly.length === 13) {
+    return `${digitsOnly.slice(0, 10)}-${digitsOnly.slice(10)}`;
+  }
+  if (digitsOnly.length === 10) {
+    return digitsOnly;
+  }
+  if (/^\d{10}-\d{3}$/.test(trimmed)) {
+    return trimmed;
+  }
+  return digitsOnly || trimmed;
+}
+
 export function getCompanySlug(id: string, name?: string): string {
-  if (!name) return id;
+  const formattedId = normalizeTaxId(id);
+  if (!name) return formattedId;
   const cleanName = name
     .toLowerCase()
     .normalize('NFD')
@@ -9,7 +26,7 @@ export function getCompanySlug(id: string, name?: string): string {
     .replace(/[đĐ]/g, 'd')
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
-  return cleanName ? `${id}-${cleanName}` : id;
+  return cleanName ? `${formattedId}-${cleanName}` : formattedId;
 }
 
 export function getCompanyStatusBadgeClass(status?: string | null): string {
@@ -123,33 +140,9 @@ export const PROVINCES: ProvinceItem[] = [
   { name: 'Yên Bái', slug: 'yen-bai-724', code: '15', region: 'Bắc' }
 ];
 
-export const INDUSTRIES: IndustryItem[] = [
-  { code: '4659', name: 'Bán buôn máy móc, thiết bị và phụ tùng máy khác', slug: 'ban-buon-may-moc-thiet-bi-va-phu-tung-may-khac-4659' },
-  { code: '4610', name: 'Đại lý, môi giới, đấu giá', slug: 'dai-ly-moi-gioi-dau-gia-4610' },
-  { code: '4649', name: 'Bán buôn đồ dùng khác cho gia đình', slug: 'ban-buon-do-dung-khac-cho-gia-dinh-4649' },
-  { code: '4931', name: 'Vận tải hành khách đường bộ trong nội thành, ngoại thành', slug: 'van-tai-hanh-khach-duong-bo-trong-noi-thanh-ngoai-thanh-tru-van-tai-bang-xe-buyt-4931' },
-  { code: '1701', name: 'Sản xuất bột giấy, giấy và bìa', slug: 'san-xuat-bot-giay-giay-va-bia-1701' },
-  { code: '4669', name: 'Bán buôn chuyên doanh khác chưa được phân vào đâu', slug: 'ban-buon-chuyen-doanh-khac-chua-duoc-phan-vao-dau-4669' },
-  { code: '2011', name: 'Sản xuất hoá chất cơ bản', slug: 'san-xuat-hoa-chat-co-ban-2011' },
-  { code: '4933', name: 'Vận tải hàng hóa bằng đường bộ', slug: 'van-tai-hang-hoa-bang-duong-bo-4933' },
-  { code: '7490', name: 'Hoạt động chuyên môn, khoa học và công nghệ khác chưa được phân vào đâu', slug: 'hoat-dong-chuyen-mon-khoa-hoc-va-cong-nghe-khac-chua-duoc-phan-vao-dau-7490' },
-  { code: '1812', name: 'Dịch vụ liên quan đến in', slug: 'dich-vu-lien-quan-den-in-1812' },
-  { code: '1811', name: 'In ấn', slug: 'in-an-1811' },
-  { code: '6619', name: 'Hoạt động hỗ trợ dịch vụ tài chính chưa được phân vào đâu', slug: 'hoat-dong-ho-tro-dich-vu-tai-chinh-chua-duoc-phan-vao-dau-6619' },
-  { code: '8219', name: 'Photo, chuẩn bị tài liệu và các hoạt động hỗ trợ văn phòng', slug: 'photo-chuan-bi-tai-lieu-va-cac-hoat-dong-ho-tro-van-phong-dac-biet-khac-8219' },
-  { code: '5913', name: 'Hoạt động phát hành phim điện ảnh, phim video và truyền hình', slug: 'hoat-dong-phat-hanh-phim-dien-anh-phim-video-va-chuong-trinh-truyen-hinh-5913' },
-  { code: '4641', name: 'Bán buôn vải, hàng may sẵn, giày dép', slug: 'ban-buon-vai-hang-may-san-giay-dep-4641' },
-  { code: '4771', name: 'Bán lẻ hàng may mặc, giày dép, hàng da và giả da', slug: 'ban-le-hang-may-mac-giay-dep-hang-da-va-gia-da-trong-cac-cua-hang-chuyen-doanh-4771' },
-  { code: '4330', name: 'Hoàn thiện công trình xây dựng', slug: 'hoan-thien-cong-trinh-xay-dung-4330' },
-  { code: '4761', name: 'Bán lẻ sách, báo, tạp chí, văn phòng phẩm', slug: 'ban-le-sach-bao-tap-chi-van-phong-pham-trong-cac-cua-hang-chuyen-doanh-4761' },
-  { code: '7410', name: 'Hoạt động thiết kế chuyên dụng', slug: 'hoat-dong-thiet-ke-chuyen-dung-7410' },
-  { code: '7310', name: 'Quảng cáo', slug: 'quang-cao-7310' },
-  { code: '7710', name: 'Cho thuê xe có động cơ', slug: 'cho-thue-xe-co-dong-co-7710' },
-  { code: '9631', name: 'Cắt tóc, làm đầu, gội đầu', slug: 'cat-toc-lam-dau-goi-dau-9631' },
-  { code: '4651', name: 'Bán buôn máy vi tính, thiết bị ngoại vi và phần mềm', slug: 'ban-buon-may-vi-tinh-thiet-bi-ngoai-vi-va-phan-mem-4651' },
-  { code: '4652', name: 'Bán buôn thiết bị và linh kiện điện tử, viễn thông', slug: 'ban-buon-thiet-bi-va-linh-kien-dien-tu-vien-thong-4652' },
-  { code: '9511', name: 'Sửa chữa máy vi tính và thiết bị ngoại vi', slug: 'sua-chua-may-vi-tinh-va-thiet-bi-ngoai-vi-9511' }
-];
+import allIndustriesJson from '@/data/all_industries.json';
+
+export const INDUSTRIES: IndustryItem[] = allIndustriesJson as IndustryItem[];
 
 export const INITIAL_COMPANIES: BusinessTaxInfo[] = [
   {

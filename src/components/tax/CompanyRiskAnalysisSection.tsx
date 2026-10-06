@@ -186,16 +186,16 @@ export function CompanyRiskAnalysisSection({ company }: CompanyRiskAnalysisSecti
       riskTier = 'high';
       riskLabel = 'MỨC: RỦI RO CAO';
       riskSubtitle = 'Cảnh báo rủi ro pháp lý & hóa đơn';
-      ringColor = '#ef4444'; // rose-500
-      badgeClass = 'bg-rose-50 text-rose-800 border-rose-200';
+      ringColor = '#475569'; // slate-600
+      badgeClass = 'bg-slate-200 text-slate-800 border-slate-300';
       recommendation =
         'Cần đặc biệt lưu ý kiểm tra tính hợp pháp của hóa đơn, khảo sát địa điểm trụ sở thực tế trước khi tạm ứng hoặc ký kết giao dịch giá trị lớn.';
     } else if (finalScore >= 25) {
       riskTier = 'medium';
       riskLabel = 'MỨC: RỦI RO TRUNG BÌNH';
       riskSubtitle = 'Cần kiểm tra & thẩm định thêm';
-      ringColor = '#f59e0b'; // amber-500
-      badgeClass = 'bg-amber-50 text-amber-800 border-amber-200';
+      ringColor = '#0284c7'; // sky-600
+      badgeClass = 'bg-sky-50 text-sky-800 border-sky-200';
       recommendation =
         'Nên xác minh thêm giấy tờ pháp lý của người đại diện và hợp đồng nguyên tắc trước khi thực hiện các giao dịch thương mại.';
     }

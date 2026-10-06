@@ -1,0 +1,6107 @@
+[
+  {
+    "code": "4659",
+    "name": "Bán buôn máy móc, thiết bị và phụ tùng máy khác",
+    "slug": "ban-buon-may-moc-thiet-bi-va-phu-tung-may-khac-4659"
+  },
+  {
+    "code": "4610",
+    "name": "Đại lý, môi giới, đấu giá",
+    "slug": "dai-ly-moi-gioi-dau-gia-4610"
+  },
+  {
+    "code": "4649",
+    "name": "Bán buôn đồ dùng khác cho gia đình",
+    "slug": "ban-buon-do-dung-khac-cho-gia-dinh-4649"
+  },
+  {
+    "code": "4931",
+    "name": "Vận tải hành khách đường bộ trong nội thành, ngoại thành (trừ vận tải bằng xe buýt)",
+    "slug": "van-tai-hanh-khach-duong-bo-trong-noi-thanh-ngoai-thanh-tru-van-tai-bang-xe-buyt-4931"
+  },
+  {
+    "code": "1701",
+    "name": "Sản xuất bột giấy, giấy và bìa",
+    "slug": "san-xuat-bot-giay-giay-va-bia-1701"
+  },
+  {
+    "code": "4669",
+    "name": "Bán buôn chuyên doanh khác chưa được phân vào đâu",
+    "slug": "ban-buon-chuyen-doanh-khac-chua-duoc-phan-vao-dau-4669"
+  },
+  {
+    "code": "2011",
+    "name": "Sản xuất hoá chất cơ bản",
+    "slug": "san-xuat-hoa-chat-co-ban-2011"
+  },
+  {
+    "code": "4933",
+    "name": "Vận tải hàng hóa bằng đường bộ",
+    "slug": "van-tai-hang-hoa-bang-duong-bo-4933"
+  },
+  {
+    "code": "7490",
+    "name": "Hoạt động chuyên môn, khoa học và công nghệ khác chưa được phân vào đâu",
+    "slug": "hoat-dong-chuyen-mon-khoa-hoc-va-cong-nghe-khac-chua-duoc-phan-vao-dau-7490"
+  },
+  {
+    "code": "1812",
+    "name": "Dịch vụ liên quan đến in",
+    "slug": "dich-vu-lien-quan-den-in-1812"
+  },
+  {
+    "code": "1811",
+    "name": "In ấn",
+    "slug": "in-an-1811"
+  },
+  {
+    "code": "6619",
+    "name": "Hoạt động hỗ trợ dịch vụ tài chính chưa được phân vào đâu",
+    "slug": "hoat-dong-ho-tro-dich-vu-tai-chinh-chua-duoc-phan-vao-dau-6619"
+  },
+  {
+    "code": "8219",
+    "name": "Photo, chuẩn bị tài liệu và các hoạt động hỗ trợ văn phòng đặc biệt khác",
+    "slug": "photo-chuan-bi-tai-lieu-va-cac-hoat-dong-ho-tro-van-phong-dac-biet-khac-8219"
+  },
+  {
+    "code": "5913",
+    "name": "Hoạt động phát hành phim điện ảnh, phim video và chương trình truyền hình",
+    "slug": "hoat-dong-phat-hanh-phim-dien-anh-phim-video-va-chuong-trinh-truyen-hinh-5913"
+  },
+  {
+    "code": "4641",
+    "name": "Bán buôn vải, hàng may sẵn, giày dép",
+    "slug": "ban-buon-vai-hang-may-san-giay-dep-4641"
+  },
+  {
+    "code": "4771",
+    "name": "Bán lẻ hàng may mặc, giày dép, hàng da và giả da trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-hang-may-mac-giay-dep-hang-da-va-gia-da-trong-cac-cua-hang-chuyen-doanh-4771"
+  },
+  {
+    "code": "4330",
+    "name": "Hoàn thiện công trình xây dựng",
+    "slug": "hoan-thien-cong-trinh-xay-dung-4330"
+  },
+  {
+    "code": "4761",
+    "name": "Bán lẻ sách, báo, tạp chí văn phòng phẩm trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-sach-bao-tap-chi-van-phong-pham-trong-cac-cua-hang-chuyen-doanh-4761"
+  },
+  {
+    "code": "7410",
+    "name": "Hoạt động thiết kế chuyên dụng",
+    "slug": "hoat-dong-thiet-ke-chuyen-dung-7410"
+  },
+  {
+    "code": "4773",
+    "name": "Bán lẻ hàng hóa khác mới trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-hang-hoa-khac-moi-trong-cac-cua-hang-chuyen-doanh-4773"
+  },
+  {
+    "code": "7310",
+    "name": "Quảng cáo",
+    "slug": "quang-cao-7310"
+  },
+  {
+    "code": "4772",
+    "name": "Bán lẻ thuốc, dụng cụ y tế, mỹ phẩm và vật phẩm vệ sinh trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-thuoc-dung-cu-y-te-my-pham-va-vat-pham-ve-sinh-trong-cac-cua-hang-chuyen-doanh-4772"
+  },
+  {
+    "code": "7710",
+    "name": "Cho thuê xe có động cơ",
+    "slug": "cho-thue-xe-co-dong-co-7710"
+  },
+  {
+    "code": "9631",
+    "name": "Cắt tóc, làm đầu, gội đầu",
+    "slug": "cat-toc-lam-dau-goi-dau-9631"
+  },
+  {
+    "code": "4651",
+    "name": "Bán buôn máy vi tính, thiết bị ngoại vi và phần mềm",
+    "slug": "ban-buon-may-vi-tinh-thiet-bi-ngoai-vi-va-phan-mem-4651"
+  },
+  {
+    "code": "4652",
+    "name": "Bán buôn thiết bị và linh kiện điện tử, viễn thông",
+    "slug": "ban-buon-thiet-bi-va-linh-kien-dien-tu-vien-thong-4652"
+  },
+  {
+    "code": "9511",
+    "name": "Sửa chữa máy vi tính và thiết bị ngoại vi",
+    "slug": "sua-chua-may-vi-tinh-va-thiet-bi-ngoai-vi-9511"
+  },
+  {
+    "code": "4741",
+    "name": "Bán lẻ máy vi tính, thiết bị ngoại vi, phần mềm và thiết bị viễn thông trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-may-vi-tinh-thiet-bi-ngoai-vi-phan-mem-va-thiet-bi-vien-thong-trong-cac-cua-hang-chuyen-doanh-4741"
+  },
+  {
+    "code": "4719",
+    "name": "Bán lẻ khác trong các cửa hàng kinh doanh tổng hợp",
+    "slug": "ban-le-khac-trong-cac-cua-hang-kinh-doanh-tong-hop-4719"
+  },
+  {
+    "code": "4632",
+    "name": "Bán buôn thực phẩm",
+    "slug": "ban-buon-thuc-pham-4632"
+  },
+  {
+    "code": "4711",
+    "name": "Bán lẻ lương thực, thực phẩm, đồ uống, thuốc lá, thuốc lào chiếm tỷ trọng lớn trong các cửa hàng kinh doanh tổng hợp",
+    "slug": "ban-le-luong-thuc-thuc-pham-do-uong-thuoc-la-thuoc-lao-chiem-ty-trong-lon-trong-cac-cua-hang-kinh-doanh-tong-hop-4711"
+  },
+  {
+    "code": "4721",
+    "name": "Bán lẻ lương thực trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-luong-thuc-trong-cac-cua-hang-chuyen-doanh-4721"
+  },
+  {
+    "code": "4722",
+    "name": "Bán lẻ thực phẩm trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-thuc-pham-trong-cac-cua-hang-chuyen-doanh-4722"
+  },
+  {
+    "code": "4723",
+    "name": "Bán lẻ đồ uống trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-do-uong-trong-cac-cua-hang-chuyen-doanh-4723"
+  },
+  {
+    "code": "5610",
+    "name": "Nhà hàng và các dịch vụ ăn uống phục vụ lưu động",
+    "slug": "nha-hang-va-cac-dich-vu-an-uong-phuc-vu-luu-dong-5610"
+  },
+  {
+    "code": "6820",
+    "name": "Tư vấn, môi giới, đấu giá bất động sản, đấu giá quyền sử dụng đất",
+    "slug": "tu-van-moi-gioi-dau-gia-bat-dong-san-dau-gia-quyen-su-dung-dat-6820"
+  },
+  {
+    "code": "8299",
+    "name": "Hoạt động dịch vụ hỗ trợ kinh doanh khác còn lại chưa được phân vào đâu",
+    "slug": "hoat-dong-dich-vu-ho-tro-kinh-doanh-khac-con-lai-chua-duoc-phan-vao-dau-8299"
+  },
+  {
+    "code": "1610",
+    "name": "Cưa, xẻ, bào gỗ và bảo quản gỗ",
+    "slug": "cua-xe-bao-go-va-bao-quan-go-1610"
+  },
+  {
+    "code": "46209",
+    "name": "Bán buôn nông, lâm sản nguyên liệu khác (trừ gỗ, tre, nứa)",
+    "slug": "ban-buon-nong-lam-san-nguyen-lieu-khac-tru-go-tre-nua-46209"
+  },
+  {
+    "code": "46496",
+    "name": "Bán buôn giường, tủ, bàn ghế và đồ dùng nội thất tương tự",
+    "slug": "ban-buon-giuong-tu-ban-ghe-va-do-dung-noi-that-tuong-tu-46496"
+  },
+  {
+    "code": "46631",
+    "name": "Bán buôn tre, nứa, gỗ cây và gỗ chế biến",
+    "slug": "ban-buon-tre-nua-go-cay-va-go-che-bien-46631"
+  },
+  {
+    "code": "47592",
+    "name": "Bán lẻ giường, tủ, bàn, ghế và đồ dùng nội thất tương tự trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-giuong-tu-ban-ghe-va-do-dung-noi-that-tuong-tu-trong-cac-cua-hang-chuyen-doanh-47592"
+  },
+  {
+    "code": "4100",
+    "name": "Xây dựng nhà các loại",
+    "slug": "xay-dung-nha-cac-loai-4100"
+  },
+  {
+    "code": "42102",
+    "name": "Xây dựng công trình đường bộ",
+    "slug": "xay-dung-cong-trinh-duong-bo-42102"
+  },
+  {
+    "code": "4220",
+    "name": "Xây dựng công trình công ích",
+    "slug": "xay-dung-cong-trinh-cong-ich-4220"
+  },
+  {
+    "code": "2023",
+    "name": "Sản xuất mỹ phẩm, xà phòng, chất tẩy rửa, làm bóng và chế phẩm vệ sinh",
+    "slug": "san-xuat-my-pham-xa-phong-chat-tay-rua-lam-bong-va-che-pham-ve-sinh-2023"
+  },
+  {
+    "code": "2310",
+    "name": "Sản xuất thuỷ tinh và sản phẩm từ thuỷ tinh",
+    "slug": "san-xuat-thuy-tinh-va-san-pham-tu-thuy-tinh-2310"
+  },
+  {
+    "code": "0112",
+    "name": "Trồng ngô và cây lương thực có hạt khác",
+    "slug": "trong-ngo-va-cay-luong-thuc-co-hat-khac-0112"
+  },
+  {
+    "code": "0113",
+    "name": "Trồng cây lấy củ có chất bột",
+    "slug": "trong-cay-lay-cu-co-chat-bot-0113"
+  },
+  {
+    "code": "0123",
+    "name": "Trồng cây điều",
+    "slug": "trong-cay-dieu-0123"
+  },
+  {
+    "code": "0126",
+    "name": "Trồng cây cà phê",
+    "slug": "trong-cay-ca-phe-0126"
+  },
+  {
+    "code": "0127",
+    "name": "Trồng cây chè",
+    "slug": "trong-cay-che-0127"
+  },
+  {
+    "code": "4311",
+    "name": "Phá dỡ",
+    "slug": "pha-do-4311"
+  },
+  {
+    "code": "4312",
+    "name": "Chuẩn bị mặt bằng",
+    "slug": "chuan-bi-mat-bang-4312"
+  },
+  {
+    "code": "4321",
+    "name": "Lắp đặt hệ thống điện",
+    "slug": "lap-dat-he-thong-dien-4321"
+  },
+  {
+    "code": "4542",
+    "name": "Bảo dưỡng và sửa chữa mô tô, xe máy",
+    "slug": "bao-duong-va-sua-chua-mo-to-xe-may-4542"
+  },
+  {
+    "code": "4511",
+    "name": "Bán buôn ô tô và xe có động cơ khác",
+    "slug": "ban-buon-o-to-va-xe-co-dong-co-khac-4511"
+  },
+  {
+    "code": "46101",
+    "name": "Đại lý",
+    "slug": "dai-ly-46101"
+  },
+  {
+    "code": "2013",
+    "name": "Sản xuất plastic và cao su tổng hợp dạng nguyên sinh",
+    "slug": "san-xuat-plastic-va-cao-su-tong-hop-dang-nguyen-sinh-2013"
+  },
+  {
+    "code": "2220",
+    "name": "Sản xuất sản phẩm từ plastic",
+    "slug": "san-xuat-san-pham-tu-plastic-2220"
+  },
+  {
+    "code": "2395",
+    "name": "Sản xuất bê tông và các sản phẩm từ xi măng và thạch cao",
+    "slug": "san-xuat-be-tong-va-cac-san-pham-tu-xi-mang-va-thach-cao-2395"
+  },
+  {
+    "code": "0124",
+    "name": "Trồng cây hồ tiêu",
+    "slug": "trong-cay-ho-tieu-0124"
+  },
+  {
+    "code": "4210",
+    "name": "Xây dựng công trình đường sắt và đường bộ",
+    "slug": "xay-dung-cong-trinh-duong-sat-va-duong-bo-4210"
+  },
+  {
+    "code": "4390",
+    "name": "Hoạt động xây dựng chuyên dụng khác",
+    "slug": "hoat-dong-xay-dung-chuyen-dung-khac-4390"
+  },
+  {
+    "code": "4663",
+    "name": "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng",
+    "slug": "ban-buon-vat-lieu-thiet-bi-lap-dat-khac-trong-xay-dung-4663"
+  },
+  {
+    "code": "0114",
+    "name": "Trồng cây mía",
+    "slug": "trong-cay-mia-0114"
+  },
+  {
+    "code": "0115",
+    "name": "Trồng cây thuốc lá, thuốc lào",
+    "slug": "trong-cay-thuoc-la-thuoc-lao-0115"
+  },
+  {
+    "code": "0121",
+    "name": "Trồng cây ăn quả",
+    "slug": "trong-cay-an-qua-0121"
+  },
+  {
+    "code": "0122",
+    "name": "Trồng cây lấy quả chứa dầu",
+    "slug": "trong-cay-lay-qua-chua-dau-0122"
+  },
+  {
+    "code": "0128",
+    "name": "Trồng cây gia vị, cây dược liệu",
+    "slug": "trong-cay-gia-vi-cay-duoc-lieu-0128"
+  },
+  {
+    "code": "4290",
+    "name": "Xây dựng công trình kỹ thuật dân dụng khác",
+    "slug": "xay-dung-cong-trinh-ky-thuat-dan-dung-khac-4290"
+  },
+  {
+    "code": "4752",
+    "name": "Bán lẻ đồ ngũ kim, sơn, kính và thiết bị lắp đặt khác trong xây dựng trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-do-ngu-kim-son-kinh-va-thiet-bi-lap-dat-khac-trong-xay-dung-trong-cac-cua-hang-chuyen-doanh-4752"
+  },
+  {
+    "code": "4512",
+    "name": "Bán lẻ ô tô con (loại 12 chỗ ngồi trở xuống)",
+    "slug": "ban-le-o-to-con-loai-12-cho-ngoi-tro-xuong-4512"
+  },
+  {
+    "code": "2212",
+    "name": "Sản xuất sản phẩm khác từ cao su",
+    "slug": "san-xuat-san-pham-khac-tu-cao-su-2212"
+  },
+  {
+    "code": "2410",
+    "name": "Sản xuất sắt, thép, gang",
+    "slug": "san-xuat-sat-thep-gang-2410"
+  },
+  {
+    "code": "0111",
+    "name": "Trồng lúa",
+    "slug": "trong-lua-0111"
+  },
+  {
+    "code": "0116",
+    "name": "Trồng cây lấy sợi",
+    "slug": "trong-cay-lay-soi-0116"
+  },
+  {
+    "code": "0125",
+    "name": "Trồng cây cao su",
+    "slug": "trong-cay-cao-su-0125"
+  },
+  {
+    "code": "4322",
+    "name": "Lắp đặt hệ thống cấp, thoát nước, lò sưởi và điều hoà không khí",
+    "slug": "lap-dat-he-thong-cap-thoat-nuoc-lo-suoi-va-dieu-hoa-khong-khi-4322"
+  },
+  {
+    "code": "4329",
+    "name": "Lắp đặt hệ thống xây dựng khác",
+    "slug": "lap-dat-he-thong-xay-dung-khac-4329"
+  },
+  {
+    "code": "4543",
+    "name": "Bán phụ tùng và các bộ phận phụ trợ của mô tô, xe máy",
+    "slug": "ban-phu-tung-va-cac-bo-phan-phu-tro-cua-mo-to-xe-may-4543"
+  },
+  {
+    "code": "4513",
+    "name": "Đại lý ô tô và xe có động cơ khác",
+    "slug": "dai-ly-o-to-va-xe-co-dong-co-khac-4513"
+  },
+  {
+    "code": "5510",
+    "name": "Dịch vụ lưu trú ngắn ngày",
+    "slug": "dich-vu-luu-tru-ngan-ngay-5510"
+  },
+  {
+    "code": "46493",
+    "name": "Bán buôn nước hoa, hàng mỹ phẩm và chế phẩm vệ sinh",
+    "slug": "ban-buon-nuoc-hoa-hang-my-pham-va-che-pham-ve-sinh-46493"
+  },
+  {
+    "code": "5630",
+    "name": "Dịch vụ phục vụ đồ uống",
+    "slug": "dich-vu-phuc-vu-do-uong-5630"
+  },
+  {
+    "code": "4724",
+    "name": "Bán lẻ sản phẩm thuốc lá, thuốc lào trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-san-pham-thuoc-la-thuoc-lao-trong-cac-cua-hang-chuyen-doanh-4724"
+  },
+  {
+    "code": "5621",
+    "name": "Cung cấp dịch vụ ăn uống theo hợp đồng không thường xuyên với khách hàng (phục vụ tiệc, hội họp, đám cưới...)",
+    "slug": "cung-cap-dich-vu-an-uong-theo-hop-dong-khong-thuong-xuyen-voi-khach-hang-phuc-vu-tiec-hoi-hop-dam-cuoi-5621"
+  },
+  {
+    "code": "2392",
+    "name": "Sản xuất vật liệu xây dựng từ đất sét",
+    "slug": "san-xuat-vat-lieu-xay-dung-tu-dat-set-2392"
+  },
+  {
+    "code": "2393",
+    "name": "Sản xuất sản phẩm gốm sứ khác",
+    "slug": "san-xuat-san-pham-gom-su-khac-2393"
+  },
+  {
+    "code": "2396",
+    "name": "Cắt tạo dáng và hoàn thiện đá",
+    "slug": "cat-tao-dang-va-hoan-thien-da-2396"
+  },
+  {
+    "code": "2399",
+    "name": "Sản xuất sản phẩm từ chất khoáng phi kim loại khác chưa được phân vào đâu",
+    "slug": "san-xuat-san-pham-tu-chat-khoang-phi-kim-loai-khac-chua-duoc-phan-vao-dau-2399"
+  },
+  {
+    "code": "2431",
+    "name": "Đúc sắt, thép",
+    "slug": "duc-sat-thep-2431"
+  },
+  {
+    "code": "2511",
+    "name": "Sản xuất các cấu kiện kim loại",
+    "slug": "san-xuat-cac-cau-kien-kim-loai-2511"
+  },
+  {
+    "code": "2599",
+    "name": "Sản xuất sản phẩm khác bằng kim loại chưa được phân vào đâu",
+    "slug": "san-xuat-san-pham-khac-bang-kim-loai-chua-duoc-phan-vao-dau-2599"
+  },
+  {
+    "code": "3100",
+    "name": "Sản xuất giường, tủ, bàn, ghế",
+    "slug": "san-xuat-giuong-tu-ban-ghe-3100"
+  },
+  {
+    "code": "3211",
+    "name": "Sản xuất đồ kim hoàn và chi tiết liên quan",
+    "slug": "san-xuat-do-kim-hoan-va-chi-tiet-lien-quan-3211"
+  },
+  {
+    "code": "4759",
+    "name": "Bán lẻ đồ điện gia dụng, giường, tủ, bàn, ghế và đồ nội thất tương tự, đèn và bộ đèn điện, đồ dùng gia đình khác chưa được phân vào đâu trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-do-dien-gia-dung-giuong-tu-ban-ghe-va-do-noi-that-tuong-tu-den-va-bo-den-dien-do-dung-gia-dinh-khac-chua-duoc-phan-vao-dau-trong-cac-cua-hang-chuyen-doanh-4759"
+  },
+  {
+    "code": "2394",
+    "name": "Sản xuất xi măng, vôi và thạch cao",
+    "slug": "san-xuat-xi-mang-voi-va-thach-cao-2394"
+  },
+  {
+    "code": "2391",
+    "name": "Sản xuất sản phẩm chịu lửa",
+    "slug": "san-xuat-san-pham-chiu-lua-2391"
+  },
+  {
+    "code": "4781",
+    "name": "Bán lẻ lương thực, thực phẩm, đồ uống, thuốc lá, thuốc lào lưu động hoặc tại chợ",
+    "slug": "ban-le-luong-thuc-thuc-pham-do-uong-thuoc-la-thuoc-lao-luu-dong-hoac-tai-cho-4781"
+  },
+  {
+    "code": "8230",
+    "name": "Tổ chức giới thiệu và xúc tiến thương mại",
+    "slug": "to-chuc-gioi-thieu-va-xuc-tien-thuong-mai-8230"
+  },
+  {
+    "code": "4633",
+    "name": "Bán buôn đồ uống",
+    "slug": "ban-buon-do-uong-4633"
+  },
+  {
+    "code": "7110",
+    "name": "Hoạt động kiến trúc và tư vấn kỹ thuật có liên quan",
+    "slug": "hoat-dong-kien-truc-va-tu-van-ky-thuat-co-lien-quan-7110"
+  },
+  {
+    "code": "1622",
+    "name": "Sản xuất đồ gỗ xây dựng",
+    "slug": "san-xuat-do-go-xay-dung-1622"
+  },
+  {
+    "code": "4620",
+    "name": "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống",
+    "slug": "ban-buon-nong-lam-san-nguyen-lieu-tru-go-tre-nua-va-dong-vat-song-4620"
+  },
+  {
+    "code": "1073",
+    "name": "Sản xuất ca cao, sôcôla và mứt kẹo",
+    "slug": "san-xuat-ca-cao-socola-va-mut-keo-1073"
+  },
+  {
+    "code": "1071",
+    "name": "Sản xuất các loại bánh từ bột",
+    "slug": "san-xuat-cac-loai-banh-tu-bot-1071"
+  },
+  {
+    "code": "1079",
+    "name": "Sản xuất thực phẩm khác chưa được phân vào đâu",
+    "slug": "san-xuat-thuc-pham-khac-chua-duoc-phan-vao-dau-1079"
+  },
+  {
+    "code": "1322",
+    "name": "Sản xuất hàng may sẵn (trừ trang phục)",
+    "slug": "san-xuat-hang-may-san-tru-trang-phuc-1322"
+  },
+  {
+    "code": "1323",
+    "name": "Sản xuất thảm, chăn đệm",
+    "slug": "san-xuat-tham-chan-dem-1323"
+  },
+  {
+    "code": "3290",
+    "name": "Sản xuất khác chưa được phân vào đâu",
+    "slug": "san-xuat-khac-chua-duoc-phan-vao-dau-3290"
+  },
+  {
+    "code": "8292",
+    "name": "Dịch vụ đóng gói",
+    "slug": "dich-vu-dong-goi-8292"
+  },
+  {
+    "code": "8121",
+    "name": "Vệ sinh chung nhà cửa",
+    "slug": "ve-sinh-chung-nha-cua-8121"
+  },
+  {
+    "code": "5229",
+    "name": "Hoạt động dịch vụ hỗ trợ khác liên quan đến vận tải",
+    "slug": "hoat-dong-dich-vu-ho-tro-khac-lien-quan-den-van-tai-5229"
+  },
+  {
+    "code": "4634",
+    "name": "Bán buôn sản phẩm thuốc lá, thuốc lào",
+    "slug": "ban-buon-san-pham-thuoc-la-thuoc-lao-4634"
+  },
+  {
+    "code": "1104",
+    "name": "Sản xuất đồ uống không cồn, nước khoáng",
+    "slug": "san-xuat-do-uong-khong-con-nuoc-khoang-1104"
+  },
+  {
+    "code": "1074",
+    "name": "Sản xuất mì ống, mỳ sợi và sản phẩm tương tự",
+    "slug": "san-xuat-mi-ong-my-soi-va-san-pham-tuong-tu-1074"
+  },
+  {
+    "code": "4932",
+    "name": "Vận tải hành khách đường bộ khác",
+    "slug": "van-tai-hanh-khach-duong-bo-khac-4932"
+  },
+  {
+    "code": "0810",
+    "name": "Khai thác đá, cát, sỏi, đất sét",
+    "slug": "khai-thac-da-cat-soi-dat-set-0810"
+  },
+  {
+    "code": "4631",
+    "name": "Bán buôn gạo",
+    "slug": "ban-buon-gao-4631"
+  },
+  {
+    "code": "1103",
+    "name": "Sản xuất bia và mạch nha ủ men bia",
+    "slug": "san-xuat-bia-va-mach-nha-u-men-bia-1103"
+  },
+  {
+    "code": "1101",
+    "name": "Chưng, tinh cất và pha chế các loại rượu mạnh",
+    "slug": "chung-tinh-cat-va-pha-che-cac-loai-ruou-manh-1101"
+  },
+  {
+    "code": "1102",
+    "name": "Sản xuất rượu vang",
+    "slug": "san-xuat-ruou-vang-1102"
+  },
+  {
+    "code": "1410",
+    "name": "May trang phục (trừ trang phục từ da lông thú)",
+    "slug": "may-trang-phuc-tru-trang-phuc-tu-da-long-thu-1410"
+  },
+  {
+    "code": "1420",
+    "name": "Sản xuất sản phẩm từ da lông thú",
+    "slug": "san-xuat-san-pham-tu-da-long-thu-1420"
+  },
+  {
+    "code": "1430",
+    "name": "Sản xuất trang phục dệt kim, đan móc",
+    "slug": "san-xuat-trang-phuc-det-kim-dan-moc-1430"
+  },
+  {
+    "code": "7320",
+    "name": "Nghiên cứu thị trường và thăm dò dư luận",
+    "slug": "nghien-cuu-thi-truong-va-tham-do-du-luan-7320"
+  },
+  {
+    "code": "2790",
+    "name": "Sản xuất thiết bị điện khác",
+    "slug": "san-xuat-thiet-bi-dien-khac-2790"
+  },
+  {
+    "code": "2824",
+    "name": "Sản xuất máy khai thác mỏ và xây dựng",
+    "slug": "san-xuat-may-khai-thac-mo-va-xay-dung-2824"
+  },
+  {
+    "code": "1050",
+    "name": "Chế biến sữa và các sản phẩm từ sữa",
+    "slug": "che-bien-sua-va-cac-san-pham-tu-sua-1050"
+  },
+  {
+    "code": "1080",
+    "name": "Sản xuất thức ăn gia súc, gia cầm và thuỷ sản",
+    "slug": "san-xuat-thuc-an-gia-suc-gia-cam-va-thuy-san-1080"
+  },
+  {
+    "code": "2211",
+    "name": "Sản xuất săm, lốp cao su; đắp và tái chế lốp cao su",
+    "slug": "san-xuat-sam-lop-cao-su-dap-va-tai-che-lop-cao-su-2211"
+  },
+  {
+    "code": "2610",
+    "name": "Sản xuất linh kiện điện tử",
+    "slug": "san-xuat-linh-kien-dien-tu-2610"
+  },
+  {
+    "code": "2620",
+    "name": "Sản xuất máy vi tính và thiết bị ngoại vi của máy vi tính",
+    "slug": "san-xuat-may-vi-tinh-va-thiet-bi-ngoai-vi-cua-may-vi-tinh-2620"
+  },
+  {
+    "code": "2630",
+    "name": "Sản xuất thiết bị truyền thông",
+    "slug": "san-xuat-thiet-bi-truyen-thong-2630"
+  },
+  {
+    "code": "2640",
+    "name": "Sản xuất sản phẩm điện tử dân dụng",
+    "slug": "san-xuat-san-pham-dien-tu-dan-dung-2640"
+  },
+  {
+    "code": "2651",
+    "name": "Sản xuất thiết bị đo lường, kiểm tra, định hướng và điều khiển",
+    "slug": "san-xuat-thiet-bi-do-luong-kiem-tra-dinh-huong-va-dieu-khien-2651"
+  },
+  {
+    "code": "2710",
+    "name": "Sản xuất mô tơ, máy phát, biến thế điện, thiết bị phân phối và điều khiển điện",
+    "slug": "san-xuat-mo-to-may-phat-bien-the-dien-thiet-bi-phan-phoi-va-dieu-khien-dien-2710"
+  },
+  {
+    "code": "2731",
+    "name": "Sản xuất dây cáp, sợi cáp quang học",
+    "slug": "san-xuat-day-cap-soi-cap-quang-hoc-2731"
+  },
+  {
+    "code": "2732",
+    "name": "Sản xuất dây, cáp điện và điện tử khác",
+    "slug": "san-xuat-day-cap-dien-va-dien-tu-khac-2732"
+  },
+  {
+    "code": "2733",
+    "name": "Sản xuất thiết bị dây dẫn điện các loại",
+    "slug": "san-xuat-thiet-bi-day-dan-dien-cac-loai-2733"
+  },
+  {
+    "code": "2740",
+    "name": "Sản xuất thiết bị điện chiếu sáng",
+    "slug": "san-xuat-thiet-bi-dien-chieu-sang-2740"
+  },
+  {
+    "code": "2750",
+    "name": "Sản xuất đồ điện dân dụng",
+    "slug": "san-xuat-do-dien-dan-dung-2750"
+  },
+  {
+    "code": "2813",
+    "name": "Sản xuất máy bơm, máy nén, vòi và van khác",
+    "slug": "san-xuat-may-bom-may-nen-voi-va-van-khac-2813"
+  },
+  {
+    "code": "2814",
+    "name": "Sản xuất bi, bánh răng, hộp số, các bộ phận điều khiển và truyền chuyển động",
+    "slug": "san-xuat-bi-banh-rang-hop-so-cac-bo-phan-dieu-khien-va-truyen-chuyen-dong-2814"
+  },
+  {
+    "code": "2815",
+    "name": "Sản xuất lò nướng, lò luyện và lò nung",
+    "slug": "san-xuat-lo-nuong-lo-luyen-va-lo-nung-2815"
+  },
+  {
+    "code": "6810",
+    "name": "Kinh doanh bất động sản, quyền sử dụng đất thuộc chủ sở hữu, chủ sử dụng hoặc đi thuê",
+    "slug": "kinh-doanh-bat-dong-san-quyen-su-dung-dat-thuoc-chu-so-huu-chu-su-dung-hoac-di-thue-6810"
+  },
+  {
+    "code": "2816",
+    "name": "Sản xuất các thiết bị nâng, hạ và bốc xếp",
+    "slug": "san-xuat-cac-thiet-bi-nang-ha-va-boc-xep-2816"
+  },
+  {
+    "code": "2817",
+    "name": "Sản xuất máy móc và thiết bị văn phòng (trừ máy vi tính và thiết bị ngoại vi của máy vi tính)",
+    "slug": "san-xuat-may-moc-va-thiet-bi-van-phong-tru-may-vi-tinh-va-thiet-bi-ngoai-vi-cua-may-vi-tinh-2817"
+  },
+  {
+    "code": "2818",
+    "name": "Sản xuất dụng cụ cầm tay chạy bằng mô tơ hoặc khí nén",
+    "slug": "san-xuat-dung-cu-cam-tay-chay-bang-mo-to-hoac-khi-nen-2818"
+  },
+  {
+    "code": "2819",
+    "name": "Sản xuất máy thông dụng khác",
+    "slug": "san-xuat-may-thong-dung-khac-2819"
+  },
+  {
+    "code": "2821",
+    "name": "Sản xuất máy nông nghiệp và lâm nghiệp",
+    "slug": "san-xuat-may-nong-nghiep-va-lam-nghiep-2821"
+  },
+  {
+    "code": "2822",
+    "name": "Sản xuất máy công cụ và máy tạo hình kim loại",
+    "slug": "san-xuat-may-cong-cu-va-may-tao-hinh-kim-loai-2822"
+  },
+  {
+    "code": "2823",
+    "name": "Sản xuất máy luyện kim",
+    "slug": "san-xuat-may-luyen-kim-2823"
+  },
+  {
+    "code": "2829",
+    "name": "Sản xuất máy chuyên dụng khác",
+    "slug": "san-xuat-may-chuyen-dung-khac-2829"
+  },
+  {
+    "code": "2022",
+    "name": "Sản xuất sơn, véc ni và các chất sơn, quét tương tự; sản xuất mực in và ma tít",
+    "slug": "san-xuat-son-vec-ni-va-cac-chat-son-quet-tuong-tu-san-xuat-muc-in-va-ma-tit-2022"
+  },
+  {
+    "code": "1629",
+    "name": "Sản xuất sản phẩm khác từ gỗ; sản xuất sản phẩm từ tre, nứa, rơm, rạ và vật liệu tết bện",
+    "slug": "san-xuat-san-pham-khac-tu-go-san-xuat-san-pham-tu-tre-nua-rom-ra-va-vat-lieu-tet-ben-1629"
+  },
+  {
+    "code": "4530",
+    "name": "Bán phụ tùng và các bộ phận phụ trợ của ô tô và xe có động cơ khác",
+    "slug": "ban-phu-tung-va-cac-bo-phan-phu-tro-cua-o-to-va-xe-co-dong-co-khac-4530"
+  },
+  {
+    "code": "2420",
+    "name": "Sản xuất kim loại màu và kim loại quý",
+    "slug": "san-xuat-kim-loai-mau-va-kim-loai-quy-2420"
+  },
+  {
+    "code": "2432",
+    "name": "Đúc kim loại màu",
+    "slug": "duc-kim-loai-mau-2432"
+  },
+  {
+    "code": "2512",
+    "name": "Sản xuất thùng, bể chứa và dụng cụ chứa đựng bằng kim loại",
+    "slug": "san-xuat-thung-be-chua-va-dung-cu-chua-dung-bang-kim-loai-2512"
+  },
+  {
+    "code": "2593",
+    "name": "Sản xuất dao kéo, dụng cụ cầm tay và đồ kim loại thông dụng",
+    "slug": "san-xuat-dao-keo-dung-cu-cam-tay-va-do-kim-loai-thong-dung-2593"
+  },
+  {
+    "code": "4520",
+    "name": "Bảo dưỡng, sửa chữa ô tô và xe có động cơ khác",
+    "slug": "bao-duong-sua-chua-o-to-va-xe-co-dong-co-khac-4520"
+  },
+  {
+    "code": "4541",
+    "name": "Bán mô tô, xe máy",
+    "slug": "ban-mo-to-xe-may-4541"
+  },
+  {
+    "code": "4661",
+    "name": "Bán buôn nhiên liệu rắn, lỏng, khí và các sản phẩm liên quan",
+    "slug": "ban-buon-nhien-lieu-ran-long-khi-va-cac-san-pham-lien-quan-4661"
+  },
+  {
+    "code": "4662",
+    "name": "Bán buôn kim loại và quặng kim loại",
+    "slug": "ban-buon-kim-loai-va-quang-kim-loai-4662"
+  },
+  {
+    "code": "4690",
+    "name": "Bán buôn tổng hợp",
+    "slug": "ban-buon-tong-hop-4690"
+  },
+  {
+    "code": "4742",
+    "name": "Bán lẻ thiết bị nghe nhìn trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-thiet-bi-nghe-nhin-trong-cac-cua-hang-chuyen-doanh-4742"
+  },
+  {
+    "code": "4912",
+    "name": "Vận tải hàng hóa đường sắt",
+    "slug": "van-tai-hang-hoa-duong-sat-4912"
+  },
+  {
+    "code": "5210",
+    "name": "Kho bãi và lưu giữ hàng hóa",
+    "slug": "kho-bai-va-luu-giu-hang-hoa-5210"
+  },
+  {
+    "code": "7730",
+    "name": "Cho thuê máy móc, thiết bị và đồ dùng hữu hình khác",
+    "slug": "cho-thue-may-moc-thiet-bi-va-do-dung-huu-hinh-khac-7730"
+  },
+  {
+    "code": "3312",
+    "name": "Sửa chữa máy móc, thiết bị",
+    "slug": "sua-chua-may-moc-thiet-bi-3312"
+  },
+  {
+    "code": "3313",
+    "name": "Sửa chữa thiết bị điện tử và quang học",
+    "slug": "sua-chua-thiet-bi-dien-tu-va-quang-hoc-3313"
+  },
+  {
+    "code": "3314",
+    "name": "Sửa chữa thiết bị điện",
+    "slug": "sua-chua-thiet-bi-dien-3314"
+  },
+  {
+    "code": "3320",
+    "name": "Lắp đặt máy móc và thiết bị công nghiệp",
+    "slug": "lap-dat-may-moc-va-thiet-bi-cong-nghiep-3320"
+  },
+  {
+    "code": "3600",
+    "name": "Khai thác, xử lý và cung cấp nước",
+    "slug": "khai-thac-xu-ly-va-cung-cap-nuoc-3600"
+  },
+  {
+    "code": "4730",
+    "name": "Bán lẻ nhiên liệu động cơ trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-nhien-lieu-dong-co-trong-cac-cua-hang-chuyen-doanh-4730"
+  },
+  {
+    "code": "4774",
+    "name": "Bán lẻ hàng hóa đã qua sử dụng trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-hang-hoa-da-qua-su-dung-trong-cac-cua-hang-chuyen-doanh-4774"
+  },
+  {
+    "code": "4789",
+    "name": "Bán lẻ hàng hóa khác lưu động hoặc tại chợ",
+    "slug": "ban-le-hang-hoa-khac-luu-dong-hoac-tai-cho-4789"
+  },
+  {
+    "code": "4791",
+    "name": "Bán lẻ theo yêu cầu đặt hàng qua bưu điện hoặc internet",
+    "slug": "ban-le-theo-yeu-cau-dat-hang-qua-buu-dien-hoac-internet-4791"
+  },
+  {
+    "code": "6190",
+    "name": "Hoạt động viễn thông khác",
+    "slug": "hoat-dong-vien-thong-khac-6190"
+  },
+  {
+    "code": "6202",
+    "name": "Tư vấn máy vi tính và quản trị hệ thống máy vi tính",
+    "slug": "tu-van-may-vi-tinh-va-quan-tri-he-thong-may-vi-tinh-6202"
+  },
+  {
+    "code": "6209",
+    "name": "Hoạt động dịch vụ công nghệ thông tin và dịch vụ khác liên quan đến máy vi tính",
+    "slug": "hoat-dong-dich-vu-cong-nghe-thong-tin-va-dich-vu-khac-lien-quan-den-may-vi-tinh-6209"
+  },
+  {
+    "code": "1621",
+    "name": "Sản xuất gỗ dán, gỗ lạng, ván ép và ván mỏng khác",
+    "slug": "san-xuat-go-dan-go-lang-van-ep-va-van-mong-khac-1621"
+  },
+  {
+    "code": "2930",
+    "name": "Sản xuất phụ tùng và bộ phận phụ trợ cho xe có động cơ và động cơ xe",
+    "slug": "san-xuat-phu-tung-va-bo-phan-phu-tro-cho-xe-co-dong-co-va-dong-co-xe-2930"
+  },
+  {
+    "code": "6312",
+    "name": "Cổng thông tin",
+    "slug": "cong-thong-tin-6312"
+  },
+  {
+    "code": "8129",
+    "name": "Vệ sinh nhà cửa và các công trình khác",
+    "slug": "ve-sinh-nha-cua-va-cac-cong-trinh-khac-8129"
+  },
+  {
+    "code": "7911",
+    "name": "Đại lý du lịch",
+    "slug": "dai-ly-du-lich-7911"
+  },
+  {
+    "code": "8560",
+    "name": "Dịch vụ hỗ trợ giáo dục",
+    "slug": "dich-vu-ho-tro-giao-duc-8560"
+  },
+  {
+    "code": "4764",
+    "name": "Bán lẻ trò chơi, đồ chơi trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-tro-choi-do-choi-trong-cac-cua-hang-chuyen-doanh-4764"
+  },
+  {
+    "code": "3240",
+    "name": "Sản xuất đồ chơi, trò chơi",
+    "slug": "san-xuat-do-choi-tro-choi-3240"
+  },
+  {
+    "code": "7912",
+    "name": "Điều hành tua du lịch",
+    "slug": "dieu-hanh-tua-du-lich-7912"
+  },
+  {
+    "code": "7990",
+    "name": "Dịch vụ đặt chỗ và các dịch vụ hỗ trợ liên quan đến quảng bá và tổ chức tua du lịch",
+    "slug": "dich-vu-dat-cho-va-cac-dich-vu-ho-tro-lien-quan-den-quang-ba-va-to-chuc-tua-du-lich-7990"
+  },
+  {
+    "code": "5629",
+    "name": "Dịch vụ ăn uống khác",
+    "slug": "dich-vu-an-uong-khac-5629"
+  },
+  {
+    "code": "9329",
+    "name": "Hoạt động vui chơi giải trí khác chưa được phân vào đâu",
+    "slug": "hoat-dong-vui-choi-giai-tri-khac-chua-duoc-phan-vao-dau-9329"
+  },
+  {
+    "code": "7020",
+    "name": "Hoạt động tư vấn quản lý",
+    "slug": "hoat-dong-tu-van-quan-ly-7020"
+  },
+  {
+    "code": "6419",
+    "name": "Hoạt động trung gian tiền tệ khác",
+    "slug": "hoat-dong-trung-gian-tien-te-khac-6419"
+  },
+  {
+    "code": "3315",
+    "name": "Sửa chữa và bảo dưỡng phương tiện vận tải (trừ ô tô, mô tô, xe máy và xe có động cơ khác)",
+    "slug": "sua-chua-va-bao-duong-phuong-tien-van-tai-tru-o-to-mo-to-xe-may-va-xe-co-dong-co-khac-3315"
+  },
+  {
+    "code": "2592",
+    "name": "Gia công cơ khí; xử lý và tráng phủ kim loại",
+    "slug": "gia-cong-co-khi-xu-ly-va-trang-phu-kim-loai-2592"
+  },
+  {
+    "code": "0145",
+    "name": "Chăn nuôi lợn",
+    "slug": "chan-nuoi-lon-0145"
+  },
+  {
+    "code": "0210",
+    "name": "Trồng rừng và chăm sóc rừng",
+    "slug": "trong-rung-va-cham-soc-rung-0210"
+  },
+  {
+    "code": "0150",
+    "name": "Trồng trọt, chăn nuôi hỗn hợp",
+    "slug": "trong-trot-chan-nuoi-hon-hop-0150"
+  },
+  {
+    "code": "0146",
+    "name": "Chăn nuôi gia cầm",
+    "slug": "chan-nuoi-gia-cam-0146"
+  },
+  {
+    "code": "0129",
+    "name": "Trồng cây lâu năm khác",
+    "slug": "trong-cay-lau-nam-khac-0129"
+  },
+  {
+    "code": "0118",
+    "name": "Trồng rau, đậu các loại và trồng hoa, cây cảnh",
+    "slug": "trong-rau-dau-cac-loai-va-trong-hoa-cay-canh-0118"
+  },
+  {
+    "code": "0221",
+    "name": "Khai thác gỗ",
+    "slug": "khai-thac-go-0221"
+  },
+  {
+    "code": "5022",
+    "name": "Vận tải hàng hóa đường thuỷ nội địa",
+    "slug": "van-tai-hang-hoa-duong-thuy-noi-dia-5022"
+  },
+  {
+    "code": "1040",
+    "name": "Sản xuất dầu, mỡ động, thực vật",
+    "slug": "san-xuat-dau-mo-dong-thuc-vat-1040"
+  },
+  {
+    "code": "46497",
+    "name": "Bán buôn sách, báo, tạp chí, văn phòng phẩm",
+    "slug": "ban-buon-sach-bao-tap-chi-van-phong-pham-46497"
+  },
+  {
+    "code": "46594",
+    "name": "Bán buôn máy móc, thiết bị và phụ tùng máy văn phòng (trừ máy vi tính và thiết bị ngoại vi)",
+    "slug": "ban-buon-may-moc-thiet-bi-va-phu-tung-may-van-phong-tru-may-vi-tinh-va-thiet-bi-ngoai-vi-46594"
+  },
+  {
+    "code": "4653",
+    "name": "Bán buôn máy móc, thiết bị và phụ tùng máy nông nghiệp",
+    "slug": "ban-buon-may-moc-thiet-bi-va-phu-tung-may-nong-nghiep-4653"
+  },
+  {
+    "code": "9639",
+    "name": "Hoạt động dịch vụ phục vụ cá nhân khác còn lại chưa được phân vào đâu",
+    "slug": "hoat-dong-dich-vu-phuc-vu-ca-nhan-khac-con-lai-chua-duoc-phan-vao-dau-9639"
+  },
+  {
+    "code": "5021",
+    "name": "Vận tải hành khách đường thuỷ nội địa",
+    "slug": "van-tai-hanh-khach-duong-thuy-noi-dia-5021"
+  },
+  {
+    "code": "9610",
+    "name": "Dịch vụ tắm hơi, massage và các dịch vụ tăng cường sức khoẻ tương tự (trừ hoạt động thể thao)",
+    "slug": "dich-vu-tam-hoi-massage-va-cac-dich-vu-tang-cuong-suc-khoe-tuong-tu-tru-hoat-dong-the-thao-9610"
+  },
+  {
+    "code": "7120",
+    "name": "Kiểm tra và phân tích kỹ thuật",
+    "slug": "kiem-tra-va-phan-tich-ky-thuat-7120"
+  },
+  {
+    "code": "7830",
+    "name": "Cung ứng và quản lý nguồn lao động",
+    "slug": "cung-ung-va-quan-ly-nguon-lao-dong-7830"
+  },
+  {
+    "code": "8532",
+    "name": "Đào tạo trung cấp",
+    "slug": "giao-duc-nghe-nghiep-8532"
+  },
+  {
+    "code": "4753",
+    "name": "Bán lẻ thảm, đệm, chăn, màn, rèm, vật liệu phủ tường và sàn trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-tham-dem-chan-man-rem-vat-lieu-phu-tuong-va-san-trong-cac-cua-hang-chuyen-doanh-4753"
+  },
+  {
+    "code": "8559",
+    "name": "Giáo dục khác chưa được phân vào đâu",
+    "slug": "giao-duc-khac-chua-duoc-phan-vao-dau-8559"
+  },
+  {
+    "code": "7810",
+    "name": "Hoạt động của các trung tâm, đại lý tư vấn, giới thiệu và môi giới lao động, việc làm",
+    "slug": "hoat-dong-cua-cac-trung-tam-dai-ly-tu-van-gioi-thieu-va-moi-gioi-lao-dong-viec-lam-7810"
+  },
+  {
+    "code": "0161",
+    "name": "Hoạt động dịch vụ trồng trọt",
+    "slug": "hoat-dong-dich-vu-trong-trot-0161"
+  },
+  {
+    "code": "0163",
+    "name": "Hoạt động dịch vụ sau thu hoạch",
+    "slug": "hoat-dong-dich-vu-sau-thu-hoach-0163"
+  },
+  {
+    "code": "0222",
+    "name": "Khai thác lâm sản khác trừ gỗ",
+    "slug": "khai-thac-lam-san-khac-tru-go-0222"
+  },
+  {
+    "code": "0899",
+    "name": "Khai khoáng khác chưa được phân vào đâu",
+    "slug": "khai-khoang-khac-chua-duoc-phan-vao-dau-0899"
+  },
+  {
+    "code": "2029",
+    "name": "Sản xuất sản phẩm hoá chất khác chưa được phân vào đâu",
+    "slug": "san-xuat-san-pham-hoa-chat-khac-chua-duoc-phan-vao-dau-2029"
+  },
+  {
+    "code": "6201",
+    "name": "Lập trình máy vi tính",
+    "slug": "lap-trinh-may-vi-tinh-6201"
+  },
+  {
+    "code": "1623",
+    "name": "Sản xuất bao bì bằng gỗ",
+    "slug": "san-xuat-bao-bi-bang-go-1623"
+  },
+  {
+    "code": "9000",
+    "name": "Hoạt động sáng tác, nghệ thuật và giải trí",
+    "slug": "hoat-dong-sang-tac-nghe-thuat-va-giai-tri-9000"
+  },
+  {
+    "code": "4763",
+    "name": "Bán lẻ thiết bị, dụng cụ thể dục, thể thao trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-thiet-bi-dung-cu-the-duc-the-thao-trong-cac-cua-hang-chuyen-doanh-4763"
+  },
+  {
+    "code": "5320",
+    "name": "Chuyển phát",
+    "slug": "chuyen-phat-5320"
+  },
+  {
+    "code": "5224",
+    "name": "Bốc xếp hàng hóa",
+    "slug": "boc-xep-hang-hoa-5224"
+  },
+  {
+    "code": "9524",
+    "name": "Sửa chữa giường, tủ, bàn, ghế và đồ nội thất tương tự",
+    "slug": "sua-chua-giuong-tu-ban-ghe-va-do-noi-that-tuong-tu-9524"
+  },
+  {
+    "code": "3700",
+    "name": "Thoát nước và xử lý nước thải",
+    "slug": "thoat-nuoc-va-xu-ly-nuoc-thai-3700"
+  },
+  {
+    "code": "2670",
+    "name": "Sản xuất thiết bị và dụng cụ quang học",
+    "slug": "san-xuat-thiet-bi-va-dung-cu-quang-hoc-2670"
+  },
+  {
+    "code": "2720",
+    "name": "Sản xuất pin và ắc quy",
+    "slug": "san-xuat-pin-va-ac-quy-2720"
+  },
+  {
+    "code": "3900",
+    "name": "Xử lý ô nhiễm và hoạt động quản lý chất thải khác",
+    "slug": "xu-ly-o-nhiem-va-hoat-dong-quan-ly-chat-thai-khac-3900"
+  },
+  {
+    "code": "7920",
+    "name": "Dịch vụ hỗ trợ liên quan đến quảng bá và tổ chức tua du lịch",
+    "slug": "dich-vu-ho-tro-lien-quan-den-quang-ba-va-to-chuc-tua-du-lich-7920"
+  },
+  {
+    "code": "0710",
+    "name": "Khai thác quặng sắt",
+    "slug": "khai-thac-quang-sat-0710"
+  },
+  {
+    "code": "0892",
+    "name": "Khai thác và thu gom than bùn",
+    "slug": "khai-thac-va-thu-gom-than-bun-0892"
+  },
+  {
+    "code": "0891",
+    "name": "Khai thác khoáng hoá chất và khoáng phân bón",
+    "slug": "khai-thac-khoang-hoa-chat-va-khoang-phan-bon-0891"
+  },
+  {
+    "code": "5222",
+    "name": "Hoạt động dịch vụ hỗ trợ trực tiếp cho vận tải đường thủy",
+    "slug": "hoat-dong-dich-vu-ho-tro-truc-tiep-cho-van-tai-duong-thuy-5222"
+  },
+  {
+    "code": "6492",
+    "name": "Hoạt động cấp tín dụng khác",
+    "slug": "hoat-dong-cap-tin-dung-khac-6492"
+  },
+  {
+    "code": "0149",
+    "name": "Chăn nuôi khác",
+    "slug": "chan-nuoi-khac-0149"
+  },
+  {
+    "code": "5221",
+    "name": "Hoạt động dịch vụ hỗ trợ trực tiếp cho vận tải đường sắt và đường bộ",
+    "slug": "hoat-dong-dich-vu-ho-tro-truc-tiep-cho-van-tai-duong-sat-va-duong-bo-5221"
+  },
+  {
+    "code": "5012",
+    "name": "Vận tải hàng hóa ven biển và viễn dương",
+    "slug": "van-tai-hang-hoa-ven-bien-va-vien-duong-5012"
+  },
+  {
+    "code": "4299",
+    "name": "Xây dựng công trình kỹ thuật dân dụng khác",
+    "slug": "xay-dung-cong-trinh-ky-thuat-dan-dung-khac-4299"
+  },
+  {
+    "code": "5225",
+    "name": "Hoạt động dịch vụ hỗ trợ trực tiếp cho vận tải đường bộ",
+    "slug": "hoat-dong-dich-vu-ho-tro-truc-tiep-cho-van-tai-duong-bo-5225"
+  },
+  {
+    "code": "0990",
+    "name": "Hoạt động dịch vụ hỗ trợ khai thác mỏ và quặng khác",
+    "slug": "hoat-dong-dich-vu-ho-tro-khai-thac-mo-va-quang-khac-0990"
+  },
+  {
+    "code": "1910",
+    "name": "Sản xuất than cốc",
+    "slug": "san-xuat-than-coc-1910"
+  },
+  {
+    "code": "0910",
+    "name": "Hoạt động dịch vụ hỗ trợ khai thác dầu thô và khí tự nhiên",
+    "slug": "hoat-dong-dich-vu-ho-tro-khai-thac-dau-tho-va-khi-tu-nhien-0910"
+  },
+  {
+    "code": "5011",
+    "name": "Vận tải hành khách ven biển và viễn dương",
+    "slug": "van-tai-hanh-khach-ven-bien-va-vien-duong-5011"
+  },
+  {
+    "code": "2910",
+    "name": "Sản xuất xe có động cơ",
+    "slug": "san-xuat-xe-co-dong-co-2910"
+  },
+  {
+    "code": "6311",
+    "name": "Xử lý dữ liệu, cho thuê và các hoạt động liên quan",
+    "slug": "xu-ly-du-lieu-cho-thue-va-cac-hoat-dong-lien-quan-6311"
+  },
+  {
+    "code": "6329",
+    "name": "Dịch vụ thông tin khác chưa được phân vào đâu",
+    "slug": "dich-vu-thong-tin-khac-chua-duoc-phan-vao-dau-6329"
+  },
+  {
+    "code": "4762",
+    "name": "Bán lẻ băng đĩa âm thanh, hình ảnh (kể cả băng, đĩa trắng) trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-bang-dia-am-thanh-hinh-anh-ke-ca-bang-dia-trang-trong-cac-cua-hang-chuyen-doanh-4762"
+  },
+  {
+    "code": "3099",
+    "name": "Sản xuất phương tiện và thiết bị vận tải khác chưa được phân vào đâu",
+    "slug": "san-xuat-phuong-tien-va-thiet-bi-van-tai-khac-chua-duoc-phan-vao-dau-3099"
+  },
+  {
+    "code": "3092",
+    "name": "Sản xuất xe đạp và xe cho người tàn tật",
+    "slug": "san-xuat-xe-dap-va-xe-cho-nguoi-tan-tat-3092"
+  },
+  {
+    "code": "3091",
+    "name": "Sản xuất mô tô, xe máy",
+    "slug": "san-xuat-mo-to-xe-may-3091"
+  },
+  {
+    "code": "3822",
+    "name": "Xử lý và tiêu huỷ rác thải độc hại",
+    "slug": "xu-ly-va-tieu-huy-rac-thai-doc-hai-3822"
+  },
+  {
+    "code": "3811",
+    "name": "Thu gom rác thải không độc hại",
+    "slug": "thu-gom-rac-thai-khong-doc-hai-3811"
+  },
+  {
+    "code": "3812",
+    "name": "Thu gom rác thải độc hại",
+    "slug": "thu-gom-rac-thai-doc-hai-3812"
+  },
+  {
+    "code": "3821",
+    "name": "Xử lý và tiêu huỷ rác thải không độc hại",
+    "slug": "xu-ly-va-tieu-huy-rac-thai-khong-doc-hai-3821"
+  },
+  {
+    "code": "8510",
+    "name": "Giáo dục mầm non",
+    "slug": "giao-duc-mam-non-8510"
+  },
+  {
+    "code": "8520",
+    "name": "Giáo dục tiểu học",
+    "slug": "giao-duc-tieu-hoc-8520"
+  },
+  {
+    "code": "8531",
+    "name": "Đào tạo sơ cấp",
+    "slug": "giao-duc-trung-hoc-co-so-va-trung-hoc-pho-thong-8531"
+  },
+  {
+    "code": "8542",
+    "name": "Đào tạo thạc sỹ",
+    "slug": "dao-tao-dai-hoc-va-sau-dai-hoc-8542"
+  },
+  {
+    "code": "8551",
+    "name": "Giáo dục thể thao và giải trí",
+    "slug": "giao-duc-the-thao-va-giai-tri-8551"
+  },
+  {
+    "code": "8552",
+    "name": "Giáo dục văn hoá nghệ thuật",
+    "slug": "giao-duc-van-hoa-nghe-thuat-8552"
+  },
+  {
+    "code": "9101",
+    "name": "Hoạt động thư viện và lưu trữ",
+    "slug": "hoat-dong-thu-vien-va-luu-tru-9101"
+  },
+  {
+    "code": "8211",
+    "name": "Dịch vụ hành chính văn phòng tổng hợp",
+    "slug": "dich-vu-hanh-chinh-van-phong-tong-hop-8211"
+  },
+  {
+    "code": "8110",
+    "name": "Dịch vụ hỗ trợ tổng hợp",
+    "slug": "dich-vu-ho-tro-tong-hop-8110"
+  },
+  {
+    "code": "1020",
+    "name": "Chế biến, bảo quản thuỷ sản và các sản phẩm từ thuỷ sản",
+    "slug": "che-bien-bao-quan-thuy-san-va-cac-san-pham-tu-thuy-san-1020"
+  },
+  {
+    "code": "3830",
+    "name": "Tái chế phế liệu",
+    "slug": "tai-che-phe-lieu-3830"
+  },
+  {
+    "code": "5820",
+    "name": "Xuất bản phần mềm",
+    "slug": "xuat-ban-phan-mem-5820"
+  },
+  {
+    "code": "3311",
+    "name": "Sửa chữa các sản phẩm kim loại đúc sẵn",
+    "slug": "sua-chua-cac-san-pham-kim-loai-duc-san-3311"
+  },
+  {
+    "code": "1311",
+    "name": "Sản xuất sợi",
+    "slug": "san-xuat-soi-1311"
+  },
+  {
+    "code": "1313",
+    "name": "Hoàn thiện sản phẩm dệt",
+    "slug": "hoan-thien-san-pham-det-1313"
+  },
+  {
+    "code": "1312",
+    "name": "Sản xuất vải dệt thoi",
+    "slug": "san-xuat-vai-det-thoi-1312"
+  },
+  {
+    "code": "1321",
+    "name": "Sản xuất vải dệt kim, vải đan móc và vải không dệt khác",
+    "slug": "san-xuat-vai-det-kim-vai-dan-moc-va-vai-khong-det-khac-1321"
+  },
+  {
+    "code": "3319",
+    "name": "Sửa chữa thiết bị khác",
+    "slug": "sua-chua-thiet-bi-khac-3319"
+  },
+  {
+    "code": "6110",
+    "name": "Hoạt động viễn thông có dây",
+    "slug": "hoat-dong-vien-thong-co-day-6110"
+  },
+  {
+    "code": "6120",
+    "name": "Hoạt động viễn thông không dây",
+    "slug": "hoat-dong-vien-thong-khong-day-6120"
+  },
+  {
+    "code": "9521",
+    "name": "Sửa chữa thiết bị nghe nhìn điện tử gia dụng",
+    "slug": "sua-chua-thiet-bi-nghe-nhin-dien-tu-gia-dung-9521"
+  },
+  {
+    "code": "5911",
+    "name": "Hoạt động sản xuất phim điện ảnh, phim video và chương trình truyền hình",
+    "slug": "hoat-dong-san-xuat-phim-dien-anh-phim-video-va-chuong-trinh-truyen-hinh-5911"
+  },
+  {
+    "code": "5310",
+    "name": "Bưu chính",
+    "slug": "buu-chinh-5310"
+  },
+  {
+    "code": "5912",
+    "name": "Hoạt động hậu kỳ",
+    "slug": "hoat-dong-hau-ky-5912"
+  },
+  {
+    "code": "7721",
+    "name": "Cho thuê thiết bị thể thao, vui chơi giải trí",
+    "slug": "cho-thue-thiet-bi-the-thao-vui-choi-giai-tri-7721"
+  },
+  {
+    "code": "7722",
+    "name": "Cho thuê băng, đĩa video",
+    "slug": "cho-thue-bang-dia-video-7722"
+  },
+  {
+    "code": "7420",
+    "name": "Hoạt động nhiếp ảnh",
+    "slug": "hoat-dong-nhiep-anh-7420"
+  },
+  {
+    "code": "2591",
+    "name": "Rèn, dập, ép và cán kim loại; luyện bột kim loại",
+    "slug": "ren-dap-ep-va-can-kim-loai-luyen-bot-kim-loai-2591"
+  },
+  {
+    "code": "0240",
+    "name": "Hoạt động dịch vụ lâm nghiệp",
+    "slug": "hoat-dong-dich-vu-lam-nghiep-0240"
+  },
+  {
+    "code": "2513",
+    "name": "Sản xuất nồi hơi (trừ nồi hơi trung tâm)",
+    "slug": "san-xuat-noi-hoi-tru-noi-hoi-trung-tam-2513"
+  },
+  {
+    "code": "9620",
+    "name": "Giặt là, làm sạch các sản phẩm dệt và lông thú",
+    "slug": "giat-la-lam-sach-cac-san-pham-det-va-long-thu-9620"
+  },
+  {
+    "code": "1010",
+    "name": "Chế biến, bảo quản thịt và các sản phẩm từ thịt",
+    "slug": "che-bien-bao-quan-thit-va-cac-san-pham-tu-thit-1010"
+  },
+  {
+    "code": "1702",
+    "name": "Sản xuất giấy nhăn, bìa nhăn, bao bì từ giấy và bìa",
+    "slug": "san-xuat-giay-nhan-bia-nhan-bao-bi-tu-giay-va-bia-1702"
+  },
+  {
+    "code": "7740",
+    "name": "Cho thuê tài sản vô hình phi tài chính",
+    "slug": "cho-thue-tai-san-vo-hinh-phi-tai-chinh-7740"
+  },
+  {
+    "code": "8020",
+    "name": "Dịch vụ hệ thống bảo đảm an toàn",
+    "slug": "dich-vu-he-thong-bao-dam-an-toan-8020"
+  },
+  {
+    "code": "3510",
+    "name": "Sản xuất, truyền tải và phân phối điện",
+    "slug": "san-xuat-truyen-tai-va-phan-phoi-dien-3510"
+  },
+  {
+    "code": "1030",
+    "name": "Chế biến và bảo quản rau quả",
+    "slug": "che-bien-va-bao-quan-rau-qua-1030"
+  },
+  {
+    "code": "6920",
+    "name": "Hoạt động liên quan đến kế toán, kiểm toán và tư vấn về thuế",
+    "slug": "hoat-dong-lien-quan-den-ke-toan-kiem-toan-va-tu-van-ve-thue-6920"
+  },
+  {
+    "code": "9522",
+    "name": "Sửa chữa thiết bị, đồ dùng gia đình",
+    "slug": "sua-chua-thiet-bi-do-dung-gia-dinh-9522"
+  },
+  {
+    "code": "4782",
+    "name": "Bán lẻ hàng dệt, may sẵn, giày dép lưu động hoặc tại chợ",
+    "slug": "ban-le-hang-det-may-san-giay-dep-luu-dong-hoac-tai-cho-4782"
+  },
+  {
+    "code": "0722",
+    "name": "Khai thác quặng kim loại khác không chứa sắt",
+    "slug": "khai-thac-quang-kim-loai-khac-khong-chua-sat-0722"
+  },
+  {
+    "code": "4751",
+    "name": "Bán lẻ vải, len, sợi, chỉ khâu và hàng dệt khác trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-vai-len-soi-chi-khau-va-hang-det-khac-trong-cac-cua-hang-chuyen-doanh-4751"
+  },
+  {
+    "code": "0510",
+    "name": "Khai thác và thu gom than cứng",
+    "slug": "khai-thac-va-thu-gom-than-cung-0510"
+  },
+  {
+    "code": "0520",
+    "name": "Khai thác và thu gom than non",
+    "slug": "khai-thac-va-thu-gom-than-non-0520"
+  },
+  {
+    "code": "9311",
+    "name": "Hoạt động của các cơ sở thể thao",
+    "slug": "hoat-dong-cua-cac-co-so-the-thao-9311"
+  },
+  {
+    "code": "0730",
+    "name": "Khai thác quặng kim loại quí hiếm",
+    "slug": "khai-thac-quang-kim-loai-qui-hiem-0730"
+  },
+  {
+    "code": "9312",
+    "name": "Hoạt động của các câu lạc bộ thể thao",
+    "slug": "hoat-dong-cua-cac-cau-lac-bo-the-thao-9312"
+  },
+  {
+    "code": "9321",
+    "name": "Hoạt động của các công viên vui chơi và công viên theo chủ đề",
+    "slug": "hoat-dong-cua-cac-cong-vien-vui-choi-va-cong-vien-theo-chu-de-9321"
+  },
+  {
+    "code": "7820",
+    "name": "Cung ứng lao động tạm thời",
+    "slug": "cung-ung-lao-dong-tam-thoi-7820"
+  },
+  {
+    "code": "9700",
+    "name": "Hoạt động làm thuê công việc gia đình trong các hộ gia đình",
+    "slug": "hoat-dong-lam-thue-cong-viec-gia-dinh-trong-cac-ho-gia-dinh-9700"
+  },
+  {
+    "code": "1709",
+    "name": "Sản xuất các sản phẩm khác từ giấy và bìa chưa được phân vào đâu",
+    "slug": "san-xuat-cac-san-pham-khac-tu-giay-va-bia-chua-duoc-phan-vao-dau-1709"
+  },
+  {
+    "code": "9512",
+    "name": "Sửa chữa thiết bị liên lạc",
+    "slug": "sua-chua-thiet-bi-lien-lac-9512"
+  },
+  {
+    "code": "2812",
+    "name": "Sản xuất thiết bị sử dụng năng lượng chiết lưu",
+    "slug": "san-xuat-thiet-bi-su-dung-nang-luong-chiet-luu-2812"
+  },
+  {
+    "code": "4799",
+    "name": "Bán lẻ hình thức khác chưa được phân vào đâu",
+    "slug": "ban-le-hinh-thuc-khac-chua-duoc-phan-vao-dau-4799"
+  },
+  {
+    "code": "1061",
+    "name": "Xay xát và sản xuất bột thô",
+    "slug": "xay-xat-va-san-xuat-bot-tho-1061"
+  },
+  {
+    "code": "7210",
+    "name": "Nghiên cứu và phát triển thực nghiệm khoa học tự nhiên và kỹ thuật",
+    "slug": "nghien-cuu-va-phat-trien-thuc-nghiem-khoa-hoc-tu-nhien-va-ky-thuat-7210"
+  },
+  {
+    "code": "8130",
+    "name": "Dịch vụ chăm sóc và duy trì cảnh quan",
+    "slug": "dich-vu-cham-soc-va-duy-tri-canh-quan-8130"
+  },
+  {
+    "code": "8541",
+    "name": "Đào tạo đại học",
+    "slug": "dao-tao-cao-dang-8541"
+  },
+  {
+    "code": "1329",
+    "name": "Sản xuất các loại hàng dệt khác chưa được phân vào đâu",
+    "slug": "san-xuat-cac-loai-hang-det-khac-chua-duoc-phan-vao-dau-1329"
+  },
+  {
+    "code": "0141",
+    "name": "Chăn nuôi trâu, bò",
+    "slug": "chan-nuoi-trau-bo-0141"
+  },
+  {
+    "code": "0144",
+    "name": "Chăn nuôi dê, cừu",
+    "slug": "chan-nuoi-de-cuu-0144"
+  },
+  {
+    "code": "4920",
+    "name": "Vận tải bằng xe buýt",
+    "slug": "van-tai-bang-xe-buyt-4920"
+  },
+  {
+    "code": "0322",
+    "name": "Nuôi trồng thuỷ sản nội địa",
+    "slug": "nuoi-trong-thuy-san-noi-dia-0322"
+  },
+  {
+    "code": "0321",
+    "name": "Nuôi trồng thuỷ sản biển",
+    "slug": "nuoi-trong-thuy-san-bien-0321"
+  },
+  {
+    "code": "0311",
+    "name": "Khai thác thuỷ sản biển",
+    "slug": "khai-thac-thuy-san-bien-0311"
+  },
+  {
+    "code": "2811",
+    "name": "Sản xuất động cơ, tua bin (trừ động cơ máy bay, ô tô, mô tô và xe máy)",
+    "slug": "san-xuat-dong-co-tua-bin-tru-dong-co-may-bay-o-to-mo-to-va-xe-may-2811"
+  },
+  {
+    "code": "3012",
+    "name": "Đóng thuyền, xuồng thể thao và giải trí",
+    "slug": "dong-thuyen-xuong-the-thao-va-giai-tri-3012"
+  },
+  {
+    "code": "2825",
+    "name": "Sản xuất máy chế biến thực phẩm, đồ uống và thuốc lá",
+    "slug": "san-xuat-may-che-bien-thuc-pham-do-uong-va-thuoc-la-2825"
+  },
+  {
+    "code": "2826",
+    "name": "Sản xuất máy cho ngành dệt, may và da",
+    "slug": "san-xuat-may-cho-nganh-det-may-va-da-2826"
+  },
+  {
+    "code": "3011",
+    "name": "Đóng tàu và cấu kiện nổi",
+    "slug": "dong-tau-va-cau-kien-noi-3011"
+  },
+  {
+    "code": "3230",
+    "name": "Sản xuất dụng cụ thể dục, thể thao",
+    "slug": "san-xuat-dung-cu-the-duc-the-thao-3230"
+  },
+  {
+    "code": "5914",
+    "name": "Hoạt động chiếu phim",
+    "slug": "hoat-dong-chieu-phim-5914"
+  },
+  {
+    "code": "0119",
+    "name": "Trồng cây hàng năm khác",
+    "slug": "trong-cay-hang-nam-khac-0119"
+  },
+  {
+    "code": "0130",
+    "name": "Nhân và chăm sóc cây giống nông nghiệp",
+    "slug": "nhan-va-cham-soc-cay-giong-nong-nghiep-0130"
+  },
+  {
+    "code": "0142",
+    "name": "Chăn nuôi ngựa, lừa, la",
+    "slug": "chan-nuoi-ngua-lua-la-0142"
+  },
+  {
+    "code": "0162",
+    "name": "Hoạt động dịch vụ chăn nuôi",
+    "slug": "hoat-dong-dich-vu-chan-nuoi-0162"
+  },
+  {
+    "code": "0164",
+    "name": "Xử lý hạt giống để nhân giống",
+    "slug": "xu-ly-hat-giong-de-nhan-giong-0164"
+  },
+  {
+    "code": "0117",
+    "name": "Trồng cây có hạt chứa dầu",
+    "slug": "trong-cay-co-hat-chua-dau-0117"
+  },
+  {
+    "code": "4101",
+    "name": "Xây dựng nhà để ở",
+    "slug": "xay-dung-nha-de-o-4101"
+  },
+  {
+    "code": "4229",
+    "name": "Xây dựng công trình công ích khác",
+    "slug": "xay-dung-cong-trinh-cong-ich-khac-4229"
+  },
+  {
+    "code": "4212",
+    "name": "Xây dựng công trình đường bộ",
+    "slug": "xay-dung-cong-trinh-duong-bo-4212"
+  },
+  {
+    "code": "4223",
+    "name": "Xây dựng công trình viễn thông, thông tin liên lạc",
+    "slug": "xay-dung-cong-trinh-vien-thong-thong-tin-lien-lac-4223"
+  },
+  {
+    "code": "4102",
+    "name": "Xây dựng nhà không để ở",
+    "slug": "xay-dung-nha-khong-de-o-4102"
+  },
+  {
+    "code": "4211",
+    "name": "Xây dựng công trình đường sắt",
+    "slug": "xay-dung-cong-trinh-duong-sat-4211"
+  },
+  {
+    "code": "4221",
+    "name": "Xây dựng công trình điện",
+    "slug": "xay-dung-cong-trinh-dien-4221"
+  },
+  {
+    "code": "4222",
+    "name": "Xây dựng công trình cấp, thoát nước",
+    "slug": "xay-dung-cong-trinh-cap-thoat-nuoc-4222"
+  },
+  {
+    "code": "1820",
+    "name": "Sao chép bản ghi các loại",
+    "slug": "sao-chep-ban-ghi-cac-loai-1820"
+  },
+  {
+    "code": "5920",
+    "name": "Hoạt động ghi âm và xuất bản âm nhạc",
+    "slug": "hoat-dong-ghi-am-va-xuat-ban-am-nhac-5920"
+  },
+  {
+    "code": "3250",
+    "name": "Sản xuất thiết bị, dụng cụ y tế, nha khoa, chỉnh hình và phục hồi chức năng",
+    "slug": "san-xuat-thiet-bi-dung-cu-y-te-nha-khoa-chinh-hinh-va-phuc-hoi-chuc-nang-3250"
+  },
+  {
+    "code": "3530",
+    "name": "Sản xuất, phân phối hơi nước, nước nóng, điều hoà không khí và sản xuất nước đá",
+    "slug": "san-xuat-phan-phoi-hoi-nuoc-nuoc-nong-dieu-hoa-khong-khi-va-san-xuat-nuoc-da-3530"
+  },
+  {
+    "code": "1075",
+    "name": "Sản xuất món ăn, thức ăn chế biến sẵn",
+    "slug": "san-xuat-mon-an-thuc-an-che-bien-san-1075"
+  },
+  {
+    "code": "9319",
+    "name": "Hoạt động thể thao khác",
+    "slug": "hoat-dong-the-thao-khac-9319"
+  },
+  {
+    "code": "8710",
+    "name": "Hoạt động của các cơ sở nuôi dưỡng, điều dưỡng",
+    "slug": "hoat-dong-cua-cac-co-so-nuoi-duong-dieu-duong-8710"
+  },
+  {
+    "code": "0620",
+    "name": "Khai thác khí đốt tự nhiên",
+    "slug": "khai-thac-khi-dot-tu-nhien-0620"
+  },
+  {
+    "code": "55101",
+    "name": "Khách sạn",
+    "slug": "khach-san-55101"
+  },
+  {
+    "code": "56101",
+    "name": "Nhà hàng, quán ăn, hàng ăn uống",
+    "slug": "nha-hang-quan-an-hang-an-uong-56101"
+  },
+  {
+    "code": "47524",
+    "name": "Bán lẻ xi măng, gạch xây, ngói, đá, cát sỏi và vật liệu xây dựng khác trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-xi-mang-gach-xay-ngoi-da-cat-soi-va-vat-lieu-xay-dung-khac-trong-cac-cua-hang-chuyen-doanh-47524"
+  },
+  {
+    "code": "08102",
+    "name": "Khai thác cát, sỏi",
+    "slug": "khai-thac-cat-soi-08102"
+  },
+  {
+    "code": "1324",
+    "name": "Sản xuất các loại dây bện và lưới",
+    "slug": "san-xuat-cac-loai-day-ben-va-luoi-1324"
+  },
+  {
+    "code": "5120",
+    "name": "Vận tải hàng hóa hàng không",
+    "slug": "van-tai-hang-hoa-hang-khong-5120"
+  },
+  {
+    "code": "1520",
+    "name": "Sản xuất giày dép",
+    "slug": "san-xuat-giay-dep-1520"
+  },
+  {
+    "code": "1512",
+    "name": "Sản xuất vali, túi xách và các loại tương tự, sản xuất yên đệm",
+    "slug": "san-xuat-vali-tui-xach-va-cac-loai-tuong-tu-san-xuat-yen-dem-1512"
+  },
+  {
+    "code": "2012",
+    "name": "Sản xuất phân bón và hợp chất ni tơ",
+    "slug": "san-xuat-phan-bon-va-hop-chat-ni-to-2012"
+  },
+  {
+    "code": "1062",
+    "name": "Sản xuất tinh bột và các sản phẩm từ tinh bột",
+    "slug": "san-xuat-tinh-bot-va-cac-san-pham-tu-tinh-bot-1062"
+  },
+  {
+    "code": "0323",
+    "name": "Sản xuất giống thuỷ sản",
+    "slug": "san-xuat-giong-thuy-san-0323"
+  },
+  {
+    "code": "4293",
+    "name": "Xây dựng công trình chế biến, chế tạo",
+    "slug": "xay-dung-cong-trinh-che-bien-che-tao-4293"
+  },
+  {
+    "code": "4291",
+    "name": "Xây dựng công trình thủy",
+    "slug": "xay-dung-cong-trinh-thuy-4291"
+  },
+  {
+    "code": "4292",
+    "name": "Xây dựng công trình khai khoáng",
+    "slug": "xay-dung-cong-trinh-khai-khoang-4292"
+  },
+  {
+    "code": "8512",
+    "name": "Giáo dục mẫu giáo",
+    "slug": "giao-duc-mau-giao-8512"
+  },
+  {
+    "code": "8511",
+    "name": "Giáo dục nhà trẻ",
+    "slug": "giao-duc-nha-tre-8511"
+  },
+  {
+    "code": "8220",
+    "name": "Hoạt động dịch vụ liên quan đến các cuộc gọi",
+    "slug": "hoat-dong-dich-vu-lien-quan-den-cac-cuoc-goi-8220"
+  },
+  {
+    "code": "02101",
+    "name": "Ươm giống cây lâm nghiệp",
+    "slug": "uom-giong-cay-lam-nghiep-02101"
+  },
+  {
+    "code": "02102",
+    "name": "Trồng rừng và chăm sóc rừng lấy gỗ",
+    "slug": "trong-rung-va-cham-soc-rung-lay-go-02102"
+  },
+  {
+    "code": "96100",
+    "name": "Dịch vụ tắm hơi, massage và các dịch vụ tăng cường sức khoẻ tương tự (trừ hoạt động thể thao)",
+    "slug": "dich-vu-tam-hoi-massage-va-cac-dich-vu-tang-cuong-suc-khoe-tuong-tu-tru-hoat-dong-the-thao-96100"
+  },
+  {
+    "code": "46595",
+    "name": "Bán buôn máy móc, thiết bị y tế",
+    "slug": "ban-buon-may-moc-thiet-bi-y-te-46595"
+  },
+  {
+    "code": "5590",
+    "name": "Cơ sở lưu trú khác",
+    "slug": "co-so-luu-tru-khac-5590"
+  },
+  {
+    "code": "9633",
+    "name": "Hoạt động dịch vụ phục vụ hôn lễ",
+    "slug": "hoat-dong-dich-vu-phuc-vu-hon-le-9633"
+  },
+  {
+    "code": "2021",
+    "name": "Sản xuất thuốc trừ sâu và sản phẩm hoá chất khác dùng trong nông nghiệp",
+    "slug": "san-xuat-thuoc-tru-sau-va-san-pham-hoa-chat-khac-dung-trong-nong-nghiep-2021"
+  },
+  {
+    "code": "8533",
+    "name": "Đào tạo cao đẳng",
+    "slug": "dao-tao-cao-dang-8533"
+  },
+  {
+    "code": "9529",
+    "name": "Sửa chữa đồ dùng cá nhân và gia đình khác",
+    "slug": "sua-chua-do-dung-ca-nhan-va-gia-dinh-khac-9529"
+  },
+  {
+    "code": "8620",
+    "name": "Hoạt động của các phòng khám đa khoa, chuyên khoa và nha khoa",
+    "slug": "hoat-dong-cua-cac-phong-kham-da-khoa-chuyen-khoa-va-nha-khoa-8620"
+  },
+  {
+    "code": "8790",
+    "name": "Hoạt động chăm sóc tập trung khác",
+    "slug": "hoat-dong-cham-soc-tap-trung-khac-8790"
+  },
+  {
+    "code": "0312",
+    "name": "Khai thác thuỷ sản nội địa",
+    "slug": "khai-thac-thuy-san-noi-dia-0312"
+  },
+  {
+    "code": "7729",
+    "name": "Cho thuê đồ dùng cá nhân và gia đình khác",
+    "slug": "cho-thue-do-dung-ca-nhan-va-gia-dinh-khac-7729"
+  },
+  {
+    "code": "2920",
+    "name": "Sản xuất thân xe có động cơ, rơ moóc và bán rơ moóc",
+    "slug": "san-xuat-than-xe-co-dong-co-ro-mooc-va-ban-ro-mooc-2920"
+  },
+  {
+    "code": "1072",
+    "name": "Sản xuất đường",
+    "slug": "san-xuat-duong-1072"
+  },
+  {
+    "code": "46322",
+    "name": "Bán buôn thủy sản",
+    "slug": "ban-buon-thuy-san-46322"
+  },
+  {
+    "code": "0230",
+    "name": "Thu nhặt sản phẩm từ rừng không phải gỗ và lâm sản khác",
+    "slug": "thu-nhat-san-pham-tu-rung-khong-phai-go-va-lam-san-khac-0230"
+  },
+  {
+    "code": "50121",
+    "name": "Vận tải hàng hóa ven biển",
+    "slug": "van-tai-hang-hoa-ven-bien-50121"
+  },
+  {
+    "code": "46613",
+    "name": "Bán buôn xăng dầu và các sản phẩm liên quan",
+    "slug": "ban-buon-xang-dau-va-cac-san-pham-lien-quan-46613"
+  },
+  {
+    "code": "46633",
+    "name": "Bán buôn gạch xây, ngói, đá, cát, sỏi",
+    "slug": "ban-buon-gach-xay-ngoi-da-cat-soi-46633"
+  },
+  {
+    "code": "55103",
+    "name": "Nhà khách, nhà nghỉ kinh doanh dịch vụ lưu trú ngắn ngày",
+    "slug": "nha-khach-nha-nghi-kinh-doanh-dich-vu-luu-tru-ngan-ngay-55103"
+  },
+  {
+    "code": "46614",
+    "name": "Bán buôn khí đốt và các sản phẩm liên quan",
+    "slug": "ban-buon-khi-dot-va-cac-san-pham-lien-quan-46614"
+  },
+  {
+    "code": "56301",
+    "name": "Quán rượu, bia, quầy bar",
+    "slug": "quan-ruou-bia-quay-bar-56301"
+  },
+  {
+    "code": "6130",
+    "name": "Hoạt động viễn thông vệ tinh",
+    "slug": "hoat-dong-vien-thong-ve-tinh-6130"
+  },
+  {
+    "code": "46495",
+    "name": "Bán buôn đồ điện gia dụng, đèn và bộ đèn điện",
+    "slug": "ban-buon-do-dien-gia-dung-den-va-bo-den-dien-46495"
+  },
+  {
+    "code": "46592",
+    "name": "Bán buôn máy móc, thiết bị điện, vật liệu điện (máy phát điện, động cơ điện, dây điện và thiết bị khác dùng trong mạch điện)",
+    "slug": "ban-buon-may-moc-thiet-bi-dien-vat-lieu-dien-may-phat-dien-dong-co-dien-day-dien-va-thiet-bi-khac-dung-trong-mach-dien-46592"
+  },
+  {
+    "code": "46591",
+    "name": "Bán buôn máy móc, thiết bị và phụ tùng máy khai khoáng, xây dựng",
+    "slug": "ban-buon-may-moc-thiet-bi-va-phu-tung-may-khai-khoang-xay-dung-46591"
+  },
+  {
+    "code": "77302",
+    "name": "Cho thuê máy móc, thiết bị xây dựng",
+    "slug": "cho-thue-may-moc-thiet-bi-xay-dung-77302"
+  },
+  {
+    "code": "1920",
+    "name": "Sản xuất sản phẩm dầu mỏ tinh chế",
+    "slug": "san-xuat-san-pham-dau-mo-tinh-che-1920"
+  },
+  {
+    "code": "6622",
+    "name": "Hoạt động của đại lý và môi giới bảo hiểm",
+    "slug": "hoat-dong-cua-dai-ly-va-moi-gioi-bao-hiem-6622"
+  },
+  {
+    "code": "8010",
+    "name": "Hoạt động bảo vệ cá nhân",
+    "slug": "hoat-dong-bao-ve-ca-nhan-8010"
+  },
+  {
+    "code": "0131",
+    "name": "Nhân và chăm sóc cây giống hàng năm",
+    "slug": "nhan-va-cham-soc-cay-giong-hang-nam-0131"
+  },
+  {
+    "code": "0132",
+    "name": "Nhân và chăm sóc cây giống lâu năm",
+    "slug": "nhan-va-cham-soc-cay-giong-lau-nam-0132"
+  },
+  {
+    "code": "8521",
+    "name": "Giáo dục tiểu học",
+    "slug": "giao-duc-tieu-hoc-8521"
+  },
+  {
+    "code": "8522",
+    "name": "Giáo dục trung học cơ sở",
+    "slug": "giao-duc-trung-hoc-co-so-8522"
+  },
+  {
+    "code": "8523",
+    "name": "Giáo dục trung học phổ thông",
+    "slug": "giao-duc-trung-hoc-pho-thong-8523"
+  },
+  {
+    "code": "8730",
+    "name": "Hoạt động chăm sóc sức khoẻ người có công, người già và người khuyết tật không có khả năng tự chăm sóc",
+    "slug": "hoat-dong-cham-soc-suc-khoe-nguoi-co-cong-nguoi-gia-va-nguoi-khuyet-tat-khong-co-kha-nang-tu-cham-soc-8730"
+  },
+  {
+    "code": "2652",
+    "name": "Sản xuất đồng hồ",
+    "slug": "san-xuat-dong-ho-2652"
+  },
+  {
+    "code": "8890",
+    "name": "Hoạt động trợ giúp xã hội không tập trung khác",
+    "slug": "hoat-dong-tro-giup-xa-hoi-khong-tap-trung-khac-8890"
+  },
+  {
+    "code": "6499",
+    "name": "Hoạt động dịch vụ tài chính khác chưa được phân vào đâu (trừ bảo hiểm và bảo hiểm xã hội)",
+    "slug": "hoat-dong-dich-vu-tai-chinh-khac-chua-duoc-phan-vao-dau-tru-bao-hiem-va-bao-hiem-xa-hoi-6499"
+  },
+  {
+    "code": "6512",
+    "name": "Bảo hiểm phi nhân thọ",
+    "slug": "bao-hiem-phi-nhan-tho-6512"
+  },
+  {
+    "code": "6511",
+    "name": "Bảo hiểm nhân thọ",
+    "slug": "bao-hiem-nhan-tho-6511"
+  },
+  {
+    "code": "5223",
+    "name": "Hoạt động dịch vụ hỗ trợ trực tiếp cho vận tải hàng không",
+    "slug": "hoat-dong-dich-vu-ho-tro-truc-tiep-cho-van-tai-hang-khong-5223"
+  },
+  {
+    "code": "5110",
+    "name": "Vận tải hành khách hàng không",
+    "slug": "van-tai-hanh-khach-hang-khong-5110"
+  },
+  {
+    "code": "46691",
+    "name": "Bán buôn phân bón, thuốc trừ sâu và hóa chất khác sử dụng trong nông nghiệp",
+    "slug": "ban-buon-phan-bon-thuoc-tru-sau-va-hoa-chat-khac-su-dung-trong-nong-nghiep-46691"
+  },
+  {
+    "code": "43221",
+    "name": "Lắp đặt hệ thống cấp, thoát nước",
+    "slug": "lap-dat-he-thong-cap-thoat-nuoc-43221"
+  },
+  {
+    "code": "28160",
+    "name": "Sản xuất các thiết bị nâng, hạ và bốc xếp",
+    "slug": "san-xuat-cac-thiet-bi-nang-ha-va-boc-xep-28160"
+  },
+  {
+    "code": "2100",
+    "name": "Sản xuất thuốc, hoá dược và dược liệu",
+    "slug": "san-xuat-thuoc-hoa-duoc-va-duoc-lieu-2100"
+  },
+  {
+    "code": "46326",
+    "name": "Bán buôn đường, sữa và các sản phẩm sữa, bánh kẹo và các sản phẩm chế biến từ ngũ cốc, bột, tinh bột",
+    "slug": "ban-buon-duong-sua-va-cac-san-pham-sua-banh-keo-va-cac-san-pham-che-bien-tu-ngu-coc-bot-tinh-bot-46326"
+  },
+  {
+    "code": "46492",
+    "name": "Bán buôn dược phẩm và dụng cụ y tế",
+    "slug": "ban-buon-duoc-pham-va-dung-cu-y-te-46492"
+  },
+  {
+    "code": "46329",
+    "name": "Bán buôn thực phẩm khác",
+    "slug": "ban-buon-thuc-pham-khac-46329"
+  },
+  {
+    "code": "46692",
+    "name": "Bán buôn hóa chất khác (trừ loại sử dụng trong nông nghiệp)",
+    "slug": "ban-buon-hoa-chat-khac-tru-loai-su-dung-trong-nong-nghiep-46692"
+  },
+  {
+    "code": "46699",
+    "name": "Bán buôn chuyên doanh khác còn lại chưa được phân vào đâu",
+    "slug": "ban-buon-chuyen-doanh-khac-con-lai-chua-duoc-phan-vao-dau-46699"
+  },
+  {
+    "code": "47739",
+    "name": "Bán lẻ hàng hóa khác mới chưa được phân vào đâu trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-hang-hoa-khac-moi-chua-duoc-phan-vao-dau-trong-cac-cua-hang-chuyen-doanh-47739"
+  },
+  {
+    "code": "47229",
+    "name": "Bán lẻ thực phẩm khác trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-thuc-pham-khac-trong-cac-cua-hang-chuyen-doanh-47229"
+  },
+  {
+    "code": "47736",
+    "name": "Bán lẻ đồng hồ, kính mắt trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-dong-ho-kinh-mat-trong-cac-cua-hang-chuyen-doanh-47736"
+  },
+  {
+    "code": "01282",
+    "name": "Trồng cây dược liệu",
+    "slug": "trong-cay-duoc-lieu-01282"
+  },
+  {
+    "code": "52291",
+    "name": "Dịch vụ đại lý tàu biển",
+    "slug": "dich-vu-dai-ly-tau-bien-52291"
+  },
+  {
+    "code": "52292",
+    "name": "Dịch vụ đại lý vận tải đường biển",
+    "slug": "dich-vu-dai-ly-van-tai-duong-bien-52292"
+  },
+  {
+    "code": "4940",
+    "name": "Vận tải đường ống",
+    "slug": "van-tai-duong-ong-4940"
+  },
+  {
+    "code": "0610",
+    "name": "Khai thác dầu thô",
+    "slug": "khai-thac-dau-tho-0610"
+  },
+  {
+    "code": "4911",
+    "name": "Vận tải hành khách đường sắt",
+    "slug": "van-tai-hanh-khach-duong-sat-4911"
+  },
+  {
+    "code": "3212",
+    "name": "Sản xuất đồ giả kim hoàn và chi tiết liên quan",
+    "slug": "san-xuat-do-gia-kim-hoan-va-chi-tiet-lien-quan-3212"
+  },
+  {
+    "code": "47191",
+    "name": "Bán lẻ trong siêu thị, trung tâm thương mại",
+    "slug": "ban-le-trong-sieu-thi-trung-tam-thuong-mai-47191"
+  },
+  {
+    "code": "77101",
+    "name": "Cho thuê ôtô",
+    "slug": "cho-thue-oto-77101"
+  },
+  {
+    "code": "43290",
+    "name": "Lắp đặt hệ thống xây dựng khác",
+    "slug": "lap-dat-he-thong-xay-dung-khac-43290"
+  },
+  {
+    "code": "52219",
+    "name": "Hoạt động dịch vụ hỗ trợ trực tiếp cho vận tải đường bộ",
+    "slug": "hoat-dong-dich-vu-ho-tro-truc-tiep-cho-van-tai-duong-bo-52219"
+  },
+  {
+    "code": "35302",
+    "name": "Sản xuất nước đá",
+    "slug": "san-xuat-nuoc-da-35302"
+  },
+  {
+    "code": "11041",
+    "name": "Sản xuất nước khoáng, nước tinh khiết đóng chai",
+    "slug": "san-xuat-nuoc-khoang-nuoc-tinh-khiet-dong-chai-11041"
+  },
+  {
+    "code": "11042",
+    "name": "Sản xuất đồ uống không cồn",
+    "slug": "san-xuat-do-uong-khong-con-11042"
+  },
+  {
+    "code": "9523",
+    "name": "Sửa chữa giày, dép, hàng da và giả da",
+    "slug": "sua-chua-giay-dep-hang-da-va-gia-da-9523"
+  },
+  {
+    "code": "8610",
+    "name": "Hoạt động của các bệnh viện, trạm xá",
+    "slug": "hoat-dong-cua-cac-benh-vien-tram-xa-8610"
+  },
+  {
+    "code": "8691",
+    "name": "Hoạt động y tế dự phòng",
+    "slug": "hoat-dong-y-te-du-phong-8691"
+  },
+  {
+    "code": "8692",
+    "name": "Hoạt động của hệ thống cơ sở chỉnh hình, phục hồi chức năng",
+    "slug": "hoat-dong-cua-he-thong-co-so-chinh-hinh-phuc-hoi-chuc-nang-8692"
+  },
+  {
+    "code": "8699",
+    "name": "Hoạt động y tế khác chưa được phân vào đâu",
+    "slug": "hoat-dong-y-te-khac-chua-duoc-phan-vao-dau-8699"
+  },
+  {
+    "code": "3520",
+    "name": "Sản xuất khí đốt, phân phối nhiên liệu khí bằng đường ống",
+    "slug": "san-xuat-khi-dot-phan-phoi-nhien-lieu-khi-bang-duong-ong-3520"
+  },
+  {
+    "code": "43120",
+    "name": "Chuẩn bị mặt bằng",
+    "slug": "chuan-bi-mat-bang-43120"
+  },
+  {
+    "code": "6022",
+    "name": "Chương trình cáp, vệ tinh và các chương trình thuê bao khác",
+    "slug": "chuong-trinh-cap-ve-tinh-va-cac-chuong-trinh-thue-bao-khac-6022"
+  },
+  {
+    "code": "46494",
+    "name": "Bán buôn hàng gốm, sứ, thủy tinh",
+    "slug": "ban-buon-hang-gom-su-thuy-tinh-46494"
+  },
+  {
+    "code": "46499",
+    "name": "Bán buôn đồ dùng khác cho gia đình chưa được phân vào đâu",
+    "slug": "ban-buon-do-dung-khac-cho-gia-dinh-chua-duoc-phan-vao-dau-46499"
+  },
+  {
+    "code": "46697",
+    "name": "Bán buôn phế liệu, phế thải kim loại, phi kim loại",
+    "slug": "ban-buon-phe-lieu-phe-thai-kim-loai-phi-kim-loai-46697"
+  },
+  {
+    "code": "0893",
+    "name": "Khai thác muối",
+    "slug": "khai-thac-muoi-0893"
+  },
+  {
+    "code": "9103",
+    "name": "Hoạt động của các vườn bách thảo, bách thú và khu bảo tồn tự nhiên",
+    "slug": "hoat-dong-cua-cac-vuon-bach-thao-bach-thu-va-khu-bao-ton-tu-nhien-9103"
+  },
+  {
+    "code": "46102",
+    "name": "Môi giới",
+    "slug": "moi-gioi-46102"
+  },
+  {
+    "code": "47411",
+    "name": "Bán lẻ máy vi tính, thiết bị ngoại vi, phần mềm trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-may-vi-tinh-thiet-bi-ngoai-vi-phan-mem-trong-cac-cua-hang-chuyen-doanh-47411"
+  },
+  {
+    "code": "47591",
+    "name": "Bán lẻ đồ điện gia dụng, đèn và bộ đèn điện trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-do-dien-gia-dung-den-va-bo-den-dien-trong-cac-cua-hang-chuyen-doanh-47591"
+  },
+  {
+    "code": "47420",
+    "name": "Bán lẻ thiết bị nghe nhìn trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-thiet-bi-nghe-nhin-trong-cac-cua-hang-chuyen-doanh-47420"
+  },
+  {
+    "code": "47412",
+    "name": "Bán lẻ thiết bị viễn thông trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-thiet-bi-vien-thong-trong-cac-cua-hang-chuyen-doanh-47412"
+  },
+  {
+    "code": "47620",
+    "name": "Bán lẻ băng đĩa âm thanh, hình ảnh (kể cả băng, đĩa trắng) trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-bang-dia-am-thanh-hinh-anh-ke-ca-bang-dia-trang-trong-cac-cua-hang-chuyen-doanh-47620"
+  },
+  {
+    "code": "82191",
+    "name": "Photo, chuẩn bị tài liệu",
+    "slug": "photo-chuan-bi-tai-lieu-82191"
+  },
+  {
+    "code": "47722",
+    "name": "Bán lẻ nước hoa, mỹ phẩm và vật phẩm vệ sinh trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-nuoc-hoa-my-pham-va-vat-pham-ve-sinh-trong-cac-cua-hang-chuyen-doanh-47722"
+  },
+  {
+    "code": "0721",
+    "name": "Khai thác quặng uranium và quặng thorium",
+    "slug": "khai-thac-quang-uranium-va-quang-thorium-0721"
+  },
+  {
+    "code": "0170",
+    "name": "Săn bắt, đánh bẫy và hoạt động dịch vụ có liên quan",
+    "slug": "san-bat-danh-bay-va-hoat-dong-dich-vu-co-lien-quan-0170"
+  },
+  {
+    "code": "1511",
+    "name": "Thuộc, sơ chế da; sơ chế và nhuộm da lông thú",
+    "slug": "thuoc-so-che-da-so-che-va-nhuom-da-long-thu-1511"
+  },
+  {
+    "code": "43210",
+    "name": "Lắp đặt hệ thống điện",
+    "slug": "lap-dat-he-thong-dien-43210"
+  },
+  {
+    "code": "46696",
+    "name": "Bán buôn phụ liệu may mặc và giày dép",
+    "slug": "ban-buon-phu-lieu-may-mac-va-giay-dep-46696"
+  },
+  {
+    "code": "46593",
+    "name": "Bán buôn máy móc, thiết bị và phụ tùng máy dệt, may, da giày",
+    "slug": "ban-buon-may-moc-thiet-bi-va-phu-tung-may-det-may-da-giay-46593"
+  },
+  {
+    "code": "46622",
+    "name": "Bán buôn sắt, thép",
+    "slug": "ban-buon-sat-thep-46622"
+  },
+  {
+    "code": "46510",
+    "name": "Bán buôn máy vi tính, thiết bị ngoại vi và phần mềm",
+    "slug": "ban-buon-may-vi-tinh-thiet-bi-ngoai-vi-va-phan-mem-46510"
+  },
+  {
+    "code": "46520",
+    "name": "Bán buôn thiết bị và linh kiện điện tử, viễn thông",
+    "slug": "ban-buon-thiet-bi-va-linh-kien-dien-tu-vien-thong-46520"
+  },
+  {
+    "code": "47529",
+    "name": "Bán lẻ thiết bị lắp đặt khác trong xây dựng trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-thiet-bi-lap-dat-khac-trong-xay-dung-trong-cac-cua-hang-chuyen-doanh-47529"
+  },
+  {
+    "code": "49321",
+    "name": "Vận tải hành khách bằng xe khách nội tỉnh, liên tỉnh",
+    "slug": "van-tai-hanh-khach-bang-xe-khach-noi-tinh-lien-tinh-49321"
+  },
+  {
+    "code": "25999",
+    "name": "Sản xuất sản phẩm khác còn lại bằng kim loại chưa được phân vào đâu",
+    "slug": "san-xuat-san-pham-khac-con-lai-bang-kim-loai-chua-duoc-phan-vao-dau-25999"
+  },
+  {
+    "code": "46491",
+    "name": "Bán buôn vali, cặp, túi, ví, hàng da và giả da khác",
+    "slug": "ban-buon-vali-cap-tui-vi-hang-da-va-gia-da-khac-46491"
+  },
+  {
+    "code": "46632",
+    "name": "Bán buôn xi măng",
+    "slug": "ban-buon-xi-mang-46632"
+  },
+  {
+    "code": "46634",
+    "name": "Bán buôn kính xây dựng",
+    "slug": "ban-buon-kinh-xay-dung-46634"
+  },
+  {
+    "code": "46636",
+    "name": "Bán buôn gạch ốp lát và thiết bị vệ sinh",
+    "slug": "ban-buon-gach-op-lat-va-thiet-bi-ve-sinh-46636"
+  },
+  {
+    "code": "50221",
+    "name": "Vận tải hàng hóa đường thuỷ nội địa bằng phương tiện cơ giới",
+    "slug": "van-tai-hang-hoa-duong-thuy-noi-dia-bang-phuong-tien-co-gioi-50221"
+  },
+  {
+    "code": "6491",
+    "name": "Hoạt động cho thuê tài chính",
+    "slug": "hoat-dong-cho-thue-tai-chinh-6491"
+  },
+  {
+    "code": "41000",
+    "name": "Xây dựng nhà các loại",
+    "slug": "xay-dung-nha-cac-loai-41000"
+  },
+  {
+    "code": "42200",
+    "name": "Xây dựng công trình công ích",
+    "slug": "xay-dung-cong-trinh-cong-ich-42200"
+  },
+  {
+    "code": "43110",
+    "name": "Phá dỡ",
+    "slug": "pha-do-43110"
+  },
+  {
+    "code": "43300",
+    "name": "Hoàn thiện công trình xây dựng",
+    "slug": "hoan-thien-cong-trinh-xay-dung-43300"
+  },
+  {
+    "code": "52299",
+    "name": "Dịch vụ hỗ trợ khác liên quan đến vận tải chưa được phân vào đâu",
+    "slug": "dich-vu-ho-tro-khac-lien-quan-den-van-tai-chua-duoc-phan-vao-dau-52299"
+  },
+  {
+    "code": "82990",
+    "name": "Hoạt động dịch vụ hỗ trợ kinh doanh khác còn lại chưa được phân vào đâu",
+    "slug": "hoat-dong-dich-vu-ho-tro-kinh-doanh-khac-con-lai-chua-duoc-phan-vao-dau-82990"
+  },
+  {
+    "code": "77309",
+    "name": "Cho thuê máy móc, thiết bị và đồ dùng hữu hình khác chưa được phân vào đâu",
+    "slug": "cho-thue-may-moc-thiet-bi-va-do-dung-huu-hinh-khac-chua-duoc-phan-vao-dau-77309"
+  },
+  {
+    "code": "16220",
+    "name": "Sản xuất đồ gỗ xây dựng",
+    "slug": "san-xuat-do-go-xay-dung-16220"
+  },
+  {
+    "code": "45200",
+    "name": "Bảo dưỡng, sửa chữa ô tô và xe có động cơ khác",
+    "slug": "bao-duong-sua-chua-o-to-va-xe-co-dong-co-khac-45200"
+  },
+  {
+    "code": "46637",
+    "name": "Bán buôn đồ ngũ kim",
+    "slug": "ban-buon-do-ngu-kim-46637"
+  },
+  {
+    "code": "78301",
+    "name": "Cung ứng và quản lý nguồn lao động trong nước",
+    "slug": "cung-ung-va-quan-ly-nguon-lao-dong-trong-nuoc-78301"
+  },
+  {
+    "code": "78200",
+    "name": "Cung ứng lao động tạm thời",
+    "slug": "cung-ung-lao-dong-tam-thoi-78200"
+  },
+  {
+    "code": "42900",
+    "name": "Xây dựng công trình kỹ thuật dân dụng khác",
+    "slug": "xay-dung-cong-trinh-ky-thuat-dan-dung-khac-42900"
+  },
+  {
+    "code": "43900",
+    "name": "Hoạt động xây dựng chuyên dụng khác",
+    "slug": "hoat-dong-xay-dung-chuyen-dung-khac-43900"
+  },
+  {
+    "code": "7500",
+    "name": "Hoạt động thú y",
+    "slug": "hoat-dong-thu-y-7500"
+  },
+  {
+    "code": "46201",
+    "name": "Bán buôn thóc, ngô và các loại hạt ngũ cốc khác",
+    "slug": "ban-buon-thoc-ngo-va-cac-loai-hat-ngu-coc-khac-46201"
+  },
+  {
+    "code": "46310",
+    "name": "Bán buôn gạo",
+    "slug": "ban-buon-gao-46310"
+  },
+  {
+    "code": "46623",
+    "name": "Bán buôn kim loại khác",
+    "slug": "ban-buon-kim-loai-khac-46623"
+  },
+  {
+    "code": "02400",
+    "name": "Hoạt động dịch vụ lâm nghiệp",
+    "slug": "hoat-dong-dich-vu-lam-nghiep-02400"
+  },
+  {
+    "code": "02210",
+    "name": "Khai thác gỗ",
+    "slug": "khai-thac-go-02210"
+  },
+  {
+    "code": "16291",
+    "name": "Sản xuất sản phẩm khác từ gỗ",
+    "slug": "san-xuat-san-pham-khac-tu-go-16291"
+  },
+  {
+    "code": "46635",
+    "name": "Bán buôn sơn, vécni",
+    "slug": "ban-buon-son-vecni-46635"
+  },
+  {
+    "code": "46611",
+    "name": "Bán buôn than đá và nhiên liệu rắn khác",
+    "slug": "ban-buon-than-da-va-nhien-lieu-ran-khac-46611"
+  },
+  {
+    "code": "08920",
+    "name": "Khai thác và thu gom than bùn",
+    "slug": "khai-thac-va-thu-gom-than-bun-08920"
+  },
+  {
+    "code": "52222",
+    "name": "Hoạt động dịch vụ hỗ trợ trực tiếp cho vận tải đường thuỷ nội địa",
+    "slug": "hoat-dong-dich-vu-ho-tro-truc-tiep-cho-van-tai-duong-thuy-noi-dia-52222"
+  },
+  {
+    "code": "23942",
+    "name": "Sản xuất vôi",
+    "slug": "san-xuat-voi-23942"
+  },
+  {
+    "code": "20290",
+    "name": "Sản xuất sản phẩm hoá chất khác chưa được phân vào đâu",
+    "slug": "san-xuat-san-pham-hoa-chat-khac-chua-duoc-phan-vao-dau-20290"
+  },
+  {
+    "code": "85322",
+    "name": "Dạy nghề",
+    "slug": "day-nghe-85322"
+  },
+  {
+    "code": "46413",
+    "name": "Bán buôn hàng may mặc",
+    "slug": "ban-buon-hang-may-mac-46413"
+  },
+  {
+    "code": "7010",
+    "name": "Hoạt động của trụ sở văn phòng",
+    "slug": "hoat-dong-cua-tru-so-van-phong-7010"
+  },
+  {
+    "code": "6399",
+    "name": "Dịch vụ thông tin khác chưa được phân vào đâu",
+    "slug": "dich-vu-thong-tin-khac-chua-duoc-phan-vao-dau-6399"
+  },
+  {
+    "code": "9200",
+    "name": "Hoạt động xổ số, cá cược và đánh bạc",
+    "slug": "hoat-dong-xo-so-ca-cuoc-va-danh-bac-9200"
+  },
+  {
+    "code": "31001",
+    "name": "Sản xuất giường, tủ, bàn, ghế bằng gỗ",
+    "slug": "san-xuat-giuong-tu-ban-ghe-bang-go-31001"
+  },
+  {
+    "code": "6612",
+    "name": "Môi giới hợp đồng hàng hoá và chứng khoán",
+    "slug": "moi-gioi-hop-dong-hang-hoa-va-chung-khoan-6612"
+  },
+  {
+    "code": "6910",
+    "name": "Hoạt động pháp luật",
+    "slug": "hoat-dong-phap-luat-6910"
+  },
+  {
+    "code": "10730",
+    "name": "Sản xuất ca cao, sôcôla và mứt kẹo",
+    "slug": "san-xuat-ca-cao-socola-va-mut-keo-10730"
+  },
+  {
+    "code": "10790",
+    "name": "Sản xuất thực phẩm khác chưa được phân vào đâu",
+    "slug": "san-xuat-thuc-pham-khac-chua-duoc-phan-vao-dau-10790"
+  },
+  {
+    "code": "13230",
+    "name": "Sản xuất thảm, chăn đệm",
+    "slug": "san-xuat-tham-chan-dem-13230"
+  },
+  {
+    "code": "27500",
+    "name": "Sản xuất đồ điện dân dụng",
+    "slug": "san-xuat-do-dien-dan-dung-27500"
+  },
+  {
+    "code": "46412",
+    "name": "Bán buôn thảm, đệm, chăn, màn, rèm, ga trải giường, gối và hàng dệt khác",
+    "slug": "ban-buon-tham-dem-chan-man-rem-ga-trai-giuong-goi-va-hang-det-khac-46412"
+  },
+  {
+    "code": "78302",
+    "name": "Cung ứng và quản lý nguồn lao động đi làm việc ở nước ngoài",
+    "slug": "cung-ung-va-quan-ly-nguon-lao-dong-di-lam-viec-o-nuoc-ngoai-78302"
+  },
+  {
+    "code": "45420",
+    "name": "Bảo dưỡng và sửa chữa mô tô, xe máy",
+    "slug": "bao-duong-va-sua-chua-mo-to-xe-may-45420"
+  },
+  {
+    "code": "25920",
+    "name": "Gia công cơ khí; xử lý và tráng phủ kim loại",
+    "slug": "gia-cong-co-khi-xu-ly-va-trang-phu-kim-loai-25920"
+  },
+  {
+    "code": "7211",
+    "name": "Nghiên cứu khoa học và phát triển công nghệ trong lĩnh vực khoa học tự nhiên",
+    "slug": "nghien-cuu-khoa-hoc-va-phat-trien-cong-nghe-trong-linh-vuc-khoa-hoc-tu-nhien-7211"
+  },
+  {
+    "code": "7213",
+    "name": "Nghiên cứu khoa học và phát triển công nghệ trong lĩnh vực khoa học y, dược",
+    "slug": "nghien-cuu-khoa-hoc-va-phat-trien-cong-nghe-trong-linh-vuc-khoa-hoc-y-duoc-7213"
+  },
+  {
+    "code": "7214",
+    "name": "Nghiên cứu khoa học và phát triển công nghệ trong lĩnh vực khoa học nông nghiệp",
+    "slug": "nghien-cuu-khoa-hoc-va-phat-trien-cong-nghe-trong-linh-vuc-khoa-hoc-nong-nghiep-7214"
+  },
+  {
+    "code": "7212",
+    "name": "Nghiên cứu khoa học và phát triển công nghệ trong lĩnh vực khoa học kỹ thuật và công nghệ",
+    "slug": "nghien-cuu-khoa-hoc-va-phat-trien-cong-nghe-trong-linh-vuc-khoa-hoc-ky-thuat-va-cong-nghe-7212"
+  },
+  {
+    "code": "2030",
+    "name": "Sản xuất sợi nhân tạo",
+    "slug": "san-xuat-soi-nhan-tao-2030"
+  },
+  {
+    "code": "46693",
+    "name": "Bán buôn chất dẻo dạng nguyên sinh",
+    "slug": "ban-buon-chat-deo-dang-nguyen-sinh-46693"
+  },
+  {
+    "code": "47735",
+    "name": "Bán lẻ dầu hoả, ga, than nhiên liệu dùng cho gia đình trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-dau-hoa-ga-than-nhien-lieu-dung-cho-gia-dinh-trong-cac-cua-hang-chuyen-doanh-47735"
+  },
+  {
+    "code": "52101",
+    "name": "Kho bãi và lưu giữ hàng hóa trong kho ngoại quan",
+    "slug": "kho-bai-va-luu-giu-hang-hoa-trong-kho-ngoai-quan-52101"
+  },
+  {
+    "code": "46695",
+    "name": "Bán buôn tơ, xơ, sợi dệt",
+    "slug": "ban-buon-to-xo-soi-det-46695"
+  },
+  {
+    "code": "49331",
+    "name": "Vận tải hàng hóa bằng ô tô chuyên dụng",
+    "slug": "van-tai-hang-hoa-bang-o-to-chuyen-dung-49331"
+  },
+  {
+    "code": "49332",
+    "name": "Vận tải hàng hóa bằng ô tô loại khác (trừ ô tô chuyên dụng)",
+    "slug": "van-tai-hang-hoa-bang-o-to-loai-khac-tru-o-to-chuyen-dung-49332"
+  },
+  {
+    "code": "46612",
+    "name": "Bán buôn dầu thô",
+    "slug": "ban-buon-dau-tho-46612"
+  },
+  {
+    "code": "45301",
+    "name": "Bán buôn phụ tùng và các bộ phận phụ trợ của ô tô và xe có động cơ khác",
+    "slug": "ban-buon-phu-tung-va-cac-bo-phan-phu-tro-cua-o-to-va-xe-co-dong-co-khac-45301"
+  },
+  {
+    "code": "32110",
+    "name": "Sản xuất đồ kim hoàn và chi tiết liên quan",
+    "slug": "san-xuat-do-kim-hoan-va-chi-tiet-lien-quan-32110"
+  },
+  {
+    "code": "46624",
+    "name": "Bán buôn vàng, bạc và kim loại quý khác",
+    "slug": "ban-buon-vang-bac-va-kim-loai-quy-khac-46624"
+  },
+  {
+    "code": "95110",
+    "name": "Sửa chữa máy vi tính và thiết bị ngoại vi",
+    "slug": "sua-chua-may-vi-tinh-va-thiet-bi-ngoai-vi-95110"
+  },
+  {
+    "code": "62090",
+    "name": "Hoạt động dịch vụ công nghệ thông tin và dịch vụ khác liên quan đến máy vi tính",
+    "slug": "hoat-dong-dich-vu-cong-nghe-thong-tin-va-dich-vu-khac-lien-quan-den-may-vi-tinh-62090"
+  },
+  {
+    "code": "82300",
+    "name": "Tổ chức giới thiệu và xúc tiến thương mại",
+    "slug": "to-chuc-gioi-thieu-va-xuc-tien-thuong-mai-82300"
+  },
+  {
+    "code": "69101",
+    "name": "Hoạt động đại diện, tư vấn pháp luật",
+    "slug": "hoat-dong-dai-dien-tu-van-phap-luat-69101"
+  },
+  {
+    "code": "46599",
+    "name": "Bán buôn máy móc, thiết bị và phụ tùng máy khác chưa được phân vào đâu",
+    "slug": "ban-buon-may-moc-thiet-bi-va-phu-tung-may-khac-chua-duoc-phan-vao-dau-46599"
+  },
+  {
+    "code": "47732",
+    "name": "Bán lẻ vàng, bạc, đá quí và đá bán quí, đồ trang sức trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-vang-bac-da-qui-va-da-ban-qui-do-trang-suc-trong-cac-cua-hang-chuyen-doanh-47732"
+  },
+  {
+    "code": "62010",
+    "name": "Lập trình máy vi tính",
+    "slug": "lap-trinh-may-vi-tinh-62010"
+  },
+  {
+    "code": "62020",
+    "name": "Tư vấn máy vi tính và quản trị hệ thống máy vi tính",
+    "slug": "tu-van-may-vi-tinh-va-quan-tri-he-thong-may-vi-tinh-62020"
+  },
+  {
+    "code": "79200",
+    "name": "Dịch vụ hỗ trợ liên quan đến quảng bá và tổ chức tua du lịch",
+    "slug": "dich-vu-ho-tro-lien-quan-den-quang-ba-va-to-chuc-tua-du-lich-79200"
+  },
+  {
+    "code": "32120",
+    "name": "Sản xuất đồ giả kim hoàn và chi tiết liên quan",
+    "slug": "san-xuat-do-gia-kim-hoan-va-chi-tiet-lien-quan-32120"
+  },
+  {
+    "code": "6321",
+    "name": "Hoạt động thông tấn",
+    "slug": "hoat-dong-thong-tan-6321"
+  },
+  {
+    "code": "46694",
+    "name": "Bán buôn cao su",
+    "slug": "ban-buon-cao-su-46694"
+  },
+  {
+    "code": "16101",
+    "name": "Cưa, xẻ và bào gỗ",
+    "slug": "cua-xe-va-bao-go-16101"
+  },
+  {
+    "code": "47230",
+    "name": "Bán lẻ đồ uống trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-do-uong-trong-cac-cua-hang-chuyen-doanh-47230"
+  },
+  {
+    "code": "47240",
+    "name": "Bán lẻ sản phẩm thuốc lá, thuốc lào trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-san-pham-thuoc-la-thuoc-lao-trong-cac-cua-hang-chuyen-doanh-47240"
+  },
+  {
+    "code": "46332",
+    "name": "Bán buôn đồ uống không có cồn",
+    "slug": "ban-buon-do-uong-khong-co-con-46332"
+  },
+  {
+    "code": "45120",
+    "name": "Bán lẻ ô tô con (loại 12 chỗ ngồi trở xuống)",
+    "slug": "ban-le-o-to-con-loai-12-cho-ngoi-tro-xuong-45120"
+  },
+  {
+    "code": "45131",
+    "name": "Đại lý ô tô con (loại 12 chỗ ngồi trở xuống)",
+    "slug": "dai-ly-o-to-con-loai-12-cho-ngoi-tro-xuong-45131"
+  },
+  {
+    "code": "47813",
+    "name": "Bán lẻ đồ uống lưu động hoặc tại chợ",
+    "slug": "ban-le-do-uong-luu-dong-hoac-tai-cho-47813"
+  },
+  {
+    "code": "47814",
+    "name": "Bán lẻ sản phẩm thuốc lá, thuốc lào lưu động hoặc tại chợ",
+    "slug": "ban-le-san-pham-thuoc-la-thuoc-lao-luu-dong-hoac-tai-cho-47814"
+  },
+  {
+    "code": "46331",
+    "name": "Bán buôn đồ uống có cồn",
+    "slug": "ban-buon-do-uong-co-con-46331"
+  },
+  {
+    "code": "46340",
+    "name": "Bán buôn sản phẩm thuốc lá, thuốc lào",
+    "slug": "ban-buon-san-pham-thuoc-la-thuoc-lao-46340"
+  },
+  {
+    "code": "46325",
+    "name": "Bán buôn chè",
+    "slug": "ban-buon-che-46325"
+  },
+  {
+    "code": "43222",
+    "name": "Lắp đặt hệ thống lò sưởi và điều hoà không khí",
+    "slug": "lap-dat-he-thong-lo-suoi-va-dieu-hoa-khong-khi-43222"
+  },
+  {
+    "code": "81290",
+    "name": "Vệ sinh nhà cửa và các công trình khác",
+    "slug": "ve-sinh-nha-cua-va-cac-cong-trinh-khac-81290"
+  },
+  {
+    "code": "45111",
+    "name": "Bán buôn ô tô con (loại 12 chỗ ngồi trở xuống)",
+    "slug": "ban-buon-o-to-con-loai-12-cho-ngoi-tro-xuong-45111"
+  },
+  {
+    "code": "64920",
+    "name": "Hoạt động cấp tín dụng khác",
+    "slug": "hoat-dong-cap-tin-dung-khac-64920"
+  },
+  {
+    "code": "47110",
+    "name": "Bán lẻ lương thực, thực phẩm, đồ uống, thuốc lá, thuốc lào chiếm tỷ trọng lớn trong các cửa hàng kinh doanh tổng hợp",
+    "slug": "ban-le-luong-thuc-thuc-pham-do-uong-thuoc-la-thuoc-lao-chiem-ty-trong-lon-trong-cac-cua-hang-kinh-doanh-tong-hop-47110"
+  },
+  {
+    "code": "47223",
+    "name": "Bán lẻ rau, quả trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-rau-qua-trong-cac-cua-hang-chuyen-doanh-47223"
+  },
+  {
+    "code": "7220",
+    "name": "Nghiên cứu và phát triển thực nghiệm khoa học xã hội và nhân văn",
+    "slug": "nghien-cuu-va-phat-trien-thuc-nghiem-khoa-hoc-xa-hoi-va-nhan-van-7220"
+  },
+  {
+    "code": "01183",
+    "name": "Trồng hoa, cây cảnh",
+    "slug": "trong-hoa-cay-canh-01183"
+  },
+  {
+    "code": "46202",
+    "name": "Bán buôn hoa và cây",
+    "slug": "ban-buon-hoa-va-cay-46202"
+  },
+  {
+    "code": "46203",
+    "name": "Bán buôn động vật sống",
+    "slug": "ban-buon-dong-vat-song-46203"
+  },
+  {
+    "code": "23941",
+    "name": "Sản xuất xi măng",
+    "slug": "san-xuat-xi-mang-23941"
+  },
+  {
+    "code": "23943",
+    "name": "Sản xuất thạch cao",
+    "slug": "san-xuat-thach-cao-23943"
+  },
+  {
+    "code": "61909",
+    "name": "Hoạt động viễn thông khác chưa được phân vào đâu",
+    "slug": "hoat-dong-vien-thong-khac-chua-duoc-phan-vao-dau-61909"
+  },
+  {
+    "code": "49329",
+    "name": "Vận tải hành khách đường bộ khác chưa được phân vào đâu",
+    "slug": "van-tai-hanh-khach-duong-bo-khac-chua-duoc-phan-vao-dau-49329"
+  },
+  {
+    "code": "55104",
+    "name": "Nhà trọ, phòng trọ và các cơ sở lưu trú tương tự",
+    "slug": "nha-tro-phong-tro-va-cac-co-so-luu-tru-tuong-tu-55104"
+  },
+  {
+    "code": "49312",
+    "name": "Vận tải hành khách bằng taxi",
+    "slug": "van-tai-hanh-khach-bang-taxi-49312"
+  },
+  {
+    "code": "53200",
+    "name": "Chuyển phát",
+    "slug": "chuyen-phat-53200"
+  },
+  {
+    "code": "4929",
+    "name": "Vận tải hành khách bằng xe buýt loại khác",
+    "slug": "van-tai-hanh-khach-bang-xe-buyt-loai-khac-4929"
+  },
+  {
+    "code": "47731",
+    "name": "Bán lẻ hoa, cây cảnh trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-hoa-cay-canh-trong-cac-cua-hang-chuyen-doanh-47731"
+  },
+  {
+    "code": "38302",
+    "name": "Tái chế phế liệu phi kim loại",
+    "slug": "tai-che-phe-lieu-phi-kim-loai-38302"
+  },
+  {
+    "code": "78100",
+    "name": "Hoạt động của các trung tâm, đại lý tư vấn, giới thiệu và môi giới lao động, việc làm",
+    "slug": "hoat-dong-cua-cac-trung-tam-dai-ly-tu-van-gioi-thieu-va-moi-gioi-lao-dong-viec-lam-78100"
+  },
+  {
+    "code": "79110",
+    "name": "Đại lý du lịch",
+    "slug": "dai-ly-du-lich-79110"
+  },
+  {
+    "code": "47300",
+    "name": "Bán lẻ nhiên liệu động cơ trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-nhien-lieu-dong-co-trong-cac-cua-hang-chuyen-doanh-47300"
+  },
+  {
+    "code": "33150",
+    "name": "Sửa chữa và bảo dưỡng phương tiện vận tải (trừ ô tô, mô tô, xe máy và xe có động cơ khác)",
+    "slug": "sua-chua-va-bao-duong-phuong-tien-van-tai-tru-o-to-mo-to-xe-may-va-xe-co-dong-co-khac-33150"
+  },
+  {
+    "code": "85590",
+    "name": "Giáo dục khác chưa được phân vào đâu",
+    "slug": "giao-duc-khac-chua-duoc-phan-vao-dau-85590"
+  },
+  {
+    "code": "38229",
+    "name": "Xử lý và tiêu huỷ rác thải độc hại khác",
+    "slug": "xu-ly-va-tieu-huy-rac-thai-doc-hai-khac-38229"
+  },
+  {
+    "code": "56210",
+    "name": "Cung cấp dịch vụ ăn uống theo hợp đồng không thường xuyên với khách hàng (phục vụ tiệc, hội họp, đám cưới...)",
+    "slug": "cung-cap-dich-vu-an-uong-theo-hop-dong-khong-thuong-xuyen-voi-khach-hang-phuc-vu-tiec-hoi-hop-dam-cuoi-56210"
+  },
+  {
+    "code": "79120",
+    "name": "Điều hành tua du lịch",
+    "slug": "dieu-hanh-tua-du-lich-79120"
+  },
+  {
+    "code": "30110",
+    "name": "Đóng tàu và cấu kiện nổi",
+    "slug": "dong-tau-va-cau-kien-noi-30110"
+  },
+  {
+    "code": "77301",
+    "name": "Cho thuê máy móc, thiết bị nông, lâm nghiệp",
+    "slug": "cho-thue-may-moc-thiet-bi-nong-lam-nghiep-77301"
+  },
+  {
+    "code": "38129",
+    "name": "Thu gom rác thải độc hại khác",
+    "slug": "thu-gom-rac-thai-doc-hai-khac-38129"
+  },
+  {
+    "code": "23920",
+    "name": "Sản xuất vật liệu xây dựng từ đất sét",
+    "slug": "san-xuat-vat-lieu-xay-dung-tu-dat-set-23920"
+  },
+  {
+    "code": "23950",
+    "name": "Sản xuất bê tông và các sản phẩm từ xi măng và thạch cao",
+    "slug": "san-xuat-be-tong-va-cac-san-pham-tu-xi-mang-va-thach-cao-23950"
+  },
+  {
+    "code": "32900",
+    "name": "Sản xuất khác chưa được phân vào đâu",
+    "slug": "san-xuat-khac-chua-duoc-phan-vao-dau-32900"
+  },
+  {
+    "code": "71103",
+    "name": "Hoạt động thăm dò địa chất, nguồn nước",
+    "slug": "hoat-dong-tham-do-dia-chat-nguon-nuoc-71103"
+  },
+  {
+    "code": "45412",
+    "name": "Bán lẻ mô tô, xe máy",
+    "slug": "ban-le-mo-to-xe-may-45412"
+  },
+  {
+    "code": "9632",
+    "name": "Hoạt động dịch vụ phục vụ tang lễ",
+    "slug": "hoat-dong-dich-vu-phuc-vu-tang-le-9632"
+  },
+  {
+    "code": "0220",
+    "name": "Khai thác gỗ",
+    "slug": "khai-thac-go-0220"
+  },
+  {
+    "code": "2680",
+    "name": "Sản xuất băng, đĩa từ tính và quang học",
+    "slug": "san-xuat-bang-dia-tu-tinh-va-quang-hoc-2680"
+  },
+  {
+    "code": "5819",
+    "name": "Hoạt động xuất bản khác",
+    "slug": "hoat-dong-xuat-ban-khac-5819"
+  },
+  {
+    "code": "5811",
+    "name": "Xuất bản sách",
+    "slug": "xuat-ban-sach-5811"
+  },
+  {
+    "code": "5812",
+    "name": "Xuất bản các danh mục chỉ dẫn và địa chỉ",
+    "slug": "xuat-ban-cac-danh-muc-chi-dan-va-dia-chi-5812"
+  },
+  {
+    "code": "5813",
+    "name": "Xuất bản báo, tạp chí và các ấn phẩm định kỳ",
+    "slug": "xuat-ban-bao-tap-chi-va-cac-an-pham-dinh-ky-5813"
+  },
+  {
+    "code": "8430",
+    "name": "Hoạt động bảo đảm xã hội bắt buộc",
+    "slug": "hoat-dong-bao-dam-xa-hoi-bat-buoc-8430"
+  },
+  {
+    "code": "46204",
+    "name": "Bán buôn thức ăn và nguyên liệu làm thức ăn cho gia súc, gia cầm và thuỷ sản",
+    "slug": "ban-buon-thuc-an-va-nguyen-lieu-lam-thuc-an-cho-gia-suc-gia-cam-va-thuy-san-46204"
+  },
+  {
+    "code": "1200",
+    "name": "Sản xuất sản phẩm thuốc lá",
+    "slug": "san-xuat-san-pham-thuoc-la-1200"
+  },
+  {
+    "code": "87302",
+    "name": "Hoạt động chăm sóc sức khoẻ người già",
+    "slug": "hoat-dong-cham-soc-suc-khoe-nguoi-gia-87302"
+  },
+  {
+    "code": "87303",
+    "name": "Hoạt động chăm sóc sức khoẻ người tàn tật",
+    "slug": "hoat-dong-cham-soc-suc-khoe-nguoi-tan-tat-87303"
+  },
+  {
+    "code": "87301",
+    "name": "Hoạt động chăm sóc sức khoẻ người có công (trừ thương bệnh binh)",
+    "slug": "hoat-dong-cham-soc-suc-khoe-nguoi-co-cong-tru-thuong-benh-binh-87301"
+  },
+  {
+    "code": "88101",
+    "name": "Hoạt động trợ giúp xã hội không tập trung đối với người có công (trừ thương bệnh binh)",
+    "slug": "hoat-dong-tro-giup-xa-hoi-khong-tap-trung-doi-voi-nguoi-co-cong-tru-thuong-benh-binh-88101"
+  },
+  {
+    "code": "88102",
+    "name": "Hoạt động trợ giúp xã hội không tập trung đối với thương bệnh binh",
+    "slug": "hoat-dong-tro-giup-xa-hoi-khong-tap-trung-doi-voi-thuong-benh-binh-88102"
+  },
+  {
+    "code": "88103",
+    "name": "Hoạt động trợ giúp xã hội không tập trung đối với người già và người tàn tật",
+    "slug": "hoat-dong-tro-giup-xa-hoi-khong-tap-trung-doi-voi-nguoi-gia-va-nguoi-tan-tat-88103"
+  },
+  {
+    "code": "45139",
+    "name": "Đại lý xe có động cơ khác",
+    "slug": "dai-ly-xe-co-dong-co-khac-45139"
+  },
+  {
+    "code": "77109",
+    "name": "Cho thuê xe có động cơ khác",
+    "slug": "cho-thue-xe-co-dong-co-khac-77109"
+  },
+  {
+    "code": "56109",
+    "name": "Dịch vụ ăn uống phục vụ lưu động khác",
+    "slug": "dich-vu-an-uong-phuc-vu-luu-dong-khac-56109"
+  },
+  {
+    "code": "56290",
+    "name": "Dịch vụ ăn uống khác",
+    "slug": "dich-vu-an-uong-khac-56290"
+  },
+  {
+    "code": "56309",
+    "name": "Dịch vụ phục vụ đồ uống khác",
+    "slug": "dich-vu-phuc-vu-do-uong-khac-56309"
+  },
+  {
+    "code": "46498",
+    "name": "Bán buôn dụng cụ thể dục, thể thao",
+    "slug": "ban-buon-dung-cu-the-duc-the-thao-46498"
+  },
+  {
+    "code": "47593",
+    "name": "Bán lẻ đồ dùng gia đình bằng gốm, sứ, thủy tinh trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-do-dung-gia-dinh-bang-gom-su-thuy-tinh-trong-cac-cua-hang-chuyen-doanh-47593"
+  },
+  {
+    "code": "47599",
+    "name": "Bán lẻ đồ điện gia dụng, giường, tủ, bàn, ghế và đồ nội thất tương tự, đèn và bộ đèn điện, đồ dùng gia đình khác còn lại chưa được phân vào đâu trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-do-dien-gia-dung-giuong-tu-ban-ghe-va-do-noi-that-tuong-tu-den-va-bo-den-dien-do-dung-gia-dinh-khac-con-lai-chua-duoc-phan-vao-dau-trong-cac-cua-hang-chuyen-doanh-47599"
+  },
+  {
+    "code": "49339",
+    "name": "Vận tải hàng hóa bằng phương tiện đường bộ khác",
+    "slug": "van-tai-hang-hoa-bang-phuong-tien-duong-bo-khac-49339"
+  },
+  {
+    "code": "02300",
+    "name": "Thu nhặt sản phẩm từ rừng không phải gỗ và lâm sản khác",
+    "slug": "thu-nhat-san-pham-tu-rung-khong-phai-go-va-lam-san-khac-02300"
+  },
+  {
+    "code": "16210",
+    "name": "Sản xuất gỗ dán, gỗ lạng, ván ép và ván mỏng khác",
+    "slug": "san-xuat-go-dan-go-lang-van-ep-va-van-mong-khac-16210"
+  },
+  {
+    "code": "16230",
+    "name": "Sản xuất bao bì bằng gỗ",
+    "slug": "san-xuat-bao-bi-bang-go-16230"
+  },
+  {
+    "code": "18110",
+    "name": "In ấn",
+    "slug": "in-an-18110"
+  },
+  {
+    "code": "18120",
+    "name": "Dịch vụ liên quan đến in",
+    "slug": "dich-vu-lien-quan-den-in-18120"
+  },
+  {
+    "code": "18200",
+    "name": "Sao chép bản ghi các loại",
+    "slug": "sao-chep-ban-ghi-cac-loai-18200"
+  },
+  {
+    "code": "46530",
+    "name": "Bán buôn máy móc, thiết bị và phụ tùng máy nông nghiệp",
+    "slug": "ban-buon-may-moc-thiet-bi-va-phu-tung-may-nong-nghiep-46530"
+  },
+  {
+    "code": "52242",
+    "name": "Bốc xếp hàng hóa đường bộ",
+    "slug": "boc-xep-hang-hoa-duong-bo-52242"
+  },
+  {
+    "code": "71109",
+    "name": "Hoạt động tư vấn kỹ thuật có liên quan khác",
+    "slug": "hoat-dong-tu-van-ky-thuat-co-lien-quan-khac-71109"
+  },
+  {
+    "code": "46639",
+    "name": "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng",
+    "slug": "ban-buon-vat-lieu-thiet-bi-lap-dat-khac-trong-xay-dung-46639"
+  },
+  {
+    "code": "1394",
+    "name": "Sản xuất các loại dây bện và lưới",
+    "slug": "san-xuat-cac-loai-day-ben-va-luoi-1394"
+  },
+  {
+    "code": "33200",
+    "name": "Lắp đặt máy móc và thiết bị công nghiệp",
+    "slug": "lap-dat-may-moc-va-thiet-bi-cong-nghiep-33200"
+  },
+  {
+    "code": "6420",
+    "name": "Hoạt động công ty nắm giữ tài sản",
+    "slug": "hoat-dong-cong-ty-nam-giu-tai-san-6420"
+  },
+  {
+    "code": "47733",
+    "name": "Bán lẻ hàng lưu niệm, hàng đan lát, hàng thủ công mỹ nghệ trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-hang-luu-niem-hang-dan-lat-hang-thu-cong-my-nghe-trong-cac-cua-hang-chuyen-doanh-47733"
+  },
+  {
+    "code": "47522",
+    "name": "Bán lẻ sơn, màu, véc ni trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-son-mau-vec-ni-trong-cac-cua-hang-chuyen-doanh-47522"
+  },
+  {
+    "code": "47525",
+    "name": "Bán lẻ gạch ốp lát, thiết bị vệ sinh trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-gach-op-lat-thiet-bi-ve-sinh-trong-cac-cua-hang-chuyen-doanh-47525"
+  },
+  {
+    "code": "47530",
+    "name": "Bán lẻ thảm, đệm, chăn, màn, rèm, vật liệu phủ tường và sàn trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-tham-dem-chan-man-rem-vat-lieu-phu-tuong-va-san-trong-cac-cua-hang-chuyen-doanh-47530"
+  },
+  {
+    "code": "47640",
+    "name": "Bán lẻ trò chơi, đồ chơi trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-tro-choi-do-choi-trong-cac-cua-hang-chuyen-doanh-47640"
+  },
+  {
+    "code": "1393",
+    "name": "Sản xuất thảm, chăn, đệm",
+    "slug": "san-xuat-tham-chan-dem-1393"
+  },
+  {
+    "code": "1392",
+    "name": "Sản xuất hàng dệt sẵn (trừ trang phục)",
+    "slug": "san-xuat-hang-det-san-tru-trang-phuc-1392"
+  },
+  {
+    "code": "2660",
+    "name": "Sản xuất thiết bị bức xạ, thiết bị điện tử trong y học, điện liệu pháp",
+    "slug": "san-xuat-thiet-bi-buc-xa-thiet-bi-dien-tu-trong-y-hoc-dien-lieu-phap-2660"
+  },
+  {
+    "code": "3220",
+    "name": "Sản xuất nhạc cụ",
+    "slug": "san-xuat-nhac-cu-3220"
+  },
+  {
+    "code": "47734",
+    "name": "Bán lẻ tranh, ảnh và các tác phẩm nghệ thuật khác (trừ đồ cổ) trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-tranh-anh-va-cac-tac-pham-nghe-thuat-khac-tru-do-co-trong-cac-cua-hang-chuyen-doanh-47734"
+  },
+  {
+    "code": "6629",
+    "name": "Hoạt động hỗ trợ khác cho bảo hiểm và bảo hiểm xã hội",
+    "slug": "hoat-dong-ho-tro-khac-cho-bao-hiem-va-bao-hiem-xa-hoi-6629"
+  },
+  {
+    "code": "15200",
+    "name": "Sản xuất giày dép",
+    "slug": "san-xuat-giay-dep-15200"
+  },
+  {
+    "code": "73100",
+    "name": "Quảng cáo",
+    "slug": "quang-cao-73100"
+  },
+  {
+    "code": "86201",
+    "name": "Hoạt động của các phòng khám đa khoa, chuyên khoa",
+    "slug": "hoat-dong-cua-cac-phong-kham-da-khoa-chuyen-khoa-86201"
+  },
+  {
+    "code": "46900",
+    "name": "Bán buôn tổng hợp",
+    "slug": "ban-buon-tong-hop-46900"
+  },
+  {
+    "code": "61901",
+    "name": "Hoạt động của các điểm truy cập internet",
+    "slug": "hoat-dong-cua-cac-diem-truy-cap-internet-61901"
+  },
+  {
+    "code": "9810",
+    "name": "Hoạt động sản xuất các sản phẩm vật chất tự tiêu dùng của hộ gia đình",
+    "slug": "hoat-dong-san-xuat-cac-san-pham-vat-chat-tu-tieu-dung-cua-ho-gia-dinh-9810"
+  },
+  {
+    "code": "68200",
+    "name": "Tư vấn, môi giới, đấu giá bất động sản, đấu giá quyền sử dụng đất",
+    "slug": "tu-van-moi-gioi-dau-gia-bat-dong-san-dau-gia-quyen-su-dung-dat-68200"
+  },
+  {
+    "code": "71101",
+    "name": "Hoạt động kiến trúc",
+    "slug": "hoat-dong-kien-truc-71101"
+  },
+  {
+    "code": "71102",
+    "name": "Hoạt động đo đạc bản đồ",
+    "slug": "hoat-dong-do-dac-ban-do-71102"
+  },
+  {
+    "code": "46414",
+    "name": "Bán buôn giày dép",
+    "slug": "ban-buon-giay-dep-46414"
+  },
+  {
+    "code": "47222",
+    "name": "Bán lẻ thủy sản trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-thuy-san-trong-cac-cua-hang-chuyen-doanh-47222"
+  },
+  {
+    "code": "93290",
+    "name": "Hoạt động vui chơi giải trí khác chưa được phân vào đâu",
+    "slug": "hoat-dong-vui-choi-giai-tri-khac-chua-duoc-phan-vao-dau-93290"
+  },
+  {
+    "code": "55102",
+    "name": "Biệt thự hoặc căn hộ kinh doanh dịch vụ lưu trú ngắn ngày",
+    "slug": "biet-thu-hoac-can-ho-kinh-doanh-dich-vu-luu-tru-ngan-ngay-55102"
+  },
+  {
+    "code": "93190",
+    "name": "Hoạt động thể thao khác",
+    "slug": "hoat-dong-the-thao-khac-93190"
+  },
+  {
+    "code": "9102",
+    "name": "Hoạt động bảo tồn, bảo tàng",
+    "slug": "hoat-dong-bao-ton-bao-tang-9102"
+  },
+  {
+    "code": "22209",
+    "name": "Sản xuất sản phẩm khác từ plastic",
+    "slug": "san-xuat-san-pham-khac-tu-plastic-22209"
+  },
+  {
+    "code": "8291",
+    "name": "Hoạt động dịch vụ hỗ trợ thanh toán, tín dụng",
+    "slug": "hoat-dong-dich-vu-ho-tro-thanh-toan-tin-dung-8291"
+  },
+  {
+    "code": "6010",
+    "name": "Hoạt động phát thanh",
+    "slug": "hoat-dong-phat-thanh-6010"
+  },
+  {
+    "code": "6021",
+    "name": "Hoạt động truyền hình",
+    "slug": "hoat-dong-truyen-hinh-6021"
+  },
+  {
+    "code": "10201",
+    "name": "Chế biến và đóng hộp thuỷ sản",
+    "slug": "che-bien-va-dong-hop-thuy-san-10201"
+  },
+  {
+    "code": "6411",
+    "name": "Hoạt động ngân hàng trung ương",
+    "slug": "hoat-dong-ngan-hang-trung-uong-6411"
+  },
+  {
+    "code": "27102",
+    "name": "Sản xuất biến thế điện, thiết bị phân phối và điều khiển điện",
+    "slug": "san-xuat-bien-the-dien-thiet-bi-phan-phoi-va-dieu-khien-dien-27102"
+  },
+  {
+    "code": "01181",
+    "name": "Trồng rau các loại",
+    "slug": "trong-rau-cac-loai-01181"
+  },
+  {
+    "code": "37001",
+    "name": "Thoát nước",
+    "slug": "thoat-nuoc-37001"
+  },
+  {
+    "code": "20231",
+    "name": "Sản xuất mỹ phẩm",
+    "slug": "san-xuat-my-pham-20231"
+  },
+  {
+    "code": "70200",
+    "name": "Hoạt động tư vấn quản lý",
+    "slug": "hoat-dong-tu-van-quan-ly-70200"
+  },
+  {
+    "code": "77303",
+    "name": "Cho thuê máy móc, thiết bị văn phòng (kể cả máy vi tính)",
+    "slug": "cho-thue-may-moc-thiet-bi-van-phong-ke-ca-may-vi-tinh-77303"
+  },
+  {
+    "code": "3020",
+    "name": "Sản xuất đầu máy xe lửa, xe điện và toa xe",
+    "slug": "san-xuat-dau-may-xe-lua-xe-dien-va-toa-xe-3020"
+  },
+  {
+    "code": "46324",
+    "name": "Bán buôn cà phê",
+    "slug": "ban-buon-ca-phe-46324"
+  },
+  {
+    "code": "08101",
+    "name": "Khai thác đá",
+    "slug": "khai-thac-da-08101"
+  },
+  {
+    "code": "16292",
+    "name": "Sản xuất sản phẩm từ lâm sản (trừ gỗ), cói và vật liệu tết bện",
+    "slug": "san-xuat-san-pham-tu-lam-san-tru-go-coi-va-vat-lieu-tet-ben-16292"
+  },
+  {
+    "code": "33120",
+    "name": "Sửa chữa máy móc, thiết bị",
+    "slug": "sua-chua-may-moc-thiet-bi-33120"
+  },
+  {
+    "code": "93120",
+    "name": "Hoạt động của các câu lạc bộ thể thao",
+    "slug": "hoat-dong-cua-cac-cau-lac-bo-the-thao-93120"
+  },
+  {
+    "code": "85510",
+    "name": "Giáo dục thể thao và giải trí",
+    "slug": "giao-duc-the-thao-va-giai-tri-85510"
+  },
+  {
+    "code": "93110",
+    "name": "Hoạt động của các cơ sở thể thao",
+    "slug": "hoat-dong-cua-cac-co-so-the-thao-93110"
+  },
+  {
+    "code": "09100",
+    "name": "Hoạt động dịch vụ hỗ trợ khai thác dầu thô và khí tự nhiên",
+    "slug": "hoat-dong-dich-vu-ho-tro-khai-thac-dau-tho-va-khi-tu-nhien-09100"
+  },
+  {
+    "code": "36000",
+    "name": "Khai thác, xử lý và cung cấp nước",
+    "slug": "khai-thac-xu-ly-va-cung-cap-nuoc-36000"
+  },
+  {
+    "code": "33130",
+    "name": "Sửa chữa thiết bị điện tử và quang học",
+    "slug": "sua-chua-thiet-bi-dien-tu-va-quang-hoc-33130"
+  },
+  {
+    "code": "03110",
+    "name": "Khai thác thuỷ sản biển",
+    "slug": "khai-thac-thuy-san-bien-03110"
+  },
+  {
+    "code": "03121",
+    "name": "Khai thác thuỷ sản nước lợ",
+    "slug": "khai-thac-thuy-san-nuoc-lo-03121"
+  },
+  {
+    "code": "03122",
+    "name": "Khai thác thuỷ sản nước ngọt",
+    "slug": "khai-thac-thuy-san-nuoc-ngot-03122"
+  },
+  {
+    "code": "13120",
+    "name": "Sản xuất vải dệt thoi",
+    "slug": "san-xuat-vai-det-thoi-13120"
+  },
+  {
+    "code": "13110",
+    "name": "Sản xuất sợi",
+    "slug": "san-xuat-soi-13110"
+  },
+  {
+    "code": "13130",
+    "name": "Hoàn thiện sản phẩm dệt",
+    "slug": "hoan-thien-san-pham-det-13130"
+  },
+  {
+    "code": "13210",
+    "name": "Sản xuất vải dệt kim, vải đan móc và vải không dệt khác",
+    "slug": "san-xuat-vai-det-kim-vai-dan-moc-va-vai-khong-det-khac-13210"
+  },
+  {
+    "code": "45411",
+    "name": "Bán buôn mô tô, xe máy",
+    "slug": "ban-buon-mo-to-xe-may-45411"
+  },
+  {
+    "code": "45431",
+    "name": "Bán buôn phụ tùng và các bộ phận phụ trợ của mô tô, xe máy",
+    "slug": "ban-buon-phu-tung-va-cac-bo-phan-phu-tro-cua-mo-to-xe-may-45431"
+  },
+  {
+    "code": "17021",
+    "name": "Sản xuất bao bì bằng giấy, bìa",
+    "slug": "san-xuat-bao-bi-bang-giay-bia-17021"
+  },
+  {
+    "code": "1391",
+    "name": "Sản xuất vải dệt kim, vải đan móc và vải không dệt khác",
+    "slug": "san-xuat-vai-det-kim-vai-dan-moc-va-vai-khong-det-khac-1391"
+  },
+  {
+    "code": "1399",
+    "name": "Sản xuất các loại hàng dệt khác chưa được phân vào đâu",
+    "slug": "san-xuat-cac-loai-hang-det-khac-chua-duoc-phan-vao-dau-1399"
+  },
+  {
+    "code": "46411",
+    "name": "Bán buôn vải",
+    "slug": "ban-buon-vai-46411"
+  },
+  {
+    "code": "42101",
+    "name": "Xây dựng công trình đường sắt",
+    "slug": "xay-dung-cong-trinh-duong-sat-42101"
+  },
+  {
+    "code": "3511",
+    "name": "Sản xuất điện",
+    "slug": "san-xuat-dien-3511"
+  },
+  {
+    "code": "3512",
+    "name": "Truyền tải và phân phối điện",
+    "slug": "truyen-tai-va-phan-phoi-dien-3512"
+  },
+  {
+    "code": "28291",
+    "name": "Sản xuất máy sản xuất vật liệu xây dựng",
+    "slug": "san-xuat-may-san-xuat-vat-lieu-xay-dung-28291"
+  },
+  {
+    "code": "03222",
+    "name": "Nuôi trồng thuỷ sản nước ngọt",
+    "slug": "nuoi-trong-thuy-san-nuoc-ngot-03222"
+  },
+  {
+    "code": "08103",
+    "name": "Khai thác đất sét",
+    "slug": "khai-thac-dat-set-08103"
+  },
+  {
+    "code": "17090",
+    "name": "Sản xuất các sản phẩm khác từ giấy và bìa chưa được phân vào đâu",
+    "slug": "san-xuat-cac-san-pham-khac-tu-giay-va-bia-chua-duoc-phan-vao-dau-17090"
+  },
+  {
+    "code": "85600",
+    "name": "Dịch vụ hỗ trợ giáo dục",
+    "slug": "dich-vu-ho-tro-giao-duc-85600"
+  },
+  {
+    "code": "25991",
+    "name": "Sản xuất đồ dùng bằng kim loại cho nhà bếp, nhà vệ sinh và nhà ăn",
+    "slug": "san-xuat-do-dung-bang-kim-loai-cho-nha-bep-nha-ve-sinh-va-nha-an-25991"
+  },
+  {
+    "code": "85311",
+    "name": "Giáo dục trung học cơ sở",
+    "slug": "giao-duc-trung-hoc-co-so-85311"
+  },
+  {
+    "code": "85312",
+    "name": "Giáo dục trung học phổ thông",
+    "slug": "giao-duc-trung-hoc-pho-thong-85312"
+  },
+  {
+    "code": "85321",
+    "name": "Giáo dục trung cấp chuyên nghiệp",
+    "slug": "giao-duc-trung-cap-chuyen-nghiep-85321"
+  },
+  {
+    "code": "55902",
+    "name": "Chỗ nghỉ trọ trên xe lưu động, lều quán, trại dùng để nghỉ tạm",
+    "slug": "cho-nghi-tro-tren-xe-luu-dong-leu-quan-trai-dung-de-nghi-tam-55902"
+  },
+  {
+    "code": "45302",
+    "name": "Bán lẻ phụ tùng và các bộ phận phụ trợ của ô tô con (loại 12 chỗ ngồi trở xuống)",
+    "slug": "ban-le-phu-tung-va-cac-bo-phan-phu-tro-cua-o-to-con-loai-12-cho-ngoi-tro-xuong-45302"
+  },
+  {
+    "code": "45303",
+    "name": "Đại lý phụ tùng và các bộ phận phụ trợ của ô tô và xe có động cơ khác",
+    "slug": "dai-ly-phu-tung-va-cac-bo-phan-phu-tro-cua-o-to-va-xe-co-dong-co-khac-45303"
+  },
+  {
+    "code": "45432",
+    "name": "Bán lẻ phụ tùng và các bộ phận phụ trợ của mô tô, xe máy",
+    "slug": "ban-le-phu-tung-va-cac-bo-phan-phu-tro-cua-mo-to-xe-may-45432"
+  },
+  {
+    "code": "11020",
+    "name": "Sản xuất rượu vang",
+    "slug": "san-xuat-ruou-vang-11020"
+  },
+  {
+    "code": "31009",
+    "name": "Sản xuất giường, tủ, bàn, ghế bằng vật liệu khác",
+    "slug": "san-xuat-giuong-tu-ban-ghe-bang-vat-lieu-khac-31009"
+  },
+  {
+    "code": "32502",
+    "name": "Sản xuất dụng cụ chỉnh hình, phục hồi chức năng",
+    "slug": "san-xuat-dung-cu-chinh-hinh-phuc-hoi-chuc-nang-32502"
+  },
+  {
+    "code": "96310",
+    "name": "Cắt tóc, làm đầu, gội đầu",
+    "slug": "cat-toc-lam-dau-goi-dau-96310"
+  },
+  {
+    "code": "81210",
+    "name": "Vệ sinh chung nhà cửa",
+    "slug": "ve-sinh-chung-nha-cua-81210"
+  },
+  {
+    "code": "81300",
+    "name": "Dịch vụ chăm sóc và duy trì cảnh quan",
+    "slug": "dich-vu-cham-soc-va-duy-tri-canh-quan-81300"
+  },
+  {
+    "code": "96330",
+    "name": "Hoạt động dịch vụ phục vụ hôn lễ",
+    "slug": "hoat-dong-dich-vu-phuc-vu-hon-le-96330"
+  },
+  {
+    "code": "45413",
+    "name": "Đại lý mô tô, xe máy",
+    "slug": "dai-ly-mo-to-xe-may-45413"
+  },
+  {
+    "code": "46323",
+    "name": "Bán buôn rau, quả",
+    "slug": "ban-buon-rau-qua-46323"
+  },
+  {
+    "code": "27900",
+    "name": "Sản xuất thiết bị điện khác",
+    "slug": "san-xuat-thiet-bi-dien-khac-27900"
+  },
+  {
+    "code": "90000",
+    "name": "Hoạt động sáng tác, nghệ thuật và giải trí",
+    "slug": "hoat-dong-sang-tac-nghe-thuat-va-giai-tri-90000"
+  },
+  {
+    "code": "45119",
+    "name": "Bán buôn xe có động cơ khác",
+    "slug": "ban-buon-xe-co-dong-co-khac-45119"
+  },
+  {
+    "code": "45433",
+    "name": "Đại lý phụ tùng và các bộ phận phụ trợ của mô tô, xe máy",
+    "slug": "dai-ly-phu-tung-va-cac-bo-phan-phu-tro-cua-mo-to-xe-may-45433"
+  },
+  {
+    "code": "11030",
+    "name": "Sản xuất bia và mạch nha ủ men bia",
+    "slug": "san-xuat-bia-va-mach-nha-u-men-bia-11030"
+  },
+  {
+    "code": "77210",
+    "name": "Cho thuê thiết bị thể thao, vui chơi giải trí",
+    "slug": "cho-thue-thiet-bi-the-thao-vui-choi-giai-tri-77210"
+  },
+  {
+    "code": "10101",
+    "name": "Chế biến và đóng hộp thịt",
+    "slug": "che-bien-va-dong-hop-thit-10101"
+  },
+  {
+    "code": "10301",
+    "name": "Chế biến và đóng hộp rau quả",
+    "slug": "che-bien-va-dong-hop-rau-qua-10301"
+  },
+  {
+    "code": "10309",
+    "name": "Chế biến và bảo quản rau quả khác",
+    "slug": "che-bien-va-bao-quan-rau-qua-khac-10309"
+  },
+  {
+    "code": "96320",
+    "name": "Hoạt động dịch vụ phục vụ tang lễ",
+    "slug": "hoat-dong-dich-vu-phuc-vu-tang-le-96320"
+  },
+  {
+    "code": "55901",
+    "name": "Ký túc xá học sinh, sinh viên",
+    "slug": "ky-tuc-xa-hoc-sinh-sinh-vien-55901"
+  },
+  {
+    "code": "52239",
+    "name": "Hoạt động dịch vụ hỗ trợ trực tiếp khác cho vận tải hàng không",
+    "slug": "hoat-dong-dich-vu-ho-tro-truc-tiep-khac-cho-van-tai-hang-khong-52239"
+  },
+  {
+    "code": "85100",
+    "name": "Giáo dục mầm non",
+    "slug": "giao-duc-mam-non-85100"
+  },
+  {
+    "code": "25110",
+    "name": "Sản xuất các cấu kiện kim loại",
+    "slug": "san-xuat-cac-cau-kien-kim-loai-25110"
+  },
+  {
+    "code": "9499",
+    "name": "Hoạt động của các tổ chức khác chưa được phân vào đâu",
+    "slug": "hoat-dong-cua-cac-to-chuc-khac-chua-duoc-phan-vao-dau-9499"
+  },
+  {
+    "code": "3040",
+    "name": "Sản xuất xe cơ giới chiến đấu dùng trong quân đội",
+    "slug": "san-xuat-xe-co-gioi-chien-dau-dung-trong-quan-doi-3040"
+  },
+  {
+    "code": "14200",
+    "name": "Sản xuất sản phẩm từ da lông thú",
+    "slug": "san-xuat-san-pham-tu-da-long-thu-14200"
+  },
+  {
+    "code": "9820",
+    "name": "Hoạt động sản xuất các sản phẩm dịch vụ tự tiêu dùng của hộ gia đình",
+    "slug": "hoat-dong-san-xuat-cac-san-pham-dich-vu-tu-tieu-dung-cua-ho-gia-dinh-9820"
+  },
+  {
+    "code": "10611",
+    "name": "Xay xát",
+    "slug": "xay-xat-10611"
+  },
+  {
+    "code": "52109",
+    "name": "Kho bãi và lưu giữ hàng hóa trong kho khác",
+    "slug": "kho-bai-va-luu-giu-hang-hoa-trong-kho-khac-52109"
+  },
+  {
+    "code": "6621",
+    "name": "Đánh giá rủi ro và thiệt hại",
+    "slug": "danh-gia-rui-ro-va-thiet-hai-6621"
+  },
+  {
+    "code": "47610",
+    "name": "Bán lẻ sách, báo, tạp chí văn phòng phẩm trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-sach-bao-tap-chi-van-phong-pham-trong-cac-cua-hang-chuyen-doanh-47610"
+  },
+  {
+    "code": "10710",
+    "name": "Sản xuất các loại bánh từ bột",
+    "slug": "san-xuat-cac-loai-banh-tu-bot-10710"
+  },
+  {
+    "code": "47224",
+    "name": "Bán lẻ đường, sữa và các sản phẩm sữa, bánh, mứt, kẹo và các sản phẩm chế biến từ ngũ cốc, bột, tinh bột trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-duong-sua-va-cac-san-pham-sua-banh-mut-keo-va-cac-san-pham-che-bien-tu-ngu-coc-bot-tinh-bot-trong-cac-cua-hang-chuyen-doanh-47224"
+  },
+  {
+    "code": "64300",
+    "name": "Hoạt động quỹ tín thác, các quỹ và các tổ chức tài chính khác",
+    "slug": "hoat-dong-quy-tin-thac-cac-quy-va-cac-to-chuc-tai-chinh-khac-64300"
+  },
+  {
+    "code": "14100",
+    "name": "May trang phục (trừ trang phục từ da lông thú)",
+    "slug": "may-trang-phuc-tru-trang-phuc-tu-da-long-thu-14100"
+  },
+  {
+    "code": "47199",
+    "name": "Bán lẻ khác chưa được phân vào đâu trong các cửa hàng kinh doanh tổng hợp",
+    "slug": "ban-le-khac-chua-duoc-phan-vao-dau-trong-cac-cua-hang-kinh-doanh-tong-hop-47199"
+  },
+  {
+    "code": "6430",
+    "name": "Hoạt động quỹ tín thác, các quỹ và các tổ chức tài chính khác",
+    "slug": "hoat-dong-quy-tin-thac-cac-quy-va-cac-to-chuc-tai-chinh-khac-6430"
+  },
+  {
+    "code": "68100",
+    "name": "Kinh doanh bất động sản, quyền sử dụng đất thuộc chủ sở hữu, chủ sử dụng hoặc đi thuê",
+    "slug": "kinh-doanh-bat-dong-san-quyen-su-dung-dat-thuoc-chu-so-huu-chu-su-dung-hoac-di-thue-68100"
+  },
+  {
+    "code": "4921",
+    "name": "Vận tải hành khách bằng xe buýt trong nội thành",
+    "slug": "van-tai-hanh-khach-bang-xe-buyt-trong-noi-thanh-4921"
+  },
+  {
+    "code": "4922",
+    "name": "Vận tải hành khách bằng xe buýt giữa nội thành và ngoại thành, liên tỉnh",
+    "slug": "van-tai-hanh-khach-bang-xe-buyt-giua-noi-thanh-va-ngoai-thanh-lien-tinh-4922"
+  },
+  {
+    "code": "0231",
+    "name": "Khai thác lâm sản khác trừ gỗ",
+    "slug": "khai-thac-lam-san-khac-tru-go-0231"
+  },
+  {
+    "code": "0232",
+    "name": "Thu nhặt lâm sản khác trừ gỗ",
+    "slug": "thu-nhat-lam-san-khac-tru-go-0232"
+  },
+  {
+    "code": "63110",
+    "name": "Xử lý dữ liệu, cho thuê và các hoạt động liên quan",
+    "slug": "xu-ly-du-lieu-cho-thue-va-cac-hoat-dong-lien-quan-63110"
+  },
+  {
+    "code": "63290",
+    "name": "Dịch vụ thông tin khác chưa được phân vào đâu",
+    "slug": "dich-vu-thong-tin-khac-chua-duoc-phan-vao-dau-63290"
+  },
+  {
+    "code": "63120",
+    "name": "Cổng thông tin",
+    "slug": "cong-thong-tin-63120"
+  },
+  {
+    "code": "74909",
+    "name": "Hoạt động chuyên môn, khoa học và công nghệ khác còn lại chưa được phân vào đâu",
+    "slug": "hoat-dong-chuyen-mon-khoa-hoc-va-cong-nghe-khac-con-lai-chua-duoc-phan-vao-dau-74909"
+  },
+  {
+    "code": "6630",
+    "name": "Hoạt động quản lý quỹ",
+    "slug": "hoat-dong-quan-ly-quy-6630"
+  },
+  {
+    "code": "10204",
+    "name": "Chế biến và bảo quản nước mắm",
+    "slug": "che-bien-va-bao-quan-nuoc-mam-10204"
+  },
+  {
+    "code": "8543",
+    "name": "Đào tạo tiến sỹ",
+    "slug": "dao-tao-tien-sy-8543"
+  },
+  {
+    "code": "6611",
+    "name": "Quản lý thị trường tài chính",
+    "slug": "quan-ly-thi-truong-tai-chinh-6611"
+  },
+  {
+    "code": "8423",
+    "name": "Hoạt động an ninh, trật tự, an toàn xã hội",
+    "slug": "hoat-dong-an-ninh-trat-tu-an-toan-xa-hoi-8423"
+  },
+  {
+    "code": "59113",
+    "name": "Hoạt động sản xuất chương trình truyền hình",
+    "slug": "hoat-dong-san-xuat-chuong-trinh-truyen-hinh-59113"
+  },
+  {
+    "code": "35102",
+    "name": "Truyền tải và phân phối điện",
+    "slug": "truyen-tai-va-phan-phoi-dien-35102"
+  },
+  {
+    "code": "20221",
+    "name": "Sản xuất sơn, véc ni và các chất sơn, quét tương tự, ma tít",
+    "slug": "san-xuat-son-vec-ni-va-cac-chat-son-quet-tuong-tu-ma-tit-20221"
+  },
+  {
+    "code": "32501",
+    "name": "Sản xuất thiết bị, dụng cụ y tế, nha khoa",
+    "slug": "san-xuat-thiet-bi-dung-cu-y-te-nha-khoa-32501"
+  },
+  {
+    "code": "3030",
+    "name": "Sản xuất máy bay, tàu vũ trụ và máy móc liên quan",
+    "slug": "san-xuat-may-bay-tau-vu-tru-va-may-moc-lien-quan-3030"
+  },
+  {
+    "code": "17010",
+    "name": "Sản xuất bột giấy, giấy và bìa",
+    "slug": "san-xuat-bot-giay-giay-va-bia-17010"
+  },
+  {
+    "code": "17022",
+    "name": "Sản xuất giấy nhăn và bìa nhăn",
+    "slug": "san-xuat-giay-nhan-va-bia-nhan-17022"
+  },
+  {
+    "code": "22201",
+    "name": "Sản xuất bao bì từ plastic",
+    "slug": "san-xuat-bao-bi-tu-plastic-22201"
+  },
+  {
+    "code": "01260",
+    "name": "Trồng cây cà phê",
+    "slug": "trong-cay-ca-phe-01260"
+  },
+  {
+    "code": "96390",
+    "name": "Hoạt động dịch vụ phục vụ cá nhân khác còn lại chưa được phân vào đâu",
+    "slug": "hoat-dong-dich-vu-phuc-vu-ca-nhan-khac-con-lai-chua-duoc-phan-vao-dau-96390"
+  },
+  {
+    "code": "9900",
+    "name": "Hoạt động của các tổ chức và cơ quan quốc tế",
+    "slug": "hoat-dong-cua-cac-to-chuc-va-co-quan-quoc-te-9900"
+  },
+  {
+    "code": "47910",
+    "name": "Bán lẻ theo yêu cầu đặt hàng qua bưu điện hoặc internet",
+    "slug": "ban-le-theo-yeu-cau-dat-hang-qua-buu-dien-hoac-internet-47910"
+  },
+  {
+    "code": "07100",
+    "name": "Khai thác quặng sắt",
+    "slug": "khai-thac-quang-sat-07100"
+  },
+  {
+    "code": "07300",
+    "name": "Khai thác quặng kim loại quí hiếm",
+    "slug": "khai-thac-quang-kim-loai-qui-hiem-07300"
+  },
+  {
+    "code": "33190",
+    "name": "Sửa chữa thiết bị khác",
+    "slug": "sua-chua-thiet-bi-khac-33190"
+  },
+  {
+    "code": "35101",
+    "name": "Sản xuất điện",
+    "slug": "san-xuat-dien-35101"
+  },
+  {
+    "code": "8412",
+    "name": "Hoạt động quản lý nhà nước trong các lĩnh vực y tế, giáo dục, văn hoá và các dịch vụ xã hội khác (trừ bảo đảm xã hội bắt buộc)",
+    "slug": "hoat-dong-quan-ly-nha-nuoc-trong-cac-linh-vuc-y-te-giao-duc-van-hoa-va-cac-dich-vu-xa-hoi-khac-tru-bao-dam-xa-hoi-bat-buoc-8412"
+  },
+  {
+    "code": "2219",
+    "name": "Sản xuất sản phẩm khác từ cao su",
+    "slug": "san-xuat-san-pham-khac-tu-cao-su-2219"
+  },
+  {
+    "code": "9412",
+    "name": "Hoạt động của các hội nghề nghiệp",
+    "slug": "hoat-dong-cua-cac-hoi-nghe-nghiep-9412"
+  },
+  {
+    "code": "92001",
+    "name": "Hoạt động xổ số",
+    "slug": "hoat-dong-xo-so-92001"
+  },
+  {
+    "code": "22120",
+    "name": "Sản xuất sản phẩm khác từ cao su",
+    "slug": "san-xuat-san-pham-khac-tu-cao-su-22120"
+  },
+  {
+    "code": "93210",
+    "name": "Hoạt động của các công viên vui chơi và công viên theo chủ đề",
+    "slug": "hoat-dong-cua-cac-cong-vien-vui-choi-va-cong-vien-theo-chu-de-93210"
+  },
+  {
+    "code": "26100",
+    "name": "Sản xuất linh kiện điện tử",
+    "slug": "san-xuat-linh-kien-dien-tu-26100"
+  },
+  {
+    "code": "26300",
+    "name": "Sản xuất thiết bị truyền thông",
+    "slug": "san-xuat-thiet-bi-truyen-thong-26300"
+  },
+  {
+    "code": "26200",
+    "name": "Sản xuất máy vi tính và thiết bị ngoại vi của máy vi tính",
+    "slug": "san-xuat-may-vi-tinh-va-thiet-bi-ngoai-vi-cua-may-vi-tinh-26200"
+  },
+  {
+    "code": "49334",
+    "name": "Vận tải hàng hóa bằng xe thô sơ",
+    "slug": "van-tai-hang-hoa-bang-xe-tho-so-49334"
+  },
+  {
+    "code": "49333",
+    "name": "Vận tải hàng hóa bằng xe lam, xe lôi, xe công nông",
+    "slug": "van-tai-hang-hoa-bang-xe-lam-xe-loi-xe-cong-nong-49333"
+  },
+  {
+    "code": "8810",
+    "name": "Hoạt động trợ giúp xã hội không tập trung đối với người có công, thương bệnh binh, người già và người tàn tật",
+    "slug": "hoat-dong-tro-giup-xa-hoi-khong-tap-trung-doi-voi-nguoi-co-cong-thuong-benh-binh-nguoi-gia-va-nguoi-tan-tat-8810"
+  },
+  {
+    "code": "26400",
+    "name": "Sản xuất sản phẩm điện tử dân dụng",
+    "slug": "san-xuat-san-pham-dien-tu-dan-dung-26400"
+  },
+  {
+    "code": "33140",
+    "name": "Sửa chữa thiết bị điện",
+    "slug": "sua-chua-thiet-bi-dien-33140"
+  },
+  {
+    "code": "47737",
+    "name": "Bán lẻ máy ảnh, phim ảnh và vật liệu ảnh trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-may-anh-phim-anh-va-vat-lieu-anh-trong-cac-cua-hang-chuyen-doanh-47737"
+  },
+  {
+    "code": "1076",
+    "name": "Sản xuất chè",
+    "slug": "san-xuat-che-1076"
+  },
+  {
+    "code": "1077",
+    "name": "Sản xuất cà phê",
+    "slug": "san-xuat-ca-phe-1077"
+  },
+  {
+    "code": "46321",
+    "name": "Bán buôn thịt và các sản phẩm từ thịt",
+    "slug": "ban-buon-thit-va-cac-san-pham-tu-thit-46321"
+  },
+  {
+    "code": "23960",
+    "name": "Cắt tạo dáng và hoàn thiện đá",
+    "slug": "cat-tao-dang-va-hoan-thien-da-23960"
+  },
+  {
+    "code": "47630",
+    "name": "Bán lẻ thiết bị, dụng cụ thể dục, thể thao trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-thiet-bi-dung-cu-the-duc-the-thao-trong-cac-cua-hang-chuyen-doanh-47630"
+  },
+  {
+    "code": "47713",
+    "name": "Bán lẻ cặp, túi, ví, hàng da và giả da khác trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-cap-tui-vi-hang-da-va-gia-da-khac-trong-cac-cua-hang-chuyen-doanh-47713"
+  },
+  {
+    "code": "52244",
+    "name": "Bốc xếp hàng hóa cảng sông",
+    "slug": "boc-xep-hang-hoa-cang-song-52244"
+  },
+  {
+    "code": "52243",
+    "name": "Bốc xếp hàng hóa cảng biển",
+    "slug": "boc-xep-hang-hoa-cang-bien-52243"
+  },
+  {
+    "code": "13220",
+    "name": "Sản xuất hàng may sẵn (trừ trang phục)",
+    "slug": "san-xuat-hang-may-san-tru-trang-phuc-13220"
+  },
+  {
+    "code": "47594",
+    "name": "Bán lẻ nhạc cụ trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-nhac-cu-trong-cac-cua-hang-chuyen-doanh-47594"
+  },
+  {
+    "code": "01630",
+    "name": "Hoạt động dịch vụ sau thu hoạch",
+    "slug": "hoat-dong-dich-vu-sau-thu-hoach-01630"
+  },
+  {
+    "code": "02103",
+    "name": "Trồng rừng và chăm sóc rừng tre, nứa",
+    "slug": "trong-rung-va-cham-soc-rung-tre-nua-02103"
+  },
+  {
+    "code": "74100",
+    "name": "Hoạt động thiết kế chuyên dụng",
+    "slug": "hoat-dong-thiet-ke-chuyen-dung-74100"
+  },
+  {
+    "code": "47738",
+    "name": "Bán lẻ xe đạp và phụ tùng trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-xe-dap-va-phu-tung-trong-cac-cua-hang-chuyen-doanh-47738"
+  },
+  {
+    "code": "47741",
+    "name": "Bán lẻ hàng may mặc đã qua sử dụng trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-hang-may-mac-da-qua-su-dung-trong-cac-cua-hang-chuyen-doanh-47741"
+  },
+  {
+    "code": "47891",
+    "name": "Bán lẻ mỹ phẩm và vật phẩm vệ sinh lưu động hoặc tại chợ",
+    "slug": "ban-le-my-pham-va-vat-pham-ve-sinh-luu-dong-hoac-tai-cho-47891"
+  },
+  {
+    "code": "47892",
+    "name": "Bán lẻ hàng gốm sứ, thủy tinh lưu động hoặc tại chợ",
+    "slug": "ban-le-hang-gom-su-thuy-tinh-luu-dong-hoac-tai-cho-47892"
+  },
+  {
+    "code": "47893",
+    "name": "Bán lẻ hoa tươi, cây cảnh lưu động hoặc tại chợ",
+    "slug": "ban-le-hoa-tuoi-cay-canh-luu-dong-hoac-tai-cho-47893"
+  },
+  {
+    "code": "50222",
+    "name": "Vận tải hàng hóa đường thuỷ nội địa bằng phương tiện thô sơ",
+    "slug": "van-tai-hang-hoa-duong-thuy-noi-dia-bang-phuong-tien-tho-so-50222"
+  },
+  {
+    "code": "47721",
+    "name": "Bán lẻ dược phẩm, dụng cụ y tế trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-duoc-pham-dung-cu-y-te-trong-cac-cua-hang-chuyen-doanh-47721"
+  },
+  {
+    "code": "77290",
+    "name": "Cho thuê đồ dùng cá nhân và gia đình khác",
+    "slug": "cho-thue-do-dung-ca-nhan-va-gia-dinh-khac-77290"
+  },
+  {
+    "code": "29200",
+    "name": "Sản xuất thân xe có động cơ, rơ moóc và bán rơ moóc",
+    "slug": "san-xuat-than-xe-co-dong-co-ro-mooc-va-ban-ro-mooc-29200"
+  },
+  {
+    "code": "32300",
+    "name": "Sản xuất dụng cụ thể dục, thể thao",
+    "slug": "san-xuat-dung-cu-the-duc-the-thao-32300"
+  },
+  {
+    "code": "38210",
+    "name": "Xử lý và tiêu huỷ rác thải không độc hại",
+    "slug": "xu-ly-va-tieu-huy-rac-thai-khong-doc-hai-38210"
+  },
+  {
+    "code": "38110",
+    "name": "Thu gom rác thải không độc hại",
+    "slug": "thu-gom-rac-thai-khong-doc-hai-38110"
+  },
+  {
+    "code": "10202",
+    "name": "Chế biến và bảo quản thuỷ sản đông lạnh",
+    "slug": "che-bien-va-bao-quan-thuy-san-dong-lanh-10202"
+  },
+  {
+    "code": "10203",
+    "name": "Chế biến và bảo quản thuỷ sản khô",
+    "slug": "che-bien-va-bao-quan-thuy-san-kho-10203"
+  },
+  {
+    "code": "32400",
+    "name": "Sản xuất đồ chơi, trò chơi",
+    "slug": "san-xuat-do-choi-tro-choi-32400"
+  },
+  {
+    "code": "10800",
+    "name": "Sản xuất thức ăn gia súc, gia cầm và thuỷ sản",
+    "slug": "san-xuat-thuc-an-gia-suc-gia-cam-va-thuy-san-10800"
+  },
+  {
+    "code": "95210",
+    "name": "Sửa chữa thiết bị nghe nhìn điện tử gia dụng",
+    "slug": "sua-chua-thiet-bi-nghe-nhin-dien-tu-gia-dung-95210"
+  },
+  {
+    "code": "10209",
+    "name": "Chế biến, bảo quản thuỷ sản và các sản phẩm từ thuỷ sản khác",
+    "slug": "che-bien-bao-quan-thuy-san-va-cac-san-pham-tu-thuy-san-khac-10209"
+  },
+  {
+    "code": "23910",
+    "name": "Sản xuất sản phẩm chịu lửa",
+    "slug": "san-xuat-san-pham-chiu-lua-23910"
+  },
+  {
+    "code": "25120",
+    "name": "Sản xuất thùng, bể chứa và dụng cụ chứa đựng bằng kim loại",
+    "slug": "san-xuat-thung-be-chua-va-dung-cu-chua-dung-bang-kim-loai-25120"
+  },
+  {
+    "code": "8720",
+    "name": "Hoạt động chăm sóc sức khoẻ người bị thiểu năng, tâm thần và người nghiện",
+    "slug": "hoat-dong-cham-soc-suc-khoe-nguoi-bi-thieu-nang-tam-than-va-nguoi-nghien-8720"
+  },
+  {
+    "code": "10109",
+    "name": "Chế biến và bảo quản thịt và các sản phẩm từ thịt khác",
+    "slug": "che-bien-va-bao-quan-thit-va-cac-san-pham-tu-thit-khac-10109"
+  },
+  {
+    "code": "19100",
+    "name": "Sản xuất than cốc",
+    "slug": "san-xuat-than-coc-19100"
+  },
+  {
+    "code": "10620",
+    "name": "Sản xuất tinh bột và các sản phẩm từ tinh bột",
+    "slug": "san-xuat-tinh-bot-va-cac-san-pham-tu-tinh-bot-10620"
+  },
+  {
+    "code": "47523",
+    "name": "Bán lẻ kính xây dựng trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-kinh-xay-dung-trong-cac-cua-hang-chuyen-doanh-47523"
+  },
+  {
+    "code": "58200",
+    "name": "Xuất bản phần mềm",
+    "slug": "xuat-ban-phan-mem-58200"
+  },
+  {
+    "code": "24100",
+    "name": "Sản xuất sắt, thép, gang",
+    "slug": "san-xuat-sat-thep-gang-24100"
+  },
+  {
+    "code": "23990",
+    "name": "Sản xuất sản phẩm từ chất khoáng phi kim loại khác chưa được phân vào đâu",
+    "slug": "san-xuat-san-pham-tu-chat-khoang-phi-kim-loai-khac-chua-duoc-phan-vao-dau-23990"
+  },
+  {
+    "code": "50211",
+    "name": "Vận tải hành khách đường thuỷ nội địa bằng phương tiện cơ giới",
+    "slug": "van-tai-hanh-khach-duong-thuy-noi-dia-bang-phuong-tien-co-gioi-50211"
+  },
+  {
+    "code": "50111",
+    "name": "Vận tải hành khách ven biển",
+    "slug": "van-tai-hanh-khach-ven-bien-50111"
+  },
+  {
+    "code": "71200",
+    "name": "Kiểm tra và phân tích kỹ thuật",
+    "slug": "kiem-tra-va-phan-tich-ky-thuat-71200"
+  },
+  {
+    "code": "20132",
+    "name": "Sản xuất cao su tổng hợp dạng nguyên sinh",
+    "slug": "san-xuat-cao-su-tong-hop-dang-nguyen-sinh-20132"
+  },
+  {
+    "code": "15120",
+    "name": "Sản xuất vali, túi xách và các loại tương tự, sản xuất yên đệm",
+    "slug": "san-xuat-vali-tui-xach-va-cac-loai-tuong-tu-san-xuat-yen-dem-15120"
+  },
+  {
+    "code": "61100",
+    "name": "Hoạt động viễn thông có dây",
+    "slug": "hoat-dong-vien-thong-co-day-61100"
+  },
+  {
+    "code": "47221",
+    "name": "Bán lẻ thịt và các sản phẩm thịt trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-thit-va-cac-san-pham-thit-trong-cac-cua-hang-chuyen-doanh-47221"
+  },
+  {
+    "code": "03221",
+    "name": "Nuôi trồng thuỷ sản nước lợ",
+    "slug": "nuoi-trong-thuy-san-nuoc-lo-03221"
+  },
+  {
+    "code": "47521",
+    "name": "Bán lẻ đồ ngũ kim trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-do-ngu-kim-trong-cac-cua-hang-chuyen-doanh-47521"
+  },
+  {
+    "code": "7222",
+    "name": "Nghiên cứu khoa học và phát triển công nghệ trong lĩnh vực khoa học nhân văn",
+    "slug": "nghien-cuu-khoa-hoc-va-phat-trien-cong-nghe-trong-linh-vuc-khoa-hoc-nhan-van-7222"
+  },
+  {
+    "code": "07229",
+    "name": "Khai thác quặng kim loại khác không chứa sắt chưa được phân vào đâu",
+    "slug": "khai-thac-quang-kim-loai-khac-khong-chua-sat-chua-duoc-phan-vao-dau-07229"
+  },
+  {
+    "code": "52102",
+    "name": "Kho bãi và lưu giữ hàng hóa trong kho đông lạnh (trừ kho ngoại quan)",
+    "slug": "kho-bai-va-luu-giu-hang-hoa-trong-kho-dong-lanh-tru-kho-ngoai-quan-52102"
+  },
+  {
+    "code": "38301",
+    "name": "Tái chế phế liệu kim loại",
+    "slug": "tai-che-phe-lieu-kim-loai-38301"
+  },
+  {
+    "code": "47711",
+    "name": "Bán lẻ hàng may mặc trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-hang-may-mac-trong-cac-cua-hang-chuyen-doanh-47711"
+  },
+  {
+    "code": "46621",
+    "name": "Bán buôn quặng kim loại",
+    "slug": "ban-buon-quang-kim-loai-46621"
+  },
+  {
+    "code": "20110",
+    "name": "Sản xuất hoá chất cơ bản",
+    "slug": "san-xuat-hoa-chat-co-ban-20110"
+  },
+  {
+    "code": "20120",
+    "name": "Sản xuất phân bón và hợp chất ni tơ",
+    "slug": "san-xuat-phan-bon-va-hop-chat-ni-to-20120"
+  },
+  {
+    "code": "30120",
+    "name": "Đóng thuyền, xuồng thể thao và giải trí",
+    "slug": "dong-thuyen-xuong-the-thao-va-giai-tri-30120"
+  },
+  {
+    "code": "37002",
+    "name": "Xử lý nước thải",
+    "slug": "xu-ly-nuoc-thai-37002"
+  },
+  {
+    "code": "03210",
+    "name": "Nuôi trồng thuỷ sản biển",
+    "slug": "nuoi-trong-thuy-san-bien-03210"
+  },
+  {
+    "code": "38121",
+    "name": "Thu gom rác thải y tế",
+    "slug": "thu-gom-rac-thai-y-te-38121"
+  },
+  {
+    "code": "46103",
+    "name": "Đấu giá",
+    "slug": "dau-gia-46103"
+  },
+  {
+    "code": "59112",
+    "name": "Hoạt động sản xuất phim video",
+    "slug": "hoat-dong-san-xuat-phim-video-59112"
+  },
+  {
+    "code": "21002",
+    "name": "Sản xuất hoá dược và dược liệu",
+    "slug": "san-xuat-hoa-duoc-va-duoc-lieu-21002"
+  },
+  {
+    "code": "73200",
+    "name": "Nghiên cứu thị trường và thăm dò dư luận",
+    "slug": "nghien-cuu-thi-truong-va-tham-do-du-luan-73200"
+  },
+  {
+    "code": "81100",
+    "name": "Dịch vụ hỗ trợ tổng hợp",
+    "slug": "dich-vu-ho-tro-tong-hop-81100"
+  },
+  {
+    "code": "66120",
+    "name": "Môi giới hợp đồng hàng hoá và chứng khoán",
+    "slug": "moi-gioi-hop-dong-hang-hoa-va-chung-khoan-66120"
+  },
+  {
+    "code": "49200",
+    "name": "Vận tải bằng xe buýt",
+    "slug": "van-tai-bang-xe-buyt-49200"
+  },
+  {
+    "code": "86102",
+    "name": "Hoạt động của các trạm y tế cấp xã và trạm y tế bộ/ngành",
+    "slug": "hoat-dong-cua-cac-tram-y-te-cap-xa-va-tram-y-te-bo-nganh-86102"
+  },
+  {
+    "code": "52231",
+    "name": "Dịch vụ điều hành bay",
+    "slug": "dich-vu-dieu-hanh-bay-52231"
+  },
+  {
+    "code": "96200",
+    "name": "Giặt là, làm sạch các sản phẩm dệt và lông thú",
+    "slug": "giat-la-lam-sach-cac-san-pham-det-va-long-thu-96200"
+  },
+  {
+    "code": "28299",
+    "name": "Sản xuất máy chuyên dụng khác chưa được phân vào đâu",
+    "slug": "san-xuat-may-chuyen-dung-khac-chua-duoc-phan-vao-dau-28299"
+  },
+  {
+    "code": "08990",
+    "name": "Khai khoáng khác chưa được phân vào đâu",
+    "slug": "khai-khoang-khac-chua-duoc-phan-vao-dau-08990"
+  },
+  {
+    "code": "25910",
+    "name": "Rèn, dập, ép và cán kim loại; luyện bột kim loại",
+    "slug": "ren-dap-ep-va-can-kim-loai-luyen-bot-kim-loai-25910"
+  },
+  {
+    "code": "52221",
+    "name": "Hoạt động dịch vụ hỗ trợ trực tiếp cho vận tải ven biển và viễn dương",
+    "slug": "hoat-dong-dich-vu-ho-tro-truc-tiep-cho-van-tai-ven-bien-va-vien-duong-52221"
+  },
+  {
+    "code": "01461",
+    "name": "Hoạt động ấp trứng và sản xuất giống gia cầm",
+    "slug": "hoat-dong-ap-trung-va-san-xuat-giong-gia-cam-01461"
+  },
+  {
+    "code": "01620",
+    "name": "Hoạt động dịch vụ chăn nuôi",
+    "slug": "hoat-dong-dich-vu-chan-nuoi-01620"
+  },
+  {
+    "code": "7221",
+    "name": "Nghiên cứu khoa học và phát triển công nghệ trong lĩnh vực khoa học xã hội",
+    "slug": "nghien-cuu-khoa-hoc-va-phat-trien-cong-nghe-trong-linh-vuc-khoa-hoc-xa-hoi-7221"
+  },
+  {
+    "code": "4784",
+    "name": "Bán lẻ thiết bị gia đình khác lưu động hoặc tại chợ",
+    "slug": "ban-le-thiet-bi-gia-dinh-khac-luu-dong-hoac-tai-cho-4784"
+  },
+  {
+    "code": "02109",
+    "name": "Trồng rừng và chăm sóc rừng khác",
+    "slug": "trong-rung-va-cham-soc-rung-khac-02109"
+  },
+  {
+    "code": "9411",
+    "name": "Hoạt động của các hiệp hội kinh doanh và nghiệp chủ",
+    "slug": "hoat-dong-cua-cac-hiep-hoi-kinh-doanh-va-nghiep-chu-9411"
+  },
+  {
+    "code": "47990",
+    "name": "Bán lẻ hình thức khác chưa được phân vào đâu",
+    "slug": "ban-le-hinh-thuc-khac-chua-duoc-phan-vao-dau-47990"
+  },
+  {
+    "code": "11010",
+    "name": "Chưng, tinh cất và pha chế các loại rượu mạnh",
+    "slug": "chung-tinh-cat-va-pha-che-cac-loai-ruou-manh-11010"
+  },
+  {
+    "code": "95120",
+    "name": "Sửa chữa thiết bị liên lạc",
+    "slug": "sua-chua-thiet-bi-lien-lac-95120"
+  },
+  {
+    "code": "01300",
+    "name": "Nhân và chăm sóc cây giống nông nghiệp",
+    "slug": "nhan-va-cham-soc-cay-giong-nong-nghiep-01300"
+  },
+  {
+    "code": "4783",
+    "name": "Bán lẻ thiết bị công nghệ thông tin liên lạc lưu động hoặc tại chợ",
+    "slug": "ban-le-thiet-bi-cong-nghe-thong-tin-lien-lac-luu-dong-hoac-tai-cho-4783"
+  },
+  {
+    "code": "4785",
+    "name": "Bán lẻ hàng văn hóa, giải trí lưu động hoặc tại chợ",
+    "slug": "ban-le-hang-van-hoa-giai-tri-luu-dong-hoac-tai-cho-4785"
+  },
+  {
+    "code": "47811",
+    "name": "Bán lẻ lương thực lưu động hoặc tại chợ",
+    "slug": "ban-le-luong-thuc-luu-dong-hoac-tai-cho-47811"
+  },
+  {
+    "code": "28240",
+    "name": "Sản xuất máy khai thác mỏ và xây dựng",
+    "slug": "san-xuat-may-khai-thac-mo-va-xay-dung-28240"
+  },
+  {
+    "code": "61200",
+    "name": "Hoạt động viễn thông không dây",
+    "slug": "hoat-dong-vien-thong-khong-day-61200"
+  },
+  {
+    "code": "47749",
+    "name": "Bán lẻ hàng hóa khác đã qua sử dụng trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-hang-hoa-khac-da-qua-su-dung-trong-cac-cua-hang-chuyen-doanh-47749"
+  },
+  {
+    "code": "8422",
+    "name": "Hoạt động quốc phòng",
+    "slug": "hoat-dong-quoc-phong-8422"
+  },
+  {
+    "code": "28110",
+    "name": "Sản xuất động cơ, tua bin (trừ động cơ máy bay, ô tô, mô tô và xe máy)",
+    "slug": "san-xuat-dong-co-tua-bin-tru-dong-co-may-bay-o-to-mo-to-va-xe-may-28110"
+  },
+  {
+    "code": "35301",
+    "name": "Sản xuất, phân phối hơi nước, nước nóng và điều hoà không khí",
+    "slug": "san-xuat-phan-phoi-hoi-nuoc-nuoc-nong-va-dieu-hoa-khong-khi-35301"
+  },
+  {
+    "code": "58130",
+    "name": "Xuất bản báo, tạp chí và các ấn phẩm định kỳ",
+    "slug": "xuat-ban-bao-tap-chi-va-cac-an-pham-dinh-ky-58130"
+  },
+  {
+    "code": "8030",
+    "name": "Dịch vụ điều tra",
+    "slug": "dich-vu-dieu-tra-8030"
+  },
+  {
+    "code": "10750",
+    "name": "Sản xuất món ăn, thức ăn chế biến sẵn",
+    "slug": "san-xuat-mon-an-thuc-an-che-bien-san-10750"
+  },
+  {
+    "code": "23930",
+    "name": "Sản xuất sản phẩm gốm sứ khác",
+    "slug": "san-xuat-san-pham-gom-su-khac-23930"
+  },
+  {
+    "code": "35200",
+    "name": "Sản xuất khí đốt, phân phối nhiên liệu khí bằng đường ống",
+    "slug": "san-xuat-khi-dot-phan-phoi-nhien-lieu-khi-bang-duong-ong-35200"
+  },
+  {
+    "code": "80100",
+    "name": "Hoạt động bảo vệ cá nhân",
+    "slug": "hoat-dong-bao-ve-ca-nhan-80100"
+  },
+  {
+    "code": "47511",
+    "name": "Bán lẻ vải trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-vai-trong-cac-cua-hang-chuyen-doanh-47511"
+  },
+  {
+    "code": "47519",
+    "name": "Bán lẻ len, sợi, chỉ khâu và hàng dệt khác trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-len-soi-chi-khau-va-hang-det-khac-trong-cac-cua-hang-chuyen-doanh-47519"
+  },
+  {
+    "code": "47712",
+    "name": "Bán lẻ giày dép trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-giay-dep-trong-cac-cua-hang-chuyen-doanh-47712"
+  },
+  {
+    "code": "52211",
+    "name": "Hoạt động dịch vụ hỗ trợ trực tiếp cho vận tải đường sắt",
+    "slug": "hoat-dong-dich-vu-ho-tro-truc-tiep-cho-van-tai-duong-sat-52211"
+  },
+  {
+    "code": "47899",
+    "name": "Bán lẻ hàng hóa khác chưa được phân vào đâu, lưu động hoặc tại chợ",
+    "slug": "ban-le-hang-hoa-khac-chua-duoc-phan-vao-dau-luu-dong-hoac-tai-cho-47899"
+  },
+  {
+    "code": "2520",
+    "name": "Sản xuất vũ khí và đạn dược",
+    "slug": "san-xuat-vu-khi-va-dan-duoc-2520"
+  },
+  {
+    "code": "47822",
+    "name": "Bán lẻ hàng may sẵn lưu động hoặc tại chợ",
+    "slug": "ban-le-hang-may-san-luu-dong-hoac-tai-cho-47822"
+  },
+  {
+    "code": "23100",
+    "name": "Sản xuất thuỷ tinh và sản phẩm từ thuỷ tinh",
+    "slug": "san-xuat-thuy-tinh-va-san-pham-tu-thuy-tinh-23100"
+  },
+  {
+    "code": "01500",
+    "name": "Trồng trọt, chăn nuôi hỗn hợp",
+    "slug": "trong-trot-chan-nuoi-hon-hop-01500"
+  },
+  {
+    "code": "14300",
+    "name": "Sản xuất trang phục dệt kim, đan móc",
+    "slug": "san-xuat-trang-phuc-det-kim-dan-moc-14300"
+  },
+  {
+    "code": "29300",
+    "name": "Sản xuất phụ tùng và bộ phận phụ trợ cho xe có động cơ",
+    "slug": "san-xuat-phu-tung-va-bo-phan-phu-tro-cho-xe-co-dong-co-29300"
+  },
+  {
+    "code": "86101",
+    "name": "Hoạt động của các bệnh viện",
+    "slug": "hoat-dong-cua-cac-benh-vien-86101"
+  },
+  {
+    "code": "66220",
+    "name": "Hoạt động của đại lý và môi giới bảo hiểm",
+    "slug": "hoat-dong-cua-dai-ly-va-moi-gioi-bao-hiem-66220"
+  },
+  {
+    "code": "86990",
+    "name": "Hoạt động y tế khác chưa được phân vào đâu",
+    "slug": "hoat-dong-y-te-khac-chua-duoc-phan-vao-dau-86990"
+  },
+  {
+    "code": "82920",
+    "name": "Dịch vụ đóng gói",
+    "slug": "dich-vu-dong-goi-82920"
+  },
+  {
+    "code": "27310",
+    "name": "Sản xuất dây cáp, sợi cáp quang học",
+    "slug": "san-xuat-day-cap-soi-cap-quang-hoc-27310"
+  },
+  {
+    "code": "27320",
+    "name": "Sản xuất dây, cáp điện và điện tử khác",
+    "slug": "san-xuat-day-cap-dien-va-dien-tu-khac-27320"
+  },
+  {
+    "code": "27330",
+    "name": "Sản xuất thiết bị dây dẫn điện các loại",
+    "slug": "san-xuat-thiet-bi-day-dan-dien-cac-loai-27330"
+  },
+  {
+    "code": "28190",
+    "name": "Sản xuất máy thông dụng khác",
+    "slug": "san-xuat-may-thong-dung-khac-28190"
+  },
+  {
+    "code": "82110",
+    "name": "Dịch vụ hành chính văn phòng tổng hợp",
+    "slug": "dich-vu-hanh-chinh-van-phong-tong-hop-82110"
+  },
+  {
+    "code": "10401",
+    "name": "Sản xuất và đóng hộp dầu, mỡ động, thực vật",
+    "slug": "san-xuat-va-dong-hop-dau-mo-dong-thuc-vat-10401"
+  },
+  {
+    "code": "10409",
+    "name": "Chế biến và bảo quản dầu, mỡ khác",
+    "slug": "che-bien-va-bao-quan-dau-mo-khac-10409"
+  },
+  {
+    "code": "74200",
+    "name": "Hoạt động nhiếp ảnh",
+    "slug": "hoat-dong-nhiep-anh-74200"
+  },
+  {
+    "code": "01450",
+    "name": "Chăn nuôi lợn",
+    "slug": "chan-nuoi-lon-01450"
+  },
+  {
+    "code": "01462",
+    "name": "Chăn nuôi gà",
+    "slug": "chan-nuoi-ga-01462"
+  },
+  {
+    "code": "01463",
+    "name": "Chăn nuôi vịt, ngan, ngỗng",
+    "slug": "chan-nuoi-vit-ngan-ngong-01463"
+  },
+  {
+    "code": "01490",
+    "name": "Chăn nuôi khác",
+    "slug": "chan-nuoi-khac-01490"
+  },
+  {
+    "code": "64190",
+    "name": "Hoạt động trung gian tiền tệ khác",
+    "slug": "hoat-dong-trung-gian-tien-te-khac-64190"
+  },
+  {
+    "code": "82199",
+    "name": "Hoạt động hỗ trợ văn phòng đặc biệt khác",
+    "slug": "hoat-dong-ho-tro-van-phong-dac-biet-khac-82199"
+  },
+  {
+    "code": "25930",
+    "name": "Sản xuất dao kéo, dụng cụ cầm tay và đồ kim loại thông dụng",
+    "slug": "san-xuat-dao-keo-dung-cu-cam-tay-va-do-kim-loai-thong-dung-25930"
+  },
+  {
+    "code": "05100",
+    "name": "Khai thác và thu gom than cứng",
+    "slug": "khai-thac-va-thu-gom-than-cung-05100"
+  },
+  {
+    "code": "05200",
+    "name": "Khai thác và thu gom than non",
+    "slug": "khai-thac-va-thu-gom-than-non-05200"
+  },
+  {
+    "code": "72200",
+    "name": "Nghiên cứu và phát triển thực nghiệm khoa học xã hội và nhân văn",
+    "slug": "nghien-cuu-va-phat-trien-thuc-nghiem-khoa-hoc-xa-hoi-va-nhan-van-72200"
+  },
+  {
+    "code": "8413",
+    "name": "Hoạt động quản lý nhà nước trong các lĩnh vực kinh tế chuyên ngành",
+    "slug": "hoat-dong-quan-ly-nha-nuoc-trong-cac-linh-vuc-kinh-te-chuyen-nganh-8413"
+  },
+  {
+    "code": "59141",
+    "name": "Hoạt động chiếu phim cố định",
+    "slug": "hoat-dong-chieu-phim-co-dinh-59141"
+  },
+  {
+    "code": "20232",
+    "name": "Sản xuất xà phòng, chất tẩy rửa, làm bóng và chế phẩm vệ sinh",
+    "slug": "san-xuat-xa-phong-chat-tay-rua-lam-bong-va-che-pham-ve-sinh-20232"
+  },
+  {
+    "code": "24320",
+    "name": "Đúc kim loại màu",
+    "slug": "duc-kim-loai-mau-24320"
+  },
+  {
+    "code": "10",
+    "name": "Sản xuất, chế biến thực phẩm",
+    "slug": "san-xuat-che-bien-thuc-pham-10"
+  },
+  {
+    "code": "28250",
+    "name": "Sản xuất máy chế biến thực phẩm, đồ uống và thuốc lá",
+    "slug": "san-xuat-may-che-bien-thuc-pham-do-uong-va-thuoc-la-28250"
+  },
+  {
+    "code": "10500",
+    "name": "Chế biến sữa và các sản phẩm từ sữa",
+    "slug": "che-bien-sua-va-cac-san-pham-tu-sua-10500"
+  },
+  {
+    "code": "64910",
+    "name": "Hoạt động cho thuê tài chính",
+    "slug": "hoat-dong-cho-thue-tai-chinh-64910"
+  },
+  {
+    "code": "33110",
+    "name": "Sửa chữa các sản phẩm kim loại đúc sẵn",
+    "slug": "sua-chua-cac-san-pham-kim-loai-duc-san-33110"
+  },
+  {
+    "code": "95220",
+    "name": "Sửa chữa thiết bị, đồ dùng gia đình",
+    "slug": "sua-chua-thiet-bi-do-dung-gia-dinh-95220"
+  },
+  {
+    "code": "27400",
+    "name": "Sản xuất thiết bị điện chiếu sáng",
+    "slug": "san-xuat-thiet-bi-dien-chieu-sang-27400"
+  },
+  {
+    "code": "28130",
+    "name": "Sản xuất máy bơm, máy nén, vòi và van khác",
+    "slug": "san-xuat-may-bom-may-nen-voi-va-van-khac-28130"
+  },
+  {
+    "code": "16102",
+    "name": "Bảo quản gỗ",
+    "slug": "bao-quan-go-16102"
+  },
+  {
+    "code": "6520",
+    "name": "Tái bảo hiểm",
+    "slug": "tai-bao-hiem-6520"
+  },
+  {
+    "code": "47210",
+    "name": "Bán lẻ lương thực trong các cửa hàng chuyên doanh",
+    "slug": "ban-le-luong-thuc-trong-cac-cua-hang-chuyen-doanh-47210"
+  },
+  {
+    "code": "01281",
+    "name": "Trồng cây gia vị",
+    "slug": "trong-cay-gia-vi-01281"
+  },
+  {
+    "code": "01469",
+    "name": "Chăn nuôi gia cầm khác",
+    "slug": "chan-nuoi-gia-cam-khac-01469"
+  },
+  {
+    "code": "55909",
+    "name": "Cơ sở lưu trú khác chưa được phân vào đâu",
+    "slug": "co-so-luu-tru-khac-chua-duoc-phan-vao-dau-55909"
+  },
+  {
+    "code": "24310",
+    "name": "Đúc sắt, thép",
+    "slug": "duc-sat-thep-24310"
+  },
+  {
+    "code": "30990",
+    "name": "Sản xuất phương tiện và thiết bị vận tải khác chưa được phân vào đâu",
+    "slug": "san-xuat-phuong-tien-va-thiet-bi-van-tai-khac-chua-duoc-phan-vao-dau-30990"
+  },
+  {
+    "code": "29100",
+    "name": "Sản xuất xe có động cơ",
+    "slug": "san-xuat-xe-co-dong-co-29100"
+  },
+  {
+    "code": "06200",
+    "name": "Khai thác khí đốt tự nhiên",
+    "slug": "khai-thac-khi-dot-tu-nhien-06200"
+  },
+  {
+    "code": "9420",
+    "name": "Hoạt động của công đoàn",
+    "slug": "hoat-dong-cua-cong-doan-9420"
+  },
+  {
+    "code": "9491",
+    "name": "Hoạt động của các tổ chức tôn giáo",
+    "slug": "hoat-dong-cua-cac-to-chuc-ton-giao-9491"
+  },
+  {
+    "code": "6530",
+    "name": "Bảo hiểm xã hội",
+    "slug": "bao-hiem-xa-hoi-6530"
+  },
+  {
+    "code": "01290",
+    "name": "Trồng cây lâu năm khác",
+    "slug": "trong-cay-lau-nam-khac-01290"
+  },
+  {
+    "code": "87109",
+    "name": "Hoạt động của các cơ sở nuôi dưỡng, điều dưỡng các đối tượng khác",
+    "slug": "hoat-dong-cua-cac-co-so-nuoi-duong-dieu-duong-cac-doi-tuong-khac-87109"
+  },
+  {
+    "code": "87101",
+    "name": "Hoạt động của các cơ sở nuôi dưỡng, điều dưỡng thương bệnh binh",
+    "slug": "hoat-dong-cua-cac-co-so-nuoi-duong-dieu-duong-thuong-benh-binh-87101"
+  },
+  {
+    "code": "521",
+    "name": "Kho bãi và lưu giữ hàng hóa",
+    "slug": "kho-bai-va-luu-giu-hang-hoa-521"
+  },
+  {
+    "code": "454",
+    "name": "Bán, bảo dưỡng và sửa chữa mô tô, xe máy, phụ tùng và các bộ phận phụ trợ của mô tô, xe máy",
+    "slug": "ban-bao-duong-va-sua-chua-mo-to-xe-may-phu-tung-va-cac-bo-phan-phu-tro-cua-mo-to-xe-may-454"
+  },
+  {
+    "code": "24200",
+    "name": "Sản xuất kim loại màu và kim loại quý",
+    "slug": "san-xuat-kim-loai-mau-va-kim-loai-quy-24200"
+  },
+  {
+    "code": "10612",
+    "name": "Sản xuất bột thô",
+    "slug": "san-xuat-bot-tho-10612"
+  },
+  {
+    "code": "66190",
+    "name": "Hoạt động hỗ trợ dịch vụ tài chính chưa được phân vào đâu",
+    "slug": "hoat-dong-ho-tro-dich-vu-tai-chinh-chua-duoc-phan-vao-dau-66190"
+  },
+  {
+    "code": "49313",
+    "name": "Vận tải hành khách bằng xe lam, xe lôi, xe máy",
+    "slug": "van-tai-hanh-khach-bang-xe-lam-xe-loi-xe-may-49313"
+  },
+  {
+    "code": "08910",
+    "name": "Khai thác khoáng hoá chất và khoáng phân bón",
+    "slug": "khai-thac-khoang-hoa-chat-va-khoang-phan-bon-08910"
+  },
+  {
+    "code": "80200",
+    "name": "Dịch vụ hệ thống bảo đảm an toàn",
+    "slug": "dich-vu-he-thong-bao-dam-an-toan-80200"
+  },
+  {
+    "code": "20131",
+    "name": "Sản xuất plastic nguyên sinh",
+    "slug": "san-xuat-plastic-nguyen-sinh-20131"
+  },
+  {
+    "code": "38221",
+    "name": "Xử lý và tiêu huỷ rác thải y tế",
+    "slug": "xu-ly-va-tieu-huy-rac-thai-y-te-38221"
+  },
+  {
+    "code": "27200",
+    "name": "Sản xuất pin và ắc quy",
+    "slug": "san-xuat-pin-va-ac-quy-27200"
+  },
+  {
+    "code": "85200",
+    "name": "Giáo dục tiểu học",
+    "slug": "giao-duc-tieu-hoc-85200"
+  },
+  {
+    "code": "25130",
+    "name": "Sản xuất nồi hơi (trừ nồi hơi trung tâm)",
+    "slug": "san-xuat-noi-hoi-tru-noi-hoi-trung-tam-25130"
+  },
+  {
+    "code": "6391",
+    "name": "Hoạt động thông tấn",
+    "slug": "hoat-dong-thong-tan-6391"
+  },
+  {
+    "code": "01120",
+    "name": "Trồng ngô và cây lương thực có hạt khác",
+    "slug": "trong-ngo-va-cay-luong-thuc-co-hat-khac-01120"
+  },
+  {
+    "code": "13290",
+    "name": "Sản xuất các loại hàng dệt khác chưa được phân vào đâu",
+    "slug": "san-xuat-cac-loai-hang-det-khac-chua-duoc-phan-vao-dau-13290"
+  },
+  {
+    "code": "13240",
+    "name": "Sản xuất các loại dây bện và lưới",
+    "slug": "san-xuat-cac-loai-day-ben-va-luoi-13240"
+  },
+  {
+    "code": "20222",
+    "name": "Sản xuất mực in",
+    "slug": "san-xuat-muc-in-20222"
+  },
+  {
+    "code": "21001",
+    "name": "Sản xuất thuốc các loại",
+    "slug": "san-xuat-thuoc-cac-loai-21001"
+  },
+  {
+    "code": "26520",
+    "name": "Sản xuất đồng hồ",
+    "slug": "san-xuat-dong-ho-26520"
+  },
+  {
+    "code": "85520",
+    "name": "Giáo dục văn hoá nghệ thuật",
+    "slug": "giao-duc-van-hoa-nghe-thuat-85520"
+  },
+  {
+    "code": "461",
+    "name": "Đại lý, môi giới, đấu giá",
+    "slug": "dai-ly-moi-gioi-dau-gia-461"
+  },
+  {
+    "code": "65129",
+    "name": "Bảo hiểm phi nhân thọ khác",
+    "slug": "bao-hiem-phi-nhan-tho-khac-65129"
+  },
+  {
+    "code": "08930",
+    "name": "Khai thác muối",
+    "slug": "khai-thac-muoi-08930"
+  },
+  {
+    "code": "77220",
+    "name": "Cho thuê băng, đĩa video",
+    "slug": "cho-thue-bang-dia-video-77220"
+  },
+  {
+    "code": "88900",
+    "name": "Hoạt động trợ giúp xã hội không tập trung khác",
+    "slug": "hoat-dong-tro-giup-xa-hoi-khong-tap-trung-khac-88900"
+  },
+  {
+    "code": "64200",
+    "name": "Hoạt động công ty nắm giữ tài sản",
+    "slug": "hoat-dong-cong-ty-nam-giu-tai-san-64200"
+  },
+  {
+    "code": "26510",
+    "name": "Sản xuất thiết bị đo lường, kiểm tra, định hướng và điều khiển",
+    "slug": "san-xuat-thiet-bi-do-luong-kiem-tra-dinh-huong-va-dieu-khien-26510"
+  },
+  {
+    "code": "52241",
+    "name": "Bốc xếp hàng hóa ga đường sắt",
+    "slug": "boc-xep-hang-hoa-ga-duong-sat-52241"
+  },
+  {
+    "code": "72100",
+    "name": "Nghiên cứu và phát triển thực nghiệm khoa học tự nhiên và kỹ thuật",
+    "slug": "nghien-cuu-va-phat-trien-thuc-nghiem-khoa-hoc-tu-nhien-va-ky-thuat-72100"
+  },
+  {
+    "code": "28260",
+    "name": "Sản xuất máy cho ngành dệt, may và da",
+    "slug": "san-xuat-may-cho-nganh-det-may-va-da-28260"
+  },
+  {
+    "code": "95230",
+    "name": "Sửa chữa giày, dép, hàng da và giả da",
+    "slug": "sua-chua-giay-dep-hang-da-va-gia-da-95230"
+  },
+  {
+    "code": "01130",
+    "name": "Trồng cây lấy củ có chất bột",
+    "slug": "trong-cay-lay-cu-co-chat-bot-01130"
+  },
+  {
+    "code": "47812",
+    "name": "Bán lẻ thực phẩm lưu động hoặc tại chợ",
+    "slug": "ban-le-thuc-pham-luu-dong-hoac-tai-cho-47812"
+  },
+  {
+    "code": "86202",
+    "name": "Hoạt động của các phòng khám nha khoa",
+    "slug": "hoat-dong-cua-cac-phong-kham-nha-khoa-86202"
+  },
+  {
+    "code": "82200",
+    "name": "Hoạt động dịch vụ liên quan đến các cuộc gọi",
+    "slug": "hoat-dong-dich-vu-lien-quan-den-cac-cuoc-goi-82200"
+  },
+  {
+    "code": "28170",
+    "name": "Sản xuất máy móc và thiết bị văn phòng (trừ máy vi tính và thiết bị ngoại vi của máy vi tính)",
+    "slug": "san-xuat-may-moc-va-thiet-bi-van-phong-tru-may-vi-tinh-va-thiet-bi-ngoai-vi-cua-may-vi-tinh-28170"
+  },
+  {
+    "code": "01250",
+    "name": "Trồng cây cao su",
+    "slug": "trong-cay-cao-su-01250"
+  },
+  {
+    "code": "01440",
+    "name": "Chăn nuôi dê, cừu",
+    "slug": "chan-nuoi-de-cuu-01440"
+  },
+  {
+    "code": "50212",
+    "name": "Vận tải hành khách đường thuỷ nội địa bằng phương tiện thô sơ",
+    "slug": "van-tai-hanh-khach-duong-thuy-noi-dia-bang-phuong-tien-tho-so-50212"
+  },
+  {
+    "code": "39000",
+    "name": "Xử lý ô nhiễm và hoạt động quản lý chất thải khác",
+    "slug": "xu-ly-o-nhiem-va-hoat-dong-quan-ly-chat-thai-khac-39000"
+  },
+  {
+    "code": "01240",
+    "name": "Trồng cây hồ tiêu",
+    "slug": "trong-cay-ho-tieu-01240"
+  },
+  {
+    "code": "01190",
+    "name": "Trồng cây hàng năm khác",
+    "slug": "trong-cay-hang-nam-khac-01190"
+  },
+  {
+    "code": "66210",
+    "name": "Đánh giá rủi ro và thiệt hại",
+    "slug": "danh-gia-rui-ro-va-thiet-hai-66210"
+  },
+  {
+    "code": "66300",
+    "name": "Hoạt động quản lý quỹ",
+    "slug": "hoat-dong-quan-ly-quy-66300"
+  },
+  {
+    "code": "50122",
+    "name": "Vận tải hàng hóa viễn dương",
+    "slug": "van-tai-hang-hoa-vien-duong-50122"
+  },
+  {
+    "code": "28140",
+    "name": "Sản xuất bi, bánh răng, hộp số, các bộ phận điều khiển và truyền chuyển động",
+    "slug": "san-xuat-bi-banh-rang-hop-so-cac-bo-phan-dieu-khien-va-truyen-chuyen-dong-28140"
+  },
+  {
+    "code": "19200",
+    "name": "Sản xuất sản phẩm dầu mỏ tinh chế",
+    "slug": "san-xuat-san-pham-dau-mo-tinh-che-19200"
+  },
+  {
+    "code": "22110",
+    "name": "Sản xuất săm, lốp cao su; đắp và tái chế lốp cao su",
+    "slug": "san-xuat-sam-lop-cao-su-dap-va-tai-che-lop-cao-su-22110"
+  },
+  {
+    "code": "06100",
+    "name": "Khai thác dầu thô",
+    "slug": "khai-thac-dau-tho-06100"
+  },
+  {
+    "code": "01640",
+    "name": "Xử lý hạt giống để nhân giống",
+    "slug": "xu-ly-hat-giong-de-nhan-giong-01640"
+  },
+  {
+    "code": "69200",
+    "name": "Hoạt động liên quan đến kế toán, kiểm toán và tư vấn về thuế",
+    "slug": "hoat-dong-lien-quan-den-ke-toan-kiem-toan-va-tu-van-ve-thue-69200"
+  },
+  {
+    "code": "49120",
+    "name": "Vận tải hàng hóa đường sắt",
+    "slug": "van-tai-hang-hoa-duong-sat-49120"
+  },
+  {
+    "code": "28220",
+    "name": "Sản xuất máy công cụ và máy tạo hình kim loại",
+    "slug": "san-xuat-may-cong-cu-va-may-tao-hinh-kim-loai-28220"
+  },
+  {
+    "code": "69109",
+    "name": "Hoạt động pháp luật khác",
+    "slug": "hoat-dong-phap-luat-khac-69109"
+  },
+  {
+    "code": "95240",
+    "name": "Sửa chữa giường, tủ, bàn, ghế và đồ nội thất tương tự",
+    "slug": "sua-chua-giuong-tu-ban-ghe-va-do-noi-that-tuong-tu-95240"
+  },
+  {
+    "code": "74901",
+    "name": "Hoạt động khí tượng thuỷ văn",
+    "slug": "hoat-dong-khi-tuong-thuy-van-74901"
+  },
+  {
+    "code": "012",
+    "name": "Trồng cây lâu năm",
+    "slug": "trong-cay-lau-nam-012"
+  },
+  {
+    "code": "014",
+    "name": "Chăn nuôi",
+    "slug": "chan-nuoi-014"
+  },
+  {
+    "code": "432",
+    "name": "Lắp đặt hệ thống điện, hệ thống cấp thoát nước và lắp đặt xây dựng khác",
+    "slug": "lap-dat-he-thong-dien-he-thong-cap-thoat-nuoc-va-lap-dat-xay-dung-khac-432"
+  },
+  {
+    "code": "01110",
+    "name": "Trồng lúa",
+    "slug": "trong-lua-01110"
+  },
+  {
+    "code": "91010",
+    "name": "Hoạt động thư viện và lưu trữ",
+    "slug": "hoat-dong-thu-vien-va-luu-tru-91010"
+  },
+  {
+    "code": "10740",
+    "name": "Sản xuất mì ống, mỳ sợi và sản phẩm tương tự",
+    "slug": "san-xuat-mi-ong-my-soi-va-san-pham-tuong-tu-10740"
+  },
+  {
+    "code": "97000",
+    "name": "Hoạt động làm thuê công việc gia đình trong các hộ gia đình",
+    "slug": "hoat-dong-lam-thue-cong-viec-gia-dinh-trong-cac-ho-gia-dinh-97000"
+  },
+  {
+    "code": "60220",
+    "name": "Chương trình cáp, vệ tinh và các chương trình thuê bao khác",
+    "slug": "chuong-trinh-cap-ve-tinh-va-cac-chuong-trinh-thue-bao-khac-60220"
+  },
+  {
+    "code": "01212",
+    "name": "Trồng xoài, cây ăn quả vùng nhiệt đới và cận nhiệt đới",
+    "slug": "trong-xoai-cay-an-qua-vung-nhiet-doi-va-can-nhiet-doi-01212"
+  },
+  {
+    "code": "59130",
+    "name": "Hoạt động phát hành phim điện ảnh, phim video và chương trình truyền hình",
+    "slug": "hoat-dong-phat-hanh-phim-dien-anh-phim-video-va-chuong-trinh-truyen-hinh-59130"
+  },
+  {
+    "code": "65110",
+    "name": "Bảo hiểm nhân thọ",
+    "slug": "bao-hiem-nhan-tho-65110"
+  },
+  {
+    "code": "53100",
+    "name": "Bưu chính",
+    "slug": "buu-chinh-53100"
+  },
+  {
+    "code": "106",
+    "name": "Xay xát và sản xuất bột",
+    "slug": "xay-xat-va-san-xuat-bot-106"
+  },
+  {
+    "code": "107",
+    "name": "Sản xuất thực phẩm khác",
+    "slug": "san-xuat-thuc-pham-khac-107"
+  },
+  {
+    "code": "108",
+    "name": "Sản xuất thức ăn gia súc, gia cầm và thuỷ sản",
+    "slug": "san-xuat-thuc-an-gia-suc-gia-cam-va-thuy-san-108"
+  },
+  {
+    "code": "01182",
+    "name": "Trồng đậu các loại",
+    "slug": "trong-dau-cac-loai-01182"
+  },
+  {
+    "code": "92002",
+    "name": "Hoạt động cá cược và đánh bạc",
+    "slug": "hoat-dong-ca-cuoc-va-danh-bac-92002"
+  },
+  {
+    "code": "59200",
+    "name": "Hoạt động ghi âm và xuất bản âm nhạc",
+    "slug": "hoat-dong-ghi-am-va-xuat-ban-am-nhac-59200"
+  },
+  {
+    "code": "01270",
+    "name": "Trồng cây chè",
+    "slug": "trong-cay-che-01270"
+  },
+  {
+    "code": "28150",
+    "name": "Sản xuất lò nướng, lò luyện và lò nung",
+    "slug": "san-xuat-lo-nuong-lo-luyen-va-lo-nung-28150"
+  },
+  {
+    "code": "28210",
+    "name": "Sản xuất máy nông nghiệp và lâm nghiệp",
+    "slug": "san-xuat-may-nong-nghiep-va-lam-nghiep-28210"
+  },
+  {
+    "code": "30920",
+    "name": "Sản xuất xe đạp và xe cho người tàn tật",
+    "slug": "san-xuat-xe-dap-va-xe-cho-nguoi-tan-tat-30920"
+  },
+  {
+    "code": "28",
+    "name": "Sản xuất máy móc, thiết bị chưa được phân vào đâu",
+    "slug": "san-xuat-may-moc-thiet-bi-chua-duoc-phan-vao-dau-28"
+  },
+  {
+    "code": "46",
+    "name": "Bán buôn (trừ ô tô, mô tô, xe máy và xe có động cơ khác)",
+    "slug": "ban-buon-tru-o-to-mo-to-xe-may-va-xe-co-dong-co-khac-46"
+  },
+  {
+    "code": "49110",
+    "name": "Vận tải hành khách đường sắt",
+    "slug": "van-tai-hanh-khach-duong-sat-49110"
+  },
+  {
+    "code": "13",
+    "name": "Dệt",
+    "slug": "det-13"
+  },
+  {
+    "code": "22",
+    "name": "Sản xuất sản phẩm từ cao su và plastic",
+    "slug": "san-xuat-san-pham-tu-cao-su-va-plastic-22"
+  },
+  {
+    "code": "26700",
+    "name": "Sản xuất thiết bị và dụng cụ quang học",
+    "slug": "san-xuat-thiet-bi-va-dung-cu-quang-hoc-26700"
+  },
+  {
+    "code": "25",
+    "name": "Sản xuất sản phẩm từ kim loại đúc sẵn (trừ máy móc, thiết bị)",
+    "slug": "san-xuat-san-pham-tu-kim-loai-duc-san-tru-may-moc-thiet-bi-25"
+  },
+  {
+    "code": "64990",
+    "name": "Hoạt động dịch vụ tài chính khác chưa được phân vào đâu (trừ bảo hiểm và bảo hiểm xã hội)",
+    "slug": "hoat-dong-dich-vu-tai-chinh-khac-chua-duoc-phan-vao-dau-tru-bao-hiem-va-bao-hiem-xa-hoi-64990"
+  },
+  {
+    "code": "59111",
+    "name": "Hoạt động sản xuất phim điện ảnh",
+    "slug": "hoat-dong-san-xuat-phim-dien-anh-59111"
+  },
+  {
+    "code": "20",
+    "name": "Sản xuất hoá chất và sản phẩm hoá chất",
+    "slug": "san-xuat-hoa-chat-va-san-pham-hoa-chat-20"
+  },
+  {
+    "code": "01219",
+    "name": "Trồng cây ăn quả khác",
+    "slug": "trong-cay-an-qua-khac-01219"
+  },
+  {
+    "code": "15110",
+    "name": "Thuộc, sơ chế da; sơ chế và nhuộm da lông thú",
+    "slug": "thuoc-so-che-da-so-che-va-nhuom-da-long-thu-15110"
+  },
+  {
+    "code": "59120",
+    "name": "Hoạt động hậu kỳ",
+    "slug": "hoat-dong-hau-ky-59120"
+  },
+  {
+    "code": "01140",
+    "name": "Trồng cây mía",
+    "slug": "trong-cay-mia-01140"
+  },
+  {
+    "code": "01150",
+    "name": "Trồng cây thuốc lá, thuốc lào",
+    "slug": "trong-cay-thuoc-la-thuoc-lao-01150"
+  },
+  {
+    "code": "70100",
+    "name": "Hoạt động của trụ sở văn phòng",
+    "slug": "hoat-dong-cua-tru-so-van-phong-70100"
+  },
+  {
+    "code": "52245",
+    "name": "Bốc xếp hàng hóa cảng hàng không",
+    "slug": "boc-xep-hang-hoa-cang-hang-khong-52245"
+  },
+  {
+    "code": "49400",
+    "name": "Vận tải đường ống",
+    "slug": "van-tai-duong-ong-49400"
+  },
+  {
+    "code": "91030",
+    "name": "Hoạt động của các vườn bách thảo, bách thú và khu bảo tồn tự nhiên",
+    "slug": "hoat-dong-cua-cac-vuon-bach-thao-bach-thu-va-khu-bao-ton-tu-nhien-91030"
+  },
+  {
+    "code": "87909",
+    "name": "Hoạt động chăm sóc tập trung khác chưa được phân vào đâu",
+    "slug": "hoat-dong-cham-soc-tap-trung-khac-chua-duoc-phan-vao-dau-87909"
+  },
+  {
+    "code": "27101",
+    "name": "Sản xuất mô tơ, máy phát",
+    "slug": "san-xuat-mo-to-may-phat-27101"
+  },
+  {
+    "code": "42",
+    "name": "Xây dựng công trình kỹ thuật dân dụng",
+    "slug": "xay-dung-cong-trinh-ky-thuat-dan-dung-42"
+  },
+  {
+    "code": "43",
+    "name": "Hoạt động xây dựng chuyên dụng",
+    "slug": "hoat-dong-xay-dung-chuyen-dung-43"
+  },
+  {
+    "code": "95290",
+    "name": "Sửa chữa đồ dùng cá nhân và gia đình khác",
+    "slug": "sua-chua-do-dung-ca-nhan-va-gia-dinh-khac-95290"
+  },
+  {
+    "code": "51200",
+    "name": "Vận tải hàng hóa hàng không",
+    "slug": "van-tai-hang-hoa-hang-khong-51200"
+  },
+  {
+    "code": "50112",
+    "name": "Vận tải hành khách viễn dương",
+    "slug": "van-tai-hanh-khach-vien-duong-50112"
+  },
+  {
+    "code": "30910",
+    "name": "Sản xuất mô tô, xe máy",
+    "slug": "san-xuat-mo-to-xe-may-30910"
+  },
+  {
+    "code": "702",
+    "name": "Hoạt động tư vấn quản lý",
+    "slug": "hoat-dong-tu-van-quan-ly-702"
+  },
+  {
+    "code": "49319",
+    "name": "Vận tải hành khách bằng xe đạp, xe xích lô và xe thô sơ khác",
+    "slug": "van-tai-hanh-khach-bang-xe-dap-xe-xich-lo-va-xe-tho-so-khac-49319"
+  },
+  {
+    "code": "59142",
+    "name": "Hoạt động chiếu phim lưu động",
+    "slug": "hoat-dong-chieu-phim-luu-dong-59142"
+  },
+  {
+    "code": "01170",
+    "name": "Trồng cây có hạt chứa dầu",
+    "slug": "trong-cay-co-hat-chua-dau-01170"
+  },
+  {
+    "code": "26800",
+    "name": "Sản xuất băng, đĩa từ tính và quang học",
+    "slug": "san-xuat-bang-dia-tu-tinh-va-quang-hoc-26800"
+  },
+  {
+    "code": "433",
+    "name": "Hoàn thiện công trình xây dựng",
+    "slug": "hoan-thien-cong-trinh-xay-dung-433"
+  },
+  {
+    "code": "58190",
+    "name": "Hoạt động xuất bản khác",
+    "slug": "hoat-dong-xuat-ban-khac-58190"
+  },
+  {
+    "code": "032",
+    "name": "Nuôi trồng thuỷ sản",
+    "slug": "nuoi-trong-thuy-san-032"
+  },
+  {
+    "code": "28230",
+    "name": "Sản xuất máy luyện kim",
+    "slug": "san-xuat-may-luyen-kim-28230"
+  },
+  {
+    "code": "28180",
+    "name": "Sản xuất dụng cụ cầm tay chạy bằng mô tơ hoặc khí nén",
+    "slug": "san-xuat-dung-cu-cam-tay-chay-bang-mo-to-hoac-khi-nen-28180"
+  },
+  {
+    "code": "12001",
+    "name": "Sản xuất thuốc lá",
+    "slug": "san-xuat-thuoc-la-12001"
+  },
+  {
+    "code": "28120",
+    "name": "Sản xuất thiết bị sử dụng năng lượng chiết lưu",
+    "slug": "san-xuat-thiet-bi-su-dung-nang-luong-chiet-luu-28120"
+  },
+  {
+    "code": "20300",
+    "name": "Sản xuất sợi nhân tạo",
+    "slug": "san-xuat-soi-nhan-tao-20300"
+  },
+  {
+    "code": "47821",
+    "name": "Bán lẻ hàng dệt lưu động hoặc tại chợ",
+    "slug": "ban-le-hang-det-luu-dong-hoac-tai-cho-47821"
+  },
+  {
+    "code": "47823",
+    "name": "Bán lẻ giày dép lưu động hoặc tại chợ",
+    "slug": "ban-le-giay-dep-luu-dong-hoac-tai-cho-47823"
+  },
+  {
+    "code": "293",
+    "name": "Sản xuất phụ tùng và bộ phận phụ trợ cho xe có động cơ",
+    "slug": "san-xuat-phu-tung-va-bo-phan-phu-tro-cho-xe-co-dong-co-293"
+  },
+  {
+    "code": "275",
+    "name": "Sản xuất đồ điện dân dụng",
+    "slug": "san-xuat-do-dien-dan-dung-275"
+  },
+  {
+    "code": "8421",
+    "name": "Hoạt động ngoại giao",
+    "slug": "hoat-dong-ngoai-giao-8421"
+  },
+  {
+    "code": "681",
+    "name": "Kinh doanh bất động sản, quyền sử dụng đất thuộc chủ sở hữu, chủ sử dụng hoặc đi thuê",
+    "slug": "kinh-doanh-bat-dong-san-quyen-su-dung-dat-thuoc-chu-so-huu-chu-su-dung-hoac-di-thue-681"
+  },
+  {
+    "code": "01220",
+    "name": "Trồng cây lấy quả chứa dầu",
+    "slug": "trong-cay-lay-qua-chua-dau-01220"
+  },
+  {
+    "code": "01160",
+    "name": "Trồng cây lấy sợi",
+    "slug": "trong-cay-lay-soi-01160"
+  },
+  {
+    "code": "01700",
+    "name": "Săn bắt, đánh bẫy và hoạt động dịch vụ có liên quan",
+    "slug": "san-bat-danh-bay-va-hoat-dong-dich-vu-co-lien-quan-01700"
+  },
+  {
+    "code": "01230",
+    "name": "Trồng cây điều",
+    "slug": "trong-cay-dieu-01230"
+  },
+  {
+    "code": "80300",
+    "name": "Dịch vụ điều tra",
+    "slug": "dich-vu-dieu-tra-80300"
+  },
+  {
+    "code": "01213",
+    "name": "Trồng cam, quít và các loại quả có múi khác",
+    "slug": "trong-cam-quit-va-cac-loai-qua-co-mui-khac-01213"
+  },
+  {
+    "code": "01215",
+    "name": "Trồng nhãn, vải, chôm chôm",
+    "slug": "trong-nhan-vai-chom-chom-01215"
+  },
+  {
+    "code": "6513",
+    "name": "Bảo hiểm sức khỏe",
+    "slug": "bao-hiem-suc-khoe-6513"
+  },
+  {
+    "code": "85410",
+    "name": "Đào tạo cao đẳng",
+    "slug": "dao-tao-cao-dang-85410"
+  },
+  {
+    "code": "85420",
+    "name": "Đào tạo đại học và sau đại học",
+    "slug": "dao-tao-dai-hoc-va-sau-dai-hoc-85420"
+  },
+  {
+    "code": "91020",
+    "name": "Hoạt động bảo tồn, bảo tàng",
+    "slug": "hoat-dong-bao-ton-bao-tang-91020"
+  },
+  {
+    "code": "61300",
+    "name": "Hoạt động viễn thông vệ tinh",
+    "slug": "hoat-dong-vien-thong-ve-tinh-61300"
+  },
+  {
+    "code": "87201",
+    "name": "Hoạt động chăm sóc sức khoẻ người bị thiểu năng, tâm thần",
+    "slug": "hoat-dong-cham-soc-suc-khoe-nguoi-bi-thieu-nang-tam-than-87201"
+  },
+  {
+    "code": "12009",
+    "name": "Sản xuất thuốc hút khác",
+    "slug": "san-xuat-thuoc-hut-khac-12009"
+  },
+  {
+    "code": "98100",
+    "name": "Hoạt động sản xuất các sản phẩm vật chất tự tiêu dùng của hộ gia đình",
+    "slug": "hoat-dong-san-xuat-cac-san-pham-vat-chat-tu-tieu-dung-cua-ho-gia-dinh-98100"
+  },
+  {
+    "code": "20210",
+    "name": "Sản xuất thuốc trừ sâu và sản phẩm hoá chất khác dùng trong nông nghiệp",
+    "slug": "san-xuat-thuoc-tru-sau-va-san-pham-hoa-chat-khac-dung-trong-nong-nghiep-20210"
+  },
+  {
+    "code": "479",
+    "name": "Bán lẻ hình thức khác (trừ bán lẻ tại cửa hàng, lưu động hoặc tại chợ)",
+    "slug": "ban-le-hinh-thuc-khac-tru-ban-le-tai-cua-hang-luu-dong-hoac-tai-cho-479"
+  },
+  {
+    "code": "63210",
+    "name": "Hoạt động thông tấn",
+    "slug": "hoat-dong-thong-tan-63210"
+  },
+  {
+    "code": "77400",
+    "name": "Cho thuê tài sản vô hình phi tài chính",
+    "slug": "cho-thue-tai-san-vo-hinh-phi-tai-chinh-77400"
+  },
+  {
+    "code": "49311",
+    "name": "Vận tải hành khách bằng tàu điện ngầm",
+    "slug": "van-tai-hanh-khach-bang-tau-dien-ngam-49311"
+  },
+  {
+    "code": "01211",
+    "name": "Trồng nho",
+    "slug": "trong-nho-01211"
+  },
+  {
+    "code": "01214",
+    "name": "Trồng táo, mận và các loại quả có hạt như táo",
+    "slug": "trong-tao-man-va-cac-loai-qua-co-hat-nhu-tao-01214"
+  },
+  {
+    "code": "64110",
+    "name": "Hoạt động ngân hàng trung ương",
+    "slug": "hoat-dong-ngan-hang-trung-uong-64110"
+  },
+  {
+    "code": "8411",
+    "name": "Hoạt động của Đảng Cộng sản, tổ chức chính trị - xã hội, hoạt động quản lý nhà nước nói chung và kinh tế tổng hợp",
+    "slug": "hoat-dong-cua-dang-cong-san-to-chuc-chinh-tri-xa-hoi-hoat-dong-quan-ly-nha-nuoc-noi-chung-va-kinh-te-tong-hop-8411"
+  },
+  {
+    "code": "94120",
+    "name": "Hoạt động của các hội nghề nghiệp",
+    "slug": "hoat-dong-cua-cac-hoi-nghe-nghiep-94120"
+  },
+  {
+    "code": "103",
+    "name": "Chế biến và bảo quản rau quả",
+    "slug": "che-bien-va-bao-quan-rau-qua-103"
+  },
+  {
+    "code": "58110",
+    "name": "Xuất bản sách",
+    "slug": "xuat-ban-sach-58110"
+  },
+  {
+    "code": "60100",
+    "name": "Hoạt động phát thanh",
+    "slug": "hoat-dong-phat-thanh-60100"
+  },
+  {
+    "code": "329",
+    "name": "Sản xuất khác chưa được phân vào đâu",
+    "slug": "san-xuat-khac-chua-duoc-phan-vao-dau-329"
+  },
+  {
+    "code": "241",
+    "name": "Sản xuất sắt, thép, gang",
+    "slug": "san-xuat-sat-thep-gang-241"
+  },
+  {
+    "code": "82910",
+    "name": "Hoạt động dịch vụ hỗ trợ thanh toán, tín dụng",
+    "slug": "hoat-dong-dich-vu-ho-tro-thanh-toan-tin-dung-82910"
+  },
+  {
+    "code": "561",
+    "name": "Nhà hàng và các dịch vụ ăn uống phục vụ lưu động",
+    "slug": "nha-hang-va-cac-dich-vu-an-uong-phuc-vu-luu-dong-561"
+  },
+  {
+    "code": "99000",
+    "name": "Hoạt động của các tổ chức và cơ quan quốc tế",
+    "slug": "hoat-dong-cua-cac-to-chuc-va-co-quan-quoc-te-99000"
+  },
+  {
+    "code": "259",
+    "name": "Sản xuất sản phẩm khác bằng kim loại; các dịch vụ xử lý, gia công kim loại",
+    "slug": "san-xuat-san-pham-khac-bang-kim-loai-cac-dich-vu-xu-ly-gia-cong-kim-loai-259"
+  },
+  {
+    "code": "431",
+    "name": "Phá dỡ và chuẩn bị mặt bằng",
+    "slug": "pha-do-va-chuan-bi-mat-bang-431"
+  },
+  {
+    "code": "663",
+    "name": "Hoạt động quản lý quỹ",
+    "slug": "hoat-dong-quan-ly-quy-663"
+  },
+  {
+    "code": "452",
+    "name": "Bảo dưỡng, sửa chữa ô tô và xe có động cơ khác",
+    "slug": "bao-duong-sua-chua-o-to-va-xe-co-dong-co-khac-452"
+  },
+  {
+    "code": "021",
+    "name": "Trồng rừng và chăm sóc rừng",
+    "slug": "trong-rung-va-cham-soc-rung-021"
+  },
+  {
+    "code": "6031",
+    "name": "Hoạt động thông tấn",
+    "slug": "hoat-dong-thong-tan-6031"
+  },
+  {
+    "code": "6039",
+    "name": "Hoạt động các trang mạng xã hội và hoạt động phân phối nội dung khác",
+    "slug": "hoat-dong-cac-trang-mang-xa-hoi-va-hoat-dong-phan-phoi-noi-dung-khac-6039"
+  },
+  {
+    "code": "6020",
+    "name": "Hoạt động xây dựng chương trình truyền hình, phát sóng truyền hình và phân phối video",
+    "slug": "hoat-dong-xay-dung-chuong-trinh-truyen-hinh-phat-song-truyen-hinh-va-phan-phoi-video-6020"
+  },
+  {
+    "code": "5829",
+    "name": "Xuất bản phần mềm khác",
+    "slug": "xuat-ban-phan-mem-khac-5829"
+  },
+  {
+    "code": "6219",
+    "name": "Lập trình máy tính khác",
+    "slug": "lap-trinh-may-tinh-khac-6219"
+  },
+  {
+    "code": "6220",
+    "name": "Tư vấn máy tính và quản lý cơ sở hạ tầng máy tính",
+    "slug": "tu-van-may-tinh-va-quan-ly-co-so-ha-tang-may-tinh-6220"
+  },
+  {
+    "code": "6290",
+    "name": "Hoạt động dịch vụ máy tính và công nghệ thông tin khác",
+    "slug": "hoat-dong-dich-vu-may-tinh-va-cong-nghe-thong-tin-khac-6290"
+  },
+  {
+    "code": "4672",
+    "name": "Bán buôn kim loại và quặng kim loại",
+    "slug": "ban-buon-kim-loai-va-quang-kim-loai-4672"
+  },
+  {
+    "code": "4679",
+    "name": "Bán buôn chuyên doanh khác chưa được phân vào đâu",
+    "slug": "ban-buon-chuyen-doanh-khac-chua-duoc-phan-vao-dau-4679"
+  },
+  {
+    "code": "4673",
+    "name": "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng",
+    "slug": "ban-buon-vat-lieu-thiet-bi-lap-dat-khac-trong-xay-dung-4673"
+  },
+  {
+    "code": "4340",
+    "name": "Hoạt động dịch vụ trung gian cho xây dựng chuyên dụng",
+    "slug": "hoat-dong-dich-vu-trung-gian-cho-xay-dung-chuyen-dung-4340"
+  },
+  {
+    "code": "4740",
+    "name": "Bán lẻ thiết bị công nghệ thông tin và truyền thông",
+    "slug": "ban-le-thiet-bi-cong-nghe-thong-tin-va-truyen-thong-4740"
+  },
+  {
+    "code": "6821",
+    "name": "Dịch vụ trung gian cho hoạt động bất động sản",
+    "slug": "dich-vu-trung-gian-cho-hoat-dong-bat-dong-san-6821"
+  },
+  {
+    "code": "6829",
+    "name": "Hoạt động bất động sản khác trên cơ sở phí hoặc hợp đồng",
+    "slug": "hoat-dong-bat-dong-san-khac-tren-co-so-phi-hoac-hop-dong-6829"
+  },
+  {
+    "code": "0729",
+    "name": "Khai thác quặng kim loại khác không chứa sắt",
+    "slug": "khai-thac-quang-kim-loai-khac-khong-chua-sat-0729"
+  },
+  {
+    "code": "8693",
+    "name": "Hoạt động của hệ thống cơ sở chỉnh hình, phục hồi chức năng",
+    "slug": "hoat-dong-cua-he-thong-co-so-chinh-hinh-phuc-hoi-chuc-nang-8693"
+  },
+  {
+    "code": "4671",
+    "name": "Bán buôn nhiên liệu rắn, lỏng, khí và các sản phẩm liên quan",
+    "slug": "ban-buon-nhien-lieu-ran-long-khi-va-cac-san-pham-lien-quan-4671"
+  },
+  {
+    "code": "1105",
+    "name": "Sản xuất đồ uống không cồn, nước khoáng",
+    "slug": "san-xuat-do-uong-khong-con-nuoc-khoang-1105"
+  },
+  {
+    "code": "9531",
+    "name": "Sửa chữa, bảo dưỡng ô tô và xe có động cơ khác",
+    "slug": "sua-chua-bao-duong-o-to-va-xe-co-dong-co-khac-9531"
+  },
+  {
+    "code": "9532",
+    "name": "Sửa chữa, bảo dưỡng mô tô, xe máy",
+    "slug": "sua-chua-bao-duong-mo-to-xe-may-9532"
+  },
+  {
+    "code": "3101",
+    "name": "Sản xuất giường, tủ, bàn, ghế bằng gỗ",
+    "slug": "san-xuat-giuong-tu-ban-ghe-bang-go-3101"
+  },
+  {
+    "code": "3102",
+    "name": "Sản xuất giường, tủ, bàn, ghế bằng kim loại",
+    "slug": "san-xuat-giuong-tu-ban-ghe-bang-kim-loai-3102"
+  },
+  {
+    "code": "3109",
+    "name": "Sản xuất giường, tủ, bàn, ghế bằng vật liệu khác",
+    "slug": "san-xuat-giuong-tu-ban-ghe-bang-vat-lieu-khac-3109"
+  },
+  {
+    "code": "4790",
+    "name": "Hoạt động dịch vụ trung gian bán lẻ",
+    "slug": "hoat-dong-dich-vu-trung-gian-ban-le-4790"
+  },
+  {
+    "code": "2619",
+    "name": "Sản xuất linh kiện điện tử khác",
+    "slug": "san-xuat-linh-kien-dien-tu-khac-2619"
+  },
+  {
+    "code": "5520",
+    "name": "Dịch vụ lưu trú ngắn ngày khác",
+    "slug": "dich-vu-luu-tru-ngan-ngay-khac-5520"
+  },
+  {
+    "code": "5330",
+    "name": "Hoạt động dịch vụ trung gian cho hoạt động bưu chính và chuyển phát",
+    "slug": "hoat-dong-dich-vu-trung-gian-cho-hoat-dong-buu-chinh-va-chuyen-phat-5330"
+  },
+  {
+    "code": "5231",
+    "name": "Hoạt động dịch vụ trung gian cho vận tải hàng hóa",
+    "slug": "hoat-dong-dich-vu-trung-gian-cho-van-tai-hang-hoa-5231"
+  },
+  {
+    "code": "7499",
+    "name": "Hoạt động chuyên môn, khoa học và công nghệ khác còn lại chưa được phân vào đâu",
+    "slug": "hoat-dong-chuyen-mon-khoa-hoc-va-cong-nghe-khac-con-lai-chua-duoc-phan-vao-dau-7499"
+  },
+  {
+    "code": "9020",
+    "name": "Hoạt động biểu diễn nghệ thuật",
+    "slug": "hoat-dong-bieu-dien-nghe-thuat-9020"
+  },
+  {
+    "code": "9039",
+    "name": "Hoạt động hỗ trợ khác cho sáng tạo nghệ thuật và biểu diễn nghệ thuật",
+    "slug": "hoat-dong-ho-tro-khac-cho-sang-tao-nghe-thuat-va-bieu-dien-nghe-thuat-9039"
+  },
+  {
+    "code": "9031",
+    "name": "Hoạt động của cơ sở và địa điểm nghệ thuật",
+    "slug": "hoat-dong-cua-co-so-va-dia-diem-nghe-thuat-9031"
+  },
+  {
+    "code": "9510",
+    "name": "Sửa chữa, bảo dưỡng máy tính, thiết bị thông tin và truyền thông",
+    "slug": "sua-chua-bao-duong-may-tinh-thiet-bi-thong-tin-va-truyen-thong-9510"
+  },
+  {
+    "code": "7822",
+    "name": "Cung ứng nguồn nhân lực khác",
+    "slug": "cung-ung-nguon-nhan-luc-khac-7822"
+  },
+  {
+    "code": "9011",
+    "name": "Hoạt động sáng tác văn học và sáng tác âm nhạc",
+    "slug": "hoat-dong-sang-tac-van-hoc-va-sang-tac-am-nhac-9011"
+  },
+  {
+    "code": "9012",
+    "name": "Hoạt động sáng tạo nghệ thuật thị giác",
+    "slug": "hoat-dong-sang-tao-nghe-thuat-thi-giac-9012"
+  },
+  {
+    "code": "9019",
+    "name": "Hoạt động sáng tạo nghệ thuật khác",
+    "slug": "hoat-dong-sang-tao-nghe-thuat-khac-9019"
+  },
+  {
+    "code": "6211",
+    "name": "Phát triển trò chơi điện tử, phần mềm trò chơi điện tử và các công cụ phần mềm trò chơi điện tử",
+    "slug": "phat-trien-tro-choi-dien-tu-phan-mem-tro-choi-dien-tu-va-cac-cong-cu-phan-mem-tro-choi-dien-tu-6211"
+  },
+  {
+    "code": "9540",
+    "name": "Hoạt động dịch vụ trung gian cho sửa chữa, bảo dưỡng máy tính, đồ dùng cá nhân và gia đình, ô tô, mô tô, xe máy và xe có động cơ khác",
+    "slug": "hoat-dong-dich-vu-trung-gian-cho-sua-chua-bao-duong-may-tinh-do-dung-ca-nhan-va-gia-dinh-o-to-mo-to-xe-may-va-xe-co-dong-co-khac-9540"
+  },
+  {
+    "code": "4642",
+    "name": "Bán buôn giường, tủ, bàn ghế và đồ nội thất tương tự trong gia đình, văn phòng, cửa hàng; thảm, đệm và thiết bị chiếu sáng",
+    "slug": "ban-buon-giuong-tu-ban-ghe-va-do-noi-that-tuong-tu-trong-gia-dinh-van-phong-cua-hang-tham-dem-va-thiet-bi-chieu-sang-4642"
+  },
+  {
+    "code": "5640",
+    "name": "Hoạt động dịch vụ trung gian cho dịch vụ ăn uống",
+    "slug": "hoat-dong-dich-vu-trung-gian-cho-dich-vu-an-uong-5640"
+  },
+  {
+    "code": "8561",
+    "name": "Hoạt động dịch vụ trung gian cho các khóa học và gia sư",
+    "slug": "hoat-dong-dich-vu-trung-gian-cho-cac-khoa-hoc-va-gia-su-8561"
+  },
+  {
+    "code": "8569",
+    "name": "Hoạt động hỗ trợ giáo dục khác",
+    "slug": "hoat-dong-ho-tro-giao-duc-khac-8569"
+  },
+  {
+    "code": "8019",
+    "name": "Dịch vụ bảo đảm an toàn khác",
+    "slug": "dich-vu-bao-dam-an-toan-khac-8019"
+  },
+  {
+    "code": "5232",
+    "name": "Hoạt động dịch vụ trung gian cho vận tải hành khách",
+    "slug": "hoat-dong-dich-vu-trung-gian-cho-van-tai-hanh-khach-5232"
+  },
+  {
+    "code": "9622",
+    "name": "Dịch vụ chăm sóc sắc đẹp và các hoạt động làm đẹp khác",
+    "slug": "dich-vu-cham-soc-sac-dep-va-cac-hoat-dong-lam-dep-khac-9622"
+  },
+  {
+    "code": "9623",
+    "name": "Dịch vụ spa và xông hơi",
+    "slug": "dich-vu-spa-va-xong-hoi-9623"
+  },
+  {
+    "code": "9690",
+    "name": "Hoạt động dịch vụ phục vụ cá nhân khác",
+    "slug": "hoat-dong-dich-vu-phuc-vu-ca-nhan-khac-9690"
+  },
+  {
+    "code": "8210",
+    "name": "Hoạt động hành chính và hỗ trợ văn phòng",
+    "slug": "hoat-dong-hanh-chinh-va-ho-tro-van-phong-8210"
+  },
+  {
+    "code": "5530",
+    "name": "Hoạt động dịch vụ trung gian cho dịch vụ lưu trú",
+    "slug": "hoat-dong-dich-vu-trung-gian-cho-dich-vu-luu-tru-5530"
+  },
+  {
+    "code": "6390",
+    "name": "Hoạt động cổng tìm kiếm web và các dịch vụ thông tin khác",
+    "slug": "hoat-dong-cong-tim-kiem-web-va-cac-dich-vu-thong-tin-khac-6390"
+  },
+  {
+    "code": "7821",
+    "name": "Cung ứng lao động tạm thời",
+    "slug": "cung-ung-lao-dong-tam-thoi-7821"
+  },
+  {
+    "code": "3513",
+    "name": "Truyền tải và phân phối điện",
+    "slug": "truyen-tai-va-phan-phoi-dien-3513"
+  },
+  {
+    "code": "3540",
+    "name": "Hoạt động trung gian hoặc đại lý điện, khí đốt",
+    "slug": "hoat-dong-trung-gian-hoac-dai-ly-dien-khi-dot-3540"
+  },
+  {
+    "code": "6310",
+    "name": "Cơ sở hạ tầng công nghệ thông tin, xử lý dữ liệu, lưu trữ và các hoạt động liên quan",
+    "slug": "co-so-ha-tang-cong-nghe-thong-tin-xu-ly-du-lieu-luu-tru-va-cac-hoat-dong-lien-quan-6310"
+  },
+  {
+    "code": "5821",
+    "name": "Xuất bản trò chơi điện tử",
+    "slug": "xuat-ban-tro-choi-dien-tu-5821"
+  },
+  {
+    "code": "4769",
+    "name": "Bán lẻ sản phẩm văn hóa, giải trí khác chưa phân vào đâu",
+    "slug": "ban-le-san-pham-van-hoa-giai-tri-khac-chua-phan-vao-dau-4769"
+  },
+  {
+    "code": "7430",
+    "name": "Hoạt động phiên dịch",
+    "slug": "hoat-dong-phien-dich-7430"
+  },
+  {
+    "code": "9111",
+    "name": "Hoạt động thư viện",
+    "slug": "hoat-dong-thu-vien-9111"
+  },
+  {
+    "code": "9112",
+    "name": "Hoạt động lưu trữ",
+    "slug": "hoat-dong-luu-tru-9112"
+  },
+  {
+    "code": "8011",
+    "name": "Dịch vụ điều tra và hoạt động bảo vệ tư nhân",
+    "slug": "dich-vu-dieu-tra-va-hoat-dong-bao-ve-tu-nhan-8011"
+  },
+  {
+    "code": "6495",
+    "name": "Hoạt động cấp tín dụng khác",
+    "slug": "hoat-dong-cap-tin-dung-khac-6495"
+  },
+  {
+    "code": "7330",
+    "name": "Hoạt động quan hệ công chúng",
+    "slug": "hoat-dong-quan-he-cong-chung-7330"
+  },
+  {
+    "code": "2611",
+    "name": "Sản xuất pin mặt trời, tấm pin mặt trời và bộ biến tần quang điện",
+    "slug": "san-xuat-pin-mat-troi-tam-pin-mat-troi-va-bo-bien-tan-quang-dien-2611"
+  },
+  {
+    "code": "9640",
+    "name": "Hoạt động trung gian cho dịch vụ cá nhân",
+    "slug": "hoat-dong-trung-gian-cho-dich-vu-ca-nhan-9640"
+  },
+  {
+    "code": "9621",
+    "name": "Dịch vụ làm tóc",
+    "slug": "dich-vu-lam-toc-9621"
+  },
+  {
+    "code": "9630",
+    "name": "Hoạt động dịch vụ phục vụ tang lễ và các dịch vụ liên quan",
+    "slug": "hoat-dong-dich-vu-phuc-vu-tang-le-va-cac-dich-vu-lien-quan-9630"
+  },
+  {
+    "code": "7491",
+    "name": "Hoạt động môi giới và tiếp thị bằng sáng chế",
+    "slug": "hoat-dong-moi-gioi-va-tiep-thi-bang-sang-che-7491"
+  },
+  {
+    "code": "0332",
+    "name": "Hoạt động dịch vụ hỗ trợ nuôi trồng thủy sản",
+    "slug": "hoat-dong-dich-vu-ho-tro-nuoi-trong-thuy-san-0332"
+  },
+  {
+    "code": "16",
+    "name": "Chế biến gỗ và sản xuất sản phẩm từ gỗ, tre, nứa (trừ giường, tủ, bàn, ghế); sản xuất sản phẩm từ rơm, rạ và vật liệu tết bện",
+    "slug": "che-bien-go-va-san-xuat-san-pham-tu-go-tre-nua-tru-giuong-tu-ban-ghe-san-xuat-san-pham-tu-rom-ra-va-vat-lieu-tet-ben-16"
+  },
+  {
+    "code": "0331",
+    "name": "Hoạt động dịch vụ hỗ trợ khai thác thủy sản",
+    "slug": "hoat-dong-dich-vu-ho-tro-khai-thac-thuy-san-0331"
+  },
+  {
+    "code": "8240",
+    "name": "Hoạt động dịch vụ trung gian cho các hoạt động dịch vụ hỗ trợ kinh doanh chưa được phân vào đâu (trừ trung gian tài chính)",
+    "slug": "hoat-dong-dich-vu-trung-gian-cho-cac-hoat-dong-dich-vu-ho-tro-kinh-doanh-chua-duoc-phan-vao-dau-tru-trung-gian-tai-chinh-8240"
+  },
+  {
+    "code": "7750",
+    "name": "Hoạt động dịch vụ trung gian cho thuê đồ dùng hữu hình và tài sản vô hình phi tài chính",
+    "slug": "hoat-dong-dich-vu-trung-gian-cho-thue-do-dung-huu-hinh-va-tai-san-vo-hinh-phi-tai-chinh-7750"
+  },
+  {
+    "code": "8791",
+    "name": "Hoạt động dịch vụ trung gian cho các hoạt động chăm sóc tập trung",
+    "slug": "hoat-dong-dich-vu-trung-gian-cho-cac-hoat-dong-cham-soc-tap-trung-8791"
+  },
+  {
+    "code": "8414",
+    "name": "Hoạt động quản lý nhà nước trong các lĩnh vực kinh tế chuyên ngành",
+    "slug": "hoat-dong-quan-ly-nha-nuoc-trong-cac-linh-vuc-kinh-te-chuyen-nganh-8414"
+  },
+  {
+    "code": "9142",
+    "name": "Hoạt động của khu bảo tồn thiên nhiên",
+    "slug": "hoat-dong-cua-khu-bao-ton-thien-nhien-9142"
+  },
+  {
+    "code": "8553",
+    "name": "Hoạt động đào tạo sử dụng phương tiện vận tải phi thương mại",
+    "slug": "hoat-dong-dao-tao-su-dung-phuong-tien-van-tai-phi-thuong-mai-8553"
+  },
+  {
+    "code": "8799",
+    "name": "Hoạt động chăm sóc tập trung khác chưa được phân vào đâu",
+    "slug": "hoat-dong-cham-soc-tap-trung-khac-chua-duoc-phan-vao-dau-8799"
+  },
+  {
+    "code": "8554",
+    "name": "Giáo dục dự bị đại học",
+    "slug": "giao-duc-du-bi-dai-hoc-8554"
+  },
+  {
+    "code": "6421",
+    "name": "Hoạt động công ty nắm giữ tài sản",
+    "slug": "hoat-dong-cong-ty-nam-giu-tai-san-6421"
+  },
+  {
+    "code": "9121",
+    "name": "Hoạt động bảo tàng và sưu tập",
+    "slug": "hoat-dong-bao-tang-va-suu-tap-9121"
+  },
+  {
+    "code": "9122",
+    "name": "Hoạt động di tích lịch sử và di tích",
+    "slug": "hoat-dong-di-tich-lich-su-va-di-tich-9122"
+  },
+  {
+    "code": "9141",
+    "name": "Hoạt động của các vườn bách thảo và bách thú",
+    "slug": "hoat-dong-cua-cac-vuon-bach-thao-va-bach-thu-9141"
+  },
+  {
+    "code": "9130",
+    "name": "Bảo tồn, phục hồi và các hoạt động hỗ trợ khác cho di sản văn hóa",
+    "slug": "bao-ton-phuc-hoi-va-cac-hoat-dong-ho-tro-khac-cho-di-san-van-hoa-9130"
+  },
+  {
+    "code": "6493",
+    "name": "Hoạt động bao thanh toán",
+    "slug": "hoat-dong-bao-thanh-toan-6493"
+  },
+  {
+    "code": "6433",
+    "name": "Hoạt động quỹ tín thác, tài sản và tài khoản đại lý",
+    "slug": "hoat-dong-quy-tin-thac-tai-san-va-tai-khoan-dai-ly-6433"
+  },
+  {
+    "code": "6422",
+    "name": "Hoạt động của các kênh dẫn vốn",
+    "slug": "hoat-dong-cua-cac-kenh-dan-von-6422"
+  },
+  {
+    "code": "02",
+    "name": "Lâm nghiệp và hoạt động dịch vụ có liên quan",
+    "slug": "lam-nghiep-va-hoat-dong-dich-vu-co-lien-quan-02"
+  },
+  {
+    "code": "08",
+    "name": "Khai khoáng khác",
+    "slug": "khai-khoang-khac-08"
+  },
+  {
+    "code": "33",
+    "name": "Sửa chữa, bảo dưỡng và lắp đặt máy móc và thiết bị",
+    "slug": "sua-chua-bao-duong-va-lap-dat-may-moc-va-thiet-bi-33"
+  },
+  {
+    "code": "493",
+    "name": "Vận tải đường bộ khác",
+    "slug": "van-tai-duong-bo-khac-493"
+  },
+  {
+    "code": "52",
+    "name": "Kho bãi và các hoạt động hỗ trợ cho vận tải",
+    "slug": "kho-bai-va-cac-hoat-dong-ho-tro-cho-van-tai-52"
+  },
+  {
+    "code": "55",
+    "name": "Dịch vụ lưu trú",
+    "slug": "dich-vu-luu-tru-55"
+  },
+  {
+    "code": "56",
+    "name": "Dịch vụ ăn uống",
+    "slug": "dich-vu-an-uong-56"
+  },
+  {
+    "code": "77",
+    "name": "Cho thuê máy móc, thiết bị (không kèm người điều khiển); cho thuê đồ dùng cá nhân và gia đình; cho thuê tài sản vô hình phi tài chính",
+    "slug": "cho-thue-may-moc-thiet-bi-khong-kem-nguoi-dieu-khien-cho-thue-do-dung-ca-nhan-va-gia-dinh-cho-thue-tai-san-vo-hinh-phi-tai-chinh-77"
+  },
+  {
+    "code": "6494",
+    "name": "Hoạt động chứng khoán hóa",
+    "slug": "hoat-dong-chung-khoan-hoa-6494"
+  },
+  {
+    "code": "6431",
+    "name": "Hoạt động quỹ thị trường tiền tệ",
+    "slug": "hoat-dong-quy-thi-truong-tien-te-6431"
+  },
+  {
+    "code": "6432",
+    "name": "Hoạt động quỹ đầu tư phi thị trường tiền tệ",
+    "slug": "hoat-dong-quy-dau-tu-phi-thi-truong-tien-te-6432"
+  },
+  {
+    "code": "26",
+    "name": "Sản xuất sản phẩm điện tử, máy vi tính và sản phẩm quang học",
+    "slug": "san-xuat-san-pham-dien-tu-may-vi-tinh-va-san-pham-quang-hoc-26"
+  }
+]

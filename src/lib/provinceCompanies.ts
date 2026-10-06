@@ -2,13 +2,20 @@ import { BusinessTaxInfo } from '@/types/tax';
 import { INDUSTRIES, PROVINCES } from './constants';
 import harvestedJson from '@/data/harvested_provinces.json';
 
-const HARVESTED_DATA = harvestedJson as Record<string, Array<{
+export interface HarvestedItem {
   id: string;
   name: string;
-  representative: string;
-  address: string;
-  slug: string;
-}>>;
+  representative?: string;
+  address?: string;
+  slug?: string;
+  startDate?: string;
+  phone?: string | null;
+  status?: string;
+  mainIndustry?: string;
+  managedBy?: string;
+}
+
+const HARVESTED_DATA = harvestedJson as Record<string, HarvestedItem[]>;
 
 export interface ProvinceCompaniesResult {
   companies: BusinessTaxInfo[];
@@ -82,13 +89,14 @@ export function getCompaniesByProvince(
       allCompanies.push({
         id: item.id,
         name: item.name,
-        address: item.address,
-        status: 'NNT đang hoạt động (đã được cấp GCN ĐKT)',
+        address: item.address || '',
+        status: item.status || 'NNT đang hoạt động (đã được cấp GCN ĐKT)',
         representative: item.representative || undefined,
         province: provName,
-        industryName: 'Kinh doanh thương mại & Dịch vụ tổng hợp',
-        registrationDate: '2026-03-20',
-        managedBy: `Chi cục Thuế khu vực ${provName}`
+        industryName: item.mainIndustry || 'Kinh doanh thương mại & Dịch vụ tổng hợp',
+        registrationDate: item.startDate || '2026-03-20',
+        managedBy: item.managedBy || `Chi cục Thuế khu vực ${provName}`,
+        phone: item.phone && item.phone !== 'Bị ẩn theo yêu cầu người dùng' ? item.phone : undefined
       });
     }
   }
@@ -130,7 +138,7 @@ export function getNationwideCompanies(
       allList.push({
         id: item.id,
         name: item.name,
-        address: item.address,
+        address: item.address || '',
         status: 'NNT đang hoạt động (đã được cấp GCN ĐKT)',
         representative: item.representative || undefined,
         province: provName,
@@ -164,24 +172,65 @@ export function getNationwideCompanies(
   };
 }
 
+// Normalize Vietnamese accents and diacritics for accurate search matching
+export function normalizeText(str: string): string {
+  return (str || '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[đĐ]/g, 'd')
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 // Global search across all provinces
 export function searchCompaniesAcrossProvinces(keyword: string, type: string = 'auto'): BusinessTaxInfo[] {
-  const q = keyword.toLowerCase().trim();
-  if (!q) return [];
+  const rawQ = keyword.trim();
+  if (!rawQ) return [];
+  const normQ = normalizeText(rawQ);
+  const cleanDigits = rawQ.replace(/[^0-9a-zA-Z]/g, '');
 
   const isIndustrySearch = type === 'industry';
-  const matches = (item: Pick<BusinessTaxInfo, 'id' | 'name' | 'address' | 'industryCode' | 'mainIndustryCode'> & { representative?: string }) => isIndustrySearch
-    ? (item.industryCode || item.mainIndustryCode || '').includes(q)
-    : (
-      item.id.toLowerCase().includes(q) ||
-      item.name.toLowerCase().includes(q) ||
-      item.address.toLowerCase().includes(q) ||
-      item.representative?.toLowerCase().includes(q)
+  const matches = (item: {
+    id: string;
+    name: string;
+    address?: string;
+    representative?: string;
+    industryCode?: string;
+    mainIndustryCode?: string;
+  }) => {
+    if (isIndustrySearch) {
+      return (item.industryCode || item.mainIndustryCode || '').includes(cleanDigits || rawQ);
+    }
+
+    const nameNorm = normalizeText(item.name || '');
+    const repNorm = normalizeText(item.representative || '');
+    const addrNorm = normalizeText(item.address || '');
+    const idClean = (item.id || '').replace(/[^0-9a-zA-Z]/g, '');
+
+    if (type === 'legalName') {
+      return repNorm.includes(normQ);
+    }
+    if (type === 'companyName') {
+      return nameNorm.includes(normQ);
+    }
+    if (type === 'enterpriseTax') {
+      return cleanDigits ? idClean.includes(cleanDigits) : false;
+    }
+
+    // Default 'auto': match any relevant field
+    return (
+      nameNorm.includes(normQ) ||
+      repNorm.includes(normQ) ||
+      (cleanDigits ? idClean.includes(cleanDigits) : false) ||
+      addrNorm.includes(normQ)
     );
+  };
 
   const results: BusinessTaxInfo[] = [];
 
-  // 1. Search in harvested data
+  // 1. Search in harvested data (10,000 real companies)
   for (const [slug, list] of Object.entries(HARVESTED_DATA)) {
     const prov = PROVINCES.find(p => p.slug === slug);
     const provName = prov ? prov.name : slug;
@@ -191,10 +240,12 @@ export function searchCompaniesAcrossProvinces(keyword: string, type: string = '
           results.push({
             id: item.id,
             name: item.name,
-            address: item.address,
-            status: 'NNT đang hoạt động (đã được cấp GCN ĐKT)',
+            address: item.address || '',
+            status: item.status || 'NNT đang hoạt động (đã được cấp GCN ĐKT)',
             representative: item.representative,
-            province: provName
+            province: provName,
+            registrationDate: item.startDate || undefined,
+            phone: item.phone && item.phone !== 'Bị ẩn theo yêu cầu người dùng' ? item.phone : undefined
           });
         }
       }
@@ -246,51 +297,114 @@ const TOP_ACTIVE_PROVINCES = [
 ];
 
 /** Fetch companies from the upstream VSIC industry listing, not its generic search box. */
-export async function searchCompaniesByIndustryLive(industryCode: string): Promise<BusinessTaxInfo[]> {
+function parseIndustryHtml(html: string, code: string, industryName: string): BusinessTaxInfo[] {
+  const list: BusinessTaxInfo[] = [];
+  const blocks = html.split("<div data-prefetch='");
+  const stripHtml = (value: string) => value.replace(/<[^>]+>/g, '').trim();
+
+  for (let index = 1; index < blocks.length; index++) {
+    const block = blocks[index];
+    const nameMatch = block.match(/<h3><a[^>]*>([\s\S]*?)<\/a><\/h3>/i);
+    const taxIdMatch = block.match(/Mã số thuế:\s*<a[^>]*>([\s\S]*?)<\/a>/i);
+    const repMatch = block.match(/Người đại diện:\s*<em><a[^>]*>([\s\S]*?)<\/a><\/em>/i);
+    const addressMatch = block.match(/<address>([\s\S]*?)<\/address>/i);
+
+    const name = nameMatch ? stripHtml(nameMatch[1]) : '';
+    const id = taxIdMatch ? stripHtml(taxIdMatch[1]) : '';
+    if (id && name) {
+      list.push({
+        id,
+        name,
+        representative: repMatch ? stripHtml(repMatch[1]) : undefined,
+        address: addressMatch ? stripHtml(addressMatch[1]) : '',
+        status: 'NNT đang hoạt động (đã được cấp GCN ĐKT)',
+        industryCode: code,
+        mainIndustryCode: code,
+        industryName,
+        mainIndustry: industryName
+      });
+    }
+  }
+  return list;
+}
+
+export async function searchCompaniesByIndustryLive(
+  industryCode: string,
+  maxPages: number = 4
+): Promise<BusinessTaxInfo[]> {
   const code = industryCode.trim();
   const industry = INDUSTRIES.find((item) => item.code === code);
   if (!industry) return [];
 
-  const cacheKey = `industry_${code}`;
+  const cacheKey = `industry_${code}_p${maxPages}`;
   const cached = LIVE_PROVINCE_CACHE.get(cacheKey);
   if (cached && Date.now() - cached.timestamp < CACHE_TTL_MS) return cached.data;
 
   try {
-    const url = `https://masothue.com/tra-cuu-ma-so-thue-theo-nganh-nghe/${industry.slug}`;
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 6000);
-    const res = await fetch(url, { headers: BROWSER_FETCH_HEADERS, signal: controller.signal });
-    clearTimeout(timeoutId);
-    if (!res.ok) return [];
+    const pageNumbers = Array.from({ length: maxPages }, (_, i) => i + 1);
+    const pagePromises = pageNumbers.map(async (pageNum) => {
+      try {
+        const url = pageNum === 1
+          ? `https://masothue.com/tra-cuu-ma-so-thue-theo-nganh-nghe/${industry.slug}`
+          : `https://masothue.com/tra-cuu-ma-so-thue-theo-nganh-nghe/${industry.slug}?page=${pageNum}`;
 
-    const html = await res.text();
-    const list: BusinessTaxInfo[] = [];
-    const blocks = html.split("<div data-prefetch='");
-    for (let index = 1; index < blocks.length; index++) {
-      const block = blocks[index];
-      const nameMatch = block.match(/<h3><a[^>]*>([\s\S]*?)<\/a><\/h3>/i);
-      const taxIdMatch = block.match(/Mã số thuế:\s*<a[^>]*>([\s\S]*?)<\/a>/i);
-      const repMatch = block.match(/Người đại diện:\s*<em><a[^>]*>([\s\S]*?)<\/a><\/em>/i);
-      const addressMatch = block.match(/<address>([\s\S]*?)<\/address>/i);
-      const stripHtml = (value: string) => value.replace(/<[^>]+>/g, '').trim();
-      const name = nameMatch ? stripHtml(nameMatch[1]) : '';
-      const id = taxIdMatch ? stripHtml(taxIdMatch[1]) : '';
-      if (id && name && !list.some((company) => company.id === id)) {
-        list.push({
-          id,
-          name,
-          representative: repMatch ? stripHtml(repMatch[1]) : undefined,
-          address: addressMatch ? stripHtml(addressMatch[1]) : '',
-          status: 'NNT đang hoạt động (đã được cấp GCN ĐKT)',
-          industryCode: code,
-          mainIndustryCode: code,
-          industryName: industry.name,
-          mainIndustry: industry.name
-        });
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 7000);
+        const res = await fetch(url, { headers: BROWSER_FETCH_HEADERS, signal: controller.signal });
+        clearTimeout(timeoutId);
+        if (!res.ok) return [];
+
+        const html = await res.text();
+        return parseIndustryHtml(html, code, industry.name);
+      } catch {
+        return [];
+      }
+    });
+
+    const pageResults = await Promise.all(pagePromises);
+    const combined: BusinessTaxInfo[] = [];
+
+    for (const pageList of pageResults) {
+      for (const comp of pageList) {
+        if (!combined.some((c) => c.id === comp.id)) {
+          combined.push(comp);
+        }
       }
     }
-    if (list.length > 0) LIVE_PROVINCE_CACHE.set(cacheKey, { data: list, timestamp: Date.now() });
-    return list;
+
+    // Merge with any matching local harvested companies
+    const normIndName = normalizeText(industry.name);
+    for (const [slug, list] of Object.entries(HARVESTED_DATA)) {
+      const prov = PROVINCES.find((p) => p.slug === slug);
+      const provName = prov ? prov.name : slug;
+      for (const item of list) {
+        if (
+          (item.mainIndustry && normalizeText(item.mainIndustry).includes(normIndName)) ||
+          item.mainIndustry === industry.name
+        ) {
+          if (!combined.some((c) => c.id === item.id)) {
+            combined.push({
+              id: item.id,
+              name: item.name,
+              representative: item.representative,
+              address: item.address || '',
+              status: item.status || 'NNT đang hoạt động (đã được cấp GCN ĐKT)',
+              province: provName,
+              industryCode: code,
+              mainIndustryCode: code,
+              industryName: industry.name,
+              mainIndustry: industry.name,
+              phone: item.phone && item.phone !== 'Bị ẩn theo yêu cầu người dùng' ? item.phone : undefined
+            });
+          }
+        }
+      }
+    }
+
+    if (combined.length > 0) {
+      LIVE_PROVINCE_CACHE.set(cacheKey, { data: combined, timestamp: Date.now() });
+    }
+    return combined;
   } catch (error) {
     console.error('Không thể tải danh sách doanh nghiệp theo mã ngành:', error);
     return [];
@@ -300,23 +414,16 @@ export async function searchCompaniesByIndustryLive(industryCode: string): Promi
 /**
  * Live search across all enterprises in Vietnam using real-time search stream
  */
-export async function searchCompaniesLive(
-  keyword: string,
-  type: string = 'auto'
+async function fetchLiveSearch(
+  q: string,
+  searchType: string,
+  normQ: string,
+  cleanDigits: string
 ): Promise<BusinessTaxInfo[]> {
-  const q = keyword.trim();
-  if (!q) return [];
-
-  const cacheKey = `search_${type}_${q.toLowerCase()}`;
-  const cached = LIVE_PROVINCE_CACHE.get(cacheKey);
-  if (cached && Date.now() - cached.timestamp < CACHE_TTL_MS) {
-    return cached.data;
-  }
-
   try {
-    const url = `https://masothue.com/Search/?q=${encodeURIComponent(q)}&type=${encodeURIComponent(type)}&force-search=0`;
+    const url = `https://masothue.com/Search/?q=${encodeURIComponent(q)}&type=${encodeURIComponent(searchType)}&force-search=0`;
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 4500);
+    const timeoutId = setTimeout(() => controller.abort(), 5500);
 
     const res = await fetch(url, {
       headers: BROWSER_FETCH_HEADERS,
@@ -327,6 +434,66 @@ export async function searchCompaniesLive(
     if (res.status === 200) {
       const html = await res.text();
       const list: BusinessTaxInfo[] = [];
+
+      // Case 1: Upstream redirected directly to a single company detail page
+      // (e.g. searching a specific representative or company name)
+      const tableMatch = html.match(/<table[^>]*class=["'][^"']*table-taxinfo[^"']*["'][^>]*>([\s\S]*?)<\/table>/i);
+      if (tableMatch) {
+        const tableHtml = tableMatch[1];
+        const cleanT = (h: string) => h.replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
+
+        const thMatch = tableHtml.match(/<th[^>]*>([\s\S]*?)<\/th>/i);
+        const name = thMatch ? cleanT(thMatch[1]) : '';
+
+        let id = '';
+        let address = '';
+        let representative = '';
+
+        const rows = tableHtml.match(/<tr[\s\S]*?<\/tr>/gi) || [];
+        for (const row of rows) {
+          const text = cleanT(row);
+          if (text.includes('Mã số thuế')) {
+            const match = text.match(/Mã số thuế\s*([0-9\-]+)/i);
+            if (match) id = match[1].replace(/[^0-9]/g, '');
+          } else if (text.startsWith('Địa chỉ')) {
+            address = text.replace(/^Địa chỉ(\s+Thuế)?\s*/i, '').trim();
+          } else if (text.includes('Người đại diện')) {
+            const repPart = text.replace(/^Người đại diện\s*/i, '');
+            const parts = repPart.split(/(?:Ngoài ra|Đại diện các doanh nghiệp)/i);
+            representative = parts[0].trim();
+          }
+        }
+
+        if (id && name) {
+          const normName = normalizeText(name);
+          const normRep = normalizeText(representative);
+
+          let matches = false;
+          if (searchType === 'legalName') {
+            matches = normRep.includes(normQ);
+          } else if (searchType === 'companyName') {
+            matches = normName.includes(normQ);
+          } else if (searchType === 'enterpriseTax' || searchType === 'taxCode') {
+            matches = cleanDigits ? id.includes(cleanDigits) : false;
+          } else {
+            matches = normName.includes(normQ) || normRep.includes(normQ) || (cleanDigits ? id.includes(cleanDigits) : false);
+          }
+
+          if (matches) {
+            list.push({
+              id,
+              name,
+              representative: representative || undefined,
+              address,
+              status: 'NNT đang hoạt động (đã được cấp GCN ĐKT)',
+              industryName: 'Đăng ký theo GPKD'
+            });
+            return list;
+          }
+        }
+      }
+
+      // Case 2: Multi-item listing search result
       const blocks = html.split("<div data-prefetch='");
 
       for (let i = 1; i < blocks.length; i++) {
@@ -344,28 +511,90 @@ export async function searchCompaniesLive(
         const address = addrMatch ? addrMatch[1].replace(/<[^>]+>/g, '').trim() : '';
 
         if (taxId && name) {
-          list.push({
-            id: taxId,
-            name,
-            representative: rep || undefined,
-            address,
-            status: 'NNT đang hoạt động (đã được cấp GCN ĐKT)',
-            industryName: 'Đăng ký theo GPKD'
-          });
+          const normName = normalizeText(name);
+          const normRep = normalizeText(rep);
+
+          let isMatch = false;
+          if (searchType === 'legalName') {
+            isMatch = normRep.includes(normQ);
+          } else if (searchType === 'companyName') {
+            isMatch = normName.includes(normQ);
+          } else if (searchType === 'enterpriseTax' || searchType === 'taxCode') {
+            isMatch = cleanDigits ? taxId.includes(cleanDigits) : false;
+          } else {
+            isMatch =
+              normName.includes(normQ) ||
+              normRep.includes(normQ) ||
+              (cleanDigits ? taxId.includes(cleanDigits) : false);
+          }
+
+          if (isMatch && !list.some((item) => item.id === taxId)) {
+            list.push({
+              id: taxId,
+              name,
+              representative: rep || undefined,
+              address,
+              status: 'NNT đang hoạt động (đã được cấp GCN ĐKT)',
+              industryName: 'Đăng ký theo GPKD'
+            });
+          }
         }
       }
 
-      if (list.length > 0) {
-        LIVE_PROVINCE_CACHE.set(cacheKey, { data: list, timestamp: Date.now() });
-        return list;
-      }
+      return list;
     }
-  } catch (err) {
-    console.error('Lỗi khi tìm kiếm doanh nghiệp trực tiếp:', err);
+  } catch (err: unknown) {
+    if ((err as Error)?.name !== 'AbortError') {
+      console.warn(`Lưu ý tìm kiếm trực tuyến (${searchType}):`, (err as Error)?.message || err);
+    }
+  }
+  return [];
+}
+
+export async function searchCompaniesLive(
+  keyword: string,
+  type: string = 'auto'
+): Promise<BusinessTaxInfo[]> {
+  const q = keyword.trim();
+  if (!q) return [];
+
+  const cacheKey = `search_${type}_${q.toLowerCase()}`;
+  const cached = LIVE_PROVINCE_CACHE.get(cacheKey);
+  if (cached && Date.now() - cached.timestamp < CACHE_TTL_MS) {
+    return cached.data;
   }
 
-  // Fallback to local index if network request fails
-  return searchCompaniesAcrossProvinces(q);
+  const normQ = normalizeText(q);
+  const cleanDigits = q.replace(/[^0-9]/g, '');
+
+  let results: BusinessTaxInfo[] = [];
+
+  if (type === 'auto') {
+    // When "Tất cả" is selected, query both companyName and legalName in parallel
+    const [compResults, repResults] = await Promise.all([
+      fetchLiveSearch(q, 'companyName', normQ, cleanDigits),
+      fetchLiveSearch(q, 'legalName', normQ, cleanDigits)
+    ]);
+
+    const combined: BusinessTaxInfo[] = [...compResults];
+    for (const item of repResults) {
+      if (!combined.some(c => c.id === item.id)) {
+        combined.push(item);
+      }
+    }
+    results = combined;
+  } else {
+    // Specific search type: legalName, companyName, taxCode, etc.
+    results = await fetchLiveSearch(q, type, normQ, cleanDigits);
+  }
+
+  if (results.length > 0) {
+    LIVE_PROVINCE_CACHE.set(cacheKey, { data: results, timestamp: Date.now() });
+    return results;
+  }
+
+  // Fallback to local index if network request returns no matches
+  return searchCompaniesAcrossProvinces(q, type);
 }
 
 /**

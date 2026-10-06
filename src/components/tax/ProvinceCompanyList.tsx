@@ -4,7 +4,7 @@ import React, { useState, useEffect, useTransition } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { BusinessTaxInfo } from '@/types/tax';
-import { getCompanySlug, getCompanyStatusBadgeClass } from '@/lib/constants';
+import { getCompanySlug, getCompanyStatusBadgeClass, normalizeTaxId } from '@/lib/constants';
 import {
   MapPin,
   Hash,
@@ -202,8 +202,12 @@ export function ProvinceCompanyList({
                     <span className="flex items-center space-x-1 text-gray-700">
                       <Hash className="w-3.5 h-3.5 text-gray-400" />
                       <span>Mã số thuế:</span>
-                      <Link href={`/${detailSlug}`} prefetch={false} className="font-mono font-bold text-amber-700 hover:underline">
-                        {comp.id}
+                      <Link
+                        href={`/${detailSlug}`}
+                        prefetch={false}
+                        className="font-mono font-bold text-[#e91a2c] bg-[#fff0f1] px-1.5 py-0.5 rounded border border-[#fecdd3] hover:bg-[#ffe4e6] transition-colors whitespace-nowrap inline-block"
+                      >
+                        {normalizeTaxId(comp.id)}
                       </Link>
                     </span>
 

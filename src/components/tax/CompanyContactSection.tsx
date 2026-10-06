@@ -31,9 +31,9 @@ export function CompanyContactSection({ company }: CompanyContactSectionProps) {
     setTimeout(() => setCopiedField(null), 2000);
   };
 
-  // Quét thông tin qua Google Search & Gemini AI (tự động lưu cache session)
-  const performGeminiScan = async (force = false) => {
-    const sessionKey = 'ai_scan_live_v3_' + company.id;
+  // Quét thông tin (tự động lưu cache session)
+  const performLiveScan = async (force = false) => {
+    const sessionKey = 'contact_scan_live_v3_' + company.id;
 
     // Kiểm tra cache trình duyệt nếu không yêu cầu quét lại cưỡng bức
     if (!force) {
@@ -81,10 +81,10 @@ export function CompanyContactSection({ company }: CompanyContactSectionProps) {
     }
   };
 
-  // Tự động tìm kiếm qua Google Search & Gemini khi người dùng vào xem
+  // Tự động tìm kiếm khi người dùng vào xem
   useEffect(() => {
     if (!contact?.website) {
-      performGeminiScan(false);
+      performLiveScan(false);
     }
   }, [company.id]);
 
@@ -96,56 +96,56 @@ export function CompanyContactSection({ company }: CompanyContactSectionProps) {
   const displayEmail = contact?.email;
 
   return (
-    <div className="bg-white border border-gray-200 rounded p-6 shadow-sm my-6 transition-all duration-200">
+    <div className="bg-white border border-slate-200/90 rounded-xl p-6 shadow-xs my-6 transition-all duration-200">
       {/* Header bar with re-scan button */}
-      <div className="border-b border-gray-200 pb-3 mb-5 flex items-center justify-between">
+      <div className="border-b border-slate-100 pb-3 mb-5 flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <Phone className="w-4 h-4 text-amber-500" />
-          <h3 className="text-base font-bold text-gray-900">
+          <Phone className="w-4 h-4 text-sky-600" />
+          <h3 className="text-base font-bold text-slate-900">
             Thông tin liên hệ & Kênh trực tuyến của công ty
           </h3>
         </div>
 
         <button
-          onClick={() => performGeminiScan(true)}
+          onClick={() => performLiveScan(true)}
           disabled={isLoading}
-          className="text-xs text-gray-500 hover:text-blue-600 px-2.5 py-1 rounded border border-gray-200 hover:border-blue-300 transition flex items-center space-x-1.5 cursor-pointer disabled:opacity-60"
-          title="Quét lại thông tin trực tuyến qua Gemini AI"
+          className="text-xs text-slate-600 hover:text-sky-700 px-2.5 py-1 rounded-md border border-slate-200 hover:border-slate-300 transition flex items-center space-x-1.5 cursor-pointer disabled:opacity-60 bg-white"
+          title="Cập nhật thông tin liên hệ trực tuyến"
         >
-          <RefreshCw className={`w-3.5 h-3.5 ${isLoading ? 'animate-spin text-blue-600' : ''}`} />
-          <span>{isLoading ? 'Đang quét...' : 'Cập nhật'}</span>
+          <RefreshCw className={`w-3.5 h-3.5 ${isLoading ? 'animate-spin text-sky-600' : ''}`} />
+          <span>{isLoading ? 'Đang kiểm tra...' : 'Cập nhật'}</span>
         </button>
       </div>
 
       {/* 4 Pillars Grid: Phone, Email, Address, Website */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* 1. Số điện thoại */}
-        <div className="border border-gray-200 rounded p-4 bg-gray-50/40 hover:bg-white hover:border-blue-200 hover:shadow-sm transition">
+        <div className="border border-slate-200/90 rounded-lg p-4 bg-slate-50/50 hover:bg-white hover:border-slate-300 hover:shadow-xs transition">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-xs font-semibold text-gray-600 flex items-center space-x-1.5">
-              <Phone className="w-4 h-4 text-blue-600" />
+            <span className="text-xs font-semibold text-slate-600 flex items-center space-x-1.5">
+              <Phone className="w-4 h-4 text-sky-600" />
               <span>Số điện thoại / Hotline</span>
             </span>
             {contact?.phoneStatus === 'available' ? (
-              <span className="text-[10px] bg-green-100 text-green-800 px-2 py-0.5 rounded font-medium">
-                Đang liên lạc được
+              <span className="text-[10px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium border border-slate-200">
+                Đang hoạt động
               </span>
             ) : (
-              <span className="text-[10px] bg-gray-100 text-gray-600 px-2 py-0.5 rounded font-medium">
+              <span className="text-[10px] bg-slate-100 text-slate-500 px-2 py-0.5 rounded font-medium border border-slate-200">
                 Bị ẩn theo yêu cầu
               </span>
             )}
           </div>
 
-          <div className="text-sm font-semibold text-gray-900 font-mono mb-3">
+          <div className="text-sm font-semibold text-slate-900 font-mono mb-3">
             {displayPhone}
           </div>
 
-          <div className="flex items-center space-x-2 pt-2 border-t border-gray-100 text-xs">
+          <div className="flex items-center space-x-2 pt-2 border-t border-slate-100 text-xs">
             {contact?.phoneStatus === 'available' ? (
               <a
                 href={`tel:${displayPhone.replace(/[^0-9+]/g, '')}`}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-2.5 py-1 rounded text-[11px] font-medium transition inline-flex items-center space-x-1"
+                className="bg-slate-900 hover:bg-slate-800 text-white px-2.5 py-1 rounded text-[11px] font-medium transition inline-flex items-center space-x-1"
               >
                 <Phone className="w-3 h-3" />
                 <span>Gọi ngay</span>
@@ -153,127 +153,127 @@ export function CompanyContactSection({ company }: CompanyContactSectionProps) {
             ) : null}
             <button
               onClick={() => copyToClipboard(displayPhone, 'phone')}
-              className="bg-white hover:bg-gray-100 text-gray-700 border border-gray-200 px-2.5 py-1 rounded text-[11px] font-medium transition inline-flex items-center space-x-1"
+              className="bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 px-2.5 py-1 rounded text-[11px] font-medium transition inline-flex items-center space-x-1 cursor-pointer"
             >
-              {copiedField === 'phone' ? <Check className="w-3 h-3 text-green-600" /> : <Copy className="w-3 h-3" />}
+              {copiedField === 'phone' ? <Check className="w-3 h-3 text-emerald-600" /> : <Copy className="w-3 h-3" />}
               <span>{copiedField === 'phone' ? 'Đã chép' : 'Sao chép SĐT'}</span>
             </button>
           </div>
         </div>
 
         {/* 2. Hòm thư điện tử Email */}
-        <div className="border border-gray-200 rounded p-4 bg-gray-50/40 hover:bg-white hover:border-purple-200 hover:shadow-sm transition">
+        <div className="border border-slate-200/90 rounded-lg p-4 bg-slate-50/50 hover:bg-white hover:border-slate-300 hover:shadow-xs transition">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-xs font-semibold text-gray-600 flex items-center space-x-1.5">
-              <Mail className="w-4 h-4 text-purple-600" />
+            <span className="text-xs font-semibold text-slate-600 flex items-center space-x-1.5">
+              <Mail className="w-4 h-4 text-sky-600" />
               <span>Email doanh nghiệp</span>
             </span>
             {displayEmail ? (
-              <span className="text-[10px] bg-green-100 text-green-800 px-2 py-0.5 rounded font-medium">
+              <span className="text-[10px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium border border-slate-200">
                 Đã xác minh
               </span>
             ) : isLoading ? (
-              <span className="text-[10px] bg-blue-50 text-blue-700 border border-blue-200 px-2 py-0.5 rounded font-medium animate-pulse">
-                Đang tìm trên Google...
+              <span className="text-[10px] bg-sky-50 text-sky-700 border border-sky-200 px-2 py-0.5 rounded font-medium animate-pulse">
+                Đang kiểm tra hệ thống...
               </span>
             ) : (
-              <span className="text-[10px] bg-amber-50 text-amber-700 border border-amber-200 px-2 py-0.5 rounded font-medium">
+              <span className="text-[10px] bg-slate-100 text-slate-500 border border-slate-200 px-2 py-0.5 rounded font-medium">
                 Chưa cập nhật email
               </span>
             )}
           </div>
 
-          <div className="text-sm font-medium text-gray-900 mb-3 truncate font-mono">
+          <div className="text-sm font-medium text-slate-900 mb-3 truncate font-mono">
             {displayEmail || (isLoading ? 'Đang kiểm tra hòm thư...' : 'Chưa công khai trong hồ sơ')}
           </div>
 
-          <div className="flex items-center space-x-2 pt-2 border-t border-gray-100 text-xs">
+          <div className="flex items-center space-x-2 pt-2 border-t border-slate-100 text-xs">
             {displayEmail ? (
               <>
                 <a
                   href={`mailto:${displayEmail}`}
-                  className="bg-purple-600 hover:bg-purple-700 text-white px-2.5 py-1 rounded text-[11px] font-medium transition inline-flex items-center space-x-1"
+                  className="bg-slate-900 hover:bg-slate-800 text-white px-2.5 py-1 rounded text-[11px] font-medium transition inline-flex items-center space-x-1"
                 >
                   <Mail className="w-3 h-3" />
                   <span>Gửi email</span>
                 </a>
                 <button
                   onClick={() => copyToClipboard(displayEmail, 'email')}
-                  className="bg-white hover:bg-gray-100 text-gray-700 border border-gray-200 px-2.5 py-1 rounded text-[11px] font-medium transition inline-flex items-center space-x-1"
+                  className="bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 px-2.5 py-1 rounded text-[11px] font-medium transition inline-flex items-center space-x-1 cursor-pointer"
                 >
-                  {copiedField === 'email' ? <Check className="w-3 h-3 text-green-600" /> : <Copy className="w-3 h-3" />}
+                  {copiedField === 'email' ? <Check className="w-3 h-3 text-emerald-600" /> : <Copy className="w-3 h-3" />}
                   <span>{copiedField === 'email' ? 'Đã chép' : 'Sao chép Email'}</span>
                 </button>
               </>
             ) : (
-              <span className="text-[11px] text-gray-400 italic">
-                {isLoading ? 'Đang tra cứu Google & Web...' : 'Doanh nghiệp chưa khai báo email công khai'}
+              <span className="text-[11px] text-slate-400 italic">
+                {isLoading ? 'Đang tra cứu dữ liệu...' : 'Doanh nghiệp chưa khai báo email công khai'}
               </span>
             )}
           </div>
         </div>
 
         {/* 3. Địa chỉ trụ sở */}
-        <div className="border border-gray-200 rounded p-4 bg-gray-50/40 hover:bg-white hover:border-amber-200 hover:shadow-sm transition">
+        <div className="border border-slate-200/90 rounded-lg p-4 bg-slate-50/50 hover:bg-white hover:border-slate-300 hover:shadow-xs transition">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-xs font-semibold text-gray-600 flex items-center space-x-1.5">
-              <MapPin className="w-4 h-4 text-amber-600" />
+            <span className="text-xs font-semibold text-slate-600 flex items-center space-x-1.5">
+              <MapPin className="w-4 h-4 text-sky-600" />
               <span>Địa chỉ hoạt động</span>
             </span>
-            <span className="text-[10px] bg-blue-50 text-blue-700 border border-blue-200 px-2 py-0.5 rounded font-medium">
+            <span className="text-[10px] bg-slate-100 text-slate-700 border border-slate-200 px-2 py-0.5 rounded font-medium">
               Trụ sở chính
             </span>
           </div>
 
-          <div className="text-xs text-gray-800 line-clamp-2 mb-3 leading-relaxed">
+          <div className="text-xs text-slate-800 line-clamp-2 mb-3 leading-relaxed">
             {displayAddress}
           </div>
 
-          <div className="flex items-center space-x-2 pt-2 border-t border-gray-100 text-xs">
+          <div className="flex items-center space-x-2 pt-2 border-t border-slate-100 text-xs">
             <a
               href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(displayAddress)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-amber-500 hover:bg-amber-600 text-white px-2.5 py-1 rounded text-[11px] font-medium transition inline-flex items-center space-x-1"
+              className="bg-slate-800 hover:bg-slate-900 text-white px-2.5 py-1 rounded text-[11px] font-medium transition inline-flex items-center space-x-1"
             >
               <Navigation className="w-3 h-3" />
               <span>Chỉ đường</span>
             </a>
             <button
               onClick={() => copyToClipboard(displayAddress, 'address')}
-              className="bg-white hover:bg-gray-100 text-gray-700 border border-gray-200 px-2.5 py-1 rounded text-[11px] font-medium transition inline-flex items-center space-x-1"
+              className="bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 px-2.5 py-1 rounded text-[11px] font-medium transition inline-flex items-center space-x-1 cursor-pointer"
             >
-              {copiedField === 'address' ? <Check className="w-3 h-3 text-green-600" /> : <Copy className="w-3 h-3" />}
+              {copiedField === 'address' ? <Check className="w-3 h-3 text-emerald-600" /> : <Copy className="w-3 h-3" />}
               <span>{copiedField === 'address' ? 'Đã chép' : 'Sao chép địa chỉ'}</span>
             </button>
           </div>
         </div>
 
         {/* 4. Website chính thức */}
-        <div className={`border rounded p-4 transition ${
+        <div className={`border rounded-lg p-4 transition ${
           hasWebsite
-            ? 'bg-emerald-50/40 border-emerald-300 hover:bg-emerald-50/70'
+            ? 'bg-slate-50/70 border-slate-300 hover:bg-white'
             : isLoading
-            ? 'bg-blue-50/20 border-blue-200'
-            : 'bg-gray-50/40 border-gray-200 hover:bg-white'
+            ? 'bg-sky-50/20 border-sky-200'
+            : 'bg-slate-50/50 border-slate-200/90 hover:bg-white'
         }`}>
           <div className="flex items-center justify-between mb-2">
-            <span className="text-xs font-semibold text-gray-600 flex items-center space-x-1.5">
-              <Globe className={`w-4 h-4 ${hasWebsite ? 'text-emerald-600' : 'text-gray-500'}`} />
+            <span className="text-xs font-semibold text-slate-600 flex items-center space-x-1.5">
+              <Globe className={`w-4 h-4 ${hasWebsite ? 'text-sky-600' : 'text-slate-400'}`} />
               <span>Website chính thức</span>
             </span>
 
             {hasWebsite ? (
-              <span className="inline-flex items-center space-x-1 text-[10px] bg-emerald-100 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded font-bold">
+              <span className="inline-flex items-center space-x-1 text-[10px] bg-slate-100 text-slate-700 border border-slate-200 px-2 py-0.5 rounded font-medium">
                 <CheckCircle2 className="w-3 h-3 text-emerald-600" />
                 <span>Đã xác thực</span>
               </span>
             ) : isLoading ? (
-              <span className="text-[10px] bg-blue-50 text-blue-700 border border-blue-200 px-2 py-0.5 rounded font-medium animate-pulse">
-                Đang tìm trên Google...
+              <span className="text-[10px] bg-sky-50 text-sky-700 border border-sky-200 px-2 py-0.5 rounded font-medium animate-pulse">
+                Đang kiểm tra hệ thống...
               </span>
             ) : (
-              <span className="text-[10px] bg-gray-100 text-gray-700 border border-gray-300 px-2 py-0.5 rounded font-bold">
+              <span className="text-[10px] bg-slate-100 text-slate-500 border border-slate-200 px-2 py-0.5 rounded font-medium">
                 Chưa cập nhật
               </span>
             )}
@@ -286,52 +286,52 @@ export function CompanyContactSection({ company }: CompanyContactSectionProps) {
                   href={websiteUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-bold text-emerald-700 hover:underline truncate block font-mono"
+                  className="text-sm font-bold text-sky-700 hover:underline truncate block font-mono"
                 >
                   {websiteUrl}
                 </a>
-                <p className="text-[11px] text-emerald-600/90 mt-0.5">
+                <p className="text-[11px] text-slate-500 mt-0.5">
                   Tên miền đang hoạt động và đồng bộ với doanh nghiệp
                 </p>
               </div>
             ) : isLoading ? (
               <div>
-                <div className="text-sm font-semibold text-blue-600 animate-pulse">
+                <div className="text-sm font-semibold text-sky-600 animate-pulse">
                   Đang dò tìm website chính thức...
                 </div>
-                <p className="text-[11px] text-gray-500 mt-0.5">
-                  Gemini AI đang tìm kiếm liên kết của công ty
+                <p className="text-[11px] text-slate-400 mt-0.5">
+                  Hệ thống đang kiểm tra liên kết của công ty
                 </p>
               </div>
             ) : (
               <div>
-                <div className="text-sm font-semibold text-gray-500 italic">
+                <div className="text-sm font-semibold text-slate-500 italic">
                   Chưa cập nhật website
                 </div>
-                <p className="text-[11px] text-gray-500 mt-0.5">
+                <p className="text-[11px] text-slate-400 mt-0.5">
                   Website chưa có trong dữ liệu doanh nghiệp
                 </p>
               </div>
             )}
           </div>
 
-          <div className="flex items-center space-x-2 pt-2 border-t border-gray-100 text-xs">
+          <div className="flex items-center space-x-2 pt-2 border-t border-slate-100 text-xs">
             {hasWebsite && websiteUrl ? (
               <>
                 <a
                   href={websiteUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 rounded text-[11px] font-bold transition inline-flex items-center space-x-1.5 shadow-sm"
+                  className="bg-slate-900 hover:bg-slate-800 text-white px-3 py-1 rounded text-[11px] font-semibold transition inline-flex items-center space-x-1.5 shadow-xs"
                 >
                   <span>Truy cập Website</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
                 <button
                   onClick={() => copyToClipboard(websiteUrl, 'website')}
-                  className="bg-white hover:bg-gray-100 text-gray-700 border border-gray-200 px-2.5 py-1 rounded text-[11px] font-medium transition inline-flex items-center space-x-1"
+                  className="bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 px-2.5 py-1 rounded text-[11px] font-medium transition inline-flex items-center space-x-1 cursor-pointer"
                 >
-                  {copiedField === 'website' ? <Check className="w-3 h-3 text-green-600" /> : <Copy className="w-3 h-3" />}
+                  {copiedField === 'website' ? <Check className="w-3 h-3 text-emerald-600" /> : <Copy className="w-3 h-3" />}
                   <span>{copiedField === 'website' ? 'Đã chép' : 'Sao chép Link'}</span>
                 </button>
               </>

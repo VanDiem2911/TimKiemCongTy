@@ -51,3 +51,7 @@ temp/
 # Scratch & test scripts
 scripts/test-*.mjs
 scripts/verify-*.mjs
+
+# Database backups
+backup_dudi_system/
+*.dump

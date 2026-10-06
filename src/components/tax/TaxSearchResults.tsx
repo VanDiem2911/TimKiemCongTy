@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { BusinessTaxInfo } from '@/types/tax';
-import { getCompanySlug, getCompanyStatusBadgeClass } from '@/lib/constants';
-import { Check, Copy, ArrowRight, MapPin, Building, User, Hash, AlertCircle, RefreshCw } from 'lucide-react';
+import { getCompanySlug, getCompanyStatusBadgeClass, normalizeTaxId } from '@/lib/constants';
+import { Check, Copy, ArrowRight, MapPin, Building, User, Hash, AlertCircle, RefreshCw, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface TaxSearchResultsProps {
   results: BusinessTaxInfo[];
@@ -15,6 +15,8 @@ interface TaxSearchResultsProps {
   onClear?: () => void;
 }
 
+const PAGE_SIZE = 25;
+
 export function TaxSearchResults({
   results,
   isLoading,
@@ -24,22 +26,42 @@ export function TaxSearchResults({
   onClear
 }: TaxSearchResultsProps) {
   const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const containerRef = React.useRef<HTMLDivElement>(null);
+
+  // Reset pagination page when new query or result set arrives
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, results]);
+
+  const totalPages = Math.max(1, Math.ceil(results.length / PAGE_SIZE));
+  const safePage = Math.min(currentPage, totalPages);
+  const startIndex = (safePage - 1) * PAGE_SIZE;
+  const paginatedResults = results.slice(startIndex, startIndex + PAGE_SIZE);
+
+  const handlePageChange = (newPage: number) => {
+    setCurrentPage(Math.max(1, Math.min(newPage, totalPages)));
+    if (containerRef.current) {
+      containerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
+    const clean = normalizeTaxId(text);
+    navigator.clipboard.writeText(clean);
     setCopiedId(text);
     setTimeout(() => setCopiedId(null), 2000);
   };
 
   if (isLoading) {
     return (
-      <div className="bg-white border border-amber-300 rounded-lg p-8 my-6 text-center shadow-md animate-pulse">
-        <div className="flex justify-center items-center space-x-3 text-amber-600 font-semibold mb-2">
+      <div className="bg-white border border-slate-200 rounded-xl p-8 my-6 text-center shadow-xs">
+        <div className="flex justify-center items-center space-x-3 text-[#e91a2c] font-semibold mb-2">
           <RefreshCw className="w-5 h-5 animate-spin" />
           <span>Đang truy vấn trực tiếp từ cơ sở dữ liệu Thuế...</span>
         </div>
-        <p className="text-xs text-gray-500">
-          Đang kết nối API Tổng cục Thuế để lấy thông tin mới nhất cho: <strong className="text-gray-800 font-mono">{searchQuery}</strong>
+        <p className="text-xs text-slate-500">
+          Đang kết nối để lấy thông tin mới nhất cho: <strong className="text-slate-800 font-mono">{searchQuery}</strong>
         </p>
       </div>
     );
@@ -50,28 +72,33 @@ export function TaxSearchResults({
   }
 
   return (
-    <div className="bg-white border-2 border-amber-400 rounded-lg p-6 my-6 shadow-md">
-      <div className="flex flex-wrap items-center justify-between border-b pb-3 mb-4 gap-2">
-        <div className="flex items-center space-x-2">
-          <span className="font-bold text-base text-gray-900">
-            Kết quả tra cứu cho: <span className="text-amber-600 font-mono underline">{searchQuery}</span>
+    <div ref={containerRef} className="bg-white border border-slate-200/90 rounded-xl p-6 my-6 shadow-xs scroll-mt-20">
+      <div className="flex flex-wrap items-center justify-between border-b border-slate-100 pb-3 mb-5 gap-2">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="font-bold text-base text-slate-900">
+            Kết quả tra cứu cho: <span className="text-sky-700 font-mono">{searchQuery}</span>
           </span>
-          <span className="bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded-full font-medium">
+          <span className="bg-slate-100 text-slate-700 text-xs px-2.5 py-0.5 rounded-full font-medium border border-slate-200">
             {results.length} kết quả
           </span>
+          {totalPages > 1 && (
+            <span className="text-xs text-slate-500 font-medium">
+              (Trang {safePage} / {totalPages} • Hiển thị {paginatedResults.length} doanh nghiệp)
+            </span>
+          )}
         </div>
 
         {source === 'vietqr-live-gdt' && (
-          <div className="flex items-center text-xs bg-green-50 text-green-700 border border-green-200 px-2.5 py-1 rounded">
-            <span className="inline-block w-2 h-2 rounded-full bg-green-500 mr-1.5 animate-ping"></span>
-            <strong>Live API (Tổng cục Thuế)</strong>
+          <div className="flex items-center text-xs bg-slate-100 text-slate-700 border border-slate-200 px-2.5 py-1 rounded-md">
+            <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 mr-1.5 animate-ping"></span>
+            <strong>Live Data (Tổng cục Thuế)</strong>
           </div>
         )}
 
         {onClear && (
           <button
             onClick={onClear}
-            className="text-xs text-gray-500 hover:text-red-600 underline ml-auto"
+            className="text-xs text-slate-500 hover:text-slate-800 underline ml-auto cursor-pointer"
           >
             Đóng kết quả
           </button>
@@ -79,69 +106,69 @@ export function TaxSearchResults({
       </div>
 
       {disclaimer && (
-        <div className="mb-4 text-xs bg-amber-50 border border-amber-200 text-amber-800 px-3 py-1.5 rounded flex items-center space-x-1.5">
-          <AlertCircle className="w-4 h-4 flex-shrink-0" />
+        <div className="mb-4 text-xs bg-slate-50 border border-slate-200 text-slate-700 px-3 py-2 rounded-md flex items-center space-x-2">
+          <AlertCircle className="w-4 h-4 text-slate-500 flex-shrink-0" />
           <span>{disclaimer}</span>
         </div>
       )}
 
       {results.length === 0 ? (
-        <div className="text-center py-8 text-gray-500">
-          <p className="text-sm font-semibold mb-1">Không tìm thấy mã số thuế hoặc doanh nghiệp phù hợp</p>
-          <p className="text-xs text-gray-400">
+        <div className="text-center py-8 text-slate-500">
+          <p className="text-sm font-semibold mb-1 text-slate-700">Không tìm thấy mã số thuế hoặc doanh nghiệp phù hợp</p>
+          <p className="text-xs text-slate-400">
             Gợi ý: Kiểm tra lại mã số thuế (10 hoặc 13 chữ số) hoặc tìm theo tên viết tắt của doanh nghiệp.
           </p>
         </div>
       ) : (
         <div className="space-y-6">
-          {results.map((comp, idx) => {
+          {paginatedResults.map((comp, idx) => {
             const detailSlug = getCompanySlug(comp.id, comp.name);
             return (
-              <div key={`${comp.id}-${idx}`} className="border-b last:border-0 pb-5 last:pb-0">
+              <div key={`${comp.id}-${idx}`} className="border-b border-slate-100 last:border-0 pb-5 last:pb-0">
                 <div className="flex items-start justify-between gap-2">
-                  <h3 className="text-lg font-bold text-blue-700 hover:underline">
+                  <h3 className="text-base sm:text-lg font-bold text-slate-900 hover:text-sky-600 transition-colors">
                     <Link href={`/${detailSlug}`} prefetch={false}>
                       {comp.name}
                     </Link>
                   </h3>
 
                   <span
-                    className={`text-xs px-2.5 py-0.5 rounded font-medium whitespace-nowrap border ${getCompanyStatusBadgeClass(comp.status)}`}
+                    className={`text-xs px-2.5 py-0.5 rounded-md font-medium whitespace-nowrap border ${getCompanyStatusBadgeClass(comp.status)}`}
                   >
                     {comp.status || 'NNT đang hoạt động'}
                   </span>
                 </div>
 
                 {comp.internationalName && (
-                  <div className="text-xs text-gray-500 italic mt-0.5">
+                  <div className="text-xs text-slate-500 italic mt-0.5">
                     Tên quốc tế: {comp.internationalName}
                   </div>
                 )}
 
                 {comp.shortName && (
-                  <div className="text-xs text-gray-600 font-medium mt-0.5">
-                    Tên viết tắt: <span className="text-gray-900">{comp.shortName}</span>
+                  <div className="text-xs text-slate-600 font-medium mt-0.5">
+                    Tên viết tắt: <span className="text-slate-900">{comp.shortName}</span>
                   </div>
                 )}
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-3 text-xs text-gray-700">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-3 text-xs text-slate-700">
                   <div className="flex items-center space-x-1.5">
-                    <Hash className="w-3.5 h-3.5 text-gray-400 flex-shrink-0" />
-                    <span className="font-semibold">Mã số thuế:</span>
+                    <Hash className="w-3.5 h-3.5 text-slate-400 flex-shrink-0" />
+                    <span className="font-semibold text-slate-600">Mã số thuế:</span>
                     <Link
                       href={`/${detailSlug}`}
                       prefetch={false}
-                      className="font-mono font-bold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200 hover:underline"
+                      className="font-mono font-bold text-[#e91a2c] bg-[#fff0f1] px-2 py-0.5 rounded border border-[#fecdd3] hover:bg-[#ffe4e6] transition-colors whitespace-nowrap inline-block"
                     >
-                      {comp.id}
+                      {normalizeTaxId(comp.id)}
                     </Link>
                     <button
                       onClick={() => copyToClipboard(comp.id)}
-                      className="p-1 hover:bg-gray-100 rounded text-gray-400 hover:text-gray-700 transition"
+                      className="p-1 hover:bg-slate-100 rounded text-slate-400 hover:text-slate-700 transition"
                       title="Sao chép mã số thuế"
                     >
                       {copiedId === comp.id ? (
-                        <Check className="w-3.5 h-3.5 text-green-600" />
+                        <Check className="w-3.5 h-3.5 text-emerald-600" />
                       ) : (
                         <Copy className="w-3.5 h-3.5" />
                       )}
@@ -150,44 +177,94 @@ export function TaxSearchResults({
 
                   {comp.representative && (
                     <div className="flex items-center space-x-1.5">
-                      <User className="w-3.5 h-3.5 text-gray-400 flex-shrink-0" />
-                      <span className="font-semibold">Đại diện pháp luật:</span>
-                      <span className="text-gray-900 font-bold">{comp.representative}</span>
+                      <User className="w-3.5 h-3.5 text-slate-400 flex-shrink-0" />
+                      <span className="font-semibold text-slate-600">Đại diện pháp luật:</span>
+                      <span className="text-slate-900 font-bold">{comp.representative}</span>
                     </div>
                   )}
 
                   <div className="flex items-start space-x-1.5 md:col-span-2">
-                    <MapPin className="w-3.5 h-3.5 text-gray-400 flex-shrink-0 mt-0.5" />
-                    <span className="font-semibold">Địa chỉ trụ sở:</span>
-                    <span className="text-gray-800">{comp.address}</span>
+                    <MapPin className="w-3.5 h-3.5 text-slate-400 flex-shrink-0 mt-0.5" />
+                    <span className="font-semibold text-slate-600">Địa chỉ trụ sở:</span>
+                    <span className="text-slate-800">{comp.address}</span>
                   </div>
 
                   {comp.industryName && (
                     <div className="flex items-center space-x-1.5 md:col-span-2">
-                      <Building className="w-3.5 h-3.5 text-gray-400 flex-shrink-0" />
-                      <span className="font-semibold">Ngành nghề chính:</span>
-                      <span className="text-gray-700">{comp.industryName}</span>
+                      <Building className="w-3.5 h-3.5 text-slate-400 flex-shrink-0" />
+                      <span className="font-semibold text-slate-600">Ngành nghề chính:</span>
+                      <span className="text-slate-700">{comp.industryName}</span>
                     </div>
                   )}
                 </div>
 
                 {/* View Details Action Button */}
-                <div className="mt-3 pt-3 border-t border-gray-100 flex flex-wrap items-center justify-between gap-2">
-                  <span className="text-xs text-gray-500">
-                    Bấm để mở trang chi tiết đầy đủ 12 trường thông tin thuế
+                <div className="mt-3 pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-xs text-slate-400">
+                    Bấm để mở hồ sơ chi tiết đầy đủ 12 trường thông tin thuế
                   </span>
                   <Link
                     href={`/${detailSlug}`}
                     prefetch={false}
-                    className="bg-[#fed700] hover:bg-amber-400 text-gray-900 font-bold px-4 py-1.5 rounded text-xs transition shadow-sm flex items-center space-x-1.5"
+                    className="bg-[#e91a2c] hover:bg-[#c51322] active:bg-[#a80f1b] text-white font-medium px-4 py-1.5 rounded-lg text-xs transition-all shadow-xs hover:shadow flex items-center space-x-1.5 group cursor-pointer"
                   >
                     <span>Xem chi tiết mã số thuế</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
                   </Link>
                 </div>
               </div>
             );
           })}
+
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="mt-8 pt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3 text-xs">
+              <div className="text-slate-500">
+                Hiển thị <strong>{startIndex + 1} - {Math.min(startIndex + PAGE_SIZE, results.length)}</strong> trong số <strong>{results.length}</strong> doanh nghiệp
+              </div>
+
+              <div className="flex items-center gap-1">
+                <button
+                  onClick={() => handlePageChange(safePage - 1)}
+                  disabled={safePage <= 1}
+                  className="px-3 py-1.5 rounded-md border border-slate-200 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed flex items-center space-x-1 cursor-pointer font-medium text-slate-700"
+                >
+                  <ChevronLeft className="w-3.5 h-3.5" />
+                  <span>Trang trước</span>
+                </button>
+
+                {Array.from({ length: totalPages }, (_, i) => i + 1)
+                  .filter((p) => p === 1 || p === totalPages || Math.abs(p - safePage) <= 2)
+                  .map((p, idx, arr) => {
+                    const prev = arr[idx - 1];
+                    return (
+                      <React.Fragment key={p}>
+                        {prev && p - prev > 1 && <span className="px-1.5 text-slate-400">...</span>}
+                        <button
+                          onClick={() => handlePageChange(p)}
+                          className={`w-8 h-8 rounded-md border text-xs font-semibold cursor-pointer transition-colors ${
+                            p === safePage
+                              ? 'bg-slate-900 border-slate-900 text-white shadow-xs'
+                              : 'border-slate-200 hover:bg-slate-100 text-slate-700'
+                          }`}
+                        >
+                          {p}
+                        </button>
+                      </React.Fragment>
+                    );
+                  })}
+
+                <button
+                  onClick={() => handlePageChange(safePage + 1)}
+                  disabled={safePage >= totalPages}
+                  className="px-3 py-1.5 rounded-md border border-slate-200 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed flex items-center space-x-1 cursor-pointer font-medium text-slate-700"
+                >
+                  <span>Trang sau</span>
+                  <ChevronRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       )}
     </div>

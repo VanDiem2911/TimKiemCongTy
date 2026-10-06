@@ -1,6 +1,6 @@
 import { cache } from 'react';
 import { BusinessTaxInfo } from '@/types/tax';
-import { INITIAL_COMPANIES, getCompanySlug } from '@/lib/constants';
+import { INITIAL_COMPANIES, getCompanySlug, normalizeTaxId } from '@/lib/constants';
 import harvestedJson from '@/data/harvested_provinces.json';
 import { isPhoneHidden, getKnownPhone } from '@/lib/privacyStore';
 
@@ -274,7 +274,7 @@ export function parseMasothueHtml(html: string, defaultId: string = ''): Busines
     
     if (text.includes('Mã số thuế')) {
       const match = text.match(/Mã số thuế\s*([0-9\-]+)/i);
-      if (match) id = match[1].replace(/[^0-9]/g, '');
+      if (match) id = normalizeTaxId(match[1]);
     } else if (text.includes('Địa chỉ Thuế')) {
       taxAddress = text.replace(/^Địa chỉ Thuế\s*/i, '').trim();
     } else if (text.startsWith('Địa chỉ ')) {
@@ -390,7 +390,7 @@ export function parseMasothueHtml(html: string, defaultId: string = ''): Busines
  * has all 15 fields populated consistently without exception.
  */
 export function enrichCompanyData(partial: Partial<BusinessTaxInfo>): BusinessTaxInfo {
-  const id = (partial.id || '').replace(/[^0-9]/g, '');
+  const id = normalizeTaxId(partial.id || '');
   const name = (partial.name || `DOANH NGHIỆP ${id}`).trim().toUpperCase();
   const address = (partial.address || partial.taxAddress || 'Việt Nam').trim();
   const taxAddress = (partial.taxAddress || partial.address || address).trim();
@@ -499,8 +499,8 @@ export function formatCurrentTimeVietnam(): string {
 
 export function clearCompanyCache(slugOrTaxId: string) {
   const cleanInput = (slugOrTaxId || '').trim();
-  const match = cleanInput.match(/^(\d{10}(\d{3})?)/);
-  const taxId = match ? match[1] : cleanInput;
+  const match = cleanInput.match(/^(\d{10}(-\d{3})?|\d{13})/);
+  const taxId = match ? normalizeTaxId(match[1]) : cleanInput;
   PROFILE_CACHE.delete(cleanInput);
   PROFILE_CACHE.delete(taxId);
 }
@@ -516,9 +516,9 @@ export async function getCompleteCompanyProfile(
   const cleanInput = (slugOrTaxId || '').trim();
   if (!cleanInput) return null;
 
-  // Extract tax number (10 or 13 digits)
-  const match = cleanInput.match(/^(\d{10}(\d{3})?)/);
-  const taxId = match ? match[1] : cleanInput;
+  // Extract tax number (10 or 13 digits, with or without hyphen)
+  const match = cleanInput.match(/^(\d{10}(-\d{3})?|\d{13})/);
+  const taxId = match ? normalizeTaxId(match[1]) : cleanInput;
 
   // Check cache only if not forced refresh
   if (!forceRefresh) {
@@ -727,13 +727,29 @@ export async function getCompleteCompanyProfile(
 
   // 4. Try matching in harvested database
   for (const list of Object.values(HARVESTED_DATA)) {
-    const item = list.find(c => c.id === taxId || cleanInput.includes(c.id));
+    const item = list.find(c => {
+      if (!c) return false;
+      const cIdNorm = normalizeTaxId(c.id);
+      const taxIdNorm = normalizeTaxId(taxId);
+      return (
+        cIdNorm === taxIdNorm ||
+        c.id === taxId ||
+        cleanInput.includes(c.id) ||
+        (c.slug && (cleanInput.includes(c.slug) || c.slug.includes(cleanInput)))
+      );
+    });
     if (item) {
+      const canonicalId = normalizeTaxId(item.id);
       const enriched = enrichCompanyData({
-        id: item.id,
+        id: canonicalId,
         name: item.name,
         address: item.address,
         representative: item.representative,
+        startDate: (item as any).startDate || undefined,
+        phone: (item as any).phone && (item as any).phone !== 'Bị ẩn theo yêu cầu người dùng' ? (item as any).phone : undefined,
+        status: (item as any).status || undefined,
+        managedBy: (item as any).managedBy || undefined,
+        mainIndustry: (item as any).mainIndustry || undefined,
         lastUpdated: forceRefresh ? formatCurrentTimeVietnam() : undefined
       });
       return finalizeProfile(enriched);
@@ -741,36 +757,48 @@ export async function getCompleteCompanyProfile(
   }
 
   // 5. Try matching in INITIAL_COMPANIES
-  const localFound = INITIAL_COMPANIES.find(c => c.id === taxId || cleanInput.includes(c.id));
+  const localFound = INITIAL_COMPANIES.find(c => {
+    const cIdNorm = normalizeTaxId(c.id);
+    const taxIdNorm = normalizeTaxId(taxId);
+    return cIdNorm === taxIdNorm || c.id === taxId || cleanInput.includes(c.id);
+  });
   if (localFound) {
     const enriched = enrichCompanyData({
       ...localFound,
+      id: normalizeTaxId(localFound.id),
       lastUpdated: forceRefresh ? formatCurrentTimeVietnam() : localFound.lastUpdated
     });
     return finalizeProfile(enriched);
   }
 
   // 6. Nếu là mã số thuế hợp lệ, sinh đầy đủ hồ sơ chuẩn xác
-  if (/^\d{10}(\d{3})?$/.test(taxId)) {
+  const cleanDigits = taxId.replace(/[^0-9]/g, '');
+  if (cleanDigits.length === 10 || cleanDigits.length === 13) {
+    const canonicalTaxId = normalizeTaxId(taxId);
     // Trích xuất tên từ đường dẫn slug nếu có
-    const slugNamePart = cleanInput.includes('-') ? cleanInput.replace(/^\d+[-_]?/, '').trim() : '';
-    let resolvedName = `DOANH NGHIỆP ${taxId}`;
+    const slugNamePart = cleanInput.includes('-') ? cleanInput.replace(/^[\d\-]+/, '').trim() : '';
+    let resolvedName = `DOANH NGHIỆP ${canonicalTaxId}`;
     if (slugNamePart) {
       resolvedName = slugNamePart.replace(/-/g, ' ').toUpperCase();
-      if (!resolvedName.startsWith('CÔNG TY') && !resolvedName.startsWith('DOANH NGHIỆP')) {
+      if (
+        !resolvedName.startsWith('CÔNG TY') &&
+        !resolvedName.startsWith('DOANH NGHIỆP') &&
+        !resolvedName.startsWith('VĂN PHÒNG') &&
+        !resolvedName.startsWith('CHI NHÁNH')
+      ) {
         resolvedName = `CÔNG TY ${resolvedName}`;
       }
     }
 
     let defaultProvince = 'Việt Nam';
-    if (taxId.startsWith('03') || taxId.startsWith('79')) defaultProvince = 'Hồ Chí Minh';
-    else if (taxId.startsWith('01')) defaultProvince = 'Hà Nội';
-    else if (taxId.startsWith('04') || taxId.startsWith('48')) defaultProvince = 'Đà Nẵng';
-    else if (taxId.startsWith('37') || taxId.startsWith('74')) defaultProvince = 'Bình Dương';
-    else if (taxId.startsWith('36') || taxId.startsWith('75')) defaultProvince = 'Đồng Nai';
+    if (canonicalTaxId.startsWith('03') || canonicalTaxId.startsWith('79')) defaultProvince = 'Hồ Chí Minh';
+    else if (canonicalTaxId.startsWith('01')) defaultProvince = 'Hà Nội';
+    else if (canonicalTaxId.startsWith('04') || canonicalTaxId.startsWith('48')) defaultProvince = 'Đà Nẵng';
+    else if (canonicalTaxId.startsWith('37') || canonicalTaxId.startsWith('74')) defaultProvince = 'Bình Dương';
+    else if (canonicalTaxId.startsWith('36') || canonicalTaxId.startsWith('75')) defaultProvince = 'Đồng Nai';
 
     const procedural = enrichCompanyData({
-      id: taxId,
+      id: canonicalTaxId,
       name: resolvedName,
       address: `Thành phố ${defaultProvince}, Việt Nam`,
       taxAddress: `Thành phố ${defaultProvince}, Việt Nam`,

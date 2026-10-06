@@ -6,6 +6,7 @@ import { Footer } from '@/components/layout/Footer';
 import { TaxDetailView } from '@/components/tax/TaxDetailView';
 import { getCachedCompanyProfile } from '@/lib/taxEngine';
 import { getCompanySlug, getBaseUrl } from '@/lib/constants';
+import { recordRecentLookup } from '@/lib/recentLookups';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -92,6 +93,8 @@ export default async function CompanyDetailPage({ params }: PageProps) {
   if (!company) {
     notFound();
   }
+
+  recordRecentLookup(company);
 
   const canonicalSlug = getCompanySlug(company.id, company.name);
 
