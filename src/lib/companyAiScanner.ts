@@ -54,9 +54,19 @@ async function searchCompanyWeb(company: {
     company.internationalName?.replace(/co\.,?ltd|company limited/gi, '').trim() ||
     '';
 
+  // Build smart brand slug for domain guessing (e.g. VIETTEL -> viettel, VINAMILK -> vinamilk)
+  const brandSlug = brand
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[đĐ]/g, 'd')
+    .replace(/[^a-z0-9]+/g, '')
+    .replace(/^(cong ty|tap doan|ngan hang|bao hiem)+/gi, '')
+    .trim();
+
   const queries = [
-    `${company.name} ${brand} website email`,
-    `${company.name} ${company.id} website`,
+    brand ? `${brand} website chính thức Vietnam` : `${company.name} website`,
+    `${company.name} ${company.id} website email liên hệ`,
   ];
 
   for (const q of queries) {
@@ -150,13 +160,8 @@ async function searchCompanyWeb(company: {
         }
       }
 
-      // Nếu tìm thấy website nhưng chưa thấy email, tạo email liên hệ tên miền
-      if (!officialEmail && officialWebsite) {
-        try {
-          const host = new URL(officialWebsite).hostname.replace(/^www\./, '');
-          officialEmail = `contact@${host}`;
-        } catch {}
-      }
+      // Nếu tìm thấy website nhưng chưa thấy email, KHÔNG tự tạo email giả
+      // (chỉ dùng email thật từ search results)
 
       // 5. Tìm số hotline trong nội dung nếu có (loại trừ mã số thuế)
       let phoneFound: string | null = null;
@@ -249,7 +254,7 @@ Tìm kiếm và trả về DUY NHẤT một chuỗi JSON hợp lệ:
   "summary": "Tóm tắt ngắn gọn 1 câu về công ty và liên hệ"
 }`;
 
-  const models = ['gemini-2.5-flash', 'gemini-3.5-flash', 'gemini-3.1-flash-lite', 'gemini-flash-latest'];
+  const models = ['gemini-3.8-flash', 'gemini-2.5-flash', 'gemini-2.0-flash-lite', 'gemini-1.5-flash-latest'];
 
   for (const model of models) {
     try {
@@ -305,19 +310,15 @@ Tìm kiếm và trả về DUY NHẤT một chuỗi JSON hợp lệ:
         }
       }
 
-      // Regex fallback nếu Gemini trả lời dạng văn bản thay vì JSON
+      // Regex fallback nếu Gemini trả lời dạng văn bản thay vì JSON (chỉ dùng cho website)
       if (!website) {
         const urlMatch = text.match(/https?:\/\/[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\/[^\s"']*)?/);
         if (urlMatch && !urlMatch[0].includes('google.com') && !urlMatch[0].includes('schema.org')) {
           website = urlMatch[0];
         }
       }
-      if (!email) {
-        const emailMatch = text.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
-        if (emailMatch && !emailMatch[0].includes('example')) {
-          email = emailMatch[0].toLowerCase();
-        }
-      }
+      // KHÔNG dùng regex fallback cho email - Gemini có thể bịa email không có thật
+
 
       const sources: string[] = ['Google Gemini AI Search'];
       const groundingChunks = candidate?.groundingMetadata?.groundingChunks;
@@ -327,6 +328,14 @@ Tìm kiếm và trả về DUY NHẤT một chuỗi JSON hợp lệ:
             sources.push(chunk.web.uri);
           }
         });
+      }
+
+      const hasGrounding = Array.isArray(groundingChunks) && groundingChunks.length > 0;
+
+      // Chỉ chấp nhận email khi có grounding source thật (Gemini search web)
+      // tránh Gemini tự bịế email không có thật
+      if (!hasGrounding) {
+        email = null;
       }
 
       if (website || email) {
@@ -410,6 +419,17 @@ export async function scanCompanyContactAI(
     geminiResult = await findInfoWithGemini(company);
   }
 
+  // Smart domain inference: nếu cả 2 nguồn đều không tìm thấy website, thử xây dựng từ brand slug
+  const brandSlugForDomain = (
+    company.shortName?.replace(/co\.,?ltd|company limited|tnhh|cổ phần|cp|joint stock|jsc/gi, '')
+      .toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/đ/g, 'd').replace(/[^a-z0-9]+/g, '').trim() ||
+    company.internationalName?.replace(/co\.,?ltd|company limited|jsc/gi, '')
+      .toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/đ/g, 'd').replace(/[^a-z0-9]+/g, '').trim() ||
+    ''
+  );
+
   // Hợp nhất dữ liệu: Ưu tiên website và email tìm thấy từ Web/Gemini
   const verifiedWebsite = geminiResult?.website || webResult?.website || null;
   const verifiedEmail = geminiResult?.email || webResult?.email || null;
@@ -451,18 +471,9 @@ export async function scanCompanyContactAI(
     phoneStatus = 'available';
   }
 
-  // Email doanh nghiệp
-  let email: string | null = verifiedEmail;
-  let emailStatus: 'available' | 'not_found' = 'not_found';
-  if (email && email.includes('@')) {
-    emailStatus = 'available';
-  } else if (verifiedWebsite) {
-    try {
-      const hostname = new URL(verifiedWebsite).hostname.replace(/^www\./, '');
-      email = `contact@${hostname}`;
-      emailStatus = 'available';
-    } catch {}
-  }
+  // Email doanh nghiệp - CHỈ dùng email thật, KHÔNG tạo giả từ domain
+  const email: string | null = (verifiedEmail && verifiedEmail.includes('@')) ? verifiedEmail : null;
+  const emailStatus: 'available' | 'not_found' = email ? 'available' : 'not_found';
 
   // Địa chỉ
   const address = geminiResult?.address || company.address;

@@ -160,9 +160,9 @@ export const INITIAL_COMPANIES: BusinessTaxInfo[] = [
     address: '49/2 đường Số 14, Phường Thủ Đức, Thành phố Hồ Chí Minh, Việt Nam',
     status: 'Đang hoạt động',
     representative: 'NGUYỄN THỊ HẢO',
-    phone: '0908123456',
     industryName: 'Lập trình máy tính khác (6219)',
     province: 'TP Hồ Chí Minh'
+
   },
   {
     id: '3502593768',
