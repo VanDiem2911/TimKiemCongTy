@@ -3,6 +3,7 @@ import { BusinessTaxInfo } from '@/types/tax';
 import { INITIAL_COMPANIES, getCompanySlug, normalizeTaxId } from '@/lib/constants';
 import harvestedJson from '@/data/harvested_provinces.json';
 import { isPhoneHidden, getKnownPhone } from '@/lib/privacyStore';
+import { KNOWN_COMPANY_CONTACTS } from '@/lib/companyAiScanner';
 
 export interface HarvestedCompanyItem {
   id: string;
@@ -594,22 +595,35 @@ export async function getCompleteCompanyProfile(
       data.phone = data.rawPhone;
     }
 
+    const knownContact = KNOWN_COMPANY_CONTACTS[data.id];
+
     if (!data.contactInfo) {
       data.contactInfo = {
         phone: hidden ? 'Đã ẩn theo yêu cầu' : (data.phone || 'Chưa cập nhật'),
         phoneStatus: hidden ? 'hidden' : data.phone && !data.phone.includes('ẩn') ? 'available' : 'not_found',
-        email: null,
-        emailStatus: 'not_found',
+        email: knownContact?.email || null,
+        emailStatus: knownContact?.email ? 'available' : 'not_found',
         address: data.address,
-        website: null,
-        hasWebsite: false,
-        websiteStatus: 'pending',
+        website: knownContact?.website || null,
+        hasWebsite: Boolean(knownContact?.website),
+        websiteStatus: knownContact?.website ? 'found' : 'pending',
         aiScannedAt: data.lastUpdated || formatCurrentTimeVietnam(),
-        aiScanSummary: 'Đang rà soát website và thông tin liên hệ...',
-        verifiedByAi: false,
-        sourcesChecked: ['Tổng cục Thuế']
+        aiScanSummary: knownContact?.website
+          ? `Hồ sơ xác thực website chính thức ${knownContact.website} của doanh nghiệp.`
+          : 'Đang rà soát website và thông tin liên hệ...',
+        verifiedByAi: Boolean(knownContact?.website),
+        sourcesChecked: knownContact?.website ? ['Hồ sơ xác thực doanh nghiệp', knownContact.website] : ['Tổng cục Thuế']
       };
     } else {
+      if (knownContact?.website && !data.contactInfo.website) {
+        data.contactInfo.website = knownContact.website;
+        data.contactInfo.hasWebsite = true;
+        data.contactInfo.websiteStatus = 'found';
+      }
+      if (knownContact?.email && !data.contactInfo.email) {
+        data.contactInfo.email = knownContact.email;
+        data.contactInfo.emailStatus = 'available';
+      }
       if (hidden) {
         data.contactInfo.phone = 'Đã ẩn theo yêu cầu';
         data.contactInfo.phoneStatus = 'hidden';

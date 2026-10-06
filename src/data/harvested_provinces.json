@@ -39112,34 +39112,59 @@
     {
       "id": "3502548878",
       "name": "CÔNG TY TNHH TMDV XÂY DỰNG VÀ NÔNG SẢN BẢO LỘC",
-      "representative": "NGUYỄN BẢO LỘC",
+      "representative": "NGUYỄN BẢO LỘC Ngoài ra, NGUYỄN BẢO LỘC còn đại diện các doanh nghiệp, đơn vị: DOANH NGHIỆP TƯ NHÂN LỘC MINH THIỆN",
       "address": "Tổ 4, Khu Phố 6, Phường Phước Nguyên, Thành phố Bà Rịa, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548878-cong-ty-tnhh-tmdv-xay-dung-va-nong-san-bao-loc",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-10",
+      "phone": "0792 002 289",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng Chi tiết: Bán buôn xi măng, gạch xây, ngói, đá, cát, sỏi, kính xây dựng, sơn, vecni, gạch ốp lát và thiết bị vệ sinh, Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng…",
+      "enrichedAt": "2026-10-06T09:31:57.535Z"
     },
     {
       "id": "3502548733",
       "name": "CÔNG TY TNHH KIM BẢO HƯNG HOLDINGS",
-      "representative": "NGUYỄN ĐẠI ĐỒNG",
+      "representative": "NGUYỄN ĐẠI ĐỒNG Ngoài ra, NGUYỄN ĐẠI ĐỒNG còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH 3G QUÂN NGUYỄN HỘ KINH DOANH MUA BÁN HẢI SẢN KL",
       "address": "Tổ 7, Ấp Lò Vôi, Xã Phước Hưng, Huyện Long Đất, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548733-cong-ty-tnhh-kim-bao-hung-holdings",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-10",
+      "phone": "0901457658",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn thực phẩm",
+      "internationalName": "KIM BAO HUNG HOLDINGS COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T09:32:01.137Z"
     },
     {
       "id": "3502548740",
       "name": "CÔNG TY TNHH THƯƠNG MẠI BAO BÌ LONG ĐẤT",
-      "representative": "HUỲNH QUỐC DUY",
+      "representative": "HUỲNH QUỐC DUY Ngoài ra, HUỲNH QUỐC DUY còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH QUỐC DUY",
       "address": "Đường số 11, tổ 33, ấp Phước Nghĩa, Xã Tam An, Huyện Long Đất, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548740-cong-ty-tnhh-thuong-mai-bao-bi-long-dat",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-10",
+      "phone": "0938944077",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn chuyên doanh khác chưa được phân vào đâu Chi tiết: Bán buôn bao bì các loại, giấy, mực in các loại, các sản phẩm từ plastic",
+      "enrichedAt": "2026-10-06T09:32:06.169Z"
     },
     {
       "id": "3502548719",
       "name": "CÔNG TY TNHH HỒNG NGỌC KHÁNH",
-      "representative": "LÊ HỒNG THANH",
+      "representative": "LÊ HỒNG THANH Ngoài ra, LÊ HỒNG THANH còn đại diện các doanh nghiệp, đơn vị: Lê Hồng Thanh",
       "address": "Số 289, đường 14, khu phố Long  Nguyên, Thị Trấn Long Điền, Huyện Long Đất, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548719-cong-ty-tnhh-hong-ngoc-khanh",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-10",
+      "phone": "0909903935",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn đồ dùng khác cho gia đình",
+      "enrichedAt": "2026-10-06T09:32:09.761Z"
     },
     {
       "id": "3502548807",
@@ -39147,7 +39172,14 @@
       "representative": "NGUYỄN THÀNH ĐÁNG",
       "address": "Tổ 4, Khu phố 2, Phường Hắc Dịch, Thành Phố Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548807-cong-ty-co-phan-viet-life-wood",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-10",
+      "phone": "0907654299",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 22 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng",
+      "internationalName": "VIET LIFE WOOD JOINT STOCK COMPANY",
+      "enrichedAt": "2026-10-06T09:32:13.279Z"
     },
     {
       "id": "3502548980",
@@ -39168,7 +39200,13 @@
       "representative": "ĐOÀN MINH TIẾN",
       "address": "Số 68, đường Nguyễn Hữu Cảnh, Phường Long Hương, Thành phố Bà Rịa, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548638-cong-ty-tnhh-tm-tien-toan-thang",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-10",
+      "phone": "0975359275",
+      "status": "Không",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Sản xuất sắt, thép, gang",
+      "enrichedAt": "2026-10-06T09:32:16.592Z"
     },
     {
       "id": "3502548797",
@@ -39189,7 +39227,13 @@
       "representative": "TRẦN NGỌC TÂN",
       "address": "888/100A đường 30/4, Phường 11, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548606-cong-ty-tnhh-thuong-mai-dich-vu-truong-ngoc-phat",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-09",
+      "phone": "0906348079",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán lẻ đồ ngũ kim, sơn, kính và thiết bị lắp đặt khác trong xây dựng trong các cửa hàng chuyên doanh",
+      "enrichedAt": "2026-10-06T09:32:20.231Z"
     },
     {
       "id": "3502548814",
@@ -39197,15 +39241,28 @@
       "representative": "NGUYỄN THỊ THANH HẰNG",
       "address": "Tổ 5, KP Ông Trịnh, Phường Tân Phước, Thành Phố Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548814-cong-ty-tnhh-van-tai-khang-nhu-y",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-10",
+      "phone": "0937217887",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 22 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Vận tải hàng hóa bằng đường bộ",
+      "enrichedAt": "2026-10-06T09:32:23.816Z"
     },
     {
       "id": "3502548821",
       "name": "CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÁT TRIỂN DU LỊCH BHN VŨNG TÀU",
-      "representative": "PHẠM HOÀNG ANH",
+      "representative": "PHẠM HOÀNG ANH Ngoài ra, PHẠM HOÀNG ANH còn đại diện các doanh nghiệp, đơn vị: CÔNG TY CỔ PHẦN BẤT ĐỘNG SẢN XUYÊN MỘC CÔNG TY TNHH CHẾ BIẾN XUẤT NHẬP KHẨU NÔNG SẢN LONG CHÂU CÔNG TY CỔ PHẦN DU LỊCH BHN LOTUS VŨNG TÀU CÔNG TY CỔ PHẦN TƯ VẤN ĐỊNH HƯỚNG CHIẾN LƯỢC PHÁT TRIỂN VIỆT NAM - BHN CÔNG TY CỔ PHẦN KINH DOANH HẠ TẦNG TÂN BÌNH CÔNG TY CỔ PHẦN CÔNG NGHỆ MÔI TRƯỜNG BHN CÔNG TY TNHH THUỶ SẢN BHN BÌNH THUẬN",
       "address": "669/19/27 Nguyễn An Ninh, Phường Nguyễn An Ninh, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548821-cong-ty-co-phan-dau-tu-va-phat-trien-du-lich-bhn-vung-tau",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-10",
+      "phone": "0982016628",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế Thành phố Hồ Chí Minh",
+      "mainIndustry": "Nhà hàng và các dịch vụ ăn uống phục vụ lưu động",
+      "internationalName": "BHN VUNG TAU TOURISM DEVELOPMENT AND INVESTMENT CORPORATION",
+      "enrichedAt": "2026-10-06T09:32:27.003Z"
     },
     {
       "id": "3502548839",
@@ -39213,39 +39270,70 @@
       "representative": "LÝ HOÀNG PHÚC",
       "address": "339 Trần Phú, Phường Thắng Nhì, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548839-cong-ty-tnhh-thuong-mai-va-dich-vu-du-lich-phuc-hoang",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-10",
+      "phone": "0908910978",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Điều hành tua du lịch",
+      "enrichedAt": "2026-10-06T09:32:30.416Z"
     },
     {
       "id": "3502548853",
       "name": "CÔNG TY TNHH MISA HOUSE",
-      "representative": "TRẦN THỊ PHƯƠNG",
+      "representative": "TRẦN THỊ PHƯƠNG Ngoài ra, TRẦN THỊ PHƯƠNG còn đại diện các doanh nghiệp, đơn vị: 57 Lý Tự Trọng",
       "address": "Số 57 Lý Tự Trọng, Phường 1, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548853-cong-ty-tnhh-misa-house",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-10",
+      "phone": "0983879790",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế Thành phố Hồ Chí Minh",
+      "mainIndustry": "Kinh doanh bất động sản, quyền sử dụng đất thuộc chủ sở hữu, chủ sử dụng hoặc đi thuê",
+      "enrichedAt": "2026-10-06T09:32:33.973Z"
     },
     {
       "id": "3502548726",
       "name": "CÔNG TY TNHH VẬT LIỆU XÂY DỰNG LAN PHI",
-      "representative": "NGUYỄN THỊ LAN",
+      "representative": "NGUYỄN THỊ LAN Ngoài ra, NGUYỄN THỊ LAN còn đại diện các doanh nghiệp, đơn vị: Nguyễn Thị Lan",
       "address": "Số nhà 10, Tổ 12, Ấp Hải Sơn, Xã Phước Hưng, Huyện Long Đất, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548726-cong-ty-tnhh-vat-lieu-xay-dung-lan-phi",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-10",
+      "phone": "0978295897",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng Chi tiết: Bán buôn tre, nứa, gỗ cây và gỗ chế biến; Bán buôn xi măng; Bán buôn gạch xây, ngói, đá, cát, sỏi; Bán buôn kính xây dựng; Bán buôn sơn, vécni, bột trét tường; Bán buôn gạch ốp lát và thiết bị vệ sinh; Bán buôn đồ ngũ kim; Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng",
+      "enrichedAt": "2026-10-06T09:32:37.578Z"
     },
     {
       "id": "3502548701",
       "name": "CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ HUBTIX",
-      "representative": "HOÀNG THỊ MỸ LINH",
+      "representative": "HOÀNG THỊ MỸ LINH Ngoài ra, HOÀNG THỊ MỸ LINH còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH HUBTIX",
       "address": "Số E4/3/24 Khu đô thị Chí Linh, Phường 10, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548701-cong-ty-tnhh-thuong-mai-dich-vu-hubtix",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-09",
+      "phone": "0867282200",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Hoạt động dịch vụ hỗ trợ khác liên quan đến vận tải Chi tiết: - Dịch vụ giao nhận hàng hóa, khai thuê hải quan - Dịch vụ kiểm đếm hàng hóa - Dịch vụ nâng cẩu hàng hoá; - Dịch vụ đại lý tàu biển; - Dịch vụ đại lý vận tải đường biển - Dịch vụ logistics; - Đại lý bán vé máy bay, vé tàu hỏa, vé tàu thủy; - Dịch vụ môi giới hợp đồng vận chuyển, hợp đồng lai dắt tàu biển; - Môi giới hợp đồng thuê tàu biển (Không kèm thủy thủ đoàn); không bao gồm vận tải và các hoạt động dịch vụ vận tải hàng không",
+      "internationalName": "HUBTIX TRADING SERVICE COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T09:32:41.114Z"
     },
     {
       "id": "3502548476",
       "name": "CÔNG TY TNHH PHÁT TRIỂN KINH DOANH MẠNH DŨNG",
-      "representative": "PHẠM TIẾN DŨNG",
+      "representative": "PHẠM TIẾN DŨNG Ngoài ra, PHẠM TIẾN DŨNG còn đại diện các doanh nghiệp, đơn vị: Phạm Tiến Dũng (HKD Mạnh Dũng)",
       "address": "Tổ 6, Ấp Phước Tân 3, Xã Tân Hưng, Thành phố Bà Rịa, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548476-cong-ty-tnhh-phat-trien-kinh-doanh-manh-dung",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-06",
+      "phone": "0783343882",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn thực phẩm Chi tiết: Bán buôn đường, sữa và các sản phẩm sữa, bánh, kẹo và các sản phẩm chế biến từ ngũ cốc, bột, tinh bột",
+      "enrichedAt": "2026-10-06T09:32:44.710Z"
     },
     {
       "id": "3502548691",
@@ -39253,7 +39341,14 @@
       "representative": "TRẦN NGỌC DŨNG",
       "address": "Số 24A2 Hồ Tri Tân, Phường Rạch Dừa, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548691-cong-ty-tnhh-phan-phoi-tong-hop-hung-thinh",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-09",
+      "phone": "0967503766",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn đồ dùng khác cho gia đình (trừ dược phẩm)",
+      "internationalName": "HUNG THINH GENERAL DISTRIBUTION COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T09:32:48.269Z"
     },
     {
       "id": "3502548684",
@@ -39299,34 +39394,59 @@
     {
       "id": "3502548589",
       "name": "CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ TỔNG HỢP HOÀNG THIÊN ÂN",
-      "representative": "NGUYỄN THÁI CUNG",
+      "representative": "NGUYỄN THÁI CUNG Ngoài ra, NGUYỄN THÁI CUNG còn đại diện các doanh nghiệp, đơn vị: Nguyễn Thái Cung (Hữu Phước)",
       "address": "Tổ 17, Thôn Đức Mỹ, Xã Suối Nghệ, Huyện Châu Đức, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548589-cong-ty-tnhh-thuong-mai-dich-vu-tong-hop-hoang-thien-an",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-06",
+      "phone": "0901250579",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 23 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn thực phẩm Chi tiết: Bán buôn trà, cà phê, dầu ăn, thạch, thạch sữa chua, thạch nước rau câu; bán buôn mỳ ăn liền, cháo ăn liền, phở ăn liền, miến ăn liền, gia vị và nguyên liệu; bán buôn, dầu thực vật, bơ, dầu ăn các loại; bán buôn, đường, sữa và các sản phẩm sữa, bánh kẹo và các sản phẩm chế biến từ ngũ cốc, bột, tinh bột; bán buôn, thuỷ sản và các sản phẩm từ thuỷ sản; bán buôn, thịt và các sản phẩm từ thịt; bán buôn rau, củ, quả và các sản phẩm từ rau, củ, quả; bán buôn thực phẩm, thực phẩm công nghệ, thực phẩm dinh dưỡng, thực phẩm chức năng.",
+      "enrichedAt": "2026-10-06T09:32:51.988Z"
     },
     {
       "id": "3502548557",
       "name": "CÔNG TY TNHH ĐẦU TƯ THƯƠNG MẠI DỊCH VỤ PHẠM GIA HÂN",
-      "representative": "NGUYỄN THỊ ĐÔNG XUÂN",
+      "representative": "NGUYỄN THỊ ĐÔNG XUÂN Ngoài ra, NGUYỄN THỊ ĐÔNG XUÂN còn đại diện các doanh nghiệp, đơn vị: Nguyễn Thị Đông Xuân",
       "address": "Số 72 Thái Văn Lung, Phường Phước Nguyên, Thành phố Bà Rịa, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548557-cong-ty-tnhh-dau-tu-thuong-mai-dich-vu-pham-gia-han",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-09",
+      "phone": "0902992219",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán lẻ khác trong các cửa hàng kinh doanh tổng hợp Chi tiết: Mua bán tạp hoá; bánh kẹo; đồ dùng gia đình; Bán lẻ trong cửa hàng kinh doanh tổng hợp khác",
+      "enrichedAt": "2026-10-06T09:32:55.640Z"
     },
     {
       "id": "3502548772",
       "name": "DOANH NGHIỆP TƯ NHÂN THƯƠNG MẠI DỊCH VỤ THÀNH TIẾN ĐẠT",
-      "representative": "ĐỖ THỊ LỆ",
+      "representative": "ĐỖ THỊ LỆ Ngoài ra, ĐỖ THỊ LỆ còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH THÀNH ĐẠT",
       "address": "Số 20, tổ 1, ấp Lò Vôi, Xã Phước Hưng, Huyện Long Đất, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548772-doanh-nghiep-tu-nhan-thuong-mai-dich-vu-thanh-tien-dat",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-09",
+      "phone": "0379801902",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán lẻ lương thực, thực phẩm, đồ uống, thuốc lá, thuốc lào chiếm tỷ trọng lớn trong các cửa hàng kinh doanh tổng hợp chi tiết : Bán lẻ thuốc lá điếu sản xuất trong nước;Mua bán đồ uống có cồn (rượu, bia); Mua bán đồ uống không có cồn (nước hoa quả, trà, cà phê, nước khoáng)",
+      "enrichedAt": "2026-10-06T09:32:58.937Z"
     },
     {
       "id": "3502548525",
       "name": "CÔNG TY TNHH DU LỊCH VŨNG TÀU WATER SPORTS",
-      "representative": "HUỲNH LÊ THẾ VŨ",
+      "representative": "HUỲNH LÊ THẾ VŨ Ngoài ra, HUỲNH LÊ THẾ VŨ còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH HUỲNH LÊ THẾ VŨ",
       "address": "470 Tổ 11, Khu Phố Hiệp Hòa, Thị Trấn Đất Đỏ, Huyện Long Đất, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548525-cong-ty-tnhh-du-lich-vung-tau-water-sports",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-06",
+      "phone": "0902552579",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Cho thuê thiết bị thể thao, vui chơi giải trí",
+      "internationalName": "VUNG TAU WATER SPORTS TOURISM COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T09:33:02.128Z"
     },
     {
       "id": "3502548613",
@@ -39334,7 +39454,14 @@
       "representative": "LÊ XUÂN TÀI",
       "address": "Số 954 đường Võ Văn Kiệt, Ấp Tây, Xã Hoà Long, Thành phố Bà Rịa, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548613-cong-ty-tnhh-xay-dung-noi-that-nha-viet-xanh",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-09",
+      "phone": "0931940555",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Hoạt động thiết kế chuyên dụng",
+      "internationalName": "NHA VIET XANH CONSTRUCTION INTERIOR COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T09:33:08.549Z"
     },
     {
       "id": "3502548451",
@@ -39342,15 +39469,28 @@
       "representative": "HUỲNH MAI LÂM",
       "address": "1133 Độc Lập, Khu Phố Mỹ Thạnh, Phường Mỹ Xuân, Thành Phố Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548451-cong-ty-tnhh-thiet-bi-va-giai-phap-ky-thuat-viet-an",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-06",
+      "phone": "0909158803",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 22 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn máy móc, thiết bị và phụ tùng máy khác Chi tiết: Bán buôn máy móc, thiết bị nông nghiệp bao gồm máy cày, Bán buôn thiết bị vận tải ngoài phương tiện gắn máy, xe máy và xe đạp, Bán buôn thiết bị khai mỏ, xây dựng và kỹ thuật, Bán buôn máy móc thiết bị văn phòng bao gồm đồ gỗ văn phòng, Bán buôn máy móc, thiết bị cho ngành công nghiệp dệt, Bán buôn máy móc và thiết bị cho công nghiệp gỗ và kim loại, Bán buôn máy móc, thiết bị và linh kiện phụ tùng liên quan, Bán buôn đồ nghề, thiết bị đồ nghề cầm tay, Bán buôn máy móc, thiết bị khác dành cho công nghiệp và thương mại, Bán buôn trang thiết bị an toàn, bảo hộ lao động, Bán buôn trang thiết bị phòng cháy, chữa cháy, Bán buôn máy móc, thiết bị, dụng cụ và phụ tùng phục vụ công nghiệp nâng hạ, thiết bị nâng như pa lăng, lắc tay, ròng rọc, kẹp dầm, cáp cẩu, ma ní, móc cẩu, vòng khuyên, tời điện, đội thủy lực, thiết bị dụng cụ nâng hạ thủ công, thiết bị dụng cụ nâng hạ bằng điện, thiết bị dụng cụ nâng hạ bằng khí nén, thiết bị dụng cụ nâng hạ bằng thủy lực.",
+      "internationalName": "VIET AN TECHNICAL EQUIPMENT & SOLUTIONS CO., LTD",
+      "enrichedAt": "2026-10-06T09:33:11.990Z"
     },
     {
       "id": "3502548412",
       "name": "CÔNG TY TNHH TM DV THƯƠNG THẾ",
-      "representative": "HOÀNG THỊ LỤA",
+      "representative": "HOÀNG THỊ LỤA Ngoài ra, HOÀNG THỊ LỤA còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ THƯƠNG THẾ",
       "address": "Tổ 10, Ấp Hải Lâm, Xã Phước Hưng, Huyện Long Đất, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548412-cong-ty-tnhh-tm-dv-thuong-the",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-06",
+      "phone": "0962568958",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn chuyên doanh khác chưa được phân vào đâu Chi tiết: Mua bán lưới",
+      "enrichedAt": "2026-10-06T09:33:15.306Z"
     },
     {
       "id": "3502548483",
@@ -39358,7 +39498,13 @@
       "representative": "NGUYỄN ĐOÀN YẾN LINH",
       "address": "Khu phố 6, Phường Long Toàn, Thành phố Bà Rịa, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548483-cong-ty-tnhh-co-khi-thuong-mai-dich-vu-l-a",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-06",
+      "phone": "0365596533",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Gia công cơ khí; xử lý và tráng phủ kim loại Chi tiết: Gia công cơ khí (Doanh nghiệp cam kết không được lập xưởng sản xuất gia công trong khu dân cư và chỉ được phép hoạt động kinh doanh khi được đủ điều kiện theo quy định của luật Bảo vệ Môi trường và pháp luật có liên quan)",
+      "enrichedAt": "2026-10-06T09:33:18.561Z"
     },
     {
       "id": "3502548250",
@@ -39366,39 +39512,71 @@
       "representative": "TẠ QUANG HÒA",
       "address": "180-182 Nguyễn Văn Trỗi, Phường 4, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548250-cong-ty-tnhh-phat-trien-ha-tang-bao-phuoc",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-06",
+      "phone": "09867130679",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Xây dựng công trình kỹ thuật dân dụng khác Chi tiết: Xây dựng công trình dân dụng, giao thông, thuỷ lợi",
+      "internationalName": "INFRASTRUCTURE DEVELOPMENT BP CO., LTD",
+      "enrichedAt": "2026-10-06T09:33:21.904Z"
     },
     {
       "id": "3502548469",
       "name": "CÔNG TY TNHH KINH DOANH KIM VÂN",
-      "representative": "PHẠM TIẾN VĂN",
+      "representative": "PHẠM TIẾN VĂN Ngoài ra, PHẠM TIẾN VĂN còn đại diện các doanh nghiệp, đơn vị: Phạm Tiến Văn (Kim Vân)",
       "address": "Tổ 6, Ấp Phước Tân 3, Xã Tân Hưng, Thành phố Bà Rịa, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548469-cong-ty-tnhh-kinh-doanh-kim-van",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-06",
+      "phone": "0983243232",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn thực phẩm Chi tiết: Bán buôn đường, sữa và các sản phẩm sữa, bánh, kẹo và các sản phẩm chế biến từ ngũ cốc, bột, tinh bột",
+      "enrichedAt": "2026-10-06T09:33:25.150Z"
     },
     {
       "id": "3502548490",
       "name": "CÔNG TY TNHH DVTM XD HƯNG THỊNH TRƯỜNG PHÁT",
-      "representative": "NGUYỄN HƯNG THỊNH",
+      "representative": "NGUYỄN HƯNG THỊNH Ngoài ra, NGUYỄN HƯNG THỊNH còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH DỊCH VỤ XÂY DỰNG NGUYỄN HƯNG THỊNH",
       "address": "Tổ 15, Khu phố Thị Vải, Phường Mỹ Xuân, Thành Phố Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548490-cong-ty-tnhh-dvtm-xd-hung-thinh-truong-phat",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-06",
+      "phone": "0901085014",
+      "status": "Không",
+      "managedBy": "Thuế cơ sở 22 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Xây dựng nhà để ở",
+      "enrichedAt": "2026-10-06T09:33:28.849Z"
     },
     {
       "id": "3502548331",
       "name": "CÔNG TY TNHH MTV HẠ TRIỀU",
-      "representative": "PHẠM THỊ NHƯ HUỲNH",
+      "representative": "PHẠM THỊ NHƯ HUỲNH Ngoài ra, PHẠM THỊ NHƯ HUỲNH còn đại diện các doanh nghiệp, đơn vị: Phạm Thị Như Huỳnh Homestay Nhà nhỏ dưới chân đồi",
       "address": "NV5-01 Khu Khang Linh, Phường 11, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548331-cong-ty-tnhh-mtv-ha-trieu",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-05",
+      "phone": "0933291114",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Dịch vụ phục vụ đồ uống (Không bao gồm hoạt động trong quán bar, karaoke, vũ trường,…)",
+      "internationalName": "HA TRIEU MTV COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T09:33:32.049Z"
     },
     {
       "id": "3502548155",
       "name": "DOANH NGHIỆP TƯ NHÂN KIM PHƯƠNG JEWELRY",
-      "representative": "LÊ THANH DUY",
+      "representative": "LÊ THANH DUY Ngoài ra, LÊ THANH DUY còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH KIM PHƯƠNG RUBY CÔNG TY TNHH KIM PHƯƠNG GOLD Lê Thanh Duy",
       "address": "50 Nguyễn Tri Phương, Phường 7, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548155-doanh-nghiep-tu-nhan-kim-phuong-jewelry",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-05",
+      "phone": "02543576522",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán lẻ hàng hóa khác mới trong các cửa hàng chuyên doanh Chi tiết: Bán lẻ vàng, bạc, đá quý và đá bán quý, đồ trang sức trong các cửa hàng chuyên doanh",
+      "enrichedAt": "2026-10-06T09:33:35.679Z"
     },
     {
       "id": "3502548363",
@@ -39406,15 +39584,28 @@
       "representative": "NGUYỄN VĂN XUÂN",
       "address": "313 Lê Quang Định, Phường Thắng Nhất, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548363-cong-ty-tnhh-dau-tu-thuong-mai-dich-vu-an-viet-thai",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-05",
+      "phone": "0917423088",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn máy móc, thiết bị và phụ tùng máy khác Chi tiết: Bán buôn máy móc, thiết bị và phụ tùng máy khai khoáng, xây dựng; Bán buôn máy móc, thiết bị điện, vật liệu điện (máy phát điện, động cơ điện, dây điện và thiết bị khác dùng trong mạch điện)",
+      "enrichedAt": "2026-10-06T09:33:38.918Z"
     },
     {
       "id": "3502548275",
       "name": "CÔNG TY TNHH THỰC PHẨM THỰC DƯỠNG ÂM DƯƠNG FOOD",
-      "representative": "NGUYỄN THÀNH LONG",
+      "representative": "NGUYỄN THÀNH LONG Ngoài ra, NGUYỄN THÀNH LONG còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH THỰC DƯỠNG ÂM DƯƠNG FOOD",
       "address": "389B Hùng Vương, Thị Trấn Ngãi Giao, Huyện Châu Đức, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548275-cong-ty-tnhh-thuc-pham-thuc-duong-am-duong-food",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-05",
+      "phone": "0962427570",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 23 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn thực phẩm",
+      "internationalName": "AM DUONG FOOD MACROBIOTIC COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T09:33:42.563Z"
     },
     {
       "id": "3502548388",
@@ -39422,15 +39613,27 @@
       "representative": "NGUYỄN QUỐC TUẤN",
       "address": "Số 254, Tổ 10, Khu phố Láng Sim, Thị Trấn Phước Bửu, Huyện Xuyên Mộc, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548388-cong-ty-tnhh-thuong-mai-dich-vu-va-ky-thuat-mang-vien-thong-hung-phat",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-05",
+      "phone": "0989235620",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 23 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Hoạt động dịch vụ công nghệ thông tin và dịch vụ khác liên quan đến máy vi tính",
+      "enrichedAt": "2026-10-06T09:33:46.265Z"
     },
     {
       "id": "3502548162",
       "name": "CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ TRÌNH QUÂN PHÁT",
-      "representative": "TRÌNH VĂN QUÂN",
+      "representative": "TRÌNH VĂN QUÂN Ngoài ra, TRÌNH VĂN QUÂN còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH TRÌNH QUÂN PHÁT",
       "address": "Tổ 3, Thôn 9, Xã Long Sơn, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548162-cong-ty-tnhh-thuong-mai-dich-vu-trinh-quan-phat",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-05",
+      "phone": "0363922740",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Đại lý, môi giới, đấu giá Chi tiết: Đại lý mua bán ký gửi hàng hóa",
+      "enrichedAt": "2026-10-06T09:33:49.477Z"
     },
     {
       "id": "3502548187",
@@ -39438,7 +39641,13 @@
       "representative": "MAI THÀNH TỚI",
       "address": "247 Quốc lộ 51, Phường Kim Dinh, Thành phố Bà Rịa, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548187-cong-ty-tnhh-xay-dung-thuong-mai-va-dich-vu-thanh-nghia-tin-vt",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-05",
+      "phone": "0798461698",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng Chi tiết: Bán buôn tre, nứa, gỗ cây và gỗ chế biến; Bán buôn xi măng; Bán buôn gạch xây, ngói, đá, cát, sỏi; Bán buôn kính xây dựng; Bán buôn sơn, vécni; Bán buôn gạch ốp lát và thiết bị vệ sinh; Bán buôn đồ ngũ kim; Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng",
+      "enrichedAt": "2026-10-06T09:33:52.677Z"
     },
     {
       "id": "3502548035",
@@ -39446,7 +39655,14 @@
       "representative": "HỒ THỊ LY NA",
       "address": "Tổ 3, Khu Phố Phước Sơn, Phường Phước Hoà, Thành Phố Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548035-cong-ty-tnhh-xd-ck-an-thuan",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-04",
+      "phone": "0976498048",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 22 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Gia công cơ khí; xử lý và tráng phủ kim loại",
+      "internationalName": "AN THUAN CONSTRUCTION - MECHANICAL CO.,LTD",
+      "enrichedAt": "2026-10-06T09:33:56.088Z"
     },
     {
       "id": "3502548042",
@@ -39454,15 +39670,27 @@
       "representative": "TRỊNH HỮU TÙNG",
       "address": "Khu phố Phước Hưng, Phường Mỹ Xuân, Thành Phố Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548042-cong-ty-tnhh-tm-dv-huu-tung-phat",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-04",
+      "phone": "0967046688",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 22 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn đồ uống",
+      "enrichedAt": "2026-10-06T09:33:59.736Z"
     },
     {
       "id": "3502548130",
       "name": "DOANH NGHIỆP TƯ NHÂN TRÁI CÂY MỘNG ĐIỆP",
-      "representative": "LÊ THỊ MỘNG ĐIỆP",
+      "representative": "LÊ THỊ MỘNG ĐIỆP Ngoài ra, LÊ THỊ MỘNG ĐIỆP còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH CÔ 10 QUÁN",
       "address": "Khu phố Phước Lộc, Thị Trấn Phước Bửu, Huyện Xuyên Mộc, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548130-doanh-nghiep-tu-nhan-trai-cay-mong-diep",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-04",
+      "phone": "0909074722",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 23 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn thực phẩm Chi tiết: Bán buôn lương thực, thực phẩm tươi sống và chế biến (trừ thịt động vật hoang dã thuộc danh mục cấm); Mua bán rau , củ, quả , thịt, các sản phẩm từ thịt ,cá",
+      "enrichedAt": "2026-10-06T09:34:05.950Z"
     },
     {
       "id": "3502548067",
@@ -39470,31 +39698,56 @@
       "representative": "NGUYỄN NHƯ TOÀN",
       "address": "Số nhà 134, Đường Hồ Tri Tân, Tổ 11, Khu phố Tân Hạnh, Phường Phú Mỹ, Thành Phố Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548067-cong-ty-tnhh-co-khi-quang-tu",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-04",
+      "phone": "0963486179",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 22 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Xây dựng công trình kỹ thuật dân dụng khác Chi tiết: Thi công bồn, bể, đường ống công nghệ phục vụ cho sản xuất hóa chất, dầu khí",
+      "enrichedAt": "2026-10-06T09:34:09.620Z"
     },
     {
       "id": "3502548109",
       "name": "CÔNG TY TNHH NGUYỄN GIANG SƠN",
-      "representative": "NGUYỄN THỊ GIANG",
+      "representative": "NGUYỄN THỊ GIANG Ngoài ra, NGUYỄN THỊ GIANG còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH GIANG SƠN",
       "address": "Số nhà 199, tổ 7, ấp 1, Xã Hòa Bình, Huyện Xuyên Mộc, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548109-cong-ty-tnhh-nguyen-giang-son",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-04",
+      "phone": "0977921191",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 23 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn tổng hợp bán buổn tổng hợp các gia vị cho phục vụ cho nấu ăn và các sản phẩm phục vụ cho sinh hoạt gia đình như: Nước mắm, mì chính, muối, ...",
+      "enrichedAt": "2026-10-06T09:34:13.118Z"
     },
     {
       "id": "3502547578",
       "name": "CÔNG TY TNHH TM DV XÂY DỰNG MINH ANH",
-      "representative": "ĐẶNG NGỌC PHƯỚC",
+      "representative": "ĐẶNG NGỌC PHƯỚC Ngoài ra, ĐẶNG NGỌC PHƯỚC còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH KHÁCH SẠN MINH PHƯƠNG",
       "address": "tổ 7 ấp Bình Tiến, Xã Bình Châu, Huyện Xuyên Mộc, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547578-cong-ty-tnhh-tm-dv-xay-du-ng-minh-anh",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-30",
+      "phone": "0928449999",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 23 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng Đất, sét, đá, cát, sỏi",
+      "enrichedAt": "2026-10-06T09:34:16.307Z"
     },
     {
       "id": "3502548003",
       "name": "CÔNG TY TNHH KHÁCH SẠN DU LỊCH THE CORAL PEARL",
-      "representative": "NGUYỄN TUẤN ANH",
+      "representative": "NGUYỄN TUẤN ANH Ngoài ra, NGUYỄN TUẤN ANH còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH KỲ ANH Nguyễn Tuấn Anh",
       "address": "Số 1003 đường Võ Thị Sáu, Thị Trấn Long Hải, Huyện Long Đất, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502548003-cong-ty-tnhh-khach-san-du-lich-the-coral-pearl",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-03",
+      "phone": "0906137269",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Dịch vụ lưu trú ngắn ngày",
+      "internationalName": "THE CORAL PEARL TOURISM HOTEL COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T09:34:19.972Z"
     },
     {
       "id": "3502547673",
@@ -39502,15 +39755,26 @@
       "representative": "NGUYỄN TÀI DŨNG",
       "address": "Tổ 15, Khu Phố Tân Hạnh, Phường Phú Mỹ, Thành Phố Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547673-cong-ty-tnhh-anh-duong-phu-my",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-30",
+      "phone": "0356852492",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 22 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán phụ tùng và các bộ phận phụ trợ của ô tô và xe có động cơ khác Chi tiết: Bán buôn phụ tùng và các bộ phận phụ trợ của ô tô và xe có động cơ; Bán lẻ phụ tùng và các bộ phận phụ trợ của ô tô con (loại 9 chỗ ngồi trở xuống); Đại lý phụ tùng và các bộ phận phụ trợ của ô tô và xe có động cơ",
+      "enrichedAt": "2026-10-06T09:34:23.433Z"
     },
     {
       "id": "0317176940-002",
       "name": "VĂN PHÒNG ĐẠI DIỆN CÔNG TY CỔ PHẦN CÔNG NGHỆ TRUYỀN THÔNG ALPHA X TẠI VŨNG TÀU",
-      "representative": "LÊ DUY MẠNH",
+      "representative": "LÊ DUY MẠNH Ngoài ra, LÊ DUY MẠNH còn đại diện các doanh nghiệp, đơn vị: CÔNG TY CỔ PHẦN UPPLUS CÔNG TY CỔ PHẦN CÔNG NGHỆ TRUYỀN THÔNG ALPHAX CHI NHÁNH CÔNG TY CỔ PHẦN UPPLUS - TRUNG TÂM ĐÀO TẠO VÀ PHÁT TRIỂN NGUỒN NHÂN LỰC HIAST CHI NHÁNH CÔNG TY CỔ PHẦN UPPLUS - HỌC VIỆN SỨC KHỎE SẮC ĐẸP HIAST CHI NHÁNH CÔNG TY CỔ PHẦN UPPLUS - HỌC VIỆN NGÔN NGỮ HIAST CHI NHÁNH CÔNG TY CỔ PHẦN UPPLUS - HỌC VIỆN NÔNG NGHIỆP VÀ PHÁT TRIỀN NÔNG THÔN HIAST VĂN PHÒNG ĐẠI DIỆN CÔNG TY CỔ PHẦN CÔNG NGHỆ TRUYỀN THÔNG ALPHA X Lê Duy Mạnh (Đồng Hồ Nhật Thụy)",
       "address": "206 Đường 30/4, Thị Trấn Ngãi Giao, Huyện Châu Đức, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "0317176940-002-van-phong-dai-dien-cong-ty-co-phan-cong-nghe-truyen-thong-alpha-x-tai-vung-tau",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-02",
+      "phone": "0938 979 763",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 23 Thành phố Hồ Chí Minh",
+      "enrichedAt": "2026-10-06T09:34:26.768Z"
     },
     {
       "id": "0109095909-002",
@@ -39518,23 +39782,41 @@
       "representative": "TRẦN VĂN RIỄM",
       "address": "Số 261 Quốc Lộ 51, Tổ 8 Khu Phố Hải Dinh, Phường Kim Dinh, Thành phố Bà Rịa, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "0109095909-002-chi-nhanh-cong-ty-tnhh-new-green-way-viet-nam",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-02",
+      "phone": "0945547233",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn thực phẩm",
+      "enrichedAt": "2026-10-06T09:34:30.026Z"
     },
     {
       "id": "0318692881-001",
       "name": "CHI NHÁNH CÔNG TY TNHH TÔM HÙM QUÊ VỢ",
-      "representative": "NGUYỄN VĂN THÔNG",
+      "representative": "NGUYỄN VĂN THÔNG Ngoài ra, NGUYỄN VĂN THÔNG còn đại diện các doanh nghiệp, đơn vị: CÔNG TY CỔ PHẦN TƯ VẤN ĐẦU TƯ THƯƠNG MẠI DỊCH VỤ ĐỊA ỐC THÁI DƯƠNG - CHI NHÁNH BÌNH THẠNH CÔNG TY CỔ PHẦN TẬP ĐOÀN BẤT ĐỘNG SẢN THIÊN AN HOLDINGS CÔNG TY CỔ PHẦN DỊCH VỤ VẬN HÀNH PHỦ GIA TRUYỀN CHI NHÁNH BÌNH DƯƠNG CÔNG TY CỔ PHẦN TẬP ĐOÀN BẤT ĐỘNG SẢN THIÊN AN HOLDINGS CÔNG TY CỔ PHẦN ĐẦU TƯ KINH DOANH ĐỊA ỐC THIÊN AN (NTNN) CÔNG TY CỔ PHẦN ĐẦU TƯ THIÊN AN INVEST CÔNG TY TNHH BẤT ĐỘNG SẢN BRIDGON RISE CÔNG TY TNHH TÔM HÙM QUÊ VỢ",
       "address": "Số 01 Thi Sách, Phường 8, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "0318692881-001-chi-nhanh-cong-ty-tnhh-tom-hum-que-vo",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-02",
+      "phone": "0926633396",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn thực phẩm Chi tiết: Bán buôn cá, tươi, ướp lạnh hoặc ướp đông, khô, hoặc đã được sơ chế, chế biến khác; Tôm (tôm hùm và tôm các loại), cua và động vật giáp xác khác, sống, tươi, ướp lạnh, ướp đông, khô hoặc đã được sơ chế, bảo quản hoặc chế biến khác; Mực, bạch tuộc và động vật thân mềm, động vật không xương sống khác sống dưới nước, tươi, ướp lạnh, đông, khô hoặc đã được sơ chế, bảo quản, chế biến khác; Hàng thủy sản khác.",
+      "enrichedAt": "2026-10-06T09:34:33.639Z"
     },
     {
       "id": "3502547930",
       "name": "CÔNG TY TNHH  PHÁT TRIỂN THƯƠNG MẠI TÂM NGUYÊN LONG",
-      "representative": "BÙI TRỌNG LINH HƯƠNG",
+      "representative": "BÙI TRỌNG LINH HƯƠNG Ngoài ra, BÙI TRỌNG LINH HƯƠNG còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH THƯƠNG MẠI H-K GROUP HỘ KINH DOANH BÌNH LƯU PHÁT",
       "address": "199 Đường 2/9, Phường 8, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547930-cong-ty-tnhh-phat-trien-thuong-mai-tam-nguyen-long",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-03",
+      "phone": "0937237475",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn thực phẩm Chi tiết:Mua bán trứng, cá và thủy sản, rau hoa quả tươi, thịt và các sản phẩm từ thịt như:Thịt đã quay, đã chế biến, lạp sườn, xúc xích, mỡ động vật; Hàng thực phẩm như:Bánh mỳ, các loại bánh mứt, đường,cà phê, chè, các loại thực phẩm đóng gói; Mua bán một số hàng thực phẩm khác ( bánh mỳ và các loại bánh mứt kẹo; các loại thực phẩm đóng gói như mỳ ăn liền, bánh đa cua, phở, bún ;các loại thực phẩm bồi dưỡng; chè và đồ pha uống như đường, cà phê …).Mua bán sữa và các sản phẩm làm từ sữa; Mua bán các sản phẩm như dầu ăn, nước mắm, muối, tiêu đường, hạt nêm và các loại gia vị liên quan….",
+      "enrichedAt": "2026-10-06T09:34:37.121Z"
     },
     {
       "id": "3502547987",
@@ -39542,31 +39824,55 @@
       "representative": "NGUYỄN THỊ THU TRANG",
       "address": "Quốc lộ 55, Ấp Phước Sơn, Xã Phước Long Thọ, Huyện Long Đất, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547987-cong-ty-tnhh-thuong-mai-dich-vu-sun-hai-minh",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-03",
+      "phone": "0948157557",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán lẻ lương thực, thực phẩm, đồ uống, thuốc lá, thuốc lào chiếm tỷ trọng lớn trong các cửa hàng kinh doanh tổng hợp",
+      "enrichedAt": "2026-10-06T09:34:40.473Z"
     },
     {
       "id": "3502547835",
       "name": "CÔNG TY TNHH ĐẦU TƯ SẢN XUẤT THƯƠNG MẠI DỊCH VỤ HUY VŨ",
-      "representative": "NGUYỄN THÁI HIỀN",
+      "representative": "NGUYỄN THÁI HIỀN Ngoài ra, NGUYỄN THÁI HIỀN còn đại diện các doanh nghiệp, đơn vị: Nguyễn Thái Hiền (Cửa hàng thực phẩm, mỹ phẩm Thanh Vy)",
       "address": "419 tổ 17, Thôn Đức Mỹ, Xã Suối Nghệ, Huyện Châu Đức, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547835-cong-ty-tnhh-dau-tu-san-xuat-thuong-mai-dich-vu-huy-vu",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-02",
+      "phone": "0986306459",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 23 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn chuyên doanh khác chưa được phân vào đâu Chi tiết: Bán buôn chất tẩy rửa, nước lau sàn, nước lau kính, nước lau bếp, nước rửa chén, nước hoa, nước hoa xịt phòng, nước xịt muỗi Bán buôn nước hoa, mỹ phẩm (xịt toàn thân, dầu gội, sữa tắm, dầu xả, ủ tóc, dưỡng tóc,...) Bán buôn chế phẩm vệ sinh: chất tẩy rửa, nước lau sàn, nước lau kính, nước lau bếp, nước rửa chén, nước hoa xịt phòng, nước giặt, nước xả vải, viên giặt, nước xịt thơm Bán buôn hóa chất ( không tồn trữ hóa chất ) Bán buôn các loại bao bì ngành mỹ phẩm, hóa mỹ phẩm.Mua bán và xuất nhập khẩu các sản phẩm chế biến từ dầu, mỡ động thực vật, từ các loại hạt có dầu, thạch dừa. + Mua bán các loại bao bì đóng gói. + Mua bán và xuất nhập khẩu các sản phẩm chế biến từ dầu, mỡ động thực vật có bổ sung vi chất dinh dưỡng.",
+      "enrichedAt": "2026-10-06T09:34:44.024Z"
     },
     {
       "id": "3502547874",
       "name": "CÔNG TY TNHH  XÂY DỰNG NÔNG SẢN THIÊN NAM",
-      "representative": "NGUYỄN VĂN VIỆN",
+      "representative": "NGUYỄN VĂN VIỆN Ngoài ra, NGUYỄN VĂN VIỆN còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH THƯƠNG MẠI SẢN XUẤT DỊCH VỤ NAM VIỆT VŨNG TÀU HỘ KINH DOANH NGUYỄN VĂN VIỆN",
       "address": "39 Mai Chí Thọ , Phường Phước Hưng, Thành phố Bà Rịa, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547874-cong-ty-tnhh-xay-dung-nong-san-thien-nam",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-03",
+      "phone": "088 6982879",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Xây dựng nhà để ở Chi tiết: Xây dựng công trình dân dụng",
+      "enrichedAt": "2026-10-06T09:34:47.313Z"
     },
     {
       "id": "3502547899",
       "name": "CÔNG TY TNHH TMDV NÔNG SẢN PHƯƠNG THẢO",
-      "representative": "PHAN THỊ PHƯƠNG THẢO",
+      "representative": "PHAN THỊ PHƯƠNG THẢO Ngoài ra, PHAN THỊ PHƯƠNG THẢO còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI DỊCH VỤ THƯỢNG HẢI HỘ KINH DOANH HỒ TRÀM QUÁN",
       "address": "Tổ 6, Ấp 1, Xã Hòa Bình, Huyện Xuyên Mộc, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547899-cong-ty-tnhh-tmdv-nong-san-phuong-thao",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-03",
+      "phone": "093 307 4456",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 23 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống Chi tiết: Bán buôn các mặt hàng nông sản",
+      "enrichedAt": "2026-10-06T09:34:50.673Z"
     },
     {
       "id": "3502547881",
@@ -39574,31 +39880,57 @@
       "representative": "VŨ THỊ MƠ",
       "address": "Số 83/8 đường Lê Hồng Phong, Phường 7, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547881-cong-ty-tnhh-hoang-khanh-linh-vung-tau",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-03",
+      "phone": "0335430462",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn tổng hợp",
+      "enrichedAt": "2026-10-06T09:34:54.148Z"
     },
     {
       "id": "3502547754",
       "name": "CÔNG TY TNHH MTV THƯƠNG MẠI MINH VIỆT",
-      "representative": "NGUYỄN MINH VIỆT",
+      "representative": "NGUYỄN MINH VIỆT Ngoài ra, NGUYỄN MINH VIỆT còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH VĂN NGUYỄN",
       "address": "Đường Tỉnh lộ 44A, tổ 13, ấp An Thạnh, Xã Tam An, Huyện Long Đất, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547754-cong-ty-tnhh-mtv-thuong-mai-minh-viet",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-02",
+      "phone": "0898926779",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán lẻ thuốc, dụng cụ y tế, mỹ phẩm và vật phẩm vệ sinh trong các cửa hàng chuyên doanh",
+      "internationalName": "MINH VIET MTV TRADING COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T09:34:57.663Z"
     },
     {
       "id": "3502547761",
       "name": "CÔNG TY CỔ PHẦN TẬP ĐOÀN PHUMYLOGISTICS",
-      "representative": "LÊ NGỌC THANH CAO",
+      "representative": "LÊ NGỌC THANH CAO Ngoài ra, LÊ NGỌC THANH CAO còn đại diện các doanh nghiệp, đơn vị: CÔNG TY CỔ PHẦN CƠ KHÍ XÂY DỰNG HUY LÊ",
       "address": "Nhà 25 Đường số 9, Khu phố Long Phượng, Thị Trấn Long Điền, Huyện Long Đất, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547761-cong-ty-co-phan-tap-doan-phumylogistics",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-02",
+      "phone": "0903 959 852",
+      "status": "Không",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Kho bãi và lưu giữ hàng hóa (trừ kinh doanh bất động sản)",
+      "internationalName": "PHUMYLOGISTICS GROUP CORPORATION",
+      "enrichedAt": "2026-10-06T09:35:01.215Z"
     },
     {
       "id": "3502547747",
       "name": "CÔNG TY TNHH THƯƠNG MẠI CÔNG NGHỆ NGUYỄN HOÀNG",
-      "representative": "NGUYỄN HOÀNG TUẤN",
+      "representative": "NGUYỄN HOÀNG TUẤN Ngoài ra, NGUYỄN HOÀNG TUẤN còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH HOÀNG TUẤN TELECOM",
       "address": "292/10/11 Đường 30/4, Phường Rạch Dừa, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547747-cong-ty-tnhh-thuong-mai-cong-nghe-nguyen-hoang",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-02",
+      "phone": "0947249740",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán lẻ máy vi tính, thiết bị ngoại vi, phần mềm và thiết bị viễn thông trong các cửa hàng chuyên doanh Chi tiết: Bán lẻ máy vi tính, thiết bị ngoại vi, phần mềm trong các cửa hàng chuyên doanh.",
+      "enrichedAt": "2026-10-06T09:35:07.839Z"
     },
     {
       "id": "3502547842",
@@ -39606,31 +39938,56 @@
       "representative": "NGUYỄN SONG DẠ THẢO",
       "address": "368 Nguyễn Tất Thành, Khu phố Hải Bình, Thị Trấn Long Hải, Huyện Long Đất, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547842-cong-ty-tnhh-phat-trien-dao-tao-nhan-tri",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-02",
+      "phone": "0933404560",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Giáo dục khác chưa được phân vào đâu Chi tiết: Giáo dục không xác định theo cấp độ tại các trung tâm đào tạo bồi dưỡng; Các dịch vụ dạy kèm (gia sư); Giáo dục dự bị; Các trung tâm dạy học có các khoá học dành cho học sinh yếu kém; Các khoá dạy về phê bình, đánh giá chuyên môn; Dạy ngoại ngữ và dạy kỹ năng đàm thoại; Dạy đọc nhanh; Đào tạo về sự sống; Đào tạo kỹ năng nói trước công chúng; Dạy máy tính.",
+      "enrichedAt": "2026-10-06T09:35:11.395Z"
     },
     {
       "id": "3502547803",
       "name": "CÔNG TY TNHH THƯƠNG MẠI HẢI HÀ BÌNH",
-      "representative": "TRẦN THỊ BÌNH",
+      "representative": "TRẦN THỊ BÌNH Ngoài ra, TRẦN THỊ BÌNH còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH MINH DƯƠNG",
       "address": "292/16B đường 30/4, Phường Rạch Dừa, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547803-cong-ty-tnhh-thuong-mai-hai-ha-binh",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-02",
+      "phone": "0946895725",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn thực phẩm Chi tiết: - Bán buôn đường, sữa và các sản phẩm sữa, bánh kẹo và các sản phẩm chế biến từ ngũ cốc, bột, tinh bột -Bán buôn xúc xích, đồ hộp và các sản phẩm từ thịt, cá, thủy sản.",
+      "enrichedAt": "2026-10-06T09:35:15.033Z"
     },
     {
       "id": "3502547810",
       "name": "CÔNG TY TNHH KỸ THUẬT ĐIỆN LUX ELECTRIC",
-      "representative": "LÊ VĂN NAM",
+      "representative": "LÊ VĂN NAM Ngoài ra, LÊ VĂN NAM còn đại diện các doanh nghiệp, đơn vị: Lê Văn Nam",
       "address": "Số 315/36 Đường Hùng Vương, Thị Trấn Ngãi Giao, Huyện Châu Đức, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547810-cong-ty-tnhh-ky-thuat-dien-lux-electric",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-02",
+      "phone": "0779999315",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 23 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Sản xuất điện Chi tiết: Điện mặt trời.",
+      "enrichedAt": "2026-10-06T09:35:18.291Z"
     },
     {
       "id": "3502547786",
       "name": "CÔNG TY TNHH PHẠM LÊ PM",
-      "representative": "LÊ THỊ HỒNG HÀ",
+      "representative": "LÊ THỊ HỒNG HÀ Ngoài ra, LÊ THỊ HỒNG HÀ còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH LÊ THỊ HỒNG HÀ 1996",
       "address": "68 đường Hùng Vương, Phường Phú Mỹ, Thành Phố Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547786-cong-ty-tnhh-pham-le-pm",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-06-02",
+      "phone": "0389803453",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 22 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Lắp đặt hệ thống xây dựng khác",
+      "internationalName": "PHAM LE PM COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T09:35:21.857Z"
     },
     {
       "id": "3502547659",
@@ -39638,7 +39995,13 @@
       "representative": "NGUYỄN TRỊNH PHƯƠNG ANH",
       "address": "61 Xuyên Phước Cơ, Khu phố Phước An, Thị Trấn Phước Bửu, Huyện Xuyên Mộc, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547659-cong-ty-tnhh-quang-dang-xm",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-31",
+      "phone": "0933722972",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 23 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Cung cấp dịch vụ ăn uống theo hợp đồng không thường xuyên với khách hàng (phục vụ tiệc, hội họp, đám cưới...) (phục vụ tiệc, hội họp, đám cưới....)",
+      "enrichedAt": "2026-10-06T09:35:25.397Z"
     },
     {
       "id": "3502547602",
@@ -39646,7 +40009,13 @@
       "representative": "NGUYỄN THỊ THANH HƯƠNG",
       "address": "Đường 21, Tổ 13, Thôn Đức Mỹ, Xã Suối Nghệ, Huyện Châu Đức, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547602-cong-ty-tnhh-tm-dv-huong-nguyen-vina",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-31",
+      "phone": "0906393704",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 23 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn đồ dùng khác cho gia đình Chi tiết: Bán buôn vali, cặp, túi, ví, hàng da và giả da khác; Bán buôn nước hoa, hàng mỹ phẩm và chế phẩm vệ sinh: dầu gội, dầu xả, sữa tắm, kem đánh răng, nước giặt, nước tẩy, nước lau kính, nước rửa chén, lau sàn…; Bán buôn đồ vệ sinh cá nhân: khăn giấy, giấy vệ sinh, tã em bé, đồ vệ sinh nữ, khăn giấy ướt; Bán buôn sách, báo, tạp chí, văn phòng phẩm: bút, vở, bút chìm gôm, giấy, băng keo…., khẩu trang y tế, găn tay cao su, găng tay len, vớ chân các loại…Bán buôn hàng gia dụng: bàn chải, móc nhôm, ly, chén, áo mưa…",
+      "enrichedAt": "2026-10-06T09:35:28.874Z"
     },
     {
       "id": "3502547708",
@@ -39654,7 +40023,14 @@
       "representative": "NGUYỄN THỊ NGỌC VÂN",
       "address": "số 121/6/8 Bacu, Phường 4, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547708-cong-ty-tnhh-thuong-mai-bien-dai-duong",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-31",
+      "phone": "0774 734 452",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán lẻ hàng hóa khác mới trong các cửa hàng chuyên doanh chi tiết: bán lẻ hàng lưu niệm, hàng đan lát, hàng thủ công mỹ nghệ trong các cửa hàng chuyên doanh; Bán lẻ tranh, ảnh và các tác phẩm nghệ thuật khác (trừ đồ cổ) trong các cửa hàng chuyên doanh.",
+      "internationalName": "OCEAN MARINE TRADING COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T09:35:32.495Z"
     },
     {
       "id": "3502547680",
@@ -39662,71 +40038,127 @@
       "representative": "TRẦN THỊ NHƯ KHUÊ",
       "address": "16 Nguyễn Đôn Tiết, Phường 10, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547680-cong-ty-tnhh-donamex-viet-nam",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-30",
+      "phone": "0945468126",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống (không hoạt động tại trụ sở)",
+      "internationalName": "DONAMEX VIETNAM COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T09:35:35.742Z"
     },
     {
       "id": "3502547472",
       "name": "CÔNG TY TNHH TƯ VẤN VÀ ĐÀO TẠO TRẦN DANH",
-      "representative": "TRẦN PHAN TRỌNG DANH",
+      "representative": "TRẦN PHAN TRỌNG DANH Ngoài ra, TRẦN PHAN TRỌNG DANH còn đại diện các doanh nghiệp, đơn vị: TRUNG TÂM NGOẠI NGỮ PHÁT TRIỂN",
       "address": "Số 10/2 đường Kha Vạn Cân, Phường 7, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547472-cong-ty-tnhh-tu-van-va-dao-tao-tran-danh",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-29",
+      "phone": "0345330253",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Giáo dục khác chưa được phân vào đâu Chi tiết: Đào tạo kỹ năng sống, dạy ngoại ngữ (Doanh nghiệp cam kết chỉ được phép hoạt động khi được Sở Giáo dục và Đào tạo cấp giấy phép)",
+      "enrichedAt": "2026-10-06T09:35:38.984Z"
     },
     {
       "id": "3502547345",
       "name": "CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ KHANG PHÚC MINH",
-      "representative": "ĐẶNG THỊ ANH THƯ",
+      "representative": "ĐẶNG THỊ ANH THƯ Ngoài ra, ĐẶNG THỊ ANH THƯ còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ THƯ MINH PHÁT",
       "address": "Số 1621 Quốc lộ 55, Khu phố Long An, Thị Trấn Long Điền, Huyện Long Đất, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547345-cong-ty-tnhh-thuong-mai-dich-vu-khang-phuc-minh",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-29",
+      "phone": "0949708373",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn đồ uống Chi tiết: Bán buôn đồ uống có cồn và không có cồn, bao gồm: nước khoáng, nước ngọt, nước giải khát, nước tăng lực, bia, rượu các loại;",
+      "enrichedAt": "2026-10-06T09:35:42.207Z"
     },
     {
       "id": "3502547264",
       "name": "CÔNG TY TNHH XUẤT NHẬP KHẨU NÔNG SẢN CHÂU ĐỨC",
-      "representative": "NGUYỄN THỊ NHƯ QUỲNH",
+      "representative": "NGUYỄN THỊ NHƯ QUỲNH Ngoài ra, NGUYỄN THỊ NHƯ QUỲNH còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH LANI VILLA",
       "address": "Tổ 7 , Quãng Phú, Xã Đá Bạc, Huyện Châu Đức, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547264-cong-ty-tnhh-xuat-nhap-khau-nong-san-chau-duc",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-29",
+      "phone": "096 3760580",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 23 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Hoạt động dịch vụ hỗ trợ kinh doanh khác còn lại chưa được phân vào đâu",
+      "internationalName": "CHAU DUC AGRICULTURAL PRODUCTS IMPORT - EXPORT LIMITED COMPANY",
+      "enrichedAt": "2026-10-06T09:35:45.467Z"
     },
     {
       "id": "3502547384",
       "name": "CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ VIỆT BỈ JAPAN",
-      "representative": "LÊ MẬU LONG",
+      "representative": "LÊ MẬU LONG Ngoài ra, LÊ MẬU LONG còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TRÁCH NHIỆM HỮU HẠN THƯƠNG MẠI VÀ DỊCH VỤ VIỆT BỈ VINA CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ HOÀNG LONG USA",
       "address": "Tổ 2, Khu phố Suối Nhum, Phường Hắc Dịch, Thành Phố Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547384-cong-ty-tnhh-thuong-mai-dich-vu-viet-bi-japan",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-29",
+      "phone": "0978678630",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 22 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn chuyên doanh khác chưa được phân vào đâu Chi tiết: Bán buôn phân bón",
+      "enrichedAt": "2026-10-06T09:35:48.909Z"
     },
     {
       "id": "3502547401",
       "name": "CÔNG TY TNHH KINH DOANH TM VÀ DV MINH PHÚ",
-      "representative": "NGÔ VŨ TRUYỀN",
+      "representative": "NGÔ VŨ TRUYỀN Ngoài ra, NGÔ VŨ TRUYỀN còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH NGÔ VŨ TRUYỀN",
       "address": "Tổ 15, khu phố Phước Hưng, Phường Mỹ Xuân, Thành Phố Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547401-cong-ty-tnhh-kinh-doanh-tm-va-dv-minh-phu",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-29",
+      "phone": "0902796146",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 22 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán lẻ thực phẩm trong các cửa hàng chuyên doanh Chi tiết: Bán lẻ rau, quả trong các cửa hàng chuyên doanh; Bán lẻ đường, sữa và các sản phẩm sữa, bánh, mứt, kẹo và các sản phẩm chế biến từ ngũ cốc, bột, tinh bột trong các cửa hàng chuyên doanh",
+      "enrichedAt": "2026-10-06T09:35:52.148Z"
     },
     {
       "id": "3502547391",
       "name": "CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ HOÀNG LONG USA",
-      "representative": "LÊ MẬU LONG",
+      "representative": "LÊ MẬU LONG Ngoài ra, LÊ MẬU LONG còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TRÁCH NHIỆM HỮU HẠN THƯƠNG MẠI VÀ DỊCH VỤ VIỆT BỈ VINA CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ VIỆT BỈ JAPAN",
       "address": "Tổ 2, Khu phố Suối Nhum, Phường Hắc Dịch, Thành Phố Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547391-cong-ty-tnhh-thuong-mai-dich-vu-hoang-long-usa",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-29",
+      "phone": "0978678630",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 22 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn chuyên doanh khác chưa được phân vào đâu Chi tiết: Bán buôn phân bón",
+      "enrichedAt": "2026-10-06T09:35:55.640Z"
     },
     {
       "id": "3502547433",
       "name": "CÔNG TY TNHH MTV HIẾU QUANG MINH",
-      "representative": "BÙI VĂN KIỆT",
+      "representative": "BÙI VĂN KIỆT Ngoài ra, BÙI VĂN KIỆT còn đại diện các doanh nghiệp, đơn vị: Bùi Văn Kiệt",
       "address": "3/17 Âp An Hòa, Xã Tam An, Huyện Long Đất, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547433-cong-ty-tnhh-mtv-hieu-quang-minh",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-29",
+      "phone": "0901263862",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn thực phẩm Chi tiết: Mua bán mì gói, bánh tráng,…",
+      "enrichedAt": "2026-10-06T09:35:59.191Z"
     },
     {
       "id": "3502547338",
       "name": "CÔNG TY TNHH KRA KANGNAM",
-      "representative": "PHẠM VĂN NGON",
+      "representative": "PHẠM VĂN NGON Ngoài ra, PHẠM VĂN NGON còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH TM CLUPVIN",
       "address": "Số 846 Đường Bình Giã, Phường Rạch Dừa, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547338-cong-ty-tnhh-kra-kangnam",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-29",
+      "phone": "0986156674",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán lẻ hàng may mặc, giày dép, hàng da và giả da trong các cửa hàng chuyên doanh",
+      "enrichedAt": "2026-10-06T09:36:06.183Z"
     },
     {
       "id": "3502547320",
@@ -39734,15 +40166,29 @@
       "representative": "ĐÀO VĂN DIỄN",
       "address": "217, D22 Nguyễn Hữu Cảnh, Phường Thắng Nhất, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547320-cong-ty-tnhh-xuan-thuy-vung-tau",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-29",
+      "phone": "0983566979",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Vận tải hàng hóa bằng đường bộ",
+      "internationalName": "XUAN THUY VUNG TAU COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T09:36:09.394Z"
     },
     {
       "id": "3502547225",
       "name": "CÔNG TY TNHH ELARO INTERIORS",
-      "representative": "ĐỖ TRẦN NHẬT NAM",
+      "representative": "ĐỖ TRẦN NHẬT NAM Ngoài ra, ĐỖ TRẦN NHẬT NAM còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH DU LỊCH WANDERPLUS TRAVEL",
       "address": "68/12 Lương Văn Nho, Phường 9, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547225-cong-ty-tnhh-elaro-interiors",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-28",
+      "phone": "0978229164",
+      "status": "Không",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán lẻ hàng may mặc, giày dép, hàng da và giả da trong các cửa hàng chuyên doanh",
+      "internationalName": "ELARO INTERIORS COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T09:36:12.930Z"
     },
     {
       "id": "3502547296",
@@ -39750,7 +40196,13 @@
       "representative": "MẠCH QUANG CHUNG",
       "address": "Số 151 đường Nam Kỳ Khởi Nghĩa, Phường 3, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547296-cong-ty-tnhh-nha-khoa-viet-duc-vt",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-28",
+      "phone": "0985650148",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Hoạt động của các phòng khám đa khoa, chuyên khoa và nha khoa Chi tiết: - Y (chuyên khoa rang, hàm, mặt); - Làm labo răng giả (trừ lưu trú bệnh nhân). (không hoạt động tại trụ sở, chỉ hoạt động khi có đủ điều kiện kinh doanh theo quy định của pháp luật)",
+      "enrichedAt": "2026-10-06T09:36:16.159Z"
     },
     {
       "id": "3502547306",
@@ -39758,7 +40210,13 @@
       "representative": "NGUYỄN ĐỨC TRƯỜNG",
       "address": "60/3 Đường 14 ,KP Long Liên, Thị Trấn Long Điền, Huyện Long Đất, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547306-cong-ty-tnhh-xay-dung-thuong-mai-san-xuat-nhom-kinh-duc-truong",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-28",
+      "phone": "093 440 4998",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Lắp đặt hệ thống xây dựng khác Chi tiết : Lắp đặt cửa gỗ,cửa nhôm,cửa kính,cửa sắt,sàn gỗ,trần thạch cao,mặt dựng bằng kính",
+      "enrichedAt": "2026-10-06T09:36:19.751Z"
     },
     {
       "id": "3502547144",
@@ -39766,15 +40224,28 @@
       "representative": "VŨ ĐỨC VIỆT",
       "address": "Số 842/18/19 Bình Giã, Phường 11, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547144-cong-ty-tnhh-co-khi-ky-thuat-viet-nhat",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-28",
+      "phone": "0399716994",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Hoạt động kiến trúc và tư vấn kỹ thuật có liên quan Chi tiết: Giám sát công tác xây dựng và hoàn thiện công trình dân dụng; Thiết kế cơ khí, cơ điện, công trình dân dụng, công nghiệp; Giám sát lắp đặt thiết bị công trình dân dụng,công nghiệp; Thiết kế kiến trúc công trình dân dụng, công nghiệp; Thiết kế quy hoạch xây dựng; Giám sát công tác xây dựng và hoàn thiện công trình dân dụng; Thiết kế cơ khí, cơ điện công trình dân dụng,công nghiệp; Giám sát lắp đặt thiết bị công trình dân dụng,công nghiệp; Thiết kế kiến trúc công trình dân dụng, công nghiệp; Thiết kế quy hoạch xây dựng",
+      "internationalName": "VIET NHAT MECHANICAL&TECHNICAL COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T09:36:23.019Z"
     },
     {
       "id": "3502547183",
       "name": "CÔNG TY TNHH LUMINA PHÚ MỸ",
-      "representative": "NGUYỄN THỊ TÂM",
+      "representative": "NGUYỄN THỊ TÂM Ngoài ra, NGUYỄN THỊ TÂM còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ ĐẦU TƯ T VÀ T CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ ĐẦU TƯ NGÀY MỚI CÔNG TY TNHH ĐẦU TƯ THƯƠNG MẠI VÀ DỊCH VỤ SẢN XUẤT KHÔI NGUYÊN CỬA HÀNG VẬT LIỆU XÂY DỰNG T&T",
       "address": "164 Nguyễn Hữu Thọ, Phường Phú Mỹ, Thành Phố Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547183-cong-ty-tnhh-lumina-phu-my",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-28",
+      "phone": "0933988585",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 22 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn máy móc, thiết bị và phụ tùng máy khác Chi tiết: Bán buôn máy móc, thiết bị, vật tư hỗ trợ ngành thẩm mỹ; bán buôn máy móc, thiết bị y tế; Bán buôn dụng cụ làm nail, thiết bị phun xăm, máy phun xăm, mực phun xăm; Mua bán máy móc, thiết bị thiết bị xây dựng; bán buôn máy móc thiết bị và phụ tùng ngành dầu khí, cơ khí, hóa chất, công nghiệp; Bán buôn máy móc thiết bị điện, vật liệu điện (máy phát điện, động cơ điện, dây điện và thiết bị khác dùng trong mạch điện). Bán buôn máy móc, thiết bị và phụ tùng máy khai khoáng.",
+      "enrichedAt": "2026-10-06T09:36:26.638Z"
     },
     {
       "id": "3502547200",
@@ -39782,7 +40253,14 @@
       "representative": "LÂM VĂN TOÀN",
       "address": "189/10 Hoàng Văn Thụ, Phường 7, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547200-cong-ty-tnhh-th-truong-an",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-28",
+      "phone": "0384199726",
+      "status": "Không",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng Chi tiết : Bán buôn sơn, vécni",
+      "internationalName": "TRUONG AN TH COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T09:36:30.154Z"
     },
     {
       "id": "3502547218",
@@ -39790,7 +40268,14 @@
       "representative": "VŨ ĐỨC DƯƠNG",
       "address": "123/12 Tôn Đức Thắng, Phường 9, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547218-cong-ty-tnhh-oel-starlk",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-28",
+      "phone": "0978497983",
+      "status": "Không",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán lẻ đồ điện gia dụng, giường, tủ, bàn, ghế và đồ nội thất tương tự, đèn và bộ đèn điện, đồ dùng gia đình khác chưa được phân vào đâu trong các cửa hàng chuyên doanh",
+      "internationalName": "OEL STARLK COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T09:36:33.786Z"
     },
     {
       "id": "3502547232",
@@ -39798,7 +40283,14 @@
       "representative": "PHAN VĂN MẠNH",
       "address": "128/12 Trần Bình Trọng, Phường 8, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547232-cong-ty-tnhh-tmdv-malisa-ltd-vn",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-28",
+      "phone": "0385141581",
+      "status": "Không",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn đồ dùng khác cho gia đình Chi tiết: Bán buôn nước hoa, hàng mỹ phẩm và chế phẩm vệ sinh (Trừ bán buôn dược phẩm)",
+      "internationalName": "MALISA LTD VN TMDV COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T09:36:37.452Z"
     },
     {
       "id": "3502547271",
@@ -39806,7 +40298,13 @@
       "representative": "VÕ VĂN THÔNG",
       "address": "Số nhà 211/2/1, hẻm 229, đường Âu Cơ, Thị Trấn Ngãi Giao, Huyện Châu Đức, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547271-cong-ty-tnhh-bh-van-thong",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-28",
+      "phone": "0963 765 889",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 23 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn tổng hợp",
+      "enrichedAt": "2026-10-06T09:36:40.624Z"
     },
     {
       "id": "3502547176",
@@ -39814,15 +40312,27 @@
       "representative": "NGUYỄN THỊ HUYỀN TRANG",
       "address": "Số 532/11, Trần Phú, Phường 5, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547176-cong-ty-tnhh-ket-sat-hoang-nam",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-28",
+      "phone": "0937959061",
+      "status": "Không",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán lẻ đồ điện gia dụng, giường, tủ, bàn, ghế và đồ nội thất tương tự, đèn và bộ đèn điện, đồ dùng gia đình khác chưa được phân vào đâu trong các cửa hàng chuyên doanh Chi tiết: Bán lẻ két sắt và linh kiện két sắt",
+      "enrichedAt": "2026-10-06T09:36:44.265Z"
     },
     {
       "id": "3502547190",
       "name": "CÔNG TY TNHH THƯƠNG MẠI-DỊCH VỤ TẤN NHÃ",
-      "representative": "NGUYỄN VĂN TẤN",
+      "representative": "NGUYỄN VĂN TẤN Ngoài ra, NGUYỄN VĂN TẤN còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH NGUYỄN VĂN TẤN",
       "address": "Tổ 1, Ấp Sông Xoài 1, Xã Sông Xoài, Thành Phố Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547190-cong-ty-tnhh-thuong-mai-dich-vu-tan-nha",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-28",
+      "phone": "0961110964",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 22 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán lẻ đồ điện gia dụng, giường, tủ, bàn, ghế và đồ nội thất tương tự, đèn và bộ đèn điện, đồ dùng gia đình khác chưa được phân vào đâu trong các cửa hàng chuyên doanh",
+      "enrichedAt": "2026-10-06T09:36:47.441Z"
     },
     {
       "id": "3502546990",
@@ -39830,15 +40340,28 @@
       "representative": "TRẦN SÂM",
       "address": "68/10 Kim Đồng , Phường Rạch Dừa, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502546990-cong-ty-tnhh-tc-phuc-an",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-28",
+      "phone": "0865253374",
+      "status": "Không",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn vải, hàng may sẵn, giày dép",
+      "internationalName": "PHUC AN TC COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T09:36:50.826Z"
     },
     {
       "id": "3502547056",
       "name": "CÔNG TY TNHH ĐẦU TƯ VÀ PHÁT TRIỂN ẨM THỰC THIÊN HƯƠNG",
-      "representative": "PHAN VĂN HƯỚNG",
+      "representative": "PHAN VĂN HƯỚNG Ngoài ra, PHAN VĂN HƯỚNG còn đại diện các doanh nghiệp, đơn vị: Phan Văn Hướng (Quán Thiên Hương)",
       "address": "Đường Điện Biên Phủ, Tổ 5, Khu phố 2, Phường Phước Nguyên, Thành phố Bà Rịa, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547056-cong-ty-tnhh-dau-tu-va-phat-trien-am-thuc-thien-huong",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-28",
+      "phone": "0364139379",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 21 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Nhà hàng và các dịch vụ ăn uống phục vụ lưu động Chi tiết: Nhà hàng, quán ăn, hàng ăn uống; Dịch vụ ăn uống phục vụ lưu động khác",
+      "enrichedAt": "2026-10-06T09:36:54.124Z"
     },
     {
       "id": "3502547070",
@@ -39846,23 +40369,44 @@
       "representative": "LƯU HỒNG LONG",
       "address": "113 Nguyễn Thái Học, Phường 7, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547070-cong-ty-co-phan-dich-vu-ky-thuat-hai-minh",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-28",
+      "phone": "0932217688",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Hoạt động kiến trúc và tư vấn kỹ thuật có liên quan Chi tiết: Hoạt động đo đạc và bản đồ, đo đạc vị trí các công trình biển",
+      "internationalName": "HAI MINH TECHNICAL SERVICES JSC",
+      "enrichedAt": "2026-10-06T09:36:57.470Z"
     },
     {
       "id": "3502546863",
       "name": "CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ SONG LINH XANH",
-      "representative": "NGUYỄN QUANG HUY",
+      "representative": "NGUYỄN QUANG HUY Ngoài ra, NGUYỄN QUANG HUY còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH NGUYỄN QUANG HUY",
       "address": "112/3 Trần Phú, Phường 5, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502546863-cong-ty-tnhh-thuong-mai-dich-vu-song-linh-xanh",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-27",
+      "phone": "0372171095",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 24 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn tổng hợp",
+      "internationalName": "SONG LINH XANH TRADING SERVICES CO., LTD",
+      "enrichedAt": "2026-10-06T09:37:01.063Z"
     },
     {
       "id": "3502547095",
       "name": "CÔNG TY TNHH LT PHÁP MINH",
-      "representative": "TRẦN HẠNH NGUYÊN",
+      "representative": "TRẦN HẠNH NGUYÊN Ngoài ra, TRẦN HẠNH NGUYÊN còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH PHÁT TRIỂN THƯƠNG MẠI & XUẤT NHẬP KHẨU VIỆT BẮC HÀ",
       "address": "Số 76 đường Cách Mạng Tháng 8, khu phố Tân Ngọc, Phường Phú Mỹ, Thành Phố Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
       "slug": "3502547095-cong-ty-tnhh-lt-phap-minh",
-      "province": "Bà Rịa - Vũng Tàu"
+      "province": "Bà Rịa - Vũng Tàu",
+      "startDate": "2025-05-27",
+      "phone": "098 8070869",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 22 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng Chi tiết : Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng",
+      "internationalName": "LT PHAP MINH COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T09:37:04.338Z"
     },
     {
       "id": "3502547088",
@@ -39928,7 +40472,10 @@
       "representative": "NGUYỄN TÒNG BÁ",
       "address": "Ấp 3, Xã Tân Bình, Thị xã Tân Uyên, Tỉnh Bình Dương, Việt Nam",
       "slug": "0100283721-031-ngan-hang-thuong-mai-co-phan-nha-ha-noi-chi-nhanh-binh-duong-phong-giao-dich-tan-uyen",
-      "province": "Bình Dương"
+      "province": "Bình Dương",
+      "status": "Đang hoạt động",
+      "mainIndustry": "Hoạt động trung gian tiền tệ khác Chi tiết: Kinh doanh ngân hàng theo các quy định của Thống đốc Ngân hàng Nhà nước.",
+      "enrichedAt": "2026-10-06T09:39:21.120Z"
     },
     {
       "id": "0021920061",
@@ -39936,7 +40483,10 @@
       "representative": "HOÀNG VĂN THẮNG",
       "address": "272 Nguyễn Văn Trỗi, Khu phố 7, Phường Hiệp Thành, Thành phố Thủ Dầu Một, Tỉnh Bình Dương, Việt Nam",
       "slug": "0021920061-van-phong-dai-dien-cong-ty-tnhh-dau-tu-va-tu-van-oneclick",
-      "province": "Bình Dương"
+      "province": "Bình Dương",
+      "status": "Đang hoạt động",
+      "internationalName": "REPRESENTATIVE OFFICE - ONECLICK INVESMENT AND CONSULTANCY COMPANY LIMITED",
+      "enrichedAt": "2026-10-06T09:39:24.428Z"
     },
     {
       "id": "0023120208",
@@ -39944,7 +40494,10 @@
       "representative": "BÙI VĂN PHÚC",
       "address": "Số 38a Huỳnh Thị Tươi, Khu Phố Tân Thắng, Phường Tân Bình, Thành phố Dĩ An, Tỉnh Bình Dương, Việt Nam",
       "slug": "0023120208-dia-diem-kinh-doanh-so-1-cong-ty-tnhh-kinh-doanh-dich-vu-p-l",
-      "province": "Bình Dương"
+      "province": "Bình Dương",
+      "status": "Đang hoạt động",
+      "mainIndustry": "Bán buôn chuyên doanh khác chưa được phân vào đâu Chi tiết: - Bán buôn hoá chất công nghiệp (trừ hóa chất bảng 1 theo Công ước quốc tế); - Kinh doanh phụ gia thực phẩm (Thông tư 24/2019/TT-BYT).",
+      "enrichedAt": "2026-10-06T09:39:27.832Z"
     },
     {
       "id": "0012042043",
@@ -39952,7 +40505,10 @@
       "representative": "NGUYỄN VĂN TRƯỜNG",
       "address": "DC35-06 Khu dân cư Việt Sing, Khu phố 4, Phường An Phú, Thành phố Thuận An, Tỉnh Bình Dương, Việt Nam",
       "slug": "0012042043-doanh-nghiep-tu-nhan-dai-phat-minh-thien",
-      "province": "Bình Dương"
+      "province": "Bình Dương",
+      "status": "Đang hoạt động",
+      "mainIndustry": "Bán buôn đồ dùng khác cho gia đình Chi tiết: - Bán buôn đồ dùng điện gia dụng, đèn và bộ đèn điện - Bán buôn giường, tủ, bàn ghế và đồ dùng nội thất tương tự - Bán buôn kim khí điện máy, máy lạnh, máy giặt, hàng điện, điện tử",
+      "enrichedAt": "2026-10-06T09:39:31.393Z"
     },
     {
       "id": "0301323438-001",
@@ -39960,7 +40516,12 @@
       "representative": "PHAN THỚI DŨNG",
       "address": "Tổ 4, khu phố Khánh Hội, Phường Tân Phước Khánh, Thị xã Tân Uyên, Tỉnh Bình Dương, Việt Nam",
       "slug": "0301323438-001-chi-nhanh-cong-ty-tnhh-xay-dung-va-san-lap-nen-trung-dung",
-      "province": "Bình Dương"
+      "province": "Bình Dương",
+      "startDate": "2026-01-09",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế Thành phố Hồ Chí Minh",
+      "mainIndustry": "Kho bãi và lưu giữ hàng hóa Kho chứa hàng của công ty",
+      "enrichedAt": "2026-10-06T09:39:34.759Z"
     },
     {
       "id": "3700618781-002",
@@ -39968,7 +40529,11 @@
       "representative": "HONG VA DƯỠNG",
       "address": "ấp Bình Phước B, Xã Bình Chuẩn, Thành phố Thuận An, Tỉnh Bình Dương, Việt Nam",
       "slug": "3700618781-002-chi-nhanh-dntn-y-trung",
-      "province": "Bình Dương"
+      "province": "Bình Dương",
+      "startDate": "2025-12-18",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 27 Thành phố Hồ Chí Minh",
+      "enrichedAt": "2026-10-06T09:39:38.154Z"
     },
     {
       "id": "0021034401",
@@ -39984,15 +40549,25 @@
       "representative": "TRẦN ĐỨC BÌNH",
       "address": "G1-24 Đường số 4A, KDC Vĩnh Phú 1, Phường Vĩnh Phú, Thành phố Thuận An, Tỉnh Bình Dương, Việt Nam",
       "slug": "0302012107-002-chi-nhanh-cong-ty-tnhh-dien-co-nam-viet",
-      "province": "Bình Dương"
+      "province": "Bình Dương",
+      "phone": "06503612601",
+      "status": "Đang hoạt động",
+      "mainIndustry": "Sản xuất đồ điện dân dụng",
+      "enrichedAt": "2026-10-06T09:40:00.343Z"
     },
     {
       "id": "0110846959-011",
       "name": "CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH B5",
-      "representative": "TRỊNH ĐỨC HIỂN",
+      "representative": "TRỊNH ĐỨC HIỂN Ngoài ra, TRỊNH ĐỨC HIỂN còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN CÔNG TY TNHH TMDV THOHA CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH NINH BÌNH CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH PHÚ THỌ CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH B3 CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH BẮC NINH CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH N3 CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH B4 CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH B1 CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH VPT CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH G4 CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH SỐ G2 CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH G3 CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH HÒA BÌNH CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH SƠN LA CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH QUẢNG TRỊ CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH NGHỆ AN CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH GIA LAI CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH YÊN BÁI CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH PHÚ YÊN CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH THANH HÓA CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH QUẢNG NINH CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH N4 CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH N5 CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH N1 CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH N2 CÔNG TY TNHH PHỤ TÙNG MOTOR TRƯỜNG HIỂN - CHI NHÁNH SỐ G1",
       "address": "Số nhà 233, Đường Hùng Vương, Thị Trấn Dầu Tiếng, Huyện Dầu Tiếng, Tỉnh Bình Dương, Việt Nam",
       "slug": "0110846959-011-cong-ty-tnhh-phu-tung-motor-truong-hien-chi-nhanh-b5",
-      "province": "Bình Dương"
+      "province": "Bình Dương",
+      "startDate": "2025-06-17",
+      "phone": "0339865234",
+      "status": "Không",
+      "managedBy": "Thuế cơ sở 29 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán phụ tùng và các bộ phận phụ trợ của mô tô, xe máy (Trừ hoạt động đấu giá)",
+      "enrichedAt": "2026-10-06T09:40:03.874Z"
     },
     {
       "id": "0318567351-001",
@@ -40005,18 +40580,30 @@
     {
       "id": "0318309777-001",
       "name": "CHI NHÁNH CÔNG TY TNHH ĐẦU TƯ PHÁT TRIỂN THƯƠNG MẠI XÂY DỰNG LONG PHÁT",
-      "representative": "NGUYỄN VĂN MINH",
+      "representative": "NGUYỄN VĂN MINH Ngoài ra, NGUYỄN VĂN MINH còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH ĐẦU TƯ PHÁT TRIỂN THƯƠNG MẠI XÂY DỰNG LONG PHÁT",
       "address": "Số 39, đường NG2, khu biệt thự Cocoland, Mỹ Phước 3, Phường Chánh Phú Hòa, Thị xã Bến Cát, Tỉnh Bình Dương, Việt Nam",
       "slug": "0318309777-001-chi-nhanh-cong-ty-tnhh-dau-tu-phat-trien-thuong-mai-xay-dung-long-phat",
-      "province": "Bình Dương"
+      "province": "Bình Dương",
+      "startDate": "2024-04-02",
+      "phone": "0989 728 477",
+      "status": "Không",
+      "managedBy": "Thuế cơ sở 29 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Xây dựng nhà để ở",
+      "enrichedAt": "2026-10-06T09:40:26.265Z"
     },
     {
       "id": "3703017676-001",
       "name": "CHI NHÁNH CÔNG TY TNHH NGUYỄN HỒNG HUẾ",
-      "representative": "NGUYỄN HỒNG HUẾ",
+      "representative": "NGUYỄN HỒNG HUẾ Ngoài ra, NGUYỄN HỒNG HUẾ còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH NGUYỄN HỒNG HUẾ HỘ KINH DOANH NGUYỄN HỒNG HUẾ",
       "address": "Số 3861, Đường TC4, Khu TĐC Mỹ Phước II, Tổ 14, Khu phố 2, Phường Mỹ Phước, Thành Phố Bến Cát, Tỉnh Bình Dương, Việt Nam",
       "slug": "3703017676-001-chi-nhanh-cong-ty-tnhh-nguyen-hong-hue",
-      "province": "Bình Dương"
+      "province": "Bình Dương",
+      "startDate": "2022-01-06",
+      "phone": "0903046688",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 29 Thành phố Hồ Chí Minh",
+      "mainIndustry": "Bán buôn tổng hợp Chi tiết : Bán buôn bách hóa tổng hợp",
+      "enrichedAt": "2026-10-06T09:40:29.743Z"
     },
     {
       "id": "3702998987-001",

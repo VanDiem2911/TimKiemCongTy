@@ -1,10 +1,22 @@
 [
   {
-    "id": "8012273133",
-    "name": "LÊ BÁ ANH",
-    "representative": "Lê Bá Anh",
-    "address": "Căn hộ 12A09 Nhà 18T1 Khu ĐT Trung Hòa - Nhân Chính, Phường Nhân Chính, Quận Thanh Xuân, Hà Nội",
-    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
+    "id": "0100109106",
+    "name": "TẬP ĐOÀN CÔNG NGHIỆP - VIỄN THÔNG QUÂN ĐỘI",
+    "representative": "TÀO ĐỨC THẮNG",
+    "address": "Số 5, Phố Nguyễn Hữu An, Phường Cầu Giấy, Thành phố Hà Nội, Việt Nam",
+    "status": "Đang hoạt động",
+    "province": "Thành phố Hà Nội",
+    "startDate": "1998-05-21",
+    "lastUpdated": "Vừa xong"
+  },
+  {
+    "id": "0319731004",
+    "name": "CÔNG TY TNHH ONLY ORCHID",
+    "representative": "HOÀNG THỊ HẢI YẾN",
+    "address": "51 Đường số 2, Phường Thủ Đức, Thành phố Hồ Chí Minh, Việt Nam",
+    "status": "Đang hoạt động",
+    "province": "Thành phố Hồ Chí Minh",
+    "startDate": "2026-10-02",
     "lastUpdated": "Vừa xong"
   },
   {
@@ -12,8 +24,17 @@
     "name": "CÔNG TY TNHH CÔNG NGHỆ PHẦN MỀM DUDI",
     "representative": "VÕ BÁ THÀNH NHÂN",
     "address": "232 Nguyễn Thị Minh Khai, Phường Xuân Hòa, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
+    "status": "Không hoạt động tại địa chỉ đã đăng ký",
     "province": "Thành phố Hồ Chí Minh",
+    "startDate": "2024-12-10",
+    "lastUpdated": "Vừa xong"
+  },
+  {
+    "id": "8012273133",
+    "name": "LÊ BÁ ANH",
+    "representative": "Lê Bá Anh",
+    "address": "Căn hộ 12A09 Nhà 18T1 Khu ĐT Trung Hòa - Nhân Chính, Phường Nhân Chính, Quận Thanh Xuân, Hà Nội",
+    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
     "lastUpdated": "Vừa xong"
   },
   {
@@ -64,16 +85,6 @@
     "status": "Đang hoạt động",
     "province": "Thành phố Hồ Chí Minh",
     "startDate": "2026-10-05",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0100109106",
-    "name": "TẬP ĐOÀN CÔNG NGHIỆP - VIỄN THÔNG QUÂN ĐỘI",
-    "representative": "TÀO ĐỨC THẮNG",
-    "address": "Số 5, Phố Nguyễn Hữu An, Phường Cầu Giấy, Thành phố Hà Nội, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Thành phố Hà Nội",
-    "startDate": "1998-05-21",
     "lastUpdated": "Vừa xong"
   },
   {
@@ -184,16 +195,6 @@
     "status": "Đang hoạt động",
     "province": "Thành phố Hồ Chí Minh",
     "startDate": "2026-09-28",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0319731004",
-    "name": "CÔNG TY TNHH ONLY ORCHID",
-    "representative": "HOÀNG THỊ HẢI YẾN",
-    "address": "51 Đường số 2, Phường Thủ Đức, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Thành phố Hồ Chí Minh",
-    "startDate": "2026-10-02",
     "lastUpdated": "Vừa xong"
   },
   {
