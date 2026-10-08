@@ -17,8 +17,7 @@ import {
   Search,
   CheckCircle2,
   Loader2,
-  Calendar,
-  Sparkles
+  Calendar
 } from 'lucide-react';
 
 interface Props {
@@ -225,13 +224,6 @@ export function ProvinceCompanyList({
                       <span className="flex items-center space-x-1 text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-2 py-0.5 rounded text-[11px] font-medium">
                         <Calendar className="w-3 h-3 text-emerald-600" />
                         <span>Ngày cấp: {comp.startDate}</span>
-                      </span>
-                    )}
-
-                    {(comp.startDate && (comp.startDate.startsWith('2026') || comp.startDate.startsWith('2025'))) && (
-                      <span className="inline-flex items-center space-x-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800 border border-amber-300">
-                        <Sparkles className="w-2.5 h-2.5 text-amber-600" />
-                        <span>Mới thành lập</span>
                       </span>
                     )}
                   </div>

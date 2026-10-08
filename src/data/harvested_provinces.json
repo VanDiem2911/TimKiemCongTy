@@ -9811,44 +9811,81 @@
     {
       "id": "0402357352",
       "name": "CÔNG TY TNHH Ô TÔ 43 CAR ĐÀ NẴNG",
-      "representative": "",
+      "representative": "BÙI VIẾT CHINH",
       "address": "Thửa đất số 41, Tờ bản đồ số 134, Khu E mở rộng - KDC Nam cầu Cẩm Lệ, Phường Hòa Xuân, Thành phố Đà Nẵng, Việt Nam",
-      "slug": "0402357352-cong-ty-tnhh-o-to-43-car-da-nang"
+      "slug": "0402357352-cong-ty-tnhh-o-to-43-car-da-nang",
+      "startDate": "2026-09-23",
+      "phone": "0935552052",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 thành phố Đà Nẵng",
+      "mainIndustry": "Sửa chữa, bảo dưỡng ô tô và xe có động cơ khác",
+      "internationalName": "43 CAR DANANG AUTO COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:03:35.935Z"
     },
     {
       "id": "0319494402-001",
       "name": "CHI NHÁNH CÔNG TY CỔ PHẦN NĂNG LƯỢNG SINH HỌC TUẦN HOÀN TẠI ĐÀ NẴNG",
-      "representative": "",
+      "representative": "NGUYỄN THANH VÂN",
       "address": "Thửa đất số 1234, tờ bản đồ số 13, Thôn Khương Mỹ, Xã Tam Xuân, Thành phố Đà Nẵng, Việt Nam",
-      "slug": "0319494402-001-chi-nhanh-cong-ty-co-phan-nang-luong-sinh-hoc-tuan-hoan-tai-da-nang"
+      "slug": "0319494402-001-chi-nhanh-cong-ty-co-phan-nang-luong-sinh-hoc-tuan-hoan-tai-da-nang",
+      "startDate": "2026-09-23",
+      "phone": "0903861808",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 thành phố Đà Nẵng",
+      "mainIndustry": "Xử lý và tiêu huỷ rác thải không độc hại (không hoạt động tại trụ sở)",
+      "internationalName": "DA NANG BRANCH OF CIRCULAR BIOENERGY JOINT STOCK COMPANY",
+      "enrichedAt": "2026-10-08T04:03:39.160Z"
     },
     {
       "id": "4001341899",
       "name": "CÔNG TY TNHH HOI AN LAUNDRY",
-      "representative": "",
+      "representative": "LÊ THỤC QUYÊN Ngoài ra, LÊ THỤC QUYÊN còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH TM & DV COUNTRY CRAFT BEER CÔNG TY TNHH THE RIVERSIDE SPA HOI AN CÔNG TY TNHH FIVE SENSES SPA HUẾ HỘ KINH DOANH CHĂM SÓC SẮC ĐẸP 5 GIÁC QUAN (LÊ THỤC QUYÊN)",
       "address": "56 Nguyễn Du, Phường Hội An, Thành phố Đà Nẵng, Việt Nam",
-      "slug": "4001341899-cong-ty-tnhh-hoi-an-laundry"
+      "slug": "4001341899-cong-ty-tnhh-hoi-an-laundry",
+      "startDate": "2026-09-25",
+      "phone": "0397204904",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 7 thành phố Đà Nẵng",
+      "mainIndustry": "Dịch vụ tắm hơi, massage và các dịch vụ tăng cường sức khoẻ tương tự (trừ hoạt động thể thao)",
+      "internationalName": "HOI AN LAUNDRY COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:03:42.756Z"
     },
     {
       "id": "0110524052-001",
       "name": "VĂN PHÒNG ĐẠI DIỆN CÔNG TY CỔ PHẦN DỊCH THUẬT SEN VÀNG",
-      "representative": "",
+      "representative": "LÊ VĂN TRƯỜNG Ngoài ra, LÊ VĂN TRƯỜNG còn đại diện các doanh nghiệp, đơn vị: VĂN PHÒNG ĐẠI DIỆN CÔNG TY CỔ PHẦN DỊCH THUẬT CHUYÊN NGHIỆP TÂN VIỆT CÔNG TY CỔ PHẦN DỊCH THUẬT CHUYÊN NGHIỆP TÂN VIỆT CÔNG TY CỔ PHẦN DỊCH THUẬT TRÍ VIỆT CÔNG TY CỔ PHẦN DỊCH THUẬT SEN VÀNG",
       "address": "Tầng Lửng, Số 66 Võ Văn Tần, Phường Thanh Khê, Thành phố Đà Nẵng, Việt Nam",
-      "slug": "0110524052-001-van-phong-dai-dien-cong-ty-co-phan-dich-thuat-sen-vang"
+      "slug": "0110524052-001-van-phong-dai-dien-cong-ty-co-phan-dich-thuat-sen-vang",
+      "startDate": "2026-09-28",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng",
+      "enrichedAt": "2026-10-08T04:03:46.039Z"
     },
     {
       "id": "0402358042",
       "name": "CÔNG TY CỔ PHẦN THƯƠNG MẠI VÀ DỊCH VỤ STOPWAY",
-      "representative": "",
+      "representative": "HỒ MẠNH CƯỜNG",
       "address": "73 Phan Kế Bính, Phường Hải Châu, Thành phố Đà Nẵng, Việt Nam",
-      "slug": "0402358042-cong-ty-co-phan-thuong-mai-va-dich-vu-stopway"
+      "slug": "0402358042-cong-ty-co-phan-thuong-mai-va-dich-vu-stopway",
+      "startDate": "2026-09-25",
+      "phone": "0785423333",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế thành phố Đà Nẵng",
+      "mainIndustry": "Nhà hàng và các dịch vụ ăn uống phục vụ lưu động (trừ hoạt động quán bar và quán giải khát có khiêu vũ).",
+      "enrichedAt": "2026-10-08T04:03:49.255Z"
     },
     {
       "id": "0402357539",
       "name": "CÔNG TY TNHH MTV ĐỨC ANH HOMECARE",
-      "representative": "",
+      "representative": "MAI ĐỨC ANH",
       "address": "Số 17 Đường Ban Ban 9, Tổ 51, Phường Ngũ Hành Sơn, Thành phố Đà Nẵng, Việt Nam",
-      "slug": "0402357539-cong-ty-tnhh-mtv-duc-anh-homecare"
+      "slug": "0402357539-cong-ty-tnhh-mtv-duc-anh-homecare",
+      "startDate": "2026-09-22",
+      "phone": "0979631307",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "mainIndustry": "Vệ sinh chung nhà cửa",
+      "enrichedAt": "2026-10-08T04:03:52.704Z"
     },
     {
       "id": "0402358010",
@@ -9869,7 +9906,13 @@
       "representative": "TRẦN VĂN TRANG",
       "address": "Lô 1595 Trung Lập 1, Phường Hải Vân, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402359134-cong-ty-tnhh-thiet-bi-dien-nuoc-da-nang",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-10-05",
+      "phone": "0976234866",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 thành phố Đà Nẵng",
+      "mainIndustry": "Bán buôn máy móc, thiết bị và phụ tùng máy khác Chi tiết: Bán buôn máy móc, thiết bị vật liệu điện",
+      "enrichedAt": "2026-10-08T04:03:55.790Z"
     },
     {
       "id": "0402359208",
@@ -9924,7 +9967,7 @@
       "status": "Đang hoạt động",
       "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
       "mainIndustry": "Quảng cáo (Không dập, cắt, gò, hàn, sơn tại trụ sở)",
-      "enrichedAt": "2026-10-06T06:06:28.718Z"
+      "enrichedAt": "2026-10-08T04:03:59.080Z"
     },
     {
       "id": "4001342275",
@@ -9964,7 +10007,7 @@
       "status": "Đang hoạt động",
       "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
       "mainIndustry": "Cưa, xẻ, bào gỗ và bảo quản gỗ",
-      "enrichedAt": "2026-10-06T06:06:38.633Z"
+      "enrichedAt": "2026-10-08T04:04:04.737Z"
     },
     {
       "id": "0402359222",
@@ -9977,7 +10020,7 @@
       "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
       "mainIndustry": "Hoạt động quản lý quỹ Chi tiết: Quản lý quỹ đầu tư khởi nghiệp sáng tạo (Hoạt động theo đúng quy định pháp luật)",
       "internationalName": "DP VINA FUND JOINT STOCK COMPANY",
-      "enrichedAt": "2026-10-06T06:06:41.858Z"
+      "enrichedAt": "2026-10-08T04:04:08.210Z"
     },
     {
       "id": "0402359215",
@@ -9999,7 +10042,13 @@
       "representative": "NGUYỄN THỊ MỸ DUYÊN",
       "address": "181-183-185 Điện Biên Phủ, Phường Thanh Khê, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402359127-cong-ty-tnhh-thuong-mai-va-dich-vu-trieu-duong-billiards",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-10-05",
+      "phone": "0936219999",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng",
+      "mainIndustry": "Hoạt động vui chơi giải trí khác chưa được phân vào đâu Chi tiết: Hoạt động của các phòng bi-a (trừ hoạt động của các sàn nhảy)",
+      "enrichedAt": "2026-10-08T04:04:11.597Z"
     },
     {
       "id": "0402359046",
@@ -10007,7 +10056,14 @@
       "representative": "LÊ HƯNG",
       "address": "50B Nguyễn Du, Phường Hải Châu, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402359046-cong-ty-tnhh-xay-dung-ky-thuat-hung-thanh",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-10-05",
+      "phone": "0935160815",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 thành phố Đà Nẵng",
+      "mainIndustry": "Xây dựng công trình điện Thi công xây dựng các công trình hạ tầng năng lượng; xây dựng nhà máy điện, đường dây tải điện, trạm biến áp, công trình điện công nghiệp và các công trình kỹ thuật năng lượng khác",
+      "internationalName": "HUNG THANH CONSTRUCTION ENGINEERING COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:04:14.816Z"
     },
     {
       "id": "0402358701",
@@ -10015,7 +10071,14 @@
       "representative": "TRẦN THỊ HỒNG DIỆP",
       "address": "246 Điện Biên Phủ, Phường Thanh Khê, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402358701-cong-ty-tnhh-van-tai-cam-van-express",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-10-05",
+      "phone": "0901005006",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng",
+      "mainIndustry": "Vận tải hàng hóa bằng đường bộ Chi tiết: Kinh doanh vận tải hàng bằng ô tô;",
+      "internationalName": "CAM VAN EXPRESS TRANSPORT COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:04:18.399Z"
     },
     {
       "id": "0402358821",
@@ -10023,7 +10086,14 @@
       "representative": "NGUYỄN THỊ THẢO",
       "address": "51 Nguyễn Quang Chung, Phường Hòa Xuân, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402358821-cong-ty-tnhh-dieu-khac-my-thuat-ngu-hanh-son",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-10-05",
+      "phone": "0968259499",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 thành phố Đà Nẵng",
+      "mainIndustry": "Cắt tạo dáng và hoàn thiện đá Chi tiết: Cắt, tạo dáng, điêu khắc, hoàn thiện sản phẩm đá sử dụng trong xây dựng, nghĩa trang, đường xá, công cộng, nơi tôn giáo và lợp mái; Sản xuất đồ gia dụng, đồ mỹ nghệ bằng đá (bao gồm sản xuất mặt bàn bằng đá); Làm mộ bia; Chế tạo, thi công tượng đài.",
+      "internationalName": "NGU HANH SON FINE ART SCULPTURE COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:04:21.885Z"
     },
     {
       "id": "4001342243",
@@ -10031,7 +10101,14 @@
       "representative": "TRỊNH MINH SƠN",
       "address": "305-307 Nguyễn Văn Trỗi, Phường Quảng Phú, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4001342243-cong-ty-tnhh-noi-that-nha-viet-quang-nam",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-10-05",
+      "phone": "0932427686",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 thành phố Đà Nẵng",
+      "mainIndustry": "Hoạt động kiến trúc và tư vấn kỹ thuật có liên quan Chi tiết: - Thiết kế kiến trúc công trình. - Thiết kế nội ngoại thất công trình. - Thiết kế quy hoạch xây dựng. - Thiết kế kiến trúc - Thiết kế kết cấu công trình dân dụng và công nghiệp - Thiết kế điện nước - Thiết kế phòng cháy chữa cháy - Thiết kế hệ thống điện lạnh - Tư vấn lập dự án đầu tư - Tư vấn đầu thầu - Lập tổng dự toán công trình - Lập hồ sơ mời thầu - Lập dự án đầu tư - Tư vấn quản lý dự án - Thẩm tra hiệu quả đầu tư - Kiểm định chất lượng công trình xây dựng - Thẩm tra thiết kế kiến trúc công trình - Thẩm tra thiết kế nội ngoại thất công trình - Thẩm tra thiết kế quy hoạch xây dựng - Thẩm tra thiết kế kết cấu công trình xây dựng dân dựng và công nghiệp - Thẩm tra thiết kế hệ thống cấp thoát nước, điện, điện lạnh - Giám sát xây dựng công trình dân dụng và công nghiệp - Giám sát lắp đặt hệ thống cấp thoát nước, điện, điện lạnh",
+      "internationalName": "VIET HOUSE QUANG NAM INTERIOR COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:04:25.494Z"
     },
     {
       "id": "0402358691",
@@ -10039,7 +10116,14 @@
       "representative": "NGUYỄN THỊ THẮM",
       "address": "K01B Lê Trọng Tấn, Phường An Khê, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402358691-cong-ty-tnhh-hnl368",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-10-05",
+      "phone": "0338964748",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng",
+      "mainIndustry": "May trang phục (trừ trang phục từ da lông thú) Chi tiết: Sản xuất và gia công hàng may mặc",
+      "internationalName": "HNL368 COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:04:28.944Z"
     },
     {
       "id": "0402358765",
@@ -10047,7 +10131,14 @@
       "representative": "NGUYỄN HỮU TRỌNG",
       "address": "27 Trần Hữu Tước, Phường An Hải, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402358765-cong-ty-tnhh-sang-dat",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-10-05",
+      "phone": "0935070685",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế thành phố Đà Nẵng",
+      "mainIndustry": "Dịch vụ lưu trú ngắn ngày",
+      "internationalName": "SANG DAT COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:04:32.414Z"
     },
     {
       "id": "0402358853",
@@ -10135,7 +10226,13 @@
       "representative": "NGUYỄN VĂN TÍN",
       "address": "Thửa đất số 375, Tờ bản đồ số 12, Thôn Trường Mỹ, Xã Chiên Đàn, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4001341803-cong-ty-tnhh-xay-dung-va-thuong-mai-van-tin",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-24",
+      "phone": "0968 951 639",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 thành phố Đà Nẵng",
+      "mainIndustry": "Xây dựng công trình kỹ thuật dân dụng khác",
+      "enrichedAt": "2026-10-08T04:04:35.762Z"
     },
     {
       "id": "4001341909",
@@ -10158,7 +10255,13 @@
       "representative": "VŨ NGUYÊN VŨ",
       "address": "99 Đường Đồng Khoa 4, Phường Ngũ Hành Sơn, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0317587958-002-chi-nhanh-cong-ty-co-phan-thuong-mai-va-dich-vu-phat-trien-he-thong-sharpensols",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-09",
+      "phone": "0913347484",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "mainIndustry": "Lập trình máy tính khác",
+      "enrichedAt": "2026-10-08T04:04:39.074Z"
     },
     {
       "id": "6101291589-003",
@@ -10166,7 +10269,12 @@
       "representative": "NGUYỄN NGỌC NINH",
       "address": "17 Lê Chân, Phường Sơn Trà, Thành phố Đà Nẵng, Việt Nam",
       "slug": "6101291589-003-van-phong-dai-dien-dong-da-nang-cong-ty-co-phan-dau-tu-va-phat-trien-do-thi-azgroup-mien-trung",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-14",
+      "phone": "0903572222",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế thành phố Đà Nẵng",
+      "enrichedAt": "2026-10-08T04:04:42.669Z"
     },
     {
       "id": "0317452661-001",
@@ -10174,7 +10282,11 @@
       "representative": "HUỲNH THỊ THANH THỦY",
       "address": "Tầng 3, tòa nhà số 223 Trường Chinh, Phường An Khê, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0317452661-001-van-phong-dai-dien-cong-ty-tnhh-nexus-grow",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-16",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng",
+      "enrichedAt": "2026-10-08T04:04:45.824Z"
     },
     {
       "id": "0402358081",
@@ -10182,15 +10294,28 @@
       "representative": "LÊ ĐỨC HÙNG",
       "address": "60 Võ Văn Kiệt, Phường An Hải, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402358081-cong-ty-tnhh-gachi-ecosystem",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-25",
+      "phone": "0829906666",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "mainIndustry": "Dịch vụ lưu trú ngắn ngày",
+      "enrichedAt": "2026-10-08T04:04:49.516Z"
     },
     {
       "id": "0402358099",
       "name": "CÔNG TY TNHH STEVE & ARAASU KITCHEN",
-      "representative": "LEE THIAN LOY",
+      "representative": "LEE THIAN LOY Ngoài ra, LEE THIAN LOY còn đại diện các doanh nghiệp, đơn vị: Diệp Ngọc Vui",
       "address": "252 Đỗ Bá, Phường Ngũ Hành Sơn, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402358099-cong-ty-tnhh-steve-araasu-kitchen",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-25",
+      "phone": "0918466315",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "mainIndustry": "Nhà hàng và các dịch vụ ăn uống phục vụ lưu động",
+      "internationalName": "STEVE & ARAASU KITCHEN COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:04:52.764Z"
     },
     {
       "id": "0402358148",
@@ -10198,7 +10323,13 @@
       "representative": "DONG, XIN",
       "address": "133 Đặng Vũ Hỷ, Phường An Hải, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402358148-cong-ty-tnhh-du-lich-dich-vu-yue-xin-cheng",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-25",
+      "phone": "0914733696",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "mainIndustry": "Nhà hàng và các dịch vụ ăn uống phục vụ lưu động",
+      "enrichedAt": "2026-10-08T04:04:56.280Z"
     },
     {
       "id": "0402357514",
@@ -10206,7 +10337,13 @@
       "representative": "LÊ THỊ YẾN",
       "address": "Số 152, Đường Lê Thiệt, Phường Hòa Khánh, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357514-cong-ty-tnhh-me-va-be-naza-fpv",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-22",
+      "phone": "0793466843",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng",
+      "mainIndustry": "Bán buôn tổng hợp (trừ bán buôn bình gas, khí dầu mỏ hóa lỏng LPG, dầu nhớt cặn, vàng miếng, súng, đạn loại dùng đi săn hoặc thể thao và tiền kim khí; không tồn trữ hóa chất tại trụ sở)",
+      "enrichedAt": "2026-10-08T04:04:59.573Z"
     },
     {
       "id": "0402357881",
@@ -10254,7 +10391,14 @@
       "representative": "NGÔ BẢO LONG",
       "address": "K113/44/2 Nguyễn Nhàn, Phường Cẩm Lệ, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357842-cong-ty-co-phan-moi-truong-xanh-danaeco",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-23",
+      "phone": "0943354343",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 thành phố Đà Nẵng",
+      "mainIndustry": "Bán buôn chuyên doanh khác chưa được phân vào đâu Chi tiết: Bán buôn phế liệu, phế thải kim loại, phi kim loại.",
+      "internationalName": "GREEN ENVIRONMENT DANAECO JOINT STOCK COMPANY",
+      "enrichedAt": "2026-10-08T04:05:02.867Z"
     },
     {
       "id": "0402357930",
@@ -10262,15 +10406,27 @@
       "representative": "PHẠM PHÚ TÙNG",
       "address": "20 Đỗ Tự, Phường Hòa Xuân, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357930-cong-ty-tnhh-tmdv-kim-tung-long",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-24",
+      "phone": "0948300002",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 thành phố Đà Nẵng",
+      "mainIndustry": "Bán buôn tổng hợp",
+      "enrichedAt": "2026-10-08T04:05:07.901Z"
     },
     {
       "id": "4001341786",
       "name": "CÔNG TY TNHH CƠ KHÍ TAM DANH",
-      "representative": "NGUYỄN TAM DANH",
+      "representative": "NGUYỄN TAM DANH Ngoài ra, NGUYỄN TAM DANH còn đại diện các doanh nghiệp, đơn vị: Nguyễn Tam Danh",
       "address": "Tổ 7, Thôn Đại Nghĩa, Xã Đại Lộc, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4001341786-cong-ty-tnhh-co-khi-tam-danh",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-24",
+      "phone": "0907 868 179",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 thành phố Đà Nẵng",
+      "mainIndustry": "Gia công cơ khí; xử lý và tráng phủ kim loại",
+      "enrichedAt": "2026-10-08T04:05:11.541Z"
     },
     {
       "id": "0402357948",
@@ -10278,7 +10434,14 @@
       "representative": "PHAN NGỌC TÂM",
       "address": "124 Huỳnh Xuân Nhị, Phường Hòa Xuân, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357948-cong-ty-tnhh-hahakids-global-sports",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-24",
+      "phone": "0962316222",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 thành phố Đà Nẵng",
+      "mainIndustry": "Giáo dục thể thao và giải trí",
+      "internationalName": "HAHAKIDS GLOBAL SPORTS COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:05:14.769Z"
     },
     {
       "id": "0402357899",
@@ -10286,7 +10449,13 @@
       "representative": "BÙI THỊ CÂN",
       "address": "134 Trần Phú, Phường Hải Châu, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357899-cong-ty-tnhh-thuong-mai-dich-vu-hadaco",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-24",
+      "phone": "0901908809",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 thành phố Đà Nẵng",
+      "mainIndustry": "Nhà hàng và các dịch vụ ăn uống phục vụ lưu động",
+      "enrichedAt": "2026-10-08T04:05:18.089Z"
     },
     {
       "id": "0402357602",
@@ -10294,7 +10463,13 @@
       "representative": "NGUYỄN ANH KHOA",
       "address": "46 Nguyễn Thị Minh Khai, Phường Hải Châu, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357602-cong-ty-tnhh-giao-duc-va-cong-nghe-genai",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-24",
+      "phone": "0914942739",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 thành phố Đà Nẵng",
+      "mainIndustry": "Giáo dục khác chưa được phân vào đâu (trừ kiểm định giáo dục)",
+      "enrichedAt": "2026-10-08T04:05:22.543Z"
     },
     {
       "id": "0402358003",
@@ -10397,10 +10572,17 @@
     {
       "id": "4001341747",
       "name": "CÔNG TY CỔ PHẦN ĐẦU TƯ XÂY DỰNG LÊ NGUYÊN PHÁT (LNNOVA)",
-      "representative": "DƯƠNG ĐINH HOÀNG LÊ",
+      "representative": "DƯƠNG ĐINH HOÀNG LÊ Ngoài ra, DƯƠNG ĐINH HOÀNG LÊ còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH GIA HƯNG",
       "address": "541 Trần Thủ Độ, Phường Điện Bàn Đông, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4001341747-cong-ty-co-phan-dau-tu-xay-dung-le-nguyen-phat-lnnova",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-23",
+      "phone": "0983445139",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 7 thành phố Đà Nẵng",
+      "mainIndustry": "Xây dựng nhà không để ở",
+      "internationalName": "LE NGUYEN PHAT (LNNOVA) INVESTMENT CONSTRUCTION JOINT STOCK COMPANY",
+      "enrichedAt": "2026-10-08T04:05:25.901Z"
     },
     {
       "id": "4001341828",
@@ -10408,15 +10590,28 @@
       "representative": "PHẠM THANH CƯỜNG",
       "address": "Số 09 Hà Tây 1, Phường Điện Bàn Bắc, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4001341828-cong-ty-tnhh-m-e-p-ha-tay",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-24",
+      "phone": "0935910114",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 7 thành phố Đà Nẵng",
+      "mainIndustry": "Lắp đặt hệ thống điện",
+      "enrichedAt": "2026-10-08T04:05:29.414Z"
     },
     {
       "id": "4001341842",
       "name": "CÔNG TY TNHH AN NA SPACE",
-      "representative": "THÂN TRỌNG NGỌC QUỲNH",
+      "representative": "THÂN TRỌNG NGỌC QUỲNH Ngoài ra, THÂN TRỌNG NGỌC QUỲNH còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH NẮNG GIÓ APARTMENT",
       "address": "Thửa đất 889, đường Võ Chí Công, Phường Hội An Đông, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4001341842-cong-ty-tnhh-an-na-space",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-24",
+      "phone": "0983204904",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 7 thành phố Đà Nẵng",
+      "mainIndustry": "Dịch vụ phục vụ đồ uống Quán rượu, bia, quầy bar Quán cà phê, giải khát",
+      "internationalName": "AN NA SPACE COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:05:37.958Z"
     },
     {
       "id": "0402357708",
@@ -10424,7 +10619,14 @@
       "representative": "TRẦN TRUNG DŨNG",
       "address": "448/2 Núi Thành, Phường Hòa Cường, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357708-cong-ty-tnhh-cong-nghe-va-dao-tao-pace-ai",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-24",
+      "phone": "0913905355",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 thành phố Đà Nẵng",
+      "mainIndustry": "Lập trình máy tính khác",
+      "internationalName": "PACE AI TECHNOLOGY AND TRAINING COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:05:41.575Z"
     },
     {
       "id": "0402357779",
@@ -10432,15 +10634,27 @@
       "representative": "NGUYỄN ĐÌNH MINH TÂM",
       "address": "Số 432 Nguyễn Tri Phương, Phường Hòa Cường, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357779-cong-ty-tnhh-tam-vi",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-24",
+      "phone": "0777419030",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 thành phố Đà Nẵng",
+      "mainIndustry": "Nhà hàng và các dịch vụ ăn uống phục vụ lưu động",
+      "enrichedAt": "2026-10-08T04:05:44.984Z"
     },
     {
       "id": "0402357867",
       "name": "CÔNG TY CỔ PHẦN NGHỈ DƯỠNG MỘC AN",
-      "representative": "NGUYỄN TRUNG HIẾU",
+      "representative": "NGUYỄN TRUNG HIẾU Ngoài ra, NGUYỄN TRUNG HIẾU còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH ĐẦU TƯ VÀ PHÁT TRIỂN KỲ HÀ CHU LAI CÔNG TY CỔ PHẦN TRƯỜNG ĐỒNG QUẢNG NAM CÔNG TY TNHH DU LỊCH VÀ GIẢI TRÍ 7-2 CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG THIÊN PHÚ HƯNG CÔNG TY CỔ PHẦN VẬT LIỆU XÂY DỰNG HỐ BẠC",
       "address": "Lô A1-2 Chương Dương, Phường Ngũ Hành Sơn, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357867-cong-ty-co-phan-nghi-duong-moc-an",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-23",
+      "phone": "0963612807",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "mainIndustry": "Dịch vụ lưu trú ngắn ngày khác",
+      "enrichedAt": "2026-10-08T04:05:48.518Z"
     },
     {
       "id": "4001341810",
@@ -10448,7 +10662,13 @@
       "representative": "NGUYỄN HOÀNG KHÔI",
       "address": "K29/541 Huỳnh Thúc Kháng, Thôn Nam Hà Lam, Xã Thăng Bình, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4001341810-cong-ty-tnhh-tmdv-van-tai-hoang-khoi",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-24",
+      "phone": "0702420920",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 8 thành phố Đà Nẵng",
+      "mainIndustry": "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng",
+      "enrichedAt": "2026-10-08T04:05:51.720Z"
     },
     {
       "id": "0402357962",
@@ -10456,7 +10676,14 @@
       "representative": "PHẠM HOÀNG ANH",
       "address": "73, Bờ Quan 19, Phường Ngũ Hành Sơn, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357962-cong-ty-tnhh-cong-nghe-skycadrai",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-24",
+      "phone": "0848079152",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "mainIndustry": "Phát triển trò chơi điện tử, phần mềm trò chơi điện tử và các công cụ phần mềm trò chơi điện tử Chi tiết: Hoạt động lập trình, thiết kế cấu trúc, sửa lỗi, và triển khai phần mềm, ứng dụng trò chơi điện tử (trừ phát hành game online)",
+      "internationalName": "SKYCADRAI TECHNOLOGY COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:05:55.309Z"
     },
     {
       "id": "0402357923",
@@ -10464,7 +10691,14 @@
       "representative": "NGUYỄN THỊ PHÚC",
       "address": "56 Hòa Minh 14, Phường Hòa Khánh, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357923-cong-ty-tnhh-gst-mien-hung-thinh",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-24",
+      "phone": "0931986552",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng",
+      "mainIndustry": "Bán buôn tổng hợp",
+      "internationalName": "GST MIEN HUNG THINH COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:05:58.498Z"
     },
     {
       "id": "0402357391",
@@ -10472,7 +10706,13 @@
       "representative": "ĐẶNG HẢI LONG",
       "address": "412/14 Tôn Đức Thắng, Phường Hòa Khánh, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357391-cong-ty-tnhh-dau-tu-xuat-nhap-khau-thuong-mai-thang-long",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-22",
+      "phone": "0348284666",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế thành phố Đà Nẵng",
+      "mainIndustry": "Hoạt động dịch vụ hỗ trợ kinh doanh khác còn lại chưa được phân vào đâu (Trừ dịch vụ lấy lài tài sản và hoạt động đấu giá độc lập)",
+      "enrichedAt": "2026-10-08T04:06:02.085Z"
     },
     {
       "id": "0402357874",
@@ -10495,15 +10735,28 @@
       "representative": "NGUYỄN TRUNG THÀNH",
       "address": "K16/1 Bình Thái 2, Phường Cẩm Lệ, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357761-cong-ty-tnhh-tu-van-dau-tu-safico",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-24",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 thành phố Đà Nẵng",
+      "mainIndustry": "Hoạt động liên quan đến kế toán, kiểm toán và tư vấn về thuế Chi tiết: Dịch vụ làm thủ tục về thuế (trừ kế toán) (chỉ hoạt động sau khi đã đáp ứng đầy đủ các điều kiện theo quy định của pháp luật)",
+      "internationalName": "SAFICO INVESTMENT CONSULTANCY COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:06:05.255Z"
     },
     {
       "id": "0402357698",
       "name": "CÔNG TY TNHH USEPORTIFY LAB",
-      "representative": "TRẦN VĂN PHONG",
+      "representative": "TRẦN VĂN PHONG Ngoài ra, TRẦN VĂN PHONG còn đại diện các doanh nghiệp, đơn vị: CÔNG TY CỔ PHẦN TECHWO Trần Văn Phong",
       "address": "Tầng 30, 17 Quang Trung, Phường Hải Châu, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357698-cong-ty-tnhh-useportify-lab",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-24",
+      "phone": "0965997771",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 thành phố Đà Nẵng",
+      "mainIndustry": "Lập trình máy tính khác",
+      "internationalName": "USEPORTIFY LAB COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:06:13.813Z"
     },
     {
       "id": "4001341793",
@@ -10511,7 +10764,13 @@
       "representative": "HUỲNH KIM HƯNG",
       "address": "Số tờ bản đồ 12, số thửa 57, Phường Hương Trà, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4001341793-cong-ty-tnhh-xay-lap-huyen-tran",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-24",
+      "phone": "03 3663 5565",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 thành phố Đà Nẵng",
+      "mainIndustry": "Xây dựng nhà để ở",
+      "enrichedAt": "2026-10-08T04:06:17.143Z"
     },
     {
       "id": "4001341835",
@@ -10559,7 +10818,13 @@
       "representative": "NGUYỄN ĐÌNH NGỌC",
       "address": "Số 44-46 Hồ Xuân Hương, Phường Ngũ Hành Sơn, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357722-cong-ty-tnhh-las-hxh",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-23",
+      "phone": "0862303639",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "mainIndustry": "Nhà hàng và các dịch vụ ăn uống phục vụ lưu động",
+      "enrichedAt": "2026-10-08T04:06:20.490Z"
     },
     {
       "id": "4000951933-001",
@@ -10567,7 +10832,14 @@
       "representative": "KEIJI HIRAYAMA",
       "address": "01-03 Đống Đa, Phường Hải Châu, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4000951933-001-cong-ty-tnhh-hasegawa-viet-nam-chi-nhanh-da-nang",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-16",
+      "phone": "02353750888",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế thành phố Đà Nẵng",
+      "mainIndustry": "Bán lẻ khác trong các cửa hàng kinh doanh tổng hợp Chi tiết: Bán lẻ thang các loại, giá đỡ, khung đỡ, kệ hàng, pallet các loại, võng xếp, giàn giáo các loại, mâm giàn giáo, rào chắn, thiết bị dụng cụ dùng cho sân khấu lắp ghép (giàn giáo sân khấu, bục, bậc thang, sân khấu), chuồng cũi, ván cầu, cầu thang, sàn thao tác, khung bảo vệ, thùng nhôm, túi đựng; xe đẩy, xe kéo hàng các loại, băng tải, thiết bị nâng, hạ, bốc xếp; giường, tủ, bàn, ghế và các đồ dùng gia đình khác; các thiết bị lắp đặt, các máy móc, trang thiết bị khác phục vụ trong công nghiệp, xây dựng; các bộ phận, chi tiết cấu thành sản phẩm và các linh kiện, phụ kiện kèm theo sản phẩm nêu trên. (CPC 632)",
+      "internationalName": "Hasegawa Vietnam Co.,Ltd - Da Nang Branch",
+      "enrichedAt": "2026-10-08T04:06:24.182Z"
     },
     {
       "id": "0402357828",
@@ -10575,7 +10847,13 @@
       "representative": "NGUYỄN TẤN THẠCH",
       "address": "136 Tôn Đức Thắng, Phường Hòa Khánh, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357828-cong-ty-tnhh-nha-hang-san-vuon-da-nang",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-23",
+      "phone": "0788893789",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng",
+      "mainIndustry": "Nhà hàng và các dịch vụ ăn uống phục vụ lưu động",
+      "enrichedAt": "2026-10-08T04:06:27.786Z"
     },
     {
       "id": "0402357835",
@@ -10583,7 +10861,14 @@
       "representative": "NGUYỄN THIỆN NGHIỆP",
       "address": "K192/10 Nguyễn Hoàng, Phường Thanh Khê, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357835-cong-ty-tnhh-weaver",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-23",
+      "phone": "0905484383",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng",
+      "mainIndustry": "Cho thuê máy móc, thiết bị và đồ dùng hữu hình khác Chi tiết: Cho thuê xe nâng người, xe nâng hàng và thiết bị xây dựng thi công cơ giới. Cho thuê container, container lạnh và thiết bị vận tải.",
+      "internationalName": "WEAVER COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:06:31.117Z"
     },
     {
       "id": "0402357592",
@@ -10591,7 +10876,14 @@
       "representative": "PHẠM LÊ MINH HÓA",
       "address": "20/5 Hà Thị Thân, Phường An Hải, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357592-cong-ty-tnhh-co-dien-hai-thinh-phat",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-23",
+      "phone": "0352603435",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "mainIndustry": "Lắp đặt hệ thống điện",
+      "internationalName": "Hai Thinh Phat Mechanical Electrical Company Limited",
+      "enrichedAt": "2026-10-08T04:06:34.560Z"
     },
     {
       "id": "0402357680",
@@ -10599,7 +10891,14 @@
       "representative": "HỒ CHÍ DŨNG",
       "address": "Lô 05 B2.3, đường Trần Đăng Ninh, Phường Hòa Cường, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357680-cong-ty-co-phan-cong-nghe-va-dau-tu-enter-homes",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-23",
+      "phone": "0934035892",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 thành phố Đà Nẵng",
+      "mainIndustry": "Lập trình máy tính khác Chi tiết: - Sản xuất phần mềm; - Thiết kế và phát triển ứng dụng công nghệ, phần mềm quản trị (CRM, App, Web);",
+      "internationalName": "ENTER HOMES TECHNOLOGY AND INVESTMENT JOINT STOCK COMPANY",
+      "enrichedAt": "2026-10-08T04:06:38.013Z"
     },
     {
       "id": "0402357747",
@@ -10634,7 +10933,13 @@
       "representative": "HÀ ĐỨC TUẤN",
       "address": "Thửa đất số 1002/19, tờ bản đồ số 7, Thôn Viêm Tây 1, Phường Điện Bàn Bắc, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4001341666-cong-ty-tnhh-thuong-mai-va-dich-vu-tuan-hong-phat",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-22",
+      "phone": "0898748494",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 7 thành phố Đà Nẵng",
+      "mainIndustry": "Vận tải hàng hóa bằng đường bộ Chi tiết: Kinh doanh vận tải hàng bằng ô tô.",
+      "enrichedAt": "2026-10-08T04:06:41.697Z"
     },
     {
       "id": "4001341673",
@@ -10642,7 +10947,13 @@
       "representative": "ĐỖ VĂN VỸ",
       "address": "Tổ 5, thôn Ô Gia, Xã Vu Gia, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4001341673-cong-ty-trach-nhiem-huu-han-thuong-mai-dovy",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-22",
+      "phone": "0797281993",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 thành phố Đà Nẵng",
+      "mainIndustry": "Bán buôn tổng hợp",
+      "enrichedAt": "2026-10-08T04:06:45.355Z"
     },
     {
       "id": "0104829497-002",
@@ -10650,7 +10961,14 @@
       "representative": "NGUYỄN THỊ TUYẾT TRANG",
       "address": "Số 07-09 Hòa An 19, Phường An Khê, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0104829497-002-chi-nhanh-cong-ty-co-phan-xang-dau-dau-khi-dai-hung-tai-da-nang",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-18",
+      "phone": "0904525958",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng",
+      "mainIndustry": "Bán buôn nhiên liệu rắn, lỏng, khí và các sản phẩm liên quan Chi tiết: Bán buôn xăng dầu và các sản phẩm liên quan;",
+      "internationalName": "DAI HUNG PETROLEUM JOINT STOCK COMPANY BRANCH IN DA NANG",
+      "enrichedAt": "2026-10-08T04:06:48.979Z"
     },
     {
       "id": "4001341592",
@@ -10678,7 +10996,8 @@
       "status": "Đang hoạt động",
       "managedBy": "Thuế cơ sở 4 thành phố Đà Nẵng",
       "mainIndustry": "Bán buôn vải, hàng may sẵn, giày dép",
-      "internationalName": "SANDALWOOD & SAND COMPANY LIMITED"
+      "internationalName": "SANDALWOOD & SAND COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:06:52.451Z"
     },
     {
       "id": "4001341602",
@@ -10755,7 +11074,14 @@
       "representative": "TRƯƠNG PHƯƠNG MINH MẪN",
       "address": "348/9A Tôn Đản, Phường An Khê, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357666-cong-ty-tnhh-tong-hop-van-tai-phuong-minh",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-22",
+      "phone": "0794927927",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng",
+      "mainIndustry": "Vận tải hàng hóa bằng đường bộ Chi tiết: Vận tải hàng hóa bằng ô tô; vận tải hàng hóa bằng xe tải, xe container.",
+      "internationalName": "PHUONG MINH GENERAL TRANSPORTATION COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:06:56.002Z"
     },
     {
       "id": "4001341578",
@@ -10763,7 +11089,13 @@
       "representative": "NGUYỄN NGỌC TƯỚNG",
       "address": "Thửa đất số 360 TBĐ 51, Thôn An Lương, Xã Tam Anh, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4001341578-cong-ty-tnhh-tmdv-nong-lam-ngoc-thien-truong",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-22",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 thành phố Đà Nẵng",
+      "mainIndustry": "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống",
+      "internationalName": "NGOC THIEN TRUONG TMDV AGRICULTURE FORESTRY COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:06:59.355Z"
     },
     {
       "id": "4001341641",
@@ -10771,23 +11103,40 @@
       "representative": "NGUYỄN QUANG THẮNG",
       "address": "Thửa đất số 133, Tờ bản đồ số 02, Tổ 2, Thôn Phước Xuân, Xã Quế Sơn Trung, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4001341641-cong-ty-tnhh-xd-va-tm-anh-pha-nhat",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-22",
+      "phone": "0944344384",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 8 thành phố Đà Nẵng",
+      "mainIndustry": "Xây dựng công trình đường bộ",
+      "enrichedAt": "2026-10-08T04:07:07.873Z"
     },
     {
       "id": "0402357401",
       "name": "CÔNG TY TRÁCH NHIỆM HỮU HẠN SKYORDER",
-      "representative": "TRẦN HÙNG THẮNG",
+      "representative": "TRẦN HÙNG THẮNG Ngoài ra, TRẦN HÙNG THẮNG còn đại diện các doanh nghiệp, đơn vị: CÔNG TY CỔ PHẦN CAMPCAR VIỆT NAM CÔNG TY TNHH THỂ THAO HÀNG KHÔNG FLYHIGHVIETNAM HỘ KINH DOANH SPANDA",
       "address": "Số 17 Đường An Cư 6, Phường An Hải, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357401-cong-ty-trach-nhiem-huu-han-skyorder",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-22",
+      "phone": "0367423093",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "mainIndustry": "Hoạt động chuyên môn, khoa học và công nghệ khác còn lại chưa được phân vào đâu",
+      "internationalName": "SKYORDER COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:07:11.103Z"
     },
     {
       "id": "0106066265-004",
       "name": "VĂN PHÒNG ĐẠI DIỆN - CÔNG TY CỔ PHẦN TRUYỀN THÔNG VÀ DỊCH VỤ JMB VIỆT NAM",
-      "representative": "BÙI MẠNH HÀ",
+      "representative": "BÙI MẠNH HÀ Ngoài ra, BÙI MẠNH HÀ còn đại diện các doanh nghiệp, đơn vị: VĂN PHÒNG ĐẠI DIỆN CÔNG TY CỔ PHẦN TRUYỀN THÔNG VÀ DỊCH VỤ JMB VIỆT NAM CÔNG TY CỔ PHẦN TRUYỀN THÔNG VÀ DỊCH VỤ JMB VIỆT NAM Bùi Mạnh Hà VĂN PHÒNG ĐẠI DIỆN - CÔNG TY CỔ PHẦN TRUYỀN THÔNG VÀ DỊCH VỤ JMB VIỆT NAM",
       "address": "Tầng 3B tòa nhà 167 Phan Châu Trinh, Phường Hải Châu, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0106066265-004-van-phong-dai-dien-cong-ty-co-phan-truyen-thong-va-dich-vu-jmb-viet-nam",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-21",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 thành phố Đà Nẵng",
+      "enrichedAt": "2026-10-08T04:07:14.730Z"
     },
     {
       "id": "0402173450-001",
@@ -10795,7 +11144,13 @@
       "representative": "SHARMA ROHIT",
       "address": "Thửa đất số 10, tờ bản đồ số 84, tổ 8, Phường An Hải, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402173450-001-chi-nhanh-cong-ty-tnhh-patakka-social-fork",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-18",
+      "phone": "0327823421",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "mainIndustry": "Nhà hàng và các dịch vụ ăn uống phục vụ lưu động Chi tiết: Trừ dịch vụ ăn uống phục vụ lưu động",
+      "enrichedAt": "2026-10-08T04:07:18.450Z"
     },
     {
       "id": "4001341546",
@@ -10803,15 +11158,27 @@
       "representative": "VÕ VĂN MINH",
       "address": "Tổ 1, Phú Hải, Xã Đại Lộc, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4001341546-cong-ty-tnhh-mtv-thuong-mai-dich-vu-van-tai-minh-nhat",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-22",
+      "phone": "0972633326",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 thành phố Đà Nẵng",
+      "mainIndustry": "Vận tải hàng hóa bằng đường bộ",
+      "enrichedAt": "2026-10-08T04:07:21.982Z"
     },
     {
       "id": "4001341553",
       "name": "CÔNG TY TNHH TÂM PHÁT TDT",
-      "representative": "TRẦN THỊ THANH TÂM",
+      "representative": "TRẦN THỊ THANH TÂM Ngoài ra, TRẦN THỊ THANH TÂM còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH TRẦN THỊ THANH TÂM",
       "address": "Thửa đất số 1773, Tờ bản đồ số 02, Tổ 10, Thôn Đại Hiệp Đông, Xã Đại Lộc, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4001341553-cong-ty-tnhh-tam-phat-tdt",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-22",
+      "phone": "0774 750 907",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 thành phố Đà Nẵng",
+      "mainIndustry": "Sản xuất bê tông và các sản phẩm từ xi măng và thạch cao Chi tiết: Sản xuất gạch lát vỉa hè, gạch lát sân vườn làm từ bê tông đúc sẵn, xi măng, đá nhân tạo",
+      "enrichedAt": "2026-10-08T04:07:25.335Z"
     },
     {
       "id": "4001341560",
@@ -10819,15 +11186,28 @@
       "representative": "DƯƠNG VĂN LĨNH",
       "address": "Thửa đất số 129, tờ bản đồ số 42, Khối phố Phú Trung, Phường Quảng Phú, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4001341560-cong-ty-tnhh-mtv-ba-linh",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-22",
+      "phone": "0935452328",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 thành phố Đà Nẵng",
+      "mainIndustry": "Gia công cơ khí; xử lý và tráng phủ kim loại",
+      "enrichedAt": "2026-10-08T04:07:28.720Z"
     },
     {
       "id": "4001341426",
       "name": "CÔNG TY TNHH KỸ THUẬT XÂY DỰNG TORVEN MARINE VIỆT NAM",
-      "representative": "THÁI DIỆU TRÂM",
+      "representative": "THÁI DIỆU TRÂM Ngoài ra, THÁI DIỆU TRÂM còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH CỬA HÀNG ĐIỆN LẠNH TRÂM AN BÀNG (THÁI DIỆU TRÂM)",
       "address": "Thửa đất số 325, Tờ bản đồ số 18, Ông Ích Đường, Phường Hội An Tây, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4001341426-cong-ty-tnhh-ky-thuat-xay-dung-torven-marine-viet-nam",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-21",
+      "phone": "0915 454 949",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 7 thành phố Đà Nẵng",
+      "mainIndustry": "Hoạt động tư vấn quản lý (Trừ tư vấn tài chính, pháp luật)",
+      "internationalName": "TORVEN MARINE VIETNAM CONSTRUCTION ENGINEERING COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:07:32.364Z"
     },
     {
       "id": "4001341440",
@@ -10835,7 +11215,13 @@
       "representative": "NGÔ THANH MAI",
       "address": "Lô 08 -Khu B, Thôn Đàn Long, Xã Chiên Đàn, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4001341440-cong-ty-tnhh-hoang-cuong-da-nang",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-21",
+      "phone": "0702307968",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 thành phố Đà Nẵng",
+      "mainIndustry": "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng",
+      "enrichedAt": "2026-10-08T04:07:35.745Z"
     },
     {
       "id": "0402357465",
@@ -10843,7 +11229,13 @@
       "representative": "NGÔ THỊ PHƯƠNG DUNG",
       "address": "458 Nguyễn Hữu Thọ, Phường Cẩm Lệ, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357465-cong-ty-tnhh-wow-travel",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-21",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 thành phố Đà Nẵng",
+      "mainIndustry": "Đại lý du lịch",
+      "internationalName": "WOW TRAVEL COMPANY LIMTED",
+      "enrichedAt": "2026-10-08T04:07:39.244Z"
     },
     {
       "id": "0402357190",
@@ -10851,7 +11243,14 @@
       "representative": "NGUYỄN KHẮC PHAN HOÀNG",
       "address": "Thôn Phước Khương, Xã Bà Nà, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357190-cong-ty-tnhh-tu-van-dich-vu-ngoc-hoang",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-21",
+      "phone": "0963 548 333",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 thành phố Đà Nẵng",
+      "mainIndustry": "Hoạt động liên quan đến kế toán, kiểm toán và tư vấn về thuế Chi tiết: Hoạt động liên quan đến kế toán; Hoạt động liên quan đến tư vấn về thuế (Trừ hoạt động liên quan đến kiểm toán)",
+      "internationalName": "NGOC HOANG CONSULTING & SERVICES COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:07:42.916Z"
     },
     {
       "id": "0402356951",
@@ -10885,7 +11284,13 @@
       "representative": "NGUYỄN VĂN VẪN",
       "address": "Số 393 Diên Hồng, Phường Hòa Xuân, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357472-cong-ty-tnhh-mot-thanh-vien-thuong-mai-thien-nhan-art",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-21",
+      "phone": "0922238777",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 thành phố Đà Nẵng",
+      "mainIndustry": "Quảng cáo",
+      "enrichedAt": "2026-10-08T04:07:46.304Z"
     },
     {
       "id": "0402357585",
@@ -10893,7 +11298,14 @@
       "representative": "LÊ THỊ HUYỀN TRANG",
       "address": "Tầng 2, 22 Triệu Việt Vương, Phường An Hải, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357585-cong-ty-co-phan-truyen-thong-va-su-kien-sk-event-viet-nam",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-21",
+      "phone": "0966777064",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "mainIndustry": "Tổ chức giới thiệu và xúc tiến thương mại Chi tiết: Tổ chức sự kiện cho doanh nghiệp và cá nhân (hội nghị, khai trương, triển lãm, kỷ niệm, …)",
+      "internationalName": "SK EVENT VIETNAM MEDIA AND EVENT JOINT STOCK COMPANY",
+      "enrichedAt": "2026-10-08T04:07:49.507Z"
     },
     {
       "id": "0402357200",
@@ -10901,7 +11313,14 @@
       "representative": "TRẦN ANH GIANG",
       "address": "Số 118 Hói Kiểng 18, Phường Ngũ Hành Sơn, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357200-cong-ty-tnhh-thinh-van-khang",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-21",
+      "phone": "0901169768",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "mainIndustry": "Sản xuất khác chưa được phân vào đâu (Trừ các hoạt động nhà nước cấm)",
+      "internationalName": "THINH VAN KHANG COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:07:52.841Z"
     },
     {
       "id": "0402356976",
@@ -10909,7 +11328,13 @@
       "representative": "ĐOÀN NGỌC HÙNG",
       "address": "K57/2 Nguyễn Phước Nguyên, Phường An Khê, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402356976-cong-ty-tnhh-hung-thanh-viet-nam",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-18",
+      "phone": "0901989141",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng",
+      "mainIndustry": "Xây dựng nhà để ở",
+      "enrichedAt": "2026-10-08T04:07:56.110Z"
     },
     {
       "id": "0402357497",
@@ -10917,7 +11342,13 @@
       "representative": "PHẠM KHẮC TÙNG",
       "address": "169/11 Phan Thanh, Phường Thanh Khê, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357497-cong-ty-tnhh-tung-long-phat",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-21",
+      "phone": "0902244442",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng",
+      "mainIndustry": "Chuẩn bị mặt bằng Chi tiết: San lấp mặt bằng",
+      "enrichedAt": "2026-10-08T04:07:59.331Z"
     },
     {
       "id": "0402357433",
@@ -10925,7 +11356,13 @@
       "representative": "NGUYỄN THỊ HÀ VY",
       "address": "100 Phước Tường 5, Phường An Khê, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357433-cong-ty-tnhh-mtv-trieu-huy-tech",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-21",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng",
+      "mainIndustry": "Bán buôn máy móc, thiết bị và phụ tùng máy khác Chi tiết: Buôn bán máy móc, thiết bị và phụ tùng máy công nghiệp; Buôn bán thiết bị điện; Buôn bán thiết bị điện, vật liệu điện; Buôn bán thiết bị tự động hóa, robot dây chuyền sản xuất; Bán buôn máy móc, thiết bị và phụ tùng máy khác",
+      "internationalName": "MTV TRIEU HUY TECH LIMITED LIABILITY COMPANY",
+      "enrichedAt": "2026-10-08T04:08:05.452Z"
     },
     {
       "id": "0402357440",
@@ -10957,29 +11394,43 @@
     {
       "id": "0310917886-002",
       "name": "VĂN PHÒNG ĐẠI DIỆN SỐ 2 - CÔNG TY TNHH TỰ ĐỘNG HÓA MẶT TRỜI",
-      "representative": "LÊ HỒNG NHẬT",
+      "representative": "LÊ HỒNG NHẬT Ngoài ra, LÊ HỒNG NHẬT còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH TỰ ĐỘNG HÓA MẶT TRỜI VĂN PHÒNG ĐẠI DIỆN CÔNG TY TNHH TỰ ĐỘNG HÓA MẶT TRỜI CÔNG TY TNHH TỰ ĐỘNG HÓA MẶT TRỜI",
       "address": "Tầng 3, tòa nhà số 223 Trường Chinh, Phường An Khê, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0310917886-002-van-phong-dai-dien-so-2-cong-ty-tnhh-tu-dong-hoa-mat-troi",
       "province": "Đà Nẵng",
       "startDate": "2026-09-16",
       "status": "Đang hoạt động",
-      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng"
+      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng",
+      "enrichedAt": "2026-10-08T04:08:08.838Z"
     },
     {
       "id": "0401819526-002",
       "name": "CÔNG TY TNHH MTV THE BLUES-CHI NHÁNH ĐÀ NẴNG",
-      "representative": "NGUYỄN THỊ LY TY",
+      "representative": "NGUYỄN THỊ LY TY Ngoài ra, NGUYỄN THỊ LY TY còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH MỘT THÀNH VIÊN CON ĐƯỜNG XANH QUẢNG NAM CÔNG TY TNHH MỘT THÀNH VIÊN CON ĐƯỜNG XANH QUẢNG NAM - CHI NHÁNH NINH BÌNH CHI NHÁNH CÔNG TY TNHH MỘT THÀNH VIÊN BLUE EXCHANGE CÔNG TY TNHH MỘT THÀNH VIÊN CON ĐƯỜNG XANH QUẢNG NAM - CHI NHÁNH VĨNH PHÚC CHI NHÁNH CÔNG TY TNHH MỘT THÀNH VIÊN BLUE EXCHANGE CHI NHÁNH CÔNG TY TNHH MỘT THÀNH VIÊN BLUE EXCHANGE TẠI HUẾ CHI NHÁNH CÔNG TY TNHH MỘT THÀNH VIÊN BLUE EXCHANGE TẠI QUẢNG NGÃI CÔNG TY TNHH MỘT THÀNH VIÊN CON ĐƯỜNG XANH QUẢNG NAM - CHI NHÁNH LẠNG SƠN CÔNG TY TNHH MỘT THÀNH VIÊN CON ĐƯỜNG XANH QUẢNG NAM - CHI NHÁNH THANH HÓA CÔNG TY TNHH MỘT THÀNH VIÊN CON ĐƯỜNG XANH QUẢNG NAM - CHI NHÁNH QUẢNG NINH CÔNG TY TNHH MỘT THÀNH VIÊN CON ĐƯỜNG XANH QUẢNG NAM - CHI NHÁNH NAM ĐỊNH CÔNG TY TNHH MỘT THÀNH VIÊN CON ĐƯỜNG XANH QUẢNG NAM - CHI NHÁNH HÀ TĨNH CÔNG TY TNHH MỘT THÀNH VIÊN CON ĐƯỜNG XANH QUẢNG NAM - CHI NHÁNH QUẬN ĐỐNG ĐA CÔNG TY TNHH MỘT THÀNH VIÊN CON ĐƯỜNG XANH QUẢNG NAM - CHI NHÁNH HẢI DƯƠNG CHI NHÁNH CÔNG TY TNHH MỘT THÀNH VIÊN BLUE EXCHANGE TẠI QUẢNG NAM CÔNG TY TNHH MỘT THÀNH VIÊN CON ĐƯỜNG XANH QUẢNG NAM - CHI NHÁNH VIỆT TRÌ CHI NHÁNH CÔNG TY TNHH MỘT THÀNH VIÊN BLUE EXCHANGE TẠI PHÚ YÊN CÔNG TY TNHH MỘT THÀNH VIÊN CON ĐƯỜNG XANH QUẢNG NAM - CHI NHÁNH HẢI PHÒNG CHI NHÁNH CÔNG TY TNHH MỘT THÀNH VIÊN BLUE EXCHANGE CÔNG TY TNHH MỘT THÀNH VIÊN BLUE EXCHANGE - CHI NHÁNH PLEIKU CHI NHÁNH CÔNG TY TNHH MỘT THÀNH VIÊN BLUE EXCHANGE CÔNG TY TNHH MỘT THÀNH VIÊN CON ĐƯỜNG XANH QUẢNG NAM - CHI NHÁNH YÊN BÁI CÔNG TY TNHH MỘT THÀNH VIÊN CON ĐƯỜNG XANH QUẢNG NAM - CHI NHÁNH TUYÊN QUANG CÔNG TY TNHH MỘT THÀNH VIÊN CON ĐƯỜNG XANH QUẢNG NAM -CHI NHÁNH BẮC KẠN CÔNG TY TNHH MỘT THÀNH VIÊN CON ĐƯỜNG XANH QUẢNG NAM- CHI NHÁNH SƠN LA CÔNG TY TNHH MỘT THÀNH VIÊN CON ĐƯỜNG XANH QUẢNG NAM-CHI NHÁNH QUẬN NAM TỪ LIÊM Nguyễn Thị Ly Ty CÔNG TY TNHH MỘT THÀNH VIÊN CON ĐƯỜNG XANH QUẢNG NAM-CHI NHÁNH NINH HÒA",
       "address": "255-257 Hùng Vương, Phường Thanh Khê, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0401819526-002-cong-ty-tnhh-mtv-the-blues-chi-nhanh-da-nang",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-20",
+      "phone": "0905005099",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế thành phố Đà Nẵng",
+      "mainIndustry": "Bán lẻ hàng may mặc, giày dép, hàng da và giả da trong các cửa hàng chuyên doanh",
+      "enrichedAt": "2026-10-08T04:08:12.131Z"
     },
     {
       "id": "0402356990",
       "name": "CÔNG TY TNHH CÔNG NGHỆ NOVERA",
-      "representative": "ĐẶNG THỊ HIẾU",
+      "representative": "ĐẶNG THỊ HIẾU Ngoài ra, ĐẶNG THỊ HIẾU còn đại diện các doanh nghiệp, đơn vị: HKD ROSELA",
       "address": "25 Xuân Tâm, Phường Hải Châu, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402356990-cong-ty-tnhh-cong-nghe-novera",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-18",
+      "phone": "0902539056",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 thành phố Đà Nẵng",
+      "mainIndustry": "Lập trình máy tính khác Chi tiết: sản xuất sản phẩm phần mềm; viết, chỉnh sửa, kiểm thử và hỗ trợ phần mềm theo yêu cầu của khách hàng",
+      "internationalName": "NOVERA TECH COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:08:15.591Z"
     },
     {
       "id": "0402356969",
@@ -10987,15 +11438,28 @@
       "representative": "VŨ HỮU Ý",
       "address": "731B Tôn Đản, Phường An Khê, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402356969-cong-ty-tnhh-thuong-mai-va-xay-lap-phan-vu",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-18",
+      "phone": "0702 345 643",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng",
+      "mainIndustry": "Bán buôn máy móc, thiết bị và phụ tùng máy khác",
+      "internationalName": "PHAN VU TRADING AND CONSTRUCTION INSTALLATION COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:08:19.032Z"
     },
     {
       "id": "4001311157-001",
       "name": "CHI NHÁNH NAM PHƯỚC CÔNG TY TNHH QUẢNG LONG XUYÊN",
-      "representative": "TRẦN HOÀNG KHƯƠNG",
+      "representative": "TRẦN HOÀNG KHƯƠNG Ngoài ra, TRẦN HOÀNG KHƯƠNG còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH A - CAFE",
       "address": "06 Tôn Đức Thắng, Thôn Long Xuyên 2, Xã Nam Phước, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4001311157-001-chi-nhanh-nam-phuoc-cong-ty-tnhh-quang-long-xuyen",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-16",
+      "phone": "0983613491",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 7 thành phố Đà Nẵng",
+      "mainIndustry": "Bán lẻ thực phẩm trong các cửa hàng chuyên doanh Chi tiết: Bán lẻ sữa và các sản phẩm sữa, Bán lẻ thực phẩm chức năng; Bán lẻ hàng thực phẩm đông lạnh, thực phẩm tươi sống; Bán lẻ trái cây tươi; Bán lẻ bánh kẹo",
+      "enrichedAt": "2026-10-08T04:08:22.542Z"
     },
     {
       "id": "0402357289",
@@ -11003,7 +11467,14 @@
       "representative": "JASVEER SINGH RAWAT",
       "address": "71 Trần Đình Đàn, Phường An Hải, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357289-cong-ty-tnhh-devbhoomi-uk",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-18",
+      "phone": "0877 823 208",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "mainIndustry": "Nhà hàng và các dịch vụ ăn uống phục vụ lưu động (Trừ quán bar, vũ trường)",
+      "internationalName": "DEVBHOOMI UK COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:08:25.747Z"
     },
     {
       "id": "4001341271",
@@ -11011,7 +11482,13 @@
       "representative": "NGUYỄN VĂN PHI",
       "address": "1361 Trần Thủ Độ, Phường Điện Bàn Đông, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4001341271-cong-ty-tnhh-tm-sat-thep-toan-thang",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-16",
+      "phone": "0904 217636",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 7 thành phố Đà Nẵng",
+      "mainIndustry": "Bán buôn kim loại và quặng kim loại Chi tiết: Bán buôn sắt, thép, nhôm, inox các loại",
+      "enrichedAt": "2026-10-08T04:08:29.518Z"
     },
     {
       "id": "0402357024",
@@ -11019,15 +11496,27 @@
       "representative": "PHẠM MINH THI",
       "address": "Tầng 8, Tòa Nhà Bạch Đằng Complex, 50 Bạch Đằng, Phường Hải Châu, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357024-cong-ty-tnhh-delta-prime-group",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-18",
+      "phone": "0916186494",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 thành phố Đà Nẵng",
+      "mainIndustry": "Tổ chức giới thiệu và xúc tiến thương mại",
+      "internationalName": "DELTA PRIME GROUP CO., LTD",
+      "enrichedAt": "2026-10-08T04:08:33.143Z"
     },
     {
       "id": "0110855569-001",
       "name": "VĂN PHÒNG ĐẠI DIỆN CÔNG TY TNHH SET CAR VIỆT NAM TẠI ĐÀ NẴNG",
-      "representative": "NGUYỄN ĐỨC DUY",
+      "representative": "NGUYỄN ĐỨC DUY Ngoài ra, NGUYỄN ĐỨC DUY còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH SET CAR VIỆT NAM",
       "address": "nhà lô số 17 Khu C2, Khu dân cư An Cư 3 mở rộng, Phường An Hải, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0110855569-001-van-phong-dai-dien-cong-ty-tnhh-set-car-viet-nam-tai-da-nang",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-14",
+      "phone": "0934633238",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "enrichedAt": "2026-10-08T04:08:36.788Z"
     },
     {
       "id": "0402356655",
@@ -11035,7 +11524,13 @@
       "representative": "NGUYỄN THỊ HẠNH",
       "address": "Lô 46 phân khu B2-8, khu vực phía Đông Nam Trung tâm thể dục thể thao quận Liên Chiểu và khu vực lân cận chùa Hải Vân Sơn thuộc khu số 1 – TT đô thị mới Tây Bắc, Phường Hòa Khánh, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402356655-cong-ty-tnhh-ky-thuat-va-thuong-mai-htd",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-18",
+      "phone": "0343 065 879",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng",
+      "mainIndustry": "Xây dựng công trình đường bộ",
+      "enrichedAt": "2026-10-08T04:08:40.093Z"
     },
     {
       "id": "0402357225",
@@ -11043,7 +11538,14 @@
       "representative": "ĐỖ THỊ THU SANG",
       "address": "80 Lê Văn Hưu, Phường Ngũ Hành Sơn, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357225-cong-ty-tnhh-vuong-dai-phu",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-18",
+      "phone": "0368056830",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "mainIndustry": "Xây dựng nhà để ở",
+      "internationalName": "VUONG DAI PHU COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:08:43.564Z"
     },
     {
       "id": "0402357232",
@@ -11051,7 +11553,14 @@
       "representative": "NGUYỄN THÀNH DUY PHƯỚC",
       "address": "876-878 Võ Nguyên Giáp, Phường Ngũ Hành Sơn, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357232-cong-ty-tnhh-sea-motion",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-18",
+      "phone": "091 4969757",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "mainIndustry": "Vận tải hành khách đường thuỷ nội địa",
+      "internationalName": "SEA MOTION COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:08:46.961Z"
     },
     {
       "id": "0402357257",
@@ -11059,7 +11568,13 @@
       "representative": "LÊ THỊ KIM LIÊN",
       "address": "K54/10H27 Gò Dư, Phường Hòa Khánh, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357257-cong-ty-tnhh-dich-vu-ve-sinh-cong-nghiep-kim-lien-da-nang",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-18",
+      "phone": "0906444991",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng",
+      "mainIndustry": "Vệ sinh chung nhà cửa Chi tiết: Vệ sinh công nghiệp; vệ sinh nhà cửa, văn phòng, nhà xưởng, cửa hàng, công trình và các công trình khác.",
+      "enrichedAt": "2026-10-08T04:08:50.179Z"
     },
     {
       "id": "0402357271",
@@ -11122,7 +11637,14 @@
       "representative": "BÙI XUÂN THỊNH",
       "address": "646 Núi Thành , Phường Hòa Cường, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357306-cong-ty-tnhh-xay-dung-xuan-phu-thinh",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-18",
+      "phone": "0913401840",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 thành phố Đà Nẵng",
+      "mainIndustry": "Xây dựng nhà để ở",
+      "internationalName": "XUAN PHU THINH CONSTRUCTION COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:08:53.389Z"
     },
     {
       "id": "0402357338",
@@ -11130,7 +11652,13 @@
       "representative": "MAI THANH LONG",
       "address": "35/89 Tô Hiến Thành, Phường An Hải, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357338-cong-ty-tnhh-vu-phuc-phuong",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-18",
+      "phone": "0345 630 401",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "mainIndustry": "Bán buôn máy móc, thiết bị và phụ tùng máy khác Chi tiết: Bán buôn máy móc, phụ tùng ngành công nghiệp. Bán buôn máy móc, thiết bị điện, cơ – điện lạnh, thiết bị phòng cháy chữa cháy",
+      "enrichedAt": "2026-10-08T04:08:56.595Z"
     },
     {
       "id": "0402357088",
@@ -11138,7 +11666,14 @@
       "representative": "HIROKO OTE",
       "address": "Phòng N.06, Tầng 8, Tòa nhà Bạch Đằng Complex, 50 Bạch Đằng, Phường Hải Châu, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357088-cong-ty-tnhh-san-francisco-bay-brand-asia",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-18",
+      "phone": "0931843831",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế thành phố Đà Nẵng",
+      "mainIndustry": "Bán buôn tổng hợp Chi tiết: Thực hiện quyền phân phối bán buôn (không thành lập cơ sở bán buôn) các hàng hóa theo quy định của pháp luật Việt Nam và các điều ước quốc tế mà Việt Nam là thành viên (CPC 622)",
+      "internationalName": "SAN FRANCISCO BAY BRAND (ASIA) COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:09:00.143Z"
     },
     {
       "id": "0402357320",
@@ -11146,7 +11681,14 @@
       "representative": "DƯƠNG TẤN TUẤN",
       "address": "Lô 38-39 Khu B1-132, đường Cồn Dầu 14, Phường Hòa Xuân, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357320-cong-ty-co-phan-thuong-mai-va-dich-vu-tam-thanh-tin",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-18",
+      "phone": "0869257492",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 thành phố Đà Nẵng",
+      "mainIndustry": "Bán buôn kim loại và quặng kim loại (Loại trừ đấu giá)",
+      "internationalName": "TAM THANH TIN TRADE AND SERVICES JOINT STOCK COMPANY",
+      "enrichedAt": "2026-10-08T04:09:04.667Z"
     },
     {
       "id": "0402356895",
@@ -11154,7 +11696,13 @@
       "representative": "DƯƠNG TUẤN ANH",
       "address": "K01/35 Quang Dũng, Phường Thanh Khê, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402356895-cong-ty-co-phan-dau-tu-ccn-hoa-tien",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-18",
+      "phone": "0964323078",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng",
+      "mainIndustry": "Xây dựng nhà không để ở",
+      "enrichedAt": "2026-10-08T04:09:08.435Z"
     },
     {
       "id": "0402356817",
@@ -11215,7 +11763,14 @@
       "representative": "LÊ TIẾN HƯNG",
       "address": "812 Võ Nguyên Giáp, Phường Ngũ Hành Sơn, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357218-cong-ty-tnhh-chang-long-da",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-17",
+      "phone": "0363305456",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "mainIndustry": "Dịch vụ lưu trú ngắn ngày Chi tiết: Kinh doanh khách sạn và các cơ sở lưu trú tương tự.",
+      "internationalName": "CHANGLONG DA COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:09:11.809Z"
     },
     {
       "id": "0402357137",
@@ -11223,15 +11778,27 @@
       "representative": "LƯU MINH QUANG",
       "address": "Số 209 Đường Hồ Nghinh, Phường An Hải, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357137-cong-ty-tnhh-tmdv-san-xuat-luu-minh-quan",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-17",
+      "phone": "0906114037",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "mainIndustry": "Bán buôn tổng hợp trừ bán buôn bình gas, khí dầu mỏ hóa lỏng LPG, dầu nhớt cặn, vàng miếng, súng, đạn loại dùng đi săn hoặc thể thao và tiền kim khí, hoạt động đấu giá",
+      "enrichedAt": "2026-10-08T04:09:15.260Z"
     },
     {
       "id": "4001341112",
       "name": "CÔNG TY TNHH VẬN TẢI HƯNG GIA PHÁT",
-      "representative": "LÊ QUANG SƠN",
+      "representative": "LÊ QUANG SƠN Ngoài ra, LÊ QUANG SƠN còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH VẬN TẢI HÀNH KHÁCH LÊ QUANG SƠN",
       "address": "263 Điện Biên Phủ, Phường Hội An Tây, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4001341112-cong-ty-tnhh-van-tai-hung-gia-phat",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-17",
+      "phone": "0906 552452",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 7 thành phố Đà Nẵng",
+      "mainIndustry": "Vận tải hành khách đường bộ khác Chi tiết: Kinh doanh vận tải hành khách theo hợp đồng; Kinh doanh vận tải khách du lịch bằng xe ô tô",
+      "enrichedAt": "2026-10-08T04:09:18.456Z"
     },
     {
       "id": "0402357151",
@@ -11239,7 +11806,13 @@
       "representative": "CAO XUÂN ĐỨC",
       "address": "289/2 Trường Chinh, Phường An Khê, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357151-cong-ty-tnhh-thuong-mai-va-dich-vu-cao-thi-group",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-17",
+      "phone": "090 6555970",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng",
+      "mainIndustry": "Hoạt động dịch vụ trung gian cho các hoạt động dịch vụ hỗ trợ kinh doanh chưa được phân vào đâu (trừ trung gian tài chính) Chi tiết: Hoạt động đặt vé và bán vé cho các sự kiện giải trí, thể thao",
+      "enrichedAt": "2026-10-08T04:09:21.667Z"
     },
     {
       "id": "0402357169",
@@ -11252,10 +11825,17 @@
     {
       "id": "0402357144",
       "name": "CÔNG TY TNHH LINH KY GROUP",
-      "representative": "ĐỖ THỊ BẢO TRÂM",
+      "representative": "ĐỖ THỊ BẢO TRÂM Ngoài ra, ĐỖ THỊ BẢO TRÂM còn đại diện các doanh nghiệp, đơn vị: Đỗ Thị Bảo Trâm",
       "address": "77 Lê Đức Thọ, Phường Sơn Trà, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357144-cong-ty-tnhh-linh-ky-group",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-17",
+      "phone": "0905434079",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "mainIndustry": "Xây dựng nhà để ở",
+      "internationalName": "LINH KY GROUP COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:09:43.535Z"
     },
     {
       "id": "0318935855-001",
@@ -11263,7 +11843,12 @@
       "representative": "NGÔ QUỐC HUÂN",
       "address": "Tổ dân phố Đại La, Phường Hòa Khánh, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0318935855-001-chi-nhanh-cong-ty-tnhh-co-khi-che-tao-may-son-minh",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-17",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng",
+      "mainIndustry": "Gia công cơ khí; xử lý và tráng phủ kim loại (trừ gia công cơ khí, tái chế phế thải, xi mạ điện tại trụ sở)",
+      "enrichedAt": "2026-10-08T04:09:46.810Z"
     },
     {
       "id": "0402356983",
@@ -11271,7 +11856,14 @@
       "representative": "NGUYỄN THANH TỨ",
       "address": "Lô 06-D14, Trương Quốc Dụng, Phường Sơn Trà, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402356983-cong-ty-tnhh-aiforsmes",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-17",
+      "phone": "0888888348",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "mainIndustry": "Lập trình máy tính khác Chi tiết: phát triển phần mềm AI, giải pháp IT.",
+      "internationalName": "AIFORSMES COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:09:50.128Z"
     },
     {
       "id": "0402357070",
@@ -11320,7 +11912,14 @@
       "representative": "LÊ CHÍ VIỄN",
       "address": "190 Hoàng Thế Thiện, Phường Hòa Xuân, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357112-cong-ty-tnhh-ocean-stallion",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-17",
+      "phone": "0765285682",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 thành phố Đà Nẵng",
+      "mainIndustry": "Xuất bản phần mềm khác",
+      "internationalName": "OCEAN STALLION COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:09:53.581Z"
     },
     {
       "id": "0402357063",
@@ -11328,7 +11927,13 @@
       "representative": "ĐINH THỊ BẢO YẾN",
       "address": "194 đường Yên Khê 1, Phường Thanh Khê, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357063-cong-ty-tnhh-mtv-xay-lap-va-thuong-mai-hoang-vu-loc-phat",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-17",
+      "phone": "0979080091",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Đà Nẵng",
+      "mainIndustry": "Gia công cơ khí; xử lý và tráng phủ kim loại Chi tiết: Gia công cơ khí tại chân công trình",
+      "enrichedAt": "2026-10-08T04:09:56.824Z"
     },
     {
       "id": "0402356609",
@@ -11336,7 +11941,13 @@
       "representative": "NGUYỄN VĂN HỒNG SƠN",
       "address": "258 Tô Hoài, Phường Ngũ Hành Sơn, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402356609-cong-ty-tnhh-dich-vu-van-tai-co-khi-son-hai",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-17",
+      "phone": "0976545650",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Đà Nẵng",
+      "mainIndustry": "Sửa chữa, bảo dưỡng ô tô và xe có động cơ khác",
+      "enrichedAt": "2026-10-08T04:10:00.322Z"
     },
     {
       "id": "4001341320",
@@ -11344,7 +11955,14 @@
       "representative": "THÁI MINH ĐẾ",
       "address": "Thửa đất số 335, Tờ bản đồ số 8, Tổ 7, Thôn Thuận An, Xã Quế Sơn, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4001341320-cong-ty-tnhh-son-van-thai",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-16",
+      "phone": "0848184022",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 8 thành phố Đà Nẵng",
+      "mainIndustry": "Xây dựng công trình kỹ thuật dân dụng khác",
+      "internationalName": "SON VAN THAI COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:10:06.381Z"
     },
     {
       "id": "0402357176",
@@ -11352,7 +11970,14 @@
       "representative": "NGUYỄN THỊ PHƯƠNG THẢO",
       "address": "Lô 27 - B1.16 Đường Hòa Liên 3, thôn Quan Nam 5, Phường Liên Chiểu, Thành phố Đà Nẵng, Việt Nam",
       "slug": "0402357176-cong-ty-tnhh-bao-khoi-gia",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-17",
+      "phone": "0902449405",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 thành phố Đà Nẵng",
+      "mainIndustry": "Bán lẻ đồ ngũ kim, sơn, kính và thiết bị lắp đặt khác trong xây dựng trong các cửa hàng chuyên doanh",
+      "internationalName": "BAO KHOI GIA COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:10:09.529Z"
     },
     {
       "id": "4001341377",
@@ -11360,7 +11985,13 @@
       "representative": "NGÔ ĐỨC BẢO",
       "address": "Thửa Đất Số 1705, Tờ Bản Đồ Số 2, Thôn Đại Sơn, Xã Thượng Đức, Thành phố Đà Nẵng, Việt Nam",
       "slug": "4001341377-cong-ty-tnhh-mtv-go-keo-duc-bao",
-      "province": "Đà Nẵng"
+      "province": "Đà Nẵng",
+      "startDate": "2026-09-17",
+      "phone": "0982710175",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 6 thành phố Đà Nẵng",
+      "mainIndustry": "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng Chi tiết : Bán buôn gỗ cây rừng trồng (gỗ có nguồn gốc hợp pháp, không hoạt động tại trụ sở)",
+      "enrichedAt": "2026-10-08T04:10:12.897Z"
     },
     {
       "id": "0402359166",
