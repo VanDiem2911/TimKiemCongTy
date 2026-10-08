@@ -1,5 +1,25 @@
 [
   {
+    "id": "0319736517",
+    "name": "CÔNG TY TNHH PHÂN PHỐI NEXALUX",
+    "representative": "TRƯƠNG THỊ KIM ANH",
+    "address": "Tầng 3, Tòa nhà The District, 159C đường Đề Thám, Phường Cầu Ông Lãnh, Thành phố Hồ Chí Minh, Việt Nam",
+    "status": "Đang hoạt động",
+    "province": "Thành phố Hồ Chí Minh",
+    "startDate": "2026-10-07",
+    "lastUpdated": "Vừa xong"
+  },
+  {
+    "id": "1301109676-001",
+    "name": "CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ XÂY DỰNG BẢO GIA PHÚ - CHI NHÁNH 1",
+    "representative": "ĐẶNG LÂM QUỐC BẢO",
+    "address": "207D Nguyễn Đình Chiểu, Xã Phú Hưng, Thành phố Bến Tre, Tỉnh Bến Tre, Việt Nam",
+    "status": "Đang hoạt động",
+    "province": "Tỉnh Bến Tre",
+    "startDate": "2025-06-18",
+    "lastUpdated": "Vừa xong"
+  },
+  {
     "id": "3502537890-001",
     "name": "CHI NHÁNH CÔNG TY TNHH GIÁO DỤC VÀ PHÁT TRIỂN KỸ NĂNG THIÊN HÀ",
     "representative": "ĐỖ THỊ BÍCH SƠN",
@@ -97,16 +117,6 @@
     "status": "Đang hoạt động",
     "province": "Thành phố Hồ Chí Minh",
     "startDate": "",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0319736517",
-    "name": "CÔNG TY TNHH PHÂN PHỐI NEXALUX",
-    "representative": "TRƯƠNG THỊ KIM ANH",
-    "address": "Tầng 3, Tòa nhà The District, 159C đường Đề Thám, Phường Cầu Ông Lãnh, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Thành phố Hồ Chí Minh",
-    "startDate": "2026-10-07",
     "lastUpdated": "Vừa xong"
   },
   {
@@ -488,16 +498,6 @@
     "status": "Đang hoạt động",
     "province": "Thành phố Hồ Chí Minh",
     "startDate": "2026-10-01",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "1102180321-001",
-    "name": "CÔNG TY CỔ PHẦN ĐẦU TƯ CAO TỐC CT32 - VĂN PHÒNG ĐẠI DIỆN TP. HCM",
-    "representative": "NGUYỄN LÊ MINH CHÂU",
-    "address": "328 Võ Văn Kiệt, Phường Cầu Ông Lãnh, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Thành phố Hồ Chí Minh",
-    "startDate": "2026-09-23",
     "lastUpdated": "Vừa xong"
   }
 ]

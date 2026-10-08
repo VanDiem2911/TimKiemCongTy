@@ -42,10 +42,24 @@ export function HeroSlider({ onSearch, initialQuery = '', initialType = 'auto' }
   };
 
   return (
-    <div
-      className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-slate-200/90 py-10 sm:py-14 md:py-16 px-4 sm:px-8 mb-8 bg-cover bg-center"
-      style={{ backgroundImage: "url('/images/banner-skyline.png?v=3')", backgroundPosition: 'center 40%' }}
-    >
+    <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-slate-200/90 py-10 sm:py-14 md:py-16 px-4 sm:px-8 mb-8">
+      {/* Ảnh nền đặt bằng thẻ img thay vì background-image của CSS để trình duyệt
+          phát hiện và tải sớm - đây là phần tử quyết định chỉ số LCP của trang. */}
+      <picture>
+        <source media="(max-width: 640px)" srcSet="/images/banner-skyline-640.webp" type="image/webp" />
+        <source srcSet="/images/banner-skyline.webp" type="image/webp" />
+        <img
+          src="/images/banner-skyline-opt.jpg"
+          alt=""
+          aria-hidden="true"
+          width={1024}
+          height={342}
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ objectPosition: 'center 40%' }}
+        />
+      </picture>
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         {/* Main Heading */}
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-black text-slate-900 tracking-tight mb-2.5 leading-tight drop-shadow-xs">

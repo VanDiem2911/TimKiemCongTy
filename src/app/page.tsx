@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, Suspense } from 'react';
+import { useState, useEffect, useRef, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { Header } from '@/components/layout/Header';
@@ -12,13 +12,34 @@ import { INITIAL_COMPANIES, PROVINCES, getCompanySlug, getCompanyStatusBadgeClas
 import { BusinessTaxInfo } from '@/types/tax';
 import { Hash, MapPin, User, ChevronRight, ShieldCheck, Clock, Building2, CheckCircle2, Calendar, AlertTriangle } from 'lucide-react';
 
-function HomeContent() {
-  const searchParams = useSearchParams();
-  const urlQuery = searchParams.get('q') || '';
-  const urlType = searchParams.get('type') || 'auto';
 
-  const [searchQuery, setSearchQuery] = useState(urlQuery);
-  const [searchType, setSearchType] = useState(urlType);
+/**
+ * Chỉ mỗi thành phần nhỏ này đọc tham số trên URL.
+ * Đặt nó trong một Suspense riêng để Next.js vẫn dựng sẵn được HTML của cả
+ * trang; nếu dùng useSearchParams ở thành phần cha thì toàn bộ trang mất khả
+ * năng dựng sẵn và trình duyệt phải chờ tải JavaScript mới thấy nội dung.
+ */
+function UrlSearchWatcher({ onSearch }: { onSearch: (q: string, type: string) => void }) {
+  const searchParams = useSearchParams();
+  const q = searchParams.get('q') || '';
+  const type = searchParams.get('type') || 'auto';
+  const onSearchRef = useRef(onSearch);
+  onSearchRef.current = onSearch;
+
+  useEffect(() => {
+    if (q) onSearchRef.current(q, type);
+  }, [q, type]);
+
+  return null;
+}
+
+function HomeContent() {
+  // Đọc từ khóa trên URL sau khi trang đã hiện, thay vì dùng useSearchParams.
+  // useSearchParams buộc Next.js bỏ qua việc dựng sẵn HTML, khiến máy chủ chỉ
+  // trả về dòng "Đang tải" và trình duyệt phải chờ tải xong JavaScript mới thấy
+  // nội dung - đó là nguyên nhân chính làm chỉ số LCP cao.
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchType, setSearchType] = useState('auto');
   const [searchResults, setSearchResults] = useState<BusinessTaxInfo[]>([]);
   const [searchSource, setSearchSource] = useState<string>('');
   const [searchDisclaimer, setSearchDisclaimer] = useState<string>('');
@@ -93,13 +114,13 @@ function HomeContent() {
     }
   };
 
-  useEffect(() => {
-    if (urlQuery) {
-      executeLookup(urlQuery, urlType);
-    }
-  }, [urlQuery, urlType]);
+
 
   return (
+    <>
+    <Suspense fallback={null}>
+      <UrlSearchWatcher onSearch={executeLookup} />
+    </Suspense>
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800">
       <Header
         initialQuery={searchQuery}
@@ -321,13 +342,10 @@ function HomeContent() {
       <ScrollToTopButton />
       <Footer />
     </div>
+    </>
   );
 }
 
 export default function Home() {
-  return (
-    <Suspense fallback={<div className="p-8 text-center text-slate-500 text-sm">Đang tải trang chủ Tìm Kiếm Công Ty...</div>}>
-      <HomeContent />
-    </Suspense>
-  );
+  return <HomeContent />;
 }

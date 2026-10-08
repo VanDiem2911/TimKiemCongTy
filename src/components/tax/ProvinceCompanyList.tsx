@@ -153,11 +153,19 @@ export function ProvinceCompanyList({
           <div className="absolute right-0 top-0 bottom-0 w-2/5 md:w-[48%] pointer-events-none hidden md:block overflow-hidden">
             {/* Soft gradient edge blend on left of skyline without washing out buildings */}
             <div className="absolute inset-y-0 left-0 w-28 bg-gradient-to-r from-[#eef6ff] via-[#eef6ff]/60 to-transparent z-10" />
-            <img
-              src="/images/banner-skyline.png"
-              alt="Skyline Panorama"
-              className="h-full w-full object-cover object-right"
-            />
+            <picture>
+              <source srcSet="/images/banner-skyline.webp" type="image/webp" />
+              <img
+                src="/images/banner-skyline-opt.jpg"
+                alt=""
+                aria-hidden="true"
+                width={1024}
+                height={342}
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover object-right"
+              />
+            </picture>
           </div>
 
           <div className="relative z-20 max-w-2xl lg:max-w-3xl">
