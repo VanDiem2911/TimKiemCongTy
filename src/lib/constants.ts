@@ -64,6 +64,65 @@ export function getCompanyStatusBadgeClass(status?: string | null): string {
   return 'bg-gray-100 text-gray-700 border-gray-200';
 }
 
+/**
+ * Phân loại trạng thái doanh nghiệp để chọn màu và biểu tượng cho đồng bộ:
+ * 'active' đang hoạt động, 'warning' tạm ngừng, 'danger' đã ngừng hẳn hoặc
+ * không còn ở địa chỉ đăng ký, 'unknown' khi chưa rõ.
+ */
+export function getCompanyStatusTone(status?: string | null): 'active' | 'warning' | 'danger' | 'unknown' {
+  if (!status) return 'unknown';
+  const s = status.toLowerCase();
+
+  if (
+    s.includes('ngừng hoạt động') ||
+    s.includes('chấm dứt') ||
+    s.includes('giải thể') ||
+    s.includes('bị thu hồi') ||
+    s.includes('đóng mã số thuế') ||
+    s.includes('đóng mst') ||
+    s.includes('phá sản') ||
+    s.includes('đã khóa') ||
+    s.includes('không hoạt động tại') ||
+    s.includes('bỏ trốn') ||
+    s.includes('bỏ địa chỉ')
+  ) {
+    return 'danger';
+  }
+
+  if (s.includes('tạm ngừng') || s.includes('tạm hoãn') || s.includes('chờ')) {
+    return 'warning';
+  }
+
+  if (s.includes('đang hoạt động') || s.includes('được cấp gcn') || s.includes('hoạt động')) {
+    return 'active';
+  }
+
+  return 'unknown';
+}
+
+/**
+ * Hiển thị ngày thành lập theo định dạng quen thuộc của người Việt: dd/mm/yyyy.
+ * Nhận cả dạng ISO (2024-06-08) lẫn dạng đã là dd/mm/yyyy, trả về chuỗi rỗng
+ * nếu dữ liệu trống hoặc không đọc được để nơi gọi tự ẩn đi.
+ */
+export function formatEstablishedDate(raw?: string | null): string {
+  if (!raw) return '';
+  const value = raw.trim();
+  if (!value) return '';
+
+  const iso = value.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
+  if (iso) {
+    return `${iso[3].padStart(2, '0')}/${iso[2].padStart(2, '0')}/${iso[1]}`;
+  }
+
+  const dmy = value.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})$/);
+  if (dmy) {
+    return `${dmy[1].padStart(2, '0')}/${dmy[2].padStart(2, '0')}/${dmy[3]}`;
+  }
+
+  return '';
+}
+
 export function getBaseUrl(): string {
   if (process.env.NEXT_PUBLIC_SITE_URL && !process.env.NEXT_PUBLIC_SITE_URL.includes('localhost')) {
     return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, '');

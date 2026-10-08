@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { INITIAL_COMPANIES, PROVINCES } from '@/lib/constants';
-import { getCompaniesByProvince, fetchLiveNationwideCompanies, fetchLiveProvinceCompanies } from '@/lib/provinceCompanies';
+import { getCompaniesByProvince, fetchLiveNationwideCompanies, fetchLiveProvinceCompanies, getHarvestedStartDate } from '@/lib/provinceCompanies';
+import { saveCompaniesBatchToDb } from '@/lib/companyDb';
 import { BusinessTaxInfo } from '@/types/tax';
 import { scanCompanyContactAI } from '@/lib/companyAiScanner';
 
@@ -91,13 +92,19 @@ async function fetchLiveProvincePage(provinceSlug: string, page: number): Promis
             representative: rep || undefined,
             address,
             status: 'NNT đang hoạt động (đã được cấp GCN ĐKT)',
-            industryName: 'Đăng ký theo GPKD'
+            industryName: undefined,
+            startDate: getHarvestedStartDate(taxId) || undefined,
+            registrationDate: getHarvestedStartDate(taxId) || undefined
           });
         }
       }
 
       if (list.length > 0) {
         liveCache.set(cacheKey, { data: list, timestamp: Date.now() });
+
+        // Lưu doanh nghiệp vừa tải về vào MongoDB để kho dữ liệu tự lớn dần
+        saveCompaniesBatchToDb(list).catch(() => {});
+
         return list;
       }
     }
@@ -129,6 +136,12 @@ export async function GET(request: NextRequest) {
         (c.representative && c.representative.toLowerCase().includes(query)) ||
         (c.address && c.address.toLowerCase().includes(query))
       );
+    }
+
+    // Mọi doanh nghiệp trả về đều được đẩy vào MongoDB: chưa có thì thêm mới,
+    // đã có thì chỉ bổ sung trường còn thiếu. Kho dữ liệu tự lớn dần qua mỗi lượt gọi.
+    if (filtered.length > 0) {
+      saveCompaniesBatchToDb(filtered).catch(() => {});
     }
 
     return NextResponse.json({
@@ -165,6 +178,10 @@ export async function GET(request: NextRequest) {
       c.id.includes(query) ||
       (c.representative && c.representative.toLowerCase().includes(query))
     );
+  }
+
+  if (finalCompanies.length > 0) {
+    saveCompaniesBatchToDb(finalCompanies).catch(() => {});
   }
 
   return NextResponse.json({

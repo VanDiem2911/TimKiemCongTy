@@ -17,6 +17,9 @@ interface HarvestedAdminItem {
   managedBy?: string;
 }
 
+// Danh sách doanh nghiệp dựng sẵn, dùng lại giữa các lượt gọi API
+let ALL_COMPANIES_CACHE: BusinessTaxInfo[] | null = null;
+
 const HARVESTED_DATA = harvestedJson as unknown as Record<string, HarvestedAdminItem[]>;
 
 const KNOWN_WEBSITES: Record<string, string> = {
@@ -59,36 +62,6 @@ function parseDateToISO(dateStr: string): string {
   return trimmed;
 }
 
-function deriveEstablishedDate(company: { id: string; startDate?: string; registrationDate?: string }): string {
-  const rawDate = company.startDate || company.registrationDate;
-  if (rawDate && rawDate !== '2026-03-20' && rawDate !== '2026-03-25' && /\d{4}/.test(rawDate)) {
-    return parseDateToISO(rawDate);
-  }
-
-  const idDigits = (company.id || '').replace(/\D/g, '');
-  if (!idDigits) return '2022-06-15';
-
-  let hash = 0;
-  for (let i = 0; i < idDigits.length; i++) {
-    hash = (hash * 37 + idDigits.charCodeAt(i)) % 100000;
-  }
-
-  // Phân bổ năm theo chu kỳ cấp mã số thuế tại Việt Nam
-  let year = 2018;
-  if (idDigits.startsWith('011') || idDigits.startsWith('031')) {
-    // Các dải số mới đăng ký từ 2020 đến 2026
-    year = 2020 + (hash % 7);
-  } else if (idDigits.startsWith('010') || idDigits.startsWith('030')) {
-    // Các dải số lâu năm từ 2005 đến 2019
-    year = 2005 + (hash % 15);
-  } else {
-    year = 2012 + (hash % 14);
-  }
-
-  const month = String(1 + (hash % 12)).padStart(2, '0');
-  const day = String(1 + ((hash * 7) % 28)).padStart(2, '0');
-  return `${year}-${month}-${day}`;
-}
 
 
 
@@ -108,7 +81,102 @@ export async function GET(request: NextRequest) {
     const limit = Math.min(20000, Math.max(10, parseInt(searchParams.get('limit') || '10000', 10)));
     const query = searchParams.get('q')?.toLowerCase().trim() || '';
 
+    // Lọc theo điều kiện người dùng chọn rồi trả kết quả.
+    const filterAndRespond = (allList: BusinessTaxInfo[]) => {
+      let targetProvNormalized = '';
+      if (province && province !== 'all') {
+        const pObj = PROVINCES.find(
+          (p) => p.slug === province || normalize(p.name) === normalize(province)
+        );
+        targetProvNormalized = pObj
+          ? normalize(pObj.name)
+          : normalize(province.replace(/-\d+$/, ''));
+      }
+
+      const normQ = query ? normalize(query) : '';
+      const cleanTaxId = taxId ? taxId.replace(/[^0-9a-zA-Z]/g, '').toLowerCase() : '';
+
+      const filtered = allList.filter((company) => {
+        // 0. Điều kiện Mã số thuế (MST)
+        if (cleanTaxId) {
+          const compTaxId = (company.id || '').replace(/[^0-9a-zA-Z]/g, '').toLowerCase();
+          if (!compTaxId.includes(cleanTaxId)) return false;
+        }
+
+        // 1. Điều kiện Tỉnh / Thành phố
+        if (targetProvNormalized) {
+          const cProv = normalize(company.province || '');
+          const cAddr = normalize(company.address || '');
+          if (!cProv.includes(targetProvNormalized) && !cAddr.includes(targetProvNormalized)) {
+            return false;
+          }
+        }
+
+        // 2. Điều kiện Trạng thái Website
+        const hasWeb = Boolean(company.contactInfo?.website || company.contactInfo?.hasWebsite);
+        if (website === 'hasWebsite' && !hasWeb) return false;
+        if (website === 'noWebsite' && hasWeb) return false;
+
+        // 2b. Điều kiện Số điện thoại (Có SĐT / Chưa có SĐT)
+        const rawPhone = company.phone || company.contactInfo?.phone;
+        const hasRealPhone = Boolean(
+          rawPhone &&
+          typeof rawPhone === 'string' &&
+          rawPhone.trim() &&
+          rawPhone !== 'Bị ẩn theo yêu cầu người dùng' &&
+          rawPhone !== 'Chưa có' &&
+          /\d/.test(rawPhone)
+        );
+        if (phone === 'hasPhone' && !hasRealPhone) return false;
+        if (phone === 'noPhone' && hasRealPhone) return false;
+
+        // 3. Điều kiện Thời gian thành lập
+        const compDate = company.startDate || company.registrationDate || '';
+
+        if (timeType === 'before' || (beforeDate && timeType === 'all')) {
+          const target = beforeDate || startDate;
+          if (target && compDate && compDate >= target) return false;
+        } else if (timeType === 'after') {
+          const target = endDate || startDate;
+          if (target && compDate && compDate <= target) return false;
+        } else if (timeType === 'exact_date') {
+          if (startDate && compDate !== startDate) return false;
+        } else if (timeType === 'range') {
+          if (startDate && compDate && compDate < startDate) return false;
+          if (endDate && compDate && compDate > endDate) return false;
+        } else if (timeType === 'month') {
+          const m = month.trim();
+          if (m && !compDate.startsWith(m)) return false;
+        } else if (timeType === 'year') {
+          const y = year.trim();
+          if (y && !compDate.startsWith(y)) return false;
+        }
+
+        // 4. Tìm kiếm từ khóa nếu có
+        if (normQ) {
+          const matchName = normalize(company.name).includes(normQ);
+          const matchId = company.id.includes(query);
+          const matchRep = normalize(company.representative || '').includes(normQ);
+          if (!matchName && !matchId && !matchRep) return false;
+        }
+
+        return true;
+      });
+
+      return NextResponse.json({
+        success: true,
+        data: filtered.slice(0, limit),
+        total: filtered.length,
+        filters: { taxId, province, website, phone, timeType, startDate, endDate, month, year },
+      });
+    };
+
     // 1. Tập hợp danh sách công ty ban đầu (100% trong bộ nhớ, tốc độ tức thời)
+    // Dữ liệu nguồn là tĩnh nên chỉ dựng một lần rồi dùng lại cho mọi lượt lọc.
+    if (ALL_COMPANIES_CACHE) {
+      return filterAndRespond(ALL_COMPANIES_CACHE);
+    }
+
     const allCompaniesMap = new Map<string, BusinessTaxInfo>();
 
     // A. Danh sách doanh nghiệp mẫu chất lượng cao
@@ -116,18 +184,18 @@ export async function GET(request: NextRequest) {
       const site = KNOWN_WEBSITES[c.id] || null;
       allCompaniesMap.set(c.id, {
         ...c,
-        phone: c.phone || '0908123456',
-        startDate: deriveEstablishedDate(c),
+        phone: c.phone || undefined,
+        startDate: c.startDate || c.registrationDate || undefined,
         contactInfo: {
-          phone: c.phone || '0908123456',
+          phone: c.phone || '',
           phoneStatus: 'available',
-          email: site ? `contact@${new URL(site).hostname.replace(/^www\./, '')}` : null,
-          emailStatus: site ? 'available' : 'not_found',
+          email: null,
+          emailStatus: 'not_found',
           address: c.address,
           website: site,
           hasWebsite: Boolean(site),
           websiteStatus: site ? 'found' : 'not_found',
-          aiScannedAt: '2026-10-05 12:00:00',
+          aiScannedAt: '',
           aiScanSummary: site ? `Website chính thức: ${site}` : 'Chưa có website',
           verifiedByAi: false,
           sourcesChecked: ['Hệ thống CSDL'],
@@ -144,7 +212,7 @@ export async function GET(request: NextRequest) {
         const normalizedId = normalizeTaxId(item.id);
         if (!allCompaniesMap.has(normalizedId)) {
           const site = KNOWN_WEBSITES[item.id] || KNOWN_WEBSITES[normalizedId] || null;
-          const realDate = item.startDate ? parseDateToISO(item.startDate) : deriveEstablishedDate(item);
+          const realDate = item.startDate ? parseDateToISO(item.startDate) : '';
           const realPhone = item.phone && item.phone !== 'Bị ẩn theo yêu cầu người dùng' ? item.phone : (item.phone || null);
 
           allCompaniesMap.set(normalizedId, {
@@ -154,21 +222,21 @@ export async function GET(request: NextRequest) {
             address: item.address,
             province: provName,
             status: item.status || 'NNT đang hoạt động (đã được cấp GCN ĐKT)',
-            startDate: realDate,
-            registrationDate: realDate,
+            startDate: realDate || undefined,
+            registrationDate: realDate || undefined,
             phone: realPhone || undefined,
             industryName: item.mainIndustry || undefined,
             managedBy: item.managedBy || undefined,
             contactInfo: {
               phone: realPhone || '',
               phoneStatus: realPhone ? 'available' : 'not_found',
-              email: site ? `contact@${new URL(site).hostname.replace(/^www\./, '')}` : null,
-              emailStatus: site ? 'available' : 'not_found',
+              email: null,
+              emailStatus: 'not_found',
               address: item.address,
               website: site,
               hasWebsite: Boolean(site),
               websiteStatus: site ? 'found' : 'not_found',
-              aiScannedAt: '2026-10-05 12:00:00',
+              aiScannedAt: '',
               aiScanSummary: site ? `Website: ${site}` : (realPhone ? `SĐT: ${realPhone}` : 'Dữ liệu xác thực từ CSDL'),
               verifiedByAi: false,
               sourcesChecked: ['Hồ sơ đăng ký kinh doanh'],
@@ -178,109 +246,9 @@ export async function GET(request: NextRequest) {
       }
     }
 
-    const allList = Array.from(allCompaniesMap.values());
+    ALL_COMPANIES_CACHE = Array.from(allCompaniesMap.values());
+    return filterAndRespond(ALL_COMPANIES_CACHE);
 
-    // 2. Lọc chính xác theo điều kiện mà người dùng yêu cầu (không can thiệp AI, 0ms latency)
-    let targetProvNormalized = '';
-    if (province && province !== 'all') {
-      const pObj = PROVINCES.find(
-        (p) => p.slug === province || normalize(p.name) === normalize(province)
-      );
-      if (pObj) {
-        targetProvNormalized = normalize(pObj.name);
-      } else {
-        targetProvNormalized = normalize(province.replace(/-\d+$/, ''));
-      }
-    }
-
-    const filtered = allList.filter((company) => {
-      // 0. Điều kiện Mã số thuế (MST)
-      if (taxId) {
-        const cleanTaxId = taxId.replace(/[^0-9a-zA-Z]/g, '').toLowerCase();
-        const compTaxId = (company.id || '').replace(/[^0-9a-zA-Z]/g, '').toLowerCase();
-        if (!compTaxId.includes(cleanTaxId)) {
-          return false;
-        }
-      }
-
-      // 1. Điều kiện Tỉnh / Thành phố
-      if (targetProvNormalized) {
-        const cProv = normalize(company.province || '');
-        const cAddr = normalize(company.address || '');
-        if (!cProv.includes(targetProvNormalized) && !cAddr.includes(targetProvNormalized)) {
-          return false;
-        }
-      }
-
-      // 2. Điều kiện Trạng thái Website
-      const hasWeb = Boolean(company.contactInfo?.website || company.contactInfo?.hasWebsite);
-      if (website === 'hasWebsite' && !hasWeb) return false;
-      if (website === 'noWebsite' && hasWeb) return false;
-
-      // 2b. Điều kiện Số điện thoại (Có SĐT / Chưa có SĐT)
-      const rawPhone = company.phone || company.contactInfo?.phone;
-      const hasRealPhone = Boolean(
-        rawPhone &&
-        typeof rawPhone === 'string' &&
-        rawPhone.trim() &&
-        rawPhone !== 'Bị ẩn theo yêu cầu người dùng' &&
-        rawPhone !== 'Chưa có' &&
-        /\d/.test(rawPhone)
-      );
-      if (phone === 'hasPhone' && !hasRealPhone) return false;
-      if (phone === 'noPhone' && hasRealPhone) return false;
-
-      // 3. Điều kiện Thời gian thành lập (Combo: theo ngày, theo tháng, theo năm, theo khoảng thời gian)
-      const compDate = company.startDate || company.registrationDate || '';
-
-      if (timeType === 'before' || (beforeDate && timeType === 'all')) {
-        const target = beforeDate || startDate;
-        if (target && compDate && compDate >= target) return false;
-      } else if (timeType === 'after') {
-        const target = endDate || startDate;
-        if (target && compDate && compDate <= target) return false;
-      } else if (timeType === 'exact_date') {
-        const target = startDate;
-        if (target && compDate !== target) return false;
-      } else if (timeType === 'range') {
-        if (startDate && compDate && compDate < startDate) return false;
-        if (endDate && compDate && compDate > endDate) return false;
-      } else if (timeType === 'month') {
-        const m = month.trim();
-        if (m && !compDate.startsWith(m)) return false;
-      } else if (timeType === 'year') {
-        const y = year.trim();
-        if (y && !compDate.startsWith(y)) return false;
-      }
-
-      // 4. Tìm kiếm từ khóa nếu có
-      if (query) {
-        const normQ = normalize(query);
-        const matchName = normalize(company.name).includes(normQ);
-        const matchId = company.id.includes(query);
-        const matchRep = normalize(company.representative || '').includes(normQ);
-        if (!matchName && !matchId && !matchRep) return false;
-      }
-
-      return true;
-    });
-
-    return NextResponse.json({
-      success: true,
-      data: filtered.slice(0, limit),
-      total: filtered.length,
-      filters: {
-        taxId,
-        province,
-        website,
-        phone,
-        timeType,
-        startDate,
-        endDate,
-        month,
-        year,
-      },
-    });
   } catch (error) {
     console.error('Lỗi API /api/admin/companies:', error);
     return NextResponse.json(

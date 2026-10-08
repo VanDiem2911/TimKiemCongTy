@@ -1,9 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { searchCompaniesByIndustryLive, searchCompaniesLive, searchCompaniesAcrossProvinces } from '@/lib/provinceCompanies';
+import { searchCompaniesByIndustryLive, searchCompaniesLive, searchCompaniesAcrossProvinces, fillMissingFactsFromDb } from '@/lib/provinceCompanies';
 import { getCompleteCompanyProfile, enrichCompanyData } from '@/lib/taxEngine';
 import { recordRecentLookup } from '@/lib/recentLookups';
 import { INDUSTRIES, normalizeTaxId } from '@/lib/constants';
 import { saveCompaniesBatchToDb } from '@/lib/companyDb';
+
+// Kết quả tra cứu thay đổi chậm nên cho phép đệm lại ở CDN / trình duyệt,
+// đồng thời phục vụ bản cũ trong lúc làm mới ngầm để không ai phải chờ.
+const SEARCH_CACHE_HEADERS = {
+  'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600',
+};
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
@@ -40,12 +46,15 @@ export async function GET(request: NextRequest) {
   if (isIndustryLookup && matchedIndustry) {
     const industryResults = await searchCompaniesByIndustryLive(matchedIndustry.code, 4);
     if (industryResults.length > 0) {
+      // Lưu doanh nghiệp vừa tải về vào MongoDB để kho dữ liệu tự lớn dần
+      saveCompaniesBatchToDb(industryResults).catch(() => {});
+
       return NextResponse.json({
         success: true,
         source: 'live-industry-directory',
         disclaimer: `Doanh nghiệp được tra cứu theo mã ngành VSIC ${matchedIndustry.code} - ${matchedIndustry.name} (${industryResults.length} doanh nghiệp)`,
         data: industryResults
-      });
+      }, { headers: SEARCH_CACHE_HEADERS });
     }
   }
 
@@ -60,15 +69,12 @@ export async function GET(request: NextRequest) {
         source: 'verified-enterprise-profile',
         disclaimer: 'Dữ liệu xác thực đồng bộ trực tiếp từ Tổng cục Thuế',
         data: [profile]
-      });
+      }, { headers: SEARCH_CACHE_HEADERS });
     }
   }
 
   // 2. Real-time Live Search across all Vietnamese enterprises
   const liveResults = await searchCompaniesLive(q, type);
-  if (liveResults && liveResults.length > 0) {
-    saveCompaniesBatchToDb(liveResults).catch(() => {});
-  }
 
   // 3. Fallback / Merge with local catalog (10,000 verified enterprises)
   const matched = searchCompaniesAcrossProvinces(q, type);
@@ -76,13 +82,23 @@ export async function GET(request: NextRequest) {
 
   // Merge results, prioritizing live and deduplicating by tax ID
   const combined = [...(liveResults || [])];
+  const seenIds = new Set(combined.map(c => c.id));
   for (const item of enrichedLocal) {
-    if (!combined.some(c => c.id === item.id)) {
+    if (!seenIds.has(item.id)) {
+      seenIds.add(item.id);
       combined.push(item);
     }
   }
 
   if (combined.length > 0) {
+    // Trang nguồn không kèm tình trạng và ngày thành lập trong kết quả tìm kiếm,
+    // nên bổ sung từ kho đã tích lũy trước khi trả về cho người dùng.
+    await fillMissingFactsFromDb(combined);
+
+    // Lưu toàn bộ doanh nghiệp vừa tra được vào MongoDB; bản ghi nào chưa có
+    // sẽ được thêm mới, bản ghi đã có chỉ được bổ sung thêm trường còn thiếu.
+    saveCompaniesBatchToDb(combined).catch(() => {});
+
     recordRecentLookup(combined[0]);
     return NextResponse.json({
       success: true,
@@ -91,7 +107,7 @@ export async function GET(request: NextRequest) {
         ? 'Dữ liệu trực tuyến đồng bộ từ Cổng thông tin Doanh nghiệp Quốc gia'
         : `Tìm thấy ${combined.length} doanh nghiệp phù hợp trong Hệ thống Doanh nghiệp Quốc gia`,
       data: combined
-    });
+    }, { headers: SEARCH_CACHE_HEADERS });
   }
 
   return NextResponse.json({
@@ -99,5 +115,5 @@ export async function GET(request: NextRequest) {
     source: 'national-database',
     disclaimer: 'Không tìm thấy doanh nghiệp phù hợp với từ khóa này',
     data: []
-  });
+  }, { headers: SEARCH_CACHE_HEADERS });
 }

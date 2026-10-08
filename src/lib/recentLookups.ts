@@ -125,7 +125,7 @@ export function recordRecentLookup(company: Partial<BusinessTaxInfo> & { id: str
     name: company.name.trim(),
     representative: company.representative || 'Đang cập nhật',
     address: company.address || 'Việt Nam',
-    status: company.status || 'NNT đang hoạt động (đã được cấp GCN ĐKT)',
+    status: company.status || '',
     province: company.province,
     startDate: company.startDate,
     registrationDate: company.registrationDate,

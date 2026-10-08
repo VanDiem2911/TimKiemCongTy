@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { BusinessTaxInfo } from '@/types/tax';
-import { getCompanySlug, getCompanyStatusBadgeClass, normalizeTaxId } from '@/lib/constants';
-import { Check, Copy, ArrowRight, MapPin, Building, User, Hash, AlertCircle, RefreshCw, ChevronLeft, ChevronRight } from 'lucide-react';
+import { getCompanySlug, getCompanyStatusBadgeClass, normalizeTaxId, formatEstablishedDate } from '@/lib/constants';
+import { Check, Copy, ArrowRight, MapPin, Building, User, Hash, AlertCircle, RefreshCw, ChevronLeft, ChevronRight, Calendar } from 'lucide-react';
 
 interface TaxSearchResultsProps {
   results: BusinessTaxInfo[];
@@ -188,6 +188,16 @@ export function TaxSearchResults({
                     <span className="font-semibold text-slate-600">Địa chỉ trụ sở:</span>
                     <span className="text-slate-800">{comp.address}</span>
                   </div>
+
+                  {formatEstablishedDate(comp.startDate || comp.registrationDate) && (
+                    <div className="flex items-center space-x-1.5">
+                      <Calendar className="w-3.5 h-3.5 text-slate-400 flex-shrink-0" />
+                      <span className="font-semibold text-slate-600">Ngày thành lập:</span>
+                      <span className="text-slate-900 font-bold">
+                        {formatEstablishedDate(comp.startDate || comp.registrationDate)}
+                      </span>
+                    </div>
+                  )}
 
                   {comp.industryName && (
                     <div className="flex items-center space-x-1.5 md:col-span-2">

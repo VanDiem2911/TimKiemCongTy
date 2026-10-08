@@ -185,9 +185,13 @@ export function TaxDetailView({ initialCompany, slug }: TaxDetailViewProps) {
                       </div>
                     </td>
                     <td className="px-4 py-2.5 align-middle">
-                      <span className={`inline-block border px-2.5 py-0.5 rounded-md font-medium text-[11px] ${getCompanyStatusBadgeClass(company.status)}`}>
-                        {company.status}
-                      </span>
+                      {company.status ? (
+                        <span className={`inline-block border px-2.5 py-0.5 rounded-md font-medium text-[11px] ${getCompanyStatusBadgeClass(company.status)}`}>
+                          {company.status}
+                        </span>
+                      ) : (
+                        <span className="text-slate-400 italic">Chưa cập nhật</span>
+                      )}
                     </td>
                   </tr>
 
@@ -227,9 +231,13 @@ export function TaxDetailView({ initialCompany, slug }: TaxDetailViewProps) {
                       </div>
                     </td>
                     <td className="px-4 py-2.5 font-bold text-[#e91a2c] align-middle">
-                      <Link href={`/?q=${encodeURIComponent(company.representative || '')}&type=legalName`} className="hover:underline">
-                        {company.representative}
-                      </Link>
+                      {company.representative ? (
+                        <Link href={`/?q=${encodeURIComponent(company.representative)}&type=legalName`} className="hover:underline">
+                          {company.representative}
+                        </Link>
+                      ) : (
+                        <span className="text-slate-400 italic font-normal">Chưa cập nhật</span>
+                      )}
                     </td>
                   </tr>
 
@@ -269,7 +277,9 @@ export function TaxDetailView({ initialCompany, slug }: TaxDetailViewProps) {
                       </div>
                     </td>
                     <td className="px-4 py-2.5 font-mono text-slate-800 align-middle">
-                      {company.startDate}
+                      {company.startDate || company.registrationDate || (
+                        <span className="text-slate-400 italic font-sans">Chưa cập nhật</span>
+                      )}
                     </td>
                   </tr>
 
@@ -281,7 +291,7 @@ export function TaxDetailView({ initialCompany, slug }: TaxDetailViewProps) {
                       </div>
                     </td>
                     <td className="px-4 py-2.5 text-slate-800 align-middle">
-                      {company.managedBy}
+                      {company.managedBy || <span className="text-slate-400 italic">Chưa cập nhật</span>}
                     </td>
                   </tr>
 
@@ -293,7 +303,7 @@ export function TaxDetailView({ initialCompany, slug }: TaxDetailViewProps) {
                       </div>
                     </td>
                     <td className="px-4 py-2.5 text-slate-800 font-medium align-middle">
-                      {company.enterpriseType}
+                      {company.enterpriseType || <span className="text-slate-400 italic font-normal">Chưa cập nhật</span>}
                     </td>
                   </tr>
 
@@ -304,10 +314,17 @@ export function TaxDetailView({ initialCompany, slug }: TaxDetailViewProps) {
                         <span>Ngành nghề chính</span>
                       </div>
                     </td>
-                    <td className="px-4 py-2.5 font-bold text-[#e91a2c] hover:underline align-middle">
-                      <Link href={`/tra-cuu-ma-so-thue-theo-nganh-nghe/`}>
-                        {company.mainIndustry}
-                      </Link>
+                    <td className="px-4 py-2.5 align-middle">
+                      {company.mainIndustry || company.industryName ? (
+                        <Link
+                          href={`/tra-cuu-ma-so-thue-theo-nganh-nghe/`}
+                          className="font-bold text-[#e91a2c] hover:underline"
+                        >
+                          {company.mainIndustry || company.industryName}
+                        </Link>
+                      ) : (
+                        <span className="text-slate-400 italic">Chưa cập nhật</span>
+                      )}
                     </td>
                   </tr>
 

@@ -8,9 +8,9 @@ import { Footer } from '@/components/layout/Footer';
 import { HeroSlider } from '@/components/home/HeroSlider';
 import { TaxSearchResults } from '@/components/tax/TaxSearchResults';
 import { ScrollToTopButton } from '@/components/common/ScrollEnhancements';
-import { INITIAL_COMPANIES, PROVINCES, getCompanySlug, getCompanyStatusBadgeClass, normalizeTaxId } from '@/lib/constants';
+import { INITIAL_COMPANIES, PROVINCES, getCompanySlug, getCompanyStatusBadgeClass, getCompanyStatusTone, normalizeTaxId, formatEstablishedDate } from '@/lib/constants';
 import { BusinessTaxInfo } from '@/types/tax';
-import { Hash, MapPin, User, ChevronRight, ShieldCheck, Clock, Building2, CheckCircle2 } from 'lucide-react';
+import { Hash, MapPin, User, ChevronRight, ShieldCheck, Clock, Building2, CheckCircle2, Calendar, AlertTriangle } from 'lucide-react';
 
 function HomeContent() {
   const searchParams = useSearchParams();
@@ -42,9 +42,22 @@ function HomeContent() {
 
   useEffect(() => {
     loadRecentLookups();
-    // Poll every 3 seconds to reflect lookups from any user in real-time
-    const interval = setInterval(loadRecentLookups, 3000);
-    return () => clearInterval(interval);
+
+    // Làm mới danh sách tra cứu gần đây theo chu kỳ thưa, và chỉ khi người dùng
+    // đang thực sự xem trang - tránh gọi API liên tục ở các tab bị ẩn.
+    const refreshIfVisible = () => {
+      if (typeof document === 'undefined' || document.visibilityState === 'visible') {
+        loadRecentLookups();
+      }
+    };
+
+    const interval = setInterval(refreshIfVisible, 20000);
+    document.addEventListener('visibilitychange', refreshIfVisible);
+
+    return () => {
+      clearInterval(interval);
+      document.removeEventListener('visibilitychange', refreshIfVisible);
+    };
   }, []);
 
   const executeLookup = async (q: string, type: string = 'auto') => {
@@ -203,11 +216,31 @@ function HomeContent() {
                           <address className="not-italic truncate">{company.address}</address>
                         </div>
 
-                        <div className="pt-0.5">
-                          <span className="inline-flex items-center space-x-1 bg-emerald-50 text-emerald-700 border border-emerald-200/70 font-semibold px-2.5 py-0.5 rounded-full text-[11px]">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                            <span>{company.status || 'NNT đang hoạt động (đã được cấp GCN ĐKT)'}</span>
-                          </span>
+                        <div className="pt-0.5 flex flex-wrap items-center gap-2">
+                          {(() => {
+                            const tone = getCompanyStatusTone(company.status);
+                            const StatusIcon = tone === 'active' ? CheckCircle2 : AlertTriangle;
+                            return (
+                              <span
+                                className={`inline-flex items-center space-x-1 border font-semibold px-2.5 py-0.5 rounded-full text-[11px] ${getCompanyStatusBadgeClass(company.status)}`}
+                              >
+                                <StatusIcon className="w-3.5 h-3.5 shrink-0" />
+                                <span>{company.status || 'Chưa rõ trạng thái'}</span>
+                              </span>
+                            );
+                          })()}
+
+                          {formatEstablishedDate(company.startDate || company.registrationDate) && (
+                            <span className="inline-flex items-center space-x-1 bg-slate-50 text-slate-600 border border-slate-200 font-medium px-2.5 py-0.5 rounded-full text-[11px]">
+                              <Calendar className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                              <span>
+                                Thành lập:{' '}
+                                <strong className="font-semibold text-slate-800">
+                                  {formatEstablishedDate(company.startDate || company.registrationDate)}
+                                </strong>
+                              </span>
+                            </span>
+                          )}
                         </div>
                       </div>
                     </div>

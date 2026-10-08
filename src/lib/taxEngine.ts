@@ -4,7 +4,8 @@ import { INITIAL_COMPANIES, getCompanySlug, normalizeTaxId } from '@/lib/constan
 import harvestedJson from '@/data/harvested_provinces.json';
 import { isPhoneHidden, getKnownPhone } from '@/lib/privacyStore';
 import { KNOWN_COMPANY_CONTACTS } from '@/lib/companyAiScanner';
-import { findCompanyInDb, saveCompanyToDb } from '@/lib/companyDb';
+import { findCompanyInDb, saveCompanyToDb, getCompanyFactsByIds } from '@/lib/companyDb';
+import { getHarvestedStartDate } from '@/lib/provinceCompanies';
 
 export interface HarvestedCompanyItem {
   id: string;
@@ -59,7 +60,7 @@ function cleanText(html: string): string {
  * Accurately deduce the managing tax office from an address
  */
 export function getManagingTaxOffice(address: string): string {
-  if (!address) return 'Cơ quan Thuế quản lý trực thuộc';
+  if (!address) return '';
   if (address.includes('Thủ Đức')) return 'Thuế cơ sở 2 Thành phố Hồ Chí Minh';
   if (address.includes('Bắc Giang')) return 'Thuế thành phố Bắc Giang';
   if (address.includes('Cầu Giấy')) return 'Chi cục Thuế quận Cầu Giấy';
@@ -71,12 +72,9 @@ export function getManagingTaxOffice(address: string): string {
   if (address.includes('Hải Châu')) return 'Chi cục Thuế quận Hải Châu';
   if (address.includes('Biên Hòa')) return 'Chi cục Thuế thành phố Biên Hòa';
 
-  const match = address.match(/(?:Quận|Huyện|Thị xã|Thành phố)\s+([^,]+)/i);
-  if (match) {
-    return `Chi cục Thuế ${match[0]}`;
-  }
-  const prov = getProvinceFromAddress(address);
-  return `Chi cục Thuế khu vực ${prov}`;
+  // Ngoài các trường hợp đã biết chắc ở trên thì để trống: cơ quan thuế quản lý
+  // không suy ra được từ địa chỉ một cách đáng tin cậy.
+  return '';
 }
 
 export function getProvinceFromAddress(address: string): string {
@@ -108,7 +106,8 @@ export function getEnterpriseType(name: string): string {
   if (upper.includes('CHI NHÁNH')) {
     return 'Chi nhánh Doanh nghiệp';
   }
-  return 'Công ty trách nhiệm hữu hạn ngoài NN';
+  // Tên không nói rõ loại hình thì để trống, không suy đoán
+  return '';
 }
 
 /**
@@ -273,9 +272,9 @@ export function parseMasothueHtml(html: string, defaultId: string = ''): Busines
   let shortName: string | null = null;
   let representative = '';
   let phone = '';
-  let startDate = '2024-01-01';
+  let startDate = '';
   let managedBy = '';
-  let enterpriseType = 'Công ty trách nhiệm hữu hạn';
+  let enterpriseType = '';
   let mainIndustry = '';
   let mainIndustryCode = '';
   let lastUpdated = '';
@@ -380,20 +379,20 @@ export function parseMasothueHtml(html: string, defaultId: string = ''): Busines
     shortName,
     address: address || taxAddress,
     taxAddress: taxAddress || address,
-    status: status || 'Đang hoạt động',
-    representative: representative || 'Đang cập nhật',
+    status: status || '',
+    representative: representative || '',
     phone: effectivePhone,
     rawPhone: effectiveRawPhone,
-    startDate: startDate || '2024-01-01',
-    managedBy: managedBy || getManagingTaxOffice(effectiveAddress),
+    startDate: startDate || getHarvestedStartDate(normalizeTaxId(defaultId)) || '',
+    managedBy: managedBy || getManagingTaxOffice(effectiveAddress) || undefined,
     enterpriseType: enterpriseType || getEnterpriseType(name),
-    mainIndustry: mainIndustry || getIndustryInfo(name).name,
-    mainIndustryCode: mainIndustryCode || getIndustryInfo(name).code,
-    industryName: mainIndustry || getIndustryInfo(name).name,
-    industryCode: mainIndustryCode || getIndustryInfo(name).code,
+    mainIndustry: mainIndustry || undefined,
+    mainIndustryCode: mainIndustryCode || undefined,
+    industryName: mainIndustry || undefined,
+    industryCode: mainIndustryCode || undefined,
     province: prov,
     lastUpdated: lastUpdated || new Date().toISOString().slice(0, 19).replace('T', ' '),
-    subIndustries: subIndustries.length > 0 ? subIndustries : getSubIndustries(mainIndustryCode || '4659', mainIndustry || 'Bán buôn chuyên doanh khác'),
+    subIndustries: subIndustries,
     nearbyCompanies: nearbyCompanies.length > 0 ? nearbyCompanies : getNearbyCompanies(id || defaultId, prov)
   });
 }
@@ -405,37 +404,22 @@ export function parseMasothueHtml(html: string, defaultId: string = ''): Busines
 export function enrichCompanyData(partial: Partial<BusinessTaxInfo>): BusinessTaxInfo {
   const id = normalizeTaxId(partial.id || '');
   const name = (partial.name || `DOANH NGHIỆP ${id}`).trim().toUpperCase();
-  const address = (partial.address || partial.taxAddress || 'Việt Nam').trim();
+  const address = (partial.address || partial.taxAddress || '').trim();
   const taxAddress = (partial.taxAddress || partial.address || address).trim();
   const province = partial.province || getProvinceFromAddress(address);
-  const indInfo = getIndustryInfo(name);
-
-  const mainIndustryCode = partial.mainIndustryCode || partial.industryCode || indInfo.code;
-  const mainIndustry = partial.mainIndustry || partial.industryName || indInfo.name;
+  const mainIndustryCode = partial.mainIndustryCode || partial.industryCode || '';
+  const mainIndustry = partial.mainIndustry || partial.industryName || '';
   const industryCode = mainIndustryCode;
   const industryName = mainIndustry;
 
   const enterpriseType = partial.enterpriseType || getEnterpriseType(name);
   const managedBy = partial.managedBy || getManagingTaxOffice(taxAddress || address);
 
-  // International name synthesis if missing
-  let internationalName = partial.internationalName;
-  if (!internationalName && name) {
-    if (enterpriseType.includes('Cổ phần')) {
-      internationalName = `${name.replace(/CÔNG TY CỔ PHẦN/i, '').trim()} JOINT STOCK COMPANY`;
-    } else {
-      internationalName = `${name.replace(/CÔNG TY TNHH/i, '').replace(/CÔNG TY TRÁCH NHIỆM HỮU HẠN/i, '').trim()} COMPANY LIMITED`;
-    }
-  }
 
-  let shortName = partial.shortName;
-  if (!shortName && name) {
-    if (enterpriseType.includes('Cổ phần')) {
-      shortName = `${name.replace(/CÔNG TY CỔ PHẦN/i, '').trim()} JSC`;
-    } else {
-      shortName = `${name.replace(/CÔNG TY TNHH/i, '').replace(/CÔNG TY TRÁCH NHIỆM HỮU HẠN/i, '').trim()} CO.,LTD`;
-    }
-  }
+  // Không tự chế tên quốc tế và tên viết tắt từ tên tiếng Việt:
+  // suy ra sai cho hộ kinh doanh và các loại hình không phải công ty.
+  const internationalName = partial.internationalName;
+  const shortName = partial.shortName;
 
   // Representative resolution
   let representative = (partial.representative || '').trim();
@@ -463,9 +447,7 @@ export function enrichCompanyData(partial: Partial<BusinessTaxInfo>): BusinessTa
     }
   }
 
-  const subIndustries = (partial.subIndustries && partial.subIndustries.length > 0)
-    ? partial.subIndustries
-    : getSubIndustries(mainIndustryCode, mainIndustry);
+  const subIndustries = partial.subIndustries || [];
 
   const nearbyCompanies = (partial.nearbyCompanies && partial.nearbyCompanies.length > 0)
     ? partial.nearbyCompanies
@@ -490,17 +472,21 @@ export function enrichCompanyData(partial: Partial<BusinessTaxInfo>): BusinessTa
     shortName: shortName || null,
     address,
     taxAddress,
-    status: partial.status || 'Đang hoạt động',
+    status: partial.status || '',
     representative,
     phone: resolvedPhone,
     rawPhone,
-    startDate: partial.startDate || partial.registrationDate || '2024-01-15',
+    startDate:
+      partial.startDate ||
+      partial.registrationDate ||
+      getHarvestedStartDate(normalizeTaxId(partial.id || '')) ||
+      '',
     managedBy,
     enterpriseType,
-    industryCode,
-    industryName,
-    mainIndustry,
-    mainIndustryCode,
+    industryCode: industryCode || undefined,
+    industryName: industryName || undefined,
+    mainIndustry: mainIndustry || undefined,
+    mainIndustryCode: mainIndustryCode || undefined,
     province,
     contactInfo: partial.contactInfo,
     lastUpdated: partial.lastUpdated || new Date().toISOString().slice(0, 19).replace('T', ' '),
@@ -579,7 +565,7 @@ export async function getCompleteCompanyProfile(
     PROFILE_CACHE.delete(taxId);
   }
 
-  const finalizeProfile = (data: BusinessTaxInfo): BusinessTaxInfo => {
+  const finalizeProfile = async (data: BusinessTaxInfo): Promise<BusinessTaxInfo> => {
     const known = getKnownPhone(data.id);
     if (!data.rawPhone || data.rawPhone.includes('ẩn')) {
       if (data.phone && !data.phone.includes('ẩn') && !data.phone.includes('Chưa cập nhật')) {
@@ -634,6 +620,20 @@ export async function getCompleteCompanyProfile(
       }
     }
 
+    // Ngày thành lập có thể đã được lưu từ các lượt tra cứu trước trong MongoDB
+    if (!data.startDate) {
+      try {
+        const facts = await getCompanyFactsByIds([data.id, normalizeTaxId(data.id)]);
+        const found = facts.get(data.id) || facts.get(normalizeTaxId(data.id));
+        if (found?.startDate) {
+          data.startDate = found.startDate;
+          data.registrationDate = found.startDate;
+        }
+      } catch {
+        // Không có cũng không sao, giao diện sẽ hiển thị "Chưa cập nhật"
+      }
+    }
+
     PROFILE_CACHE.set(cleanInput, { data, timestamp: Date.now() });
     PROFILE_CACHE.set(taxId, { data, timestamp: Date.now() });
 
@@ -646,11 +646,23 @@ export async function getCompleteCompanyProfile(
   };
 
   // 0. KIỂM TRA MONGODB ATLAS TRƯỚC TIÊN
+  // Chỉ dùng thẳng bản ghi trong kho khi nó đã đủ thông tin. Bản ghi thu được
+  // từ danh sách thường chỉ có tên và địa chỉ; nếu trả về luôn thì trang chi tiết
+  // sẽ trống hàng loạt ô và người dùng phải tự bấm "Cập nhật" mới có dữ liệu.
+  let dbFallback: BusinessTaxInfo | null = null;
   if (!forceRefresh) {
     try {
       const dbCompany = await findCompanyInDb(taxId);
       if (dbCompany && dbCompany.name) {
-        return finalizeProfile(enrichCompanyData(dbCompany));
+        dbFallback = dbCompany;
+        const hasFullProfile = Boolean(
+          dbCompany.status &&
+          dbCompany.startDate &&
+          (dbCompany.mainIndustry || dbCompany.industryName)
+        );
+        if (hasFullProfile) {
+          return await finalizeProfile(enrichCompanyData(dbCompany));
+        }
       }
     } catch (err) {
       console.warn('[taxEngine] MongoDB check error:', err);
@@ -729,7 +741,7 @@ export async function getCompleteCompanyProfile(
           if (forceRefresh) {
             parsed.lastUpdated = formatCurrentTimeVietnam();
           }
-          return finalizeProfile(parsed);
+          return await finalizeProfile(parsed);
         }
       }
     } catch (err) {
@@ -778,7 +790,7 @@ export async function getCompleteCompanyProfile(
                   if (forceRefresh) {
                     parsed.lastUpdated = formatCurrentTimeVietnam();
                   }
-                  return finalizeProfile(parsed);
+                  return await finalizeProfile(parsed);
                 }
               }
             } catch {
@@ -811,7 +823,7 @@ export async function getCompleteCompanyProfile(
             lastUpdated: forceRefresh ? formatCurrentTimeVietnam() : undefined
           });
 
-          return finalizeProfile(enriched);
+          return await finalizeProfile(enriched);
         }
       }
     } catch (err) {
@@ -846,7 +858,7 @@ export async function getCompleteCompanyProfile(
         mainIndustry: item.mainIndustry,
         lastUpdated: forceRefresh ? formatCurrentTimeVietnam() : undefined
       });
-      return finalizeProfile(enriched);
+      return await finalizeProfile(enriched);
     }
   }
 
@@ -862,7 +874,7 @@ export async function getCompleteCompanyProfile(
       id: normalizeTaxId(localFound.id),
       lastUpdated: forceRefresh ? formatCurrentTimeVietnam() : localFound.lastUpdated
     });
-    return finalizeProfile(enriched);
+    return await finalizeProfile(enriched);
   }
 
   // 6. Nếu là mã số thuế hợp lệ, sinh đầy đủ hồ sơ chuẩn xác
@@ -891,6 +903,11 @@ export async function getCompleteCompanyProfile(
     else if (canonicalTaxId.startsWith('37') || canonicalTaxId.startsWith('74')) defaultProvince = 'Bình Dương';
     else if (canonicalTaxId.startsWith('36') || canonicalTaxId.startsWith('75')) defaultProvince = 'Đồng Nai';
 
+    // Không gọi được nguồn: dùng bản ghi đã có trong kho nếu có, tốt hơn là tự dựng
+    if (dbFallback) {
+      return await finalizeProfile(enrichCompanyData(dbFallback));
+    }
+
     const procedural = enrichCompanyData({
       id: canonicalTaxId,
       name: resolvedName,
@@ -899,7 +916,7 @@ export async function getCompleteCompanyProfile(
       province: defaultProvince,
       lastUpdated: forceRefresh ? formatCurrentTimeVietnam() : undefined
     });
-    return finalizeProfile(procedural);
+    return await finalizeProfile(procedural);
   }
 
   return null;

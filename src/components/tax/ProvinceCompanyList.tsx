@@ -4,7 +4,7 @@ import React, { useState, useEffect, useTransition } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { BusinessTaxInfo } from '@/types/tax';
-import { getCompanySlug, normalizeTaxId } from '@/lib/constants';
+import { getCompanySlug, normalizeTaxId, formatEstablishedDate, getCompanyStatusBadgeClass, getCompanyStatusTone } from '@/lib/constants';
 import {
   MapPin,
   ShieldCheck,
@@ -19,6 +19,7 @@ import {
   CheckCircle2,
   Loader2,
   Calendar,
+  AlertTriangle,
   FileText,
   LayoutGrid
 } from 'lucide-react';
@@ -119,8 +120,8 @@ export function ProvinceCompanyList({
     setTotalPages(initialTotalPages);
   };
 
-  const startCount = total > 0 ? (page - 1) * initialPageSize + 1 : 0;
-  const endCount = total > 0 ? Math.min(page * initialPageSize, total) : 0;
+  const startCount = (page - 1) * initialPageSize + 1;
+  const endCount = total > 0 ? Math.min(page * initialPageSize, total) : startCount + companies.length - 1;
 
   // Generate pagination buttons (up to 7)
   const pageNumbers = [];
@@ -187,7 +188,15 @@ export function ProvinceCompanyList({
             {/* Counter and Status Badges */}
             <div className="flex flex-wrap items-center gap-2.5 text-xs text-slate-600 mb-4">
               <span>
-                Hiển thị <strong>{startCount} - {endCount}</strong> / {total.toLocaleString('vi-VN')} doanh nghiệp mới thành lập tại {provinceName}
+                {total > 0 ? (
+                  <>
+                    Hiển thị <strong>{startCount} - {endCount}</strong> / {total.toLocaleString('vi-VN')} doanh nghiệp mới thành lập tại {provinceName}
+                  </>
+                ) : (
+                  <>
+                    Doanh nghiệp mới thành lập tại {provinceName} &mdash; <strong>{companies.length}</strong> doanh nghiệp trên trang này
+                  </>
+                )}
               </span>
               <span className="inline-flex items-center px-2.5 py-0.5 rounded-md bg-[#fef3c7] text-[#b45309] font-bold text-[11px] border border-[#fde68a]">
                 Trang {page}
@@ -285,11 +294,31 @@ export function ProvinceCompanyList({
                             <address className="not-italic truncate">{comp.address}</address>
                           </div>
 
-                          <div className="pt-0.5">
-                            <span className="inline-flex items-center space-x-1 bg-emerald-50 text-emerald-700 border border-emerald-200/70 font-semibold px-2.5 py-0.5 rounded-full text-[11px]">
-                              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                              <span>{comp.status || 'NNT đang hoạt động (đã được cấp GCN ĐKT)'}</span>
-                            </span>
+                          <div className="pt-0.5 flex flex-wrap items-center gap-2">
+                            {(() => {
+                              const tone = getCompanyStatusTone(comp.status);
+                              const StatusIcon = tone === 'active' ? CheckCircle2 : AlertTriangle;
+                              return (
+                                <span
+                                  className={`inline-flex items-center space-x-1 border font-semibold px-2.5 py-0.5 rounded-full text-[11px] ${getCompanyStatusBadgeClass(comp.status)}`}
+                                >
+                                  <StatusIcon className="w-3.5 h-3.5 shrink-0" />
+                                  <span>{comp.status || 'Chưa rõ trạng thái'}</span>
+                                </span>
+                              );
+                            })()}
+
+                            {formatEstablishedDate(comp.startDate || comp.registrationDate) && (
+                              <span className="inline-flex items-center space-x-1 bg-slate-50 text-slate-600 border border-slate-200 font-medium px-2.5 py-0.5 rounded-full text-[11px]">
+                                <Calendar className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                                <span>
+                                  Thành lập:{' '}
+                                  <strong className="font-semibold text-slate-800">
+                                    {formatEstablishedDate(comp.startDate || comp.registrationDate)}
+                                  </strong>
+                                </span>
+                              </span>
+                            )}
                           </div>
                         </div>
                       </div>
@@ -312,7 +341,8 @@ export function ProvinceCompanyList({
             {totalPages > 1 && (
               <div className="mt-6 pt-4 border-t border-slate-200/80 flex flex-wrap items-center justify-between gap-3 text-xs">
                 <div className="text-slate-500 font-medium">
-                  Trang {page} trên tổng {totalPages} trang (Tổng {total.toLocaleString('vi-VN')} công ty)
+                  Trang {page} trên tổng {totalPages} trang
+                  {total > 0 && <> (Tổng {total.toLocaleString('vi-VN')} công ty)</>}
                 </div>
 
                 <div className="flex items-center space-x-1">

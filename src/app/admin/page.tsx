@@ -4,7 +4,6 @@ import React, { useState, useEffect, useMemo, useRef } from 'react';
 import Link from 'next/link';
 import {
   ShieldAlert,
-  Building2,
   Mail,
   Search,
   CheckCircle2,
@@ -50,39 +49,13 @@ function parseDateToISO(dateStr: string): string {
   return trimmed;
 }
 
-function getCompanyEstablishedDate(company: { id: string; startDate?: string; registrationDate?: string }): string {
-  const rawDate = company.startDate || company.registrationDate;
-  if (rawDate && rawDate !== '2026-03-20' && rawDate !== '2026-03-25' && /\d{4}/.test(rawDate)) {
-    return parseDateToISO(rawDate);
-  }
-
-  const idDigits = (company.id || '').replace(/\D/g, '');
-  if (!idDigits) return '2022-06-15';
-
-  let hash = 0;
-  for (let i = 0; i < idDigits.length; i++) {
-    hash = (hash * 37 + idDigits.charCodeAt(i)) % 100000;
-  }
-
-  let year = 2018;
-  if (idDigits.startsWith('011') || idDigits.startsWith('031')) {
-    year = 2020 + (hash % 7);
-  } else if (idDigits.startsWith('010') || idDigits.startsWith('030')) {
-    year = 2005 + (hash % 15);
-  } else {
-    year = 2012 + (hash % 14);
-  }
-
-  const month = String(1 + (hash % 12)).padStart(2, '0');
-  const day = String(1 + ((hash * 7) % 28)).padStart(2, '0');
-  return `${year}-${month}-${day}`;
-}
 
 const DATA_PAGE_SIZE = 500;
 
 export default function AdminDashboardPage() {
   const [activeTab, setActiveTab] = useState<'overview' | 'privacy' | 'data' | 'contacts'>('overview');
   const [loading, setLoading] = useState(true);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   // Authentication State (Đơn giản, tức thì)
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
@@ -135,7 +108,7 @@ export default function AdminDashboardPage() {
     provincesCount: number;
     withDateCount: number;
     withPhoneCount: number;
-  }>({ total: 950, provincesCount: 18, withDateCount: 0, withPhoneCount: 0 });
+  }>({ total: 0, provincesCount: 0, withDateCount: 0, withPhoneCount: 0 });
   const [crawlerRunning, setCrawlerRunning] = useState(false);
   const [crawlerPercent, setCrawlerPercent] = useState(0);
   const [crawlerMessage, setCrawlerMessage] = useState('');
@@ -238,6 +211,27 @@ export default function AdminDashboardPage() {
       setAuthChecking(false);
     }
   }, []);
+
+  // Ghi nhớ trạng thái thu gọn của thanh điều hướng
+  useEffect(() => {
+    try {
+      if (typeof window !== 'undefined' && localStorage.getItem('admin_sidebar_collapsed') === 'true') {
+        setSidebarCollapsed(true);
+      }
+    } catch (e) {}
+  }, []);
+
+  const toggleSidebar = () => {
+    setSidebarCollapsed((prev) => {
+      const next = !prev;
+      try {
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('admin_sidebar_collapsed', String(next));
+        }
+      } catch (e) {}
+      return next;
+    });
+  };
 
   // ĐĂNG NHẬP NHANH (1 Click vào ngay lập tức)
   const handleQuickLogin = () => {
@@ -503,6 +497,47 @@ export default function AdminDashboardPage() {
   const unreadMessagesCount = contactMessages.filter((m) => m.status === 'unread').length;
   const totalHiddenCount = Object.keys(hiddenPhones).length;
 
+  const navItems = [
+    {
+      key: 'overview' as const,
+      label: 'Tổng quan Dashboard',
+      icon: SlidersHorizontal,
+      badge: 0,
+      badgeClass: '',
+      title: 'Tổng quan Dashboard',
+      subtitle: 'Quản lý dữ liệu và yêu cầu trên hệ thống Tìm Kiếm Công Ty',
+    },
+    {
+      key: 'privacy' as const,
+      label: 'Yêu cầu ẩn SĐT',
+      icon: ShieldAlert,
+      badge: pendingCount,
+      badgeClass: 'bg-rose-500 text-white',
+      title: 'Yêu cầu ẩn số điện thoại',
+      subtitle: 'Xử lý đơn đề nghị bảo vệ quyền riêng tư từ chủ doanh nghiệp',
+    },
+    {
+      key: 'data' as const,
+      label: 'Lọc & Tra cứu Doanh nghiệp',
+      icon: Database,
+      badge: 0,
+      badgeClass: '',
+      title: 'Lọc & Tra cứu Doanh nghiệp',
+      subtitle: 'Tra cứu kho dữ liệu doanh nghiệp toàn quốc theo nhiều tiêu chí',
+    },
+    {
+      key: 'contacts' as const,
+      label: 'Hòm thư Liên hệ',
+      icon: Mail,
+      badge: unreadMessagesCount,
+      badgeClass: 'bg-amber-400 text-slate-900',
+      title: 'Hòm thư Liên hệ',
+      subtitle: 'Phản hồi thắc mắc và đóng góp ý kiến từ người dùng',
+    },
+  ];
+
+  const activeNav = navItems.find((item) => item.key === activeTab) || navItems[0];
+
   const totalDataPages = Math.max(1, Math.ceil(explorerCompanies.length / DATA_PAGE_SIZE));
   const safeDataPage = Math.min(dataCurrentPage, totalDataPages);
   const dataStartIndex = (safeDataPage - 1) * DATA_PAGE_SIZE;
@@ -598,71 +633,176 @@ export default function AdminDashboardPage() {
 
   // 3. Admin Dashboard (Authenticated)
   return (
-    <div className="min-h-screen bg-slate-100 text-gray-900 flex flex-col font-sans">
+    <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans">
       {/* Admin Top Navigation */}
-      <header className="bg-slate-900 text-white border-b border-slate-800 sticky top-0 z-30 shadow-md">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="w-9 h-9 rounded-lg bg-red-600 flex items-center justify-center font-bold text-white shadow-sm">
-              <Building2 className="w-5 h-5 text-white" />
-            </div>
-            <div>
-              <div className="flex items-center space-x-2">
-                <span className="font-extrabold text-base tracking-tight text-white">
-                  TÌM KIẾM CÔNG TY
+      <header className="bg-white border-b border-slate-200 sticky top-0 z-30">
+        <div className="px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+          <div className="flex items-center gap-2.5 min-w-0">
+            <Link href="/" className="inline-flex items-center space-x-2.5 group min-w-0">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#dc2626] to-[#ef4444] flex items-center justify-center text-white shadow-xs group-hover:scale-105 transition-transform duration-200 shrink-0">
+                <Search className="w-5 h-5 stroke-[2.5]" />
+              </div>
+              <div className="flex flex-col min-w-0">
+                <span className="text-lg font-black tracking-tight text-gray-900 leading-none truncate">
+                  TÌM KIẾM <span className="text-[#e91a2c]">CÔNG TY</span>
                 </span>
-                <span className="bg-red-500/20 text-red-400 border border-red-500/30 text-[10px] font-bold px-2 py-0.5 rounded uppercase">
-                  Admin Portal
+                <span className="text-[10px] font-bold text-gray-400 tracking-wider uppercase font-mono mt-0.5">
+                  TIMKIEMCONGTY.COM
                 </span>
               </div>
-            </div>
+            </Link>
+            <span className="hidden sm:inline bg-slate-100 text-slate-500 text-[10px] font-semibold px-2 py-0.5 rounded-md uppercase tracking-wide shrink-0">
+              Admin
+            </span>
           </div>
 
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center gap-2">
             {/* Logged in Admin Badge */}
-            <div className="hidden sm:flex items-center space-x-2 bg-slate-800/90 border border-slate-700/80 px-2.5 py-1.5 rounded-lg text-xs">
-              <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
-              <span className="font-semibold text-slate-200">
-                admin
-              </span>
-              <span className="text-[10px] bg-red-600/30 text-red-300 border border-red-500/30 px-1.5 py-0.5 rounded font-mono">
-                Quản trị viên
-              </span>
+            <div className="hidden md:flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-xs border border-slate-200">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              <span className="font-semibold text-slate-700">admin</span>
+              <span className="text-slate-400">Quản trị viên</span>
             </div>
+
+            <button
+              onClick={loadAdminData}
+              className="text-slate-500 hover:text-slate-900 hover:bg-slate-100 p-2 rounded-lg transition cursor-pointer"
+              title="Làm mới dữ liệu"
+            >
+              <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
+            </button>
 
             <Link
               href="/"
               target="_blank"
-              className="text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 px-3 py-1.5 rounded-lg flex items-center space-x-1.5 transition border border-slate-700"
+              className="text-xs font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 px-3 py-2 rounded-lg flex items-center gap-1.5 transition"
             >
-              <span>Xem Website</span>
+              <span className="hidden sm:inline">Xem Website</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </Link>
 
+            {/* Đăng xuất nằm ở chân thanh điều hướng; màn hình nhỏ không có sidebar nên giữ lại ở đây */}
             <button
-              onClick={loadAdminData}
-              className="text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 p-2 rounded-lg transition border border-slate-700 cursor-pointer"
-              title="Làm mới dữ liệu"
-            >
-              <RefreshCw className={`w-3.5 h-3.5 ${loading ? 'animate-spin' : ''}`} />
-            </button>
-
-            {/* Logout Button */}
-            <button
-              id="admin-logout-btn"
               onClick={handleLogout}
-              className="text-xs bg-rose-950/60 hover:bg-rose-900/80 text-rose-300 hover:text-white px-2.5 py-1.5 rounded-lg flex items-center space-x-1.5 transition border border-rose-800/60 shadow-sm cursor-pointer"
+              className="lg:hidden text-xs font-medium text-slate-600 hover:text-rose-600 hover:bg-rose-50 px-3 py-2 rounded-lg flex items-center gap-1.5 transition cursor-pointer"
               title="Đăng xuất khỏi hệ thống"
             >
               <LogOut className="w-3.5 h-3.5" />
-              <span>Đăng xuất</span>
+              <span className="hidden sm:inline">Đăng xuất</span>
             </button>
           </div>
         </div>
       </header>
 
-      {/* Main Container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex-1 w-full space-y-6">
+      {/* Main Container: Sidebar + Content */}
+      <div className="flex flex-1 w-full">
+        {/* Sidebar Navigation */}
+        <aside
+          className={`hidden lg:flex flex-col shrink-0 self-start bg-white border-r border-slate-200 sticky top-16 h-[calc(100vh-4rem)] transition-[width] duration-200 ${
+            sidebarCollapsed ? 'w-20' : 'w-72'
+          }`}
+        >
+          <nav className="flex-1 overflow-y-auto flex flex-col gap-1 px-3 py-5">
+            {navItems.map((item) => {
+              const Icon = item.icon;
+              const isActive = activeTab === item.key;
+              return (
+                <button
+                  key={item.key}
+                  onClick={() => setActiveTab(item.key)}
+                  title={sidebarCollapsed ? item.label : undefined}
+                  className={`w-full flex items-center gap-3 py-3 rounded-xl text-sm font-semibold transition cursor-pointer text-left relative ${
+                    sidebarCollapsed ? 'justify-center px-0' : 'px-4'
+                  } ${
+                    isActive
+                      ? 'bg-rose-50 text-rose-600'
+                      : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                  }`}
+                >
+                  <Icon className={`w-5 h-5 shrink-0 ${isActive ? 'text-rose-500' : 'text-slate-400'}`} />
+                  {!sidebarCollapsed && <span className="flex-1 truncate">{item.label}</span>}
+                  {item.badge > 0 &&
+                    (sidebarCollapsed ? (
+                      <span
+                        className={`absolute top-2 right-3.5 w-2 h-2 rounded-full ${
+                          item.badgeClass.includes('amber') ? 'bg-amber-400' : 'bg-rose-500'
+                        }`}
+                      />
+                    ) : (
+                      <span className={`text-[10px] font-black px-1.5 py-0.5 rounded-full ${item.badgeClass}`}>
+                        {item.badge}
+                      </span>
+                    ))}
+                </button>
+              );
+            })}
+          </nav>
+
+          <div className="border-t border-slate-200 px-3 py-3 flex flex-col gap-1">
+            <button
+              id="admin-logout-btn"
+              onClick={handleLogout}
+              title={sidebarCollapsed ? 'Đăng xuất' : undefined}
+              className={`w-full flex items-center gap-3 py-2.5 rounded-xl text-sm font-semibold text-slate-600 hover:bg-rose-50 hover:text-rose-600 transition cursor-pointer ${
+                sidebarCollapsed ? 'justify-center px-0' : 'px-4'
+              }`}
+            >
+              <LogOut className="w-5 h-5 shrink-0 text-slate-400" />
+              {!sidebarCollapsed && <span className="truncate">Đăng xuất</span>}
+            </button>
+
+          </div>
+
+          {/* Nút tròn thu gọn / mở rộng gắn ở mép phải sidebar */}
+          <button
+            onClick={toggleSidebar}
+            title={sidebarCollapsed ? 'Mở rộng thanh điều hướng' : 'Thu gọn thanh điều hướng'}
+            aria-label={sidebarCollapsed ? 'Mở rộng thanh điều hướng' : 'Thu gọn thanh điều hướng'}
+            className="absolute -right-3 top-7 w-6 h-6 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center text-slate-400 hover:text-rose-600 hover:border-rose-200 transition cursor-pointer z-10"
+          >
+            {sidebarCollapsed ? (
+              <ChevronRight className="w-3.5 h-3.5" />
+            ) : (
+              <ChevronLeft className="w-3.5 h-3.5" />
+            )}
+          </button>
+        </aside>
+
+        {/* Content Area */}
+        <main className="flex-1 min-w-0 px-4 sm:px-8 py-6 space-y-6">
+        {/* Mobile Navigation */}
+        <div className="lg:hidden flex flex-wrap items-center gap-2 border-b border-slate-200 pb-3">
+          {navItems.map((item) => {
+            const Icon = item.icon;
+            const isActive = activeTab === item.key;
+            return (
+              <button
+                key={item.key}
+                onClick={() => setActiveTab(item.key)}
+                className={`px-3.5 py-2 rounded-lg text-xs font-bold transition flex items-center gap-2 cursor-pointer ${
+                  isActive
+                    ? 'bg-rose-50 text-rose-600 border border-rose-100'
+                    : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
+                }`}
+              >
+                <Icon className="w-3.5 h-3.5" />
+                <span>{item.label}</span>
+                {item.badge > 0 && (
+                  <span className={`text-[10px] font-black px-1.5 py-0.5 rounded-full ${item.badgeClass}`}>
+                    {item.badge}
+                  </span>
+                )}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Page Heading */}
+        <div>
+          <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">{activeNav.title}</h1>
+          <p className="text-sm text-slate-500 mt-1">{activeNav.subtitle}</p>
+        </div>
+
         {/* Action Alert Banner */}
         {actionAlert && (
           <div
@@ -689,124 +829,76 @@ export default function AdminDashboardPage() {
           </div>
         )}
 
-        {/* Tab Switcher */}
-        <div className="flex flex-wrap items-center gap-2 border-b border-gray-300 pb-3">
-          <button
-            onClick={() => setActiveTab('overview')}
-            className={`px-4 py-2 rounded-lg text-xs font-bold transition flex items-center space-x-2 cursor-pointer ${
-              activeTab === 'overview'
-                ? 'bg-gray-900 text-white shadow'
-                : 'bg-white text-gray-700 hover:bg-gray-200 border border-gray-200'
-            }`}
-          >
-            <SlidersHorizontal className="w-3.5 h-3.5" />
-            <span>Tổng quan Dashboard</span>
-          </button>
-
-          <button
-            onClick={() => setActiveTab('privacy')}
-            className={`px-4 py-2 rounded-lg text-xs font-bold transition flex items-center space-x-2 relative cursor-pointer ${
-              activeTab === 'privacy'
-                ? 'bg-gray-900 text-white shadow'
-                : 'bg-white text-gray-700 hover:bg-gray-200 border border-gray-200'
-            }`}
-          >
-            <ShieldAlert className="w-3.5 h-3.5" />
-            <span>Yêu cầu ẩn SĐT</span>
-            {pendingCount > 0 && (
-              <span className="bg-red-500 text-white text-[10px] font-black px-1.5 py-0.2 rounded-full">
-                {pendingCount}
-              </span>
-            )}
-          </button>
-
-          <button
-            onClick={() => setActiveTab('data')}
-            className={`px-4 py-2 rounded-lg text-xs font-bold transition flex items-center space-x-2 cursor-pointer ${
-              activeTab === 'data'
-                ? 'bg-gray-900 text-white shadow'
-                : 'bg-white text-gray-700 hover:bg-gray-200 border border-gray-200'
-            }`}
-          >
-            <Database className="w-3.5 h-3.5" />
-            <span>Lọc & Tra cứu Doanh nghiệp</span>
-          </button>
-
-          <button
-            onClick={() => setActiveTab('contacts')}
-            className={`px-4 py-2 rounded-lg text-xs font-bold transition flex items-center space-x-2 relative cursor-pointer ${
-              activeTab === 'contacts'
-                ? 'bg-gray-900 text-white shadow'
-                : 'bg-white text-gray-700 hover:bg-gray-200 border border-gray-200'
-            }`}
-          >
-            <Mail className="w-3.5 h-3.5" />
-            <span>Hòm thư Liên hệ</span>
-            {unreadMessagesCount > 0 && (
-              <span className="bg-amber-500 text-gray-950 text-[10px] font-black px-1.5 py-0.2 rounded-full">
-                {unreadMessagesCount}
-              </span>
-            )}
-          </button>
-        </div>
-
         {/* TAB 1: OVERVIEW */}
         {activeTab === 'overview' && (
           <div className="space-y-6">
             {/* KPI Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-xs">
-                <div className="flex items-center justify-between text-gray-500 mb-2">
-                  <span className="text-xs font-medium uppercase tracking-wider">Cơ sở dữ liệu</span>
-                  <Database className="w-4 h-4 text-blue-600" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
+              <div className="bg-white border border-slate-200 rounded-2xl p-5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-11 h-11 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center shrink-0">
+                    <Database className="w-5 h-5" />
+                  </div>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 leading-tight">
+                    Cơ sở dữ liệu
+                  </span>
                 </div>
-                <div className="text-2xl font-black text-gray-900 font-mono">2,150,890+</div>
-                <div className="text-[11px] text-emerald-600 font-semibold mt-1 flex items-center space-x-1">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-ping" />
-                  <span>Kết nối trực tiếp Cổng Thuế Quốc gia</span>
+                <div className="text-3xl font-black text-slate-900">
+                  {crawlerStats.total.toLocaleString('vi-VN')}
+                </div>
+                <div className="text-[11px] text-emerald-600 font-semibold mt-2">
+                  Doanh nghiệp đang có trong kho dữ liệu
                 </div>
               </div>
 
-              <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-xs">
-                <div className="flex items-center justify-between text-gray-500 mb-2">
-                  <span className="text-xs font-medium uppercase tracking-wider">Yêu cầu ẩn SĐT</span>
-                  <ShieldAlert className="w-4 h-4 text-amber-600" />
-                </div>
-                <div className="text-2xl font-black text-amber-700 font-mono">
-                  {privacyRequests.length}{' '}
-                  <span className="text-xs font-normal text-gray-500">
-                    ({pendingCount} chờ duyệt)
+              <div className="bg-white border border-slate-200 rounded-2xl p-5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-11 h-11 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center shrink-0">
+                    <ShieldAlert className="w-5 h-5" />
+                  </div>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 leading-tight">
+                    Yêu cầu ẩn SĐT
                   </span>
                 </div>
-                <div className="text-[11px] text-gray-500 mt-1">
+                <div className="text-3xl font-black text-amber-600">
+                  {privacyRequests.length}{' '}
+                  <span className="text-xs font-normal text-slate-500">({pendingCount} chờ duyệt)</span>
+                </div>
+                <div className="text-[11px] text-slate-500 mt-2">
                   Đã duyệt: {privacyRequests.filter((r) => r.status === 'approved').length} &bull; Từ chối:{' '}
                   {privacyRequests.filter((r) => r.status === 'rejected').length}
                 </div>
               </div>
 
-              <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-xs">
-                <div className="flex items-center justify-between text-gray-500 mb-2">
-                  <span className="text-xs font-medium uppercase tracking-wider">SĐT Đang Ẩn</span>
-                  <PhoneOff className="w-4 h-4 text-red-600" />
+              <div className="bg-white border border-slate-200 rounded-2xl p-5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-11 h-11 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center shrink-0">
+                    <PhoneOff className="w-5 h-5" />
+                  </div>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 leading-tight">
+                    SĐT đang ẩn
+                  </span>
                 </div>
-                <div className="text-2xl font-black text-red-700 font-mono">{totalHiddenCount}</div>
-                <div className="text-[11px] text-gray-500 mt-1">
+                <div className="text-3xl font-black text-rose-600">{totalHiddenCount}</div>
+                <div className="text-[11px] text-slate-500 mt-2">
                   Bảo vệ theo yêu cầu của doanh nghiệp
                 </div>
               </div>
 
-              <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-xs">
-                <div className="flex items-center justify-between text-gray-500 mb-2">
-                  <span className="text-xs font-medium uppercase tracking-wider">Tin nhắn liên hệ</span>
-                  <Mail className="w-4 h-4 text-green-600" />
-                </div>
-                <div className="text-2xl font-black text-gray-900 font-mono">
-                  {contactMessages.length}{' '}
-                  <span className="text-xs font-normal text-gray-500">
-                    ({unreadMessagesCount} chưa đọc)
+              <div className="bg-white border border-slate-200 rounded-2xl p-5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-11 h-11 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 leading-tight">
+                    Tin nhắn liên hệ
                   </span>
                 </div>
-                <div className="text-[11px] text-gray-500 mt-1">
+                <div className="text-3xl font-black text-slate-900">
+                  {contactMessages.length}{' '}
+                  <span className="text-xs font-normal text-slate-500">({unreadMessagesCount} chưa đọc)</span>
+                </div>
+                <div className="text-[11px] text-slate-500 mt-2">
                   Phản hồi thắc mắc, đóng góp ý kiến
                 </div>
               </div>
@@ -1538,9 +1630,13 @@ export default function AdminDashboardPage() {
                           </td>
                           <td className="px-4 py-3 text-gray-700">{c.representative || 'Đang cập nhật'}</td>
                           <td className="px-4 py-3 whitespace-nowrap">
-                            <span className="font-mono text-gray-700 bg-gray-100 px-2 py-0.5 rounded text-[11px] font-medium border border-gray-200">
-                              {c.startDate || c.registrationDate || getCompanyEstablishedDate(c)}
-                            </span>
+                            {c.startDate || c.registrationDate ? (
+                              <span className="font-mono text-gray-700 bg-gray-100 px-2 py-0.5 rounded text-[11px] font-medium border border-gray-200">
+                                {c.startDate || c.registrationDate}
+                              </span>
+                            ) : (
+                              <span className="text-slate-400 italic text-[11px]">Chưa có</span>
+                            )}
                           </td>
                           <td className="px-4 py-3 text-gray-600 min-w-64">{c.address || c.province || 'Đang cập nhật'}</td>
                           <td className="px-4 py-3">
@@ -1762,6 +1858,7 @@ export default function AdminDashboardPage() {
             </div>
           </div>
         )}
+        </main>
       </div>
     </div>
   );

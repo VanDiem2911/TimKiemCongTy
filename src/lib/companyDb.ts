@@ -66,7 +66,7 @@ export async function findCompanyInDb(taxId: string): Promise<BusinessTaxInfo | 
 
     if (!doc || !doc.name) return null;
 
-    const effectiveDate = doc.startDate || doc.registrationDate || '2026-03-20';
+    const effectiveDate = doc.startDate || doc.registrationDate || '';
     const effectivePhone = doc.phone || doc.rawPhone;
 
     return {
@@ -75,15 +75,15 @@ export async function findCompanyInDb(taxId: string): Promise<BusinessTaxInfo | 
       representative: doc.representative,
       address: doc.address || 'Việt Nam',
       province: doc.province,
-      startDate: effectiveDate,
-      registrationDate: effectiveDate,
+      startDate: effectiveDate || undefined,
+      registrationDate: effectiveDate || undefined,
       phone: effectivePhone,
       rawPhone: doc.rawPhone || doc.phone,
-      status: doc.status || 'NNT đang hoạt động (đã được cấp GCN ĐKT)',
+      status: doc.status || '',
       mainIndustry: doc.mainIndustry || doc.industryName,
       mainIndustryCode: doc.mainIndustryCode || doc.industryCode,
-      industryName: doc.mainIndustry || doc.industryName || 'Kinh doanh thương mại & Dịch vụ',
-      industryCode: doc.mainIndustryCode || doc.industryCode || '4659',
+      industryName: doc.mainIndustry || doc.industryName || undefined,
+      industryCode: doc.mainIndustryCode || doc.industryCode || undefined,
       managedBy: doc.managedBy,
       internationalName: doc.internationalName,
       shortName: doc.shortName,
@@ -97,8 +97,8 @@ export async function findCompanyInDb(taxId: string): Promise<BusinessTaxInfo | 
         website: null,
         hasWebsite: false,
         websiteStatus: 'not_found',
-        aiScannedAt: '2026-10-08',
-        aiScanSummary: 'Thông tin xác thực từ CSDL Doanh nghiệp Quốc gia',
+        aiScannedAt: '',
+        aiScanSummary: '',
         verifiedByAi: false,
         sourcesChecked: ['MongoDB Atlas Enterprise Cloud']
       }
@@ -107,6 +107,22 @@ export async function findCompanyInDb(taxId: string): Promise<BusinessTaxInfo | 
     console.warn('[companyDb] findCompanyInDb error:', err);
     return null;
   }
+}
+
+/**
+ * Bỏ hết các trường rỗng trước khi ghi.
+ * Trình điều khiển MongoDB mặc định ghi `undefined` thành `null`, nên nếu giữ
+ * nguyên thì một bản ghi thưa tải về từ nguồn sẽ xóa mất số điện thoại / ngành
+ * nghề đã có sẵn trong kho. Chỉ ghi đè bằng dữ liệu thật sự có giá trị.
+ */
+function stripEmptyFields<T extends Record<string, unknown>>(doc: T): T {
+  for (const key of Object.keys(doc)) {
+    const value = doc[key];
+    if (value === undefined || value === null || value === '') {
+      delete doc[key];
+    }
+  }
+  return doc;
 }
 
 /**
@@ -124,7 +140,8 @@ export async function saveCompanyToDb(company: Partial<BusinessTaxInfo>): Promis
 
     const coll = db.collection<MongoCompanyDoc>('companies');
     const provSlug = (company as any).provinceSlug || getProvinceSlugFromInfo(company.address, company.province);
-    const dateVal = company.startDate || company.registrationDate || new Date().toISOString().slice(0, 10);
+    // Khong gan ngay hom nay khi chua biet ngay that - se hien thi sai ngay thanh lap
+    const dateVal = company.startDate || company.registrationDate || '';
 
     const doc: Partial<MongoCompanyDoc> = {
       id: cleanId,
@@ -138,7 +155,7 @@ export async function saveCompanyToDb(company: Partial<BusinessTaxInfo>): Promis
       registrationDate: dateVal,
       phone: company.phone && !company.phone.includes('ẩn') ? company.phone : (company.rawPhone || undefined),
       rawPhone: company.rawPhone || (company.phone && !company.phone.includes('ẩn') ? company.phone : undefined),
-      status: company.status || 'NNT đang hoạt động (đã được cấp GCN ĐKT)',
+      status: company.status || '',
       mainIndustry: company.mainIndustry || company.industryName,
       mainIndustryCode: company.mainIndustryCode || company.industryCode,
       managedBy: company.managedBy || undefined,
@@ -150,7 +167,7 @@ export async function saveCompanyToDb(company: Partial<BusinessTaxInfo>): Promis
 
     await coll.updateOne(
       { id: cleanId },
-      { $set: doc },
+      { $set: stripEmptyFields(doc) },
       { upsert: true }
     );
 
@@ -179,7 +196,7 @@ export async function saveCompaniesBatchToDb(companies: Partial<BusinessTaxInfo>
     const ops = valid.map((comp) => {
       const cleanId = normalizeTaxId(comp.id!);
       const provSlug = (comp as any).provinceSlug || getProvinceSlugFromInfo(comp.address, comp.province);
-      const dateVal = comp.startDate || comp.registrationDate || new Date().toISOString().slice(0, 10);
+      const dateVal = comp.startDate || comp.registrationDate || '';
 
       const doc: Partial<MongoCompanyDoc> = {
         id: cleanId,
@@ -193,7 +210,7 @@ export async function saveCompaniesBatchToDb(companies: Partial<BusinessTaxInfo>
         registrationDate: dateVal,
         phone: comp.phone && !comp.phone.includes('ẩn') ? comp.phone : (comp.rawPhone || undefined),
         rawPhone: comp.rawPhone || (comp.phone && !comp.phone.includes('ẩn') ? comp.phone : undefined),
-        status: comp.status || 'NNT đang hoạt động (đã được cấp GCN ĐKT)',
+        status: comp.status || '',
         mainIndustry: comp.mainIndustry || comp.industryName,
         mainIndustryCode: comp.mainIndustryCode || comp.industryCode,
         managedBy: comp.managedBy,
@@ -203,7 +220,7 @@ export async function saveCompaniesBatchToDb(companies: Partial<BusinessTaxInfo>
       return {
         updateOne: {
           filter: { id: cleanId },
-          update: { $set: doc },
+          update: { $set: stripEmptyFields(doc) },
           upsert: true
         }
       };
@@ -215,6 +232,53 @@ export async function saveCompaniesBatchToDb(companies: Partial<BusinessTaxInfo>
     console.warn('[companyDb] saveCompaniesBatchToDb error:', err);
     return 0;
   }
+}
+
+/**
+ * Tra ngày thành lập và trạng thái của nhiều doanh nghiệp cùng lúc theo mã số thuế.
+ * Dùng để bổ sung cho danh sách lấy từ trang nguồn, vì trang nguồn không kèm
+ * hai thông tin này trong kết quả liệt kê.
+ */
+export interface CompanyFacts {
+  startDate?: string;
+  status?: string;
+}
+
+export async function getCompanyFactsByIds(ids: string[]): Promise<Map<string, CompanyFacts>> {
+  const result = new Map<string, CompanyFacts>();
+  if (!ids.length || !isMongoConfigured()) return result;
+
+  try {
+    const db = await getDb();
+    if (!db) return result;
+
+    const lookupIds = new Set<string>();
+    for (const id of ids) {
+      if (!id) continue;
+      lookupIds.add(id);
+      lookupIds.add(normalizeTaxId(id));
+    }
+
+    const docs = await db
+      .collection<MongoCompanyDoc>('companies')
+      .find(
+        { id: { $in: Array.from(lookupIds) } },
+        { projection: { id: 1, startDate: 1, status: 1, _id: 0 } }
+      )
+      .toArray();
+
+    for (const doc of docs) {
+      if (!doc.id) continue;
+      const facts: CompanyFacts = {};
+      if (typeof doc.startDate === 'string' && doc.startDate) facts.startDate = doc.startDate;
+      if (typeof doc.status === 'string' && doc.status) facts.status = doc.status;
+      if (facts.startDate || facts.status) result.set(doc.id, facts);
+    }
+  } catch (err) {
+    console.warn('[companyDb] getCompanyFactsByIds error:', err);
+  }
+
+  return result;
 }
 
 /**
@@ -274,7 +338,7 @@ export async function getCompaniesByProvinceFromDb(
       .toArray();
 
     const companies: BusinessTaxInfo[] = docs.map((doc) => {
-      const effDate = doc.startDate || doc.registrationDate || '2026-03-20';
+      const effDate = doc.startDate || doc.registrationDate || '';
       const effPhone = doc.phone || doc.rawPhone;
       return {
         id: doc.id,
@@ -282,14 +346,14 @@ export async function getCompaniesByProvinceFromDb(
         representative: doc.representative,
         address: doc.address || '',
         province: doc.province || targetName,
-        startDate: effDate,
-        registrationDate: effDate,
+        startDate: effDate || undefined,
+        registrationDate: effDate || undefined,
         phone: effPhone,
         rawPhone: doc.rawPhone || doc.phone,
-        status: doc.status || 'NNT đang hoạt động (đã được cấp GCN ĐKT)',
-        industryName: doc.mainIndustry || doc.industryName || 'Kinh doanh thương mại & Dịch vụ tổng hợp',
-        industryCode: doc.mainIndustryCode || doc.industryCode || '4659',
-        managedBy: doc.managedBy || `Chi cục Thuế ${targetName}`,
+        status: doc.status || '',
+        industryName: doc.mainIndustry || doc.industryName || undefined,
+        industryCode: doc.mainIndustryCode || doc.industryCode || undefined,
+        managedBy: doc.managedBy || undefined,
       };
     });
 
