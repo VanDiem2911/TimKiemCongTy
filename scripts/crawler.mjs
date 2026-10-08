@@ -17,6 +17,82 @@
 
 import fs from 'fs';
 import path from 'path';
+import { MongoClient } from 'mongodb';
+
+// Nạp biến môi trường từ .env.local để script chạy độc lập cũng kết nối được
+function loadEnvLocal() {
+  try {
+    const envPath = path.join(process.cwd(), '.env.local');
+    if (!fs.existsSync(envPath)) return;
+    for (const line of fs.readFileSync(envPath, 'utf-8').split(/\r?\n/)) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith('#')) continue;
+      const idx = trimmed.indexOf('=');
+      if (idx === -1) continue;
+      const key = trimmed.slice(0, idx).trim();
+      if (!process.env[key]) process.env[key] = trimmed.slice(idx + 1).trim();
+    }
+  } catch {}
+}
+loadEnvLocal();
+
+// Đẩy doanh nghiệp vừa cào thẳng vào MongoDB. Trước đây crawler chỉ ghi ra file
+// JSON, nên cào bao nhiêu thì kho MongoDB mà website dùng để tra cứu vẫn đứng yên.
+let mongoClient = null;
+async function getMongoCollection() {
+  const uri = process.env.MONGODB_URI;
+  if (!uri) return null;
+  try {
+    if (!mongoClient) {
+      mongoClient = new MongoClient(uri, { serverSelectionTimeoutMS: 8000 });
+      await mongoClient.connect();
+    }
+    return mongoClient.db(process.env.MONGODB_DB_NAME || 'timkiemcongty').collection('companies');
+  } catch (err) {
+    console.warn('⚠️ Không kết nối được MongoDB:', err?.message || err);
+    return null;
+  }
+}
+
+async function saveBatchToMongo(companies, provinceName, provinceSlug) {
+  if (!companies || companies.length === 0) return 0;
+  const coll = await getMongoCollection();
+  if (!coll) return 0;
+
+  try {
+    const ops = companies
+      .filter((c) => c?.id && c?.name)
+      .map((c) => {
+        const doc = {
+          id: String(c.id).replace(/[^0-9-]/g, ''),
+          name: String(c.name).trim(),
+          province: provinceName,
+          provinceSlug,
+          updatedAt: new Date(),
+        };
+        if (c.representative) doc.representative = String(c.representative).trim();
+        if (c.address) doc.address = String(c.address).trim();
+        if (c.slug) doc.slug = c.slug;
+        if (c.startDate) {
+          doc.startDate = c.startDate;
+          doc.registrationDate = c.startDate;
+        }
+        if (c.phone) doc.phone = c.phone;
+        if (c.status) doc.status = c.status;
+        if (c.mainIndustry) doc.mainIndustry = c.mainIndustry;
+        if (c.managedBy) doc.managedBy = c.managedBy;
+
+        return { updateOne: { filter: { id: doc.id }, update: { $set: doc }, upsert: true } };
+      });
+
+    if (ops.length === 0) return 0;
+    const res = await coll.bulkWrite(ops, { ordered: false });
+    return (res.upsertedCount || 0) + (res.modifiedCount || 0);
+  } catch (err) {
+    console.warn('⚠️ Lỗi khi lưu vào MongoDB:', err?.message || err);
+    return 0;
+  }
+}
 
 // 63 Tỉnh Thành Việt Nam với slug chính xác trên masothue
 export const ALL_PROVINCES = [
@@ -342,6 +418,10 @@ export async function runCrawler({
   const maxRounds = 50;
   let consecutive403 = 0;
 
+  // Tỉnh đã cào hết trang thì không hỏi lại nữa trong lượt chạy này
+  const finishedProvinces = new Set();
+  const MAX_PAGES_PER_PROVINCE = 2000;
+
   // Vòng lặp Round-Robin qua 63 tỉnh để phân bổ đồng đều
   while (currentTotal + newAdded < targetCount && round <= maxRounds) {
     if (shouldStop && shouldStop()) {
@@ -361,12 +441,23 @@ export async function runCrawler({
       if (currentTotal + newAdded >= targetCount) break;
 
       const currentPage = provPageMap.get(prov.slug) || 1;
-      const maxPagesForProv = Math.max(4, prov.weight * 12);
-      if (currentPage > maxPagesForProv) continue;
+      // Trước đây mỗi tỉnh bị chặn ở khoảng 12 trang, nên khi kho đã có vài trăm
+      // doanh nghiệp mỗi tỉnh thì trang bắt đầu vượt trần và tỉnh đó bị bỏ qua
+      // vĩnh viễn - cào mãi cũng không ra thêm. Nay chỉ dừng khi tỉnh đã hết
+      // trang thật sự (trang trả về rỗng), theo dõi bằng finishedProvinces.
+      if (finishedProvinces.has(prov.slug)) continue;
+      if (currentPage > MAX_PAGES_PER_PROVINCE) continue;
 
       try {
         const { status, companies } = await fetchProvincePage(prov.slug, currentPage);
         provPageMap.set(prov.slug, currentPage + 1);
+
+        if (status === 200 && companies.length === 0) {
+          // Trang hợp lệ nhưng không còn doanh nghiệp nào: tỉnh đã cào hết
+          finishedProvinces.add(prov.slug);
+          console.log(`[${prov.name}] Đã cào hết danh sách (dừng ở trang ${currentPage}).`);
+          continue;
+        }
 
         if (status === 200 && companies.length > 0) {
           consecutive403 = 0;
@@ -408,10 +499,17 @@ export async function runCrawler({
           // Lưu lũy tiến sau mỗi tỉnh để đảm bảo an toàn dữ liệu
           fs.writeFileSync(resolvedPath, JSON.stringify(existingData, null, 2), 'utf8');
 
+          // Đồng thời đẩy lên MongoDB để website tra cứu được ngay
+          const savedToDb = await saveBatchToMongo(companies, prov.name, prov.slug);
+          if (savedToDb > 0) {
+            console.log(`   └─ Đã đồng bộ ${savedToDb} DN lên MongoDB`);
+          }
+
           // Nghỉ điều độ 300-450ms tránh làm tải server & tránh rate limit
           await sleep(300 + Math.random() * 150);
         } else if (status === 404) {
           // Hết trang của tỉnh này
+          finishedProvinces.add(prov.slug);
           continue;
         } else {
           console.log(`[${prov.name}] Trang ${currentPage} trả về status ${status}`);
