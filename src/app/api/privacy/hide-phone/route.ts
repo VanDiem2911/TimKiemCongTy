@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { submitPrivacyRequest, isPhoneHidden } from '@/lib/privacyStore';
+import { submitPrivacyRequestAsync, isPhoneHidden } from '@/lib/privacyStore';
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const result = submitPrivacyRequest({
+    const result = await submitPrivacyRequestAsync({
       taxId: String(taxId).trim(),
       companyName: String(companyName || 'Doanh nghiệp').trim(),
       phone: String(phone || '').trim(),

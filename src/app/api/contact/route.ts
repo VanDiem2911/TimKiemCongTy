@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { submitContact } from '@/lib/privacyStore';
+import { submitContactAsync } from '@/lib/privacyStore';
 
 export async function POST(request: NextRequest) {
   try {
@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
 
     const subject = taxId ? `Liên hệ về MST ${taxId}` : 'Góp ý / Yêu cầu hỗ trợ';
 
-    const result = submitContact({
+    const result = await submitContactAsync({
       name: String(name).trim(),
       email: String(email).trim(),
       phone: phone ? String(phone).trim() : undefined,

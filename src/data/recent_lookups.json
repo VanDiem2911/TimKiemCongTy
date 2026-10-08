@@ -1,5 +1,15 @@
 [
   {
+    "id": "0300588569",
+    "name": "CÔNG TY CỔ PHẦN SỮA VIỆT NAM",
+    "representative": "MAI KIỀU LIÊN",
+    "address": "Số 10, Đường Tân Trào, Phường Tân Phú, Quận 7, Thành phố Hồ Chí Minh",
+    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
+    "province": "TP Hồ Chí Minh",
+    "registrationDate": "2003-11-20",
+    "lastUpdated": "Vừa xong"
+  },
+  {
     "id": "0101248141",
     "name": "CÔNG TY CỔ PHẦN FPT",
     "representative": "NGUYỄN VĂN KHOA",
@@ -205,15 +215,6 @@
     "status": "Đang hoạt động",
     "province": "Thành phố Hồ Chí Minh",
     "startDate": "2026-09-28",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0300588569",
-    "name": "CÔNG TY CỔ PHẦN SỮA VIỆT NAM",
-    "representative": "MAI KIỀU LIÊN",
-    "address": "10 Tân Trào, Phường Tân Mỹ, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
-    "province": "Hồ Chí Minh",
     "lastUpdated": "Vừa xong"
   },
   {

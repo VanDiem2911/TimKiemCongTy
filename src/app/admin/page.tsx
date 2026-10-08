@@ -288,9 +288,20 @@ export default function AdminDashboardPage() {
       if (res.ok) {
         const json = await res.json();
         if (json.success && json.data) {
+          let messages = json.data.contactMessages || [];
+          try {
+            if (typeof window !== 'undefined') {
+              const saved = localStorage.getItem('admin_msg_status_overrides');
+              if (saved) {
+                const overrides = JSON.parse(saved);
+                messages = messages.map((m: any) => overrides[m.id] ? { ...m, status: overrides[m.id] } : m);
+              }
+            }
+          } catch {}
+
           setPrivacyRequests(json.data.privacyRequests || []);
           setHiddenPhones(json.data.hiddenPhones || {});
-          setContactMessages(json.data.contactMessages || []);
+          setContactMessages(messages);
         }
       }
     } catch (err) {
@@ -380,6 +391,21 @@ export default function AdminDashboardPage() {
   };
 
   const handleUpdateMessageStatus = async (msgId: string, status: 'unread' | 'read' | 'replied') => {
+    // 1. Cập nhật giao diện ngay lập tức (Optimistic UI)
+    setContactMessages((prev) =>
+      prev.map((m) => (m.id === msgId ? { ...m, status } : m))
+    );
+
+    // 2. Lưu vào localStorage để không bao giờ bị mất trạng thái
+    try {
+      if (typeof window !== 'undefined') {
+        const saved = JSON.parse(localStorage.getItem('admin_msg_status_overrides') || '{}');
+        saved[msgId] = status;
+        localStorage.setItem('admin_msg_status_overrides', JSON.stringify(saved));
+      }
+    } catch {}
+
+    // 3. Gửi đồng bộ lên máy chủ / MongoDB
     try {
       const res = await fetch('/api/admin', {
         method: 'POST',
@@ -387,8 +413,7 @@ export default function AdminDashboardPage() {
         body: JSON.stringify({ action: 'update_message_status', msgId, status }),
       });
       if (res.ok) {
-        showAlert('Đã cập nhật trạng thái tin nhắn.');
-        loadAdminData();
+        showAlert('Đã cập nhật trạng thái tin nhắn thành công!');
       }
     } catch (err) {
       console.error(err);

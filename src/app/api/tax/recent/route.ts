@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getRecentLookups, recordRecentLookup } from '@/lib/recentLookups';
+import { getRecentLookupsAsync, recordRecentLookupAsync } from '@/lib/recentLookups';
 
 export async function GET() {
-  const list = getRecentLookups();
+  const list = await getRecentLookupsAsync();
   return NextResponse.json({
     success: true,
     data: list
@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     if (body && body.company && body.company.id && body.company.name) {
-      const updated = recordRecentLookup(body.company);
+      const updated = await recordRecentLookupAsync(body.company);
       return NextResponse.json({
         success: true,
         data: updated

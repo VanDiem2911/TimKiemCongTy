@@ -1,19 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server';
 import {
-  getAdminStore,
-  saveAdminStore,
-  approvePrivacyRequest,
-  rejectPrivacyRequest,
-  restoreCompanyPhone,
-  toggleHiddenPhone,
-  updateContactStatus,
+  getAdminStoreAsync,
+  saveAdminStoreAsync,
+  approvePrivacyRequestAsync,
+  rejectPrivacyRequestAsync,
+  restoreCompanyPhoneAsync,
+  toggleHiddenPhoneAsync,
+  updateContactStatusAsync,
 } from '@/lib/privacyStore';
 import { clearProfileCache } from '@/lib/taxEngine';
 import { clearAiScanCache } from '@/lib/companyAiScanner';
 
 export async function GET() {
   try {
-    const store = getAdminStore();
+    const store = await getAdminStoreAsync();
     return NextResponse.json({ success: true, data: store });
   } catch (err) {
     console.error('Lỗi khi lấy dữ liệu admin:', err);
@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
     const { action } = body;
 
     if (action === 'approve') {
-      const ok = approvePrivacyRequest(body.requestId);
+      const ok = await approvePrivacyRequestAsync(body.requestId);
       if (body.taxId) {
         clearProfileCache(body.taxId);
         clearAiScanCache(body.taxId);
@@ -36,36 +36,36 @@ export async function POST(request: NextRequest) {
     }
 
     if (action === 'reject') {
-      const ok = rejectPrivacyRequest(body.requestId);
+      const ok = await rejectPrivacyRequestAsync(body.requestId);
       return NextResponse.json({ success: ok });
     }
 
     if (action === 'restore_phone') {
-      const res = restoreCompanyPhone(body.taxId, body.requestId);
+      const res = await restoreCompanyPhoneAsync(body.taxId, body.requestId);
       clearProfileCache(body.taxId);
       clearAiScanCache(body.taxId);
       return NextResponse.json({ success: res.success, phone: res.phone });
     }
 
     if (action === 'toggle_phone') {
-      const ok = toggleHiddenPhone(body.taxId, body.phone || '', body.reason);
+      const ok = await toggleHiddenPhoneAsync(body.taxId, body.phone || '', body.reason);
       clearProfileCache(body.taxId);
       clearAiScanCache(body.taxId);
       return NextResponse.json({ success: ok });
     }
 
     if (action === 'update_message_status') {
-      const ok = updateContactStatus(body.msgId, body.status);
+      const ok = await updateContactStatusAsync(body.msgId, body.status);
       return NextResponse.json({ success: ok });
     }
 
     if (action === 'update_settings') {
-      const store = getAdminStore();
+      const store = await getAdminStoreAsync();
       store.settings = {
         ...store.settings,
         ...body.settings,
       };
-      const ok = saveAdminStore(store);
+      const ok = await saveAdminStoreAsync(store);
       return NextResponse.json({ success: ok, settings: store.settings });
     }
 

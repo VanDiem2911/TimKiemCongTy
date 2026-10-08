@@ -2,8 +2,10 @@ import fs from 'fs';
 import path from 'path';
 import { BusinessTaxInfo } from '@/types/tax';
 import { INITIAL_COMPANIES, normalizeTaxId } from '@/lib/constants';
+import { getDb, isMongoConfigured } from '@/lib/mongodb';
 
 const DATA_FILE = path.join(process.cwd(), 'src', 'data', 'recent_lookups.json');
+const TMP_DATA_FILE = path.join('/tmp', 'recent_lookups.json');
 
 // In-memory store
 let RECENT_LOOKUPS: BusinessTaxInfo[] = [];
@@ -19,6 +21,19 @@ function getInitialSeed(): BusinessTaxInfo[] {
 
 // Load from disk on startup
 function loadFromDisk(): BusinessTaxInfo[] {
+  try {
+    if (fs.existsSync(TMP_DATA_FILE)) {
+      const raw = fs.readFileSync(TMP_DATA_FILE, 'utf-8');
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        return parsed.map((item: BusinessTaxInfo) => ({
+          ...item,
+          id: normalizeTaxId(item.id)
+        }));
+      }
+    }
+  } catch {}
+
   try {
     if (fs.existsSync(DATA_FILE)) {
       const raw = fs.readFileSync(DATA_FILE, 'utf-8');
@@ -37,19 +52,22 @@ function loadFromDisk(): BusinessTaxInfo[] {
 }
 
 function saveToDisk(list: BusinessTaxInfo[]) {
+  const normalizedList = list.slice(0, 50).map(c => ({
+    ...c,
+    id: normalizeTaxId(c.id)
+  }));
+
   try {
     const dir = path.dirname(DATA_FILE);
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-    const normalizedList = list.slice(0, 50).map(c => ({
-      ...c,
-      id: normalizeTaxId(c.id)
-    }));
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(DATA_FILE, JSON.stringify(normalizedList, null, 2), 'utf-8');
-  } catch (err) {
-    console.warn('Không thể ghi file recent_lookups.json:', err);
-  }
+  } catch {}
+
+  try {
+    const tmpDir = path.dirname(TMP_DATA_FILE);
+    if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir, { recursive: true });
+    fs.writeFileSync(TMP_DATA_FILE, JSON.stringify(normalizedList, null, 2), 'utf-8');
+  } catch {}
 }
 
 // Initialize memory cache
@@ -60,6 +78,40 @@ export function getRecentLookups(): BusinessTaxInfo[] {
     RECENT_LOOKUPS = loadFromDisk();
   }
   return RECENT_LOOKUPS;
+}
+
+export async function getRecentLookupsAsync(): Promise<BusinessTaxInfo[]> {
+  const localList = getRecentLookups();
+  if (!isMongoConfigured()) return localList;
+
+  try {
+    const db = await getDb();
+    if (!db) return localList;
+
+    const coll = db.collection<BusinessTaxInfo & { updatedAt?: Date }>('recent_lookups');
+    const docs = await coll.find({}, { projection: { _id: 0 } }).sort({ updatedAt: -1 }).limit(30).toArray();
+    if (docs.length > 0) {
+      RECENT_LOOKUPS = docs.map(d => ({
+        id: normalizeTaxId(d.id),
+        name: d.name,
+        representative: d.representative,
+        address: d.address,
+        status: d.status,
+        province: d.province,
+        startDate: d.startDate,
+        registrationDate: d.registrationDate,
+        lastUpdated: d.lastUpdated || 'Gần đây'
+      }));
+      return RECENT_LOOKUPS;
+    } else if (localList.length > 0) {
+      // Seed initial data to MongoDB
+      await coll.insertMany(localList.map((c, i) => ({ ...c, updatedAt: new Date(Date.now() - i * 60000) })) as any);
+    }
+  } catch (err) {
+    console.warn('MongoDB getRecentLookupsAsync error:', err);
+  }
+
+  return localList;
 }
 
 export function recordRecentLookup(company: Partial<BusinessTaxInfo> & { id: string; name: string }): BusinessTaxInfo[] {
@@ -81,7 +133,6 @@ export function recordRecentLookup(company: Partial<BusinessTaxInfo> & { id: str
   };
 
   if (existingIndex !== -1) {
-    // Preserve existing rich details if new object is minimal
     const old = RECENT_LOOKUPS[existingIndex];
     fullCompany.representative = company.representative || old.representative || 'Đang cập nhật';
     fullCompany.address = company.address || old.address || 'Việt Nam';
@@ -90,14 +141,37 @@ export function recordRecentLookup(company: Partial<BusinessTaxInfo> & { id: str
     RECENT_LOOKUPS.splice(existingIndex, 1);
   }
 
-  // Prepend to the very front
   RECENT_LOOKUPS.unshift(fullCompany);
 
-  // Keep up to 50 recent companies
   if (RECENT_LOOKUPS.length > 50) {
     RECENT_LOOKUPS = RECENT_LOOKUPS.slice(0, 50);
   }
 
   saveToDisk(RECENT_LOOKUPS);
+  recordRecentLookupAsync(company).catch(() => {});
   return RECENT_LOOKUPS;
+}
+
+export async function recordRecentLookupAsync(company: Partial<BusinessTaxInfo> & { id: string; name: string }): Promise<BusinessTaxInfo[]> {
+  const updatedList = recordRecentLookup(company);
+  if (!isMongoConfigured()) return updatedList;
+
+  try {
+    const db = await getDb();
+    if (!db) return updatedList;
+
+    const cleanId = normalizeTaxId(company.id.trim());
+    const topItem = updatedList.find(c => c.id === cleanId);
+    if (topItem) {
+      await db.collection('recent_lookups').updateOne(
+        { id: cleanId },
+        { $set: { ...topItem, updatedAt: new Date() } },
+        { upsert: true }
+      );
+    }
+  } catch (err) {
+    console.warn('MongoDB recordRecentLookupAsync error:', err);
+  }
+
+  return updatedList;
 }
