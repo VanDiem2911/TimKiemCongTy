@@ -50966,7 +50966,14 @@
       "representative": "VŨ TÂN TIẾN",
       "address": "Số 14/6/165 Kênh Dương, Phường Lê Chân, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202370684-cong-ty-tnhh-van-tai-bien-tien-thom",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-09-25",
+      "phone": "096 6305677",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Hải Phòng",
+      "mainIndustry": "Vận tải hàng hóa ven biển và viễn dương",
+      "internationalName": "TIEN THOM SHIPPING COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T07:42:56.461Z"
     },
     {
       "id": "0202370564",
@@ -50990,7 +50997,13 @@
       "representative": "NGUYỄN SỸ KHOÁT",
       "address": "Thôn Bầu, Phường Việt Hòa, Thành phố Hải Phòng, Việt Nam",
       "slug": "0801507521-cong-ty-tnhh-van-tai-knt",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-09-25",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 thành phố Hải Phòng",
+      "mainIndustry": "Vận tải hành khách đường bộ trong nội thành, ngoại thành (trừ vận tải bằng xe buýt)",
+      "internationalName": "KNT TRANSPORT COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T07:43:37.377Z"
     },
     {
       "id": "3602427901-008",
