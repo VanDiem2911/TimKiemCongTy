@@ -127,7 +127,7 @@ export default function AdminDashboardPage() {
   const [manualPhone, setManualPhone] = useState('');
 
   // Contact tab filter
-  const [contactFilter, setContactFilter] = useState<'all' | 'unread' | 'read' | 'replied'>('all');
+  const [contactFilter, setContactFilter] = useState<'all' | 'unread' | 'read'>('all');
 
   // Crawler State
   const [crawlerStats, setCrawlerStats] = useState<{
@@ -439,6 +439,8 @@ export default function AdminDashboardPage() {
   const filteredContacts = useMemo(() => {
     return contactMessages.filter((msg) => {
       if (contactFilter === 'all') return true;
+      if (contactFilter === 'unread') return msg.status === 'unread';
+      if (contactFilter === 'read') return msg.status !== 'unread';
       return msg.status === contactFilter;
     });
   }, [contactMessages, contactFilter]);
@@ -1676,7 +1678,7 @@ export default function AdminDashboardPage() {
               </div>
 
               <div className="flex items-center space-x-1 bg-gray-100 p-1 rounded-lg text-xs">
-                {(['all', 'unread', 'read', 'replied'] as const).map((st) => (
+                {(['all', 'unread', 'read'] as const).map((st) => (
                   <button
                     key={st}
                     onClick={() => setContactFilter(st)}
@@ -1690,9 +1692,7 @@ export default function AdminDashboardPage() {
                       ? `Tất cả (${contactMessages.length})`
                       : st === 'unread'
                       ? `Chưa đọc (${unreadMessagesCount})`
-                      : st === 'read'
-                      ? `Đã đọc`
-                      : `Đã phản hồi`}
+                      : `Đã đọc (${contactMessages.filter((m) => m.status !== 'unread').length})`}
                   </button>
                 ))}
               </div>
@@ -1724,12 +1724,10 @@ export default function AdminDashboardPage() {
                           className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase ${
                             msg.status === 'unread'
                               ? 'bg-amber-100 text-amber-800'
-                              : msg.status === 'replied'
-                              ? 'bg-emerald-100 text-emerald-800'
-                              : 'bg-gray-100 text-gray-700'
+                              : 'bg-emerald-100 text-emerald-800'
                           }`}
                         >
-                          {msg.status === 'unread' ? 'Chưa đọc' : msg.status === 'replied' ? 'Đã phản hồi' : 'Đã đọc'}
+                          {msg.status === 'unread' ? 'Chưa đọc' : 'Đã đọc'}
                         </span>
                       </div>
                     </div>
@@ -1740,22 +1738,23 @@ export default function AdminDashboardPage() {
                     </p>
 
                     <div className="flex items-center justify-end space-x-2 pt-1">
-                      {msg.status === 'unread' && (
+                      {msg.status === 'unread' ? (
                         <button
+                          type="button"
                           onClick={() => handleUpdateMessageStatus(msg.id, 'read')}
-                          className="px-2.5 py-1 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded font-semibold transition cursor-pointer"
+                          className="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded font-medium transition cursor-pointer text-xs"
                         >
                           Đánh dấu đã đọc
                         </button>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={() => handleUpdateMessageStatus(msg.id, 'unread')}
+                          className="px-3 py-1 bg-gray-100 hover:bg-gray-200 text-gray-700 border border-gray-200 rounded font-medium transition cursor-pointer text-xs"
+                        >
+                          Đánh dấu chưa đọc
+                        </button>
                       )}
-                      <a
-                        href={`mailto:${msg.email}?subject=Phản hồi từ Tìm Kiếm Công Ty về: ${encodeURIComponent(msg.subject)}`}
-                        onClick={() => handleUpdateMessageStatus(msg.id, 'replied')}
-                        className="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded font-bold transition flex items-center space-x-1 cursor-pointer"
-                      >
-                        <Mail className="w-3 h-3" />
-                        <span>Gửi email phản hồi</span>
-                      </a>
                     </div>
                   </div>
                 ))
