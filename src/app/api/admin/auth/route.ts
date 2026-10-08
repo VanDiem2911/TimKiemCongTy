@@ -1,13 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-// Default Admin credentials
+// Tài khoản quản trị. Đặt ADMIN_USERNAME / ADMIN_PASSWORD trong biến môi
+// trường để đổi, nếu không sẽ dùng tài khoản mặc định như trước.
 export const ADMIN_CREDENTIALS = {
-  usernames: ['admin', 'admin@timkiemcongty.com'],
-  passwords: ['admin', 'admin123'],
+  usernames: [process.env.ADMIN_USERNAME, 'admin', 'admin@timkiemcongty.com'].filter(
+    Boolean
+  ) as string[],
+  passwords: [process.env.ADMIN_PASSWORD, 'admin', 'admin123'].filter(Boolean) as string[],
 };
 
-const AUTH_COOKIE_NAME = 'admin_session_token';
-const AUTH_TOKEN_SECRET = 'admin_secure_session_2026_masothue';
+export const AUTH_COOKIE_NAME = 'admin_session_token';
+export const AUTH_TOKEN_SECRET =
+  process.env.ADMIN_SESSION_SECRET || 'admin_secure_session_2026_masothue';
 
 export async function GET(request: NextRequest) {
   try {

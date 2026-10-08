@@ -8,7 +8,6 @@ import { getCompanySlug, normalizeTaxId, formatEstablishedDate, getCompanyStatus
 import {
   MapPin,
   ShieldCheck,
-  Hash,
   User,
   Building2,
   ChevronLeft,
@@ -20,7 +19,6 @@ import {
   Loader2,
   Calendar,
   AlertTriangle,
-  FileText,
   LayoutGrid
 } from 'lucide-react';
 

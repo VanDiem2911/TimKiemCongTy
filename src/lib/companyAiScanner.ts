@@ -80,7 +80,7 @@ function extractCleanBrand(company: {
   if (company.shortName && company.shortName.trim().length >= 2) {
     return company.shortName.trim();
   }
-  let cleaned = company.name
+  const cleaned = company.name
     .replace(/^(CÔNG TY TNHH MTV|CÔNG TY TNHH MỘT THÀNH VIÊN|CÔNG TY TNHH|CÔNG TY CỔ PHẦN|CÔNG TY CP|TẬP ĐOÀN CÔNG NGHIỆP -|TẬP ĐOÀN|TỔNG CÔNG TY|NGÂN HÀNG TMCP|NGÂN HÀNG)\s+/i, '')
     .replace(/\s+(CỔ PHẦN|TNHH|JSC|CO\.,?LTD|VIỆT NAM)$/i, '')
     .trim();

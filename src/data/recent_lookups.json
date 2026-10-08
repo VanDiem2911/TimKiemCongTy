@@ -10,344 +10,14 @@
     "lastUpdated": "Vừa xong"
   },
   {
-    "id": "1301109676-001",
-    "name": "CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ XÂY DỰNG BẢO GIA PHÚ - CHI NHÁNH 1",
-    "representative": "ĐẶNG LÂM QUỐC BẢO",
-    "address": "207D Nguyễn Đình Chiểu, Xã Phú Hưng, Thành phố Bến Tre, Tỉnh Bến Tre, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Tỉnh Bến Tre",
-    "startDate": "2025-06-18",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "3502537890-001",
-    "name": "CHI NHÁNH CÔNG TY TNHH GIÁO DỤC VÀ PHÁT TRIỂN KỸ NĂNG THIÊN HÀ",
-    "representative": "ĐỖ THỊ BÍCH SƠN",
-    "address": "Ấp 4, Xã Hòa Hội, Huyện Xuyên Mộc, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
-    "status": "Ngừng hoạt động",
-    "province": "Bà Rịa - Vũng Tàu",
-    "startDate": "2025-05-13",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0001301810",
-    "name": "CÔNG TY TNHH SẢN XUẤT ĐÁ XUẤT KHẨU VÀ DỊCH VỤ - THƯƠNG MẠI HOÀNG NHỰT",
-    "representative": "NGUYỄN HOÀNG NHỰT",
-    "address": "Khu I, ấp Phước Long, Xã Tân Hoà, Thị xã Phú Mỹ, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Tỉnh Bà Rịa - Vũng Tàu",
-    "startDate": "",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0319737711",
-    "name": "CÔNG TY TNHH NỘI THẤT NEWHOMESS",
-    "representative": "PHẠM BÌNH NGHI",
-    "address": "Số 79 Đường Số 711a KDC Đại Học Bách Khoa, Phường Long Trường, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Thành phố Hồ Chí Minh",
-    "startDate": "",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0319732840",
-    "name": "CÔNG TY CỔ PHẦN VGD COMMUNITY",
-    "representative": "LA THÀNH PHÁT",
-    "address": "Số 92 Nguyễn Công Trứ, Phường Sài Gòn, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Thành phố Hồ Chí Minh",
-    "startDate": "2026-10-02",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0319737207",
-    "name": "CÔNG TY TNHH NỘI THẤT HÙNG NGỌC PHÁT",
-    "representative": "NGUYỄN THỊ HỒNG THẮM",
-    "address": "Số 236 Ngô Gia Tự, Phường Vườn Lài, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Thành phố Hồ Chí Minh",
-    "startDate": "2026-10-07",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0319737567",
-    "name": "CÔNG TY TNHH DOMUS",
-    "representative": "LÊ NGUYỄN MINH THƯ",
-    "address": "Số 17 đường 7c1, Phường An Khánh, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Thành phố Hồ Chí Minh",
-    "startDate": "2026-10-07",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0319736147",
-    "name": "CÔNG TY TNHH KIẾN TRÚC VÀ XÂY DỰNG INFINITY",
-    "representative": "LÊ QUỐC VIỆT",
-    "address": "150Bis Lê Thị Hồng Gấm, Phường Bến Thành, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
-    "province": "Hồ Chí Minh",
-    "startDate": "",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0319424885-001",
-    "name": "VĂN PHÒNG ĐẠI DIỆN - CÔNG TY TNHH KIẾN TRÚC VÀ NỘI THẤT KHÁNH ANH",
-    "representative": "DIỆP KHÁNH",
-    "address": "4A Lý Văn Phức, Phường Tân Định, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Thành phố Hồ Chí Minh",
-    "startDate": "2026-10-07",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "3502548821",
-    "name": "CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÁT TRIỂN DU LỊCH BHN VŨNG TÀU",
-    "representative": "PHẠM HOÀNG ANH",
-    "address": "669/19/27 Nguyễn An Ninh, Phường Nguyễn An Ninh, Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Bà Rịa - Vũng Tàu",
-    "startDate": "2025-06-10",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0313623595-002",
-    "name": "CHI NHÁNH - CÔNG TY TNHH MỘT THÀNH VIÊN SẢN XUẤT VÀ THƯƠNG MẠI HƯƠNG THIÊN ÂN",
-    "representative": "NGUYỄN ĐÌNH THÀNH",
-    "address": "Số 635/10 Tỉnh Lộ 43, Phường Tam Bình, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Thành phố Hồ Chí Minh",
-    "startDate": "",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0319736517",
-    "name": "CÔNG TY TNHH PHÂN PHỐI NEXALUX",
-    "representative": "TRƯƠNG THỊ KIM ANH",
-    "address": "Tầng 3, Tòa nhà The District, 159C đường Đề Thám, Phường Cầu Ông Lãnh, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Thành phố Hồ Chí Minh",
-    "startDate": "2026-10-07",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "3703519147",
-    "name": "CÔNG TY TNHH THƯƠNG MẠI HẰNG THỊNH ĐẠT",
-    "representative": "TRƯƠNG THỊ THƠ",
-    "address": "Số 36, Đường Số 6B, KDC Hiệp Thành 2, Khu Phố Phước An, Phường Phú Lợi, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "",
-    "province": "Hồ Chí Minh",
-    "startDate": "",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0319733594",
-    "name": "CÔNG TY TNHH TMDV GHK",
-    "representative": "NGUYỄN THỊ THUỲ LINH",
-    "address": "7/18A Trần Xuân Soạn, Phường Tân Hưng, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Thành phố Hồ Chí Minh",
-    "startDate": "2026-10-05",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0318567351-001",
-    "name": "VĂN PHÒNG ĐẠI DIỆN CÔNG TY CỔ PHẦN Y DƯỢC V & H",
-    "representative": "NGUYỄN THỊ HOÀI THƯƠNG",
-    "address": "138 Đường Phú Lợi, Phường Phú Hòa, Thành phố Thủ Dầu Một, Tỉnh Bình Dương, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Tỉnh Bình Dương",
-    "startDate": "2024-10-29",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "3702877397-015",
-    "name": "CHI NHÁNH THUẬN GIAO 2- CÔNG TY TNHH LONG PHÁT VƯƠNG",
-    "representative": "NGUYỄN THANH MINH",
-    "address": "Số T3/25, đường Thuận Giao 02, tổ 3, khu phố Bình Thuận 2, Phường Thuận Giao, Thành phố Thuận An, Tỉnh Bình Dương, Việt Nam",
-    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
-    "province": "Bình Dương",
-    "startDate": "2021-12-21",
-    "registrationDate": "2021-12-21",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "3703519034",
-    "name": "CÔNG TY CỔ PHẦN TẢN VIÊN MIỀN NAM",
-    "representative": "NGUYỄN THỊ KIM TUYẾN",
-    "address": "Thửa đất số 15, Tờ bản đồ số 37, Đường DT747B, Khu phố Uyên Hưng 3, Phường Tân Uyên, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
-    "province": "Hồ Chí Minh",
-    "startDate": "",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0319738105",
-    "name": "CÔNG TY TNHH THƯƠNG MẠI DU LỊCH FIRST TRAVEL GROUP",
-    "representative": "HUỲNH NGỌC DUNG LY",
-    "address": "Cửa hàng 1.06, Tầng 1, Tòa nhà S1.03 - Khu A - Dự án khu dân cư và công viên Phước Thiện, Số 512 Nguyễn Xiển, Khu phố Long Hòa, Phường Long Bình, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Hồ Chí Minh",
-    "startDate": "",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "3703519436",
-    "name": "CÔNG TY TNHH THƯƠNG MẠI AQUAMET",
-    "representative": "NGUYỄN NGỌC HÂN",
-    "address": "Thửa đất số 58, Tờ bản đồ số 1, Đường ĐT747B, Khu phố Phước Thái, Phường Tân Khánh, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Hồ Chí Minh",
-    "startDate": "",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0319641544",
-    "name": "CÔNG TY TNHH GIẢI PHÁP PHẦN MỀM DUDI",
-    "representative": "NGUYỄN THỊ HẢO",
-    "address": "49/2 đường Số 14, Phường Thủ Đức, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "TP Hồ Chí Minh",
-    "startDate": "",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0100112437-111",
-    "name": "ĐIỂM KINH DOANH NGÂN HÀNG THƯƠNG MẠI CỔ PHẦN NGOẠI THƯƠNG VIỆT NAM - CHI NHÁNH BÌNH THUẬN - PHÒNG GIAO DỊCH PHAN THIẾT",
-    "representative": "ĐẶNG QUỐC NHÀN",
-    "address": "Số 318 Trần Hưng Đạo, Phường Lạc Đạo, Thành phố  Phan Thiết, Tỉnh Bình Thuận, Việt Nam",
-    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
-    "province": "Tỉnh Bình Thuận",
-    "startDate": "",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "8012273133",
-    "name": "LÊ BÁ ANH",
-    "representative": "Lê Bá Anh",
-    "address": "Căn hộ 12A09 Nhà 18T1 Khu ĐT Trung Hòa - Nhân Chính, Phường Nhân Chính, Quận Thanh Xuân, Thành Phố Hà Nội, Việt Nam",
-    "status": "Ngừng hoạt động và đã đóng MST",
-    "province": "Thành Phố Hà Nội",
-    "startDate": "2009-08-04",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "3703519517",
-    "name": "CÔNG TY TRÁCH NHIỆM HỮU HẠN IMS VIETNAM",
-    "representative": "KIỀU CÔNG ĐỨC",
-    "address": "Nhà xưởng DS1, số 2 đường D2, Khu công nghiệp Việt Nam – Singapore III, Phường Bình Cơ, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
-    "province": "Hồ Chí Minh",
-    "startDate": "",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0319736757",
-    "name": "CÔNG TY TNHH XÂY DỰNG CƠ ĐIỆN LẠNH KHG",
-    "representative": "NGUYỄN THỊ NGỌC HOÀNG",
-    "address": "Số 217/6/15, đường Thạnh Lộc 19, Khu phố 29, Phường An Phú Đông, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
-    "province": "Hồ Chí Minh",
-    "startDate": "2026-10-07",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "3801276291-001",
-    "name": "CÔNG TY TNHH MINH QUÂN GROUP - VĂN PHÒNG ĐẠI DIỆN ALOHA",
-    "representative": "NGUYỄN THỊ THANH HÀ",
-    "address": "25 Đồng Khởi, Phường Tân Phú, Thành phố Đồng Xoài, Tỉnh Bình Phước, Việt Nam",
-    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
-    "province": "Bình Phước",
-    "startDate": "",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0013180180",
-    "name": "CÔNG TY TNHH MỘT THÀNH VIÊN NGUYÊN ĐÃI",
-    "representative": "PHẠM VĂN TRỌNG",
-    "address": "Ấp Mỹ Hưng, Xã Thành Tâm, Huyện Chơn Thành, Tỉnh Bình Phước, Việt Nam",
-    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
-    "province": "Bình Phước",
-    "startDate": "",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "3801239035-004",
-    "name": "VĂN PHÒNG ĐẠI DIỆN SỐ 4 - CÔNG TY TNHH ĐẦU TƯ TOMONEY",
-    "representative": "TÔ QUANG TRUNG",
-    "address": "Đường ĐT.741, Thôn Tân Lực, Xã Bù Nho, Huyện Phú Riềng, Tỉnh Bình Phước, Việt Nam",
-    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
-    "province": "Bình Phước",
-    "startDate": "",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0402225740",
-    "name": "CÔNG TY TNHH MISSTEAK",
-    "representative": "NGUYỄN NGỌC LINH ĐOAN",
-    "address": "95-97-99 Mai Thúc Lân, Phường Ngũ Hành Sơn, Thành phố Đà Nẵng, Việt Nam",
-    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
-    "province": "Thành phố Đà Nẵng",
-    "startDate": "2024-01-15",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0402225740-001",
-    "name": "VĂN PHÒNG ĐẠI DIỆN CÔNG TY TNHH MISSTEAK",
-    "representative": "NGUYỄN NGỌC LINH ĐOAN",
-    "address": "73 Phạm Tuấn Tài, Phường Ngũ Hành Sơn, Thành phố Đà Nẵng, Việt Nam",
-    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
-    "province": "Đà Nẵng",
-    "startDate": "2026-10-07",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "4001342356",
-    "name": "CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ NGỌC PHONG",
-    "representative": "BÙI ĐÌNH DŨNG",
-    "address": "Lô đất số 212, Tổ dân phố Phước Hải, Phường Hội An Đông, Thành phố Đà Nẵng, Việt Nam",
-    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
-    "province": "Đà Nẵng",
-    "startDate": "2024-01-15",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0319738049",
-    "name": "CÔNG TY TNHH CÔNG NGHỆ BAO BÌ LEFEN VIỆT NAM",
-    "representative": "SONG, ZHE",
-    "address": "Tầng 1, Tòa Nhà La Vela, Số 11A Hồng Hà, Phường Tân Sơn Hòa, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
-    "province": "Hồ Chí Minh",
-    "startDate": "2024-01-15",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0319737729",
-    "name": "CÔNG TY CỔ PHẦN VẬN TẢI XUÂN CƯỜNG",
-    "representative": "NGUYỄN THANH XUÂN",
-    "address": "154/15/9 Trần Thị Trọng, Khu phố 8, Phường Tân Sơn, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
-    "province": "Hồ Chí Minh",
-    "startDate": "2026-10-07",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0319720997",
-    "name": "CÔNG TY TNHH RUTBOT SOFTWARE",
-    "representative": "KULEMZA LEONID",
-    "address": "Phòng số F1.4, Tầng 1, số 99 Cộng Hòa, Phường Tân Sơn Nhất, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
-    "province": "Hồ Chí Minh",
-    "startDate": "2026-09-24",
-    "lastUpdated": "Vừa xong"
-  },
-  {
     "id": "0101248141",
     "name": "CÔNG TY CỔ PHẦN FPT",
     "representative": "NGUYỄN VĂN KHOA",
-    "address": "Số 10 phố Phạm Văn Bạch, Phường Cầu Giấy, Thành phố Hà Nội, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Thành phố Hà Nội",
+    "address": "Số 10 phố Phạm Văn Bạch, Phường Cầu Giấy, TP Hà Nội",
+    "status": "NNT đang hoạt động",
+    "province": "TP Hà Nội",
     "startDate": "2002-06-06",
+    "registrationDate": "2002-06-06",
     "lastUpdated": "Vừa xong"
   },
   {
@@ -381,6 +51,24 @@
     "lastUpdated": "Vừa xong"
   },
   {
+    "id": "8012273133",
+    "name": "LÊ BÁ ANH",
+    "representative": "Lê Bá Anh",
+    "address": "Căn hộ 12A09 Nhà 18T1 Khu ĐT Trung Hòa - Nhân Chính, Phường Nhân Chính, Quận Thanh Xuân, Hà Nội",
+    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
+    "lastUpdated": "Vừa xong"
+  },
+  {
+    "id": "0319641544",
+    "name": "CÔNG TY TNHH GIẢI PHÁP PHẦN MỀM DUDI",
+    "representative": "NGUYỄN THỊ HẢO",
+    "address": "49/2 đường Số 14, Phường Thủ Đức, Thành phố Hồ Chí Minh, Việt Nam",
+    "status": "Đang hoạt động",
+    "province": "Thành phố Hồ Chí Minh",
+    "startDate": "2026-07-16",
+    "lastUpdated": "Vừa xong"
+  },
+  {
     "id": "0100112437",
     "name": "NGÂN HÀNG THƯƠNG MẠI CỔ PHẦN NGOẠI THƯƠNG VIỆT NAM",
     "representative": "Nguyễn Thanh Tùng",
@@ -398,6 +86,16 @@
     "status": "Đang hoạt động",
     "province": "Thành phố Đà Nẵng",
     "startDate": "2026-10-02",
+    "lastUpdated": "Vừa xong"
+  },
+  {
+    "id": "0319733594",
+    "name": "CÔNG TY TNHH TMDV GHK",
+    "representative": "NGUYỄN THỊ THUỲ LINH",
+    "address": "7/18A Trần Xuân Soạn, Phường Tân Hưng, Thành phố Hồ Chí Minh, Việt Nam",
+    "status": "Đang hoạt động",
+    "province": "Thành phố Hồ Chí Minh",
+    "startDate": "2026-10-05",
     "lastUpdated": "Vừa xong"
   },
   {
@@ -499,5 +197,91 @@
     "province": "Thành phố Hồ Chí Minh",
     "startDate": "2026-10-01",
     "lastUpdated": "Vừa xong"
+  },
+  {
+    "id": "1102180321-001",
+    "name": "CÔNG TY CỔ PHẦN ĐẦU TƯ CAO TỐC CT32 - VĂN PHÒNG ĐẠI DIỆN TP. HCM",
+    "representative": "NGUYỄN LÊ MINH CHÂU",
+    "address": "328 Võ Văn Kiệt, Phường Cầu Ông Lãnh, Thành phố Hồ Chí Minh, Việt Nam",
+    "status": "Đang hoạt động",
+    "province": "Thành phố Hồ Chí Minh",
+    "startDate": "2026-09-23",
+    "lastUpdated": "Vừa xong"
+  },
+  {
+    "id": "0306127620-001",
+    "name": "VĂN PHÒNG ĐẠI DIỆN CÔNG TY CỔ PHẦN ĐO ĐẠC BẢN ĐỒ VÀ DỊCH VỤ BẤT ĐỘNG SẢN HOÀNG ANH",
+    "representative": "PHẠM MINH THIỆN",
+    "address": "21A Đỗ Đình Nhân, Xã Tân An Hội, Thành phố Hồ Chí Minh, Việt Nam",
+    "status": "Đang hoạt động",
+    "province": "Thành phố Hồ Chí Minh",
+    "startDate": "2026-09-28",
+    "lastUpdated": "Vừa xong"
+  },
+  {
+    "id": "5200711507",
+    "name": "LÊ MẠNH CƯỜNG",
+    "representative": "Lê Mạnh Cường",
+    "address": "Thành phố Yên Bái, Tỉnh Yên Bái, Việt Nam",
+    "status": "Đang hoạt động (đã được cấp GCN ĐKT)",
+    "province": "Tỉnh Yên Bái",
+    "startDate": "2012-03-13",
+    "lastUpdated": "Vừa xong"
+  },
+  {
+    "id": "8063048591",
+    "name": "LÊ MẠNH HÙNG",
+    "representative": "Lê Mạnh Hùng",
+    "address": "Số 210 đường Trần Phú, Phường Bỉm Sơn, Tỉnh Thanh Hóa, Việt Nam",
+    "status": "Không hoạt động tại địa chỉ đã đăng ký",
+    "province": "Tỉnh Thanh Hóa",
+    "startDate": "2010-01-15",
+    "lastUpdated": "Vừa xong"
+  },
+  {
+    "id": "1602236773",
+    "name": "CÔNG TY TNHH TMDV AN KHANG CONSTRUCTION",
+    "representative": "NGUYỄN KHAN",
+    "address": "774, Ấp Mỹ Hòa, Xã Nhơn Mỹ, Tỉnh An Giang, Việt Nam",
+    "status": "Đang hoạt động",
+    "province": "Tỉnh An Giang",
+    "startDate": "2026-09-23",
+    "lastUpdated": "Vừa xong"
+  },
+  {
+    "id": "3502593768",
+    "name": "CÔNG TY CỔ PHẦN TÔN VINA ONE (NTNN)",
+    "representative": "ĐẶNG BÁ HƯNG",
+    "address": "Đường Đ07, Khu Công Nghiệp Châu Đức, Thôn Hữu Phước, Xã Ngãi Giao, TP Hồ Chí Minh",
+    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
+    "province": "TP Hồ Chí Minh",
+    "lastUpdated": "2 phút trước"
+  },
+  {
+    "id": "0319732689",
+    "name": "CÔNG TY TNHH IGL WORLDWIDE",
+    "representative": "NGUYỄN THỤY BÍCH HOÀN",
+    "address": "Tầng 1, Tòa nhà International Plaza, Số 343 Phạm Ngũ Lão, Phường Bến Thành, Thành phố Hồ Chí Minh",
+    "status": "NNT đang hoạt động",
+    "province": "Hồ Chí Minh",
+    "lastUpdated": "3 phút trước"
+  },
+  {
+    "id": "5400575731",
+    "name": "CÔNG TY TNHH BAO BÌ THỊNH THÁI",
+    "representative": "LƯƠNG THỊ MINH",
+    "address": "Tiểu Khu 11, Xã Lương Sơn, Tỉnh Phú Thọ, Việt Nam",
+    "status": "NNT đang hoạt động",
+    "province": "Phú Thọ",
+    "lastUpdated": "4 phút trước"
+  },
+  {
+    "id": "0301446260",
+    "name": "CÔNG TY CỔ PHẦN HÓA CHẤT CƠ BẢN MIỀN NAM",
+    "representative": "LÊ BÁ ANH",
+    "address": "22 Lý Tự Trọng, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh",
+    "status": "NNT đang hoạt động",
+    "province": "Hồ Chí Minh",
+    "lastUpdated": "5 phút trước"
   }
 ]

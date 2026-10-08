@@ -197,19 +197,31 @@ export default function AdminDashboardPage() {
     }
   };
 
-  // Kiểm tra trạng thái đã đăng nhập chưa
+  // Hỏi máy chủ xem phiên đăng nhập còn hiệu lực không.
+  // Trước đây chỉ đọc localStorage, nghĩa là ai cũng tự đặt được cờ đó để vào.
   useEffect(() => {
-    try {
-      if (typeof window !== 'undefined' && localStorage.getItem('is_admin_logged') === 'true') {
-        setIsAuthenticated(true);
-        loadAdminData();
-        loadCrawlerStats();
+    let cancelled = false;
+
+    const checkSession = async () => {
+      try {
+        const res = await fetch('/api/admin/auth');
+        if (cancelled) return;
+        if (res.ok) {
+          setIsAuthenticated(true);
+          loadAdminData();
+          loadCrawlerStats();
+        }
+      } catch (e) {
+        console.error(e);
+      } finally {
+        if (!cancelled) setAuthChecking(false);
       }
-    } catch (e) {
-      console.error(e);
-    } finally {
-      setAuthChecking(false);
-    }
+    };
+
+    checkSession();
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   // Ghi nhớ trạng thái thu gọn của thanh điều hướng
@@ -233,42 +245,55 @@ export default function AdminDashboardPage() {
     });
   };
 
-  // ĐĂNG NHẬP NHANH (1 Click vào ngay lập tức)
-  const handleQuickLogin = () => {
+  // Đăng nhập qua máy chủ để nhận cookie phiên. Không còn tự đặt cờ ở trình
+  // duyệt nữa, vì các API quản trị giờ bắt buộc phải có cookie này.
+  const requestLogin = async (username: string, password: string) => {
     try {
-      if (typeof window !== 'undefined') {
-        localStorage.setItem('is_admin_logged', 'true');
+      const res = await fetch('/api/admin/auth', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'login', username, password }),
+      });
+
+      if (res.ok) {
+        setLoginError('');
+        setIsAuthenticated(true);
+        loadAdminData();
+        loadCrawlerStats();
+        return true;
       }
-    } catch (e) {}
-    setIsAuthenticated(true);
-    loadAdminData();
+
+      setLoginError('Sai tài khoản hoặc mật khẩu (Mặc định: admin / admin123)');
+      return false;
+    } catch (err) {
+      console.error(err);
+      setLoginError('Không kết nối được máy chủ, vui lòng thử lại.');
+      return false;
+    }
+  };
+
+  // ĐĂNG NHẬP NHANH (dùng tài khoản mặc định)
+  const handleQuickLogin = () => {
+    requestLogin('admin', 'admin123');
   };
 
   // Đăng nhập bằng mật khẩu
   const handleManualLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    const u = loginUsername.trim().toLowerCase();
-    const p = loginPassword.trim();
-    if ((u === 'admin' || !u) && (p === 'admin' || p === 'admin123' || !p)) {
-      try {
-        if (typeof window !== 'undefined') {
-          localStorage.setItem('is_admin_logged', 'true');
-        }
-      } catch (e) {}
-      setIsAuthenticated(true);
-      loadAdminData();
-    } else {
-      setLoginError('Sai tài khoản hoặc mật khẩu (Mặc định: admin / admin123)');
-    }
+    requestLogin(loginUsername.trim(), loginPassword.trim());
   };
 
-  // Đăng xuất
-  const handleLogout = () => {
+  // Đăng xuất: xóa cookie phiên ở máy chủ
+  const handleLogout = async () => {
     try {
-      if (typeof window !== 'undefined') {
-        localStorage.removeItem('is_admin_logged');
-      }
-    } catch (e) {}
+      await fetch('/api/admin/auth', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'logout' }),
+      });
+    } catch (e) {
+      console.error(e);
+    }
     setIsAuthenticated(false);
     setLoginPassword('');
     setLoginError('');
@@ -1199,17 +1224,9 @@ export default function AdminDashboardPage() {
                     type="button"
                     disabled={crawlerRunning}
                     onClick={() => handleStartCrawl(crawlerStats.total + 5000)}
-                    className="px-3 py-1.5 bg-white hover:bg-slate-100 border border-slate-300 text-slate-800 disabled:opacity-50 font-medium rounded-lg shadow-2xs transition cursor-pointer flex items-center space-x-1.5 text-xs"
-                  >
-                    <span>+ Cào thêm 5.000 DN</span>
-                  </button>
-                  <button
-                    type="button"
-                    disabled={crawlerRunning}
-                    onClick={() => handleStartCrawl(crawlerStats.total + 10000)}
                     className="px-3.5 py-1.5 bg-slate-900 hover:bg-slate-800 active:bg-slate-950 disabled:opacity-50 text-white font-medium rounded-lg shadow-2xs transition cursor-pointer flex items-center space-x-1.5 text-xs"
                   >
-                    <span>+ Cào thêm 10.000 DN</span>
+                    <span>+ Cào thêm 5.000 DN</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                 </div>

@@ -23,8 +23,13 @@ function UrlSearchWatcher({ onSearch }: { onSearch: (q: string, type: string) =>
   const searchParams = useSearchParams();
   const q = searchParams.get('q') || '';
   const type = searchParams.get('type') || 'auto';
+  // Giữ hàm tra cứu trong ref để hiệu ứng chỉ chạy lại khi từ khóa đổi, chứ
+  // không chạy lại mỗi lần component cha render. Việc gán ref phải nằm trong
+  // useEffect: gán lúc đang render là vi phạm quy tắc của React.
   const onSearchRef = useRef(onSearch);
-  onSearchRef.current = onSearch;
+  useEffect(() => {
+    onSearchRef.current = onSearch;
+  }, [onSearch]);
 
   useEffect(() => {
     if (q) onSearchRef.current(q, type);

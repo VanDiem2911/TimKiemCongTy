@@ -21,6 +21,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {
       title: 'Không tìm thấy thông tin doanh nghiệp - Mã số thuế',
       description: 'Không tìm thấy thông tin mã số thuế hoặc doanh nghiệp theo đường dẫn yêu cầu.',
+      // Chặn Google lập chỉ mục trang rỗng. Không có dòng này thì trang kế thừa
+      // cấu hình index: true ở layout gốc, và Google sẽ thu thập hàng loạt
+      // đường dẫn không tồn tại rồi tính là lỗi mềm của website.
+      robots: { index: false, follow: false },
     };
   }
 
