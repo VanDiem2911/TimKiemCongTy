@@ -2,9 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
-import { PROVINCES, getCompanySlug, normalizeTaxId, formatEstablishedDate, getCompanyStatusBadgeClass } from '@/lib/constants';
+import { PROVINCES, getCompanySlug, normalizeTaxId, formatEstablishedDate, getCompanyStatusBadgeClass, getCompanyStatusTone } from '@/lib/constants';
 import { fetchLiveNationwideCompanies } from '@/lib/provinceCompanies';
-import { MapPin, ChevronRight, Hash, User, ChevronLeft, ChevronsLeft, ChevronsRight, ShieldCheck, Flame, Calendar } from 'lucide-react';
+import { MapPin, ChevronRight, User, ChevronLeft, ChevronsLeft, ChevronsRight, ShieldCheck, Flame, Calendar, Building2, CheckCircle2, AlertTriangle } from 'lucide-react';
 
 interface PageProps {
   searchParams: Promise<{ page?: string; region?: string }>;
@@ -159,80 +159,85 @@ export default async function ProvinceTaxPage({ searchParams }: PageProps) {
                 </div>
 
                 {/* Companies List */}
-                <div className="divide-y divide-gray-200">
+                <div className="space-y-3">
                   {data.companies.map((comp, idx) => {
                     const detailSlug = getCompanySlug(comp.id, comp.name);
+                    const tone = getCompanyStatusTone(comp.status);
+                    const StatusIcon = tone === 'active' ? CheckCircle2 : AlertTriangle;
+                    const establishedDate = formatEstablishedDate(comp.startDate || comp.registrationDate);
+
                     return (
-                      <article key={`${comp.id}-${idx}`} className="py-4 first:pt-0">
-                        <h3 className="text-sm sm:text-base font-bold text-slate-900 hover:text-[#e91a2c] transition-colors mb-1">
-                          <Link href={`/${detailSlug}`}>
-                            {comp.name}
-                          </Link>
-                        </h3>
-
-                        <div className="space-y-1 text-xs text-slate-600">
-                          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-                            <span className="flex items-center space-x-1 text-slate-700">
-                              <Hash className="w-3.5 h-3.5 text-slate-400" />
-                              <span>Mã số thuế:</span>
-                              <Link
-                                href={`/${detailSlug}`}
-                                className="font-mono font-bold text-[#c51322] bg-[#fff0f1] px-1.5 py-0.5 rounded border border-[#fecdd3] hover:underline whitespace-nowrap inline-block"
-                              >
-                                {normalizeTaxId(comp.id)}
-                              </Link>
-                            </span>
-
-                            {comp.representative && (
-                              <span className="flex items-center space-x-1">
-                                <User className="w-3.5 h-3.5 text-slate-400" />
-                                <span>Người đại diện:</span>
-                                <span className="font-semibold text-slate-800">{comp.representative}</span>
-                              </span>
-                            )}
-
-                            {comp.province && (
-                              <span className="flex items-center space-x-1 text-slate-500">
-                                <MapPin className="w-3.5 h-3.5 text-slate-400" />
-                                <span className="font-medium text-slate-800">{comp.province}</span>
-                              </span>
-                            )}
+                      <article
+                        key={`${comp.id}-${idx}`}
+                        className="bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-5 shadow-xs hover:shadow-md transition-all duration-200 flex flex-col md:flex-row md:items-center justify-between gap-4 group"
+                      >
+                        <div className="flex items-start sm:items-center space-x-4 flex-1 min-w-0">
+                          {/* Enterprise Icon Box */}
+                          <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-2xl bg-slate-50/90 border border-slate-100 flex items-center justify-center shrink-0 group-hover:scale-102 transition-transform shadow-2xs">
+                            <Building2 className="w-9 h-9 text-slate-400 stroke-[1.5]" />
                           </div>
 
-                          <div className="flex items-start space-x-1 text-slate-600">
-                            <MapPin className="w-3.5 h-3.5 text-slate-400 flex-shrink-0 mt-0.5" />
-                            <address className="not-italic">{comp.address}</address>
-                          </div>
+                          {/* Info Content */}
+                          <div className="space-y-1.5 flex-1 min-w-0">
+                            <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors truncate">
+                              <Link href={`/${detailSlug}`}>{comp.name}</Link>
+                            </h3>
 
-                          <div className="pt-1 flex flex-wrap items-center justify-between gap-2">
-                            <div className="flex flex-wrap items-center gap-2">
-                              <span
-                                className={`inline-block text-[11px] px-2 py-0.5 rounded font-medium border ${getCompanyStatusBadgeClass(comp.status)}`}
-                              >
-                                {comp.status || 'Chưa rõ trạng thái'}
+                            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
+                              <span className="flex items-center space-x-1 text-slate-600">
+                                <span className="text-[#e91a2c] font-black font-mono">#</span>
+                                <span>Mã số thuế:</span>
+                                <Link
+                                  href={`/${detailSlug}`}
+                                  className="font-mono font-bold text-[#c51322] bg-red-50 border border-red-100 px-2 py-0.5 rounded-md text-xs hover:bg-red-100 transition-colors whitespace-nowrap inline-block"
+                                >
+                                  {normalizeTaxId(comp.id)}
+                                </Link>
                               </span>
 
-                              {formatEstablishedDate(comp.startDate || comp.registrationDate) && (
-                                <span className="inline-flex items-center gap-1 text-[11px] px-2 py-0.5 rounded font-medium bg-slate-50 text-slate-600 border border-slate-200">
-                                  <Calendar className="w-3 h-3 text-slate-400 shrink-0" />
-                                  <span>
-                                    Thành lập:{' '}
-                                    <strong className="font-semibold text-slate-800">
-                                      {formatEstablishedDate(comp.startDate || comp.registrationDate)}
-                                    </strong>
-                                  </span>
+                              {comp.representative && (
+                                <span className="flex items-center space-x-1 text-slate-600">
+                                  <User className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                                  <span>Người đại diện:</span>
+                                  <span className="font-bold text-slate-900 uppercase">{comp.representative}</span>
                                 </span>
                               )}
                             </div>
 
-                            <Link
-                              href={`/${detailSlug}`}
-                              className="text-[11px] text-[#e91a2c] hover:underline font-semibold"
-                            >
-                              Xem hồ sơ chi tiết →
-                            </Link>
+                            <div className="flex items-start space-x-1 text-xs text-slate-600">
+                              <MapPin className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
+                              <address className="not-italic truncate">{comp.address}</address>
+                            </div>
+
+                            <div className="pt-0.5 flex flex-wrap items-center gap-2">
+                              <span
+                                className={`inline-flex items-center space-x-1 border font-semibold px-2.5 py-0.5 rounded-full text-[11px] ${getCompanyStatusBadgeClass(comp.status)}`}
+                              >
+                                <StatusIcon className="w-3.5 h-3.5 shrink-0" />
+                                <span>{comp.status || 'Chưa rõ trạng thái'}</span>
+                              </span>
+
+                              {establishedDate && (
+                                <span className="inline-flex items-center space-x-1 bg-slate-50 text-slate-600 border border-slate-200 font-medium px-2.5 py-0.5 rounded-full text-[11px]">
+                                  <Calendar className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                                  <span>
+                                    Thành lập:{' '}
+                                    <strong className="font-semibold text-slate-800">{establishedDate}</strong>
+                                  </span>
+                                </span>
+                              )}
+                            </div>
                           </div>
                         </div>
+
+                        {/* View profile button */}
+                        <Link
+                          href={`/${detailSlug}`}
+                          className="self-end md:self-center shrink-0 bg-red-50/90 hover:bg-red-100 active:bg-red-200/80 text-[#c51322] font-semibold text-xs px-3.5 py-2 rounded-xl transition-colors flex items-center space-x-1"
+                        >
+                          <span>Xem chi tiết hồ sơ thuế</span>
+                          <ChevronRight className="w-3.5 h-3.5 text-[#e91a2c]" />
+                        </Link>
                       </article>
                     );
                   })}
