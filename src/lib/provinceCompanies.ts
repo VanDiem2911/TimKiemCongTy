@@ -457,37 +457,92 @@ const BROWSER_FETCH_HEADERS = {
  * bị nuốt lặng lẽ nên hết credit hay sai key cũng không ai biết, chỉ thấy
  * kết quả tìm kiếm trống.
  */
+// Danh sách key ScraperAPI, lấy từ nhiều biến môi trường hoặc một biến ngăn
+// nhau bằng dấu phẩy. Có nhiều key để khi key này hết credit thì dùng key kia.
+function getScraperApiKeys(): string[] {
+  const sources = [
+    process.env.SCRAPER_API_KEY,
+    process.env.SCRAPER_API_KEY_2,
+    process.env.SCRAPER_API_KEY_3,
+  ];
+
+  const keys: string[] = [];
+  for (const source of sources) {
+    if (!source) continue;
+    for (const part of source.split(',')) {
+      const key = part.trim();
+      if (key && !keys.includes(key)) keys.push(key);
+    }
+  }
+  return keys;
+}
+
+// Key đã hết credit thì tạm ngừng dùng, tránh phí một lượt gọi hỏng cho mỗi
+// yêu cầu. Sau khoảng thời gian này sẽ thử lại, phòng khi bạn vừa nạp thêm.
+const EXHAUSTED_KEYS = new Map<string, number>();
+const KEY_COOLDOWN_MS = 1000 * 60 * 30;
+
+function isKeyUsable(key: string): boolean {
+  const until = EXHAUSTED_KEYS.get(key);
+  if (!until) return true;
+  if (Date.now() >= until) {
+    EXHAUSTED_KEYS.delete(key);
+    return true;
+  }
+  return false;
+}
+
 async function fetchViaScraperApi(targetUrl: string, label: string): Promise<Response | null> {
-  const key = process.env.SCRAPER_API_KEY;
-  if (!key) return null;
+  const keys = getScraperApiKeys();
+  if (keys.length === 0) return null;
 
-  const params = new URLSearchParams({
-    api_key: key,
-    url: targetUrl,
-    country_code: 'vn',
-  });
-
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 25000);
-
-  try {
-    const res = await fetch(`https://api.scraperapi.com/?${params.toString()}`, {
-      signal: controller.signal,
-    });
-    clearTimeout(timeout);
-
-    if (res.status === 200) return res;
-
-    const reason = await res.text().catch(() => '');
-    console.warn(
-      `[ScraperAPI] ${label} thất bại - mã ${res.status}: ${reason.slice(0, 200)}`
-    );
-    return null;
-  } catch (err) {
-    clearTimeout(timeout);
-    console.warn(`[ScraperAPI] ${label} lỗi kết nối:`, (err as Error)?.message || err);
+  const usable = keys.filter(isKeyUsable);
+  if (usable.length === 0) {
+    console.warn(`[ScraperAPI] ${label}: toàn bộ ${keys.length} key đều đang hết credit`);
     return null;
   }
+
+  for (let i = 0; i < usable.length; i++) {
+    const key = usable[i];
+    const keyLabel = `key ${keys.indexOf(key) + 1}/${keys.length}`;
+
+    const params = new URLSearchParams({
+      api_key: key,
+      url: targetUrl,
+      country_code: 'vn',
+    });
+
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 25000);
+
+    try {
+      const res = await fetch(`https://api.scraperapi.com/?${params.toString()}`, {
+        signal: controller.signal,
+      });
+      clearTimeout(timeout);
+
+      if (res.status === 200) return res;
+
+      const reason = await res.text().catch(() => '');
+
+      // Hết credit hoặc key không hợp lệ thì ngừng dùng key này một thời gian
+      if (res.status === 401 || res.status === 403 || res.status === 429) {
+        EXHAUSTED_KEYS.set(key, Date.now() + KEY_COOLDOWN_MS);
+      }
+
+      console.warn(
+        `[ScraperAPI] ${label} - ${keyLabel} hỏng (mã ${res.status}): ${reason.slice(0, 150)}`
+      );
+    } catch (err) {
+      clearTimeout(timeout);
+      console.warn(
+        `[ScraperAPI] ${label} - ${keyLabel} lỗi kết nối:`,
+        (err as Error)?.message || err
+      );
+    }
+  }
+
+  return null;
 }
 
 const TOP_ACTIVE_PROVINCES = [
@@ -785,24 +840,12 @@ async function fetchLiveSearch(
         const address = addrMatch ? addrMatch[1].replace(/<[^>]+>/g, '').trim() : '';
 
         if (taxId && name) {
-          const normName = normalizeText(name);
-          const normRep = normalizeText(rep);
-
-          let isMatch = false;
-          if (searchType === 'legalName') {
-            isMatch = normRep.includes(normQ);
-          } else if (searchType === 'companyName') {
-            isMatch = normName.includes(normQ);
-          } else if (searchType === 'enterpriseTax' || searchType === 'taxCode') {
-            isMatch = cleanDigits ? taxId.includes(cleanDigits) : false;
-          } else {
-            isMatch =
-              normName.includes(normQ) ||
-              normRep.includes(normQ) ||
-              (cleanDigits ? taxId.includes(cleanDigits) : false);
-          }
-
-          if (isMatch && !list.some((item) => item.id === taxId)) {
+          // Không lọc lại kết quả của trang nguồn bằng cách so chuỗi con.
+          // Trang nguồn đã tìm theo đúng tiêu chí người dùng chọn và hiểu được
+          // cả tên thương hiệu: tìm "Vietcombank" vẫn ra "NGÂN HÀNG TMCP NGOẠI
+          // THƯƠNG VIỆT NAM". So chuỗi con ở đây sẽ vứt bỏ chính những kết quả
+          // đó, trước đây 20 kết quả bị cắt còn 6.
+          if (!list.some((item) => item.id === taxId)) {
             list.push({
               id: taxId,
               name,
