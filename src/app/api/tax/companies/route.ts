@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { INITIAL_COMPANIES, PROVINCES } from '@/lib/constants';
-import { getCompaniesByProvince, fetchLiveNationwideCompanies } from '@/lib/provinceCompanies';
+import { getCompaniesByProvince, fetchLiveNationwideCompanies, fetchLiveProvinceCompanies } from '@/lib/provinceCompanies';
 import { BusinessTaxInfo } from '@/types/tax';
 import { scanCompanyContactAI } from '@/lib/companyAiScanner';
 
@@ -154,25 +154,10 @@ export async function GET(request: NextRequest) {
   const provSlug = matchedProv ? matchedProv.slug : provinceParam;
   const provName = matchedProv ? matchedProv.name : provinceParam;
 
-  // Try live on-demand fetch first
-  const liveList = await fetchLiveProvincePage(provSlug, page);
-  let source = 'live-upstream-api';
-
-  // Fallback to internal dynamic generator with pre-harvested and procedural businesses
-  const fallbackRes = getCompaniesByProvince(provSlug, page, limit);
-
-  let finalCompanies: BusinessTaxInfo[] = [];
-  if (liveList && liveList.length > 0) {
-    // A live listing often omits the richer cached profiles. Merge both so the
-    // website scanner receives the same data as the company detail page.
-    finalCompanies = mergeUniqueCompanies(
-      fallbackRes.companies,
-      liveList.map((company) => ({ ...company, province: provName }))
-    );
-  } else {
-    source = 'dynamic-tax-api';
-    finalCompanies = fallbackRes.companies;
-  }
+  // Tra cứu theo tỉnh thành từ MongoDB Atlas / Masothue (ưu tiên DN mới nhất)
+  const provResult = await fetchLiveProvinceCompanies(provSlug, page, limit);
+  let finalCompanies = provResult.companies;
+  const source = provResult.source || 'mongodb-live-database';
 
   if (query) {
     finalCompanies = finalCompanies.filter(c =>
@@ -185,10 +170,10 @@ export async function GET(request: NextRequest) {
   return NextResponse.json({
     success: true,
     source: source,
-    page: page,
-    limit: limit,
-    total: Math.max(fallbackRes.total, finalCompanies.length * 15),
-    totalPages: Math.max(fallbackRes.totalPages, 15),
+    page: provResult.page,
+    limit: provResult.pageSize,
+    total: provResult.total,
+    totalPages: provResult.totalPages,
     province: {
       name: provName,
       slug: provSlug,

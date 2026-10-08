@@ -2,6 +2,20 @@ import { BusinessTaxInfo } from '@/types/tax';
 import { INDUSTRIES, PROVINCES, INITIAL_COMPANIES } from './constants';
 import harvestedJson from '@/data/harvested_provinces.json';
 import cachedIndustryJson from '@/data/cached_industry_companies.json';
+import { getCompaniesByProvinceFromDb, saveCompaniesBatchToDb } from '@/lib/companyDb';
+
+function parseDateToISO(dateStr: string): string {
+  if (!dateStr) return '';
+  const trimmed = dateStr.trim();
+  const dmyMatch = trimmed.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})$/);
+  if (dmyMatch) {
+    const day = dmyMatch[1].padStart(2, '0');
+    const month = dmyMatch[2].padStart(2, '0');
+    const year = dmyMatch[3];
+    return `${year}-${month}-${day}`;
+  }
+  return trimmed;
+}
 
 export interface HarvestedItem {
   id: string;
@@ -96,12 +110,20 @@ export function getCompaniesByProvince(
         representative: item.representative || undefined,
         province: provName,
         industryName: item.mainIndustry || 'Kinh doanh thương mại & Dịch vụ tổng hợp',
+        startDate: item.startDate || '2026-03-20',
         registrationDate: item.startDate || '2026-03-20',
         managedBy: item.managedBy || `Chi cục Thuế khu vực ${provName}`,
         phone: item.phone && item.phone !== 'Bị ẩn theo yêu cầu người dùng' ? item.phone : undefined
       });
     }
   }
+
+  // Sắp xếp các doanh nghiệp mới thành lập lên đầu danh sách
+  allCompanies.sort((a, b) => {
+    const dateA = a.startDate || a.registrationDate || '';
+    const dateB = b.startDate || b.registrationDate || '';
+    return dateB.localeCompare(dateA);
+  });
 
   // Calculate pagination ONLY on real companies
   const safePage = Math.max(1, page);
@@ -865,12 +887,17 @@ export async function fetchLiveProvinceCompanies(
         const addrMatch = b.match(/<address>([\s\S]*?)<\/address>/i);
         const address = addrMatch ? addrMatch[1].replace(/<[^>]+>/g, '').trim() : '';
 
+        const dateMatch = b.match(/(?:Ngày cấp|Ngày hoạt động|Ngày thành lập):\s*(?:<[^>]*>)?([\d\/\-]+)/i);
+        const dateStr = dateMatch ? parseDateToISO(dateMatch[1]) : new Date().toISOString().slice(0, 10);
+
         if (taxId && name) {
           list.push({
             id: taxId,
             name,
             representative: rep || undefined,
             address,
+            startDate: dateStr,
+            registrationDate: dateStr,
             status: 'NNT đang hoạt động (đã được cấp GCN ĐKT)',
             industryName: 'Đăng ký theo GPKD',
             province: provName
@@ -880,6 +907,12 @@ export async function fetchLiveProvinceCompanies(
 
       if (list.length > 0) {
         LIVE_PROVINCE_CACHE.set(cacheKey, { data: list, timestamp: Date.now() });
+
+        // Tự động lưu các doanh nghiệp mới cào được vào MongoDB Atlas
+        saveCompaniesBatchToDb(list).catch((err) => {
+          console.warn('[provinceCompanies] Batch save error:', err);
+        });
+
         return {
           companies: list,
           total: Math.max(list.length * 20, 500),
@@ -895,6 +928,24 @@ export async function fetchLiveProvinceCompanies(
     console.error('Error fetching live province page:', err);
   }
 
-  // 2. Fallback to real harvested data only if upstream is temporarily unreachable
+  // 2. Tra cứu trực tiếp từ MongoDB Atlas (được sắp xếp theo ngày thành lập mới nhất)
+  try {
+    const dbResult = await getCompaniesByProvinceFromDb(provSlug, page, pageSize);
+    if (dbResult && dbResult.companies.length > 0) {
+      return {
+        companies: dbResult.companies,
+        total: dbResult.total,
+        page,
+        pageSize,
+        totalPages: dbResult.totalPages,
+        provinceName: provName,
+        source: 'mongodb-live-database'
+      };
+    }
+  } catch (dbErr) {
+    console.warn('[provinceCompanies] MongoDB lookup error:', dbErr);
+  }
+
+  // 3. Fallback to real harvested data only if upstream and DB are unreachable
   return getCompaniesByProvince(provSlug, page, pageSize);
 }

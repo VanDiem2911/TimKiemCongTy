@@ -16,7 +16,9 @@ import {
   ChevronsRight,
   Search,
   CheckCircle2,
-  Loader2
+  Loader2,
+  Calendar,
+  Sparkles
 } from 'lucide-react';
 
 interface Props {
@@ -128,16 +130,16 @@ export function ProvinceCompanyList({
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h1 className="text-xl sm:text-2xl font-bold text-gray-900 flex items-center space-x-2">
             <MapPin className="w-6 h-6 text-amber-500 flex-shrink-0" />
-            <span>Tra cứu mã số thuế và danh sách công ty tại {provinceName}</span>
+            <span>Tra cứu mã số thuế & Doanh nghiệp mới thành lập tại {provinceName}</span>
           </h1>
         </div>
 
         <div className="flex flex-wrap items-center justify-between text-xs text-gray-500 mt-2 gap-2">
           <p>
             {total > 0 ? (
-              <>Hiển thị <strong>{startCount} - {endCount}</strong> doanh nghiệp tại {provinceName}</>
+              <>Hiển thị <strong>{startCount} - {endCount}</strong> / {total.toLocaleString('vi-VN')} doanh nghiệp mới thành lập tại {provinceName}</>
             ) : (
-              <>Danh sách doanh nghiệp mới nhất tại {provinceName}</>
+              <>Danh sách doanh nghiệp mới thành lập tại {provinceName} (cập nhật theo ngày)</>
             )}
           </p>
           <div className="flex items-center space-x-2">
@@ -216,6 +218,20 @@ export function ProvinceCompanyList({
                         <User className="w-3.5 h-3.5 text-gray-400" />
                         <span>Người đại diện:</span>
                         <span className="font-semibold text-gray-800">{comp.representative}</span>
+                      </span>
+                    )}
+
+                    {comp.startDate && (
+                      <span className="flex items-center space-x-1 text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-2 py-0.5 rounded text-[11px] font-medium">
+                        <Calendar className="w-3 h-3 text-emerald-600" />
+                        <span>Ngày cấp: {comp.startDate}</span>
+                      </span>
+                    )}
+
+                    {(comp.startDate && (comp.startDate.startsWith('2026') || comp.startDate.startsWith('2025'))) && (
+                      <span className="inline-flex items-center space-x-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800 border border-amber-300">
+                        <Sparkles className="w-2.5 h-2.5 text-amber-600" />
+                        <span>Mới thành lập</span>
                       </span>
                     )}
                   </div>

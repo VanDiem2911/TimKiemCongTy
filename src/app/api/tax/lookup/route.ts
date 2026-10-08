@@ -3,6 +3,7 @@ import { searchCompaniesByIndustryLive, searchCompaniesLive, searchCompaniesAcro
 import { getCompleteCompanyProfile, enrichCompanyData } from '@/lib/taxEngine';
 import { recordRecentLookup } from '@/lib/recentLookups';
 import { INDUSTRIES, normalizeTaxId } from '@/lib/constants';
+import { saveCompaniesBatchToDb } from '@/lib/companyDb';
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
@@ -65,6 +66,9 @@ export async function GET(request: NextRequest) {
 
   // 2. Real-time Live Search across all Vietnamese enterprises
   const liveResults = await searchCompaniesLive(q, type);
+  if (liveResults && liveResults.length > 0) {
+    saveCompaniesBatchToDb(liveResults).catch(() => {});
+  }
 
   // 3. Fallback / Merge with local catalog (10,000 verified enterprises)
   const matched = searchCompaniesAcrossProvinces(q, type);

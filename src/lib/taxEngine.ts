@@ -4,6 +4,7 @@ import { INITIAL_COMPANIES, getCompanySlug, normalizeTaxId } from '@/lib/constan
 import harvestedJson from '@/data/harvested_provinces.json';
 import { isPhoneHidden, getKnownPhone } from '@/lib/privacyStore';
 import { KNOWN_COMPANY_CONTACTS } from '@/lib/companyAiScanner';
+import { findCompanyInDb, saveCompanyToDb } from '@/lib/companyDb';
 
 export interface HarvestedCompanyItem {
   id: string;
@@ -635,10 +636,26 @@ export async function getCompleteCompanyProfile(
 
     PROFILE_CACHE.set(cleanInput, { data, timestamp: Date.now() });
     PROFILE_CACHE.set(taxId, { data, timestamp: Date.now() });
+
+    // Tự động lưu vào MongoDB Atlas để làm giàu dữ liệu CSDL
+    saveCompanyToDb(data).catch((err) => {
+      console.warn('[taxEngine] Background MongoDB save error:', err);
+    });
+
     return data;
   };
 
-
+  // 0. KIỂM TRA MONGODB ATLAS TRƯỚC TIÊN
+  if (!forceRefresh) {
+    try {
+      const dbCompany = await findCompanyInDb(taxId);
+      if (dbCompany && dbCompany.name) {
+        return finalizeProfile(enrichCompanyData(dbCompany));
+      }
+    } catch (err) {
+      console.warn('[taxEngine] MongoDB check error:', err);
+    }
+  }
 
   // 1. Determine Masothue slug to fetch live
   let masothueSlug = cleanInput.includes('-') ? cleanInput : '';
