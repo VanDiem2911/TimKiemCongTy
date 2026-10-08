@@ -51418,7 +51418,14 @@
       "representative": "PHẠM THỊ CÚC",
       "address": "Tổ dân phố 7 , Phường An Dương, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202370074-cong-ty-tnhh-dau-tu-xay-dung-va-thuong-mai-thanh-phat-group",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-09-21",
+      "phone": "0962426462",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 thành phố Hải Phòng",
+      "mainIndustry": "Chuẩn bị mặt bằng (Trừ hoạt động dò mìn và các loại tương tự bao gồm cả việc cho nổ tại mặt bằng xây dựng) Chi tiết: San lấp mặt bằng",
+      "internationalName": "THANH PHAT GROUP TRADING AND CONSTRUCTION INVESTMENT COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T07:56:44.002Z"
     },
     {
       "id": "0202370067",
@@ -51442,7 +51449,14 @@
       "representative": "ĐẶNG TUẤN HẢI",
       "address": "Tổ dân phố Đằng Hải 2, Phường Hải An, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202370099-cong-ty-co-phan-dau-tu-cong-nghiep-an-thanh",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-09-21",
+      "phone": "0385625575",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế thành phố Hải Phòng",
+      "mainIndustry": "Kinh doanh bất động sản, quyền sử dụng đất thuộc chủ sở hữu, chủ sử dụng hoặc đi thuê",
+      "internationalName": "AN THANH INDUSTRIAL INVESTMENT JOINT STOCK COMPANY",
+      "enrichedAt": "2026-10-08T07:57:25.234Z"
     },
     {
       "id": "0202370109",
@@ -51450,7 +51464,14 @@
       "representative": "PHẠM THU THUỶ",
       "address": "Đường 212, Thôn Toàn Thắng, Xã Tiên Minh, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202370109-cong-ty-tnhh-giao-duc-va-cong-nghe-sonav",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-09-21",
+      "phone": "0362391923",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 8 thành phố Hải Phòng",
+      "mainIndustry": "Giáo dục khác chưa được phân vào đâu Chi tiết: - Giáo dục không xác định theo cấp độ tại các trung tâm đào tạo bồi dưỡng; - Các dịch vụ dạy kèm (gia sư); - Giáo dục dự bị; - Các khoá dạy về phê bình, đánh giá chuyên môn; - Dạy ngoại ngữ và dạy kỹ năng đàm thoại; - Đào tạo về sự sống; - Đào tạo kỹ năng nói trước công chúng; - Dạy máy tính. (trừ dạy về tôn giáo; các trường của các tổ chức Đảng – Đoàn thể)",
+      "internationalName": "SONAV TECHNOLOGY AND EDUCATION COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T07:57:28.444Z"
     },
     {
       "id": "0202365839",
@@ -51458,7 +51479,14 @@
       "representative": "HOÀNG TUẤN PHONG",
       "address": "Tổ dân phố Hợp Thành 3, Phường Lê Ích Mộc, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202365839-cong-ty-tnhh-van-tai-bien-hang-giang-26",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-08-12",
+      "phone": "0397258207",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 thành phố Hải Phòng",
+      "mainIndustry": "Vận tải hàng hóa đường thuỷ nội địa",
+      "internationalName": "HANG GIANG 26 SHIPPING COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T07:57:31.918Z"
     },
     {
       "id": "0202369992",
@@ -51479,10 +51507,16 @@
     {
       "id": "0801507088",
       "name": "CÔNG TY TNHH ĐẠI KIM SAN",
-      "representative": "LÊ THỊ KIM THANH",
+      "representative": "LÊ THỊ KIM THANH Ngoài ra, LÊ THỊ KIM THANH còn đại diện các doanh nghiệp, đơn vị: Hộ kinh doanh Lê Thị Kim Thanh",
       "address": "Cụm công nghiệp I, Phường Thạch Khôi, Thành phố Hải Phòng, Việt Nam",
       "slug": "0801507088-cong-ty-tnhh-dai-kim-san",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-09-18",
+      "phone": "0918886969",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 thành phố Hải Phòng",
+      "mainIndustry": "Sản xuất sản phẩm từ plastic",
+      "enrichedAt": "2026-10-08T07:58:12.677Z"
     },
     {
       "id": "0202370010",
@@ -51506,7 +51540,14 @@
       "representative": "PHAN ANH ĐỨC",
       "address": "Khu bãi Neo, tổ dân phố Phạm Xá, Phường Tân Hưng, Thành phố Hải Phòng, Việt Nam",
       "slug": "0801506990-cong-ty-tnhh-van-tai-va-xay-dung-binh-minh-hd",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-09-18",
+      "phone": "0565555339",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 thành phố Hải Phòng",
+      "mainIndustry": "Vận tải hàng hóa bằng đường bộ",
+      "internationalName": "BINH MINH HD CONSTRUCTION AND TRANSPORT COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T07:58:53.367Z"
     },
     {
       "id": "0801507056",
@@ -51562,7 +51603,14 @@
       "representative": "NGUYỄN VĂN NGHĨA",
       "address": "Số 34B/9 phố Tân Kim, TDP Tân Kim, Phường Lê Thanh Nghị, Thành phố Hải Phòng, Việt Nam",
       "slug": "0801507031-cong-ty-tnhh-tu-van-dau-tu-xay-dung-nd-179",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-09-18",
+      "phone": "0372000179",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 thành phố Hải Phòng",
+      "mainIndustry": "Hoạt động kiến trúc và tư vấn kỹ thuật có liên quan",
+      "internationalName": "ND 179 CONSTRUCTION INVESTMENT CONSULTING COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:00:54.751Z"
     },
     {
       "id": "0202369865",
@@ -51578,7 +51626,14 @@
       "representative": "NGUYỄN VĂN TRƯỜNG",
       "address": "Ngõ 33 đường Đông Sơn (Nhà ông Nguyễn Văn Trường), tổ dân phố Vườn Chay, Phường Kiến An, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202369897-cong-ty-tnhh-van-tai-tiep-van-truong-phat",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-09-18",
+      "phone": "0971500229",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 5 thành phố Hải Phòng",
+      "mainIndustry": "Vận tải hàng hóa bằng đường bộ",
+      "internationalName": "TRUONG PHAT LOGISTICS TRANSPORTATION COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:01:16.920Z"
     },
     {
       "id": "0202371670",
@@ -51586,7 +51641,14 @@
       "representative": "NGUYỄN VĂN PHÚC",
       "address": "56 lô C/591 Thiên Lôi, Phường An Biên, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202371670-cong-ty-tnhh-tong-hop-dien-phat",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-06",
+      "phone": "086 2192292",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Hải Phòng",
+      "mainIndustry": "Khai thác đá, cát, sỏi, đất sét",
+      "internationalName": "DIEN PHAT GENERAL COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:01:20.354Z"
     },
     {
       "id": "0801508155",
@@ -51594,7 +51656,14 @@
       "representative": "TRỊNH NGỌC MY",
       "address": "Số 402 đường Tuệ Tĩnh, Phường Tứ Minh, Thành phố Hải Phòng, Việt Nam",
       "slug": "0801508155-cong-ty-tnhh-tu-van-va-phat-trien-ngon-ngu-olympia-academy",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-05",
+      "phone": "0339676970",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 thành phố Hải Phòng",
+      "mainIndustry": "Giáo dục khác chưa được phân vào đâu Chi tiết: - Giáo dục không xác định theo cấp độ tại các trung tâm đào tạo bồi dưỡng; - Các dịch vụ dạy kèm (gia sư); - Các trung tâm dạy học có các khóa học dành cho học sinh yếu kém; - Các khóa học về phê bình, đánh giá chuyên môn; - Dạy ngoại ngữ và dạy kỹ năng đàm thoại; - Dạy đọc nhanh; - Dạy máy tính; - Đào tạo kỹ năng nói trước công chúng; (Không bao gồm dạy về tôn giáo, các trường của các tổ chức Đảng, đoàn thể)",
+      "internationalName": "OLYMPIA ACADEMY LANGUAGE DEVELOPMENT AND CONSULTING COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:01:23.617Z"
     },
     {
       "id": "0202371705",
@@ -51602,15 +51671,29 @@
       "representative": "NGUYỄN CÔNG HÀ",
       "address": "Cụm công nghiệp Vĩnh Niệm, Phường An Biên, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202371705-cong-ty-tnhh-thuong-mai-vendo",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-06",
+      "phone": "0988142894",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 thành phố Hải Phòng",
+      "mainIndustry": "Bán lẻ thực phẩm trong các cửa hàng chuyên doanh",
+      "internationalName": "VEDO TRADING COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:01:26.941Z"
     },
     {
       "id": "0202371695",
       "name": "CÔNG TY TNHH DỊCH VỤ LOGISTICS & CHUỖI CUNG ỨNG GLOBAL GATE VIỆT NAM",
-      "representative": "ĐẶNG VIỆT ANH",
+      "representative": "ĐẶNG VIỆT ANH Ngoài ra, ĐẶNG VIỆT ANH còn đại diện các doanh nghiệp, đơn vị: CÔNG TY CỔ PHẦN PHÁT TRIỂN THƯƠNG MẠI THUẬN ĐẠT VIỆT NAM Đặng Việt Anh",
       "address": "Phòng 303, số 150 đường Chùa Vẽ, Phường Đông Hải, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202371695-cong-ty-tnhh-dich-vu-logistics-chuoi-cung-ung-global-gate-viet-nam",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-06",
+      "phone": "0379880668",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Hải Phòng",
+      "mainIndustry": "Hoạt động dịch vụ hỗ trợ kinh doanh khác còn lại chưa được phân vào đâu Dịch vụ xuất nhập khẩu hàng hóa",
+      "internationalName": "GLOBAL GATE VIETNAM SUPPLY CHAIN & LOGISTIC SERVICES COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:01:30.308Z"
     },
     {
       "id": "0202370282",
@@ -51618,7 +51701,14 @@
       "representative": "NGUYỄN VĂN KIÊN",
       "address": "Số 22-03 Venice, khu đô thị Vinhomes Imperia, Phường Hồng Bàng, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202370282-cong-ty-tnhh-thuong-mai-toan-cau-viet-thanh",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-09-23",
+      "phone": "0982929000",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 thành phố Hải Phòng",
+      "mainIndustry": "Vận tải hàng hóa ven biển và viễn dương",
+      "internationalName": "VIET THANH GLOBAL TRADING COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:01:33.669Z"
     },
     {
       "id": "0202371871",
@@ -51626,7 +51716,14 @@
       "representative": "VŨ TUẤN KHÔI",
       "address": "Khu tái định cư Đông Khê MR (Nhà ông Vũ Tuấn Khôi), đường Đỗ Chính, tổ 32, Phường Gia Viên, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202371871-cong-ty-tnhh-ah-capital",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-07",
+      "phone": "0904767886",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế thành phố Hải Phòng",
+      "mainIndustry": "Hoạt động của trụ sở văn phòng",
+      "internationalName": "AH CAPITAL COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:01:36.867Z"
     },
     {
       "id": "0202371889",
@@ -51634,7 +51731,14 @@
       "representative": "NGUYỄN THỊ KIM XUYÊN",
       "address": "Thửa 24, Lô LK3, Khu nhà ở xã hội 384 Lê Thánh Tông, Phường Ngô Quyền, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202371889-cong-ty-tnhh-giao-duc-ngoai-ngu-hong-minh",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-07",
+      "phone": "0985798268",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Hải Phòng",
+      "mainIndustry": "Giáo dục khác chưa được phân vào đâu Chi tiết: Dạy tiếng Trung và dạy kỹ năng đàm thoại.",
+      "internationalName": "HONG MINH FOREIGN LANGUAGES EDUCATION COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:01:40.356Z"
     },
     {
       "id": "0202371896",
@@ -51642,7 +51746,14 @@
       "representative": "LUO, SHIJIN",
       "address": "Tổ dân phố Kiền Bái 3, Phường Thiên Hương, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202371896-cong-ty-tnhh-quan-ly-chuoi-cung-ung-dinghui-dh-viet-nam",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-07",
+      "phone": "0348782095",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 thành phố Hải Phòng",
+      "mainIndustry": "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng",
+      "internationalName": "DINGHUI (DH) VIET NAM SUPPLY CHAIN MANAGEMEN COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:01:43.863Z"
     },
     {
       "id": "0202371864",
@@ -51650,7 +51761,14 @@
       "representative": "ĐÀO NGỌC MINH",
       "address": "205 Cầu Đất, Phường Gia Viên, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202371864-cong-ty-tnhh-thuong-mai-quoc-te-moc-sinh",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-07",
+      "phone": "0886528669",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Hải Phòng",
+      "mainIndustry": "Bán buôn chuyên doanh khác chưa được phân vào đâu",
+      "internationalName": "MOC SINH INTERNATIONAL TRADING COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:01:47.208Z"
     },
     {
       "id": "0801508331",
@@ -51658,7 +51776,13 @@
       "representative": "BÙI HUY TIÊN",
       "address": "Thôn Tiêu Sơn, Xã Nam Thanh Miện, Thành phố Hải Phòng, Việt Nam",
       "slug": "0801508331-cong-ty-tnhh-thuong-mai-tan-hoang-linh",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-07",
+      "phone": "0982917908",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 11 thành phố Hải Phòng",
+      "mainIndustry": "Vận tải hành khách đường bộ khác",
+      "enrichedAt": "2026-10-08T08:01:50.513Z"
     },
     {
       "id": "0202371945",
@@ -51666,7 +51790,13 @@
       "representative": "NGÔ VĂN TƯ",
       "address": "TDP Ngọ Dương, Phường An Phong, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202371945-cong-ty-tnhh-mtv-thuong-mai-va-dich-vu-xuan-phuc",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-07",
+      "phone": "0379577769",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 thành phố Hải Phòng",
+      "mainIndustry": "Bán buôn đồ uống Chi tiết: Bán buôn loại đồ uống có chất cồn như rượu mạnh, rượu vang, bia",
+      "enrichedAt": "2026-10-08T08:01:53.715Z"
     },
     {
       "id": "0801508130",
@@ -51674,7 +51804,14 @@
       "representative": "NGUYỄN THÀNH QUANG",
       "address": "Số 22B Lý Thường Kiệt, Phường Lê Thanh Nghị, Thành phố Hải Phòng, Việt Nam",
       "slug": "0801508130-cong-ty-tnhh-xay-dung-va-thuong-mai-quang-thuan-hd",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-05",
+      "phone": "0904 576 268",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 thành phố Hải Phòng",
+      "mainIndustry": "Bán lẻ đồ ngũ kim, sơn, kính và thiết bị lắp đặt khác trong xây dựng trong các cửa hàng chuyên doanh",
+      "internationalName": "QUANG THUAN HD TRADING AND CONSTRUCTION COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:01:57.197Z"
     },
     {
       "id": "0801508229",
@@ -51682,7 +51819,14 @@
       "representative": "NGUYỄN VĂN HƯNG",
       "address": "Quốc lộ 17b, Xã Kim Thành, Thành phố Hải Phòng, Việt Nam",
       "slug": "0801508229-cong-ty-tnhh-chan-nuoi-thinh-minh",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-06",
+      "phone": "0986842826",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 13 thành phố Hải Phòng",
+      "mainIndustry": "Chăn nuôi gia cầm",
+      "internationalName": "THINH MINH LIVESTOCK COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:02:00.714Z"
     },
     {
       "id": "0202371776",
@@ -51690,7 +51834,14 @@
       "representative": "LÃ PHONG PHÚ",
       "address": "Tổ dân phố Thiên Hương 2, Phường Thiên Hương, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202371776-cong-ty-tnhh-thuong-mai-lafu-viet-nam",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-06",
+      "phone": "0797919666",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 thành phố Hải Phòng",
+      "mainIndustry": "Bán buôn chuyên doanh khác chưa được phân vào đâu Chi tiết: Bán buôn phân bón; Bán buôn hóa chất thông thường và hóa chất khác sử dụng trong nông nghiệp, dung môi, sơn xịt, chất tẩy rửa để làm sạch xe hơi; hoá chất để làm sạch vệ sinh môi trường (không bao gồm hóa chất bị cấm), chất dẻo dạng nguyên sinh, cao su; tơ, xơ, sợi dệt, phụ liệu may mặc và giày dép. Bán buôn phế liệu, phế thải kim loại, phi kim loại (không bao gồm bán buôn các loại phế liệu nhập khẩu gây ô nhiễm môi trường); Bán buôn xe thu gom rác",
+      "internationalName": "LAFU VIET NAM TRADING COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:02:04.267Z"
     },
     {
       "id": "0202371744",
@@ -51698,7 +51849,13 @@
       "representative": "ĐINH THỊ THẢO",
       "address": "TL14-14, Vinhomes Royal Island, Phường Thủy Nguyên, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202371744-cong-ty-tnhh-dich-vu-vtb-huong-duong",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-06",
+      "phone": "0988723336",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 thành phố Hải Phòng",
+      "mainIndustry": "Vận tải hàng hóa đường thuỷ nội địa",
+      "enrichedAt": "2026-10-08T08:02:07.504Z"
     },
     {
       "id": "0202371920",
@@ -51706,7 +51863,14 @@
       "representative": "VŨ TUẤN VIỆT",
       "address": "Ngõ 371 Nguyễn Lương Bằng, Phường Phù Liễn, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202371920-cong-ty-tnhh-thuong-mai-va-dich-vu-anh-duong-vending",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-07",
+      "phone": "0987787666",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 5 thành phố Hải Phòng",
+      "mainIndustry": "Bán buôn máy móc, thiết bị và phụ tùng máy khác (Trừ bán buôn vũ khí, vật liệu nổ, hệ thống vũ khí và đạn dược, kể cả xe tăng và xe chiến đấu bọc thép) (Trừ loại Nhà nước cấm; trừ hoạt động đấu giá)",
+      "internationalName": "ANH DUONG VENDING TRADING AND SERVICES COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:02:10.580Z"
     },
     {
       "id": "0202371913",
@@ -51714,7 +51878,13 @@
       "representative": "CHU THỊ NGA",
       "address": "Số 452 Lê Thánh Tông, Phường Ngô Quyền, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202371913-cong-ty-tnhh-xuat-khau-toan-cau-nga-chu",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-07",
+      "phone": "0778474581",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Hải Phòng",
+      "mainIndustry": "Bán lẻ đồ điện gia dụng, giường, tủ, bàn, ghế và đồ nội thất tương tự, đèn và bộ đèn điện, đồ dùng gia đình khác chưa được phân vào đâu trong các cửa hàng chuyên doanh",
+      "enrichedAt": "2026-10-08T08:02:13.989Z"
     },
     {
       "id": "0801508356",
@@ -51722,7 +51892,13 @@
       "representative": "LÃNH THỊ QUỲNH LIÊN",
       "address": "My Nại Trì, Xã Thanh Miện, Thành phố Hải Phòng, Việt Nam",
       "slug": "0801508356-cong-ty-tnhh-van-tai-dl-van-an",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-07",
+      "phone": "0936939390",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 11 thành phố Hải Phòng",
+      "mainIndustry": "Vận tải hành khách đường bộ khác (Chi tiết: Vận tải hành khách bằng xe khách nội tỉnh, liên tỉnh; cho thuê xe có người lái để vận tải hành khách, hợp đồng chở khách đi tham quan, du lịch hoặc mục đích khác)",
+      "enrichedAt": "2026-10-08T08:02:17.484Z"
     },
     {
       "id": "0801508363",
@@ -51730,7 +51906,13 @@
       "representative": "NGUYỄN VĂN BÍNH",
       "address": "Đội 2 Thôn Bùi Hoà, Xã Hồng Châu, Thành phố Hải Phòng, Việt Nam",
       "slug": "0801508363-cong-ty-tnhh-cong-ty-tnhh-xay-dung-thanh-binh-bh",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-07",
+      "phone": "0968867666",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 12 thành phố Hải Phòng",
+      "mainIndustry": "Xây dựng nhà để ở",
+      "enrichedAt": "2026-10-08T08:02:20.813Z"
     },
     {
       "id": "0801508349",
@@ -51738,7 +51920,14 @@
       "representative": "LÊ THỊ HÒA",
       "address": "Tổ dân phố số 1, Phường Hải Dương, Thành phố Hải Phòng, Việt Nam",
       "slug": "0801508349-cong-ty-tnhh-thuong-mai-dich-vu-ke-toan-minh-uyen",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-07",
+      "phone": "0356761229",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 thành phố Hải Phòng",
+      "mainIndustry": "Hoạt động liên quan đến kế toán, kiểm toán và tư vấn về thuế Chi tiết: Dịch vụ làm thủ tục về thuế; dịch vụ kế toán (trừ tư vấn pháp lý)",
+      "internationalName": "MINH UYEN ACCOUNTING SERVICES AND TRADING COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:02:24.070Z"
     },
     {
       "id": "0202371857",
@@ -51746,7 +51935,14 @@
       "representative": "ĐẶNG THỊ PHƯỢNG",
       "address": "Số 83 Văn Cao, Phường Ngô Quyền, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202371857-cong-ty-co-phan-phat-trien-dich-vu-eco",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-07",
+      "phone": "0979186912",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Hải Phòng",
+      "mainIndustry": "Nhà hàng và các dịch vụ ăn uống phục vụ lưu động",
+      "internationalName": "ECO SERVICES DEVELOPMENT JOINT STOCK COMPANY",
+      "enrichedAt": "2026-10-08T08:02:27.550Z"
     },
     {
       "id": "0801508275",
@@ -51754,15 +51950,29 @@
       "representative": "NGUYỄN ĐỨC HOẠT",
       "address": "Thôn Kỳ Sơn, Xã Đại Sơn, Thành phố Hải Phòng, Việt Nam",
       "slug": "0801508275-cong-ty-tnhh-cnc-namtools",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-07",
+      "phone": "0355835155",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 12 thành phố Hải Phòng",
+      "mainIndustry": "Gia công cơ khí; xử lý và tráng phủ kim loại (không gia công cơ khí, tái chế phế thải, xi mạ điện tại trụ sở)",
+      "internationalName": "CNC NAMTOOLS COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:02:30.807Z"
     },
     {
       "id": "0202371790",
       "name": "CÔNG TY TNHH TONY PHẠM TÂN DƯƠNG",
-      "representative": "PHẠM CÔNG TÚ",
+      "representative": "PHẠM CÔNG TÚ Ngoài ra, PHẠM CÔNG TÚ còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH PHẠM CÔNG TÚ",
       "address": "Tổ dân phố Hoa Động 3, Phường Thủy Nguyên, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202371790-cong-ty-tnhh-tony-pham-tan-duong",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-06",
+      "phone": "0986446888",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 thành phố Hải Phòng",
+      "mainIndustry": "Giáo dục khác chưa được phân vào đâu",
+      "internationalName": "TONY PHAM TAN DUONG COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:02:34.355Z"
     },
     {
       "id": "0202371825",
@@ -51770,7 +51980,14 @@
       "representative": "LÊ ANH QUÂN",
       "address": "Tổ dân phố Thủy Sơn 4 (tại nhà bà Lê Thị Bích Ngọc), Phường Thủy Nguyên, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202371825-cong-ty-tnhh-kinh-doanh-thuong-mai-va-dich-vu-phuc-huy-66",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-06",
+      "phone": "0966181111",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 thành phố Hải Phòng",
+      "mainIndustry": "Bán lẻ thực phẩm trong các cửa hàng chuyên doanh",
+      "internationalName": "PHUC HUY 66 SERVICES AND TRADING BUSINESS COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:02:40.309Z"
     },
     {
       "id": "0202371751",
@@ -51778,7 +51995,14 @@
       "representative": "NGUYỄN THÙY TRANG",
       "address": "DV1-154 Vinhomes Royal City Vũ Yên, Phường Thủy Nguyên, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202371751-cong-ty-tnhh-kinh-doanh-dich-vu-sunrise",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-06",
+      "phone": "0937191995",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 thành phố Hải Phòng",
+      "mainIndustry": "Dịch vụ lưu trú ngắn ngày",
+      "internationalName": "SUNRISE SERVICES BUSINESS COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:02:43.628Z"
     },
     {
       "id": "0801508081",
@@ -51786,7 +52010,13 @@
       "representative": "LÊ LƯƠNG QUYÊN",
       "address": "Số nhà 25, đường Minh Tân, TDP Đèo Gai, Phường Nhị Chiểu, Thành phố Hải Phòng, Việt Nam",
       "slug": "0801508081-cong-ty-tnhh-mtv-thuong-mai-dich-vu-va-xay-dung-201",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-07",
+      "phone": "0983328197",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 13 thành phố Hải Phòng",
+      "mainIndustry": "Xây dựng công trình kỹ thuật dân dụng khác Chi tiết: Xây dựng công trình dân dụng, cơ sở hạ tầng khu công nghiệp, cơ sở hạ tầng khu đô thị",
+      "enrichedAt": "2026-10-08T08:02:47.228Z"
     },
     {
       "id": "5500690488-050",
@@ -51794,7 +52024,13 @@
       "representative": "PHAN HUY THANH",
       "address": "Số 123 Bắc Hải, Xã Vĩnh Bảo, Thành phố Hải Phòng, Việt Nam",
       "slug": "5500690488-050-cong-ty-tnhh-huy-thanh-sht-tay-bac-chi-nhanh-hpvb",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-10-07",
+      "phone": "0768621381",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 8 thành phố Hải Phòng",
+      "mainIndustry": "Bán buôn tổng hợp",
+      "enrichedAt": "2026-10-08T08:02:50.604Z"
     }
   ],
   "long-an-29": [
@@ -51804,7 +52040,9 @@
       "representative": "ĐOÀN BẢO LUÂN",
       "address": "60 Đường D8, Khu Đô Thị Waterpoint, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An, Việt Nam",
       "slug": "0314452141-002-van-phong-dai-dien-waterpoint-cong-ty-cp-dau-tu-metro-world",
-      "province": "Long An"
+      "province": "Long An",
+      "status": "Đang hoạt động",
+      "enrichedAt": "2026-10-08T08:02:53.805Z"
     },
     {
       "id": "0110150368-001",
@@ -51812,7 +52050,9 @@
       "representative": "NGUYỄN TRUNG THỦY",
       "address": "Ấp 4, Xã Nhựt Chánh, Huyện Bến Lức, Tỉnh Long An, Việt Nam",
       "slug": "0110150368-001-van-phong-dai-dien-cong-ty-co-phan-dau-tu-va-thuong-mai-dha-tai-long-an",
-      "province": "Long An"
+      "province": "Long An",
+      "status": "Đang hoạt động",
+      "enrichedAt": "2026-10-08T08:02:56.970Z"
     },
     {
       "id": "0317641958-007",
@@ -51820,7 +52060,9 @@
       "representative": "NGUYỄN LÊ HỒNG CHÂU",
       "address": "Đường số 15A, Ấp Bình Tiền 1, Xã Đức Hòa Hạ, Huyện Đức Hoà, Tỉnh Long An, Việt Nam",
       "slug": "0317641958-007-van-phong-dai-dien-long-an-cong-ty-tnhh-thuong-mai-dich-vu-power-connect",
-      "province": "Long An"
+      "province": "Long An",
+      "status": "Đang hoạt động",
+      "enrichedAt": "2026-10-08T08:03:00.360Z"
     },
     {
       "id": "1102101048",
@@ -51828,7 +52070,13 @@
       "representative": "NGUYỄN ĐĂNG KHOA",
       "address": "Số 108, TL 836, Ấp Cẩm Mỹ, Xã Mỹ Lệ, Huyện Cần Đước, Tỉnh Long An, Việt Nam",
       "slug": "1102101048-cong-ty-tnhh-ndk-18-group",
-      "province": "Long An"
+      "province": "Long An",
+      "startDate": "2025-06-16",
+      "phone": "0909066044",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 tỉnh Tây Ninh",
+      "mainIndustry": "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống",
+      "enrichedAt": "2026-10-08T08:03:08.632Z"
     },
     {
       "id": "0030304012",
@@ -51836,23 +52084,37 @@
       "representative": "LÊ CÔNG KHEN",
       "address": "Số 757, Quốc lộ 1A, Phường Tân Khánh, Thành phố Tân An, Tỉnh Long An, Việt Nam",
       "slug": "0030304012-cong-ty-tnhh-san-xuat-thuc-an-chan-nuoi-amazonfeed",
-      "province": "Long An"
+      "province": "Long An",
+      "status": "Đang hoạt động",
+      "mainIndustry": "Bán buôn nông, lâm sản nguyên liệu (trừ gỗ, tre, nứa) và động vật sống Chi tiết: Bán buôn thức ăn và nguyên liệu làm thức ăn cho gia súc, gia cầm và thuỷ sản",
+      "internationalName": "AMAZONFEED ANIMAL FEED PRODUCTION COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:03:12.162Z"
     },
     {
       "id": "0316718774-004",
       "name": "VĂN PHÒNG ĐẠI DIỆN LONG AN CÔNG TY TNHH DCT TOURISM",
-      "representative": "PHAN VĨNH NGHI",
+      "representative": "PHAN VĨNH NGHI Ngoài ra, PHAN VĨNH NGHI còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC VĂN PHÒNG ĐẠI DIỆN TÂN THẠNH CÔNG TY TNHH DCT TOURISM VĂN PHÒNG ĐẠI DIỆN TÂN THẠNH CÔNG TY TNHH DCT TOURISM VĂN PHÒNG ĐẠI DIỆN TÂN THẠNH CÔNG TY TNHH DCT TOURISM VĂN PHÒNG ĐẠI DIỆN LONG AN CÔNG TY TNHH DCT TOURISM VĂN PHÒNG ĐẠI DIỆN TÂN THẠNH CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC VĂN PHÒNG ĐẠI DIỆN LONG AN CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC VĂN PHÒNG ĐẠI DIỆN ĐẶC KHU PHÚ QUỐC CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC VĂN PHÒNG ĐẠI DIỆN TỈNH BẮC NINH CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC VĂN PHÒNG ĐẠI DIỆN THÀNH PHỐ HÀ NỘI CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC VĂN PHÒNG ĐẠI DIỆN THÀNH PHỐ ĐÀ NẴNG CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC VĂN PHÒNG ĐẠI DIỆN TỈNH ĐỒNG THÁP CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC",
       "address": "43 Hồ Văn Long, Phường 1, Thành phố Tân An, Tỉnh Long An, Việt Nam",
       "slug": "0316718774-004-van-phong-dai-dien-long-an-cong-ty-tnhh-dct-tourism",
-      "province": "Long An"
+      "province": "Long An",
+      "startDate": "2025-05-27",
+      "phone": "0889495666",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Tây Ninh",
+      "enrichedAt": "2026-10-08T08:03:15.649Z"
     },
     {
       "id": "0316718774-003",
       "name": "VĂN PHÒNG ĐẠI DIỆN LONG AN CÔNG TY TNHH DCT TOURISM",
-      "representative": "PHAN VĨNH NGHI",
+      "representative": "PHAN VĨNH NGHI Ngoài ra, PHAN VĨNH NGHI còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC VĂN PHÒNG ĐẠI DIỆN TÂN THẠNH CÔNG TY TNHH DCT TOURISM VĂN PHÒNG ĐẠI DIỆN TÂN THẠNH CÔNG TY TNHH DCT TOURISM VĂN PHÒNG ĐẠI DIỆN TÂN THẠNH CÔNG TY TNHH DCT TOURISM VĂN PHÒNG ĐẠI DIỆN LONG AN CÔNG TY TNHH DCT TOURISM VĂN PHÒNG ĐẠI DIỆN TÂN THẠNH CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC VĂN PHÒNG ĐẠI DIỆN LONG AN CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC VĂN PHÒNG ĐẠI DIỆN ĐẶC KHU PHÚ QUỐC CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC VĂN PHÒNG ĐẠI DIỆN TỈNH BẮC NINH CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC VĂN PHÒNG ĐẠI DIỆN THÀNH PHỐ HÀ NỘI CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC VĂN PHÒNG ĐẠI DIỆN THÀNH PHỐ ĐÀ NẴNG CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC VĂN PHÒNG ĐẠI DIỆN TỈNH ĐỒNG THÁP CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC",
       "address": "43 Hồ Văn Long, Phường 1, Thành phố Tân An, Tỉnh Long An, Việt Nam",
       "slug": "0316718774-003-van-phong-dai-dien-long-an-cong-ty-tnhh-dct-tourism",
-      "province": "Long An"
+      "province": "Long An",
+      "startDate": "2025-05-27",
+      "phone": "0779495666",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Tây Ninh",
+      "enrichedAt": "2026-10-08T08:03:19.046Z"
     },
     {
       "id": "0316285785-001",
@@ -51860,15 +52122,25 @@
       "representative": "HOÀNG TRẦN HỒNG PHÚC",
       "address": "Lô A105, Đường B, KCN Thái Hòa, Xã Đức Lập Hạ, Huyện Đức Hoà, Tỉnh Long An, Việt Nam",
       "slug": "0316285785-001-chi-nhanh-long-an-cong-ty-tnhh-plastic-viet-nam",
-      "province": "Long An"
+      "province": "Long An",
+      "phone": "028 222 68568",
+      "status": "Đang hoạt động",
+      "mainIndustry": "Sản xuất sản phẩm từ plastic Chi tiết: Sản xuất hạt nhựa, hạt nhựa màu, bao bì nhựa; Sản xuất các sản phẩm từ nhựa (Trừ luyện cán cao su, tái chế phế thải, thuộc da, sản xuất xốp cách nhiệt, sử dụng ga r141b tại trụ sở)",
+      "enrichedAt": "2026-10-08T08:03:22.180Z"
     },
     {
       "id": "1102090903-001",
       "name": "CÔNG TY TNHH BỒI DƯỠNG VĂN HÓA KỶ NGUYÊN MỚI – CHI NHÁNH MỸ HẠNH NAM",
-      "representative": "PHÙNG QUỐC THÁI",
+      "representative": "PHÙNG QUỐC THÁI Ngoài ra, PHÙNG QUỐC THÁI còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH BỒI DƯỠNG VĂN HÓA KỶ NGUYÊN MỚI",
       "address": "Số 68, Tỉnh lộ 824, ấp mới 1, Xã Mỹ Hạnh Nam, Huyện Đức Hoà, Tỉnh Long An, Việt Nam",
       "slug": "1102090903-001-cong-ty-tnhh-boi-duong-van-hoa-ky-nguyen-moi-chi-nhanh-my-hanh-nam",
-      "province": "Long An"
+      "province": "Long An",
+      "startDate": "2025-06-18",
+      "phone": "0989209568",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 tỉnh Tây Ninh",
+      "mainIndustry": "Giáo dục khác chưa được phân vào đâu Chi tiết: dạy thêm, học thêm",
+      "enrichedAt": "2026-10-08T08:03:25.545Z"
     },
     {
       "id": "0110869480-001",
@@ -51876,79 +52148,138 @@
       "representative": "HOÀNG SƠN HÀ",
       "address": "323 Tỉnh Lộ 823 Ấp Chánh, Thị Trấn Hậu Nghĩa, Huyện Đức Hoà, Tỉnh Long An, Việt Nam",
       "slug": "0110869480-001-chi-nhanh-long-an-cong-ty-tnhh-ba-o-anh-property",
-      "province": "Long An"
+      "province": "Long An",
+      "startDate": "2025-05-29",
+      "phone": "091 291 2882",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 tỉnh Tây Ninh",
+      "mainIndustry": "Lắp đặt hệ thống điện",
+      "enrichedAt": "2026-10-08T08:03:29.071Z"
     },
     {
       "id": "0317787611-001",
       "name": "CHI NHÁNH CÔNG TY TNHH THƯƠNG MẠI ĐỊA ỐC ZIN LAND",
-      "representative": "NGUYỄN NGỌC ÁNH",
+      "representative": "NGUYỄN NGỌC ÁNH Ngoài ra, NGUYỄN NGỌC ÁNH còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH THƯƠNG MẠI ĐỊA ỐC ZIN LAND HỘ KINH DOANH ZIN COFFEE",
       "address": "Thửa đất số 1077, Tờ bản đồ số  6, Ấp Vĩnh Phước, Xã Phước Lý, Huyện Cần Giuộc, Tỉnh Long An, Việt Nam",
       "slug": "0317787611-001-chi-nhanh-cong-ty-tnhh-thuong-mai-dia-oc-zin-land",
-      "province": "Long An"
+      "province": "Long An",
+      "startDate": "2024-10-09",
+      "phone": "0901858485",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 3 tỉnh Tây Ninh",
+      "mainIndustry": "Tư vấn, môi giới, đấu giá bất động sản, đấu giá quyền sử dụng đất Chi tiết: Tư vấn, môi giới bất động sản (trừ tư vấn pháp luật)",
+      "enrichedAt": "2026-10-08T08:03:32.466Z"
     },
     {
       "id": "1102023456-001",
       "name": "CHI NHÁNH CÔNG TY TNHH MTV VIỆT THUẬN L.A",
-      "representative": "THẠCH THỊ DIÊM",
+      "representative": "THẠCH THỊ DIÊM Ngoài ra, THẠCH THỊ DIÊM còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH MỘT THÀNH VIÊN SẢN XUẤT THƯƠNG MẠI DỊCH VỤ TƯỜNG THUẬN L.A CÔNG TY TNHH GỐM SỨ HỒNG THUẬN",
       "address": "119A Ấp 3, Tỉnh lộ 835 , Xã Phước Lợi, Huyện Bến Lức, Tỉnh Long An, Việt Nam",
       "slug": "1102023456-001-chi-nhanh-cong-ty-tnhh-mtv-viet-thuan-l-a",
-      "province": "Long An"
+      "province": "Long An",
+      "startDate": "2024-06-28",
+      "phone": "093 7081749",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh Tây Ninh",
+      "mainIndustry": "Bán buôn đồ dùng khác cho gia đình Chi tiết : Bán buôn các sản phẩm gốm sứ thờ cúng",
+      "enrichedAt": "2026-10-08T08:03:35.850Z"
     },
     {
       "id": "0318403988-002",
       "name": "CHI NHÁNH CÔNG TY TNHH SẢN XUẤT - THƯƠNG MẠI- VẬT LIỆU XÂY DỰNG NGỌC QUYÊN",
-      "representative": "NGUYỄN HOÀNG CHIẾN",
+      "representative": "NGUYỄN HOÀNG CHIẾN Ngoài ra, NGUYỄN HOÀNG CHIẾN còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH HOÀNG MINH CHIẾN CÔNG TY TNHH SẢN XUẤT - THƯƠNG MẠI- VẬT LIỆU XÂY DỰNG NGỌC QUYÊN CHI NHÁNH CÔNG TY TNHH SẢN XUẤT - THƯƠNG MẠI- VẬT LIỆU XÂY DỰNG NGỌC QUYÊN",
       "address": "Thửa đất số 488, tờ bản đồ số 1, Ấp Thôi Môi, Xã Hòa Khánh Đông, Huyện Đức Hoà, Tỉnh Long An, Việt Nam",
       "slug": "0318403988-002-chi-nhanh-cong-ty-tnhh-san-xuat-thuong-mai-vat-lieu-xay-dung-ngoc-quyen",
-      "province": "Long An"
+      "province": "Long An",
+      "startDate": "2025-06-19",
+      "phone": "0934171787",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 tỉnh Tây Ninh",
+      "mainIndustry": "Sản xuất bê tông và các sản phẩm từ xi măng và thạch cao Chi tiết: Sản xuất gạch vỉa hè ( không hoạt động tại trụ sở)",
+      "enrichedAt": "2026-10-08T08:03:39.275Z"
     },
     {
       "id": "0303599706-003",
       "name": "CHI NHÁNH CÔNG TY TNHH THƯƠNG MẠI - DỊCH VỤ - XỬ LÝ MÔI TRƯỜNG TƯƠNG LAI XANH",
-      "representative": "NGUYỄN HỒNG ĐỨC",
+      "representative": "NGUYỄN HỒNG ĐỨC Ngoài ra, NGUYỄN HỒNG ĐỨC còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH THƯƠNG MẠI - DỊCH VỤ - XỬ LÝ MÔI TRƯỜNG TƯƠNG LAI XANH CHI NHÁNH CÔNG TY TNHH THƯƠNG MẠI - DỊCH VỤ - XỬ LÝ MÔI TRƯỜNG TƯƠNG LAI XANH HỘ KINH DOANH NGUYỄN HỒNG ĐỨC",
       "address": "Thửa 65, TBĐ số 15, CCN Hoàng Gia, Ấp Mới 2 , Xã Mỹ Hạnh Nam, Huyện Đức Hoà, Tỉnh Long An, Việt Nam",
       "slug": "0303599706-003-chi-nhanh-cong-ty-tnhh-thuong-mai-dich-vu-xu-ly-moi-truong-tuong-lai-xanh",
-      "province": "Long An"
+      "province": "Long An",
+      "startDate": "2025-06-10",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 tỉnh Tây Ninh",
+      "mainIndustry": "Thu gom rác thải không độc hại chi tiết: Thu gom, phân loại, đóng gói, vận chuyển rác thải (không hoạt động tại trụ sở).",
+      "internationalName": "BRANCH OF TƯƠNG LAI XANH TRADING - SERVICE - ENVIRONMENT CHARGE COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:03:42.676Z"
     },
     {
       "id": "0316718774-002",
       "name": "VĂN PHÒNG ĐẠI DIỆN TÂN THẠNH CÔNG TY TNHH DCT TOURISM",
-      "representative": "PHAN VĨNH NGHI",
+      "representative": "PHAN VĨNH NGHI Ngoài ra, PHAN VĨNH NGHI còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC VĂN PHÒNG ĐẠI DIỆN TÂN THẠNH CÔNG TY TNHH DCT TOURISM VĂN PHÒNG ĐẠI DIỆN TÂN THẠNH CÔNG TY TNHH DCT TOURISM VĂN PHÒNG ĐẠI DIỆN LONG AN CÔNG TY TNHH DCT TOURISM VĂN PHÒNG ĐẠI DIỆN LONG AN CÔNG TY TNHH DCT TOURISM VĂN PHÒNG ĐẠI DIỆN TÂN THẠNH CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC VĂN PHÒNG ĐẠI DIỆN LONG AN CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC VĂN PHÒNG ĐẠI DIỆN ĐẶC KHU PHÚ QUỐC CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC VĂN PHÒNG ĐẠI DIỆN TỈNH BẮC NINH CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC VĂN PHÒNG ĐẠI DIỆN THÀNH PHỐ HÀ NỘI CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC VĂN PHÒNG ĐẠI DIỆN THÀNH PHỐ ĐÀ NẴNG CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC VĂN PHÒNG ĐẠI DIỆN TỈNH ĐỒNG THÁP CÔNG TY TNHH DU LỊCH QUỐC TẾ VÂN TƯỚC",
       "address": "56 Quốc Lộ 62, Thị Trấn Tân Thạnh, Huyện Tân Thạnh, Tỉnh Long An, Việt Nam",
       "slug": "0316718774-002-van-phong-dai-dien-tan-thanh-cong-ty-tnhh-dct-tourism",
-      "province": "Long An"
+      "province": "Long An",
+      "startDate": "2025-05-22",
+      "phone": "0889495666",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 5 tỉnh Tây Ninh",
+      "enrichedAt": "2026-10-08T08:03:46.202Z"
     },
     {
       "id": "3603093715-002",
       "name": "CHI NHÁNH CÔNG TY TNHH MỘT THÀNH VIÊN BÃI SẠN - CHI NHÁNH BÃI SẠN SỐ 01",
-      "representative": "PHẠM TRUNG HIỀN",
+      "representative": "PHẠM TRUNG HIỀN Ngoài ra, PHẠM TRUNG HIỀN còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH MỘT THÀNH VIÊN BÃI SẠN CHI NHÁNH CÔNG TY TNHH MỘT THÀNH VIÊN BÃI SẠN - CHI NHÁNH BÃI SẠN SỐ 01 Phạm Trung Hiền",
       "address": "Số 226 ấp Rạch Chanh, Xã Lợi Bình Nhơn, Thành phố Tân An, Tỉnh Long An, Việt Nam",
       "slug": "3603093715-002-chi-nhanh-cong-ty-tnhh-mot-thanh-vien-bai-san-chi-nhanh-bai-san-so-01",
-      "province": "Long An"
+      "province": "Long An",
+      "startDate": "2025-06-06",
+      "phone": "0915696446",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Tây Ninh",
+      "mainIndustry": "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng",
+      "enrichedAt": "2026-10-08T08:03:49.544Z"
     },
     {
       "id": "3703210581-001",
       "name": "CHI NHÁNH CÔNG TY TNHH NHA KHOA LUXURY SMILE TẠI LONG AN",
-      "representative": "VĂN ĐỨC QUÂN",
+      "representative": "VĂN ĐỨC QUÂN Ngoài ra, VĂN ĐỨC QUÂN còn đại diện các doanh nghiệp, đơn vị: VĂN ĐỨC QUÂN",
       "address": "B42 Khu dân cư Long Hậu 3, Ấp 3, Xã Long Hậu, Huyện Cần Giuộc, Tỉnh Long An, Việt Nam",
       "slug": "3703210581-001-chi-nhanh-cong-ty-tnhh-nha-khoa-luxury-smile-tai-long-an",
-      "province": "Long An"
+      "province": "Long An",
+      "startDate": "2025-05-22",
+      "phone": "0908 277 068",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 tỉnh Tây Ninh",
+      "mainIndustry": "Hoạt động của các phòng khám đa khoa, chuyên khoa và nha khoa Chi tiết: Khám bệnh, chữa bệnh chuyên khoa Răng hàm mặt (trừ lưu trú bệnh nhân)",
+      "enrichedAt": "2026-10-08T08:03:53.143Z"
     },
     {
       "id": "0318743173-001",
       "name": "CHI NHÁNH CÔNG TY TNHH MỘT THÀNH VIÊN DŨNG HẠNH – CS1",
-      "representative": "VĂN KIỀU HẠNH",
+      "representative": "VĂN KIỀU HẠNH Ngoài ra, VĂN KIỀU HẠNH còn đại diện các doanh nghiệp, đơn vị: CHI NHÁNH CÔNG TY TNHH MAY DUNG HẠNH - CƠ SỞ 5 CÔNG TY TNHH MAY DUNG HẠNH CÔNG TY TNHH MỘT THÀNH VIÊN DŨNG HẠNH CHI NHÁNH CÔNG TY TNHH MỘT THÀNH VIÊN DŨNG HẠNH – CƠ SỞ 2 CHI NHÁNH CÔNG TY TNHH MỘT THÀNH VIÊN DŨNG HẠNH – CƠ SỞ 3 CHI NHÁNH CÔNG TY TNHH MỘT THÀNH VIÊN DŨNG HẠNH – CƠ SỞ 5 Văn Kiều Hạnh CHI NHÁNH CÔNG TY TNHH MAY DUNG HẠNH - CƠ SỞ 1",
       "address": "Lô LL11B và LL12A, Đường số 3, KCN Xuyên Á, Xã Mỹ Hạnh Bắc, Huyện Đức Hoà, Tỉnh Long An, Việt Nam",
       "slug": "0318743173-001-chi-nhanh-cong-ty-tnhh-mot-thanh-vien-dung-hanh-cs1",
-      "province": "Long An"
+      "province": "Long An",
+      "startDate": "2025-04-04",
+      "phone": "0913813265",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 tỉnh Tây Ninh",
+      "mainIndustry": "May trang phục (trừ trang phục từ da lông thú) Chi tiết: sản xuất hàng may mặc ( không tẩy, nhuộm, hồ, in trên các sản phẩm vải sợi, dệt, may, đan và gia công hàng đã qua sử dụng tại trụ sở)",
+      "enrichedAt": "2026-10-08T08:03:56.393Z"
     },
     {
       "id": "1602110393-002",
       "name": "CHI NHÁNH TP. TÂN AN - CÔNG TY CỔ PHẦN THƯƠNG MẠI LƯƠNG THỰC GẠO VIỆT",
-      "representative": "TRẦN SƠN TUẤN",
+      "representative": "TRẦN SƠN TUẤN Ngoài ra, TRẦN SƠN TUẤN còn đại diện các doanh nghiệp, đơn vị: CÔNG TY CỔ PHẦN THƯƠNG MẠI LƯƠNG THỰC GẠO VIỆT",
       "address": "Ấp 1, Xã Hướng Thọ Phú, Thành phố Tân An, Tỉnh Long An, Việt Nam",
       "slug": "1602110393-002-chi-nhanh-tp-tan-an-cong-ty-co-phan-thuong-mai-luong-thuc-gao-viet",
-      "province": "Long An"
+      "province": "Long An",
+      "startDate": "2025-05-16",
+      "phone": "0946243131",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Tây Ninh",
+      "mainIndustry": "Bán buôn gạo (Không hoạt động tại trụ sở)",
+      "enrichedAt": "2026-10-08T08:03:59.630Z"
     },
     {
       "id": "0314887128-016",
@@ -51956,39 +52287,69 @@
       "representative": "NGÔ THÀNH TÀI",
       "address": "Số 123 Trịnh Quang Nghị, Khu phố Bình Cư 2, Phường 4, Thành phố Tân An, Tỉnh Long An, Việt Nam",
       "slug": "0314887128-016-cong-ty-tnhh-tham-dinh-gia-sag-van-phong-dai-dien-tai-long-an",
-      "province": "Long An"
+      "province": "Long An",
+      "startDate": "2025-04-01",
+      "phone": "0942553592",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh Tây Ninh",
+      "enrichedAt": "2026-10-08T08:04:07.948Z"
     },
     {
       "id": "0317832952-001",
       "name": "CHI NHÁNH CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI HOÀI VÂN",
-      "representative": "NGUYỄN THỊ THU VÂN",
+      "representative": "NGUYỄN THỊ THU VÂN Ngoài ra, NGUYỄN THỊ THU VÂN còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI HOÀI VÂN HỘ KINH DOANH CỬA CUỐN HOVADOOR",
       "address": "Thửa đất số 439, tờ bản đồ số 3, ấp Bình Tả 2, Xã Đức Hòa Hạ, Huyện Đức Hoà, Tỉnh Long An, Việt Nam",
       "slug": "0317832952-001-chi-nhanh-cong-ty-tnhh-san-xuat-thuong-mai-hoai-van",
-      "province": "Long An"
+      "province": "Long An",
+      "startDate": "2025-06-11",
+      "phone": "0972207068",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 tỉnh Tây Ninh",
+      "mainIndustry": "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng Chi tiết: Bán buôn mô tơ cửa cuốn, phụ kiện cửa cuốn, cửa tự động, cửa nhôm, kính. Bán buôn kính xây dựng",
+      "enrichedAt": "2026-10-08T08:04:11.134Z"
     },
     {
       "id": "0312603116-012",
       "name": "CHI NHÁNH KHO CHỨA HÀNG - CÔNG TY TNHH MEGAHOME",
-      "representative": "LÊ VĂN HÀ",
+      "representative": "LÊ VĂN HÀ Ngoài ra, LÊ VĂN HÀ còn đại diện các doanh nghiệp, đơn vị: CHI NHÁNH CÔNG TY TNHH MEGAHOME CHI NHÁNH KHO CHỨA HÀNG - CÔNG TY TNHH MEGAHOME VĂN PHÒNG ĐẠI DIỆN CÔNG TY TNHH MEGAHOME KHO CHỨA HÀNG - CHI NHÁNH CÔNG TY TNHH MEGAHOME CHI NHÁNH KHO CHỨA HÀNG - CÔNG TY TNHH MEGAHOME CHI NHÁNH KHO CHỨA HÀNG - CÔNG TY TNHH MEGAHOME CHI NHÁNH KHO CHỨA HÀNG - CÔNG TY TNHH MEGAHOME CHI NHÁNH KHO CHỨA HÀNG - CÔNG TY TNHH MEGAHOME CHI NHÁNH CÔNG TY TNHH MEGAHOME CÔNG TY TNHH MEGAHOME LONG AN",
       "address": "Lô M25 - M26 Đường số 8, CCN Hải Sơn, Xã Đức Hòa Đông, Huyện Đức Hoà, Tỉnh Long An, Việt Nam",
       "slug": "0312603116-012-chi-nhanh-kho-chua-hang-cong-ty-tnhh-megahome",
-      "province": "Long An"
+      "province": "Long An",
+      "startDate": "2025-06-19",
+      "phone": "0918920770",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 tỉnh Tây Ninh",
+      "mainIndustry": "Bán buôn đồ dùng khác cho gia đình trừ bán buôn dược phẩm",
+      "enrichedAt": "2026-10-08T08:04:14.273Z"
     },
     {
       "id": "1102078039-002",
       "name": "CHI NHÁNH 2 - CÔNG TY TNHH THƯƠNG MẠI TỔNG HỢP TRÒ CHƠI ĐIỆN TỬ NGỌC BẢO",
-      "representative": "HUỲNH NGỌC DŨNG",
+      "representative": "HUỲNH NGỌC DŨNG Ngoài ra, HUỲNH NGỌC DŨNG còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH THƯƠNG MẠI TỔNG HỢP TRÒ CHƠI ĐIỆN TỬ NGỌC BẢO CHI NHÁNH 1 - CÔNG TY TNHH THƯƠNG MẠI TỔNG HỢP TRÒ CHƠI ĐIỆN TỬ NGỌC BẢO HỘ KINH DOANH HUỲNH NGỌC DŨNG CHI NHÁNH 3 - CÔNG TY TNHH THƯƠNG MẠI TỔNG HỢP TRÒ CHƠI ĐIỆN TỬ NGỌC BẢO CHI NHÁNH 4 - CÔNG TY TNHH THƯƠNG MẠI TỔNG HỢP TRÒ CHƠI ĐIỆN TỬ NGỌC BẢO",
       "address": "Số 86, Ấp Mới 2, Xã Mỹ Hạnh Nam, Huyện Đức Hoà, Tỉnh Long An, Việt Nam",
       "slug": "1102078039-002-chi-nhanh-2-cong-ty-tnhh-thuong-mai-tong-hop-tro-choi-dien-tu-ngoc-bao",
-      "province": "Long An"
+      "province": "Long An",
+      "startDate": "2025-06-11",
+      "phone": "0763803022",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 3 tỉnh Tây Ninh",
+      "mainIndustry": "Hoạt động viễn thông khác Chi tiết: Hoạt động của các đại lý internet cung cấp dịch vụ truy cập internet cho khách hàng. Cung cấp dịch vụ truy cập trò chơi điện tử trực tuyến.",
+      "enrichedAt": "2026-10-08T08:04:17.851Z"
     },
     {
       "id": "0318758998-001",
       "name": "CHI NHÁNH CÔNG TY TNHH CƯỜNG THỊNH VINA JS",
-      "representative": "NGUYỄN THANH HIỆP",
+      "representative": "NGUYỄN THANH HIỆP Ngoài ra, NGUYỄN THANH HIỆP còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH CƯỜNG THỊNH VINA JS",
       "address": "Thửa đất số 223, tờ bản đồ số 25, ấp 5, Xã Mỹ Yên, Huyện Bến Lức, Tỉnh Long An, Việt Nam",
       "slug": "0318758998-001-chi-nhanh-cong-ty-tnhh-cuong-thinh-vina-js",
-      "province": "Long An"
+      "province": "Long An",
+      "startDate": "2025-05-29",
+      "phone": "0908463287",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh Tây Ninh",
+      "mainIndustry": "Bán buôn tổng hợp Chi tiết: Xuất khẩu, nhập khẩu các mặt hàng công ty kinh doanh",
+      "internationalName": "BRANCH OF CUONG THINH VINA JS COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T08:04:21.387Z"
     },
     {
       "id": "0318808751-001",
@@ -51996,7 +52357,12 @@
       "representative": "NGUYỄN THÀNH LIÊM",
       "address": "128 ĐT835, ấp Minh Thiện, Xã Long Trạch, Huyện Cần Đước, Tỉnh Long An, Việt Nam",
       "slug": "0318808751-001-van-phong-dai-dien-cong-ty-tnhh-phat-trien-nang-luong-hung-cuong",
-      "province": "Long An"
+      "province": "Long An",
+      "startDate": "2025-04-23",
+      "phone": "0988724769",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế tỉnh Tây Ninh",
+      "enrichedAt": "2026-10-08T08:04:24.504Z"
     },
     {
       "id": "0318721885-002",
@@ -52004,7 +52370,13 @@
       "representative": "GIANG MỸ DUYÊN",
       "address": "Nhà Xưởng D1, Lô H, Khu Công Nghiệp Tân Kim, Thị Trấn Cần Giuộc, Huyện Cần Giuộc, Tỉnh Long An, Việt Nam",
       "slug": "0318721885-002-chi-nhanh-cong-ty-tnhh-hanh-trinh-xanh-eco-lab",
-      "province": "Long An"
+      "province": "Long An",
+      "startDate": "2025-06-20",
+      "phone": "0978120303",
+      "status": "Ngừng hoạt động",
+      "managedBy": "Thuế cơ sở 3 tỉnh Tây Ninh",
+      "mainIndustry": "Sản xuất mỹ phẩm, xà phòng, chất tẩy rửa, làm bóng và chế phẩm vệ sinh Chi tiết: Sản xuất chế phẩm chống muỗi và côn trùng, sâu bọ; Nước thơm chống muỗi và côn trùng, sâu bọ; Tinh dầu xua đuổi muỗi và côn trùng, sâu bọ; Thuốc dạng xịt để xua đuổi muỗi và côn trùng, sâu bọ; Thuốc dạng kem để xua đuổi muỗi và côn trùng, sâu bọ; Sản xuất dung dịch bốc hơi xua, diệt côn trùng (không có chức năng khử mùi) dùng trong gia dụng và y tế; Bình xịt xua, diệt côn trùng dùng trong gia dụng và y tế; Chế phẩm xua, diệt côn trùng dùng trong gia dụng và y tế dạng bột, gel, kem, sơn (sơn có chứa hoạt chất xua, diệt côn trùng); Chế phẩm dạng kem xoa, gel, bình xịt, tấm dán, vòng xua côn trùng dùng cho người; Sản xuất mỹ phẩm, chất khử mùi, sữa tắm, dầu gội (dùng cho người và vật nuôi); Dầu xả tóc; Nước lau sàn; Xịt phòng (chế phẩm làm thơm phòng); Nước rửa chén; Nước giặt; Chế phẩm làm sạch, tẩy rửa vệ sinh; Tinh dầu; Xịt khử mùi vệ sinh; Xịt thơm quần áo, đồ đạc; Sản xuất phấn rôm, nước thơm, dầu thơm, tinh dầu dùng cho trẻ em; Chất tẩy rửa không chứa thuốc dùng cho mục đích vệ sinh (như nước lau sàn, nước giặt, nước tẩy); Chế phẩm làm sạch dùng cho mục đích vệ sinh cá nhân không chứa thuốc; Chiết xuất mỹ phẩm từ hạt chứa dầu.",
+      "enrichedAt": "2026-10-08T08:04:27.859Z"
     },
     {
       "id": "0314400457-002",

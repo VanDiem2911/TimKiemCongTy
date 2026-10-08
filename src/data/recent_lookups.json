@@ -1,11 +1,22 @@
 [
   {
-    "id": "5600347154",
-    "name": "CONG TY TNHH 1TV ABC",
-    "representative": "Tran hoa",
-    "address": "19 hoang van thu, Phường Noong Bua, Thành phố Điện Biên Phủ, Điện Biên",
-    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
-    "province": null,
+    "id": "1791446620",
+    "name": "DOANH NGHIỆP 1791446620",
+    "representative": "Đang cập nhật",
+    "address": "Thành phố Việt Nam, Việt Nam",
+    "status": "",
+    "province": "Việt Nam",
+    "startDate": "",
+    "lastUpdated": "Vừa xong"
+  },
+  {
+    "id": "0101614694",
+    "name": "CÔNG TY TNHH BẤT ĐỘNG SẢN TECHCOMBANK",
+    "representative": "Nguyễn Thị Nga",
+    "address": "72 phố Trần Hưng Đạo, phường Trần Hưng Đạo, , Quận Hoàn Kiếm, Hà Nội",
+    "status": "Không hoạt động tại địa chỉ đã đăng ký",
+    "startDate": "2005-03-08",
+    "registrationDate": "2005-03-08",
     "lastUpdated": "Vừa xong"
   },
   {
@@ -13,8 +24,10 @@
     "name": "CÔNG TY TNHH CAO ỐC VIETCOMBANK 198",
     "representative": "WONG YEW SIONG",
     "address": "Số 198 Trần Quang Khải, Phường Hoàn Kiếm, Thành phố Hà Nội, Việt Nam",
-    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
+    "status": "Đang hoạt động",
     "province": null,
+    "startDate": "1998-08-14",
+    "registrationDate": "1998-08-14",
     "lastUpdated": "Vừa xong"
   },
   {
@@ -33,27 +46,9 @@
     "name": "CÔNG TY CỔ PHẦN SỮA VIỆT NAM",
     "representative": "MAI KIỀU LIÊN",
     "address": "Số 10, Đường Tân Trào, Phường Tân Phú, Quận 7, Thành phố Hồ Chí Minh",
-    "status": "NNT đang hoạt động",
-    "province": "Hồ Chí Minh",
-    "startDate": "1998-10-24",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "2300588964",
-    "name": "NGUYEN VAN TRUNG",
-    "representative": "Nguyen Van Trung",
-    "address": "Kinh Bac, Phường Kinh Bắc, Thành phố Bắc Ninh, Bắc Ninh",
     "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
-    "province": null,
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0314539064",
-    "name": "CÔNG TY TNHH VINAMILK TÂN SƠN",
-    "representative": "KIỀU LỆ QUYÊN",
-    "address": "Số 357 Vườn Lài, Phường Phú Thọ Hoà, Quận Tân Phú, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
-    "province": null,
+    "province": "TP Hồ Chí Minh",
+    "registrationDate": "2003-11-20",
     "lastUpdated": "Vừa xong"
   },
   {

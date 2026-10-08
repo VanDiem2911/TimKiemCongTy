@@ -451,6 +451,45 @@ const BROWSER_FETCH_HEADERS = {
   'Referer': 'https://masothue.com/'
 };
 
+/**
+ * Gọi trang nguồn thông qua ScraperAPI để vượt qua lớp chặn bot.
+ * Trả về null khi không dùng được, và luôn ghi rõ lý do ra log: trước đây lỗi
+ * bị nuốt lặng lẽ nên hết credit hay sai key cũng không ai biết, chỉ thấy
+ * kết quả tìm kiếm trống.
+ */
+async function fetchViaScraperApi(targetUrl: string, label: string): Promise<Response | null> {
+  const key = process.env.SCRAPER_API_KEY;
+  if (!key) return null;
+
+  const params = new URLSearchParams({
+    api_key: key,
+    url: targetUrl,
+    country_code: 'vn',
+  });
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 25000);
+
+  try {
+    const res = await fetch(`https://api.scraperapi.com/?${params.toString()}`, {
+      signal: controller.signal,
+    });
+    clearTimeout(timeout);
+
+    if (res.status === 200) return res;
+
+    const reason = await res.text().catch(() => '');
+    console.warn(
+      `[ScraperAPI] ${label} thất bại - mã ${res.status}: ${reason.slice(0, 200)}`
+    );
+    return null;
+  } catch (err) {
+    clearTimeout(timeout);
+    console.warn(`[ScraperAPI] ${label} lỗi kết nối:`, (err as Error)?.message || err);
+    return null;
+  }
+}
+
 const TOP_ACTIVE_PROVINCES = [
   'ho-chi-minh-23',
   'ha-noi-7',
@@ -521,7 +560,6 @@ export async function searchCompaniesByIndustryLive(
   // 2. Attempt live upstream fetch (with Proxy and ScraperAPI support for cloud deployments)
   try {
     const proxyBase = process.env.VN_PROXY_URL || process.env.MASOTHUE_PROXY_URL;
-    const scraperKey = process.env.SCRAPER_API_KEY;
 
     const pageNumbers = Array.from({ length: maxPages }, (_, i) => i + 1);
     const pagePromises = pageNumbers.map(async (pageNum) => {
@@ -544,17 +582,9 @@ export async function searchCompaniesByIndustryLive(
           res = null;
         }
 
-        // ScraperAPI fallback for cloud deployments (Vercel) to bypass Cloudflare
-        if ((!res || res.status !== 200) && scraperKey) {
-          try {
-            const scUrl = `http://api.scraperapi.com?api_key=${scraperKey}&url=${encodeURIComponent(directUrl)}`;
-            const scController = new AbortController();
-            const scTimeout = setTimeout(() => scController.abort(), 10000);
-            res = await fetch(scUrl, { signal: scController.signal });
-            clearTimeout(scTimeout);
-          } catch (scErr) {
-            console.warn('ScraperAPI industry fallback failed:', scErr);
-          }
+        // Trang nguồn chặn thì đi vòng qua ScraperAPI
+        if (!res || res.status !== 200) {
+          res = await fetchViaScraperApi(directUrl, `tra cứu ngành nghề trang ${pageNum}`);
         }
 
         if (!res || !res.ok) return [];
@@ -662,18 +692,9 @@ async function fetchLiveSearch(
       res = null;
     }
 
-    // ScraperAPI fallback for cloud deployments (Vercel) to bypass Cloudflare bot challenge
-    const scraperKey = process.env.SCRAPER_API_KEY;
-    if ((!res || res.status !== 200) && scraperKey) {
-      try {
-        const scraperUrl = `http://api.scraperapi.com?api_key=${scraperKey}&url=${encodeURIComponent(directUrl)}`;
-        const scController = new AbortController();
-        const scTimeout = setTimeout(() => scController.abort(), 12000);
-        res = await fetch(scraperUrl, { signal: scController.signal });
-        clearTimeout(scTimeout);
-      } catch (scErr) {
-        console.warn('ScraperAPI search fallback failed:', scErr);
-      }
+    // Endpoint tìm kiếm của trang nguồn thường trả về 403, đi vòng qua ScraperAPI
+    if (!res || res.status !== 200) {
+      res = await fetchViaScraperApi(directUrl, `tìm kiếm "${q}"`);
     }
 
     if (res && res.status === 200) {
