@@ -1,6 +1,7 @@
 import { BusinessTaxInfo } from '@/types/tax';
 import { INDUSTRIES, PROVINCES, INITIAL_COMPANIES } from './constants';
 import harvestedJson from '@/data/harvested_provinces.json';
+import cachedIndustryJson from '@/data/cached_industry_companies.json';
 
 export interface HarvestedItem {
   id: string;
@@ -16,6 +17,7 @@ export interface HarvestedItem {
 }
 
 const HARVESTED_DATA = harvestedJson as Record<string, HarvestedItem[]>;
+const CACHED_INDUSTRY_COMPANIES = (cachedIndustryJson || {}) as Record<string, BusinessTaxInfo[]>;
 
 export interface ProvinceCompaniesResult {
   companies: BusinessTaxInfo[];
@@ -192,6 +194,15 @@ export function searchCompaniesAcrossProvinces(keyword: string, type: string = '
   const cleanDigits = rawQ.replace(/[^0-9a-zA-Z]/g, '');
 
   const isIndustrySearch = type === 'industry';
+  const targetIndustry = isIndustrySearch
+    ? (INDUSTRIES.find(i => i.code === cleanDigits) || INDUSTRIES.find(i => normalizeText(i.name).includes(normQ)))
+    : undefined;
+  const indCode = targetIndustry ? targetIndustry.code : cleanDigits;
+  const indNormName = targetIndustry ? normalizeText(targetIndustry.name) : '';
+  const indKeywords = targetIndustry
+    ? indNormName.split(/\s+/).filter(w => w.length > 2 && !['chua', 'duoc', 'phan', 'vao', 'dau', 'khac', 'hoat', 'dong', 'cac', 'loai'].includes(w))
+    : [];
+
   const matches = (item: {
     id: string;
     name: string;
@@ -199,9 +210,20 @@ export function searchCompaniesAcrossProvinces(keyword: string, type: string = '
     representative?: string;
     industryCode?: string;
     mainIndustryCode?: string;
+    mainIndustry?: string;
+    industryName?: string;
   }) => {
     if (isIndustrySearch) {
-      return (item.industryCode || item.mainIndustryCode || '').includes(cleanDigits || rawQ);
+      if (item.industryCode === indCode || item.mainIndustryCode === indCode) return true;
+      const mainInd = normalizeText(item.mainIndustry || item.industryName || '');
+      const nameNorm = normalizeText(item.name || '');
+      if (mainInd) {
+        if (indCode && mainInd.includes(indCode)) return true;
+        if (indNormName && mainInd.includes(indNormName)) return true;
+        if (indKeywords.length > 0 && indKeywords.some(kw => mainInd.includes(kw))) return true;
+      }
+      if (indKeywords.length >= 2 && indKeywords.every(kw => nameNorm.includes(kw))) return true;
+      return false;
     }
 
     const nameNorm = normalizeText(item.name || '');
@@ -229,6 +251,15 @@ export function searchCompaniesAcrossProvinces(keyword: string, type: string = '
   };
 
   const results: BusinessTaxInfo[] = [];
+
+  // Check bundled pre-cached industry companies if searching by industry
+  if (isIndustrySearch && indCode && CACHED_INDUSTRY_COMPANIES[indCode]) {
+    for (const comp of CACHED_INDUSTRY_COMPANIES[indCode]) {
+      if (!results.some(r => r.id === comp.id)) {
+        results.push(comp);
+      }
+    }
+  }
 
   // 1. Search in INITIAL_COMPANIES first (top featured companies & representatives like LÊ BÁ ANH, MAI KIỀU LIÊN, NGUYỄN THỊ HẢO, TÀO ĐỨC THẮNG...)
   for (const item of INITIAL_COMPANIES) {
@@ -349,19 +380,50 @@ export async function searchCompaniesByIndustryLive(
   const cached = LIVE_PROVINCE_CACHE.get(cacheKey);
   if (cached && Date.now() - cached.timestamp < CACHE_TTL_MS) return cached.data;
 
+  // 1. Start with pre-cached verified companies if available
+  const preCached = CACHED_INDUSTRY_COMPANIES[code] || [];
+  const combined: BusinessTaxInfo[] = [...preCached];
+
+  // 2. Attempt live upstream fetch (with Proxy and ScraperAPI support for cloud deployments)
   try {
+    const proxyBase = process.env.VN_PROXY_URL || process.env.MASOTHUE_PROXY_URL;
+    const scraperKey = process.env.SCRAPER_API_KEY;
+
     const pageNumbers = Array.from({ length: maxPages }, (_, i) => i + 1);
     const pagePromises = pageNumbers.map(async (pageNum) => {
       try {
-        const url = pageNum === 1
+        const directUrl = pageNum === 1
           ? `https://masothue.com/tra-cuu-ma-so-thue-theo-nganh-nghe/${industry.slug}`
           : `https://masothue.com/tra-cuu-ma-so-thue-theo-nganh-nghe/${industry.slug}?page=${pageNum}`;
 
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 7000);
-        const res = await fetch(url, { headers: BROWSER_FETCH_HEADERS, signal: controller.signal });
-        clearTimeout(timeoutId);
-        if (!res.ok) return [];
+        const targetUrl = proxyBase
+          ? `${proxyBase.replace(/\/+$/, '')}/tra-cuu-ma-so-thue-theo-nganh-nghe/${industry.slug}${pageNum > 1 ? `?page=${pageNum}` : ''}`
+          : directUrl;
+
+        let res: Response | null = null;
+        try {
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 4000);
+          res = await fetch(targetUrl, { headers: BROWSER_FETCH_HEADERS, signal: controller.signal });
+          clearTimeout(timeoutId);
+        } catch {
+          res = null;
+        }
+
+        // ScraperAPI fallback for cloud deployments (Vercel) to bypass Cloudflare
+        if ((!res || res.status !== 200) && scraperKey) {
+          try {
+            const scUrl = `http://api.scraperapi.com?api_key=${scraperKey}&url=${encodeURIComponent(directUrl)}`;
+            const scController = new AbortController();
+            const scTimeout = setTimeout(() => scController.abort(), 10000);
+            res = await fetch(scUrl, { signal: scController.signal });
+            clearTimeout(scTimeout);
+          } catch (scErr) {
+            console.warn('ScraperAPI industry fallback failed:', scErr);
+          }
+        }
+
+        if (!res || !res.ok) return [];
 
         const html = await res.text();
         return parseIndustryHtml(html, code, industry.name);
@@ -371,8 +433,6 @@ export async function searchCompaniesByIndustryLive(
     });
 
     const pageResults = await Promise.all(pagePromises);
-    const combined: BusinessTaxInfo[] = [];
-
     for (const pageList of pageResults) {
       for (const comp of pageList) {
         if (!combined.some((c) => c.id === comp.id)) {
@@ -380,17 +440,37 @@ export async function searchCompaniesByIndustryLive(
         }
       }
     }
+  } catch (error) {
+    console.warn('Live fetch for industry upstream error:', error);
+  }
 
-    // Merge with any matching local harvested companies
+  // 3. Smart Fallback: Merge with matching local harvested companies if fewer than 10
+  if (combined.length < 10) {
     const normIndName = normalizeText(industry.name);
+    const indWords = normIndName
+      .split(/\s+/)
+      .filter((w) => w.length > 2 && !['chua', 'duoc', 'phan', 'vao', 'dau', 'khac', 'hoat', 'dong', 'cac', 'loai', 'chat', 'trong'].includes(w));
+
     for (const [slug, list] of Object.entries(HARVESTED_DATA)) {
       const prov = PROVINCES.find((p) => p.slug === slug);
       const provName = prov ? prov.name : slug;
       for (const item of list) {
-        if (
-          (item.mainIndustry && normalizeText(item.mainIndustry).includes(normIndName)) ||
-          item.mainIndustry === industry.name
-        ) {
+        const itemMainInd = item.mainIndustry ? normalizeText(item.mainIndustry) : '';
+        const itemName = normalizeText(item.name || '');
+
+        let isMatch = false;
+        if (itemMainInd) {
+          if (itemMainInd.includes(code) || itemMainInd.includes(normIndName)) {
+            isMatch = true;
+          } else if (indWords.length > 0 && indWords.some((w) => itemMainInd.includes(w))) {
+            isMatch = true;
+          }
+        }
+        if (!isMatch && indWords.length >= 2 && indWords.every((w) => itemName.includes(w))) {
+          isMatch = true;
+        }
+
+        if (isMatch) {
           if (!combined.some((c) => c.id === item.id)) {
             combined.push({
               id: item.id,
@@ -407,17 +487,16 @@ export async function searchCompaniesByIndustryLive(
             });
           }
         }
+        if (combined.length >= 50) break;
       }
+      if (combined.length >= 50) break;
     }
-
-    if (combined.length > 0) {
-      LIVE_PROVINCE_CACHE.set(cacheKey, { data: combined, timestamp: Date.now() });
-    }
-    return combined;
-  } catch (error) {
-    console.error('Không thể tải danh sách doanh nghiệp theo mã ngành:', error);
-    return [];
   }
+
+  if (combined.length > 0) {
+    LIVE_PROVINCE_CACHE.set(cacheKey, { data: combined, timestamp: Date.now() });
+  }
+  return combined;
 }
 
 /**

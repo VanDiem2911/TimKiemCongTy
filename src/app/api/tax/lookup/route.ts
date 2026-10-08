@@ -20,7 +20,19 @@ export async function GET(request: NextRequest) {
   const digitsOnly = q.replace(/[^0-9]/g, '');
   const cleanQuery = q.replace(/[^0-9a-zA-Z]/g, '');
   const isTaxNumber = digitsOnly.length === 10 || digitsOnly.length === 13;
-  const matchedIndustry = INDUSTRIES.find((i) => i.code === cleanQuery);
+  let matchedIndustry = INDUSTRIES.find((i) => i.code === cleanQuery);
+  if (!matchedIndustry && cleanQuery && cleanQuery.length >= 2) {
+    matchedIndustry = INDUSTRIES.find((i) => i.code.startsWith(cleanQuery));
+  }
+  if (!matchedIndustry && (type === 'industry' || type === 'auto')) {
+    const normQ = q.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').trim();
+    if (normQ.length >= 2) {
+      matchedIndustry = INDUSTRIES.find((i) => {
+        const indNorm = i.name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd');
+        return indNorm.includes(normQ) || normQ.includes(indNorm);
+      });
+    }
+  }
   const isIndustryLookup = type === 'industry' || (type === 'auto' && Boolean(matchedIndustry));
 
   // VSIC codes are listed by a dedicated upstream endpoint. Fetch multiple pages (100+ items)
