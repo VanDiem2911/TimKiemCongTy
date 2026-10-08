@@ -158,7 +158,7 @@ export function TaxSearchResults({
                     <Link
                       href={`/${detailSlug}`}
                       prefetch={false}
-                      className="font-mono font-bold text-[#e91a2c] bg-[#fff0f1] px-2 py-0.5 rounded border border-[#fecdd3] hover:bg-[#ffe4e6] transition-colors whitespace-nowrap inline-block"
+                      className="font-mono font-bold text-[#c51322] bg-[#fff0f1] px-2 py-0.5 rounded border border-[#fecdd3] hover:bg-[#ffe4e6] transition-colors whitespace-nowrap inline-block"
                     >
                       {normalizeTaxId(comp.id)}
                     </Link>

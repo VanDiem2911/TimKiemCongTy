@@ -282,7 +282,7 @@ export function ProvinceCompanyList({
                               <span>Mã số thuế:</span>
                               <Link
                                 href={`/${detailSlug}`}
-                                className="font-mono font-bold text-[#e91a2c] bg-red-50 border border-red-100 px-2 py-0.5 rounded-md text-xs hover:bg-red-100 transition-colors whitespace-nowrap inline-block"
+                                className="font-mono font-bold text-[#c51322] bg-red-50 border border-red-100 px-2 py-0.5 rounded-md text-xs hover:bg-red-100 transition-colors whitespace-nowrap inline-block"
                               >
                                 {normalizeTaxId(comp.id)}
                               </Link>
@@ -334,7 +334,7 @@ export function ProvinceCompanyList({
                       {/* View profile button */}
                       <Link
                         href={`/${detailSlug}`}
-                        className="self-end md:self-center shrink-0 bg-red-50/90 hover:bg-red-100 active:bg-red-200/80 text-[#e91a2c] font-semibold text-xs px-3.5 py-2 rounded-xl transition-colors flex items-center space-x-1"
+                        className="self-end md:self-center shrink-0 bg-red-50/90 hover:bg-red-100 active:bg-red-200/80 text-[#c51322] font-semibold text-xs px-3.5 py-2 rounded-xl transition-colors flex items-center space-x-1"
                       >
                         <span>Xem chi tiết hồ sơ thuế</span>
                         <ChevronRight className="w-3.5 h-3.5 text-[#e91a2c]" />
@@ -434,7 +434,7 @@ export function ProvinceCompanyList({
                       href={`/tra-cuu-ma-so-thue-theo-tinh/${p.slug}`}
                       className={`px-2 py-1.5 rounded-md flex items-center justify-between transition-colors ${
                         isActive
-                          ? 'bg-[#fff0f1] text-[#e91a2c] font-bold'
+                          ? 'bg-[#fff0f1] text-[#c51322] font-bold'
                           : 'text-slate-700 hover:text-[#e91a2c] hover:bg-[#fff0f1]'
                       }`}
                     >

@@ -646,7 +646,7 @@ export default function AdminDashboardPage() {
                 <span className="text-lg font-black tracking-tight text-gray-900 leading-none truncate">
                   TÌM KIẾM <span className="text-[#e91a2c]">CÔNG TY</span>
                 </span>
-                <span className="text-[10px] font-bold text-gray-400 tracking-wider uppercase font-mono mt-0.5">
+                <span className="text-[10px] font-bold text-gray-500 tracking-wider uppercase font-mono mt-0.5">
                   TIMKIEMCONGTY.COM
                 </span>
               </div>
@@ -1309,6 +1309,7 @@ export default function AdminDashboardPage() {
                   <select
                     value={selectedProvince}
                     onChange={(e) => setSelectedProvince(e.target.value)}
+                    aria-label="Lọc theo tỉnh thành phố"
                     className="w-full px-3 py-2 border border-slate-200 rounded-lg bg-white text-slate-800 focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 focus:outline-none transition cursor-pointer"
                   >
                     <option value="">-- Tất cả 63 Tỉnh --</option>
@@ -1378,6 +1379,7 @@ export default function AdminDashboardPage() {
                   </div>
                   <select
                     value={timeFilterType}
+                    aria-label="Lọc theo thời gian thành lập"
                     onChange={(e) =>
                       setTimeFilterType(
                         e.target.value as 'all' | 'exact_date' | 'month' | 'year' | 'range' | 'before' | 'after'

@@ -1,15 +1,5 @@
 [
   {
-    "id": "0319736517",
-    "name": "CÔNG TY TNHH PHÂN PHỐI NEXALUX",
-    "representative": "TRƯƠNG THỊ KIM ANH",
-    "address": "Tầng 3, Tòa nhà The District, 159C đường Đề Thám, Phường Cầu Ông Lãnh, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Thành phố Hồ Chí Minh",
-    "startDate": "2026-10-07",
-    "lastUpdated": "Vừa xong"
-  },
-  {
     "id": "1301109676-001",
     "name": "CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ XÂY DỰNG BẢO GIA PHÚ - CHI NHÁNH 1",
     "representative": "ĐẶNG LÂM QUỐC BẢO",
@@ -117,6 +107,16 @@
     "status": "Đang hoạt động",
     "province": "Thành phố Hồ Chí Minh",
     "startDate": "",
+    "lastUpdated": "Vừa xong"
+  },
+  {
+    "id": "0319736517",
+    "name": "CÔNG TY TNHH PHÂN PHỐI NEXALUX",
+    "representative": "TRƯƠNG THỊ KIM ANH",
+    "address": "Tầng 3, Tòa nhà The District, 159C đường Đề Thám, Phường Cầu Ông Lãnh, Thành phố Hồ Chí Minh, Việt Nam",
+    "status": "Đang hoạt động",
+    "province": "Thành phố Hồ Chí Minh",
+    "startDate": "2026-10-07",
     "lastUpdated": "Vừa xong"
   },
   {

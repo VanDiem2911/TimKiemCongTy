@@ -79,6 +79,7 @@ export function HeroSlider({ onSearch, initialQuery = '', initialType = 'auto' }
             <select
               value={searchType}
               onChange={(e) => setSearchType(e.target.value)}
+              aria-label="Chọn loại thông tin cần tra cứu"
               className="w-full sm:w-auto text-xs sm:text-sm text-slate-700 font-semibold bg-transparent focus:outline-none cursor-pointer pr-1 py-1"
             >
               <option value="auto">Tất cả thông tin</option>

@@ -76,7 +76,7 @@ export function Header(_props?: HeaderProps) {
                   <span className="text-xl sm:text-[22px] font-black tracking-tight text-gray-900 leading-none">
                     TÌM KIẾM <span className="text-[#e91a2c]">CÔNG TY</span>
                   </span>
-                  <span className="text-[10px] font-bold text-gray-400 tracking-wider uppercase font-mono mt-0.5">
+                  <span className="text-[10px] font-bold text-gray-500 tracking-wider uppercase font-mono mt-0.5">
                     TIMKIEMCONGTY.COM
                   </span>
                 </div>
@@ -154,7 +154,7 @@ export function Header(_props?: HeaderProps) {
               <Link
                 href="/"
                 className={`py-2 px-3 rounded-lg flex items-center space-x-2 ${
-                  isHome ? 'bg-red-50 text-[#e91a2c] font-bold' : 'hover:bg-gray-50'
+                  isHome ? 'bg-red-50 text-[#c51322] font-bold' : 'hover:bg-gray-50'
                 }`}
                 onClick={handleMobileNavClick}
               >
@@ -164,7 +164,7 @@ export function Header(_props?: HeaderProps) {
               <Link
                 href="/tra-cuu-ma-so-thue-theo-nganh-nghe/"
                 className={`py-2 px-3 rounded-lg flex items-center space-x-2 ${
-                  isIndustry ? 'bg-red-50 text-[#e91a2c] font-bold' : 'hover:bg-gray-50'
+                  isIndustry ? 'bg-red-50 text-[#c51322] font-bold' : 'hover:bg-gray-50'
                 }`}
                 onClick={handleMobileNavClick}
               >
@@ -174,7 +174,7 @@ export function Header(_props?: HeaderProps) {
               <Link
                 href="/tra-cuu-ma-so-thue-theo-tinh/"
                 className={`py-2 px-3 rounded-lg flex items-center space-x-2 ${
-                  isProvince ? 'bg-red-50 text-[#e91a2c] font-bold' : 'hover:bg-gray-50'
+                  isProvince ? 'bg-red-50 text-[#c51322] font-bold' : 'hover:bg-gray-50'
                 }`}
                 onClick={handleMobileNavClick}
               >
@@ -184,7 +184,7 @@ export function Header(_props?: HeaderProps) {
               <Link
                 href="/lien-he/"
                 className={`py-2 px-3 rounded-lg flex items-center space-x-2 ${
-                  isContact ? 'bg-red-50 text-[#e91a2c] font-bold' : 'hover:bg-gray-50'
+                  isContact ? 'bg-red-50 text-[#c51322] font-bold' : 'hover:bg-gray-50'
                 }`}
                 onClick={handleMobileNavClick}
               >

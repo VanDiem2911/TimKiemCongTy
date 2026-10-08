@@ -108,7 +108,7 @@ export function TaxDetailView({ initialCompany, slug }: TaxDetailViewProps) {
           <div className="bg-white border border-slate-200/90 rounded-xl p-4 sm:p-6 shadow-xs">
             <header className="border-b border-slate-100 pb-3.5 mb-4">
               <h1 className="text-lg sm:text-2xl font-bold text-slate-900 leading-snug">
-                <span className="font-mono text-[#e91a2c] bg-[#fff0f1] px-2 py-0.5 rounded border border-[#fecdd3] mr-2 whitespace-nowrap inline-block text-sm sm:text-base">{normalizeTaxId(company.id)}</span>
+                <span className="font-mono text-[#c51322] bg-[#fff0f1] px-2 py-0.5 rounded border border-[#fecdd3] mr-2 whitespace-nowrap inline-block text-sm sm:text-base">{normalizeTaxId(company.id)}</span>
                 <span className="break-words">{company.name}</span>
               </h1>
             </header>

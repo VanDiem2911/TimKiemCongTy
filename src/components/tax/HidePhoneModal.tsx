@@ -181,10 +181,11 @@ export function HidePhoneModal({ company, isOpen, onClose, onSuccess }: HidePhon
               </div>
 
               <div>
-                <label className="block text-gray-700 font-bold mb-1">
+                <label htmlFor="hide-phone-reason" className="block text-gray-700 font-bold mb-1">
                   Lý do yêu cầu ẩn <span className="text-red-500">*</span>
                 </label>
                 <select
+                  id="hide-phone-reason"
                   value={reasonCategory}
                   onChange={(e) => setReasonCategory(e.target.value)}
                   className="w-full px-3 py-1.5 border border-gray-300 rounded mb-2 bg-white focus:ring-1 focus:ring-amber-500 focus:outline-none"

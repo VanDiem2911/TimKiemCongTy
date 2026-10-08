@@ -173,7 +173,7 @@ export default async function ProvinceTaxPage({ searchParams }: PageProps) {
                               <span>Mã số thuế:</span>
                               <Link
                                 href={`/${detailSlug}`}
-                                className="font-mono font-bold text-[#e91a2c] bg-[#fff0f1] px-1.5 py-0.5 rounded border border-[#fecdd3] hover:underline whitespace-nowrap inline-block"
+                                className="font-mono font-bold text-[#c51322] bg-[#fff0f1] px-1.5 py-0.5 rounded border border-[#fecdd3] hover:underline whitespace-nowrap inline-block"
                               >
                                 {normalizeTaxId(comp.id)}
                               </Link>
