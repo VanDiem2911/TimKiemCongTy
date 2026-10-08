@@ -1,5 +1,15 @@
 [
   {
+    "id": "0100109106",
+    "name": "TẬP ĐOÀN CÔNG NGHIỆP - VIỄN THÔNG QUÂN ĐỘI",
+    "representative": "TÀO ĐỨC THẮNG",
+    "address": "Số 5, Phố Nguyễn Hữu An, Phường Cầu Giấy, Thành phố Hà Nội, Việt Nam",
+    "status": "Đang hoạt động",
+    "province": "Thành phố Hà Nội",
+    "startDate": "1998-05-21",
+    "lastUpdated": "Vừa xong"
+  },
+  {
     "id": "0300588569",
     "name": "CÔNG TY CỔ PHẦN SỮA VIỆT NAM",
     "representative": "MAI KIỀU LIÊN",
@@ -17,16 +27,6 @@
     "status": "Đang hoạt động",
     "province": "Thành phố Hà Nội",
     "startDate": "2002-06-06",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0100109106",
-    "name": "TẬP ĐOÀN CÔNG NGHIỆP - VIỄN THÔNG QUÂN ĐỘI",
-    "representative": "TÀO ĐỨC THẮNG",
-    "address": "Số 5, Phố Nguyễn Hữu An, Phường Cầu Giấy, Thành phố Hà Nội, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Thành phố Hà Nội",
-    "startDate": "1998-05-21",
     "lastUpdated": "Vừa xong"
   },
   {
@@ -128,16 +128,6 @@
     "lastUpdated": "Vừa xong"
   },
   {
-    "id": "3703509854-001",
-    "name": "CHI NHÁNH 1 - CÔNG TY TNHH ANH PRECISION VN",
-    "representative": "CAO NHỰT LINH",
-    "address": "Số 90 đường 30 tháng 4, Khu phố Hiệp Thắng, Phường Đông Hòa, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Thành phố Hồ Chí Minh",
-    "startDate": "2026-10-01",
-    "lastUpdated": "Vừa xong"
-  },
-  {
     "id": "0100681592",
     "name": "TẬP ĐOÀN CÔNG NGHIỆP - NĂNG LƯỢNG QUỐC GIA VIỆT NAM",
     "representative": "LÊ MẠNH CƯỜNG",
@@ -185,6 +175,16 @@
     "status": "Đang hoạt động",
     "province": "Thành phố Hồ Chí Minh",
     "startDate": "2026-10-02",
+    "lastUpdated": "Vừa xong"
+  },
+  {
+    "id": "3703509854-001",
+    "name": "CHI NHÁNH 1 - CÔNG TY TNHH ANH PRECISION VN",
+    "representative": "CAO NHỰT LINH",
+    "address": "Số 90 đường 30 tháng 4, Khu phố Hiệp Thắng, Phường Đông Hòa, Thành phố Hồ Chí Minh, Việt Nam",
+    "status": "Đang hoạt động",
+    "province": "Thành phố Hồ Chí Minh",
+    "startDate": "2026-10-01",
     "lastUpdated": "Vừa xong"
   },
   {
@@ -250,46 +250,36 @@
   {
     "id": "3502593768",
     "name": "CÔNG TY CỔ PHẦN TÔN VINA ONE (NTNN)",
+    "representative": "ĐẶNG BÁ HƯNG",
     "address": "Đường Đ07, Khu Công Nghiệp Châu Đức, Thôn Hữu Phước, Xã Ngãi Giao, TP Hồ Chí Minh",
     "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
-    "representative": "ĐẶNG BÁ HƯNG",
-    "phone": "02723778899",
-    "industryName": "Sản xuất sắt, thép, gang",
     "province": "TP Hồ Chí Minh",
     "lastUpdated": "2 phút trước"
   },
   {
     "id": "0319732689",
     "name": "CÔNG TY TNHH IGL WORLDWIDE",
+    "representative": "NGUYỄN THỤY BÍCH HOÀN",
     "address": "Tầng 1, Tòa nhà International Plaza, Số 343 Phạm Ngũ Lão, Phường Bến Thành, Thành phố Hồ Chí Minh",
     "status": "NNT đang hoạt động",
-    "representative": "NGUYỄN THỤY BÍCH HOÀN",
-    "phone": "02839251868",
-    "industryName": "Hoạt động dịch vụ hỗ trợ khác liên quan đến vận tải",
     "province": "Hồ Chí Minh",
     "lastUpdated": "3 phút trước"
   },
   {
     "id": "5400575731",
     "name": "CÔNG TY TNHH BAO BÌ THỊNH THÁI",
+    "representative": "LƯƠNG THỊ MINH",
     "address": "Tiểu Khu 11, Xã Lương Sơn, Tỉnh Phú Thọ, Việt Nam",
     "status": "NNT đang hoạt động",
-    "representative": "LƯƠNG THỊ MINH",
-    "phone": "02103846666",
-    "industryName": "Sản xuất bao bì bằng giấy, bìa",
     "province": "Phú Thọ",
     "lastUpdated": "4 phút trước"
   },
   {
     "id": "0301446260",
     "name": "CÔNG TY CỔ PHẦN HÓA CHẤT CƠ BẢN MIỀN NAM",
-    "internationalName": "SOUTH BASIC CHEMICALS JOINT STOCK COMPANY",
-    "shortName": "HÓA CHẤT CƠ BẢN MIỀN NAM",
+    "representative": "LÊ BÁ ANH",
     "address": "22 Lý Tự Trọng, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh",
     "status": "NNT đang hoạt động",
-    "representative": "LÊ BÁ ANH",
-    "phone": "02838296620",
-    "industryName": "Sản xuất hoá chất cơ bản",
     "province": "Hồ Chí Minh",
     "lastUpdated": "5 phút trước"
   }

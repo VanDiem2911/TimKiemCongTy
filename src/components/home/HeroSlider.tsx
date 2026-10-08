@@ -44,17 +44,14 @@ export function HeroSlider({ onSearch, initialQuery = '', initialType = 'auto' }
   return (
     <div
       className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-slate-200/90 py-10 sm:py-14 md:py-16 px-4 sm:px-8 mb-8 bg-cover bg-center"
-      style={{ backgroundImage: "url('/images/banner-skyline.jpg')" }}
+      style={{ backgroundImage: "url('/images/banner-skyline.png?v=3')", backgroundPosition: 'center 40%' }}
     >
-      {/* Soft translucent gradient overlay for maximum readability & aesthetic vibrancy */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white/75 backdrop-blur-[0.5px]" />
-
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         {/* Main Heading */}
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-black text-slate-900 tracking-tight mb-2.5 leading-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-black text-slate-900 tracking-tight mb-2.5 leading-tight drop-shadow-xs">
           Tra cứu <span className="text-[#e91a2c]">Mã số thuế</span> & Tên công ty
         </h1>
-        <p className="text-xs sm:text-sm md:text-[15px] text-slate-600 max-w-2xl mx-auto mb-6 sm:mb-7 font-medium">
+        <p className="text-xs sm:text-sm md:text-[15px] text-slate-800 max-w-2xl mx-auto mb-6 sm:mb-7 font-semibold drop-shadow-xs">
           Dữ liệu kết nối trực tiếp với Tổng cục Thuế Việt Nam và Cổng thông tin đăng ký doanh nghiệp quốc gia.
         </p>
 

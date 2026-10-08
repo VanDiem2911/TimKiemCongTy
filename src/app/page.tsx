@@ -12,39 +12,6 @@ import { INITIAL_COMPANIES, PROVINCES, getCompanySlug, getCompanyStatusBadgeClas
 import { BusinessTaxInfo } from '@/types/tax';
 import { Hash, MapPin, User, ChevronRight, ShieldCheck, Clock, Building2, CheckCircle2 } from 'lucide-react';
 
-function renderCompanyLogo(id: string, name: string) {
-  const norm = (name || '').toLowerCase();
-  if (id === '0300588569' || norm.includes('vinamilk') || norm.includes('sữa việt nam')) {
-    return (
-      <div className="flex flex-col items-center justify-center font-bold text-[#002f6c] leading-tight select-none">
-        <span className="text-[17px] font-black tracking-tight">Vinamilk</span>
-        <span className="text-[8px] font-bold text-[#002f6c]/70 tracking-widest mt-0.5">EST 1976</span>
-      </div>
-    );
-  }
-  if (id === '0101248141' || norm.includes('fpt')) {
-    return (
-      <div className="flex items-center justify-center font-black text-xl italic tracking-tight select-none">
-        <span className="text-[#005ba9]">F</span>
-        <span className="text-[#f37021]">P</span>
-        <span className="text-[#00923f]">T</span>
-      </div>
-    );
-  }
-  if (id === '0100109106' || norm.includes('viettel') || norm.includes('viễn thông quân đội')) {
-    return (
-      <div className="flex items-center justify-center font-bold text-lg text-[#ee0000] tracking-tight lowercase select-none">
-        <span>viettel</span>
-      </div>
-    );
-  }
-  return (
-    <div className="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400">
-      <Building2 className="w-6 h-6 stroke-[1.5]" />
-    </div>
-  );
-}
-
 function HomeContent() {
   const searchParams = useSearchParams();
   const urlQuery = searchParams.get('q') || '';
@@ -197,9 +164,9 @@ function HomeContent() {
                     className="bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-5 shadow-xs hover:shadow-md transition-all duration-200 flex flex-col md:flex-row md:items-center justify-between gap-4 group"
                   >
                     <div className="flex items-start sm:items-center space-x-4 flex-1 min-w-0">
-                      {/* Logo Box */}
-                      <div className="w-20 h-20 sm:w-22 sm:h-22 rounded-2xl bg-slate-50/80 border border-slate-100 flex items-center justify-center p-2 shrink-0 group-hover:scale-102 transition-transform shadow-2xs">
-                        {renderCompanyLogo(company.id, company.name)}
+                      {/* Enterprise Icon Box */}
+                      <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-2xl bg-slate-50/90 border border-slate-100 flex items-center justify-center shrink-0 group-hover:scale-102 transition-transform shadow-2xs">
+                        <Building2 className="w-9 h-9 text-slate-400 stroke-[1.5]" />
                       </div>
 
                       {/* Info Content */}

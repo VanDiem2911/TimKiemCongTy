@@ -90,11 +90,11 @@ export function Header(_props?: HeaderProps) {
                 onClick={handleNavClick}
                 className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-lg transition-all ${
                   isHome
-                    ? 'bg-red-50 text-[#e91a2c] font-bold border border-red-100 shadow-2xs'
+                    ? 'bg-[#fff1f2] text-[#e11d48] font-bold border border-[#fecdd3]'
                     : 'text-gray-700 hover:text-[#e91a2c] hover:bg-gray-50 font-medium'
                 }`}
               >
-                <Home className="w-4 h-4 text-[#e91a2c]" />
+                <Home className={`w-4 h-4 ${isHome ? 'text-[#e11d48]' : 'text-gray-500'}`} />
                 <span>Trang chủ</span>
               </Link>
 
@@ -103,24 +103,24 @@ export function Header(_props?: HeaderProps) {
                 onClick={handleNavClick}
                 className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-lg transition-all ${
                   isIndustry
-                    ? 'bg-red-50 text-[#e91a2c] font-bold border border-red-100 shadow-2xs'
+                    ? 'bg-[#fff1f2] text-[#e11d48] font-bold border border-[#fecdd3]'
                     : 'text-gray-700 hover:text-[#e91a2c] hover:bg-gray-50 font-medium'
                 }`}
               >
-                <LayoutGrid className={`w-4 h-4 ${isIndustry ? 'text-[#e91a2c]' : 'text-gray-500'}`} />
+                <LayoutGrid className={`w-4 h-4 ${isIndustry ? 'text-[#e11d48]' : 'text-gray-500'}`} />
                 <span>Ngành nghề kinh doanh</span>
               </Link>
 
               <Link
                 href="/tra-cuu-ma-so-thue-theo-tinh/"
                 onClick={handleNavClick}
-                className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-lg transition-all ${
+                className={`flex items-center space-x-1.5 px-3.5 py-1.5 rounded-xl transition-all ${
                   isProvince
-                    ? 'bg-red-50 text-[#e91a2c] font-bold border border-red-100 shadow-2xs'
+                    ? 'bg-[#fff1f2] text-[#e11d48] font-bold border border-[#fecdd3]'
                     : 'text-gray-700 hover:text-[#e91a2c] hover:bg-gray-50 font-medium'
                 }`}
               >
-                <MapPin className={`w-4 h-4 ${isProvince ? 'text-[#e91a2c]' : 'text-gray-500'}`} />
+                <MapPin className={`w-4 h-4 ${isProvince ? 'text-[#e11d48]' : 'text-gray-500'}`} />
                 <span>Tỉnh / Thành phố</span>
               </Link>
 
@@ -129,11 +129,11 @@ export function Header(_props?: HeaderProps) {
                 onClick={handleNavClick}
                 className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-lg transition-all ${
                   isContact
-                    ? 'bg-red-50 text-[#e91a2c] font-bold border border-red-100 shadow-2xs'
+                    ? 'bg-[#fff1f2] text-[#e11d48] font-bold border border-[#fecdd3]'
                     : 'text-gray-700 hover:text-[#e91a2c] hover:bg-gray-50 font-medium'
                 }`}
               >
-                <Phone className={`w-4 h-4 ${isContact ? 'text-[#e91a2c]' : 'text-gray-500'}`} />
+                <Phone className={`w-4 h-4 ${isContact ? 'text-[#e11d48]' : 'text-gray-500'}`} />
                 <span>Liên hệ</span>
               </Link>
             </nav>

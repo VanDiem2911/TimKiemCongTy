@@ -27383,9 +27383,16 @@
     {
       "id": "1702375562",
       "name": "CÔNG TY CỔ PHẦN TÙNG ĐỘC LẬP",
-      "representative": "",
+      "representative": "LÊ BẢO NGỌC",
       "address": "42 Hoa Sứ, Khu đô thị Meyhomes Capital Phú Quốc, Đặc khu Phú Quốc, Tỉnh An Giang, Việt Nam",
-      "slug": "1702375562-cong-ty-co-phan-tung-doc-lap"
+      "slug": "1702375562-cong-ty-co-phan-tung-doc-lap",
+      "startDate": "2026-10-02",
+      "phone": "0907311986",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh An Giang",
+      "mainIndustry": "Dịch vụ phục vụ đồ uống (Trừ kinh doanh quán bar, giải khát có khiêu vũ)",
+      "internationalName": "TUNG DOC LAP JOINT STOCK COMPANY",
+      "enrichedAt": "2026-10-08T04:24:54.538Z"
     },
     {
       "id": "1702375611",
@@ -27431,44 +27438,80 @@
     {
       "id": "1702375530",
       "name": "CÔNG TY TNHH PHẠM THANH NHÀN",
-      "representative": "",
+      "representative": "PHẠM THÀNH CÔNG",
       "address": "C4-74 đường Đặng Huyền Thông, Khu phố 4, Phường Rạch Giá, Tỉnh An Giang, Việt Nam",
-      "slug": "1702375530-cong-ty-tnhh-pham-thanh-nhan"
+      "slug": "1702375530-cong-ty-tnhh-pham-thanh-nhan",
+      "startDate": "2026-10-01",
+      "phone": "0913660493",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh An Giang",
+      "mainIndustry": "Khai thác đá, cát, sỏi, đất sét",
+      "enrichedAt": "2026-10-08T04:24:57.962Z"
     },
     {
       "id": "1702375555",
       "name": "DOANH NGHIỆP TƯ NHÂN KHAI THÁC THỦY SẢN BIỂN TRUNG MAI",
-      "representative": "",
+      "representative": "HUỲNH VĂN TRUNG",
       "address": "Tổ 13, Ấp Tà Lúa, Xã Mỹ Thuận, Tỉnh An Giang, Việt Nam",
-      "slug": "1702375555-doanh-nghiep-tu-nhan-khai-thac-thuy-san-bien-trung-mai"
+      "slug": "1702375555-doanh-nghiep-tu-nhan-khai-thac-thuy-san-bien-trung-mai",
+      "startDate": "2026-10-01",
+      "phone": "0979188406",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 tỉnh An Giang",
+      "mainIndustry": "Khai thác thuỷ sản biển",
+      "enrichedAt": "2026-10-08T04:25:01.477Z"
     },
     {
       "id": "1602237128",
       "name": "DNTN KIM LỢI MỸ",
-      "representative": "",
+      "representative": "TRẦN THỊ MỸ",
       "address": "ấp Đồng Ky, Xã Nhơn Hội, Tỉnh An Giang, Việt Nam",
-      "slug": "1602237128-dntn-kim-loi-my"
+      "slug": "1602237128-dntn-kim-loi-my",
+      "startDate": "2026-10-01",
+      "phone": "0833999924",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 10 tỉnh An Giang",
+      "mainIndustry": "Bán buôn kim loại và quặng kim loại Chi tiết: Bán buôn vàng trang sức mỹ nghệ.",
+      "enrichedAt": "2026-10-08T04:25:04.868Z"
     },
     {
       "id": "1702375548",
       "name": "CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ SỰ KIỆN LỘC PHÁT VN - GROUP",
-      "representative": "",
+      "representative": "LÊ VĂN ĐÚNG Ngoài ra, LÊ VĂN ĐÚNG còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH DU LỊCH SINH THÁI SUỐI LỚN CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐẦU TƯ ĐỊA ỐC MIỀN TÂY CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ XÂY DỰNG ĐỨC TRƯỜNG THỊNH HỘ KINH DOANH QUÁN WONWON",
       "address": "Số 29, đường Trần Quý Cáp, Phường Rạch Giá, Tỉnh An Giang, Việt Nam",
-      "slug": "1702375548-cong-ty-tnhh-thuong-mai-dich-vu-su-kien-loc-phat-vn-group"
+      "slug": "1702375548-cong-ty-tnhh-thuong-mai-dich-vu-su-kien-loc-phat-vn-group",
+      "startDate": "2026-10-01",
+      "phone": "0983619919 - 0988447",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh An Giang",
+      "mainIndustry": "Tổ chức giới thiệu và xúc tiến thương mại",
+      "enrichedAt": "2026-10-08T04:25:08.588Z"
     },
     {
       "id": "1602237079",
       "name": "CÔNG TY TNHH MỘT THÀNH VIÊN SẢN XUẤT BÊ TÔNG BÌNH MINH AG",
-      "representative": "",
+      "representative": "HUỲNH THỊ THẢO",
       "address": "Chợ Kênh F, Tổ 12, Ấp Hòa Phú, Xã Định Mỹ, Tỉnh An Giang, Việt Nam",
-      "slug": "1602237079-cong-ty-tnhh-mot-thanh-vien-san-xuat-be-tong-binh-minh-ag"
+      "slug": "1602237079-cong-ty-tnhh-mot-thanh-vien-san-xuat-be-tong-binh-minh-ag",
+      "startDate": "2026-09-30",
+      "phone": "0916 707 193",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 7 tỉnh An Giang",
+      "mainIndustry": "Sản xuất bê tông và các sản phẩm từ xi măng và thạch cao",
+      "enrichedAt": "2026-10-08T04:25:12.103Z"
     },
     {
       "id": "1702375428",
       "name": "CÔNG TY TNHH XÂY DỰNG PHÚ QUỐC BM",
-      "representative": "",
+      "representative": "LÂM THỊ TIỀN",
       "address": "Tổ 6, khu phố 4 An Thới, Đặc khu Phú Quốc, Tỉnh An Giang, Việt Nam",
-      "slug": "1702375428-cong-ty-tnhh-xay-dung-phu-quoc-bm"
+      "slug": "1702375428-cong-ty-tnhh-xay-dung-phu-quoc-bm",
+      "startDate": "2026-09-30",
+      "phone": "0972224334",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh An Giang",
+      "mainIndustry": "Xây dựng nhà để ở",
+      "enrichedAt": "2026-10-08T04:25:15.420Z"
     },
     {
       "id": "1702375883",
@@ -27480,7 +27523,7 @@
       "status": "Đang hoạt động",
       "managedBy": "Thuế cơ sở 1 tỉnh An Giang",
       "mainIndustry": "Tổ chức giới thiệu và xúc tiến thương mại",
-      "enrichedAt": "2026-10-06T07:45:38.268Z"
+      "enrichedAt": "2026-10-08T04:25:19.182Z"
     },
     {
       "id": "1702375964",
@@ -27492,7 +27535,7 @@
       "status": "Đang hoạt động",
       "managedBy": "Thuế cơ sở 1 tỉnh An Giang",
       "mainIndustry": "Bán buôn vật liệu, thiết bị lắp đặt khác trong xây dựng",
-      "enrichedAt": "2026-10-06T07:45:41.696Z"
+      "enrichedAt": "2026-10-08T04:25:22.843Z"
     },
     {
       "id": "1602237174",
@@ -27505,7 +27548,9 @@
       "managedBy": "Thuế cơ sở 7 tỉnh An Giang",
       "mainIndustry": "Bán buôn chuyên doanh khác chưa được phân vào đâu Chi tiết: Bán buôn phân bón, thuốc trừ sâu và hóa chất khác sử dụng trong nông nghiệp; Bán buôn chất dẻo dạng nguyên sinh (không hoạt động tại trụ sở).",
       "internationalName": "AGRILINK VIETNAM JOINT STOCK COMPANY",
-      "enrichedAt": "2026-10-06T07:45:47.873Z"
+      "enrichedAt": "2026-10-08T04:25:26.420Z",
+      "startDate": "2026-10-05",
+      "phone": "0772615945"
     },
     {
       "id": "1702375971",
@@ -27544,7 +27589,11 @@
       "slug": "1602237216-cong-ty-tnhh-mtv-tkt-group",
       "province": "An Giang",
       "status": "Đang hoạt động",
-      "mainIndustry": "Bán buôn thực phẩm Chi tiết: - Bán buôn thủy sản - Bán buôn rau, quả - Bán buôn thực phẩm khác"
+      "mainIndustry": "Bán buôn thực phẩm Chi tiết: - Bán buôn thủy sản - Bán buôn rau, quả - Bán buôn thực phẩm khác",
+      "startDate": "2026-10-05",
+      "phone": "0763768283",
+      "managedBy": "Thuế cơ sở 7 tỉnh An Giang",
+      "enrichedAt": "2026-10-08T04:25:29.751Z"
     },
     {
       "id": "1702375675",
@@ -27607,15 +27656,28 @@
       "representative": "LÊ THANH DIỄN",
       "address": "Số 171A, Khóm Bình Khánh 7, Phường Bình Đức, Tỉnh An Giang, Việt Nam",
       "slug": "1602236942-cong-ty-tnhh-thuong-mai-tien-nhat",
-      "province": "An Giang"
+      "province": "An Giang",
+      "startDate": "2026-09-28",
+      "phone": "0974 966662",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 7 tỉnh An Giang",
+      "mainIndustry": "Bán buôn gạo",
+      "internationalName": "TIEN NHAT TRADING COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:25:33.246Z"
     },
     {
       "id": "1602236981",
       "name": "CÔNG TY TNHH XÂY DỰNG QUẢNG CÁO NHÃN TIỀN",
-      "representative": "NGUYỄN VĂN THANH",
+      "representative": "NGUYỄN VĂN THANH Ngoài ra, NGUYỄN VĂN THANH còn đại diện các doanh nghiệp, đơn vị: HỘ KINH DOANH DỊCH VỤ XÂY DỰNG QUẢNG CÁO THANH HIỀN",
       "address": "Số 188 Ấp Long Hòa 2, Xã Long Kiến, Tỉnh An Giang, Việt Nam",
       "slug": "1602236981-cong-ty-tnhh-xay-dung-quang-cao-nhan-tien",
-      "province": "An Giang"
+      "province": "An Giang",
+      "startDate": "2026-09-29",
+      "phone": "0915783419",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 tỉnh An Giang",
+      "mainIndustry": "Xây dựng nhà để ở",
+      "enrichedAt": "2026-10-08T04:25:36.700Z"
     },
     {
       "id": "1602236935",
@@ -27623,7 +27685,13 @@
       "representative": "NGUYỄN NHẬT NAM",
       "address": "Số nhà 56, đường Triệu Thị Trinh, Bình Khánh 7, Phường Bình Đức, Tỉnh An Giang, Việt Nam",
       "slug": "1602236935-cong-ty-tnhh-nong-san-nam-kha",
-      "province": "An Giang"
+      "province": "An Giang",
+      "startDate": "2026-09-28",
+      "phone": "0776677219",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 7 tỉnh An Giang",
+      "mainIndustry": "Bán buôn gạo",
+      "enrichedAt": "2026-10-08T04:25:39.958Z"
     },
     {
       "id": "1702375072",
@@ -27631,7 +27699,13 @@
       "representative": "NGUYỄN THỊ KIM NGÂN",
       "address": "Số 630, Tổ 1, Ấp Hoà An, Xã Thạnh Lộc, Tỉnh An Giang, Việt Nam",
       "slug": "1702375072-cong-ty-tnhh-thuong-mai-dich-vu-ngan-phat",
-      "province": "An Giang"
+      "province": "An Giang",
+      "startDate": "2026-09-24",
+      "phone": "0941 49 79 22",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 5 tỉnh An Giang",
+      "mainIndustry": "Lắp đặt hệ thống điện Chi tiết: Xây lắp đường dây và trạm biến áp đến 500 KV",
+      "enrichedAt": "2026-10-08T04:25:43.370Z"
     },
     {
       "id": "1702375058",
@@ -27639,7 +27713,13 @@
       "representative": "NGUYỄN TẤN THÀNH",
       "address": "G15 đường Huỳnh Thúc Kháng, Phường Rạch Giá, Tỉnh An Giang, Việt Nam",
       "slug": "1702375058-cong-ty-tnhh-xuat-nhap-khau-dao-lai-son",
-      "province": "An Giang"
+      "province": "An Giang",
+      "startDate": "2026-09-24",
+      "phone": "0933156284 - 0347193",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 tỉnh An Giang",
+      "mainIndustry": "Bán buôn thực phẩm Chi tiết: Bán buôn thủy sản",
+      "enrichedAt": "2026-10-08T04:25:47.592Z"
     },
     {
       "id": "1702374632",
@@ -27647,7 +27727,14 @@
       "representative": "LÊ HUY HÙNG",
       "address": "Khu Grand World Beachfront Quảng Trường Biển, Khu Phố Gành Dầu, Đặc khu Phú Quốc, Tỉnh An Giang, Việt Nam",
       "slug": "1702374632-cong-ty-tnhh-portal-ent",
-      "province": "An Giang"
+      "province": "An Giang",
+      "startDate": "2026-09-21",
+      "phone": "0394838721",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh An Giang",
+      "mainIndustry": "Dịch vụ phục vụ đồ uống Chi tiết: Quán rượu, bia, quầy bar",
+      "internationalName": "PORTAL ENT COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T04:25:50.768Z"
     },
     {
       "id": "1702375315",
@@ -27699,7 +27786,13 @@
       "representative": "NGUYỄN NGỌC TỐ",
       "address": "OTM 4-3 (L105) Dự án Khu đô thị Gateway, Khu Phố 6 An Thới, Đặc khu Phú Quốc, Tỉnh An Giang, Việt Nam",
       "slug": "1702375298-cong-ty-tnhh-xay-dung-ngoc-to",
-      "province": "An Giang"
+      "province": "An Giang",
+      "startDate": "2026-09-27",
+      "phone": "0777046863",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh An Giang",
+      "mainIndustry": "Hoạt động thiết kế chuyên dụng",
+      "enrichedAt": "2026-10-08T04:25:54.294Z"
     },
     {
       "id": "1702375361",
@@ -27707,7 +27800,13 @@
       "representative": "TRẦN THỊ NGỌC QUYÊN",
       "address": "SS11-S05 đường Sonasea 08, khu tổ hợp Sonasea Villas & Resort, Khu Phố Đường Bào Dương Tơ, Đặc khu Phú Quốc, Tỉnh An Giang, Việt Nam",
       "slug": "1702375361-cong-ty-tnhh-mtv-quoc-vi",
-      "province": "An Giang"
+      "province": "An Giang",
+      "startDate": "2026-09-27",
+      "phone": "0388814496",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh An Giang",
+      "mainIndustry": "Nhà hàng và các dịch vụ ăn uống phục vụ lưu động",
+      "enrichedAt": "2026-10-08T04:25:57.814Z"
     },
     {
       "id": "1702375354",
@@ -27731,7 +27830,13 @@
       "representative": "TRẦN NỮ NGỌC TRÂM",
       "address": "Đường Limoni1- Căn 127, Khu Đô Thị Gateway Sunhome An Thới, Đặc khu Phú Quốc, Tỉnh An Giang, Việt Nam",
       "slug": "1702375001-cong-ty-tnhh-xay-dung-hai-tram-pq",
-      "province": "An Giang"
+      "province": "An Giang",
+      "startDate": "2026-09-23",
+      "phone": "0909700000",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 2 tỉnh An Giang",
+      "mainIndustry": "Xây dựng công trình kỹ thuật dân dụng khác",
+      "enrichedAt": "2026-10-08T04:26:39.499Z"
     },
     {
       "id": "1602236910",
@@ -27786,7 +27891,14 @@
       "representative": "ĐINH GIA QUYỀN",
       "address": "Khu phố Cửa Lấp Dương Tơ, Đặc khu Phú Quốc, Tỉnh An Giang, Việt Nam",
       "slug": "1702375026-cong-ty-tnhh-rassvet",
-      "province": "An Giang"
+      "province": "An Giang",
+      "startDate": "2026-09-24",
+      "phone": "0939 643 057",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế tỉnh An Giang",
+      "mainIndustry": "Nhà hàng và các dịch vụ ăn uống phục vụ lưu động",
+      "internationalName": "RASSVET COMPANY.,LTD",
+      "enrichedAt": "2026-10-08T04:27:57.275Z"
     },
     {
       "id": "1702375379",
@@ -27940,10 +28052,16 @@
     {
       "id": "1602237015",
       "name": "CÔNG TY TNHH HOÀNG KHANH AG",
-      "representative": "VÕ HOÀNG KHANH",
+      "representative": "VÕ HOÀNG KHANH Ngoài ra, VÕ HOÀNG KHANH còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH TM - DV - KARAOKE ẤN TƯỢNG Võ Hoàng Khanh",
       "address": "Thửa đất số 366-367, Tờ bản đồ số 10, Đường số 3 Lý Thái Tổ nối dài, Phường Long Xuyên, Tỉnh An Giang, Việt Nam",
       "slug": "1602237015-cong-ty-tnhh-hoang-khanh-ag",
-      "province": "An Giang"
+      "province": "An Giang",
+      "startDate": "2026-09-30",
+      "phone": "0979285678",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 7 tỉnh An Giang",
+      "mainIndustry": "Vận tải hàng hóa đường thuỷ nội địa",
+      "enrichedAt": "2026-10-08T04:31:09.332Z"
     },
     {
       "id": "1602237022",
@@ -28020,10 +28138,15 @@
     {
       "id": "1801757964-002",
       "name": "CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI DỊCH VỤ NÀNG HƯƠNG - VĂN PHÒNG ĐẠI DIỆN AN GIANG",
-      "representative": "NGUYỄN THANH HOÀNG",
+      "representative": "NGUYỄN THANH HOÀNG Ngoài ra, NGUYỄN THANH HOÀNG còn đại diện các doanh nghiệp, đơn vị: CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI DỊCH VỤ NÀNG HƯƠNG - VĂN PHÒNG ĐẠI DIỆN",
       "address": "50/10 Trần Hưng Đạo , Phường Mỹ Thới, Tỉnh An Giang, Việt Nam",
       "slug": "1801757964-002-cong-ty-tnhh-san-xuat-thuong-mai-dich-vu-nang-huong-van-phong-dai-dien-an-giang",
-      "province": "An Giang"
+      "province": "An Giang",
+      "startDate": "2026-09-21",
+      "phone": "0969679166",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế tỉnh An Giang",
+      "enrichedAt": "2026-10-08T04:32:27.732Z"
     },
     {
       "id": "1602236886",

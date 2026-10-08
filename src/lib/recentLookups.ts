@@ -148,7 +148,6 @@ export function recordRecentLookup(company: Partial<BusinessTaxInfo> & { id: str
   }
 
   saveToDisk(RECENT_LOOKUPS);
-  recordRecentLookupAsync(company).catch(() => {});
   return RECENT_LOOKUPS;
 }
 
