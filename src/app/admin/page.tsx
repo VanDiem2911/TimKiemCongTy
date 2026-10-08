@@ -60,8 +60,8 @@ export default function AdminDashboardPage() {
   // Authentication State (Đơn giản, tức thì)
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [authChecking, setAuthChecking] = useState<boolean>(true);
-  const [loginUsername, setLoginUsername] = useState('admin');
-  const [loginPassword, setLoginPassword] = useState('admin123');
+  const [loginUsername, setLoginUsername] = useState('');
+  const [loginPassword, setLoginPassword] = useState('');
   const [loginError, setLoginError] = useState('');
 
   // Store data
@@ -263,18 +263,13 @@ export default function AdminDashboardPage() {
         return true;
       }
 
-      setLoginError('Sai tài khoản hoặc mật khẩu (Mặc định: admin / admin123)');
+      setLoginError('Sai tài khoản hoặc mật khẩu.');
       return false;
     } catch (err) {
       console.error(err);
       setLoginError('Không kết nối được máy chủ, vui lòng thử lại.');
       return false;
     }
-  };
-
-  // ĐĂNG NHẬP NHANH (dùng tài khoản mặc định)
-  const handleQuickLogin = () => {
-    requestLogin('admin', 'admin123');
   };
 
   // Đăng nhập bằng mật khẩu
@@ -313,7 +308,9 @@ export default function AdminDashboardPage() {
               const saved = localStorage.getItem('admin_msg_status_overrides');
               if (saved) {
                 const overrides = JSON.parse(saved);
-                messages = messages.map((m: any) => overrides[m.id] ? { ...m, status: overrides[m.id] } : m);
+                messages = messages.map((m: ContactMessage) =>
+                  overrides[m.id] ? { ...m, status: overrides[m.id] } : m
+                );
               }
             }
           } catch {}
@@ -612,7 +609,7 @@ export default function AdminDashboardPage() {
                 type="password"
                 value={loginPassword}
                 onChange={(e) => setLoginPassword(e.target.value)}
-                placeholder="admin123"
+                placeholder="Nhập mật khẩu quản trị"
                 className="w-full px-3 py-2 border border-gray-300 rounded text-sm text-gray-900 focus:outline-none focus:border-blue-500"
               />
             </div>
@@ -626,20 +623,6 @@ export default function AdminDashboardPage() {
             </button>
           </form>
 
-          <div className="relative flex py-1 items-center">
-            <div className="flex-grow border-t border-gray-200"></div>
-            <span className="flex-shrink mx-2 text-xs text-gray-400">hoặc</span>
-            <div className="flex-grow border-t border-gray-200"></div>
-          </div>
-
-          <button
-            id="quick-login-admin-btn"
-            type="button"
-            onClick={handleQuickLogin}
-            className="w-full py-2 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded text-sm transition cursor-pointer"
-          >
-            Đăng nhập nhanh
-          </button>
 
           <div className="text-center pt-2">
             <Link

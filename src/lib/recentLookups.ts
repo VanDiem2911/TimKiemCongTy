@@ -105,7 +105,9 @@ export async function getRecentLookupsAsync(): Promise<BusinessTaxInfo[]> {
       return RECENT_LOOKUPS;
     } else if (localList.length > 0) {
       // Seed initial data to MongoDB
-      await coll.insertMany(localList.map((c, i) => ({ ...c, updatedAt: new Date(Date.now() - i * 60000) })) as any);
+      await coll.insertMany(
+        localList.map((c, i) => ({ ...c, updatedAt: new Date(Date.now() - i * 60000) }))
+      );
     }
   } catch (err) {
     console.warn('MongoDB getRecentLookupsAsync error:', err);

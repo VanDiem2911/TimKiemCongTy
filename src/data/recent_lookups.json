@@ -1,5 +1,15 @@
 [
   {
+    "id": "0100146700",
+    "name": "CÔNG TY TNHH CAO ỐC VIETCOMBANK 198",
+    "representative": "WONG YEW SIONG",
+    "address": "Số 198 Trần Quang Khải, Phường Hoàn Kiếm, Thành phố Hà Nội, Việt Nam",
+    "status": "Đang hoạt động",
+    "startDate": "1998-08-14",
+    "registrationDate": "1998-08-14",
+    "lastUpdated": "Vừa xong"
+  },
+  {
     "id": "0300588569",
     "name": "CÔNG TY CỔ PHẦN SỮA VIỆT NAM",
     "representative": "MAI KIỀU LIÊN",
@@ -13,11 +23,10 @@
     "id": "0101248141",
     "name": "CÔNG TY CỔ PHẦN FPT",
     "representative": "NGUYỄN VĂN KHOA",
-    "address": "Số 10 phố Phạm Văn Bạch, Phường Cầu Giấy, TP Hà Nội",
-    "status": "NNT đang hoạt động",
-    "province": "TP Hà Nội",
+    "address": "Số 10 phố Phạm Văn Bạch, Phường Cầu Giấy, Thành phố Hà Nội, Việt Nam",
+    "status": "Đang hoạt động",
+    "province": "Thành phố Hà Nội",
     "startDate": "2002-06-06",
-    "registrationDate": "2002-06-06",
     "lastUpdated": "Vừa xong"
   },
   {

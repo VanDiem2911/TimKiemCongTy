@@ -139,7 +139,9 @@ export async function saveCompanyToDb(company: Partial<BusinessTaxInfo>): Promis
     if (!db) return false;
 
     const coll = db.collection<MongoCompanyDoc>('companies');
-    const provSlug = (company as any).provinceSlug || getProvinceSlugFromInfo(company.address, company.province);
+    const provSlug =
+      (company as { provinceSlug?: string }).provinceSlug ||
+      getProvinceSlugFromInfo(company.address, company.province);
     // Khong gan ngay hom nay khi chua biet ngay that - se hien thi sai ngay thanh lap
     const dateVal = company.startDate || company.registrationDate || '';
 
@@ -195,7 +197,9 @@ export async function saveCompaniesBatchToDb(companies: Partial<BusinessTaxInfo>
 
     const ops = valid.map((comp) => {
       const cleanId = normalizeTaxId(comp.id!);
-      const provSlug = (comp as any).provinceSlug || getProvinceSlugFromInfo(comp.address, comp.province);
+      const provSlug =
+        (comp as { provinceSlug?: string }).provinceSlug ||
+        getProvinceSlugFromInfo(comp.address, comp.province);
       const dateVal = comp.startDate || comp.registrationDate || '';
 
       const doc: Partial<MongoCompanyDoc> = {
@@ -390,7 +394,7 @@ export async function getCompaniesByProvinceFromDb(
     // Remove suffix number if any (e.g. ho-chi-minh-23 -> ho-chi-minh)
     const baseSlug = targetSlug.replace(/-\d+$/, '');
 
-    const filter: Record<string, any> = {
+    const filter: Record<string, unknown> = {
       $or: [
         { provinceSlug: targetSlug },
         { provinceSlug: baseSlug },

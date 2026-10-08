@@ -2,11 +2,16 @@ import { NextRequest, NextResponse } from 'next/server';
 
 // Tài khoản quản trị. Đặt ADMIN_USERNAME / ADMIN_PASSWORD trong biến môi
 // trường để đổi, nếu không sẽ dùng tài khoản mặc định như trước.
+// Khi đã đặt biến môi trường thì CHỈ chấp nhận giá trị đó. Nếu vẫn kèm theo
+// tài khoản mặc định thì đổi mật khẩu cũng vô nghĩa, vì admin/admin123 viết
+// trong mã nguồn công khai vẫn đăng nhập được.
 export const ADMIN_CREDENTIALS = {
-  usernames: [process.env.ADMIN_USERNAME, 'admin', 'admin@timkiemcongty.com'].filter(
-    Boolean
-  ) as string[],
-  passwords: [process.env.ADMIN_PASSWORD, 'admin', 'admin123'].filter(Boolean) as string[],
+  usernames: process.env.ADMIN_USERNAME
+    ? [process.env.ADMIN_USERNAME.trim().toLowerCase()]
+    : ['admin', 'admin@timkiemcongty.com'],
+  passwords: process.env.ADMIN_PASSWORD
+    ? [process.env.ADMIN_PASSWORD]
+    : ['admin', 'admin123'],
 };
 
 export const AUTH_COOKIE_NAME = 'admin_session_token';

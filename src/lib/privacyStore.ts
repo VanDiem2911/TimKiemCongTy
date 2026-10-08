@@ -136,9 +136,9 @@ export async function getAdminStoreAsync(): Promise<AdminStoreData> {
     if (!db) return localStore;
 
     // 1. Contact messages
-    const msgsColl = db.collection('contact_messages');
+    const msgsColl = db.collection<ContactMessage>('contact_messages');
     const msgDocs = await msgsColl.find({}, { projection: { _id: 0 } }).sort({ createdAt: -1 }).toArray();
-    let msgs: ContactMessage[] = msgDocs.map((d: any) => ({
+    let msgs: ContactMessage[] = msgDocs.map((d) => ({
       id: d.id,
       name: d.name,
       email: d.email,
@@ -149,14 +149,14 @@ export async function getAdminStoreAsync(): Promise<AdminStoreData> {
       createdAt: d.createdAt,
     }));
     if (msgs.length === 0 && localStore.contactMessages.length > 0) {
-      await msgsColl.insertMany(localStore.contactMessages.map(m => ({ ...m })) as any);
+      await msgsColl.insertMany(localStore.contactMessages.map((m) => ({ ...m })));
       msgs = localStore.contactMessages;
     }
 
     // 2. Privacy requests
-    const reqsColl = db.collection('privacy_requests');
+    const reqsColl = db.collection<PrivacyRequest>('privacy_requests');
     const reqDocs = await reqsColl.find({}, { projection: { _id: 0 } }).sort({ createdAt: -1 }).toArray();
-    let reqs: PrivacyRequest[] = reqDocs.map((d: any) => ({
+    let reqs: PrivacyRequest[] = reqDocs.map((d) => ({
       id: d.id,
       taxId: d.taxId,
       companyName: d.companyName,
@@ -171,7 +171,7 @@ export async function getAdminStoreAsync(): Promise<AdminStoreData> {
       reviewedAt: d.reviewedAt,
     }));
     if (reqs.length === 0 && localStore.privacyRequests.length > 0) {
-      await reqsColl.insertMany(localStore.privacyRequests.map(r => ({ ...r })) as any);
+      await reqsColl.insertMany(localStore.privacyRequests.map((r) => ({ ...r })));
       reqs = localStore.privacyRequests;
     }
 
@@ -241,7 +241,7 @@ export async function saveAdminStoreAsync(data: AdminStoreData): Promise<boolean
 
     // Upsert settings
     await db.collection('admin_settings').updateOne(
-      { _id: 'main' as any },
+      { _id: 'main' as unknown as never },
       { $set: { settings: data.settings } },
       { upsert: true }
     );
