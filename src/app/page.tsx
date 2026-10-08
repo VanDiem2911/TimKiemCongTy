@@ -23,7 +23,7 @@ function HomeContent() {
   const [searchSource, setSearchSource] = useState<string>('');
   const [searchDisclaimer, setSearchDisclaimer] = useState<string>('');
   const [isLoading, setIsLoading] = useState(false);
-  const [recentCompanies, setRecentCompanies] = useState<BusinessTaxInfo[]>(INITIAL_COMPANIES);
+  const [recentCompanies, setRecentCompanies] = useState<BusinessTaxInfo[]>(INITIAL_COMPANIES.slice(0, 10));
 
   // Load and sync recently looked-up companies in real-time
   const loadRecentLookups = async () => {
@@ -32,7 +32,7 @@ function HomeContent() {
       if (res.ok) {
         const json = await res.json();
         if (json.success && Array.isArray(json.data) && json.data.length > 0) {
-          setRecentCompanies(json.data);
+          setRecentCompanies(json.data.slice(0, 10));
         }
       }
     } catch {
@@ -66,7 +66,7 @@ function HomeContent() {
           const topCompany = data.data[0];
           setRecentCompanies((prev) => {
             const nextList = prev.filter((c) => c.id !== topCompany.id);
-            return [{ ...topCompany, lastUpdated: 'Vừa xong' }, ...nextList].slice(0, 30);
+            return [{ ...topCompany, lastUpdated: 'Vừa xong' }, ...nextList].slice(0, 10);
           });
         }
       } else {
@@ -151,7 +151,7 @@ function HomeContent() {
 
               {/* Enterprise Listing - Real-time recently looked-up companies */}
               <div className="divide-y divide-slate-100">
-                {recentCompanies.map((company, index) => (
+                {recentCompanies.slice(0, 10).map((company, index) => (
                   <article
                     key={`${company.id}-${index}`}
                     className="py-4 first:pt-0 hover:bg-slate-50/80 px-3 -mx-3 rounded-lg transition-colors duration-150"
