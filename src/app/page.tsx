@@ -127,12 +127,6 @@ function HomeContent() {
                   <span className="w-1.5 h-5 bg-sky-600 inline-block mr-1 rounded-full"></span>
                   Doanh Nghiệp Vừa Được Tra Cứu Gần Đây
                 </h2>
-                <div className="flex items-center space-x-2 text-xs">
-                  <span className="flex items-center space-x-1.5 px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-full font-medium">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping inline-block"></span>
-                    <span>Cập nhật theo thời gian thực</span>
-                  </span>
-                </div>
               </div>
 
               {/* Sample Tax Code Search Chips */}
@@ -171,16 +165,6 @@ function HomeContent() {
                           {company.name}
                         </Link>
                       </h3>
-                      {index === 0 ? (
-                        <span className="inline-flex items-center space-x-1 text-[11px] bg-[#fff0f1] text-[#e91a2c] border border-[#fecdd3] px-2 py-0.5 rounded-md font-semibold self-start sm:self-auto whitespace-nowrap">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#e91a2c] animate-ping"></span>
-                          <span>Vừa tra cứu</span>
-                        </span>
-                      ) : (
-                        <span className="text-[11px] text-slate-400 font-medium self-start sm:self-auto whitespace-nowrap">
-                          {company.lastUpdated || 'Gần đây'}
-                        </span>
-                      )}
                     </div>
 
                     <div className="space-y-1.5 text-xs text-slate-600">
@@ -220,7 +204,6 @@ function HomeContent() {
                           className="text-[11px] text-[#e91a2c] hover:text-[#c51322] font-semibold flex items-center space-x-0.5 group"
                         >
                           <span>Xem chi tiết hồ sơ thuế</span>
-                          <span className="transition-transform group-hover:translate-x-0.5">→</span>
                         </Link>
                       </div>
                     </div>
@@ -255,7 +238,6 @@ function HomeContent() {
                     className="text-xs text-[#e91a2c] hover:text-[#c51322] font-semibold inline-flex items-center space-x-1"
                   >
                     <span>Xem toàn bộ 63 tỉnh thành</span>
-                    <span>→</span>
                   </Link>
                 </div>
               </div>

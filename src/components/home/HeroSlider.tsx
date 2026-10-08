@@ -123,16 +123,7 @@ export function HeroSlider({ onSearch, initialQuery = '', initialType = 'auto' }
             <Hash className="w-3 h-3 text-[#ff4757]" />
             <span>0300588569 (Vinamilk)</span>
           </button>
-
-          <button
-            type="button"
-            onClick={() => handleQuickSearch('0319641544', 'taxCode')}
-            className="bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700/60 px-2.5 py-1 rounded-md transition flex items-center space-x-1 cursor-pointer"
-          >
-            <Hash className="w-3 h-3 text-[#ff4757]" />
-            <span>0319641544 (DUDI)</span>
-          </button>
-
+          
           <button
             type="button"
             onClick={() => handleQuickSearch('0100112437', 'taxCode')}

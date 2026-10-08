@@ -1,5 +1,15 @@
 [
   {
+    "id": "0101248141",
+    "name": "CÔNG TY CỔ PHẦN FPT",
+    "representative": "NGUYỄN VĂN KHOA",
+    "address": "Số 10 phố Phạm Văn Bạch, Phường Cầu Giấy, Thành phố Hà Nội, Việt Nam",
+    "status": "Đang hoạt động",
+    "province": "Thành phố Hà Nội",
+    "startDate": "2002-06-06",
+    "lastUpdated": "Vừa xong"
+  },
+  {
     "id": "0100109106",
     "name": "TẬP ĐOÀN CÔNG NGHIỆP - VIỄN THÔNG QUÂN ĐỘI",
     "representative": "TÀO ĐỨC THẮNG",
@@ -195,16 +205,6 @@
     "status": "Đang hoạt động",
     "province": "Thành phố Hồ Chí Minh",
     "startDate": "2026-09-28",
-    "lastUpdated": "Vừa xong"
-  },
-  {
-    "id": "0101248141",
-    "name": "CÔNG TY CỔ PHẦN FPT",
-    "representative": "NGUYỄN VĂN KHOA",
-    "address": "Số 10 phố Phạm Văn Bạch, Phường Cầu Giấy, Thành phố Hà Nội, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Thành phố Hà Nội",
-    "startDate": "2002-06-06",
     "lastUpdated": "Vừa xong"
   },
   {
