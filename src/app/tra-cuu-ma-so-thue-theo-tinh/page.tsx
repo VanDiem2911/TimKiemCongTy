@@ -2,9 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
-import { PROVINCES, getCompanySlug, normalizeTaxId } from '@/lib/constants';
+import { PROVINCES, getCompanySlug, normalizeTaxId, formatEstablishedDate, getCompanyStatusBadgeClass } from '@/lib/constants';
 import { fetchLiveNationwideCompanies } from '@/lib/provinceCompanies';
-import { MapPin, ChevronRight, Hash, User, ChevronLeft, ChevronsLeft, ChevronsRight, ShieldCheck, Flame } from 'lucide-react';
+import { MapPin, ChevronRight, Hash, User, ChevronLeft, ChevronsLeft, ChevronsRight, ShieldCheck, Flame, Calendar } from 'lucide-react';
 
 interface PageProps {
   searchParams: Promise<{ page?: string; region?: string }>;
@@ -22,7 +22,11 @@ export default async function ProvinceTaxPage({ searchParams }: PageProps) {
   const data = await fetchLiveNationwideCompanies(currentPage, 25);
 
   const startCount = (data.page - 1) * data.pageSize + 1;
-  const endCount = Math.min(data.page * data.pageSize, data.total);
+  // Trang nguồn không công bố tổng số doanh nghiệp, nên đếm theo số bản ghi
+  // thực sự có trên trang này thay vì theo một tổng số bịa ra.
+  const endCount = data.total > 0
+    ? Math.min(data.page * data.pageSize, data.total)
+    : startCount + data.companies.length - 1;
 
   // Generate page numbers
   const pageNumbers = [];
@@ -200,10 +204,26 @@ export default async function ProvinceTaxPage({ searchParams }: PageProps) {
                             <address className="not-italic">{comp.address}</address>
                           </div>
 
-                          <div className="pt-1 flex items-center justify-between">
-                            <span className="inline-block text-[11px] px-2 py-0.5 rounded font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
-                              {comp.status || 'NNT đang hoạt động'}
-                            </span>
+                          <div className="pt-1 flex flex-wrap items-center justify-between gap-2">
+                            <div className="flex flex-wrap items-center gap-2">
+                              <span
+                                className={`inline-block text-[11px] px-2 py-0.5 rounded font-medium border ${getCompanyStatusBadgeClass(comp.status)}`}
+                              >
+                                {comp.status || 'Chưa rõ trạng thái'}
+                              </span>
+
+                              {formatEstablishedDate(comp.startDate || comp.registrationDate) && (
+                                <span className="inline-flex items-center gap-1 text-[11px] px-2 py-0.5 rounded font-medium bg-slate-50 text-slate-600 border border-slate-200">
+                                  <Calendar className="w-3 h-3 text-slate-400 shrink-0" />
+                                  <span>
+                                    Thành lập:{' '}
+                                    <strong className="font-semibold text-slate-800">
+                                      {formatEstablishedDate(comp.startDate || comp.registrationDate)}
+                                    </strong>
+                                  </span>
+                                </span>
+                              )}
+                            </div>
 
                             <Link
                               href={`/${detailSlug}`}

@@ -903,6 +903,8 @@ export async function fetchLiveNationwideCompanies(
       const list: BusinessTaxInfo[] = [];
       const blocks = html.split("<div data-prefetch='");
 
+      const slugById = new Map<string, string>();
+
       for (let i = 1; i < blocks.length; i++) {
         const b = blocks[i];
         const nameMatch = b.match(/<h3><a[^>]*>([\s\S]*?)<\/a><\/h3>/i);
@@ -910,6 +912,10 @@ export async function fetchLiveNationwideCompanies(
 
         const taxIdMatch = b.match(/Mã số thuế:\s*<a[^>]*>([\s\S]*?)<\/a>/i);
         const taxId = taxIdMatch ? taxIdMatch[1].replace(/<[^>]+>/g, '').trim() : '';
+
+        // Đường dẫn trang chi tiết nằm ngay đầu mỗi khối
+        const slugMatch = b.match(/^(\/[^']+)'/);
+        if (taxId && slugMatch) slugById.set(taxId, slugMatch[1]);
 
         const repMatch = b.match(/Người đại diện:\s*<em><a[^>]*>([\s\S]*?)<\/a><\/em>/i);
         const rep = repMatch ? repMatch[1].replace(/<[^>]+>/g, '').trim() : '';
@@ -933,6 +939,7 @@ export async function fetchLiveNationwideCompanies(
 
       if (list.length > 0) {
         await fillMissingFactsFromDb(list);
+        await fillFactsFromDetailPages(list, slugById);
         sortByNewestEstablished(list);
 
         const upstreamPages = parseUpstreamTotalPages(html, page);
