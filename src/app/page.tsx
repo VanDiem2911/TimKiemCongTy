@@ -10,7 +10,40 @@ import { TaxSearchResults } from '@/components/tax/TaxSearchResults';
 import { ScrollToTopButton } from '@/components/common/ScrollEnhancements';
 import { INITIAL_COMPANIES, PROVINCES, getCompanySlug, getCompanyStatusBadgeClass, normalizeTaxId } from '@/lib/constants';
 import { BusinessTaxInfo } from '@/types/tax';
-import { Hash, MapPin, User, ChevronRight, ShieldCheck } from 'lucide-react';
+import { Hash, MapPin, User, ChevronRight, ShieldCheck, Clock, Building2, CheckCircle2 } from 'lucide-react';
+
+function renderCompanyLogo(id: string, name: string) {
+  const norm = (name || '').toLowerCase();
+  if (id === '0300588569' || norm.includes('vinamilk') || norm.includes('sữa việt nam')) {
+    return (
+      <div className="flex flex-col items-center justify-center font-bold text-[#002f6c] leading-tight select-none">
+        <span className="text-[17px] font-black tracking-tight">Vinamilk</span>
+        <span className="text-[8px] font-bold text-[#002f6c]/70 tracking-widest mt-0.5">EST 1976</span>
+      </div>
+    );
+  }
+  if (id === '0101248141' || norm.includes('fpt')) {
+    return (
+      <div className="flex items-center justify-center font-black text-xl italic tracking-tight select-none">
+        <span className="text-[#005ba9]">F</span>
+        <span className="text-[#f37021]">P</span>
+        <span className="text-[#00923f]">T</span>
+      </div>
+    );
+  }
+  if (id === '0100109106' || norm.includes('viettel') || norm.includes('viễn thông quân đội')) {
+    return (
+      <div className="flex items-center justify-center font-bold text-lg text-[#ee0000] tracking-tight lowercase select-none">
+        <span>viettel</span>
+      </div>
+    );
+  }
+  return (
+    <div className="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400">
+      <Building2 className="w-6 h-6 stroke-[1.5]" />
+    </div>
+  );
+}
 
 function HomeContent() {
   const searchParams = useSearchParams();
@@ -121,92 +154,105 @@ function HomeContent() {
           {/* Main 2-Column Content Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 my-6">
             {/* Left Content Area (8 Cols) */}
-            <div className="lg:col-span-8 bg-white border border-slate-200/90 rounded-xl p-5 shadow-xs">
-              <div className="border-b border-slate-100 pb-3 mb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                <h2 className="text-base sm:text-lg font-bold text-slate-900 flex items-center space-x-2">
-                  <span className="w-1.5 h-5 bg-sky-600 inline-block mr-1 rounded-full"></span>
-                  Doanh Nghiệp Vừa Được Tra Cứu Gần Đây
-                </h2>
+            <div className="lg:col-span-8 space-y-3.5">
+              {/* Header Box: Doanh Nghiệp Vừa Được Tra Cứu Gần Đây */}
+              <div className="rounded-2xl bg-gradient-to-r from-blue-50/90 via-sky-50/60 to-blue-100/40 border border-blue-100/90 p-4 sm:p-5 shadow-xs relative overflow-hidden">
+                <div className="flex items-center space-x-3 mb-3.5">
+                  <div className="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 shadow-2xs">
+                    <Clock className="w-5 h-5 stroke-[2.2]" />
+                  </div>
+                  <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">
+                    Doanh Nghiệp Vừa Được Tra Cứu <span className="text-blue-600">Gần Đây</span>
+                  </h2>
+                </div>
+
+                {/* Tra cứu nhanh mẫu */}
+                <div className="flex flex-wrap items-center gap-2 text-xs">
+                  <span className="font-medium text-slate-700">Tra cứu nhanh mẫu:</span>
+                  {[
+                    { name: 'Viettel', tax: '0100109106' },
+                    { name: 'Vinamilk', tax: '0300588569' },
+                    { name: 'IGL Worldwide', tax: '0319732689' },
+                    { name: 'Hóa chất Miền Nam', tax: '0301446260' },
+                    { name: 'Bao bì Thịnh Thái', tax: '5400575731' }
+                  ].map((item) => (
+                    <button
+                      key={item.tax}
+                      type="button"
+                      onClick={() => executeLookup(item.tax, 'enterpriseTax')}
+                      className="bg-white hover:bg-blue-50/80 text-slate-700 border border-blue-200/80 hover:border-blue-300 px-3 py-1 rounded-full text-xs font-medium flex items-center space-x-1.5 shadow-2xs transition-all cursor-pointer"
+                    >
+                      <span className="text-blue-600 font-bold font-mono">#</span>
+                      <span>{item.tax} ({item.name})</span>
+                    </button>
+                  ))}
+                </div>
               </div>
 
-              {/* Sample Tax Code Search Chips */}
-              <div className="mb-5 bg-slate-50 border border-slate-200/80 p-3 rounded-lg text-xs flex flex-wrap items-center gap-2">
-                <span className="font-semibold text-slate-600">Tra cứu nhanh mẫu:</span>
-                {[
-                  { name: 'Viettel', tax: '0100109106' },
-                  { name: 'Vinamilk', tax: '0300588569' },
-                  { name: 'IGL Worldwide', tax: '0319732689' },
-                  { name: 'Hóa chất Miền Nam', tax: '0301446260' },
-                  { name: 'Bao bì Thịnh Thái', tax: '5400575731' }
-                ].map((item) => (
-                  <button
-                    key={item.tax}
-                    onClick={() => executeLookup(item.tax, 'enterpriseTax')}
-                    className="bg-white border border-slate-200 hover:border-[#e91a2c] hover:bg-[#fff0f1] text-slate-800 px-2.5 py-1 rounded-md transition-all text-xs font-mono cursor-pointer shadow-2xs"
-                  >
-                    {item.tax} ({item.name})
-                  </button>
-                ))}
-              </div>
-
-              {/* Enterprise Listing - Real-time recently looked-up companies */}
-              <div className="divide-y divide-slate-100">
+              {/* Enterprise Listing - Independent Cards */}
+              <div className="space-y-3">
                 {recentCompanies.slice(0, 10).map((company, index) => (
                   <article
                     key={`${company.id}-${index}`}
-                    className="py-4 first:pt-0 hover:bg-slate-50/80 px-3 -mx-3 rounded-lg transition-colors duration-150"
+                    className="bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-5 shadow-xs hover:shadow-md transition-all duration-200 flex flex-col md:flex-row md:items-center justify-between gap-4 group"
                   >
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1.5">
-                      <h3 className="text-sm sm:text-base font-bold text-slate-900 hover:text-[#e91a2c] transition-colors">
-                        <Link
-                          href={`/${getCompanySlug(company.id, company.name)}`}
-                          className="text-left"
-                        >
-                          {company.name}
-                        </Link>
-                      </h3>
-                    </div>
+                    <div className="flex items-start sm:items-center space-x-4 flex-1 min-w-0">
+                      {/* Logo Box */}
+                      <div className="w-20 h-20 sm:w-22 sm:h-22 rounded-2xl bg-slate-50/80 border border-slate-100 flex items-center justify-center p-2 shrink-0 group-hover:scale-102 transition-transform shadow-2xs">
+                        {renderCompanyLogo(company.id, company.name)}
+                      </div>
 
-                    <div className="space-y-1.5 text-xs text-slate-600">
-                      <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-                        <span className="flex items-center space-x-1.5 text-slate-700">
-                          <Hash className="w-3.5 h-3.5 text-slate-400" />
-                          <span>Mã số thuế:</span>
-                          <Link
-                            href={`/${getCompanySlug(company.id, company.name)}`}
-                            className="font-mono font-bold text-[#e91a2c] bg-[#fff0f1] border border-[#fecdd3] px-1.5 py-0.5 rounded text-xs hover:bg-[#ffe4e6] transition-colors whitespace-nowrap inline-block"
-                          >
-                            {normalizeTaxId(company.id)}
+                      {/* Info Content */}
+                      <div className="space-y-1.5 flex-1 min-w-0">
+                        <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors truncate">
+                          <Link href={`/${getCompanySlug(company.id, company.name)}`}>
+                            {company.name}
                           </Link>
-                        </span>
+                        </h3>
 
-                        {company.representative && (
-                          <span className="flex items-center space-x-1.5">
-                            <User className="w-3.5 h-3.5 text-slate-400" />
-                            <span>Người đại diện:</span>
-                            <span className="font-semibold text-slate-800">{company.representative}</span>
+                        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
+                          <span className="flex items-center space-x-1 text-slate-600">
+                            <span className="text-[#e91a2c] font-black font-mono">#</span>
+                            <span>Mã số thuế:</span>
+                            <Link
+                              href={`/${getCompanySlug(company.id, company.name)}`}
+                              className="font-mono font-bold text-[#e91a2c] bg-red-50 border border-red-100 px-2 py-0.5 rounded-md text-xs hover:bg-red-100 transition-colors whitespace-nowrap inline-block"
+                            >
+                              {normalizeTaxId(company.id)}
+                            </Link>
                           </span>
-                        )}
-                      </div>
 
-                      <div className="flex items-start space-x-1.5 text-slate-600">
-                        <MapPin className="w-3.5 h-3.5 text-slate-400 flex-shrink-0 mt-0.5" />
-                        <address className="not-italic">{company.address}</address>
-                      </div>
+                          {company.representative && (
+                            <span className="flex items-center space-x-1 text-slate-600">
+                              <User className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                              <span>Người đại diện:</span>
+                              <span className="font-bold text-slate-900 uppercase">{company.representative}</span>
+                            </span>
+                          )}
+                        </div>
 
-                      <div className="pt-1.5 flex items-center justify-between">
-                        <span className={`inline-block border text-[11px] px-2.5 py-0.5 rounded-md font-medium ${getCompanyStatusBadgeClass(company.status)}`}>
-                          {company.status}
-                        </span>
+                        <div className="flex items-start space-x-1 text-xs text-slate-600">
+                          <MapPin className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
+                          <address className="not-italic truncate">{company.address}</address>
+                        </div>
 
-                        <Link
-                          href={`/${getCompanySlug(company.id, company.name)}`}
-                          className="text-[11px] text-[#e91a2c] hover:text-[#c51322] font-semibold flex items-center space-x-0.5 group"
-                        >
-                          <span>Xem chi tiết hồ sơ thuế</span>
-                        </Link>
+                        <div className="pt-0.5">
+                          <span className="inline-flex items-center space-x-1 bg-emerald-50 text-emerald-700 border border-emerald-200/70 font-semibold px-2.5 py-0.5 rounded-full text-[11px]">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                            <span>{company.status || 'NNT đang hoạt động (đã được cấp GCN ĐKT)'}</span>
+                          </span>
+                        </div>
                       </div>
                     </div>
+
+                    {/* View profile button */}
+                    <Link
+                      href={`/${getCompanySlug(company.id, company.name)}`}
+                      className="self-end md:self-center shrink-0 bg-red-50/90 hover:bg-red-100 active:bg-red-200/80 text-[#e91a2c] font-semibold text-xs px-3.5 py-2 rounded-xl transition-colors flex items-center space-x-1"
+                    >
+                      <span>Xem chi tiết hồ sơ thuế</span>
+                      <ChevronRight className="w-3.5 h-3.5 text-[#e91a2c]" />
+                    </Link>
                   </article>
                 ))}
               </div>
