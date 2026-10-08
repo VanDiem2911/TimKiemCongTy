@@ -235,6 +235,83 @@ export async function saveCompaniesBatchToDb(companies: Partial<BusinessTaxInfo>
 }
 
 /**
+ * Tìm doanh nghiệp ngay trong kho MongoDB của chính mình.
+ * Endpoint tìm kiếm của trang nguồn thường trả về 403, nên đây là nguồn
+ * kết quả chính chứ không phải phương án chữa cháy.
+ */
+export async function searchCompaniesInDb(
+  keyword: string,
+  type: string = 'auto',
+  limit: number = 40
+): Promise<BusinessTaxInfo[]> {
+  const q = (keyword || '').trim();
+  if (!q || !isMongoConfigured()) return [];
+
+  try {
+    const db = await getDb();
+    if (!db) return [];
+
+    // Thoát các ký tự đặc biệt để người dùng gõ gì cũng không làm hỏng biểu thức
+    const ESCAPE_CHAR = String.fromCharCode(92);
+    const SPECIAL = new Set([
+      '.', '*', '+', '?', '^', '$', '{', '}', '(', ')', '|', '[', ']', ESCAPE_CHAR,
+    ]);
+    const safe = Array.from(q)
+      .map((ch) => (SPECIAL.has(ch) ? ESCAPE_CHAR + ch : ch))
+      .join('');
+    const rx = new RegExp(safe, 'i');
+    const digits = q.replace(/[^0-9]/g, '');
+
+    let filter: Record<string, unknown>;
+    if (type === 'companyName') {
+      filter = { name: rx };
+    } else if (type === 'legalName') {
+      filter = { representative: rx };
+    } else if (type === 'enterpriseTax' || type === 'taxCode') {
+      filter = digits ? { id: new RegExp(digits) } : { id: rx };
+    } else {
+      const or: Record<string, unknown>[] = [{ name: rx }, { representative: rx }];
+      if (digits.length >= 4) or.push({ id: new RegExp(digits) });
+      filter = { $or: or };
+    }
+
+    const docs = await db
+      .collection<MongoCompanyDoc>('companies')
+      .find(filter)
+      .limit(limit)
+      .toArray();
+
+    return docs
+      .filter((doc) => doc.id && doc.name)
+      .map((doc) => {
+        const date = doc.startDate || doc.registrationDate || '';
+        const phone = doc.phone || doc.rawPhone;
+        return {
+          id: doc.id,
+          name: doc.name,
+          representative: doc.representative,
+          address: doc.address || '',
+          province: doc.province,
+          startDate: date || undefined,
+          registrationDate: date || undefined,
+          phone: phone || undefined,
+          rawPhone: doc.rawPhone || doc.phone,
+          status: doc.status || '',
+          industryName: doc.mainIndustry || doc.industryName || undefined,
+          industryCode: doc.mainIndustryCode || doc.industryCode || undefined,
+          managedBy: doc.managedBy || undefined,
+          internationalName: doc.internationalName,
+          shortName: doc.shortName,
+          enterpriseType: doc.enterpriseType,
+        } as BusinessTaxInfo;
+      });
+  } catch (err) {
+    console.warn('[companyDb] searchCompaniesInDb error:', err);
+    return [];
+  }
+}
+
+/**
  * Tra ngày thành lập và trạng thái của nhiều doanh nghiệp cùng lúc theo mã số thuế.
  * Dùng để bổ sung cho danh sách lấy từ trang nguồn, vì trang nguồn không kèm
  * hai thông tin này trong kết quả liệt kê.

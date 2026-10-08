@@ -51145,7 +51145,14 @@
       "representative": "NGUYỄN VĂN UYÊN",
       "address": "Số 28, Ngách 1, Ngõ 108, Tổ dân phố Hoàng Tiến, Phường Trần Nhân Tông, Thành phố Hải Phòng, Việt Nam",
       "slug": "0801507313-cong-ty-tnhh-tm-dv-va-van-tai-ngoc-phuong-anh",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-09-22",
+      "phone": "0972294686",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 10 thành phố Hải Phòng",
+      "mainIndustry": "Bán lẻ thực phẩm trong các cửa hàng chuyên doanh",
+      "internationalName": "NGOC PHUONG ANH TM, DV AND TRANSPORTATION COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T07:48:26.840Z"
     },
     {
       "id": "0801507338",
@@ -51305,7 +51312,14 @@
       "representative": "LÊ THUỲ CHI",
       "address": "Số 145 Nguyễn Bình, Phường Gia Viên, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202370116-cong-ty-tnhh-truyen-thong-v-on",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-09-21",
+      "phone": "0946292056",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 1 thành phố Hải Phòng",
+      "mainIndustry": "Quảng cáo",
+      "internationalName": "V-ON MEDIA COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T07:54:31.590Z"
     },
     {
       "id": "0202370148",
@@ -51318,10 +51332,16 @@
     {
       "id": "0202370123",
       "name": "CÔNG TY TNHH THƯƠNG MẠI VÀ DỊCH VỤ INS",
-      "representative": "NGUYỄN THỊ THẮM",
+      "representative": "NGUYỄN THỊ THẮM Ngoài ra, NGUYỄN THỊ THẮM còn đại diện các doanh nghiệp, đơn vị: NGUYỄN THỊ THẮM",
       "address": "Thôn 5, đường Thanh Bình, Đông Phương 2, Phường Hòa Bình, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202370123-cong-ty-tnhh-thuong-mai-va-dich-vu-ins",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-09-21",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 4 thành phố Hải Phòng",
+      "mainIndustry": "Bán buôn kim loại và quặng kim loại (trừ mua bán vàng miếng) Chi tiết: Bán buôn sắt, thép, bạc",
+      "internationalName": "INS TRADING AND SERVICES COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T07:54:53.686Z"
     },
     {
       "id": "0202370187",
@@ -51337,7 +51357,14 @@
       "representative": "CHANG ZHIYUE",
       "address": "Nhà xưởng C4, Lô IN2-3A, Khu đô thị, công nghiệp và dịch vụ VSIP Hải Phòng, Phường Hòa Bình, Thành phố Hải Phòng, Việt Nam",
       "slug": "0202370035-cong-ty-tnhh-ky-thuat-mbp-viet-nam",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-09-21",
+      "phone": "0901531939",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế thành phố Hải Phòng",
+      "mainIndustry": "Sản xuất mô tơ, máy phát, biến thế điện, thiết bị phân phối và điều khiển điện Chi tiết: Sản xuất, gia công mô tơ chính xác và các linh kiện tương tự khác (CPC 884, 885)",
+      "internationalName": "MBP (VIETNAM) TECHNOLOGY COMPANY LIMITED",
+      "enrichedAt": "2026-10-08T07:55:15.711Z"
     },
     {
       "id": "0801507137",
@@ -51345,7 +51372,13 @@
       "representative": "THÂN ANH NGỌC",
       "address": "Ngã tư Bến Hàn, Phường Thành Đông, Thành phố Hải Phòng, Việt Nam",
       "slug": "0801507137-cong-ty-tnhh-tm-thanh-tin-toan-cau",
-      "province": "Hải Phòng"
+      "province": "Hải Phòng",
+      "startDate": "2026-09-21",
+      "phone": "0826778888",
+      "status": "Đang hoạt động",
+      "managedBy": "Thuế cơ sở 9 thành phố Hải Phòng",
+      "mainIndustry": "Bán lẻ thực phẩm trong các cửa hàng chuyên doanh",
+      "enrichedAt": "2026-10-08T07:55:24.175Z"
     },
     {
       "id": "5700682558-011",

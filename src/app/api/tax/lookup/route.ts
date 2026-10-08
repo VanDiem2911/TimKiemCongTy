@@ -3,7 +3,7 @@ import { searchCompaniesByIndustryLive, searchCompaniesLive, searchCompaniesAcro
 import { getCompleteCompanyProfile, enrichCompanyData } from '@/lib/taxEngine';
 import { recordRecentLookup } from '@/lib/recentLookups';
 import { INDUSTRIES, normalizeTaxId } from '@/lib/constants';
-import { saveCompaniesBatchToDb } from '@/lib/companyDb';
+import { saveCompaniesBatchToDb, searchCompaniesInDb } from '@/lib/companyDb';
 
 // Kết quả tra cứu thay đổi chậm nên cho phép đệm lại ở CDN / trình duyệt,
 // đồng thời phục vụ bản cũ trong lúc làm mới ngầm để không ai phải chờ.
@@ -73,21 +73,24 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  // 2. Real-time Live Search across all Vietnamese enterprises
-  const liveResults = await searchCompaniesLive(q, type);
+  // 2. Tra song song ba nguồn: trang nguồn trực tuyến, kho MongoDB của chính
+  // mình, và danh mục dựng sẵn trong mã nguồn. Endpoint tìm kiếm của trang
+  // nguồn thường bị chặn (403) nên kho MongoDB mới là nguồn kết quả chính.
+  const [liveResults, dbResults] = await Promise.all([
+    searchCompaniesLive(q, type),
+    searchCompaniesInDb(q, type, 40),
+  ]);
 
-  // 3. Fallback / Merge with local catalog (10,000 verified enterprises)
   const matched = searchCompaniesAcrossProvinces(q, type);
   const enrichedLocal = matched.map(c => enrichCompanyData(c));
 
-  // Merge results, prioritizing live and deduplicating by tax ID
-  const combined = [...(liveResults || [])];
-  const seenIds = new Set(combined.map(c => c.id));
-  for (const item of enrichedLocal) {
-    if (!seenIds.has(item.id)) {
-      seenIds.add(item.id);
-      combined.push(item);
-    }
+  // Gộp kết quả, ưu tiên dữ liệu trực tuyến rồi tới kho, bỏ trùng theo mã số thuế
+  const combined: typeof enrichedLocal = [];
+  const seenIds = new Set<string>();
+  for (const item of [...(liveResults || []), ...dbResults, ...enrichedLocal]) {
+    if (!item?.id || seenIds.has(item.id)) continue;
+    seenIds.add(item.id);
+    combined.push(item);
   }
 
   if (combined.length > 0) {
