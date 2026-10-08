@@ -51,6 +51,7 @@ export const metadata: Metadata = {
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "googled9e89220e5c9d49d",
   },
+  applicationName: "Tìm Kiếm Công Ty",
   openGraph: {
     title: "Tìm Kiếm Công Ty - Tra Cứu Mã Số Thuế & Doanh Nghiệp Toàn Quốc",
     description: "Tra cứu mã số thuế doanh nghiệp, thông tin người đại diện, trạng thái thuế và báo cáo rủi ro.",
@@ -66,9 +67,56 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const baseUrl = getBaseUrl();
+
+  // Khai báo tên website cho Google. Đây là cách chính thức để Google biết
+  // nên hiển thị tên nào trong kết quả tìm kiếm thay vì tự suy từ tên miền.
+  const siteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${baseUrl}/#website`,
+    name: 'Tìm Kiếm Công Ty',
+    alternateName: ['TimKiemCongTy', 'Tra cứu mã số thuế'],
+    url: `${baseUrl}/`,
+    inLanguage: 'vi-VN',
+    publisher: { '@id': `${baseUrl}/#organization` },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${baseUrl}/?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  };
+
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': `${baseUrl}/#organization`,
+    name: 'Tìm Kiếm Công Ty',
+    url: `${baseUrl}/`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${baseUrl}/logo.png`,
+    },
+    description:
+      'Cổng tra cứu thông tin mã số thuế và doanh nghiệp người nộp thuế trên toàn quốc.',
+  };
+
   return (
     <html lang="vi" className="h-full antialiased" suppressHydrationWarning>
-      <body className="min-h-full flex flex-col" suppressHydrationWarning>{children}</body>
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
