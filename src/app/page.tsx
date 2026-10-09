@@ -297,6 +297,7 @@ function HomeContent() {
                     <Link
                       key={p.code}
                       href={`/tra-cuu-ma-so-thue-theo-tinh/${p.slug}`}
+                      prefetch={false}
                       className="text-slate-700 hover:text-[#e91a2c] hover:bg-[#fff0f1] px-2 py-1.5 rounded-md flex items-center justify-between transition-colors"
                     >
                       <span className={p.isMajor ? 'font-semibold text-slate-900' : ''}>{p.name}</span>

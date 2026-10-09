@@ -430,6 +430,7 @@ export function ProvinceCompanyList({
                     <Link
                       key={p.code}
                       href={`/tra-cuu-ma-so-thue-theo-tinh/${p.slug}`}
+                      prefetch={false}
                       className={`px-2 py-1.5 rounded-md flex items-center justify-between transition-colors ${
                         isActive
                           ? 'bg-[#fff0f1] text-[#c51322] font-bold'

@@ -416,6 +416,7 @@ export function TaxDetailView({ initialCompany, slug }: TaxDetailViewProps) {
                 <Link
                   key={p.code}
                   href={`/tra-cuu-ma-so-thue-theo-tinh/${p.slug}`}
+                  prefetch={false}
                   className="text-slate-700 hover:text-sky-600 hover:bg-slate-50 px-2 py-1.5 rounded-md flex items-center justify-between transition-colors"
                 >
                   <span className={p.isMajor ? 'font-semibold text-slate-900' : ''}>{p.name}</span>

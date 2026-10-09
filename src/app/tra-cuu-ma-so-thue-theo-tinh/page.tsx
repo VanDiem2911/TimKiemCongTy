@@ -80,6 +80,7 @@ export default async function ProvinceTaxPage({ searchParams }: PageProps) {
                         <Link
                           key={p.code}
                           href={`/tra-cuu-ma-so-thue-theo-tinh/${p.slug}`}
+                          prefetch={false}
                           className="bg-gray-50 hover:bg-amber-50 border border-gray-200 hover:border-amber-400 p-2 rounded flex items-center justify-between transition group"
                         >
                           <span className={`group-hover:text-blue-600 truncate ${p.isMajor ? 'font-bold text-gray-900' : 'text-gray-700'}`}>
@@ -101,6 +102,7 @@ export default async function ProvinceTaxPage({ searchParams }: PageProps) {
                         <Link
                           key={p.code}
                           href={`/tra-cuu-ma-so-thue-theo-tinh/${p.slug}`}
+                          prefetch={false}
                           className="bg-gray-50 hover:bg-amber-50 border border-gray-200 hover:border-amber-400 p-2 rounded flex items-center justify-between transition group"
                         >
                           <span className={`group-hover:text-blue-600 truncate ${p.isMajor ? 'font-bold text-gray-900' : 'text-gray-700'}`}>
@@ -122,6 +124,7 @@ export default async function ProvinceTaxPage({ searchParams }: PageProps) {
                         <Link
                           key={p.code}
                           href={`/tra-cuu-ma-so-thue-theo-tinh/${p.slug}`}
+                          prefetch={false}
                           className="bg-gray-50 hover:bg-amber-50 border border-gray-200 hover:border-amber-400 p-2 rounded flex items-center justify-between transition group"
                         >
                           <span className={`group-hover:text-blue-600 truncate ${p.isMajor ? 'font-bold text-gray-900' : 'text-gray-700'}`}>
@@ -327,6 +330,7 @@ export default async function ProvinceTaxPage({ searchParams }: PageProps) {
                     <Link
                       key={p.code}
                       href={`/tra-cuu-ma-so-thue-theo-tinh/${p.slug}`}
+                      prefetch={false}
                       className="p-2 rounded flex items-center justify-between transition hover:bg-amber-50 hover:text-blue-600 border border-transparent hover:border-amber-200"
                     >
                       <span className="font-semibold text-gray-800">{p.name}</span>
