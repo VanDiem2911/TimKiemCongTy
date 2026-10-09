@@ -1,6 +1,9 @@
 import { MongoClient, Db } from 'mongodb';
 
-const uri = process.env.MONGODB_URI ? process.env.MONGODB_URI.trim() : '';
+// Bỏ khoảng trắng, nháy bao quanh và dấu "\" thừa (dán nhầm vào env làm thành w=majority\)
+const uri = process.env.MONGODB_URI
+  ? process.env.MONGODB_URI.trim().replace(/^["']|["']$/g, '').replace(/\\/g, '').trim()
+  : '';
 const dbName = process.env.MONGODB_DB_NAME || 'timkiemcongty';
 
 let client: MongoClient | null = null;
