@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 import { getBaseUrl } from "@/lib/constants";
+import PageViewTracker from "@/components/PageViewTracker";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -107,6 +108,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
         {children}
+        <PageViewTracker />
       </body>
     </html>
   );

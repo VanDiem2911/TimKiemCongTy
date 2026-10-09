@@ -1,4 +1,5 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse, after } from 'next/server';
+import { logActivity } from '@/lib/activityLog';
 import { submitPrivacyRequestAsync, isPhoneHidden } from '@/lib/privacyStore';
 
 export async function GET(request: NextRequest) {
@@ -23,6 +24,8 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
+
+    after(() => logActivity({ channel: 'api', feature: 'Quyền riêng tư', action: 'create', summary: `Gửi yêu cầu ẩn số điện thoại: ${String(companyName || 'Doanh nghiệp').trim()} (${String(taxId).trim()})`, target: String(taxId).trim() }, request.headers));
 
     const result = await submitPrivacyRequestAsync({
       taxId: String(taxId).trim(),

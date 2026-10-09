@@ -1,4 +1,5 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse, after } from 'next/server';
+import { logActivity } from '@/lib/activityLog';
 import { scanCompanyContactAI } from '@/lib/companyAiScanner';
 import { getCompleteCompanyProfile } from '@/lib/taxEngine';
 
@@ -21,6 +22,8 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
+
+    after(() => logActivity({ channel: 'api', feature: 'Quét liên hệ AI', action: 'search', summary: `Quét thông tin liên hệ: ${companyName || taxId}`, target: String(taxId || companyName) }, request.headers));
 
     const finalId = taxId || '';
     let finalName = companyName || '';

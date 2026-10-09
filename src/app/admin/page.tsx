@@ -23,8 +23,10 @@ import {
   ShieldCheck,
   ArrowRight,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  ScrollText
 } from 'lucide-react';
+import ActivityLogPanel from '@/components/admin/ActivityLogPanel';
 import { PROVINCES, getCompanySlug, normalizeTaxId } from '@/lib/constants';
 import { PrivacyRequest, ContactMessage, HiddenPhoneRecord } from '@/lib/privacyStore';
 import { BusinessTaxInfo } from '@/types/tax';
@@ -53,7 +55,7 @@ function parseDateToISO(dateStr: string): string {
 const DATA_PAGE_SIZE = 500;
 
 export default function AdminDashboardPage() {
-  const [activeTab, setActiveTab] = useState<'overview' | 'privacy' | 'data' | 'contacts'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'privacy' | 'data' | 'contacts' | 'logs'>('overview');
   const [loading, setLoading] = useState(true);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
@@ -575,6 +577,15 @@ export default function AdminDashboardPage() {
       badgeClass: 'bg-amber-400 text-slate-900',
       title: 'Hòm thư Liên hệ',
       subtitle: 'Phản hồi thắc mắc và đóng góp ý kiến từ người dùng',
+    },
+    {
+      key: 'logs' as const,
+      label: 'Nhật ký thao tác',
+      icon: ScrollText,
+      badge: 0,
+      badgeClass: '',
+      title: 'Nhật ký thao tác',
+      subtitle: 'Theo dõi người truy cập: địa chỉ IP, vị trí, chức năng và thao tác trên website',
     },
   ];
 
@@ -1793,6 +1804,8 @@ export default function AdminDashboardPage() {
         )}
 
         {/* TAB 4: CONTACT MESSAGES */}
+        {activeTab === 'logs' && <ActivityLogPanel />}
+
         {activeTab === 'contacts' && (
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-xs space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b pb-4">

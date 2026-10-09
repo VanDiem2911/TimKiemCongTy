@@ -1,4 +1,5 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse, after } from 'next/server';
+import { logActivity } from '@/lib/activityLog';
 import { getCompleteCompanyProfile } from '@/lib/taxEngine';
 
 export async function POST(request: NextRequest) {
@@ -14,6 +15,7 @@ export async function POST(request: NextRequest) {
     }
 
     const refreshed = await getCompleteCompanyProfile(target, true);
+    after(() => logActivity({ channel: 'api', feature: 'Hồ sơ công ty', action: 'refresh', summary: `Cập nhật hồ sơ ${refreshed?.id ?? target}${refreshed?.name ? ' · ' + refreshed.name : ''}`, target: String(target) }, request.headers));
 
     if (!refreshed) {
       return NextResponse.json({

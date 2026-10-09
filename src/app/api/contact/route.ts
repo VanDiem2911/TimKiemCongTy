@@ -1,4 +1,5 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse, after } from 'next/server';
+import { logActivity } from '@/lib/activityLog';
 import { submitContactAsync } from '@/lib/privacyStore';
 
 export async function POST(request: NextRequest) {
@@ -14,6 +15,8 @@ export async function POST(request: NextRequest) {
     }
 
     const subject = taxId ? `Liên hệ về MST ${taxId}` : 'Góp ý / Yêu cầu hỗ trợ';
+
+    after(() => logActivity({ channel: 'web', feature: 'Liên hệ', action: 'create', summary: `Gửi tin nhắn liên hệ: ${subject}`, target: taxId ? String(taxId) : undefined }, request.headers));
 
     const result = await submitContactAsync({
       name: String(name).trim(),

@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse, after } from 'next/server';
+import { logActivity } from '@/lib/activityLog';
 import { searchCompaniesByIndustryLive, searchCompaniesLive, searchCompaniesAcrossProvinces, fillMissingFactsFromDb } from '@/lib/provinceCompanies';
 import { getCompleteCompanyProfile, enrichCompanyData } from '@/lib/taxEngine';
 import { recordRecentLookupAsync } from '@/lib/recentLookups';
@@ -23,6 +24,8 @@ export async function GET(request: NextRequest) {
       data: []
     }, { status: 400 });
   }
+
+  after(() => logActivity({ channel: 'api', feature: 'Tra cứu', action: 'search', summary: `Tìm kiếm "${q}"`, target: q }, request.headers));
 
   const digitsOnly = q.replace(/[^0-9]/g, '');
   const cleanQuery = q.replace(/[^0-9a-zA-Z]/g, '');
