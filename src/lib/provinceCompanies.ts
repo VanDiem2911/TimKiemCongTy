@@ -492,7 +492,11 @@ function isKeyUsable(key: string): boolean {
   return false;
 }
 
-async function fetchViaScraperApi(targetUrl: string, label: string): Promise<Response | null> {
+export async function fetchViaScraperApi(
+  targetUrl: string,
+  label: string,
+  timeoutMs = 25000
+): Promise<Response | null> {
   const keys = getScraperApiKeys();
   if (keys.length === 0) return null;
 
@@ -513,7 +517,7 @@ async function fetchViaScraperApi(targetUrl: string, label: string): Promise<Res
     });
 
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 25000);
+    const timeout = setTimeout(() => controller.abort(), timeoutMs);
 
     try {
       const res = await fetch(`https://api.scraperapi.com/?${params.toString()}`, {

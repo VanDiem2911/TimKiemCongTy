@@ -5,7 +5,7 @@ import harvestedJson from '@/data/harvested_provinces.json';
 import { isPhoneHidden, getKnownPhone } from '@/lib/privacyStore';
 import { KNOWN_COMPANY_CONTACTS } from '@/lib/companyAiScanner';
 import { findCompanyInDb, saveCompanyToDb, getCompanyFactsByIds } from '@/lib/companyDb';
-import { getHarvestedStartDate } from '@/lib/provinceCompanies';
+import { getHarvestedStartDate, fetchViaScraperApi } from '@/lib/provinceCompanies';
 
 export interface HarvestedCompanyItem {
   id: string;
@@ -690,6 +690,12 @@ export async function getCompleteCompanyProfile(
     }
   }
 
+  // Công ty chưa có slug (không nằm trong dữ liệu cào) nhưng đã có tên trong kho: dựng slug từ tên.
+  // Trang nguồn trả 404 nếu chỉ đưa MST trần nên bắt buộc phải có phần tên.
+  if (!masothueSlug && dbFallback?.name && /^\d{10}(-\d{3})?$/.test(taxId)) {
+    masothueSlug = getCompanySlug(taxId, dbFallback.name);
+  }
+
   const fetchHeaders: HeadersInit = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
@@ -721,14 +727,10 @@ export async function getCompleteCompanyProfile(
         res = null;
       }
 
-      const scraperKey = process.env.SCRAPER_API_KEY;
-      if ((!res || res.status !== 200) && scraperKey) {
+      // Trang nguồn chặn thì đi vòng qua ScraperAPI, tự chuyển sang key khác khi key hết credit
+      if (!res || res.status !== 200) {
         try {
-          const scUrl = `http://api.scraperapi.com?api_key=${scraperKey}&url=${encodeURIComponent(directTarget)}`;
-          const scCtrl = new AbortController();
-          const scTimer = setTimeout(() => scCtrl.abort(), 12000);
-          res = await fetch(scUrl, { signal: scCtrl.signal });
-          clearTimeout(scTimer);
+          res = await fetchViaScraperApi(directTarget, `chi tiết ${taxId}`, 20000);
         } catch (scErr) {
           console.warn('ScraperAPI detail fallback failed:', scErr);
         }
