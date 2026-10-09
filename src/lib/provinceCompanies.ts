@@ -460,11 +460,16 @@ const BROWSER_FETCH_HEADERS = {
 // Danh sách key ScraperAPI, lấy từ nhiều biến môi trường hoặc một biến ngăn
 // nhau bằng dấu phẩy. Có nhiều key để khi key này hết credit thì dùng key kia.
 function getScraperApiKeys(): string[] {
-  const sources = [
-    process.env.SCRAPER_API_KEY,
-    process.env.SCRAPER_API_KEY_2,
-    process.env.SCRAPER_API_KEY_3,
-  ];
+  // Đọc mọi biến SCRAPER_API_KEY, SCRAPER_API_KEY_2, _3, _4... theo đúng thứ tự số.
+  // Key đứng trước được dùng trước; hết credit thì chuyển sang key kế tiếp.
+  const sources = Object.keys(process.env)
+    .map((name) => {
+      const m = /^SCRAPER_API_KEY(?:_(\d+))?$/.exec(name);
+      return m ? { order: m[1] ? Number(m[1]) : 1, value: process.env[name] } : null;
+    })
+    .filter((x): x is { order: number; value: string | undefined } => x !== null)
+    .sort((x, y) => x.order - y.order)
+    .map((x) => x.value);
 
   const keys: string[] = [];
   for (const source of sources) {
@@ -481,6 +486,10 @@ function getScraperApiKeys(): string[] {
 // yêu cầu. Sau khoảng thời gian này sẽ thử lại, phòng khi bạn vừa nạp thêm.
 const EXHAUSTED_KEYS = new Map<string, number>();
 const KEY_COOLDOWN_MS = 1000 * 60 * 30;
+
+// Con trỏ xoay vòng giữa các key. Mỗi instance serverless bắt đầu ở vị trí ngẫu nhiên
+// để tải dàn đều giữa các key ngay cả khi instance mới khởi động liên tục.
+let nextKeyCursor = Math.floor(Math.random() * 1000);
 
 function isKeyUsable(key: string): boolean {
   const until = EXHAUSTED_KEYS.get(key);
@@ -506,8 +515,13 @@ export async function fetchViaScraperApi(
     return null;
   }
 
-  for (let i = 0; i < usable.length; i++) {
-    const key = usable[i];
+  // Xoay vòng: mỗi lần gọi bắt đầu từ key kế tiếp (lần này key 2, lần sau key 3, ...).
+  // Key nào lỗi thì thử tiếp key sau nó trong vòng; key hết credit đã bị loại khỏi `usable`.
+  const start = nextKeyCursor++ % usable.length;
+  const ordered = [...usable.slice(start), ...usable.slice(0, start)];
+
+  for (let i = 0; i < ordered.length; i++) {
+    const key = ordered[i];
     const keyLabel = `key ${keys.indexOf(key) + 1}/${keys.length}`;
 
     const params = new URLSearchParams({
