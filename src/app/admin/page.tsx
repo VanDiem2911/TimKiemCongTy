@@ -182,6 +182,26 @@ export default function AdminDashboardPage() {
     }
   };
 
+  const handleStartTratencongty = async (target: number) => {
+    try {
+      setCrawlerRunning(true);
+      setCrawlerMessage('Đang khởi động cào tratencongty.com (OCR MST & SĐT, tự loại trùng)...');
+      const res = await fetch('/api/admin/crawler', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'tratencongty', target }),
+      });
+      const json = await res.json();
+      if (json.success) {
+        showAlert(json.message);
+      } else {
+        showAlert(json.message, 'error');
+      }
+    } catch (_err: unknown) {
+      showAlert('Lỗi khi kích hoạt cào tratencongty.com', 'error');
+    }
+  };
+
   const handleStopCrawl = async () => {
     try {
       await fetch('/api/admin/crawler', {
@@ -1210,6 +1230,16 @@ export default function AdminDashboardPage() {
                     className="px-3.5 py-1.5 bg-slate-900 hover:bg-slate-800 active:bg-slate-950 disabled:opacity-50 text-white font-medium rounded-lg shadow-2xs transition cursor-pointer flex items-center space-x-1.5 text-xs"
                   >
                     <span>+ Cào thêm 5.000 DN</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
+                  <button
+                    type="button"
+                    disabled={crawlerRunning}
+                    onClick={() => handleStartTratencongty(500)}
+                    className="px-3.5 py-1.5 bg-sky-700 hover:bg-sky-800 active:bg-sky-900 disabled:opacity-50 text-white font-medium rounded-lg shadow-2xs transition cursor-pointer flex items-center space-x-1.5 text-xs"
+                    title="Cào doanh nghiệp mới từ tratencongty.com, tự bỏ qua công ty đã có trong kho, lấy đủ SĐT & Ngày"
+                  >
+                    <span>+ Cào 500 DN mới (tratencongty)</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                 </div>

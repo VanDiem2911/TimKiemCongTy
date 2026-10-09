@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import { runCrawler, ALL_PROVINCES } from '../../../../../scripts/crawler.mjs';
+import { runTratencongtyScraper } from '../../../../../scripts/scrape-tratencongty.mjs';
 
 interface CrawlerState {
   isRunning: boolean;
@@ -204,6 +205,51 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({
         success: true,
         message: `Đã kích hoạt bổ sung SĐT & Ngày cho các doanh nghiệp hiện có!`,
+        crawler: globalCrawlerState,
+      });
+    }
+
+    if (action === 'tratencongty') {
+      if (globalCrawlerState.isRunning) {
+        return NextResponse.json({
+          success: false,
+          message: 'Công cụ cào dữ liệu đang chạy, vui lòng chờ hoàn tất!',
+          crawler: globalCrawlerState,
+        });
+      }
+
+      const wanted = Math.max(1, parseInt(body.target || '500', 10));
+      globalCrawlerState.isRunning = true;
+      globalCrawlerState.targetCount = wanted;
+      globalCrawlerState.percent = 0;
+      globalCrawlerState.startedAt = new Date().toISOString();
+      globalCrawlerState.message = `Đang khởi động cào tratencongty.com (mục tiêu ${wanted.toLocaleString('vi-VN')} DN mới, không trùng)...`;
+
+      (async () => {
+        try {
+          const st = await runTratencongtyScraper({
+            resume: true,
+            pages: 2000,
+            maxNew: wanted,
+            shouldStop: () => !globalCrawlerState.isRunning,
+            onProgress: (p: { page: number; added: number; dupes: number; rejected: number; latest: string }) => {
+              globalCrawlerState.percent = Math.min(99, Math.round((p.added / wanted) * 100));
+              globalCrawlerState.message = `[tratencongty] Trang ${p.page} · +${p.added}/${wanted.toLocaleString('vi-VN')} DN mới · trùng ${p.dupes} · loại ${p.rejected}${p.latest ? ' · ' + p.latest : ''}`;
+              globalCrawlerState.lastUpdated = new Date().toISOString();
+            },
+          });
+          globalCrawlerState.isRunning = false;
+          globalCrawlerState.percent = 100;
+          globalCrawlerState.message = `Hoàn tất: thêm ${st.added.toLocaleString('vi-VN')} DN mới từ tratencongty.com (bỏ ${st.dupes} trùng, loại ${st.rejected} do OCR không khớp). Đã lưu MongoDB: ${st.mongoSaved.toLocaleString('vi-VN')}${st.mongoErrors ? ` (lỗi ${st.mongoErrors} lô)` : ''}.`;
+        } catch (err: unknown) {
+          globalCrawlerState.isRunning = false;
+          globalCrawlerState.message = `Lỗi cào tratencongty: ${err instanceof Error ? err.message : 'Unknown error'}`;
+        }
+      })();
+
+      return NextResponse.json({
+        success: true,
+        message: `Đã kích hoạt cào tratencongty.com, mục tiêu ${wanted.toLocaleString('vi-VN')} doanh nghiệp mới!`,
         crawler: globalCrawlerState,
       });
     }

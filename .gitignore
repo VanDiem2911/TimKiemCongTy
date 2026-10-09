@@ -55,3 +55,9 @@ scripts/verify-*.mjs
 # Database backups
 backup_dudi_system/
 *.dump
+
+# Scraper tratencongty
+eng.traineddata
+scripts/.tratencongty-state.json
+scripts/tratencongty-rejects.jsonl
+scripts/backups/
