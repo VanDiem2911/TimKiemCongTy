@@ -1,6 +1,6 @@
 /**
- * Cào doanh nghiệp từ https://www.tratencongty.com và gộp vào src/data/harvested_provinces.json
- * mà KHÔNG trùng với dữ liệu cũ.
+ * Cào doanh nghiệp từ https://www.tratencongty.com và lưu thẳng vào MongoDB (collection `companies`)
+ * mà KHÔNG trùng với dữ liệu cũ. Không ghi ra file JSON.
  *
  * Trang nguồn hiển thị Mã số thuế và Số điện thoại dưới dạng ẢNH PNG (base64) nên script dùng OCR
  * (tesseract.js). Độ chính xác được đảm bảo bằng cách:
@@ -8,7 +8,7 @@
  *   - SĐT: OCR 2 lần ở 2 kích thước, chỉ nhận khi trùng nhau (không trùng -> bỏ trống, không ghi sai).
  *
  * Chống trùng: so khớp theo MST, và theo (tên + địa chỉ) chuẩn hoá, với toàn bộ
- * harvested_provinces.json + cached_industry_companies.json + dữ liệu mới cào trong cùng lần chạy.
+ * toàn bộ dữ liệu đang có trong MongoDB + dữ liệu mới cào trong cùng lần chạy.
  *
  * Cách dùng:
  *   node scripts/scrape-tratencongty.mjs --from 1 --to 20            # cào trang 1..20
@@ -25,12 +25,6 @@ import { createWorker, PSM } from 'tesseract.js';
 
 const BASE = 'https://www.tratencongty.com';
 const ROOT = process.cwd();
-const DATA_FILE = path.join(ROOT, 'src', 'data', 'harvested_provinces.json');
-const INDUSTRY_FILE = path.join(ROOT, 'src', 'data', 'cached_industry_companies.json');
-const STATE_FILE = path.join(ROOT, 'scripts', '.tratencongty-state.json');
-const REJECT_FILE = path.join(ROOT, 'scripts', 'tratencongty-rejects.jsonl');
-const BACKUP_DIR = path.join(ROOT, 'scripts', 'backups');
-
 // ---------- config (được gán trong runTratencongtyScraper) ----------
 let DRY = false;
 let DELAY = 1200;
@@ -184,9 +178,9 @@ function parseDetail(html) {
 }
 
 // ---------- province mapping ----------
-function buildProvinceMap(data) {
-  const map = new Map(); // slug tên tỉnh (không dấu, không hậu tố số) -> key trong file dữ liệu
-  for (const key of Object.keys(data)) map.set(key.replace(/-\d+$/, ''), key);
+function buildProvinceMap(keys) {
+  const map = new Map(); // slug tên tỉnh (không dấu, không hậu tố số) -> provinceSlug trong MongoDB
+  for (const key of keys.filter(Boolean)) map.set(key.replace(/-\d+$/, ''), key);
   return map;
 }
 function provinceOf(address, map) {
@@ -218,11 +212,12 @@ async function connectMongo() {
   try {
     const client = new MongoClient(uri, { maxPoolSize: 3, serverSelectionTimeoutMS: 15000 });
     await client.connect();
-    const coll = client.db(process.env.MONGODB_DB_NAME?.trim() || 'timkiemcongty').collection('companies');
+    const db = client.db(process.env.MONGODB_DB_NAME?.trim() || 'timkiemcongty');
+    const coll = db.collection('companies');
     await coll.createIndex({ id: 1 }, { unique: true });
-    return { client, coll };
+    return { client, db, coll };
   } catch (e) {
-    console.warn('Không kết nối được MongoDB, chỉ lưu file JSON:', e.message);
+    console.warn('Không kết nối được MongoDB:', e.message);
     return null;
   }
 }
@@ -237,17 +232,24 @@ export async function runTratencongtyScraper(opts = {}) {
   const onProgress = opts.onProgress ?? (() => {});
   let fromPage = opts.from ?? 1;
   let toPage = opts.to ?? fromPage;
-  if (opts.resume) {
-    const st = fs.existsSync(STATE_FILE) ? JSON.parse(fs.readFileSync(STATE_FILE, 'utf8')) : { nextPage: 1 };
-    fromPage = st.nextPage;
-    toPage = fromPage + (opts.pages ?? 10) - 1;
-  }
   pool.length = 0;
   idle.length = 0;
   waiters.length = 0;
 
-  const data = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
-  const provMap = buildProvinceMap(data);
+  // Dữ liệu chỉ lưu và đọc từ MongoDB, không ghi ra file JSON.
+  const mongo = await connectMongo();
+  if (!mongo) throw new Error('Không kết nối được MongoDB (kiểm tra MONGODB_URI trong .env.local)');
+  const stateColl = mongo.db.collection('scraper_state');
+  const rejectColl = mongo.db.collection('scraper_rejects');
+
+  if (opts.resume) {
+    const st = await stateColl.findOne({ _id: 'tratencongty' });
+    fromPage = st?.nextPage ?? 1;
+    toPage = fromPage + (opts.pages ?? 10) - 1;
+  }
+
+  // Khóa tỉnh (provinceSlug) lấy từ chính dữ liệu đang có trong MongoDB
+  const provMap = buildProvinceMap(await mongo.coll.distinct('provinceSlug'));
 
   const knownIds = new Set();
   const knownNameAddr = new Set();
@@ -255,18 +257,13 @@ export async function runTratencongtyScraper(opts = {}) {
     if (c.id) knownIds.add(String(c.id).trim());
     if (c.name) knownNameAddr.add(nameAddrKey(c.name, c.address));
   };
-  Object.values(data).flat().forEach(register);
-  if (fs.existsSync(INDUSTRY_FILE)) Object.values(JSON.parse(fs.readFileSync(INDUSTRY_FILE, 'utf8'))).flat().forEach(register);
   const stats = { pages: 0, seen: 0, dupes: 0, added: 0, rejected: 0, mongoSaved: 0, mongoErrors: 0 };
-  const mongo = DRY ? null : await connectMongo();
-  if (mongo) {
-    const cur = mongo.coll.find({}, { projection: { id: 1, name: 1, address: 1, _id: 0 } });
-    for await (const c of cur) register(c);
-    console.log('Đã kết nối MongoDB, kho hiện có:', (await mongo.coll.estimatedDocumentCount()).toLocaleString());
-  }
+  for await (const c of mongo.coll.find({}, { projection: { id: 1, name: 1, address: 1, _id: 0 } })) register(c);
+  console.log('Đã kết nối MongoDB, kho hiện có:', knownIds.size.toLocaleString(), 'MST');
+
   const pending = [];
   const flushMongo = async () => {
-    if (!mongo || !pending.length) return;
+    if (DRY || !pending.length) return;
     const batch = pending.splice(0);
     try {
       const r = await mongo.coll.bulkWrite(
@@ -281,28 +278,18 @@ export async function runTratencongtyScraper(opts = {}) {
       console.warn('Lỗi ghi MongoDB:', e.message);
     }
   };
-  console.log(`Dữ liệu cũ: ${knownIds.size.toLocaleString()} MST. Cào trang ${fromPage}..${toPage}${DRY ? ' (DRY RUN)' : ''}`);
-
-  if (!DRY) {
-    fs.mkdirSync(BACKUP_DIR, { recursive: true });
-    const bak = path.join(BACKUP_DIR, `harvested_provinces.${new Date().toISOString().replace(/[:.]/g, '-')}.json`);
-    fs.copyFileSync(DATA_FILE, bak);
-    console.log('Đã sao lưu ->', path.relative(ROOT, bak));
-  }
+  console.log(`Cào trang ${fromPage}..${toPage}${DRY ? ' (DRY RUN)' : ''}`);
 
   await initOcr();
   let nextPage = fromPage;
 
-  const save = () => {
-    if (DRY) return;
-    const tmp = DATA_FILE + '.tmp';
-    fs.writeFileSync(tmp, JSON.stringify(data, null, 2));
-    fs.renameSync(tmp, DATA_FILE);
-    fs.writeFileSync(STATE_FILE, JSON.stringify({ nextPage, updatedAt: new Date().toISOString() }));
+  const save = async () => {
+    await flushMongo();
+    if (!DRY) await stateColl.updateOne({ _id: 'tratencongty' }, { $set: { nextPage, updatedAt: new Date() } }, { upsert: true });
   };
   const reject = (reason, info) => {
     stats.rejected++;
-    if (!DRY) fs.appendFileSync(REJECT_FILE, JSON.stringify({ reason, ...info }) + '\n');
+    if (!DRY) rejectColl.insertOne({ reason, ...info, at: new Date() }).catch(() => {});
   };
 
   for (let page = fromPage; page <= toPage && stats.added < MAX_NEW && !shouldStop(); page++) {
@@ -379,7 +366,6 @@ export async function runTratencongtyScraper(opts = {}) {
         scrapedAt: new Date().toISOString(),
       };
       if (DRY) console.log(JSON.stringify(rec));
-      data[prov.key].push(rec);
       pending.push({ rec, provinceSlug: prov.key });
       register(rec);
       stats.added++;
@@ -389,7 +375,7 @@ export async function runTratencongtyScraper(opts = {}) {
 
     if (!shouldStop() || pageAdded === items.length) nextPage = page + 1;
     await flushMongo();
-    save();
+    await save();
     onProgress({ page, toPage, ...stats, latest: '' });
     console.log(`Trang ${page}: +${pageAdded} mới / ${items.length} (tổng mới ${stats.added}, trùng ${stats.dupes}, loại ${stats.rejected})`);
     await sleep(DELAY);
@@ -408,7 +394,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   runTratencongtyScraper({ ...cli, onProgress: (p) => p.latest === '' && console.log(`Trang ${p.page}/${p.toPage}: mới ${p.added}, trùng ${p.dupes}, loại ${p.rejected}`) })
     .then((st) => {
       console.log('Hoàn tất:', st);
-      if (st.rejected && !st.dryRun) console.log('Bản ghi bị loại ở', path.relative(ROOT, REJECT_FILE));
+      if (st.rejected && !st.dryRun) console.log('Bản ghi bị loại nằm ở collection scraper_rejects trong MongoDB');
     })
     .catch((e) => {
       console.error(e);

@@ -1,6 +1,6 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse, after } from 'next/server';
 import { getCompleteCompanyProfile } from '@/lib/taxEngine';
-import { recordRecentLookup } from '@/lib/recentLookups';
+import { recordRecentLookupAsync } from '@/lib/recentLookups';
 
 export async function GET(
   request: NextRequest,
@@ -19,7 +19,7 @@ export async function GET(
   const profile = await getCompleteCompanyProfile(rawParam, isRefresh);
 
   if (profile) {
-    recordRecentLookup(profile);
+    after(() => recordRecentLookupAsync(profile));
     return NextResponse.json({
       success: true,
       source: 'verified-enterprise-profile',

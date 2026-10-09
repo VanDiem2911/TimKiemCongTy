@@ -1,7 +1,7 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse, after } from 'next/server';
 import { searchCompaniesByIndustryLive, searchCompaniesLive, searchCompaniesAcrossProvinces, fillMissingFactsFromDb } from '@/lib/provinceCompanies';
 import { getCompleteCompanyProfile, enrichCompanyData } from '@/lib/taxEngine';
-import { recordRecentLookup } from '@/lib/recentLookups';
+import { recordRecentLookupAsync } from '@/lib/recentLookups';
 import { INDUSTRIES, normalizeTaxId } from '@/lib/constants';
 import { saveCompaniesBatchToDb, searchCompaniesInDb } from '@/lib/companyDb';
 
@@ -63,7 +63,7 @@ export async function GET(request: NextRequest) {
     const normalizedTaxCode = normalizeTaxId(q);
     const profile = await getCompleteCompanyProfile(normalizedTaxCode);
     if (profile) {
-      recordRecentLookup(profile);
+      after(() => recordRecentLookupAsync(profile));
       return NextResponse.json({
         success: true,
         source: 'verified-enterprise-profile',
@@ -102,7 +102,7 @@ export async function GET(request: NextRequest) {
     // sẽ được thêm mới, bản ghi đã có chỉ được bổ sung thêm trường còn thiếu.
     saveCompaniesBatchToDb(combined).catch(() => {});
 
-    recordRecentLookup(combined[0]);
+    after(() => recordRecentLookupAsync(combined[0]));
     return NextResponse.json({
       success: true,
       source: (liveResults && liveResults.length > 0) ? 'live-upstream-api' : 'national-database',

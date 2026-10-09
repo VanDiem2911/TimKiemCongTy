@@ -1,12 +1,13 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { notFound, redirect } from 'next/navigation';
+import { after } from 'next/server';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { TaxDetailView } from '@/components/tax/TaxDetailView';
 import { getCachedCompanyProfile } from '@/lib/taxEngine';
 import { getCompanySlug, getBaseUrl } from '@/lib/constants';
-import { recordRecentLookup } from '@/lib/recentLookups';
+import { recordRecentLookupAsync } from '@/lib/recentLookups';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -95,7 +96,7 @@ export default async function CompanyDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  recordRecentLookup(company);
+  after(() => recordRecentLookupAsync(company));
 
   const canonicalSlug = getCompanySlug(company.id, company.name);
 
