@@ -6,7 +6,7 @@
  * 2. Hỗ trợ mục tiêu tùy chỉnh: 5.000 -> 10.000 doanh nghiệp (--target 5000 / --target 10000).
  * 3. Tự động lấy: MST thật, Tên thật, Đại diện thật, Địa chỉ thật, Tỉnh/thành thật.
  * 4. Chế độ --enrich: Lấy thêm Ngày thành lập thật, Số điện thoại thật, Quản lý thuế, Ngành nghề thật.
- * 5. Tự động lưu lũy tiến vào src/data/harvested_provinces.json (không lo mất dữ liệu khi dừng).
+ * 5. Tự động lưu lũy tiến vào MongoDB (không lo mất dữ liệu khi dừng).
  * 6. Cơ chế chống trùng lặp MST và chống rate-limit thông minh.
  * 
  * Cách dùng:
@@ -363,43 +363,33 @@ async function fetchCompanyDetail(slug, defaultId = '') {
  */
 export async function runCrawler({
   targetCount = 5000,
-  dataPath = './src/data/harvested_provinces.json',
   enrichDetails = true,
   enrichCount = 5000,
   onProgress = null,
   shouldStop = null,
 } = {}) {
-  const resolvedPath = path.resolve(process.cwd(), dataPath);
+  // Dữ liệu chỉ lưu và đọc từ MongoDB (collection companies), không ghi ra file JSON.
+  const coll = await getMongoCollection();
+  if (!coll) throw new Error('Không kết nối được MongoDB (kiểm tra MONGODB_URI trong .env.local)');
 
-  // 1. Tải dữ liệu đã có để tránh trùng lặp và hỗ trợ chạy tiếp
-  let existingData = {};
-  if (fs.existsSync(resolvedPath)) {
-    try {
-      existingData = JSON.parse(fs.readFileSync(resolvedPath, 'utf8'));
-    } catch (e) {
-      console.warn('Không thể đọc file dữ liệu cũ, bắt đầu mới.');
-    }
-  }
-
-  // Tạo Set MST đã có
+  // 1. Tải MST đã có từ MongoDB để tránh trùng lặp và hỗ trợ chạy tiếp
   const existingIds = new Set();
-  let currentTotal = 0;
-  for (const [slug, list] of Object.entries(existingData)) {
-    if (Array.isArray(list)) {
-      list.forEach((item) => {
-        if (item && item.id) existingIds.add(item.id);
-      });
-      currentTotal += list.length;
-    }
+  const provCounts = new Map();
+  for await (const d of coll.find({}, { projection: { id: 1, provinceSlug: 1, _id: 0 } })) {
+    if (d.id) existingIds.add(String(d.id));
+    if (d.provinceSlug) provCounts.set(d.provinceSlug, (provCounts.get(d.provinceSlug) || 0) + 1);
   }
+  let currentTotal = existingIds.size;
 
-  console.log(`\n======================================================`);
+  console.log(`
+======================================================`);
   console.log(`🚀 BẮT ĐẦU CÀO DỮ LIỆU DOANH NGHIỆP THẬT 100%`);
   console.log(`🎯 Mục tiêu: ${targetCount.toLocaleString('vi-VN')} doanh nghiệp`);
-  console.log(`📂 File lưu trữ: ${resolvedPath}`);
-  console.log(`📊 Dữ liệu hiện có: ${currentTotal.toLocaleString('vi-VN')} DN (${existingIds.size} MST duy nhất)`);
+  console.log(`🗄️ Nơi lưu trữ: MongoDB (collection companies)`);
+  console.log(`📊 Dữ liệu hiện có: ${currentTotal.toLocaleString('vi-VN')} DN`);
   console.log(`⚙️ Chế độ bổ sung chi tiết (SĐT, Ngày): ${enrichDetails ? `Có (tối đa ${enrichCount})` : 'Tắt'}`);
-  console.log(`======================================================\n`);
+  console.log(`======================================================
+`);
 
   let newAdded = 0;
   if (currentTotal >= targetCount) {
@@ -409,7 +399,7 @@ export async function runCrawler({
   // Theo dõi số trang hiện tại của từng tỉnh để tiếp tục cào ngay trang mới (tránh gọi lại các trang đã cào)
   const provPageMap = new Map();
   for (const prov of ALL_PROVINCES) {
-    const count = existingData[prov.slug]?.length || 0;
+    const count = provCounts.get(prov.slug) || 0;
     // Mỗi trang có ~25 DN, bắt đầu ngay từ trang kế tiếp
     provPageMap.set(prov.slug, Math.max(1, Math.floor(count / 25) + 1));
   }
@@ -461,30 +451,20 @@ export async function runCrawler({
 
         if (status === 200 && companies.length > 0) {
           consecutive403 = 0;
-          if (!existingData[prov.slug]) {
-            existingData[prov.slug] = [];
-          }
-
+          const freshCompanies = [];
           let addedThisPage = 0;
           for (const comp of companies) {
             if (!existingIds.has(comp.id)) {
               existingIds.add(comp.id);
-              existingData[prov.slug].push({
-                id: comp.id,
-                name: comp.name,
-                representative: comp.representative,
-                address: comp.address || `${prov.name}, Việt Nam`,
-                slug: comp.slug,
-                province: prov.name,
-              });
+              freshCompanies.push(comp);
               addedThisPage++;
               newAdded++;
 
               if (currentTotal + newAdded >= targetCount) break;
             }
           }
+          provCounts.set(prov.slug, (provCounts.get(prov.slug) || 0) + addedThisPage);
 
-          const provTotal = existingData[prov.slug].length;
           console.log(`[${prov.name}] Trang ${currentPage}: +${addedThisPage} DN | Tổng tỉnh: ${provTotal} | Tổng toàn quốc: ${(currentTotal + newAdded).toLocaleString('vi-VN')} / ${targetCount.toLocaleString('vi-VN')}`);
 
           if (onProgress) {
@@ -496,13 +476,10 @@ export async function runCrawler({
             });
           }
 
-          // Lưu lũy tiến sau mỗi tỉnh để đảm bảo an toàn dữ liệu
-          fs.writeFileSync(resolvedPath, JSON.stringify(existingData, null, 2), 'utf8');
-
-          // Đồng thời đẩy lên MongoDB để website tra cứu được ngay
-          const savedToDb = await saveBatchToMongo(companies, prov.name, prov.slug);
+          // Lưu thẳng vào MongoDB sau mỗi trang (chỉ các công ty mới, chưa có trong kho)
+          const savedToDb = await saveBatchToMongo(freshCompanies, prov.name, prov.slug);
           if (savedToDb > 0) {
-            console.log(`   └─ Đã đồng bộ ${savedToDb} DN lên MongoDB`);
+            console.log(`   └─ Đã lưu ${savedToDb} DN vào MongoDB`);
           }
 
           // Nghỉ điều độ 300-450ms tránh làm tải server & tránh rate limit
@@ -542,21 +519,22 @@ export async function runCrawler({
     console.log(`🎯 Số lượng làm giàu: Tối đa ${enrichCount} doanh nghiệp`);
     console.log(`======================================================\n`);
 
-    const itemsToEnrich = [];
-    for (const [slug, list] of Object.entries(existingData)) {
-      if (Array.isArray(list)) {
-        for (const item of list) {
-          if (!item.startDate || !item.phone) {
-            itemsToEnrich.push(item);
-            if (itemsToEnrich.length >= enrichCount) break;
-          }
-        }
-      }
-      if (itemsToEnrich.length >= enrichCount) break;
-    }
+    // Lấy từ MongoDB các công ty còn thiếu SĐT hoặc Ngày, bỏ qua bản ghi vừa làm giàu gần đây
+    // (SĐT bị ẩn thì lần nào cũng thiếu, không thử lại liên tục).
+    const recentCutoff = new Date(Date.now() - 1000 * 60 * 60 * 24 * 30);
+    const itemsToEnrich = await coll
+      .find(
+        {
+          slug: { $exists: true, $ne: '' },
+          $or: [{ startDate: { $in: [null, ''] } }, { phone: { $in: [null, ''] } }],
+          $and: [{ $or: [{ enrichedAt: { $exists: false } }, { enrichedAt: { $lt: recentCutoff } }] }],
+        },
+        { projection: { _id: 0, id: 1, slug: 1, name: 1, phone: 1, startDate: 1 } },
+      )
+      .limit(enrichCount)
+      .toArray();
 
     let enrichedTotal = 0;
-    const SAVE_INTERVAL = 15;
 
     for (let i = 0; i < itemsToEnrich.length; i++) {
       if (shouldStop && shouldStop()) {
@@ -567,22 +545,24 @@ export async function runCrawler({
       const item = itemsToEnrich[i];
       try {
         const detail = await fetchCompanyDetail(item.slug, item.id);
+        const update = { enrichedAt: new Date(), updatedAt: new Date() };
         if (detail) {
-          if (detail.startDate) item.startDate = detail.startDate;
-          if (detail.phone) item.phone = detail.phone;
-          if (detail.status) item.status = detail.status;
-          if (detail.managedBy) item.managedBy = detail.managedBy;
-          if (detail.mainIndustry) item.mainIndustry = detail.mainIndustry;
-          if (detail.internationalName) item.internationalName = detail.internationalName;
-          if (detail.representative) item.representative = detail.representative;
-          item.enrichedAt = new Date().toISOString();
+          if (detail.startDate) {
+            item.startDate = detail.startDate;
+            update.startDate = detail.startDate;
+            update.registrationDate = detail.startDate;
+          }
+          if (detail.phone) {
+            item.phone = detail.phone;
+            update.phone = detail.phone;
+          }
+          for (const f of ['status', 'managedBy', 'mainIndustry', 'internationalName', 'representative']) {
+            if (detail[f]) update[f] = detail[f];
+          }
           enrichedTotal++;
         }
+        await coll.updateOne({ id: item.id }, { $set: update });
       } catch (e) {}
-
-      if ((i + 1) % SAVE_INTERVAL === 0 || i === itemsToEnrich.length - 1) {
-        fs.writeFileSync(resolvedPath, JSON.stringify(existingData, null, 2), 'utf8');
-      }
 
       if (onProgress) {
         const currentCount = i + 1;
@@ -603,7 +583,6 @@ export async function runCrawler({
       }
     }
 
-    fs.writeFileSync(resolvedPath, JSON.stringify(existingData, null, 2), 'utf8');
     console.log(`✅ Đã bổ sung chi tiết thật cho ${enrichedTotal} doanh nghiệp.`);
   }
 
@@ -612,10 +591,10 @@ export async function runCrawler({
   console.log(`🎉 HOÀN TẤT THU THẬP DỮ LIỆU!`);
   console.log(`📈 Số DN mới thêm: +${newAdded.toLocaleString('vi-VN')}`);
   console.log(`🏆 Tổng số doanh nghiệp trong CSDL: ${finalTotal.toLocaleString('vi-VN')}`);
-  console.log(`💾 File dữ liệu: ${resolvedPath}`);
+  console.log(`💾 Đã lưu vào MongoDB`);
   console.log(`======================================================\n`);
 
-  return { total: finalTotal, newAdded, data: existingData };
+  return { total: finalTotal, newAdded };
 }
 
 // Chạy trực tiếp từ dòng lệnh (CLI)

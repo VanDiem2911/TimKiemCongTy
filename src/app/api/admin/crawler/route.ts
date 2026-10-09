@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { getDb } from '@/lib/mongodb';
 import { runCrawler, ALL_PROVINCES } from '../../../../../scripts/crawler.mjs';
 import { runTratencongtyScraper } from '../../../../../scripts/scrape-tratencongty.mjs';
 
@@ -25,11 +24,6 @@ const globalCrawlerState: CrawlerState = {
   lastUpdated: null,
 };
 
-interface HarvestedItemStat {
-  startDate?: string;
-  phone?: string | null;
-}
-
 interface CrawlerProgress {
   currentTotal: number;
   percent: number;
@@ -47,55 +41,40 @@ interface CrawlerRunner {
   }): Promise<void>;
 }
 
-function getDatasetStats() {
-  const dataPath = path.resolve(process.cwd(), './src/data/harvested_provinces.json');
-  if (!fs.existsSync(dataPath)) {
-    return { total: 0, provincesCount: 0, withDateCount: 0, withPhoneCount: 0, provinces: [] };
-  }
+const EMPTY_STATS = { total: 0, provincesCount: 0, withDateCount: 0, withPhoneCount: 0, provinces: [] as Array<{ slug: string; name: string; count: number }> };
 
+// Thống kê kho dữ liệu đọc thẳng từ MongoDB (collection companies)
+async function getDatasetStats() {
   try {
-    const raw = fs.readFileSync(dataPath, 'utf8');
-    const data = JSON.parse(raw) as Record<string, HarvestedItemStat[]>;
+    const db = await getDb();
+    if (!db) return EMPTY_STATS;
+    const coll = db.collection('companies');
+
+    const [byProvince, withDateCount, withPhoneCount] = await Promise.all([
+      coll.aggregate<{ _id: string | null; count: number }>([{ $group: { _id: '$provinceSlug', count: { $sum: 1 } } }]).toArray(),
+      coll.countDocuments({ startDate: { $nin: [null, ''] } }),
+      coll.countDocuments({ phone: { $nin: [null, '', 'Bị ẩn theo yêu cầu người dùng'] } }),
+    ]);
 
     let total = 0;
-    let withDateCount = 0;
-    let withPhoneCount = 0;
-    const provincesList: Array<{ slug: string; name: string; count: number }> = [];
-
-    for (const [slug, list] of Object.entries(data)) {
-      if (Array.isArray(list)) {
-        total += list.length;
-        const provMeta = ALL_PROVINCES.find((p) => p.slug === slug);
-        provincesList.push({
-          slug,
-          name: provMeta ? provMeta.name : slug,
-          count: list.length,
-        });
-
-        for (const item of list) {
-          if (item.startDate) withDateCount++;
-          if (item.phone && item.phone !== 'Bị ẩn theo yêu cầu người dùng') withPhoneCount++;
-        }
-      }
+    const provinces: Array<{ slug: string; name: string; count: number }> = [];
+    for (const row of byProvince) {
+      total += row.count;
+      if (!row._id) continue;
+      const meta = ALL_PROVINCES.find((p) => p.slug === row._id);
+      provinces.push({ slug: row._id, name: meta ? meta.name : row._id, count: row.count });
     }
+    provinces.sort((a, b) => b.count - a.count);
 
-    provincesList.sort((a, b) => b.count - a.count);
-
-    return {
-      total,
-      provincesCount: Object.keys(data).length,
-      withDateCount,
-      withPhoneCount,
-      provinces: provincesList,
-    };
-  } catch (_err) {
-    return { total: 0, provincesCount: 0, withDateCount: 0, withPhoneCount: 0, provinces: [] };
+    return { total, provincesCount: provinces.length, withDateCount, withPhoneCount, provinces };
+  } catch {
+    return EMPTY_STATS;
   }
 }
 
 export async function GET() {
   try {
-    const stats = getDatasetStats();
+    const stats = await getDatasetStats();
     globalCrawlerState.currentCount = stats.total;
 
     return NextResponse.json({

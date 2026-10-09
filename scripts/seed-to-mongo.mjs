@@ -88,25 +88,6 @@ async function main() {
       }
     }
 
-    // 2. Đồng bộ recent_lookups
-    const recentPath = path.join(process.cwd(), 'src', 'data', 'recent_lookups.json');
-    if (fs.existsSync(recentPath)) {
-      const recentData = JSON.parse(fs.readFileSync(recentPath, 'utf-8'));
-      if (Array.isArray(recentData) && recentData.length > 0) {
-        const recentColl = db.collection('recent_lookups');
-        for (let i = 0; i < recentData.length; i++) {
-          const item = recentData[i];
-          await recentColl.updateOne(
-            { id: item.id },
-            { $set: { ...item, updatedAt: new Date(Date.now() - i * 60000) } },
-            { upsert: true }
-          );
-        }
-        const count = await recentColl.countDocuments();
-        console.log(`🏢 Collection [recent_lookups]: ${count} doanh nghiệp tra cứu gần đây`);
-      }
-    }
-
     console.log('\n🎉 TOÀN BỘ DỮ LIỆU ĐÃ ĐƯỢC LƯU LÊN MONGO ATLAS THÀNH CÔNG!');
   } catch (err) {
     console.error('❌ Lỗi kết nối hoặc ghi dữ liệu vào Mongo Atlas:', err.message);
