@@ -11,9 +11,9 @@
  * toàn bộ dữ liệu đang có trong MongoDB + dữ liệu mới cào trong cùng lần chạy.
  *
  * Cách dùng:
- *   node scripts/scrape-tratencongty.mjs --from 1 --to 20            # cào trang 1..20
- *   node scripts/scrape-tratencongty.mjs --resume --pages 50         # tiếp tục từ trang đã dừng, 50 trang
- *   node scripts/scrape-tratencongty.mjs --from 1 --to 3 --dry-run   # chạy thử, không ghi file
+ *   node scripts/scrape-tratencongty.mjs --max-new 500               # theo tỉnh: xoay vòng 63 tỉnh, tiếp tục từ trang đã cào
+ *   node scripts/scrape-tratencongty.mjs --pages 63 --dry-run        # chạy thử 63 trang (mỗi tỉnh 1 trang), không ghi DB
+ *   node scripts/scrape-tratencongty.mjs --mode all --from 1 --to 20 # chế độ toàn quốc theo số trang
  * Tuỳ chọn: --max-new N (dừng khi đủ N công ty mới), --delay 1200 (ms giữa 2 request), --workers 3
  */
 import fs from 'fs';
@@ -47,7 +47,8 @@ function parseCli(argv) {
     from,
     to: Number(opt('to', from)),
     resume: Boolean(opt('resume', false)),
-    pages: Number(opt('pages', 10)),
+    pages: opt('pages', undefined) === undefined ? undefined : Number(opt('pages', 10)),
+    mode: String(opt('mode', 'province')),
   };
 }
 
@@ -141,7 +142,8 @@ function parseListing(html) {
       const img = /base64,([^"]+)"/.exec(b);
       const addr = /Địa chỉ:\s*([\s\S]*?)<\/p>/.exec(b);
       if (!link || !img) return null;
-      return { url: link[1], name: clean(link[2]), mstImg: img[1], address: clean(addr?.[1]) };
+      const rep = /Đại diện pháp luật:\s*([^<]*)/.exec(b);
+      return { url: link[1], name: clean(link[2]), mstImg: img[1], address: clean(addr?.[1]), representative: clean(rep?.[1]) };
     })
     .filter(Boolean);
 }
@@ -242,7 +244,7 @@ export async function runTratencongtyScraper(opts = {}) {
   const stateColl = mongo.db.collection('scraper_state');
   const rejectColl = mongo.db.collection('scraper_rejects');
 
-  if (opts.resume) {
+  if (opts.resume && opts.mode === 'all') {
     const st = await stateColl.findOne({ _id: 'tratencongty' });
     fromPage = st?.nextPage ?? 1;
     toPage = fromPage + (opts.pages ?? 10) - 1;
@@ -278,35 +280,30 @@ export async function runTratencongtyScraper(opts = {}) {
       console.warn('Lỗi ghi MongoDB:', e.message);
     }
   };
-  console.log(`Cào trang ${fromPage}..${toPage}${DRY ? ' (DRY RUN)' : ''}`);
-
   await initOcr();
   let nextPage = fromPage;
+  const mode = opts.mode === 'all' ? 'all' : 'province';
 
-  const save = async () => {
-    await flushMongo();
-    if (!DRY) await stateColl.updateOne({ _id: 'tratencongty' }, { $set: { nextPage, updatedAt: new Date() } }, { upsert: true });
+  // Tên hiển thị của từng tỉnh (province) theo provinceSlug, lấy từ dữ liệu đang có trong MongoDB
+  const provNames = new Map();
+  for await (const g of mongo.coll.aggregate([
+    { $match: { provinceSlug: { $nin: [null, ''] }, province: { $nin: [null, ''] } } },
+    { $group: { _id: '$provinceSlug', name: { $first: '$province' } } },
+  ])) provNames.set(g._id, g.name);
+
+  const saveState = async (patch) => {
+    if (!DRY) await stateColl.updateOne({ _id: 'tratencongty' }, { $set: { ...patch, updatedAt: new Date() } }, { upsert: true });
   };
   const reject = (reason, info) => {
     stats.rejected++;
     if (!DRY) rejectColl.insertOne({ reason, ...info, at: new Date() }).catch(() => {});
   };
 
-  for (let page = fromPage; page <= toPage && stats.added < MAX_NEW && !shouldStop(); page++) {
-    const html = await fetchText(`${BASE}/?page=${page}`);
-    if (!html) {
-      console.log(`Trang ${page}: không tải được, dừng.`);
-      break;
-    }
-    const items = parseListing(html);
-    if (!items.length) {
-      console.log(`Trang ${page}: không có dữ liệu, dừng.`);
-      break;
-    }
+  // Xử lý một trang liệt kê: OCR MST, loại trùng, lấy chi tiết và lưu các công ty mới.
+  // hint = { key, name } khi đã biết trang thuộc tỉnh nào (chế độ theo tỉnh).
+  const processPage = async (items, page, hint) => {
     stats.pages++;
     stats.seen += items.length;
-
-    // OCR MST ở trang liệt kê (song song), rồi lọc những công ty đã có
     const listMst = await Promise.all(items.map((it) => ocrImage(it.mstImg, 64)));
     let pageAdded = 0;
 
@@ -343,9 +340,13 @@ export async function runTratencongtyScraper(opts = {}) {
         if (p1 === p2 && validPhone(p1)) phone = p1;
       }
 
-      const address = d.address || it.address;
-      const prov = provinceOf(address, provMap);
-      if (!prov) {
+      // Trang chi tiết đôi khi chỉ có phần đầu của địa chỉ ("Thôn A,"), trang liệt kê thì đủ: lấy bản dài hơn
+      const trimComma = (x) => String(x || '').replace(/[\s,]+$/, '');
+      const address = trimComma(it.address).length > trimComma(d.address).length ? trimComma(it.address) : trimComma(d.address) || trimComma(it.address);
+      const addrProv = provinceOf(address, provMap);
+      const provKey = hint?.key ?? addrProv?.key;
+      const provName = hint?.name ?? addrProv?.name;
+      if (!provKey) {
         reject('unknown-province', { url: it.url, name: it.name, address });
         continue;
       }
@@ -353,10 +354,10 @@ export async function runTratencongtyScraper(opts = {}) {
       const rec = {
         id: mst,
         name,
-        representative: (d.representative || '').toUpperCase(),
+        representative: (d.representative || it.representative || '').toUpperCase(),
         address,
         slug: `${mst}-${slugify(name)}`,
-        province: prov.name,
+        ...(provName && { province: provName }),
         ...(d.startDate && { startDate: d.startDate }),
         ...(d.licenseDate && { licenseDate: d.licenseDate }),
         ...(phone && { phone }),
@@ -366,19 +367,69 @@ export async function runTratencongtyScraper(opts = {}) {
         scrapedAt: new Date().toISOString(),
       };
       if (DRY) console.log(JSON.stringify(rec));
-      pending.push({ rec, provinceSlug: prov.key });
+      pending.push({ rec, provinceSlug: provKey });
       register(rec);
       stats.added++;
       pageAdded++;
-      onProgress({ page, toPage, ...stats, latest: name });
+      onProgress({ page, toPage, province: provName ?? '', ...stats, latest: name });
     }
-
-    if (!shouldStop() || pageAdded === items.length) nextPage = page + 1;
     await flushMongo();
-    await save();
-    onProgress({ page, toPage, ...stats, latest: '' });
-    console.log(`Trang ${page}: +${pageAdded} mới / ${items.length} (tổng mới ${stats.added}, trùng ${stats.dupes}, loại ${stats.rejected})`);
-    await sleep(DELAY);
+    return pageAdded;
+  };
+
+  if (mode === 'province') {
+    // Danh sách 63 tỉnh/thành lấy từ chính trang chủ nguồn, ghép với khóa tỉnh (provinceSlug) trong MongoDB
+    const home = await fetchText(`${BASE}/`);
+    const urlSlugs = [...new Set([...(home || '').matchAll(/tratencongty\.com\/((?:tinh|thanh-pho)-[a-z0-9-]+)\//g)].map((m) => m[1]))];
+    const provinces = urlSlugs.map((urlSlug) => {
+      const base = urlSlug.replace(/^(tinh|thanh-pho)-/, '');
+      const key = provMap.get(base);
+      return { urlSlug, key, name: key ? provNames.get(key) : undefined };
+    });
+    if (!provinces.length) throw new Error('Không lấy được danh sách tỉnh từ trang nguồn');
+
+    const st = (await stateColl.findOne({ _id: 'tratencongty' })) ?? {};
+    const pageOf = { ...(st.provincePages ?? {}) };
+    const finished = new Set();
+    const maxPages = opts.pages ?? Infinity;
+    console.log(`Cào theo tỉnh: ${provinces.length} tỉnh/thành, xoay vòng${DRY ? ' (DRY RUN)' : ''}`);
+
+    while (stats.added < MAX_NEW && stats.pages < maxPages && !shouldStop() && finished.size < provinces.length) {
+      for (const pv of provinces) {
+        if (stats.added >= MAX_NEW || stats.pages >= maxPages || shouldStop()) break;
+        if (finished.has(pv.urlSlug)) continue;
+        const page = pageOf[pv.urlSlug] ?? 1;
+        const html = await fetchText(`${BASE}/${pv.urlSlug}/?page=${page}`);
+        const items = html ? parseListing(html) : [];
+        if (!items.length) {
+          finished.add(pv.urlSlug);
+          console.log(`[${pv.urlSlug}] hết trang hoặc không tải được (trang ${page})`);
+          continue;
+        }
+        const added = await processPage(items, page, pv.key ? { key: pv.key, name: pv.name } : null);
+        pageOf[pv.urlSlug] = page + 1;
+        await saveState({ [`provincePages.${pv.urlSlug}`]: page + 1 });
+        onProgress({ page, toPage: page, province: pv.name ?? pv.urlSlug, ...stats, latest: '' });
+        console.log(`[${pv.urlSlug}] trang ${page}: +${added}/${items.length} (tổng mới ${stats.added}, trùng ${stats.dupes}, loại ${stats.rejected})`);
+        await sleep(DELAY);
+      }
+    }
+  } else {
+    console.log(`Cào toàn quốc trang ${fromPage}..${toPage}${DRY ? ' (DRY RUN)' : ''}`);
+    for (let page = fromPage; page <= toPage && stats.added < MAX_NEW && !shouldStop(); page++) {
+      const html = await fetchText(`${BASE}/?page=${page}`);
+      const items = html ? parseListing(html) : [];
+      if (!items.length) {
+        console.log(`Trang ${page}: không có dữ liệu, dừng.`);
+        break;
+      }
+      const added = await processPage(items, page, null);
+      nextPage = page + 1;
+      await saveState({ nextPage });
+      onProgress({ page, toPage, province: '', ...stats, latest: '' });
+      console.log(`Trang ${page}: +${added}/${items.length} (tổng mới ${stats.added}, trùng ${stats.dupes}, loại ${stats.rejected})`);
+      await sleep(DELAY);
+    }
   }
 
   await flushMongo();
@@ -391,7 +442,7 @@ export async function runTratencongtyScraper(opts = {}) {
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const cli = parseCli(process.argv.slice(2));
   console.log(`Cào tratencongty.com${cli.dryRun ? ' (DRY RUN)' : ''}`);
-  runTratencongtyScraper({ ...cli, onProgress: (p) => p.latest === '' && console.log(`Trang ${p.page}/${p.toPage}: mới ${p.added}, trùng ${p.dupes}, loại ${p.rejected}`) })
+  runTratencongtyScraper(cli)
     .then((st) => {
       console.log('Hoàn tất:', st);
       if (st.rejected && !st.dryRun) console.log('Bản ghi bị loại nằm ở collection scraper_rejects trong MongoDB');

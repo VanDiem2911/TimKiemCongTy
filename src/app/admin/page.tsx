@@ -1235,11 +1235,11 @@ export default function AdminDashboardPage() {
                   <button
                     type="button"
                     disabled={crawlerRunning}
-                    onClick={() => handleStartTratencongty(500)}
+                    onClick={() => handleStartTratencongty(1000)}
                     className="px-3.5 py-1.5 bg-sky-700 hover:bg-sky-800 active:bg-sky-900 disabled:opacity-50 text-white font-medium rounded-lg shadow-2xs transition cursor-pointer flex items-center space-x-1.5 text-xs"
                     title="Cào doanh nghiệp mới từ tratencongty.com, tự bỏ qua công ty đã có trong kho, lấy đủ SĐT & Ngày"
                   >
-                    <span>+ Cào 500 DN mới (tratencongty)</span>
+                    <span>+ Cào 1.000 DN mới (tratencongty)</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                 </div>

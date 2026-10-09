@@ -197,7 +197,7 @@ export async function POST(request: NextRequest) {
         });
       }
 
-      const wanted = Math.max(1, parseInt(body.target || '500', 10));
+      const wanted = Math.max(1, parseInt(body.target || '1000', 10));
       globalCrawlerState.isRunning = true;
       globalCrawlerState.targetCount = wanted;
       globalCrawlerState.percent = 0;
@@ -211,9 +211,9 @@ export async function POST(request: NextRequest) {
             pages: 2000,
             maxNew: wanted,
             shouldStop: () => !globalCrawlerState.isRunning,
-            onProgress: (p: { page: number; added: number; dupes: number; rejected: number; latest: string }) => {
+            onProgress: (p: { page: number; province?: string; added: number; dupes: number; rejected: number; latest: string }) => {
               globalCrawlerState.percent = Math.min(99, Math.round((p.added / wanted) * 100));
-              globalCrawlerState.message = `[tratencongty] Trang ${p.page} · +${p.added}/${wanted.toLocaleString('vi-VN')} DN mới · trùng ${p.dupes} · loại ${p.rejected}${p.latest ? ' · ' + p.latest : ''}`;
+              globalCrawlerState.message = `[tratencongty] ${p.province ? p.province + ' · ' : ''}Trang ${p.page} · +${p.added}/${wanted.toLocaleString('vi-VN')} DN mới · trùng ${p.dupes} · loại ${p.rejected}${p.latest ? ' · ' + p.latest : ''}`;
               globalCrawlerState.lastUpdated = new Date().toISOString();
             },
           });
