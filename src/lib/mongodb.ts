@@ -33,14 +33,22 @@ export async function getMongoClient(): Promise<MongoClient | null> {
     } else {
       if (!clientPromise) {
         client = new MongoClient(uri, {
-          maxPoolSize: 10,
-          serverSelectionTimeoutMS: 5000,
+          maxPoolSize: 3,
+          minPoolSize: 0,
+          maxIdleTimeMS: 10000,
+          serverSelectionTimeoutMS: 8000,
         });
         clientPromise = client.connect();
       }
       return await clientPromise;
     }
   } catch (err) {
+    // Don't cache a failed connection: let the next request retry.
+    const failed = client;
+    clientPromise = null;
+    client = null;
+    global._mongoClientPromise = undefined;
+    failed?.close().catch(() => undefined);
     console.warn('MongoDB connection warning (falling back to local/in-memory):', err);
     return null;
   }
