@@ -670,7 +670,8 @@ export async function getCompleteCompanyProfile(
   }
 
   // 1. Determine Masothue slug to fetch live
-  let masothueSlug = cleanInput.includes('-') ? cleanInput : '';
+  // Chuỗi chỉ gồm MST (kể cả MST chi nhánh dạng 0108476972-001) không phải slug: trang nguồn trả 404 nếu thiếu phần tên.
+  let masothueSlug = cleanInput.includes('-') && !/^\d{10}(-\d{3})?$/.test(cleanInput) ? cleanInput : '';
 
   if (!masothueSlug) {
     // Check harvested data for exact slug

@@ -543,6 +543,13 @@ export async function fetchViaScraperApi(
 
       const reason = await res.text().catch(() => '');
 
+      // 404/410 là câu trả lời thật của trang nguồn ("không có trang này"), không phải key hỏng.
+      // Thử key khác cũng ra y hệt mà còn tốn thêm credit nên dừng ngay.
+      if (res.status === 404 || res.status === 410) {
+        console.warn(`[ScraperAPI] ${label}: trang nguồn trả ${res.status}, không thử key khác`);
+        return null;
+      }
+
       // Hết credit hoặc key không hợp lệ thì ngừng dùng key này một thời gian
       if (res.status === 401 || res.status === 403 || res.status === 429) {
         EXHAUSTED_KEYS.set(key, Date.now() + KEY_COOLDOWN_MS);
