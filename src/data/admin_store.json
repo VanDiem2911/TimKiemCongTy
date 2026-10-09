@@ -10,9 +10,9 @@
       "requesterEmail": "",
       "reason": "kiem thu",
       "identityProof": "",
-      "status": "pending",
+      "status": "rejected",
       "createdAt": "2026-10-08 09:35:48",
-      "reviewedAt": null
+      "reviewedAt": "2026-10-09 02:43:16"
     },
     {
       "id": "req-171201001",
@@ -51,12 +51,13 @@
   },
   "contactMessages": [
     {
+      "id": "msg-1791452373199",
       "name": "T",
       "email": "a@b.com",
+      "phone": null,
       "subject": "Góp ý / Yêu cầu hỗ trợ",
       "message": "x",
-      "id": "msg-1791452373199",
-      "status": "unread",
+      "status": "read",
       "createdAt": "2026-10-08 09:39:33"
     },
     {
@@ -66,7 +67,7 @@
       "phone": null,
       "subject": "Góp ý / Yêu cầu hỗ trợ",
       "message": "xin chao",
-      "status": "unread",
+      "status": "read",
       "createdAt": "2026-10-08 09:35:48"
     },
     {
@@ -76,7 +77,7 @@
       "phone": null,
       "subject": "Liên hệ về MST 0319732689",
       "message": "Noi dung kiem thu",
-      "status": "unread",
+      "status": "read",
       "createdAt": "2026-10-08 07:51:41"
     },
     {

@@ -1,22 +1,22 @@
 [
   {
-    "id": "0100146700",
-    "name": "CÔNG TY TNHH CAO ỐC VIETCOMBANK 198",
-    "representative": "WONG YEW SIONG",
-    "address": "Số 198 Trần Quang Khải, Phường Hoàn Kiếm, Thành phố Hà Nội, Việt Nam",
+    "id": "0108476972",
+    "name": "CÔNG TY LUẬT TNHH ANP",
+    "representative": "Nguyễn Văn Thân",
+    "address": "Tổ dân phố Viên 3, Phường Đông Ngạc, TP Hà Nội, Việt Nam",
     "status": "Đang hoạt động",
-    "startDate": "1998-08-14",
-    "registrationDate": "1998-08-14",
+    "province": "TP Hà Nội",
+    "startDate": "2018-10-17",
     "lastUpdated": "Vừa xong"
   },
   {
     "id": "0300588569",
     "name": "CÔNG TY CỔ PHẦN SỮA VIỆT NAM",
     "representative": "MAI KIỀU LIÊN",
-    "address": "10 Tân Trào, Phường Tân Mỹ, Thành phố Hồ Chí Minh, Việt Nam",
-    "status": "Đang hoạt động",
-    "province": "Hồ Chí Minh",
-    "startDate": "1998-10-24",
+    "address": "Số 10, Đường Tân Trào, Phường Tân Phú, Quận 7, Thành phố Hồ Chí Minh",
+    "status": "NNT đang hoạt động (đã được cấp GCN ĐKT)",
+    "province": "TP Hồ Chí Minh",
+    "registrationDate": "2003-11-20",
     "lastUpdated": "Vừa xong"
   },
   {
