@@ -1,3 +1,4 @@
+import type { Collection } from 'mongodb';
 import { getDb, isMongoConfigured } from '@/lib/mongodb';
 import { PROVINCES } from '@/lib/constants';
 
@@ -42,7 +43,6 @@ export interface ActivityInput {
 }
 
 const COLLECTION = 'activity_logs';
-const RETENTION_DAYS = 90;
 
 const BOT_PATTERN =
   /bot|crawl|spider|slurp|facebookexternalhit|headless|lighthouse|pingdom|uptime|monitor|curl|wget|python-requests|axios|node-fetch|go-http|vercel/i;
@@ -183,6 +183,19 @@ export async function resolveLocation(ip: string, headers: Headers): Promise<Act
 // ---- Ghi log ----
 let indexesReady = false;
 
+/**
+ * Nhật ký được giữ vĩnh viễn (không có TTL). Bản trước từng tạo index createdAt kèm expireAfterSeconds
+ * để tự xóa sau 90 ngày; index đó còn nằm trong DB nên phải gỡ đi, nếu không MongoDB vẫn xóa dữ liệu cũ.
+ */
+async function ensureIndexes(coll: Collection<ActivityLog>): Promise<void> {
+  const existing = await coll.indexes();
+  if (existing.some((i) => i.name === 'createdAt_-1' && i.expireAfterSeconds !== undefined)) {
+    await coll.dropIndex('createdAt_-1');
+  }
+  await coll.createIndex({ createdAt: -1 });
+  await coll.createIndex({ ip: 1, createdAt: -1 });
+}
+
 export async function logActivity(entry: ActivityInput, headers: Headers): Promise<void> {
   try {
     if (!isMongoConfigured()) return;
@@ -199,8 +212,10 @@ export async function logActivity(entry: ActivityInput, headers: Headers): Promi
 
     if (!indexesReady) {
       indexesReady = true;
-      coll.createIndex({ createdAt: -1 }, { expireAfterSeconds: RETENTION_DAYS * 24 * 3600 }).catch(() => {});
-      coll.createIndex({ ip: 1, createdAt: -1 }).catch(() => {});
+      ensureIndexes(coll).catch((err) => {
+        indexesReady = false; // thử lại ở lần ghi sau
+        console.warn('[activityLog] Không tạo được index:', err instanceof Error ? err.message : err);
+      });
     }
 
     await coll.insertOne({

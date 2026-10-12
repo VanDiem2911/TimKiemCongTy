@@ -27,6 +27,7 @@ import {
   ScrollText
 } from 'lucide-react';
 import ActivityLogPanel from '@/components/admin/ActivityLogPanel';
+import VisitorStatsPanel from '@/components/admin/VisitorStatsPanel';
 import { PROVINCES, getCompanySlug, normalizeTaxId } from '@/lib/constants';
 import { PrivacyRequest, ContactMessage, HiddenPhoneRecord } from '@/lib/privacyStore';
 import { BusinessTaxInfo } from '@/types/tax';
@@ -871,6 +872,9 @@ export default function AdminDashboardPage() {
         {/* TAB 1: OVERVIEW */}
         {activeTab === 'overview' && (
           <div className="space-y-6">
+            {/* Thống kê truy cập thực tế của website */}
+            <VisitorStatsPanel />
+
             {/* KPI Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
               <div className="bg-white border border-slate-200 rounded-2xl p-5">
