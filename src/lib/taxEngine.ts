@@ -650,6 +650,8 @@ export async function getCompleteCompanyProfile(
   // từ danh sách thường chỉ có tên và địa chỉ; nếu trả về luôn thì trang chi tiết
   // sẽ trống hàng loạt ô và người dùng phải tự bấm "Cập nhật" mới có dữ liệu.
   let dbFallback: BusinessTaxInfo | null = null;
+  // Bản ghi đủ hồ sơ nhưng chưa có danh mục ngành nghề (các bản lưu trước đây không lưu mục này)
+  let dbMissingIndustries: BusinessTaxInfo | null = null;
   if (!forceRefresh) {
     try {
       const dbCompany = await findCompanyInDb(taxId);
@@ -660,9 +662,10 @@ export async function getCompleteCompanyProfile(
           dbCompany.startDate &&
           (dbCompany.mainIndustry || dbCompany.industryName)
         );
-        if (hasFullProfile) {
+        if (hasFullProfile && dbCompany.subIndustries?.length) {
           return await finalizeProfile(enrichCompanyData(dbCompany));
         }
+        if (hasFullProfile) dbMissingIndustries = dbCompany;
       }
     } catch (err) {
       console.warn('[taxEngine] MongoDB check error:', err);
@@ -744,12 +747,29 @@ export async function getCompleteCompanyProfile(
           if (forceRefresh) {
             parsed.lastUpdated = formatCurrentTimeVietnam();
           }
+          if (dbMissingIndustries) {
+            // Giữ nguyên dữ liệu trong kho (SĐT, người đại diện...) và chỉ bổ sung phần còn thiếu từ nguồn
+            return await finalizeProfile(
+              enrichCompanyData({
+                ...dbMissingIndustries,
+                mainIndustryCode: dbMissingIndustries.mainIndustryCode || parsed.mainIndustryCode,
+                subIndustries: parsed.subIndustries,
+                nearbyCompanies: parsed.nearbyCompanies,
+              })
+            );
+          }
           return await finalizeProfile(parsed);
         }
       }
     } catch (err) {
       console.warn('Live masothue fetch failed for slug:', masothueSlug, err);
     }
+  }
+
+  // Không lấy được danh mục ngành từ nguồn: vẫn dùng hồ sơ đầy đủ trong kho,
+  // không dựng lại từ nguồn khác kém đầy đủ hơn (mất SĐT, người đại diện...)
+  if (dbMissingIndustries) {
+    return await finalizeProfile(enrichCompanyData(dbMissingIndustries));
   }
 
   // 3. Try live VietQR API

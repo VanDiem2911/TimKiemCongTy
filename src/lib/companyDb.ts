@@ -23,6 +23,7 @@ export interface MongoCompanyDoc {
   internationalName?: string;
   shortName?: string;
   enterpriseType?: string;
+  subIndustries?: Array<{ code: string; name: string; isMain: boolean }>;
   updatedAt?: Date;
 }
 
@@ -88,6 +89,7 @@ export async function findCompanyInDb(taxId: string): Promise<BusinessTaxInfo | 
       internationalName: doc.internationalName,
       shortName: doc.shortName,
       enterpriseType: doc.enterpriseType,
+      subIndustries: Array.isArray(doc.subIndustries) ? doc.subIndustries : undefined,
       contactInfo: {
         phone: effectivePhone || 'Chưa cập nhật',
         phoneStatus: effectivePhone ? 'available' : 'not_found',
@@ -164,6 +166,8 @@ export async function saveCompanyToDb(company: Partial<BusinessTaxInfo>): Promis
       internationalName: company.internationalName || undefined,
       shortName: company.shortName || undefined,
       enterpriseType: company.enterpriseType || undefined,
+      // Mảng rỗng không bị stripEmptyFields loại, nên chỉ ghi khi có ngành thật để không xóa danh sách đã lưu
+      ...(company.subIndustries?.length ? { subIndustries: company.subIndustries } : {}),
       updatedAt: new Date()
     };
 

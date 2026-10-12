@@ -39,6 +39,14 @@ export function TaxDetailView({ initialCompany, slug }: TaxDetailViewProps) {
   const [copied, setCopied] = useState(false);
   const [isHidePhoneModalOpen, setIsHidePhoneModalOpen] = useState(false);
 
+  // Chưa có danh sách ngành thì hiện ít nhất ngành chính, không để bảng trống
+  const mainIndustryName = company.mainIndustry || company.industryName;
+  const industryRows: Array<{ code: string; name: string; isMain: boolean }> = company.subIndustries?.length
+    ? company.subIndustries
+    : mainIndustryName
+      ? [{ code: company.mainIndustryCode || company.industryCode || '', name: mainIndustryName, isMain: true }]
+      : [];
+
   const copyToClipboard = () => {
     navigator.clipboard.writeText(normalizeTaxId(company.id));
     setCopied(true);
@@ -371,12 +379,23 @@ export function TaxDetailView({ initialCompany, slug }: TaxDetailViewProps) {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100 text-xs">
-                  {(company.subIndustries || []).map((ind, idx) => (
+                  {industryRows.length === 0 && (
+                    <tr>
+                      <td colSpan={2} className="py-4 text-center text-slate-500">
+                        Chưa có dữ liệu ngành nghề của doanh nghiệp này. Bấm &quot;Cập nhật&quot; để lấy lại từ nguồn.
+                      </td>
+                    </tr>
+                  )}
+                  {industryRows.map((ind, idx) => (
                     <tr key={`${ind.code}-${idx}`} className={ind.isMain ? 'bg-sky-50/50 font-semibold' : ''}>
                       <td className="font-mono text-sky-700 font-bold">
-                        <Link href={`/?q=${encodeURIComponent(ind.code)}&type=auto`} className="hover:underline" title={`Tìm doanh nghiệp theo mã ngành ${ind.code}`}>
-                          {ind.code}
-                        </Link>
+                        {ind.code ? (
+                          <Link href={`/?q=${encodeURIComponent(ind.code)}&type=auto`} className="hover:underline" title={`Tìm doanh nghiệp theo mã ngành ${ind.code}`}>
+                            {ind.code}
+                          </Link>
+                        ) : (
+                          '—'
+                        )}
                       </td>
                       <td className="text-slate-800">
                         <Link href={`/?q=${encodeURIComponent(ind.name)}&type=enterpriseName`} className="hover:text-sky-700 hover:underline">
