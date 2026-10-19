@@ -7,10 +7,11 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { HeroSlider } from '@/components/home/HeroSlider';
 import { TaxSearchResults } from '@/components/tax/TaxSearchResults';
+import { CompanyCard } from '@/components/tax/CompanyCard';
 import { ScrollToTopButton } from '@/components/common/ScrollEnhancements';
-import { INITIAL_COMPANIES, PROVINCES, getCompanySlug, getCompanyStatusBadgeClass, getCompanyStatusTone, normalizeTaxId, formatEstablishedDate } from '@/lib/constants';
+import { INITIAL_COMPANIES, PROVINCES, getCompanySlug } from '@/lib/constants';
 import { BusinessTaxInfo } from '@/types/tax';
-import { Hash, MapPin, User, ChevronRight, ShieldCheck, Clock, Building2, CheckCircle2, Calendar, AlertTriangle } from 'lucide-react';
+import { MapPin, ChevronRight, ShieldCheck, Clock } from 'lucide-react';
 
 
 /**
@@ -221,88 +222,7 @@ function HomeContent() {
               {/* Enterprise Listing - Independent Cards */}
               <div className="space-y-3">
                 {recentCompanies.slice(0, 10).map((company, index) => (
-                  <article
-                    key={`${company.id}-${index}`}
-                    className="bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-5 shadow-xs hover:shadow-md transition-all duration-200 flex flex-col md:flex-row md:items-center justify-between gap-4 group"
-                  >
-                    <div className="flex items-start sm:items-center space-x-4 flex-1 min-w-0">
-                      {/* Enterprise Icon Box */}
-                      <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-2xl bg-slate-50/90 border border-slate-100 flex items-center justify-center shrink-0 group-hover:scale-102 transition-transform shadow-2xs">
-                        <Building2 className="w-9 h-9 text-slate-400 stroke-[1.5]" />
-                      </div>
-
-                      {/* Info Content */}
-                      <div className="space-y-1.5 flex-1 min-w-0">
-                        <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors truncate">
-                          <Link href={`/${getCompanySlug(company.id, company.name)}`}>
-                            {company.name}
-                          </Link>
-                        </h3>
-
-                        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
-                          <span className="flex items-center space-x-1 text-slate-600">
-                            <span className="text-[#e91a2c] font-black font-mono">#</span>
-                            <span>Mã số thuế:</span>
-                            <Link
-                              href={`/${getCompanySlug(company.id, company.name)}`}
-                              className="font-mono font-bold text-[#c51322] bg-red-50 border border-red-100 px-2 py-0.5 rounded-md text-xs hover:bg-red-100 transition-colors whitespace-nowrap inline-block"
-                            >
-                              {normalizeTaxId(company.id)}
-                            </Link>
-                          </span>
-
-                          {company.representative && (
-                            <span className="flex items-center space-x-1 text-slate-600">
-                              <User className="w-3.5 h-3.5 text-slate-400 shrink-0" />
-                              <span>Người đại diện:</span>
-                              <span className="font-bold text-slate-900 uppercase">{company.representative}</span>
-                            </span>
-                          )}
-                        </div>
-
-                        <div className="flex items-start space-x-1 text-xs text-slate-600">
-                          <MapPin className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
-                          <address className="not-italic truncate">{company.address}</address>
-                        </div>
-
-                        <div className="pt-0.5 flex flex-wrap items-center gap-2">
-                          {(() => {
-                            const tone = getCompanyStatusTone(company.status);
-                            const StatusIcon = tone === 'active' ? CheckCircle2 : AlertTriangle;
-                            return (
-                              <span
-                                className={`inline-flex items-center space-x-1 border font-semibold px-2.5 py-0.5 rounded-full text-[11px] ${getCompanyStatusBadgeClass(company.status)}`}
-                              >
-                                <StatusIcon className="w-3.5 h-3.5 shrink-0" />
-                                <span>{company.status || 'Chưa rõ trạng thái'}</span>
-                              </span>
-                            );
-                          })()}
-
-                          {formatEstablishedDate(company.startDate || company.registrationDate) && (
-                            <span className="inline-flex items-center space-x-1 bg-slate-50 text-slate-600 border border-slate-200 font-medium px-2.5 py-0.5 rounded-full text-[11px]">
-                              <Calendar className="w-3.5 h-3.5 text-slate-400 shrink-0" />
-                              <span>
-                                Thành lập:{' '}
-                                <strong className="font-semibold text-slate-800">
-                                  {formatEstablishedDate(company.startDate || company.registrationDate)}
-                                </strong>
-                              </span>
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* View profile button */}
-                    <Link
-                      href={`/${getCompanySlug(company.id, company.name)}`}
-                      className="self-end md:self-center shrink-0 bg-red-50/90 hover:bg-red-100 active:bg-red-200/80 text-[#c51322] font-semibold text-xs px-3.5 py-2 rounded-xl transition-colors flex items-center space-x-1"
-                    >
-                      <span>Xem chi tiết hồ sơ thuế</span>
-                      <ChevronRight className="w-3.5 h-3.5 text-[#e91a2c]" />
-                    </Link>
-                  </article>
+                  <CompanyCard key={`${company.id}-${index}`} company={company} />
                 ))}
               </div>
             </div>
