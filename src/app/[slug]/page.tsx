@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { notFound, redirect } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { after } from 'next/server';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -102,8 +102,9 @@ export default async function CompanyDetailPage({ params }: PageProps) {
 
   // If the user accessed with just the raw tax ID or non-canonical slug,
   // redirect permanently to the canonical SEO URL: /{taxId}-{ten-cong-ty}
+  // (308, không phải 307 của redirect() để Google gộp tín hiệu về URL chuẩn).
   if (slug !== canonicalSlug) {
-    redirect(`/${canonicalSlug}`);
+    permanentRedirect(`/${canonicalSlug}`);
   }
 
   const baseUrl = getBaseUrl();

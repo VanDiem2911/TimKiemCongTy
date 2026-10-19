@@ -140,6 +140,16 @@ export function getBaseUrl(): string {
 }
 
 
+/**
+ * Tìm tỉnh theo slug trên URL. Cho phép khớp lỏng vì các liên kết cũ có thể
+ * mang slug rút gọn hoặc có thêm hậu tố.
+ */
+export function findProvinceBySlug(slug: string): ProvinceItem | undefined {
+  return PROVINCES.find(
+    (p) => p.slug === slug || slug.includes(p.slug) || p.slug.includes(slug)
+  );
+}
+
 export const PROVINCES: ProvinceItem[] = [
   { name: 'Hà Nội', slug: 'ha-noi-7', code: '01', region: 'Bắc', isMajor: true },
   { name: 'Hồ Chí Minh', slug: 'ho-chi-minh-23', code: '79', region: 'Nam', isMajor: true },

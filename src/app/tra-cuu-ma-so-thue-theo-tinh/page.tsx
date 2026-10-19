@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -8,6 +9,25 @@ import { MapPin, ChevronRight, User, ChevronLeft, ChevronsLeft, ChevronsRight, S
 
 interface PageProps {
   searchParams: Promise<{ page?: string; region?: string }>;
+}
+
+export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
+  const resolvedSearchParams = await searchParams;
+  const currentPage = parseInt(resolvedSearchParams.page || '1', 10) || 1;
+
+  const path = '/tra-cuu-ma-so-thue-theo-tinh';
+  const pageSuffix = currentPage > 1 ? ` - Trang ${currentPage}` : '';
+  const title = `Tra cứu mã số thuế theo 63 tỉnh thành phố${pageSuffix}`;
+  const description =
+    'Tra cứu mã số thuế doanh nghiệp theo từng tỉnh thành phố trên cả nước: danh sách công ty mới thành lập, người đại diện, địa chỉ và tình trạng hoạt động.';
+  const canonical = currentPage > 1 ? `${path}?page=${currentPage}` : path;
+
+  return {
+    title,
+    description,
+    alternates: { canonical },
+    openGraph: { title, description, url: canonical, locale: 'vi_VN', type: 'website' },
+  };
 }
 
 export default async function ProvinceTaxPage({ searchParams }: PageProps) {

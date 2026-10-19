@@ -26,9 +26,6 @@ export const metadata: Metadata = {
     "mã số thuế",
     "mã số thuế cá nhân",
   ],
-  alternates: {
-    canonical: "/",
-  },
   robots: {
     index: true,
     follow: true,

@@ -5,42 +5,41 @@ import harvestedJson from '@/data/harvested_provinces.json';
 interface HarvestedItem {
   id: string;
   name: string;
-  slug?: string;
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = getBaseUrl();
 
+  // Không khai lastModified: trước đây mọi URL đều mang ngày build nên Google
+  // thấy ngày sửa luôn "vừa đổi" mà nội dung không đổi, và bỏ qua trường này.
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 1.0,
     },
     {
       url: `${baseUrl}/tra-cuu-ma-so-thue-theo-tinh`,
-      lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/tra-cuu-ma-so-thue-theo-nganh-nghe`,
-      lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/lien-he`,
-      lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.5,
     },
   ];
 
+  // Trang tỉnh thật nằm ở /tra-cuu-ma-so-thue-theo-tinh/{slug}. Dạng ?tinh=
+  // cũ không được trang nào đọc nên cả 63 URL đó trả về cùng nội dung với trang
+  // danh sách chung.
   const provincePages: MetadataRoute.Sitemap = PROVINCES.map((prov) => ({
-    url: `${baseUrl}/tra-cuu-ma-so-thue-theo-tinh?tinh=${prov.slug}`,
-    lastModified: new Date(),
+    url: `${baseUrl}/tra-cuu-ma-so-thue-theo-tinh/${prov.slug}`,
     changeFrequency: 'daily',
     priority: 0.8,
   }));
@@ -57,7 +56,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (!Array.isArray(list)) continue;
     for (const item of list) {
       if (item.id && !companyMap.has(item.id)) {
-        companyMap.set(item.id, item.slug || getCompanySlug(item.id, item.name));
+        // Luôn dựng slug bằng getCompanySlug: slug lưu sẵn trong dữ liệu cào
+        // có 257 bản ghi bị hỏng dấu, trang chi tiết sẽ chuyển hướng chúng sang
+        // slug chuẩn nên không được đưa vào sitemap.
+        companyMap.set(item.id, getCompanySlug(item.id, item.name));
         harvestedCount++;
         if (harvestedCount >= 2000) break;
       }
@@ -67,7 +69,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const companyPages: MetadataRoute.Sitemap = Array.from(companyMap.values()).map((slug) => ({
     url: `${baseUrl}/${slug}`,
-    lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.8,
   }));
