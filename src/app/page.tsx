@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -19,7 +19,9 @@ import { Hash, MapPin, User, ChevronRight, ShieldCheck, Clock, Building2, CheckC
  * trang; nếu dùng useSearchParams ở thành phần cha thì toàn bộ trang mất khả
  * năng dựng sẵn và trình duyệt phải chờ tải JavaScript mới thấy nội dung.
  */
-function UrlSearchWatcher({ onSearch }: { onSearch: (q: string, type: string) => void }) {
+type LookupNavigation = 'push' | 'replace';
+
+function UrlSearchWatcher({ onSearch }: { onSearch: (q: string, type: string, navigation?: LookupNavigation) => void }) {
   const searchParams = useSearchParams();
   const q = searchParams.get('q') || '';
   const type = searchParams.get('type') || 'auto';
@@ -32,13 +34,17 @@ function UrlSearchWatcher({ onSearch }: { onSearch: (q: string, type: string) =>
   }, [onSearch]);
 
   useEffect(() => {
-    if (q) onSearchRef.current(q, type);
+    // Tra cứu bắt đầu từ URL (/?q=...) mà gặp đúng MST thì thay luôn mục lịch sử
+    // này bằng trang chi tiết, nếu không nút Quay lại sẽ đưa người dùng về đúng
+    // URL này và bị chuyển đi lần nữa.
+    if (q) onSearchRef.current(q, type, 'replace');
   }, [q, type]);
 
   return null;
 }
 
 function HomeContent() {
+  const router = useRouter();
   // Đọc từ khóa trên URL sau khi trang đã hiện, thay vì dùng useSearchParams.
   // useSearchParams buộc Next.js bỏ qua việc dựng sẵn HTML, khiến máy chủ chỉ
   // trả về dòng "Đang tải" và trình duyệt phải chờ tải xong JavaScript mới thấy
@@ -86,15 +92,32 @@ function HomeContent() {
     };
   }, []);
 
-  const executeLookup = async (q: string, type: string = 'auto') => {
+  const executeLookup = async (q: string, type: string = 'auto', navigation: LookupNavigation = 'push') => {
     if (!q.trim()) return;
     setIsLoading(true);
     setSearchQuery(q);
     setSearchType(type);
+    let redirected = false;
 
     try {
       const res = await fetch(`/api/tax/lookup?q=${encodeURIComponent(q)}&type=${encodeURIComponent(type)}`);
       const data = await res.json();
+
+      // Nhập đúng mã số thuế và tìm ra đúng một hồ sơ thì mở thẳng trang chi
+      // tiết, không hiện bảng kết quả tìm kiếm. Giữ nguyên trạng thái đang tải
+      // trong lúc chuyển trang để bảng "0 kết quả" không kịp nhấp nháy.
+      if (
+        data.success &&
+        data.source === 'verified-enterprise-profile' &&
+        Array.isArray(data.data) &&
+        data.data.length === 1
+      ) {
+        const profile: BusinessTaxInfo = data.data[0];
+        redirected = true;
+        router[navigation](`/${getCompanySlug(profile.id, profile.name)}`);
+        return;
+      }
+
       if (data.success && Array.isArray(data.data)) {
         setSearchResults(data.data);
         setSearchSource(data.source || '');
@@ -115,7 +138,7 @@ function HomeContent() {
       console.error('Error fetching tax info:', err);
       setSearchResults([]);
     } finally {
-      setIsLoading(false);
+      if (!redirected) setIsLoading(false);
     }
   };
 
