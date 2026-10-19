@@ -146,6 +146,9 @@ export async function saveCompanyToDb(company: Partial<BusinessTaxInfo>): Promis
       getProvinceSlugFromInfo(company.address, company.province);
     // Khong gan ngay hom nay khi chua biet ngay that - se hien thi sai ngay thanh lap
     const dateVal = company.startDate || company.registrationDate || '';
+    // "Chưa cập nhật" chỉ là chữ giữ chỗ trên giao diện, không phải số điện thoại:
+    // lưu vào sẽ đè mất số thật đã có trong kho.
+    const hasRealPhone = Boolean(company.phone && !company.phone.includes('ẩn') && !company.phone.includes('Chưa cập nhật'));
 
     const doc: Partial<MongoCompanyDoc> = {
       id: cleanId,
@@ -157,8 +160,8 @@ export async function saveCompanyToDb(company: Partial<BusinessTaxInfo>): Promis
       slug: getCompanySlug(cleanId, company.name),
       startDate: dateVal,
       registrationDate: dateVal,
-      phone: company.phone && !company.phone.includes('ẩn') ? company.phone : (company.rawPhone || undefined),
-      rawPhone: company.rawPhone || (company.phone && !company.phone.includes('ẩn') ? company.phone : undefined),
+      phone: hasRealPhone ? company.phone : (company.rawPhone || undefined),
+      rawPhone: company.rawPhone || (hasRealPhone ? company.phone : undefined),
       status: company.status || '',
       mainIndustry: company.mainIndustry || company.industryName,
       mainIndustryCode: company.mainIndustryCode || company.industryCode,

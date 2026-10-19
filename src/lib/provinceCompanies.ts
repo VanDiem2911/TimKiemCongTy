@@ -3,6 +3,7 @@ import { INDUSTRIES, PROVINCES, INITIAL_COMPANIES, normalizeTaxId } from './cons
 import harvestedJson from '@/data/harvested_provinces.json';
 import cachedIndustryJson from '@/data/cached_industry_companies.json';
 import { getCompaniesByProvinceFromDb, saveCompaniesBatchToDb, getCompanyFactsByIds } from '@/lib/companyDb';
+import { fetchViaHttpProxy } from '@/lib/httpProxy';
 
 function parseDateToISO(dateStr: string): string {
   if (!dateStr) return '';
@@ -506,6 +507,11 @@ export async function fetchViaScraperApi(
   label: string,
   timeoutMs = 25000
 ): Promise<Response | null> {
+  // Đã khai báo proxy HTTP riêng (MASOTHUE_HTTP_PROXY) thì đi qua đó trước, vì không
+  // tốn credit; chỉ khi proxy không lấy được mới dùng đến ScraperAPI bên dưới.
+  const viaProxy = await fetchViaHttpProxy(targetUrl, label, timeoutMs);
+  if (viaProxy) return viaProxy;
+
   const keys = getScraperApiKeys();
   if (keys.length === 0) return null;
 

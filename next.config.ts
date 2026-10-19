@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  serverExternalPackages: ['tesseract.js', 'sharp'],
+  serverExternalPackages: ['tesseract.js', 'sharp', 'undici'],
   ...(process.env.DOCKER_BUILD === '1' ? { output: 'standalone' } : {}),
   async redirects() {
     return [

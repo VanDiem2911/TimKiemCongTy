@@ -565,7 +565,9 @@ export async function getCompleteCompanyProfile(
     PROFILE_CACHE.delete(taxId);
   }
 
-  const finalizeProfile = async (data: BusinessTaxInfo): Promise<BusinessTaxInfo> => {
+  // persist = false dành cho hồ sơ dựng tạm từ nguồn mỏng (VietQR): dùng để hiển thị
+  // nhưng không ghi vào kho, kẻo đè mất tên quốc tế, SĐT... đã lưu từ nguồn đầy đủ.
+  const finalizeProfile = async (data: BusinessTaxInfo, persist = true): Promise<BusinessTaxInfo> => {
     const known = getKnownPhone(data.id);
     if (!data.rawPhone || data.rawPhone.includes('ẩn')) {
       if (data.phone && !data.phone.includes('ẩn') && !data.phone.includes('Chưa cập nhật')) {
@@ -638,9 +640,11 @@ export async function getCompleteCompanyProfile(
     PROFILE_CACHE.set(taxId, { data, timestamp: Date.now() });
 
     // Tự động lưu vào MongoDB Atlas để làm giàu dữ liệu CSDL
-    saveCompanyToDb(data).catch((err) => {
-      console.warn('[taxEngine] Background MongoDB save error:', err);
-    });
+    if (persist) {
+      saveCompanyToDb(data).catch((err) => {
+        console.warn('[taxEngine] Background MongoDB save error:', err);
+      });
+    }
 
     return data;
   };
@@ -652,11 +656,13 @@ export async function getCompleteCompanyProfile(
   let dbFallback: BusinessTaxInfo | null = null;
   // Bản ghi đủ hồ sơ nhưng chưa có danh mục ngành nghề (các bản lưu trước đây không lưu mục này)
   let dbMissingIndustries: BusinessTaxInfo | null = null;
-  if (!forceRefresh) {
-    try {
-      const dbCompany = await findCompanyInDb(taxId);
-      if (dbCompany && dbCompany.name) {
-        dbFallback = dbCompany;
+  // Khi bấm "Cập nhật" (forceRefresh) vẫn đọc kho, nhưng chỉ để làm phương án dự
+  // phòng nếu nguồn trực tuyến lỗi; không dùng nó để bỏ qua việc lấy dữ liệu mới.
+  try {
+    const dbCompany = await findCompanyInDb(taxId);
+    if (dbCompany && dbCompany.name) {
+      dbFallback = dbCompany;
+      if (!forceRefresh) {
         const hasFullProfile = Boolean(
           dbCompany.status &&
           dbCompany.startDate &&
@@ -667,9 +673,9 @@ export async function getCompleteCompanyProfile(
         }
         if (hasFullProfile) dbMissingIndustries = dbCompany;
       }
-    } catch (err) {
-      console.warn('[taxEngine] MongoDB check error:', err);
     }
+  } catch (err) {
+    console.warn('[taxEngine] MongoDB check error:', err);
   }
 
   // 1. Determine Masothue slug to fetch live
@@ -710,35 +716,42 @@ export async function getCompleteCompanyProfile(
   // 2. Try fetching live from masothue.com if we have a slug or if cleanInput is a slug
   const proxyBase = process.env.VN_PROXY_URL || process.env.MASOTHUE_PROXY_URL;
 
+  // Lấy trang chi tiết từ masothue.com. Dùng chung cho cả nhánh có sẵn slug và
+  // nhánh dựng slug từ tên VietQR, để cả hai đều có đường vòng khi bị chặn.
+  const fetchMasothueDetail = async (slug: string): Promise<Response | null> => {
+    const directTarget = `https://masothue.com/${slug}`;
+    const targetUrl = proxyBase
+      ? `${proxyBase.replace(/\/+$/, '')}/${slug}`
+      : directTarget;
+
+    let res: Response | null = null;
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 2500);
+    try {
+      res = await fetch(targetUrl, {
+        headers: fetchHeaders,
+        signal: ctrl.signal,
+        ...(forceRefresh ? { cache: 'no-store' } : { next: { revalidate: 3600 } })
+      });
+    } catch {
+      res = null;
+    } finally {
+      clearTimeout(timer);
+    }
+    if (res && res.status === 200) return res;
+
+    // Trang nguồn chặn thì đi vòng qua ScraperAPI, tự chuyển sang key khác khi key hết credit
+    try {
+      return await fetchViaScraperApi(directTarget, `chi tiết ${taxId}`, 20000);
+    } catch (scErr) {
+      console.warn('ScraperAPI detail fallback failed:', scErr);
+      return null;
+    }
+  };
+
   if (masothueSlug) {
     try {
-      const directTarget = `https://masothue.com/${masothueSlug}`;
-      const targetUrl = proxyBase
-        ? `${proxyBase.replace(/\/+$/, '')}/${masothueSlug}`
-        : directTarget;
-
-      let res: Response | null = null;
-      try {
-        const ctrl = new AbortController();
-        const timer = setTimeout(() => ctrl.abort(), 2500);
-        res = await fetch(targetUrl, {
-          headers: fetchHeaders,
-          signal: ctrl.signal,
-          ...(forceRefresh ? { cache: 'no-store' } : { next: { revalidate: 3600 } })
-        });
-        clearTimeout(timer);
-      } catch {
-        res = null;
-      }
-
-      // Trang nguồn chặn thì đi vòng qua ScraperAPI, tự chuyển sang key khác khi key hết credit
-      if (!res || res.status !== 200) {
-        try {
-          res = await fetchViaScraperApi(directTarget, `chi tiết ${taxId}`, 20000);
-        } catch (scErr) {
-          console.warn('ScraperAPI detail fallback failed:', scErr);
-        }
-      }
+      const res = await fetchMasothueDetail(masothueSlug);
 
       if (res && res.ok) {
         const html = await res.text();
@@ -766,10 +779,11 @@ export async function getCompleteCompanyProfile(
     }
   }
 
-  // Không lấy được danh mục ngành từ nguồn: vẫn dùng hồ sơ đầy đủ trong kho,
-  // không dựng lại từ nguồn khác kém đầy đủ hơn (mất SĐT, người đại diện...)
-  if (dbMissingIndustries) {
-    return await finalizeProfile(enrichCompanyData(dbMissingIndustries));
+  // Không với tới được trang nguồn nhưng kho đã có hồ sơ chi tiết (người đại
+  // diện, ngày hoạt động...): dùng bản đó, không dựng lại từ VietQR vì VietQR
+  // chỉ có tên, địa chỉ và tình trạng - sẽ làm mất SĐT, người đại diện...
+  if (dbFallback && (dbFallback.representative || dbFallback.startDate)) {
+    return await finalizeProfile(enrichCompanyData(dbFallback));
   }
 
   // 3. Try live VietQR API
@@ -794,19 +808,9 @@ export async function getCompleteCompanyProfile(
           if (json.data.name) {
             const derivedSlug = getCompanySlug(taxId, json.data.name);
             try {
-              const liveCtrl = new AbortController();
-              const liveTimer = setTimeout(() => liveCtrl.abort(), 1500);
-              const liveTargetUrl = proxyBase
-                ? `${proxyBase.replace(/\/+$/, '')}/${derivedSlug}`
-                : `https://masothue.com/${derivedSlug}`;
-              const liveMasothueRes = await fetch(liveTargetUrl, {
-                headers: fetchHeaders,
-                signal: liveCtrl.signal,
-                ...(forceRefresh ? { cache: 'no-store' } : { next: { revalidate: 3600 } })
-              });
-              clearTimeout(liveTimer);
+              const liveMasothueRes = await fetchMasothueDetail(derivedSlug);
 
-              if (liveMasothueRes.ok) {
+              if (liveMasothueRes && liveMasothueRes.ok) {
                 const html = await liveMasothueRes.text();
                 const parsed = parseMasothueHtml(html, taxId);
                 if (parsed && parsed.name) {
@@ -846,7 +850,8 @@ export async function getCompleteCompanyProfile(
             lastUpdated: forceRefresh ? formatCurrentTimeVietnam() : undefined
           });
 
-          return await finalizeProfile(enriched);
+          // Chỉ tạo bản ghi mới khi kho chưa có doanh nghiệp này; đã có thì giữ nguyên
+          return await finalizeProfile(enriched, !dbFallback);
         }
       }
     } catch (err) {
